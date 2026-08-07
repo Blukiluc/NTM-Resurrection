@@ -5,8 +5,6 @@ import net.minecraft.world.Container;
 import net.minecraft.world.inventory.Slot;
 import net.minecraft.world.item.ItemStack;
 
-// TODO rename class cause its a neo thing
-
 /**
  * Because vanilla slots have shit idiot brain fungus that prevent them from working as expected.
  * and its still dont fixed in 1.21.1, why??

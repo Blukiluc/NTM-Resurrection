@@ -199,12 +199,12 @@ public class NtmBlocks {
     public static final DeferredBlock<Block> SAND_RED_OILY = register("sand_red_oily", () -> new Block(BlockBehaviour.Properties.ofFullCopy(Blocks.RED_SAND)));
 
     public static final DeferredBlock<Block> MACHINE_OIL_DERRICK = register("machine_oil_derrick", () -> new MachineOilDerrickBlock(BlockBehaviour.Properties.of().noOcclusion().strength(5.0F, 10.0F).sound(SoundType.METAL).mapColor(MapColor.METAL)));
-
     public static final DeferredBlock<Block> MACHINE_PUMPJACK = register("machine_pumpjack", () -> new MachinePumpjackBlock(BlockBehaviour.Properties.of().noOcclusion().strength(5.0F, 10.0F).sound(SoundType.METAL).mapColor(MapColor.METAL)));
-
     public static final DeferredBlock<Block> MACHINE_FRACKING_TOWER = register("machine_fracking_tower", () -> new MachineFrackingTowerBlock(BlockBehaviour.Properties.of().noOcclusion().strength(5.0F, 10.0F).sound(SoundType.METAL).mapColor(MapColor.METAL)));
-
     public static final DeferredBlock<Block> MACHINE_REFINERY = register("machine_refinery", () -> new MachineRefineryBlock(BlockBehaviour.Properties.of().noOcclusion().strength(5.0F, 10.0F).sound(SoundType.METAL).mapColor(MapColor.METAL)));
+    public static final DeferredBlock<Block> MACHINE_VACUUM_REFINERY = register("machine_vacuum_refinery", () -> new MachineVacuumDistillBlock(BlockBehaviour.Properties.of().noOcclusion().strength(5.0F, 10.0F).sound(SoundType.METAL).mapColor(MapColor.METAL)));
+    public static final DeferredBlock<Block> MACHINE_CATALYTIC_REFORMER = register("machine_catalytic_reformer", () -> new MachineCatalyticReformerBlock(BlockBehaviour.Properties.of().noOcclusion().strength(5.0F, 10.0F).sound(SoundType.METAL).mapColor(MapColor.METAL)));
+    public static final DeferredBlock<Block> MACHINE_CATALYTIC_CRACKING_TOWER = register("machine_catalytic_cracking_tower", () -> new MachineCatalyticCrackingTowerBlock(BlockBehaviour.Properties.of().noOcclusion().strength(5.0F, 10.0F).sound(SoundType.METAL).mapColor(MapColor.METAL)));
 
     // Absorbers
     public static final DeferredBlock<Block> DECONTAMINATOR = register("decontaminator", () -> new DecontaminatorBlock(BlockBehaviour.Properties.of().strength(5.0F, 10.0F).sound(SoundType.METAL).mapColor(MapColor.TERRACOTTA_GREEN)));

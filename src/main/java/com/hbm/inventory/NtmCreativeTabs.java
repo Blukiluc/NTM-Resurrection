@@ -682,6 +682,10 @@ public class NtmCreativeTabs {
                         output.accept(NtmBlocks.MACHINE_PUMPJACK);
                         output.accept(NtmBlocks.MACHINE_FRACKING_TOWER);
                         output.accept(NtmBlocks.MACHINE_REFINERY);
+                        output.accept(NtmBlocks.MACHINE_VACUUM_REFINERY);
+                        output.accept(NtmBlocks.MACHINE_CATALYTIC_REFORMER);
+                        output.accept(NtmBlocks.MACHINE_CATALYTIC_CRACKING_TOWER);
+
                         output.accept(NtmBlocks.FURNACE_COMBINATION);
                         output.accept(NtmBlocks.MACHINE_BLAST_FURNACE);
 
@@ -698,6 +702,12 @@ public class NtmCreativeTabs {
                         output.accept(NtmBlocks.CRATE_TUNGSTEN);
                         output.accept(NtmBlocks.CRATE_STEEL);
                         output.accept(NtmBlocks.CRATE_DESH);
+
+                        output.accept(NtmItems.BLADES_IRON);
+                        output.accept(NtmItems.BLADES_STEEL);
+                        output.accept(NtmItems.BLADES_DESH);
+
+                        output.accept(NtmItems.CATALYTIC_CONVERTER);
 
                         output.accept(NtmItems.STAMP_FLAT_STONE.get());
                         output.accept(NtmItems.STAMP_PLATE_STONE.get());

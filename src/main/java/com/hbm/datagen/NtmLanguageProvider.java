@@ -565,6 +565,8 @@ public class NtmLanguageProvider extends LanguageProvider {
         this.add(NtmItems.BLADES_DESH, "Desh Blades");
         this.add("item" + NuclearTechMod.MODID + " .blades.desc", "Wears down with use. Insert two into a Shredder.");
 
+        this.add(NtmItems.CATALYTIC_CONVERTER, "Catalytic Converter");
+
         this.add(NtmItems.SINGULARITY, "Singularity");
         this.add(NtmItems.SINGULARITY, DESC, "You may be asking:$\"But HBM, a manifold with an undefined$state of spacetime? How is this possible?\"$Long answer short:$\"I have no idea!\"");
         this.add(NtmItems.SINGULARITY_COUNTER_RESONANT, "Contained Counter-Resonant Singularity");
@@ -1121,7 +1123,10 @@ public class NtmLanguageProvider extends LanguageProvider {
         this.add(NtmBlocks.MACHINE_OIL_DERRICK, "Oil Derrick");
         this.add(NtmBlocks.MACHINE_PUMPJACK, "Pumpjack");
         this.add(NtmBlocks.MACHINE_FRACKING_TOWER, "Hydraulic Fracking Tower");
-        this.add(NtmBlocks.MACHINE_REFINERY, "Refinery");
+        this.add(NtmBlocks.MACHINE_REFINERY, "Oil Refinery");
+        this.add(NtmBlocks.MACHINE_VACUUM_REFINERY, "Vacuum Refinery");
+        this.add(NtmBlocks.MACHINE_CATALYTIC_REFORMER, "Catalytic Reformer");
+        this.add(NtmBlocks.MACHINE_CATALYTIC_CRACKING_TOWER, "Catalytic Cracking Tower");
 
         this.add(NtmBlocks.MACHINE_SATLINKER, "SatLink Device");
 
@@ -1204,7 +1209,7 @@ public class NtmLanguageProvider extends LanguageProvider {
         this.add("hbmfluid.chlorine", "Chlorine Gas");
         this.add("hbmfluid.mercury", "Mercury");
         this.add("hbmfluid.oil", "Crude Oil");
-        this.add("hbmfluid.oil_ds", "Desulfurized Crud Oil");
+        this.add("hbmfluid.oil_ds", "Desulfurized Crude Oil");
         this.add("hbmfluid.crackoil", "Cracked Oil");
         this.add("hbmfluid.crackoil_ds", "Desulfurized Cracked Oil");
         this.add("hbmfluid.coaloil", "Coal Oil");
@@ -1354,7 +1359,9 @@ public class NtmLanguageProvider extends LanguageProvider {
         this.add("container.machine_oil_derrick", "Oil Derrick");
         this.add("container.machine_pumpjack", "Pumpjack");
         this.add("container.machine_fracking_tower", "H. F. T.");
-        this.add("container.machine_refinery", "Refinery");
+        this.add("container.machine_refinery", "Oil Refinery");
+        this.add("container.machine_vacuum_refinery", "Vacuum Refinery");
+        this.add("container.machine_catalytic_reformer", "Catalytic Reformer");
         this.add("container.heat_boiler", "Boiler");
         this.add("container.machine_industrial_boiler", "Industrial Boiler");
         this.add("container.furnace_combination", "Combination Oven");
@@ -1382,6 +1389,7 @@ public class NtmLanguageProvider extends LanguageProvider {
         this.add("block.hbm.heater_heatex.desc", "Produces heat from hot fluids.");
         this.add("tile.heater_heatex.desc", "Produces heat from hot fluids.");
         this.add("container.machine_blast_furnace", "Blast Furnace");
+        this.add("chat.catalytic_cracking_tower.changed", "Changed type to ");
 
 
         // COMMANDS //

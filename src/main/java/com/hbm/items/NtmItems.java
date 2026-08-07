@@ -595,6 +595,9 @@ public class NtmItems {
     public static final DeferredItem<Item> BLADES_STEEL = ITEMS.register("blades_steel", () -> new ItemBlades(new Item.Properties().stacksTo(1), 1024));
     public static final DeferredItem<Item> BLADES_DESH = ITEMS.register("blades_desh", () -> new ItemBlades(new Item.Properties().stacksTo(1), 4096));
 
+    // Random Stuff
+    public static final DeferredItem<Item> CATALYTIC_CONVERTER = ITEMS.register("catalytic_converter", () -> new Item(new Item.Properties().stacksTo(1)));
+
     // Breeding Rods
     public static final DeferredItem<Item> ROD_EMPTY = ITEMS.register("rod_empty", () -> new Item(new Item.Properties()));
     public static final DeferredItem<Item> ROD = ITEMS.register("rod", () -> new BreedingRodItem(new Item.Properties()));

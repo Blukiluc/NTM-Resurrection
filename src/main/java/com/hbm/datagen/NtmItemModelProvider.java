@@ -548,6 +548,8 @@ public class NtmItemModelProvider extends ItemModelProvider {
         this.basicItem(NtmItems.BLADES_STEEL.get());
         this.basicItem(NtmItems.BLADES_DESH.get());
 
+        this.basicItem(NtmItems.CATALYTIC_CONVERTER.get());
+
         this.basicItem(NtmItems.SINGULARITY.get());
         this.basicItem(NtmItems.SINGULARITY_COUNTER_RESONANT.get());
         this.basicItem(NtmItems.SINGULARITY_SUPER_HEATED.get());

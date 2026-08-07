@@ -55,6 +55,9 @@ public class ResourceManager {
     public static final ResourceLocation PUMPJACK_TEX = NuclearTechMod.withDefaultNamespace("textures/models/machines/pumpjack.png");
     public static final ResourceLocation FRACKING_TOWER_TEX = NuclearTechMod.withDefaultNamespace("textures/models/machines/fracking_tower.png");
     public static final ResourceLocation REFINERY_TEX = NuclearTechMod.withDefaultNamespace("textures/models/machines/refinery.png");
+    public static final ResourceLocation VACUUM_REFINERY_TEX = NuclearTechMod.withDefaultNamespace("textures/models/machines/vacuum_refinery.png");
+    public static final ResourceLocation CATALYTIC_REFORMER_TEX = NuclearTechMod.withDefaultNamespace("textures/models/machines/catalytic_reformer.png");
+    public static final ResourceLocation CATALYTIC_CRACKING_TOWER_TEX = NuclearTechMod.withDefaultNamespace("textures/models/machines/catalytic_cracking_tower.png");
 
     public static final ResourceLocation HEATER_FIREBOX_TEX = NuclearTechMod.withDefaultNamespace("textures/models/machines/firebox.png");
     public static final ResourceLocation HEATER_OVEN_TEX = NuclearTechMod.withDefaultNamespace("textures/models/machines/heating_oven.png");
@@ -215,6 +218,9 @@ public class ResourceManager {
     public static IModelCustom pumpjack;
     public static IModelCustom fracking_tower;
     public static IModelCustom refinery;
+    public static IModelCustom vacuum_refinery;
+    public static IModelCustom catalytic_reformer;
+    public static IModelCustom catalytic_cracking_tower;
 
     public static IModelCustom heater_firebox;
     public static IModelCustom heater_oven;
@@ -322,6 +328,9 @@ public class ResourceManager {
         pumpjack = new HFRWavefrontObject("models/obj/machines/pumpjack.obj").asVBO();
         fracking_tower = new HFRWavefrontObject("models/obj/machines/fracking_tower.obj").asVBO();
         refinery = new HFRWavefrontObject("models/obj/machines/refinery.obj").asVBO();
+        vacuum_refinery = new HFRWavefrontObject("models/obj/machines/vacuum_refinery.obj").asVBO();
+        catalytic_reformer = new HFRWavefrontObject("models/obj/machines/catalytic_reformer.obj").asVBO();
+        catalytic_cracking_tower = new HFRWavefrontObject("models/obj/machines/catalytic_cracking_tower.obj").asVBO();
       
         heater_firebox = new HFRWavefrontObject("models/obj/machines/firebox.obj").asVBO();
         heater_oven = new HFRWavefrontObject("models/obj/machines/heating_oven.obj").asVBO();

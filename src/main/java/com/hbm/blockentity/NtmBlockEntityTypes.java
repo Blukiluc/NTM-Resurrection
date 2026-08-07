@@ -9,10 +9,7 @@ import com.hbm.blockentity.machine.heater.HeaterFireboxBlockEntity;
 import com.hbm.blockentity.machine.heater.HeaterHeatexBlockEntity;
 import com.hbm.blockentity.machine.heater.HeaterFluidBurnerBlockEntity;
 import com.hbm.blockentity.machine.heater.HeaterOvenBlockEntity;
-import com.hbm.blockentity.machine.oil.MachineFrackingTowerBlockEntity;
-import com.hbm.blockentity.machine.oil.MachineOilDerrickBlockEntity;
-import com.hbm.blockentity.machine.oil.MachinePumpjackBlockEntity;
-import com.hbm.blockentity.machine.oil.MachineRefineryBlockEntity;
+import com.hbm.blockentity.machine.oil.*;
 import com.hbm.blockentity.machine.storage.*;
 import com.hbm.blockentity.network.CableBaseBlockEntity;
 import com.hbm.blockentity.network.PipeBaseBlockEntity;
@@ -227,6 +224,28 @@ public class NtmBlockEntityTypes {
             () -> BlockEntityType.Builder.of(
                             MachineRefineryBlockEntity::new,
                             NtmBlocks.MACHINE_REFINERY.get())
+                    .build(null));
+
+    public static final Supplier<BlockEntityType<MachineVacuumDistillBlockEntity>> VACUUM_REFINERY = REGISTER.register(
+            "vacuum_refinery",
+            () -> BlockEntityType.Builder.of(
+                            MachineVacuumDistillBlockEntity::new,
+                            NtmBlocks.MACHINE_VACUUM_REFINERY.get())
+                    .build(null));
+
+    public static final Supplier<BlockEntityType<MachineCatalyticReformerBlockEntity>> CATALYTIC_REFORMER = REGISTER.register(
+            "catalytic_reformer",
+            () -> BlockEntityType.Builder.of(
+                            MachineCatalyticReformerBlockEntity::new,
+                            NtmBlocks.MACHINE_CATALYTIC_REFORMER.get())
+                    .build(null));
+
+
+    public static final Supplier<BlockEntityType<MachineCatalyticCrackingTowerBlockEntity>> CATALYTIC_CRACKING_TOWER = REGISTER.register(
+            "catalytic_cracking_tower",
+            () -> BlockEntityType.Builder.of(
+                            MachineCatalyticCrackingTowerBlockEntity::new,
+                            NtmBlocks.MACHINE_CATALYTIC_CRACKING_TOWER.get())
                     .build(null));
 
     public static final Supplier<BlockEntityType<ProxyComboBlockEntity>> PROXY_COMBO = REGISTER.register("proxy_combo", () -> BlockEntityType.Builder.of(ProxyComboBlockEntity::new).build(null));

@@ -1,0 +1,7 @@
+{
+  "variants": {
+    "": {
+      "model": "hbm:block/machine_catalytic_cracking_tower_particle"
+    }
+  }
+}

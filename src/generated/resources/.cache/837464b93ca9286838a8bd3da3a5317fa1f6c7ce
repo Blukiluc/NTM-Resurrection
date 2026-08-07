@@ -1,4 +1,4 @@
-// 1.21.1	2026-07-06T15:11:56.1356307	Item Models: hbm
+// 1.21.1	2026-08-07T19:07:13.0138384	Item Models: hbm
 c4e09d2d0fd2bef45dc51c8da0c70bab4652e4b1 assets/hbm/models/item/acetylene_torch.json
 6c4e747554da913978325893b69ca977467a483c assets/hbm/models/item/ammo_secret.json
 99443ea6db20add27ff0bd97f72d22bbf1493cd1 assets/hbm/models/item/ammo_secret_0.json
@@ -241,6 +241,7 @@ c72e2b592d1f336079c7c084ecf2ef6e37f2af31 assets/hbm/models/item/casing_1.json
 5a3b8f06becdd3631dbe6bb4736e22f1972b834b assets/hbm/models/item/casing_4.json
 9411b6f9589f84303b71f07bcf2f02084502dabd assets/hbm/models/item/casing_5.json
 e434d813bbb5bf35bbce0fc3c4a818a21f004356 assets/hbm/models/item/casing_6.json
+d1550be94d7d76803773c9a5b6090eacea937f8b assets/hbm/models/item/catalytic_converter.json
 02d08dc3e4536de95906a13ebe35b33ea220ef5d assets/hbm/models/item/cell_antimatter.json
 70dd598182aef47b11edf8a052e2ac28f111f7a7 assets/hbm/models/item/cell_anti_schrabidium.json
 d82a58258c633e8c8b9e188615de7909828f7670 assets/hbm/models/item/cell_balefire.json

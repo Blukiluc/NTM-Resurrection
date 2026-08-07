@@ -50,7 +50,7 @@ public class MachineCentrifugeScreen extends InfoScreen<MachineCentrifugeMenu> {
         guiGraphics.blit(TEXTURE, this.leftPos + 9, this.topPos + 13 + (35 - p), 176, 35 - p, 16, p);
 
         if(be.progress > 0) {
-            float totalProgress = (float) be.progress / be.processingSpeed; // 0.0 à 1.0 sur tout le craft
+            float totalProgress = (float) be.progress / be.processingSpeed;
 
             int[] barX = {65, 85, 105, 125};
             int barY = 14;

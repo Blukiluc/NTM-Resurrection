@@ -41,7 +41,7 @@ public class MachineRefineryScreen extends InfoScreen<MachineRefineryMenu> {
 
     @Override
     protected void renderLabels(GuiGraphics guiGraphics, int mouseX, int mouseY) {
-        guiGraphics.drawString(this.font, this.title, this.imageWidth / 2 - this.font.width(this.title) / 2, 6, 4210752, false);
+        guiGraphics.drawString(this.font, this.title, 88 - this.font.width(this.title) / 2, 6, 4210752, false);
         guiGraphics.drawString(this.font, this.playerInventoryTitle, 8, this.imageHeight - 96 + 4, 4210752, false);
     }
 
