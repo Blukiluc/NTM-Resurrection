@@ -1,0 +1,8 @@
+{
+  "values": [
+    "hbm:laser",
+    "hbm:microwave",
+    "hbm:subatomic",
+    "hbm:electric"
+  ]
+}

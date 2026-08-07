@@ -1,0 +1,7 @@
+{
+  "type": "barbed_wire",
+  "loader": "hbm:ntm_geometry_loader",
+  "textures": {
+    "texture": "hbm:block/barbed_wire_poison"
+  }
+}

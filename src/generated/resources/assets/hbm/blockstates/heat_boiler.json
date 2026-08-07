@@ -1,0 +1,7 @@
+{
+  "variants": {
+    "": {
+      "model": "hbm:block/heat_boiler_particle"
+    }
+  }
+}

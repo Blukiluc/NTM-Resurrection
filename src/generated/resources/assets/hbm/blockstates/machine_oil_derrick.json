@@ -1,0 +1,7 @@
+{
+  "variants": {
+    "": {
+      "model": "hbm:block/machine_oil_derrick_particle"
+    }
+  }
+}

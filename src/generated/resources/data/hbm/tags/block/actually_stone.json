@@ -1,0 +1,28 @@
+{
+  "values": [
+    "minecraft:coal_ore",
+    "minecraft:iron_ore",
+    "minecraft:copper_ore",
+    "minecraft:lapis_ore",
+    "minecraft:diamond_ore",
+    "minecraft:deepslate_coal_ore",
+    "minecraft:deepslate_iron_ore",
+    "minecraft:deepslate_copper_ore",
+    "minecraft:deepslate_lapis_ore",
+    "minecraft:deepslate_diamond_ore",
+    "minecraft:granite",
+    "minecraft:andesite",
+    "minecraft:diorite",
+    "minecraft:deepslate",
+    "minecraft:tuff",
+    "minecraft:cobblestone",
+    "minecraft:sandstone",
+    "hbm:brick_concrete",
+    "hbm:brick_concrete_cracked",
+    "hbm:brick_concrete_broken",
+    "hbm:brick_concrete_mossy",
+    "hbm:brick_concrete_marked",
+    "hbm:brick_light",
+    "minecraft:stone"
+  ]
+}

@@ -1,0 +1,8 @@
+{
+  "type": "pipe",
+  "loader": "hbm:ntm_geometry_loader",
+  "textures": {
+    "overlay": "hbm:block/pipe_colored_overlay",
+    "texture": "hbm:block/pipe_colored"
+  }
+}

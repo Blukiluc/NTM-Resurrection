@@ -1,0 +1,130 @@
+{
+  "overrides": [
+    {
+      "model": "hbm:item/drink_0",
+      "predicate": {
+        "hbm:item_meta": 0.0
+      }
+    },
+    {
+      "model": "hbm:item/drink_1",
+      "predicate": {
+        "hbm:item_meta": 1.0
+      }
+    },
+    {
+      "model": "hbm:item/drink_2",
+      "predicate": {
+        "hbm:item_meta": 2.0
+      }
+    },
+    {
+      "model": "hbm:item/drink_3",
+      "predicate": {
+        "hbm:item_meta": 3.0
+      }
+    },
+    {
+      "model": "hbm:item/drink_4",
+      "predicate": {
+        "hbm:item_meta": 4.0
+      }
+    },
+    {
+      "model": "hbm:item/drink_5",
+      "predicate": {
+        "hbm:item_meta": 5.0
+      }
+    },
+    {
+      "model": "hbm:item/drink_6",
+      "predicate": {
+        "hbm:item_meta": 6.0
+      }
+    },
+    {
+      "model": "hbm:item/drink_7",
+      "predicate": {
+        "hbm:item_meta": 7.0
+      }
+    },
+    {
+      "model": "hbm:item/drink_8",
+      "predicate": {
+        "hbm:item_meta": 8.0
+      }
+    },
+    {
+      "model": "hbm:item/drink_9",
+      "predicate": {
+        "hbm:item_meta": 9.0
+      }
+    },
+    {
+      "model": "hbm:item/drink_10",
+      "predicate": {
+        "hbm:item_meta": 10.0
+      }
+    },
+    {
+      "model": "hbm:item/drink_11",
+      "predicate": {
+        "hbm:item_meta": 11.0
+      }
+    },
+    {
+      "model": "hbm:item/drink_12",
+      "predicate": {
+        "hbm:item_meta": 12.0
+      }
+    },
+    {
+      "model": "hbm:item/drink_13",
+      "predicate": {
+        "hbm:item_meta": 13.0
+      }
+    },
+    {
+      "model": "hbm:item/drink_14",
+      "predicate": {
+        "hbm:item_meta": 14.0
+      }
+    },
+    {
+      "model": "hbm:item/drink_15",
+      "predicate": {
+        "hbm:item_meta": 15.0
+      }
+    },
+    {
+      "model": "hbm:item/drink_16",
+      "predicate": {
+        "hbm:item_meta": 16.0
+      }
+    },
+    {
+      "model": "hbm:item/drink_17",
+      "predicate": {
+        "hbm:item_meta": 17.0
+      }
+    },
+    {
+      "model": "hbm:item/drink_18",
+      "predicate": {
+        "hbm:item_meta": 18.0
+      }
+    },
+    {
+      "model": "hbm:item/drink_19",
+      "predicate": {
+        "hbm:item_meta": 19.0
+      }
+    },
+    {
+      "model": "hbm:item/drink_20",
+      "predicate": {
+        "hbm:item_meta": 20.0
+      }
+    }
+  ]
+}

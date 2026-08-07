@@ -1,0 +1,299 @@
+{
+  "alarm.hatch": {
+    "sounds": [
+      "hbm:alarm/soyuzed"
+    ]
+  },
+  "alarm.soyuzed": {
+    "sounds": [
+      "hbm:alarm/soyuzed"
+    ]
+  },
+  "block.assembler_cut": {
+    "sounds": [
+      "hbm:block/assembler_cut"
+    ]
+  },
+  "block.assembler_start": {
+    "sounds": [
+      "hbm:block/assembler_start"
+    ]
+  },
+  "block.assembler_stop": {
+    "sounds": [
+      "hbm:block/assembler_stop"
+    ]
+  },
+  "block.assembler_strike": {
+    "sounds": [
+      "hbm:block/assembler_strike1",
+      "hbm:block/assembler_strike2"
+    ]
+  },
+  "block.centrifuge_loop": {
+    "sounds": [
+      "hbm:block/centrifuge"
+    ]
+  },
+  "block.chemical_plant": {
+    "sounds": [
+      "hbm:block/chemical_plant"
+    ]
+  },
+  "block.press": {
+    "sounds": [
+      "hbm:block/press"
+    ]
+  },
+  "block.bobble": {
+    "sounds": [
+      "hbm:block/bobble"
+    ]
+  },
+  "block.debris": {
+    "sounds": [
+      "hbm:block/debris1",
+      "hbm:block/debris2",
+      "hbm:block/debris3"
+    ]
+  },
+  "block.fensu_hum": {
+    "sounds": [
+      "hbm:block/fensu_hum"
+    ]
+  },
+  "block.hunduns_magnificent_howl": {
+    "sounds": [
+      "hbm:block/hunduns_magnificent_howl"
+    ]
+  },
+  "block.lock_open": {
+    "sounds": [
+      "hbm:block/lock_open"
+    ]
+  },
+  "block.motor": {
+    "sounds": [
+      "hbm:block/motor"
+    ]
+  },
+  "block.pipe_placed": {
+    "sounds": [
+      "hbm:block/pipe_placed"
+    ]
+  },
+  "block.soyuz_ready": {
+    "sounds": [
+      "hbm:block/soyuz_ready"
+    ]
+  },
+  "block.squeaky_toy": {
+    "sounds": [
+      "hbm:block/squeaky_toy"
+    ]
+  },
+  "crate_close": {
+    "sounds": [
+      "hbm:block/crate_close"
+    ]
+  },
+  "crate_open": {
+    "sounds": [
+      "hbm:block/crate_open"
+    ]
+  },
+  "entity.bomb_whistle": {
+    "sounds": [
+      "hbm:entity/bomb_whistle"
+    ]
+  },
+  "entity.bomber_loop": {
+    "sounds": [
+      "hbm:entity/bomber_loop"
+    ]
+  },
+  "entity.bomber_small_loop": {
+    "sounds": [
+      "hbm:entity/bomber_small_loop"
+    ]
+  },
+  "entity.ducc": {
+    "sounds": [
+      "hbm:entity/ducc1",
+      "hbm:entity/ducc2"
+    ]
+  },
+  "entity.meteorite_falling_loop": {
+    "sounds": [
+      "hbm:entity/meteorite_falling_loop"
+    ]
+  },
+  "entity.old_explosion": {
+    "sounds": [
+      "hbm:entity/old_explosion"
+    ]
+  },
+  "entity.plane_crash": {
+    "sounds": [
+      "hbm:entity/plane_crash"
+    ]
+  },
+  "entity.plane_shot_down": {
+    "sounds": [
+      "hbm:entity/plane_shot_down"
+    ]
+  },
+  "entity.slicer": {
+    "sounds": [
+      "hbm:entity/slicer1",
+      "hbm:entity/slicer2",
+      "hbm:entity/slicer3",
+      "hbm:entity/slicer4"
+    ]
+  },
+  "item.geiger1": {
+    "sounds": [
+      "hbm:tool/geiger1"
+    ]
+  },
+  "item.geiger2": {
+    "sounds": [
+      "hbm:tool/geiger2"
+    ]
+  },
+  "item.geiger3": {
+    "sounds": [
+      "hbm:tool/geiger3"
+    ]
+  },
+  "item.geiger4": {
+    "sounds": [
+      "hbm:tool/geiger4"
+    ]
+  },
+  "item.geiger5": {
+    "sounds": [
+      "hbm:tool/geiger5"
+    ]
+  },
+  "item.geiger6": {
+    "sounds": [
+      "hbm:tool/geiger6"
+    ]
+  },
+  "item.pin_break": {
+    "sounds": [
+      "hbm:tool/pin_break"
+    ]
+  },
+  "item.pin_unlock": {
+    "sounds": [
+      "hbm:tool/pin_unlock"
+    ]
+  },
+  "item.tech_bleep": {
+    "sounds": [
+      "hbm:tool/tech_bleep"
+    ]
+  },
+  "item.tech_boop": {
+    "sounds": [
+      "hbm:tool/tech_boop"
+    ]
+  },
+  "item.unpack": {
+    "sounds": [
+      "hbm:tool/extract1",
+      "hbm:tool/extract2"
+    ]
+  },
+  "player.cough": {
+    "sounds": [
+      "hbm:player/cough1",
+      "hbm:player/cough2",
+      "hbm:player/cough3",
+      "hbm:player/cough4"
+    ]
+  },
+  "player.vomit": {
+    "sounds": [
+      "hbm:player/vomit"
+    ]
+  },
+  "weapon.explosion_large_far": {
+    "sounds": [
+      "hbm:weapon/explosion_large_far"
+    ]
+  },
+  "weapon.explosion_large_near": {
+    "sounds": [
+      "hbm:weapon/explosion_large_near"
+    ]
+  },
+  "weapon.explosion_small_far": {
+    "sounds": [
+      "hbm:weapon/explosion_small_far1",
+      "hbm:weapon/explosion_small_far2"
+    ]
+  },
+  "weapon.explosion_small_near": {
+    "sounds": [
+      "hbm:weapon/explosion_small_near1",
+      "hbm:weapon/explosion_small_near2",
+      "hbm:weapon/explosion_small_near3"
+    ]
+  },
+  "weapon.explosion_tiny": {
+    "sounds": [
+      "hbm:weapon/explosion_tiny1",
+      "hbm:weapon/explosion_tiny2"
+    ]
+  },
+  "weapon.fire.disintegration": {
+    "sounds": [
+      "hbm:weapon/fire/disintegration"
+    ]
+  },
+  "weapon.fstbmb_ping": {
+    "sounds": [
+      "hbm:weapon/fstbmb_ping"
+    ]
+  },
+  "weapon.fstbmb_start": {
+    "sounds": [
+      "hbm:weapon/fstbmb_start"
+    ]
+  },
+  "weapon.missile_takeoff": {
+    "sounds": [
+      "hbm:weapon/missile_takeoff"
+    ]
+  },
+  "weapon.muke_explosion": {
+    "sounds": [
+      "hbm:weapon/muke_explosion"
+    ]
+  },
+  "weapon.nuclear_explosion": {
+    "sounds": [
+      {
+        "name": "hbm:weapon/nuclear_explosion",
+        "stream": true
+      }
+    ]
+  },
+  "weapon.ricochet": {
+    "sounds": [
+      "hbm:weapon/ric1",
+      "hbm:weapon/ric2",
+      "hbm:weapon/ric3",
+      "hbm:weapon/ric4",
+      "hbm:weapon/ric5"
+    ]
+  },
+  "weapon.robin_explosion": {
+    "sounds": [
+      "hbm:weapon/robin_explosion"
+    ]
+  }
+}

@@ -1,0 +1,11 @@
+{
+  "values": [
+    "hbm:waste_earth",
+    "hbm:waste_mycelium",
+    "hbm:waste_trinitite",
+    "hbm:waste_trinitite_red",
+    "hbm:frozen_dirt",
+    "hbm:frozen_grass",
+    "hbm:fallout"
+  ]
+}

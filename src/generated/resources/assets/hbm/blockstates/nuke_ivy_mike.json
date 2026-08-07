@@ -1,0 +1,7 @@
+{
+  "variants": {
+    "": {
+      "model": "hbm:block/nuke_ivy_mike_particle"
+    }
+  }
+}

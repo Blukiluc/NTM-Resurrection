@@ -1,0 +1,166 @@
+{
+  "overrides": [
+    {
+      "model": "hbm:item/canned_conserve_0",
+      "predicate": {
+        "hbm:item_meta": 0.0
+      }
+    },
+    {
+      "model": "hbm:item/canned_conserve_1",
+      "predicate": {
+        "hbm:item_meta": 1.0
+      }
+    },
+    {
+      "model": "hbm:item/canned_conserve_2",
+      "predicate": {
+        "hbm:item_meta": 2.0
+      }
+    },
+    {
+      "model": "hbm:item/canned_conserve_3",
+      "predicate": {
+        "hbm:item_meta": 3.0
+      }
+    },
+    {
+      "model": "hbm:item/canned_conserve_4",
+      "predicate": {
+        "hbm:item_meta": 4.0
+      }
+    },
+    {
+      "model": "hbm:item/canned_conserve_5",
+      "predicate": {
+        "hbm:item_meta": 5.0
+      }
+    },
+    {
+      "model": "hbm:item/canned_conserve_6",
+      "predicate": {
+        "hbm:item_meta": 6.0
+      }
+    },
+    {
+      "model": "hbm:item/canned_conserve_7",
+      "predicate": {
+        "hbm:item_meta": 7.0
+      }
+    },
+    {
+      "model": "hbm:item/canned_conserve_8",
+      "predicate": {
+        "hbm:item_meta": 8.0
+      }
+    },
+    {
+      "model": "hbm:item/canned_conserve_9",
+      "predicate": {
+        "hbm:item_meta": 9.0
+      }
+    },
+    {
+      "model": "hbm:item/canned_conserve_10",
+      "predicate": {
+        "hbm:item_meta": 10.0
+      }
+    },
+    {
+      "model": "hbm:item/canned_conserve_11",
+      "predicate": {
+        "hbm:item_meta": 11.0
+      }
+    },
+    {
+      "model": "hbm:item/canned_conserve_12",
+      "predicate": {
+        "hbm:item_meta": 12.0
+      }
+    },
+    {
+      "model": "hbm:item/canned_conserve_13",
+      "predicate": {
+        "hbm:item_meta": 13.0
+      }
+    },
+    {
+      "model": "hbm:item/canned_conserve_14",
+      "predicate": {
+        "hbm:item_meta": 14.0
+      }
+    },
+    {
+      "model": "hbm:item/canned_conserve_15",
+      "predicate": {
+        "hbm:item_meta": 15.0
+      }
+    },
+    {
+      "model": "hbm:item/canned_conserve_16",
+      "predicate": {
+        "hbm:item_meta": 16.0
+      }
+    },
+    {
+      "model": "hbm:item/canned_conserve_17",
+      "predicate": {
+        "hbm:item_meta": 17.0
+      }
+    },
+    {
+      "model": "hbm:item/canned_conserve_18",
+      "predicate": {
+        "hbm:item_meta": 18.0
+      }
+    },
+    {
+      "model": "hbm:item/canned_conserve_19",
+      "predicate": {
+        "hbm:item_meta": 19.0
+      }
+    },
+    {
+      "model": "hbm:item/canned_conserve_20",
+      "predicate": {
+        "hbm:item_meta": 20.0
+      }
+    },
+    {
+      "model": "hbm:item/canned_conserve_21",
+      "predicate": {
+        "hbm:item_meta": 21.0
+      }
+    },
+    {
+      "model": "hbm:item/canned_conserve_22",
+      "predicate": {
+        "hbm:item_meta": 22.0
+      }
+    },
+    {
+      "model": "hbm:item/canned_conserve_23",
+      "predicate": {
+        "hbm:item_meta": 23.0
+      }
+    },
+    {
+      "model": "hbm:item/canned_conserve_24",
+      "predicate": {
+        "hbm:item_meta": 24.0
+      }
+    },
+    {
+      "model": "hbm:item/canned_conserve_25",
+      "predicate": {
+        "hbm:item_meta": 25.0
+      }
+    },
+    {
+      "model": "hbm:item/canned_conserve_26",
+      "predicate": {
+        "hbm:item_meta": 26.0
+      }
+    }
+  ]
+}

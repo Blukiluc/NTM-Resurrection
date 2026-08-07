@@ -1,0 +1,7 @@
+{
+  "parent": "minecraft:block/cube_top",
+  "textures": {
+    "side": "hbm:block/det_nuke_side",
+    "top": "hbm:block/det_nuke_top"
+  }
+}

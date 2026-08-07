@@ -1,0 +1,8 @@
+{
+  "values": [
+    "hbm:waste_log",
+    "hbm:waste_planks",
+    "hbm:frozen_log",
+    "hbm:frozen_planks"
+  ]
+}

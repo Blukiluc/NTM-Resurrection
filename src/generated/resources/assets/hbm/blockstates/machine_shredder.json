@@ -1,0 +1,67 @@
+{
+  "variants": {
+    "facing=down,type=core": {
+      "model": "hbm:block/machine_shredder"
+    },
+    "facing=down,type=dummy": {
+      "model": "hbm:block/machine_shredder"
+    },
+    "facing=down,type=extra": {
+      "model": "hbm:block/machine_shredder"
+    },
+    "facing=east,type=core": {
+      "model": "hbm:block/machine_shredder",
+      "y": 90
+    },
+    "facing=east,type=dummy": {
+      "model": "hbm:block/machine_shredder",
+      "y": 90
+    },
+    "facing=east,type=extra": {
+      "model": "hbm:block/machine_shredder",
+      "y": 90
+    },
+    "facing=north,type=core": {
+      "model": "hbm:block/machine_shredder"
+    },
+    "facing=north,type=dummy": {
+      "model": "hbm:block/machine_shredder"
+    },
+    "facing=north,type=extra": {
+      "model": "hbm:block/machine_shredder"
+    },
+    "facing=south,type=core": {
+      "model": "hbm:block/machine_shredder",
+      "y": 180
+    },
+    "facing=south,type=dummy": {
+      "model": "hbm:block/machine_shredder",
+      "y": 180
+    },
+    "facing=south,type=extra": {
+      "model": "hbm:block/machine_shredder",
+      "y": 180
+    },
+    "facing=up,type=core": {
+      "model": "hbm:block/machine_shredder"
+    },
+    "facing=up,type=dummy": {
+      "model": "hbm:block/machine_shredder"
+    },
+    "facing=up,type=extra": {
+      "model": "hbm:block/machine_shredder"
+    },
+    "facing=west,type=core": {
+      "model": "hbm:block/machine_shredder",
+      "y": 270
+    },
+    "facing=west,type=dummy": {
+      "model": "hbm:block/machine_shredder",
+      "y": 270
+    },
+    "facing=west,type=extra": {
+      "model": "hbm:block/machine_shredder",
+      "y": 270
+    }
+  }
+}

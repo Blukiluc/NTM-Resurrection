@@ -1,0 +1,7 @@
+{
+  "type": "barrel",
+  "loader": "hbm:ntm_geometry_loader",
+  "textures": {
+    "texture": "hbm:block/barrel_taint"
+  }
+}

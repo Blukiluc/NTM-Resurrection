@@ -1,0 +1,1459 @@
+package com.hbm.datagen;
+
+import com.hbm.blocks.NtmBlocks;
+import com.hbm.blocks.generic.BarbedWireBlock.BarbedWireType;
+import com.hbm.items.ItemEnums.CapType;
+import com.hbm.items.NtmItems;
+import com.hbm.items.food.ConserveItem.ConserveType;
+import com.hbm.items.food.DrinkItem.DrinkType;
+import com.hbm.items.machine.BatteryPackItem.BatteryPackType;
+import com.hbm.items.machine.BatterySCItem.BatterySCType;
+import com.hbm.items.machine.BreedingRodItem.BreedingRodType;
+import com.hbm.items.special.StarterKitItem.KitType;
+import com.hbm.main.NuclearTechMod;
+import net.minecraft.data.PackOutput;
+import net.minecraft.world.item.Item;
+import net.minecraft.world.level.block.Block;
+import net.neoforged.neoforge.common.data.LanguageProvider;
+import net.neoforged.neoforge.registries.DeferredBlock;
+import net.neoforged.neoforge.registries.DeferredItem;
+
+import java.util.Locale;
+
+public class NtmLanguageProvider extends LanguageProvider {
+
+    // helper keys
+    private static final String DESC = ".desc";
+    private static final String P11 = ".p11";
+
+    public NtmLanguageProvider(PackOutput output) {
+        super(output, NuclearTechMod.MODID, "en_us");
+    }
+
+    @Override
+    protected void addTranslations() {
+
+        // Auto-generated material item translations from Mats.java
+        for (com.hbm.inventory.material.NTMMaterial mat : com.hbm.inventory.material.Mats.orderedList) {
+            for (com.hbm.inventory.material.MaterialShapes shape : mat.autogen) {
+                String itemName = shape.itemNameFor(mat);
+                if (itemName == null) continue;
+                // e.g. "ingot_copper" -> "Copper Ingot"
+                String displayName = capitalize(mat.names[0]) + " " + capitalize(shapeSingular(shape));
+                this.add("item." + com.hbm.main.NuclearTechMod.MODID + "." + itemName, displayName);
+            }
+        }
+
+
+
+        // ITEMS //
+        this.add(NtmItems.INGOT_URANIUM, "Uranium Ingot");
+        this.add(NtmItems.INGOT_U233, "Uranium-233 Ingot");
+        this.add(NtmItems.INGOT_U235, "Uranium-235 Ingot");
+        this.add(NtmItems.INGOT_U238, "Uranium-238 Ingot");
+        this.add(NtmItems.INGOT_U238M2, "Metastable Uranium-238M2 Ingot");
+        this.add(NtmItems.INGOT_TH232, "Thorium-232 Ingot");
+        this.add(NtmItems.INGOT_PLUTONIUM, "Plutonium Ingot");
+        this.add(NtmItems.INGOT_PU238, "Plutonium-238 Ingot");
+        this.add(NtmItems.INGOT_PU239, "Plutonium-239 Ingot");
+        this.add(NtmItems.INGOT_PU240, "Plutonium-240 Ingot");
+        this.add(NtmItems.INGOT_PU241, "Plutonium-241 Ingot");
+        this.add(NtmItems.INGOT_PU_MIX, "Reactor Grade Plutonium Ingot");
+        this.add(NtmItems.INGOT_AM241, "Americium-241 Ingot");
+        this.add(NtmItems.INGOT_AM242, "Americium-242 Ingot");
+        this.add(NtmItems.INGOT_AM_MIX, "Reactor Grade Americium Ingot");
+        this.add(NtmItems.INGOT_NEPTUNIUM, "Neptunium Ingot");
+        this.add(NtmItems.INGOT_NEPTUNIUM, DESC,"That one's my favourite!");
+        this.add(NtmItems.INGOT_NEPTUNIUM, DESC + P11,"Woo, scary!");
+        this.add(NtmItems.INGOT_PO210, "Polonium-210 Ingot");
+        this.add(NtmItems.INGOT_TC99, "Technetium-99 Ingot");
+        this.add(NtmItems.INGOT_CO60, "Cobalt-60 Ingot");
+        this.add(NtmItems.INGOT_SR90, "Strontium-90 Ingot");
+        this.add(NtmItems.INGOT_AU198, "Gold-198 Ingot");
+        this.add(NtmItems.INGOT_PB209, "Lead-209 Ingot");
+        this.add(NtmItems.INGOT_RA226, "Radium-226 Ingot");
+        this.add(NtmItems.INGOT_TITANIUM, "Titanium Ingot");
+        this.add(NtmItems.INGOT_INDUSTRIAL_COPPER, "Industrial Grade Copper Ingot");
+        this.add(NtmItems.INGOT_RED_COPPER, "Minecraft Grade Copper Ingot");
+        this.add(NtmItems.INGOT_TUNGSTEN, "Tungsten Ingot");
+        this.add(NtmItems.INGOT_TUNGSTEN_CARBIDE, "Tungsten Carbide Ingot");
+        this.add(NtmItems.INGOT_ALUMINIUM, "Aluminium Ingot");
+        this.add(NtmItems.INGOT_STEEL, "Steel Ingot");
+        this.add(NtmItems.INGOT_TCALLOY, "Technetium Steel Ingot");
+        this.add(NtmItems.INGOT_CDALLOY, "Cadmium Steel Ingot");
+        this.add(NtmItems.INGOT_BISMUTH_BRONZE, "Bismuth Bronze Ingot");
+        this.add(NtmItems.INGOT_ARSENIC_BRONZE, "Arsenic Bronze Ingot");
+        this.add(NtmItems.INGOT_BSCCO, "BSCCO Ingot");
+        this.add(NtmItems.INGOT_LEAD, "Lead Ingot");
+        this.add(NtmItems.INGOT_BISMUTH, "Bismuth Ingot");
+        this.add(NtmItems.INGOT_ARSENIC, "Arsenic Ingot");
+        this.add(NtmItems.INGOT_CALCIUM, "Calcium Ingot");
+        this.add(NtmItems.INGOT_CADMIUM, "Cadmium Ingot");
+        this.add(NtmItems.INGOT_TANTALIUM, "Tantalum Ingot");
+        this.add(NtmItems.INGOT_TANTALIUM, DESC, "'Tantalum'");
+        this.add(NtmItems.INGOT_TANTALIUM, DESC + P11, "AKA Tantalum.");
+        this.add(NtmItems.INGOT_SILICON, "Silicon Boule");
+        this.add(NtmItems.INGOT_NIOBIUM, "Niobium Ingot");
+        this.add(NtmItems.INGOT_BERYLLIUM, "Beryllium Ingot");
+        this.add(NtmItems.INGOT_COBALT, "Cobalt Ingot");
+        this.add(NtmItems.INGOT_BORON, "Boron Ingot");
+        this.add(NtmItems.INGOT_GRAPHITE, "Graphite Ingot");
+        this.add(NtmItems.INGOT_FIREBRICK, "Firebrick");
+        this.add(NtmItems.INGOT_DURA_STEEL, "High-Speed Steel Ingot");
+        this.add(NtmItems.INGOT_POLYMER, "Polymer Bar");
+        this.add(NtmItems.INGOT_BAKELITE, "Bakelite Bar");
+        this.add(NtmItems.INGOT_BIORUBBER, "Latex Bar");
+        this.add(NtmItems.INGOT_RUBBER, "Rubber Bar");
+        this.add(NtmItems.INGOT_PC, "Hard Plastic Bar");
+        this.add(NtmItems.INGOT_PVC, "PVC Bar");
+        this.add(NtmItems.INGOT_MUD, "Solid Mud Brick");
+        this.add(NtmItems.INGOT_CTF, "Crystalline Fullerite");
+        this.add(NtmItems.INGOT_SCHRARANIUM, "Schraranium Ingot");
+        this.add(NtmItems.INGOT_SCHRARANIUM, DESC, "Made from uranium in a schrabidium transmutator");
+        this.add(NtmItems.INGOT_SCHRABIDIUM, "Schrabidium Ingot");
+        this.add(NtmItems.INGOT_SCHRABIDATE, "Ferric Schrabidate Ingot");
+        this.add(NtmItems.INGOT_MAGNETIZED_TUNGSTEN, "Magnetized Tungsten Ingot");
+        this.add(NtmItems.INGOT_COMBINE_STEEL, "CMB Steel Ingot");
+        this.add(NtmItems.INGOT_COMBINE_STEEL, DESC, "CMB Steel Ingot");
+        this.add(NtmItems.INGOT_SOLINIUM, "Solinium Ingot");
+        this.add(NtmItems.INGOT_GH336, "Ghiorsium-336 Ingot");
+        this.add(NtmItems.INGOT_GH336, DESC, "Seaborgium's colleague.");
+        this.add(NtmItems.INGOT_URANIUM_FUEL, "Ingot of Uranium Fuel");
+        this.add(NtmItems.INGOT_THORIUM_FUEL, "Ingot of Thorium Fuel");
+        this.add(NtmItems.INGOT_PLUTONIUM_FUEL, "Ingot of Plutonium Fuel");
+        this.add(NtmItems.INGOT_NEPTUNIUM_FUEL, "Ingot of Neptunium Fuel");
+        this.add(NtmItems.INGOT_MOX_FUEL, "Ingot of MOX Fuel");
+        this.add(NtmItems.INGOT_AMERICIUM_FUEL, "Ingot of Americium Fuel");
+        this.add(NtmItems.INGOT_SCHRABIDIUM_FUEL, "Ingot of Schrabidium Fuel");
+        this.add(NtmItems.INGOT_HES, "Ingot of Highly Enriched Schrabidium Fuel");
+        this.add(NtmItems.INGOT_LES, "Ingot of Low Enriched Schrabidium Fuel");
+        this.add(NtmItems.INGOT_AUSTRALIUM, "Australium Ingot");
+        this.add(NtmItems.INGOT_LANTHANIUM, "Semi-Stable Lanthanium Ingot");
+        this.add(NtmItems.INGOT_LANTHANIUM, DESC, "'Lanthanum'");
+        this.add(NtmItems.INGOT_LANTHANIUM, DESC + P11, "Actually Lanthanum, but whatever.");
+        this.add(NtmItems.INGOT_AC227, "Actinium-227 Ingot");
+        this.add(NtmItems.INGOT_DESH, "Desh Ingot");
+        this.add(NtmItems.INGOT_FERROURANIUM, "Ferrouranium Ingot");
+        this.add(NtmItems.INGOT_STARMETAL, "§9Starmetal Ingot§r");
+        this.add(NtmItems.INGOT_GUNMETAL, "Gunmetal Ingot");
+        this.add(NtmItems.INGOT_WEAPONSTEEL, "Weapon Steel Ingot");
+        this.add(NtmItems.INGOT_SATURNITE, "Saturnite Ingot");
+        this.add(NtmItems.INGOT_EUPHEMIUM, "Euphemium Ingot");
+        this.add(NtmItems.INGOT_EUPHEMIUM, DESC, "A very special and yet strange element.");
+        this.add(NtmItems.INGOT_DINEUTRONIUM, "Dineutronium Ingot");
+        this.add(NtmItems.INGOT_ELECTRONIUM, "Electronium Ingot");
+        this.add(NtmItems.INGOT_SMORE, "S'more Ingot");
+        this.add(NtmItems.INGOT_OSMIRIDIUM, "Osmiridium Ingot");
+        this.add(NtmItems.INGOT_DUSTED_STEEL, "Dusted Steel Ingot");
+        this.add(NtmItems.INGOT_CHAINSTEEL, "Heavy Chainsteel Ingot");
+        this.add(NtmItems.INGOT_METEORITE, "Meteorite Ingot");
+        this.add(NtmItems.INGOT_METEORITE_FORGED, "Forged Meteorite Ingot");
+        this.add(NtmItems.METEORITE_BLADE, "Meteorite Blade");
+        this.add(NtmItems.INGOT_PHOSPHORUS, "Bar of White Phosphorus");
+        this.add(NtmItems.INGOT_LITHIUM, "Lithium Cube");
+        this.add(NtmItems.INGOT_ZIRCONIUM, "Zirconium Cube");
+        this.add(NtmItems.INGOT_SEMTEX, "Bar of Semtex");
+        this.add(NtmItems.INGOT_C4, "Bar of Composition C-4");
+        this.add(NtmItems.TAR_OIL, "Oil Tar");
+        this.add(NtmItems.TAR_CRACK_OIL, "Crack Oil Tar");
+        this.add(NtmItems.TAR_COAL, "Coal Tar");
+        this.add(NtmItems.TAR_WOOD, "Wood Tar");
+        this.add(NtmItems.WAX_PETROLEUM, "Chlorinated Petroleum Wax");
+        this.add(NtmItems.WAX_PARAFFIN, "Paraffin Wax");
+        this.add(NtmItems.SOLID_FUEL, "Solid Fuel");
+        this.add(NtmItems.SOLID_FUEL_PRESTO, "Presto Log");
+        this.add(NtmItems.SOLID_FUEL_PRESTO_TRIPLET, "Boosted Presto Log");
+        this.add(NtmItems.SOLID_FUEL_BF, "Solid Fuel (Balefire)");
+        this.add(NtmItems.SOLID_FUEL_PRESTO_BF, "Presto Log (Balefire)");
+        this.add(NtmItems.SOLID_FUEL_PRESTO_TRIPLET_BF, "Boosted Presto Log (Balefire)");
+        this.add(NtmItems.ROCKET_FUEL, "Solid Fuel (Rocket Propellant)");
+        this.add(NtmItems.INGOT_REDSTONE.get(), "Redstone Ingot");
+        this.add(NtmItems.INGOT_NEODYMIUM.get(), "Ingot Neodymium");
+        this.add(NtmItems.INGOT_BORAX.get(), "Borax Ingot");
+        this.add(NtmItems.INGOT_SODIUM.get(), "Sodium Ingot");
+        this.add(NtmItems.INGOT_STRONTIUM.get(), "Strontium Ingot");
+        this.add(NtmItems.INGOT_SLAG.get(), "Slag Ingot");
+
+        this.add(NtmItems.BILLET_URANIUM.get(), "Uranium Billet");
+        this.add(NtmItems.BILLET_U233.get(), "Uranium-233 Billet");
+        this.add(NtmItems.BILLET_U235.get(), "Uranium-235 Billet");
+        this.add(NtmItems.BILLET_U238.get(), "Uranium-238 Billet");
+        this.add(NtmItems.BILLET_UZH.get(), "Uranium Zirconium Hydride Billet");
+        this.add(NtmItems.BILLET_TH232.get(), "Thorium-232 Billet");
+        this.add(NtmItems.BILLET_PLUTONIUM.get(), "Plutonium Billet");
+        this.add(NtmItems.BILLET_PU238.get(), "Plutonium-238 Billet");
+        this.add(NtmItems.BILLET_PU239.get(), "Plutonium-239 Billet");
+        this.add(NtmItems.BILLET_PU240.get(), "Plutonium-240 Billet");
+        this.add(NtmItems.BILLET_PU241.get(), "Plutonium-241 Billet");
+        this.add(NtmItems.BILLET_PU_MIX.get(), "Reactor Grade Plutonium Billet");
+        this.add(NtmItems.BILLET_AM241.get(), "Americium-241 Billet");
+        this.add(NtmItems.BILLET_AM242.get(), "Americium-242 Billet");
+        this.add(NtmItems.BILLET_AM_MIX.get(), "Reactor Grade Americium Billet");
+        this.add(NtmItems.BILLET_NEPTUNIUM.get(), "Neptunium Billet");
+        this.add(NtmItems.BILLET_PO210.get(), "Polonium-210 Billet");
+        this.add(NtmItems.BILLET_TC99.get(), "Technetium-99 Billet");
+        this.add(NtmItems.BILLET_COBALT.get(), "Cobalt Billet");
+        this.add(NtmItems.BILLET_CO60.get(), "Cobalt-99 Billet");
+        this.add(NtmItems.BILLET_SR90.get(), "Strontium-90 Billet");
+        this.add(NtmItems.BILLET_AU198.get(), "Gold-198 Billet");
+        this.add(NtmItems.BILLET_PB209.get(), "Lead-209 Billet");
+        this.add(NtmItems.BILLET_RA226.get(), "Radium-226 Billet");
+        this.add(NtmItems.BILLET_AC227.get(), "Actinium-227 Billet");
+        this.add(NtmItems.BILLET_SCHRABIDIUM.get(), "Schrabidium Billet");
+        this.add(NtmItems.BILLET_SOLINIUM.get(), "Solinium Billet");
+        this.add(NtmItems.BILLET_GH336.get(), "Ghiorsium-336 Billet");
+        this.add(NtmItems.BILLET_AUSTRALIUM.get(), "Australium Billet");
+        this.add(NtmItems.BILLET_AUSTRALIUM_LESSER.get(), "Lesser Australium Billet");
+        this.add(NtmItems.BILLET_AUSTRALIUM_GREATER.get(), "Greater Australium Billet");
+        this.add(NtmItems.BILLET_URANIUM_FUEL.get(), "Uranium Fuel Billet");
+        this.add(NtmItems.BILLET_THORIUM_FUEL.get(), "Thorium Fuel Billet");
+        this.add(NtmItems.BILLET_PLUTONIUM_FUEL.get(), "Plutonium Fuel Billet");
+        this.add(NtmItems.BILLET_NEPTUNIUM_FUEL.get(), "Neptunium Fuel Billet");
+        this.add(NtmItems.BILLET_MOX_FUEL.get(), "MOX Fuel Billet");
+        this.add(NtmItems.BILLET_AMERICIUM_FUEL.get(), "Americium Fuel Billet");
+        this.add(NtmItems.BILLET_LES.get(), "Low Enriched Schrabidium Fuel Billet");
+        this.add(NtmItems.BILLET_SCHRABIDIUM_FUEL.get(), "Schrabidium Fuel Billet");
+        this.add(NtmItems.BILLET_HES.get(), "High Enriched Schrabidium Fuel Billet");
+        this.add(NtmItems.BILLET_PO210BE.get(), "Po210Be Billet");
+        this.add(NtmItems.BILLET_RA226BE.get(), "Ra226Be Billet");
+        this.add(NtmItems.BILLET_PU238BE.get(), "Pu238Be Billet");
+        this.add(NtmItems.BILLET_BERYLLIUM.get(), "Beryllium Billet");
+        this.add(NtmItems.BILLET_BISMUTH.get(), "Bismuth Billet");
+        this.add(NtmItems.BILLET_SILICON.get(), "Silicon Wafer");
+        this.add(NtmItems.BILLET_ZIRCONIUM.get(), "Zirconium Billet");
+        this.add(NtmItems.BILLET_ZFB_BISMUTH.get(), "Bismuth ZFB Billet");
+        this.add(NtmItems.BILLET_ZFB_PU241.get(), "Pu-241 ZFB Billet");
+        this.add(NtmItems.BILLET_ZFB_AM_MIX.get(), "Reactor Grade Americium ZFB Billet");
+        this.add(NtmItems.BILLET_YHARONITE.get(), "Yharonite Billet");
+        this.add(NtmItems.BILLET_BALEFIRE_GOLD.get(), "Flashgold Billet");
+        this.add(NtmItems.BILLET_FLASHLEAD.get(), "Flashlead Billet");
+        this.add(NtmItems.BILLET_NUCLEAR_WASTE.get(), "Nuclear Waste Billet");
+
+        this.add(NtmItems.CINNABAR.get(), "Cinnabar");
+        this.add(NtmItems.MERCURY_NUGGET_TINY.get(), "Tiny Drop of Mercury");
+        this.add(NtmItems.MERCURY_NUGGET.get(), "Drop of Mercury");
+        this.add(NtmItems.MERCURY_BOTTLE.get(), "Bottle of Mercury");
+        this.add(NtmItems.COKE_COAL.get(), "Coal Coke");
+        this.add(NtmItems.COKE_LIGNITE.get(), "Lignite Coke");
+        this.add(NtmItems.COKE_PETROLEUM.get(), "Petroleum Coke");
+        this.add(NtmItems.LIGNITE.get(), "Lignite");
+        this.add(NtmItems.COAL_INFERNAL.get(), "Infernal Coal");
+        this.add(NtmItems.BRIQUETTE_COAL.get(), "Coal Briquette");
+        this.add(NtmItems.BRIQUETTE_LIGNITE.get(), "Lignite Briquette");
+        this.add(NtmItems.BRIQUETTE_WOOD.get(), "Sawdust Briquette");
+        this.add(NtmItems.SULFUR.get(), "Sulfur");
+        this.add(NtmItems.NITER.get(), "Niter");
+        this.add(NtmItems.NITRA.get(), "Nitra");
+        this.add(NtmItems.NITRA_SMALL.get(), "Small Pile of Nitra");
+        this.add(NtmItems.FLUORITE.get(), "Fluorite");
+
+        this.add(NtmItems.POWDER_COAL.get(), "Coal Powder");
+        this.add(NtmItems.POWDER_COAL_TINY.get(), "Tiny Pile of Coal Powder");
+        this.add(NtmItems.POWDER_IRON.get(), "Iron Powder");
+        this.add(NtmItems.POWDER_GOLD.get(), "Gold Powder");
+        this.add(NtmItems.POWDER_LAPIS.get(), "Lapis Lazuli Powder");
+        this.add(NtmItems.POWDER_QUARTZ.get(), "Quartz Powder");
+        this.add(NtmItems.POWDER_DIAMOND.get(), "Diamond Powder");
+        this.add(NtmItems.POWDER_EMERALD.get(), "Emerald Powder");
+        this.add(NtmItems.POWDER_URANIUM.get(), "Uranium Powder");
+        this.add(NtmItems.POWDER_PLUTONIUM.get(), "Plutonium Powder");
+        this.add(NtmItems.POWDER_NEPTUNIUM.get(), "Neptinium Powder");
+        this.add(NtmItems.POWDER_PO210.get(), "Polonium-210 Powder");
+        this.add(NtmItems.POWDER_CO60.get(), "Cobalt-60 Powder");
+        this.add(NtmItems.POWDER_SR90.get(), "Strontium-90 Powder");
+        this.add(NtmItems.POWDER_SR90_TINY.get(), "Tiny Pile of Strontium-90 Powder");
+        this.add(NtmItems.POWDER_I131.get(), "Iodine-131 Powder");
+        this.add(NtmItems.POWDER_I131_TINY.get(), "Tiny Pile of Iodine-131 Powder");
+        this.add(NtmItems.POWDER_XE135.get(), "Xenon-135 Powder");
+        this.add(NtmItems.POWDER_XE135_TINY.get(), "Tiny Pile of Xenon-135 Powder");
+        this.add(NtmItems.POWDER_CS137.get(), " Caesium-137 Powder");
+        this.add(NtmItems.POWDER_CS137_TINY.get(), "Tiny Pile of Caesium-137 Powder");
+        this.add(NtmItems.POWDER_AU198.get(), "Gold-198 Powder");
+        this.add(NtmItems.POWDER_RA226.get(), "Radium-226 Powder");
+        this.add(NtmItems.POWDER_AT209.get(), "Astatine-209 Powder");
+        this.add(NtmItems.POWDER_TITANIUM.get(), "Titanium Powder");
+        this.add(NtmItems.POWDER_COPPER.get(), "Copper Powder");
+        this.add(NtmItems.POWDER_RED_COPPER.get(), "Red Copper Powder");
+        this.add(NtmItems.POWDER_TUNGSTEN.get(), "Tungsten Powder");
+        this.add(NtmItems.POWDER_ALUMINIUM.get(), "Aluminium Powder");
+        this.add(NtmItems.POWDER_STEEL.get(), "Steel Powder");
+        this.add(NtmItems.POWDER_STEEL_TINY.get(), "Tiny Pile of Steel Powder");
+        this.add(NtmItems.POWDER_TECHNETIUM.get(), "Technetium Steel Powder");
+        this.add(NtmItems.POWDER_LEAD.get(), "Lead Powder");
+        this.add(NtmItems.POWDER_BISMUTH.get(), "Bismuth Powder");
+        this.add(NtmItems.POWDER_CALCIUM.get(), "Calcium Powder");
+        this.add(NtmItems.POWDER_CADMIUM.get(), "Cadmium Powder");
+        this.add(NtmItems.POWDER_COLTAN_ORE.get(), "Crushed Coltan");
+        this.add(NtmItems.POWDER_COLTAN.get(), "Purified Tantalite");
+        this.add(NtmItems.POWDER_TANTALIUM.get(), "Tantalum Powder");
+        this.add(NtmItems.POWDER_TEKTITE.get(), "Tektite Powder");
+        this.add(NtmItems.POWDER_PALEOGENITE.get(), "Paleogenite Powder");
+        this.add(NtmItems.POWDER_PALEOGENITE_TINY.get(), "Tiny Pile of Paleogenite Powder");
+        this.add(NtmItems.POWDER_IMPURE_OSMIRIDIUM.get(), "Impure Osmiridium Powder");
+        this.add(NtmItems.POWDER_BORAX.get(), "Borax");
+        this.add(NtmItems.POWDER_CHLOROCALCITE.get(), "Chlorocalcite");
+        this.add(NtmItems.POWDER_MOLYSITE.get(), "Molysite");
+        this.add(NtmItems.POWDER_YELLOWCAKE.get(), "Yellowcake");
+        this.add(NtmItems.POWDER_BERYLLIUM.get(), "Beryllium Powder");
+        this.add(NtmItems.POWDER_DURA_STEEL.get(), "High-Speed Steel Powder");
+        this.add(NtmItems.POWDER_POLYMER.get(), "Polymer Powder");
+        this.add(NtmItems.POWDER_BAKELITE.get(), "Bakelite Powder");
+        this.add(NtmItems.POWDER_SCHRABIDIUM.get(), "Schrabidium Powder");
+        this.add(NtmItems.POWDER_SCHRABIDATE.get(), "Ferric Schrabidate Powder");
+        this.add(NtmItems.POWDER_MAGNETIZED_TUNGSTEN.get(), "Magnetized Tungsten Powder");
+        this.add(NtmItems.POWDER_CHLOROPHYTE.get(), "Chlorophyte Powder");
+        this.add(NtmItems.POWDER_COMBINE_STEEL.get(), "CMD Steel Powder");
+        this.add(NtmItems.POWDER_LITHIUM.get(), "Lithium Powder");
+        this.add(NtmItems.POWDER_LITHIUM_TINY.get(), "Tiny Pile of Lithium Powder");
+        this.add(NtmItems.POWDER_ZIRCONIUM.get(), "Zirconium Powder");
+        this.add(NtmItems.POWDER_SODIUM.get(), "Sodium");
+        this.add(NtmItems.POWDER_LIGNITE.get(), "Lignite Powder");
+        this.add(NtmItems.POWDER_IODINE.get(), "Iodine Powder");
+        this.add(NtmItems.POWDER_THORIUM.get(), "Thorium Powder");
+        this.add(NtmItems.POWDER_NEODYMIUM.get(), "Neodymium Powder");
+        this.add(NtmItems.POWDER_NEODYMIUM_TINY.get(), "Tiny Pile of Neodymium Powder");
+        this.add(NtmItems.POWDER_ASTATINE.get(), "Astatine Powder");
+        this.add(NtmItems.POWDER_CAESIUM.get(), "Caesium Powder");
+        this.add(NtmItems.POWDER_AUSTRALIUM.get(), "Australium Powder");
+        this.add(NtmItems.POWDER_STRONTIUM.get(), "Strontium Powder");
+        this.add(NtmItems.POWDER_COBALT.get(), "Cobalt Powder");
+        this.add(NtmItems.POWDER_COBALT_TINY.get(), "Tiny Pile of Cobalt Powder");
+        this.add(NtmItems.POWDER_BROMINE.get(), "Bromine Powder");
+        this.add(NtmItems.POWDER_NIOBIUM.get(), "Niobium Powder");
+        this.add(NtmItems.POWDER_NIOBIUM_TINY.get(), "Tiny Pile of Niobium Powder");
+        this.add(NtmItems.POWDER_TENNESSINE.get(), "Tennessine Powder");
+        this.add(NtmItems.POWDER_CERIUM.get(), "Cerium Powder");
+        this.add(NtmItems.POWDER_CERIUM_TINY.get(), "Tiny Pile of Cerium Powder");
+        this.add(NtmItems.POWDER_LANTHANIUM.get(), "Lanthanium Powder");
+        this.add(NtmItems.POWDER_LANTHANIUM_TINY.get(), "Tiny Pile of Lanthanium Powder");
+        this.add(NtmItems.POWDER_ACTINIUM.get(), "Actinium Powder");
+        this.add(NtmItems.POWDER_ACTINIUM_TINY.get(), "Tiny Pile of ActiniumPowder");
+        this.add(NtmItems.POWDER_BORON.get(), "Boron Powder");
+        this.add(NtmItems.POWDER_BORON_TINY.get(), "Tiny Pile of Boron Powder");
+        this.add(NtmItems.POWDER_ASBESTOS.get(), "Asbestos Powder");
+        this.add(NtmItems.POWDER_MAGIC.get(), "Pulverized Enchantment");
+        this.add(NtmItems.POWDER_SAWDUST.get(), "Sawdust");
+        this.add(NtmItems.POWDER_FLUX.get(), "Flux");
+        this.add(NtmItems.POWDER_FERTILIZER.get(), "Industrial Fertilizer");
+        this.add(NtmItems.POWDER_BALEFIRE.get(), "Thermonuclear Ashes");
+        this.add(NtmItems.POWDER_SEMTEX_MIX.get(), "Semtex Blend");
+        this.add(NtmItems.POWDER_DESH_MIX.get(), "Desh Blend");
+        this.add(NtmItems.POWDER_DESH_READY.get(), "DeshReady™ Blend");
+        this.add(NtmItems.POWDER_DESH.get(), "Desh Powder");
+        this.add(NtmItems.POWDER_NITAN_MIX.get(), "Nitanium Blend");
+        this.add(NtmItems.POWDER_SPARK_MIX.get(), "Spark Blend");
+        this.add(NtmItems.POWDER_METEORITE.get(), "Meteorite Powder");
+        this.add(NtmItems.POWDER_METEORITE_TINY.get(), "Tiny Pile of Meteorite Powder");
+        this.add(NtmItems.POWDER_EUPHEMIUM.get(), "Euphemium Powder");
+        this.add(NtmItems.POWDER_DINEUTRONIUM.get(), "Dineutronium Powder");
+        this.add(NtmItems.DUST.get(), "Dust");
+        this.add(NtmItems.DUST_TINY.get(), "Tiny Pile of Dust");
+        this.add(NtmItems.DUST_FALLOUT.get(), "Pile of Fallout");
+        this.add(NtmItems.POWDER_ASH_WOOD.get(), "Wood Ash");
+        this.add(NtmItems.POWDER_ASH_COAL.get(), "Coal Ash");
+        this.add(NtmItems.POWDER_ASH.get(), "Ash");
+        this.add(NtmItems.POWDER_ASH_FLY.get(), "Fly Ash");
+        this.add(NtmItems.POWDER_ASH_SOOT.get(), "Fine Soot");
+        this.add(NtmItems.POWDER_ASH_FULLERENE.get(), "Fullerene");
+        this.add(NtmItems.POWDER_LIMESTONE.get(), "Limestone Powder");
+        this.add(NtmItems.POWDER_CEMENT.get(), "Cement");
+        this.add(NtmItems.POWDER_RED_PHOSPHOROUS.get(), "Red Phosphorous");
+        this.add(NtmItems.POWDER_ICE.get(), "Cryo Powder");
+        this.add(NtmItems.POWDER_POISON.get(), "Poison Powder");
+        this.add(NtmItems.POWDER_THERMITE.get(), "Thermite Powder");
+        this.add(NtmItems.POWDER_ENERGY.get(), "Energy Powder");
+        this.add(NtmItems.CORDITE.get(), "Cordite");
+        this.add(NtmItems.BALLISTITE.get(), "Ballistite");
+        this.add(NtmItems.BALL_DYNAMITE.get(), "Dynamite");
+        this.add(NtmItems.BALL_TNT.get(), "TNT");
+        this.add(NtmItems.BALL_TATB.get(), "TATB");
+        this.add(NtmItems.BALL_RESIN.get(), "Latex");
+        this.add(NtmItems.BALL_FIRECLAY.get(), "Fireclay");
+
+        this.add(NtmItems.CRYSTAL_COAL.get(), "Coal Crystals");
+        this.add(NtmItems.CRYSTAL_IRON.get(), "Iron Crystals");
+        this.add(NtmItems.CRYSTAL_GOLD.get(), "Gold Crystals");
+        this.add(NtmItems.CRYSTAL_REDSTONE.get(), "Redstone Crystals");
+        this.add(NtmItems.CRYSTAL_LAPIS.get(), "Lapis Crystals");
+        this.add(NtmItems.CRYSTAL_DIAMOND.get(), "Diamond Crystals");
+        this.add(NtmItems.CRYSTAL_URANIUM.get(), "Uranium Crystals");
+        this.add(NtmItems.CRYSTAL_THORIUM.get(), "Thorium Crystals");
+        this.add(NtmItems.CRYSTAL_PLUTONIUM.get(), "Plutonium Crystals");
+        this.add(NtmItems.CRYSTAL_TITANIUM.get(), "Titanium Crystals");
+        this.add(NtmItems.CRYSTAL_SULFUR.get(), "Sulfur Crystals");
+        this.add(NtmItems.CRYSTAL_NITER.get(), "Niter Crystals");
+        this.add(NtmItems.CRYSTAL_COPPER.get(), "Copper Crystals");
+        this.add(NtmItems.CRYSTAL_TUNGSTEN.get(), "Tungsten Crystals");
+        this.add(NtmItems.CRYSTAL_ALUMINIUM.get(), "Aluminium Crystals");
+        this.add(NtmItems.CRYSTAL_FLUORITE.get(), "Fluorite Crystals");
+        this.add(NtmItems.CRYSTAL_BERYLLIUM.get(), "Beryllium Crystals");
+        this.add(NtmItems.CRYSTAL_LEAD.get(), "Lead Crystals");
+        this.add(NtmItems.CRYSTAL_SCHRARANIUM.get(), "Schraranium Crystals");
+        this.add(NtmItems.CRYSTAL_SCHRABIDIUM.get(), "Schrabidium Crystals");
+        this.add(NtmItems.CRYSTAL_RARE.get(), "Rare Earth Crystals");
+        this.add(NtmItems.CRYSTAL_PHOSPHORUS.get(), "Phosphorus Crystals");
+        this.add(NtmItems.CRYSTAL_LITHIUM.get(), "Lithium Crystals");
+        this.add(NtmItems.CRYSTAL_COBALT.get(), "Cobalt Crystals");
+        this.add(NtmItems.CRYSTAL_STARMETAL.get(), "Starmetal Crystals");
+        this.add(NtmItems.CRYSTAL_CINNABAR.get(), "Cinnabar Crystals");
+        this.add(NtmItems.CRYSTAL_TRIXITE.get(), "Trixite Crystals");
+        this.add(NtmItems.CRYSTAL_OSMIRIDIUM.get(), "Osmiridium Crystals");
+
+        this.add(NtmItems.GEM_SODALITE.get(), "Sodalite");
+        this.add(NtmItems.GEM_TANTALIUM.get(), "Tantalum Polycrystal");
+        this.add(NtmItems.GEM_VOLCANIC.get(), "Volcanic Gem");
+        this.add(NtmItems.GEM_RAD.get(), "Radioactive Gem");
+        this.add(NtmItems.GEM_ALEXANDRITE.get(), "Alexandrite");
+        this.add(NtmItems.FRAGMENT_NEODYMIUM.get(), "Neodymium Fragment");
+        this.add(NtmItems.FRAGMENT_COBALT.get(), "Cobalt Fragment");
+        this.add(NtmItems.FRAGMENT_NIOBIUM.get(), "Niobium Fragment");
+        this.add(NtmItems.FRAGMENT_CERIUM.get(), "Cerium Fragment");
+        this.add(NtmItems.FRAGMENT_LANTHANIUM.get(), "Lanthanium Fragment");
+        this.add(NtmItems.FRAGMENT_AC227.get(), "Actinium-227 Fragment");
+        this.add(NtmItems.FRAGMENT_BORON.get(), "Boron Fragment");
+        this.add(NtmItems.FRAGMENT_METEORITE.get(), "Meteorite Fragment");
+        this.add(NtmItems.FRAGMENT_COLTAN.get(), "Coltan");
+        this.add(NtmItems.CHUNK_RARE.get(), "Rare Earth Ore Chunk");
+        this.add(NtmItems.CHUNK_MALACHITE.get(), "Malachite Chunk Chunk");
+        this.add(NtmItems.CHUNK_CRYOLITE.get(), "Cryolite Chunk");
+        this.add(NtmItems.MOONSTONE.get(), "Moonstone");
+        this.add(NtmItems.BIOMASS.get(), "Biomass");
+        this.add(NtmItems.BIOMASS_COMPRESSED.get(), "Compressed Biomass");
+        this.add(NtmItems.BIO_WAFER.get(), "Algae Wafer");
+
+        this.add(NtmItems.NUGGET_URANIUM.get(), "Uranium Nugget");
+        this.add(NtmItems.NUGGET_U233.get(), "Uranium-233 Nugget");
+        this.add(NtmItems.NUGGET_U235.get(), "Uranium-235 Nugget");
+        this.add(NtmItems.NUGGET_U238.get(), "Uranium-238 Nugget");
+        this.add(NtmItems.NUGGET_TH232.get(), "Thorium-232 Nugget");
+        this.add(NtmItems.NUGGET_PLUTONIUM.get(), "Plutonium Nugget");
+        this.add(NtmItems.NUGGET_PU238.get(), "Plutonium-238 Nugget");
+        this.add(NtmItems.NUGGET_PU239.get(), "Plutonium-239 Nugget");
+        this.add(NtmItems.NUGGET_PU240.get(), "Plutonium-240 Nugget");
+        this.add(NtmItems.NUGGET_PU241.get(), "Plutonium-241 Nugget");
+        this.add(NtmItems.NUGGET_PU_MIX.get(), "Reactor Grade Plutonium Nugget");
+        this.add(NtmItems.NUGGET_AM241.get(), "Americium-241 Nugget");
+        this.add(NtmItems.NUGGET_AM242.get(), "Americium-242 Nugget");
+        this.add(NtmItems.NUGGET_AM_MIX.get(), "Reactor Grade Americium Nugget");
+        this.add(NtmItems.NUGGET_NEPTUNIUM.get(), "Neptunium Nugget");
+        this.add(NtmItems.NUGGET_PO210.get(), "Polonium-210 Nugget");
+        this.add(NtmItems.NUGGET_COBALT.get(), "Cobalt Nugget");
+        this.add(NtmItems.NUGGET_CO60.get(), "Cobalt-60 Nugget");
+        this.add(NtmItems.NUGGET_SR90.get(), "Strontium-90 Nugget");
+        this.add(NtmItems.NUGGET_TC99.get(), "Technetium-99 Nugget");
+        this.add(NtmItems.NUGGET_AU198.get(), "Gold-198 Nugget");
+        this.add(NtmItems.NUGGET_PB209.get(), "Lead-209 Nugget");
+        this.add(NtmItems.NUGGET_RA226.get(), "Radium-226 Nugget");
+        this.add(NtmItems.NUGGET_AC227.get(), "Actinium-227 Nugget");
+        this.add(NtmItems.NUGGET_LEAD.get(), "Lead Nugget");
+        this.add(NtmItems.NUGGET_BISMUTH.get(), "Bismuth Nugget");
+        this.add(NtmItems.NUGGET_ARSENIC.get(), "Arsenic Nugget");
+        this.add(NtmItems.NUGGET_TANTALIUM.get(), "Tantalum Nugget");
+        this.add(NtmItems.NUGGET_SILICON.get(), "Silicon Nugget");
+        this.add(NtmItems.NUGGET_NIOBIUM.get(), "Niobium Nugget");
+        this.add(NtmItems.NUGGET_BERYLLIUM.get(), "Beryllium Nugget");
+        this.add(NtmItems.NUGGET_SCHRABIDIUM.get(), "Schrabidium Nugget");
+        this.add(NtmItems.NUGGET_SOLINIUM.get(), "Solinium Nugget");
+        this.add(NtmItems.NUGGET_GH336.get(), "Ghiorsium-336 Nugget");
+        this.add(NtmItems.NUGGET_URANIUM_FUEL.get(), "Nugget of Uranium Fuel");
+        this.add(NtmItems.NUGGET_THORIUM_FUEL.get(), "Nugget of Thorium Fuel");
+        this.add(NtmItems.NUGGET_PLUTONIUM_FUEL.get(), "Nugget of Plutonium Fuel");
+        this.add(NtmItems.NUGGET_NEPTUNIUM_FUEL.get(), "Nugget of Neptunium Fuel");
+        this.add(NtmItems.NUGGET_MOX_FUEL.get(), "Nugget of MOX Fuel");
+        this.add(NtmItems.NUGGET_AMERICIUM_FUEL.get(), "Nugget of Americium Fuel");
+        this.add(NtmItems.NUGGET_LES.get(), "Low Enriched Schrabidium Fuel Nugget");
+        this.add(NtmItems.NUGGET_SCHRABIDIUM_FUEL.get(), "Nugget of Schrabidium Fuel");
+        this.add(NtmItems.NUGGET_HES.get(), "High Enriched Schrabidium Fuel Nugget");
+        this.add(NtmItems.NUGGET_ZIRCONIUM.get(), "Zirconium Splinter");
+        this.add(NtmItems.NUGGET_AUSTRALIUM.get(), "Australium Nugget");
+        this.add(NtmItems.NUGGET_AUSTRALIUM_LESSER.get(), "Lesser Australium Nugget");
+        this.add(NtmItems.NUGGET_AUSTRALIUM_GREATER.get(), "Greater Australium Nugget");
+        this.add(NtmItems.NUGGET_DESH.get(), "Desh Nugget");
+        this.add(NtmItems.NUGGET_EUPHEMIUM.get(), "Euphemium Nugget");
+        this.add(NtmItems.NUGGET_DINEUTRONIUM.get(), "Euphemium Nugget");
+        this.add(NtmItems.NUGGET_OSMIRIDIUM.get(), "Dineutronium Nugget");
+
+        this.add(NtmItems.NEUTRON_REFLECTOR.get(), "Neutron Reflector");
+
+        this.add(NtmItems.PLATE_IRON.get(), "Iron Plate");
+        this.add(NtmItems.PLATE_GOLD.get(), "Gold Plate");
+        this.add(NtmItems.PLATE_TITANIUM.get(), "Titanium Plate");
+        this.add(NtmItems.PLATE_ALUMINIUM.get(), "Aluminium Plate");
+        this.add(NtmItems.PLATE_STEEL.get(), "Steel Plate");
+        this.add(NtmItems.PLATE_LEAD.get(), "Lead Plate");
+        this.add(NtmItems.PLATE_COPPER.get(), "Copper Plate");
+        this.add(NtmItems.PLATE_DURA_STEEL.get(), "High-Speed Steel Plate");
+        this.add(NtmItems.PLATE_SCHRABIDIUM.get(), "Schrabidium Plate");
+        this.add(NtmItems.PLATE_COMBINE_STEEL.get(), "CMB Steel Plate");
+        this.add(NtmItems.PLATE_MIXED.get(), "Mixed Plate");
+        this.add(NtmItems.PLATE_GUNMETAL.get(), "Fau Armor Plating");
+        this.add(NtmItems.PLATE_WEAPONSTEEL.get(), "DNT Armor Plating");
+        this.add(NtmItems.PLATE_SATURNITE.get(), "Saturnite Plate");
+        this.add(NtmItems.PLATE_PAA.get(), "PaA Alloy Plate");
+        this.add(NtmItems.PLATE_POLYMER.get(), "Insulator");
+        this.add(NtmItems.PLATE_KEVLAR.get(), "Kevlar Sheet");
+        this.add(NtmItems.PLATE_DALEKANIUM.get(), "Angry Metal");
+        this.add(NtmItems.PLATE_DESH.get(), "Desh Compound Plate");
+        this.add(NtmItems.PLATE_BISMUTH.get(), "Bismuth Compound Plate");
+        this.add(NtmItems.PLATE_EUPHEMIUM.get(), "Euphemium Compound Plate");
+        this.add(NtmItems.PLATE_DINEUTRONIUM.get(), "Dineutronium Compound Plate");
+        this.add(NtmItems.PLATE_ARMOR_TITANIUM.get(), "Titanium Armor Plate");
+        this.add(NtmItems.PLATE_ARMOR_AJR.get(), "Iron-Shod Armor Plating");
+        this.add(NtmItems.PLATE_ARMOR_HEV.get(), "Reactive Armor Plating");
+        this.add(NtmItems.PLATE_ARMOR_LUNAR.get(), "Lunar Armor Plating");
+        this.add(NtmItems.PLATE_ARMOR_FAU.get(), "Fau Armor Plating");
+        this.add(NtmItems.PLATE_ARMOR_DNT.get(), "DNT Armor Plating");
+
+        this.add(NtmItems.SCRAP, "Scrap");
+
+        this.add(NtmItems.PELLET_RTG, "Plutonium-238 RTG Pellet");
+
+        this.add(NtmItems.CELL_EMPTY, "Empty Cell");
+        this.add(NtmItems.CELL_UF6, "Uranium Hexafluoride Cell");
+        this.add(NtmItems.CELL_PUF6, "Plutonium Hexafluoride Cell");
+        this.add(NtmItems.CELL_ANTIMATTER, "Antimatter Cell");
+        this.add(NtmItems.CELL_ANTIMATTER, DESC, "Warning: Exposure to matter will$lead to violent annihilation!");
+        this.add(NtmItems.CELL_DEUTERIUM, "Deuterium Cell");
+        this.add(NtmItems.CELL_TRITIUM, "Tritium Cell");
+        this.add(NtmItems.CELL_SAS3, "Schrabidium Trisulfide Cell");
+        this.add(NtmItems.CELL_ANTI_SCHARBIDIUM, "Antischrabidium Cell");
+        this.add(NtmItems.CELL_ANTI_SCHARBIDIUM, DESC, "Warning: Exposure to matter will$create a fólkvangr field!");
+        this.add(NtmItems.CELL_BALEFIRE, "Gaseous Balefire Cell");
+
+        this.add(NtmItems.PARTICLE_DIGAMMA, "§cThe Digamma Particle§r");
+        this.add(NtmItems.PARTICLE_LUTECE, "Lutece Quasiparticle");
+
+        this.add(NtmItems.STAMP_FLAT_STONE.get(), "Flat Stamp (Stone)");
+        this.add(NtmItems.STAMP_PLATE_STONE.get(), "Plate Stamp (Stone)");
+        this.add(NtmItems.STAMP_WIRE_STONE.get(), "Wire Stamp (Stone)");
+        this.add(NtmItems.STAMP_CIRCUIT_STONE.get(), "Circuit Stamp (Stone)");
+        this.add(NtmItems.STAMP_FLAT_IRON.get(), "Flat Stamp (Iron)");
+        this.add(NtmItems.STAMP_PLATE_IRON.get(), "Plate Stamp (Iron)");
+        this.add(NtmItems.STAMP_WIRE_IRON.get(), "Wire Stamp (Iron)");
+        this.add(NtmItems.STAMP_CIRCUIT_IRON.get(), "Circuit Stamp (Iron)");
+        this.add(NtmItems.STAMP_FLAT_STEEL.get(), "Flat Stamp (Steel)");
+        this.add(NtmItems.STAMP_PLATE_STEEL.get(), "Plate Stamp (Steel)");
+        this.add(NtmItems.STAMP_WIRE_STEEL.get(), "Wire Stamp (Steel)");
+        this.add(NtmItems.STAMP_CIRCUIT_STEEL.get(), "Circuit Stamp (Steel)");
+        this.add(NtmItems.STAMP_FLAT_TITANIUM.get(), "Flat Stamp (Titanium)");
+        this.add(NtmItems.STAMP_PLATE_TITANIUM.get(), "Plate Stamp (Titanium)");
+        this.add(NtmItems.STAMP_WIRE_TITANIUM.get(), "Wire Stamp (Titanium)");
+        this.add(NtmItems.STAMP_CIRCUIT_TITANIUM.get(), "Circuit Stamp (Titanium)");
+        this.add(NtmItems.STAMP_FLAT_OBSIDIAN.get(), "Flat Stamp (Obsidian)");
+        this.add(NtmItems.STAMP_PLATE_OBSIDIAN.get(), "Plate Stamp (Obsidian)");
+        this.add(NtmItems.STAMP_WIRE_OBSIDIAN.get(), "Wire Stamp (Obsidian)");
+        this.add(NtmItems.STAMP_CIRCUIT_OBSIDIAN.get(), "Circuit Stamp (Obsidian)");
+        this.add(NtmItems.STAMP_FLAT_DESH.get(), "Flat Stamp (Desh)");
+        this.add(NtmItems.STAMP_PLATE_DESH.get(), "Plate Stamp (Desh)");
+        this.add(NtmItems.STAMP_WIRE_DESH.get(), "Wire Stamp (Desh)");
+        this.add(NtmItems.STAMP_CIRCUIT_DESH.get(), "Circuit Stamp (Desh)");
+        this.add(NtmItems.STAMP_IRON_357.get(), ".357 Magnum Stamp");
+        this.add(NtmItems.STAMP_IRON_44.get(), ".44 Magnum Stamp");
+        this.add(NtmItems.STAMP_IRON_9.get(), "Small Caliber Stamp");
+        this.add(NtmItems.STAMP_IRON_50.get(), "Large Caliber Stamp");
+        this.add(NtmItems.STAMP_DESH_357.get(), ".357 Magnum Stamp");
+        this.add(NtmItems.STAMP_DESH_44.get(), ".44 Magnum Stamp");
+        this.add(NtmItems.STAMP_DESH_9.get(), "Small Caliber Stamp");
+        this.add(NtmItems.STAMP_DESH_50.get(), ".44 Magnum Stamp");
+
+        this.add(NtmBlocks.ORE_OIL.get(), "Oil Deposit");
+        this.add(NtmBlocks.ORE_OIL_EMPTY.get(), "Empty Oil Deposit");
+        this.add(NtmBlocks.ORE_BEDROCK_OIL.get(), "Bedrock Oil Deposit");
+
+        this.add(NtmItems.BLADES_IRON, "Iron Blades");
+        this.add(NtmItems.BLADES_STEEL, "Steel Blades");
+        this.add(NtmItems.BLADES_DESH, "Desh Blades");
+        this.add("item" + NuclearTechMod.MODID + " .blades.desc", "Wears down with use. Insert two into a Shredder.");
+
+        this.add(NtmItems.SINGULARITY, "Singularity");
+        this.add(NtmItems.SINGULARITY, DESC, "You may be asking:$\"But HBM, a manifold with an undefined$state of spacetime? How is this possible?\"$Long answer short:$\"I have no idea!\"");
+        this.add(NtmItems.SINGULARITY_COUNTER_RESONANT, "Contained Counter-Resonant Singularity");
+        this.add(NtmItems.SINGULARITY_COUNTER_RESONANT, DESC, "Nullifies resonance of objects in$non-euclidean space, creates variable$gravity well. Spontaneously spawns$tesseracts. If a tesseract happens to$appear near you, do not look directly$at it.");
+        this.add(NtmItems.SINGULARITY_SUPER_HEATED, "Superheated Resonating Singularity");
+        this.add(NtmItems.SINGULARITY_SUPER_HEATED, DESC, "Continuously heats up matter by$resonating every planck second.$Tends to catch fire or to create$small plasma arcs. Not edible.");
+        this.add(NtmItems.BLACK_HOLE, "Miniature Black Hole");
+        this.add(NtmItems.BLACK_HOLE, DESC, "Contains a regular singularity$in the center. Large enough to$stay stable. It's not the end$of the world as we know it,$and I don't feel fine.");
+        this.add(NtmItems.SINGULARITY_SPARK, "Spark Singularity");
+        this.add(NtmItems.PELLET_ANTIMATTER, "Antimatter Cluster");
+        this.add(NtmItems.PELLET_ANTIMATTER, DESC, "Very heavy antimatter cluster.$Gets rid of black holes.");
+
+        this.add(NtmItems.INF_WATER, "Infinite Water Tank");
+        this.add(NtmItems.INF_WATER_MK2, "Large Infinite Water Tank");
+
+        this.add(NtmItems.FLUID_TANK_EMPTY, "Empty Universal Fluid Tank");
+        this.add(NtmItems.FLUID_TANK_FULL, "Universal Fluid Tank: %s");
+        this.add(NtmItems.FLUID_TANK_LEAD_EMPTY, "Empty Hazardous Material Tank");
+        this.add(NtmItems.FLUID_TANK_LEAD_FULL, "Hazardous Material Tank: %s");
+        this.add(NtmItems.FLUID_BARREL_EMPTY, "Empty Fluid Barrel");
+        this.add(NtmItems.FLUID_BARREL_FULL, "Fluid Barrel: %s");
+        this.add(NtmItems.FLUID_BARREL_INFINITE, "Infinite Fluid Barrel");
+
+        this.add(NtmItems.FLUID_PACK_EMPTY, "Large Fluid Container");
+        this.add(NtmItems.FLUID_PACK_FULL, "Packaged %s");
+
+        this.add(NtmItems.BATTERY_SPARK, "Spark Battery");
+        this.add(NtmItems.BATTERY_TRIXITE, "Off-Brand Spark Battery");
+
+        this.add("item." + NuclearTechMod.MODID + " .obj_battery_pack.desc0", "Energy stored: %s");
+        this.add("item." + NuclearTechMod.MODID + " .obj_battery_pack.desc1", "Charge rate: %s");
+        this.add("item." + NuclearTechMod.MODID + " .obj_battery_pack.desc2", "Discharge rate: %s");
+        this.add("item." + NuclearTechMod.MODID + " .obj_battery_pack.desc3", "Time for full charge: %s");
+        this.add("item." + NuclearTechMod.MODID + " .obj_battery_pack.desc4", "Charge lasts for: %s");
+        this.add(NtmItems.BATTERY_PACK, this.getName(BatteryPackType.BATTERY_REDSTONE), "Redstone Battery");
+        this.add(NtmItems.BATTERY_PACK, this.getName(BatteryPackType.BATTERY_LEAD), "Lead-Acid Battery");
+        this.add(NtmItems.BATTERY_PACK, this.getName(BatteryPackType.BATTERY_LITHIUM), "Lithium-Ion Battery");
+        this.add(NtmItems.BATTERY_PACK, this.getName(BatteryPackType.BATTERY_SODIUM), "Sodium-Iron Battery");
+        this.add(NtmItems.BATTERY_PACK, this.getName(BatteryPackType.BATTERY_SCHRABIDIUM), "Schrabidium Battery");
+        this.add(NtmItems.BATTERY_PACK, this.getName(BatteryPackType.BATTERY_QUANTUM), "Quantum Battery");
+        this.add(NtmItems.BATTERY_PACK, this.getName(BatteryPackType.CAPACITOR_COPPER), "Copper Capacitor");
+        this.add(NtmItems.BATTERY_PACK, this.getName(BatteryPackType.CAPACITOR_GOLD), "Gold Capacitor");
+        this.add(NtmItems.BATTERY_PACK, this.getName(BatteryPackType.CAPACITOR_NIOBIUM), "Niobium Capacitor");
+        this.add(NtmItems.BATTERY_PACK, this.getName(BatteryPackType.CAPACITOR_TANTALUM), "Tantalum Capacitor");
+        this.add(NtmItems.BATTERY_PACK, this.getName(BatteryPackType.CAPACITOR_BISMUTH), "Bismuth Capacitor");
+        this.add(NtmItems.BATTERY_PACK, this.getName(BatteryPackType.CAPACITOR_SPARK), "Spark Capacitor");
+        this.add("item." + NuclearTechMod.MODID + " .obj_battery_sc.desc", "Discharge rate: %s");
+        this.add(NtmItems.BATTERY_SC, this.getName(BatterySCType.EMPTY), "Empty Self-Charging Battery");
+        this.add(NtmItems.BATTERY_SC, this.getName(BatterySCType.WASTE), "Spent Fuel Self-Charging Battery");
+        this.add(NtmItems.BATTERY_SC, this.getName(BatterySCType.RA226), "Radium-226 Self-Charging Battery");
+        this.add(NtmItems.BATTERY_SC, this.getName(BatterySCType.TC99), "Technetium-99 Self-Charging Battery");
+        this.add(NtmItems.BATTERY_SC, this.getName(BatterySCType.CO60), "Cobalt-60 Self-Charging Battery");
+        this.add(NtmItems.BATTERY_SC, this.getName(BatterySCType.PU238), "Plutonium-238 Self-Charging Battery");
+        this.add(NtmItems.BATTERY_SC, this.getName(BatterySCType.PO210), "Polonium-210 Self-Charging Battery");
+        this.add(NtmItems.BATTERY_SC, this.getName(BatterySCType.AU198), "Gold-198 Self-Charging Battery");
+        this.add(NtmItems.BATTERY_SC, this.getName(BatterySCType.PB209), "Lead-209 Self-Charging Battery");
+        this.add(NtmItems.BATTERY_SC, this.getName(BatterySCType.AM241), "Americium-241 Self-Charging Battery");
+        this.add(NtmItems.BATTERY_CREATIVE, "Infinite Battery");
+
+        this.add(NtmItems.BLUEPRINTS, "Blueprints");
+
+        //this.add(NtmItems.FLUID_ICON, "");
+        this.add("item." + NuclearTechMod.MODID + " .obj_fluid_id_multi.desc0", "Universal fluid identifier for:");
+        this.add("item." + NuclearTechMod.MODID + " .obj_fluid_id_multi.desc1", "Secondary type:");
+        this.add(NtmItems.FLUID_IDENTIFIER_MULTI, "Multi Fluid Identifier");
+
+        this.add(NtmItems.SCREWDRIVER, "Screwdriver");
+        this.add(NtmItems.SCREWDRIVER_DESH, "Desh Screwdriver");
+        this.add(NtmItems.BLOWTORCH, "Blowtorch");
+        this.add(NtmItems.ACETYLENE_TORCH, "Acetylene Welding Torch");
+
+        this.add(NtmItems.ROD_EMPTY, "Empty Rod");
+        this.add(NtmItems.ROD, this.getName(BreedingRodType.LITHIUM), "Lithium Rod");
+        this.add(NtmItems.ROD, this.getName(BreedingRodType.TRITIUM), "Tritium Rod");
+        this.add(NtmItems.ROD, this.getName(BreedingRodType.CO), "Cobalt Rod");
+        this.add(NtmItems.ROD, this.getName(BreedingRodType.CO60), "Cobalt-60 Rod");
+        this.add(NtmItems.ROD, this.getName(BreedingRodType.TH232), "Thorium-232 Rod");
+        this.add(NtmItems.ROD, this.getName(BreedingRodType.THF), "Thorium Fuel Rod");
+        this.add(NtmItems.ROD, this.getName(BreedingRodType.U235), "Uranium-235 Rod");
+        this.add(NtmItems.ROD, this.getName(BreedingRodType.NP237), "Neptunium-237 Rod");
+        this.add(NtmItems.ROD, this.getName(BreedingRodType.U238), "Uranium-238 Rod");
+        this.add(NtmItems.ROD, this.getName(BreedingRodType.PU238), "Plutonium-238 Rod");
+        this.add(NtmItems.ROD, this.getName(BreedingRodType.PU239), "Plutonium-239 Rod");
+        this.add(NtmItems.ROD, this.getName(BreedingRodType.RGP), "Reactor-Grade Plutonium Rod");
+        this.add(NtmItems.ROD, this.getName(BreedingRodType.WASTE), "Nuclear Waste Rod");
+        this.add(NtmItems.ROD, this.getName(BreedingRodType.LEAD), "Lead Rod");
+        this.add(NtmItems.ROD, this.getName(BreedingRodType.URANIUM), "Uranium Rod");
+        this.add(NtmItems.ROD, this.getName(BreedingRodType.RA226), "Radium-226 Rod");
+        this.add(NtmItems.ROD, this.getName(BreedingRodType.AC227), "Actinium-227 Rod");
+        this.add(NtmItems.ROD_DUAL_EMPTY, "Empty Dual Rod");
+        this.add(NtmItems.ROD_DUAL, this.getName(BreedingRodType.LITHIUM), "Lithium Dual Rod");
+        this.add(NtmItems.ROD_DUAL, this.getName(BreedingRodType.TRITIUM), "Tritium Dual Rod");
+        this.add(NtmItems.ROD_DUAL, this.getName(BreedingRodType.CO), "Cobalt Dual Rod");
+        this.add(NtmItems.ROD_DUAL, this.getName(BreedingRodType.CO60), "Cobalt-60 Dual Rod");
+        this.add(NtmItems.ROD_DUAL, this.getName(BreedingRodType.TH232), "Thorium-232 Dual Rod");
+        this.add(NtmItems.ROD_DUAL, this.getName(BreedingRodType.THF), "Thorium Fuel Dual Rod");
+        this.add(NtmItems.ROD_DUAL, this.getName(BreedingRodType.U235), "Uranium-235 Dual Rod");
+        this.add(NtmItems.ROD_DUAL, this.getName(BreedingRodType.NP237), "Neptunium-237 Dual Rod");
+        this.add(NtmItems.ROD_DUAL, this.getName(BreedingRodType.U238), "Uranium-238 Dual Rod");
+        this.add(NtmItems.ROD_DUAL, this.getName(BreedingRodType.PU238), "Plutonium-238 Dual Rod");
+        this.add(NtmItems.ROD_DUAL, this.getName(BreedingRodType.PU239), "Plutonium-239 Dual Rod");
+        this.add(NtmItems.ROD_DUAL, this.getName(BreedingRodType.RGP), "Reactor-Grade Plutonium Dual Rod");
+        this.add(NtmItems.ROD_DUAL, this.getName(BreedingRodType.WASTE), "Nuclear Waste Dual Rod");
+        this.add(NtmItems.ROD_DUAL, this.getName(BreedingRodType.LEAD), "Lead Dual Rod");
+        this.add(NtmItems.ROD_DUAL, this.getName(BreedingRodType.URANIUM), "Uranium Dual Rod");
+        this.add(NtmItems.ROD_DUAL, this.getName(BreedingRodType.RA226), "Radium-226 Dual Rod");
+        this.add(NtmItems.ROD_DUAL, this.getName(BreedingRodType.AC227), "Actinium-227 Dual Rod");
+        this.add(NtmItems.ROD_QUAD_EMPTY, "Empty Quad Rod");
+        this.add(NtmItems.ROD_QUAD, this.getName(BreedingRodType.LITHIUM), "Lithium Quad Rod");
+        this.add(NtmItems.ROD_QUAD, this.getName(BreedingRodType.TRITIUM), "Tritium Quad Rod");
+        this.add(NtmItems.ROD_QUAD, this.getName(BreedingRodType.CO), "Cobalt Quad Rod");
+        this.add(NtmItems.ROD_QUAD, this.getName(BreedingRodType.CO60), "Cobalt-60 Quad Rod");
+        this.add(NtmItems.ROD_QUAD, this.getName(BreedingRodType.TH232), "Thorium-232 Quad Rod");
+        this.add(NtmItems.ROD_QUAD, this.getName(BreedingRodType.THF), "Thorium Fuel Quad Rod");
+        this.add(NtmItems.ROD_QUAD, this.getName(BreedingRodType.U235), "Uranium-235 Quad Rod");
+        this.add(NtmItems.ROD_QUAD, this.getName(BreedingRodType.NP237), "Neptunium-237 Quad Rod");
+        this.add(NtmItems.ROD_QUAD, this.getName(BreedingRodType.U238), "Uranium-238 Quad Rod");
+        this.add(NtmItems.ROD_QUAD, this.getName(BreedingRodType.PU238), "Plutonium-238 Quad Rod");
+        this.add(NtmItems.ROD_QUAD, this.getName(BreedingRodType.PU239), "Plutonium-239 Quad Rod");
+        this.add(NtmItems.ROD_QUAD, this.getName(BreedingRodType.RGP), "Reactor-Grade Plutonium Quad Rod");
+        this.add(NtmItems.ROD_QUAD, this.getName(BreedingRodType.WASTE), "Nuclear Waste Quad Rod");
+        this.add(NtmItems.ROD_QUAD, this.getName(BreedingRodType.LEAD), "Lead Quad Rod");
+        this.add(NtmItems.ROD_QUAD, this.getName(BreedingRodType.URANIUM), "Uranium Quad Rod");
+        this.add(NtmItems.ROD_QUAD, this.getName(BreedingRodType.RA226), "Radium-226 Quad Rod");
+        this.add(NtmItems.ROD_QUAD, this.getName(BreedingRodType.AC227), "Actinium-227 Quad Rod");
+
+        this.add(NtmItems.SPAWN_DUCK, "Golden Egg");
+
+        this.add(NtmItems.DESIGNATOR, "Short Range Target Designator");
+        this.add(NtmItems.DESIGNATOR_RANGE, "Long Range Target Designator");
+        this.add("geiger.title.dosimeter", "===== ☢ DOSIMETER ☢ =====");
+        this.add(NtmItems.DOSIMETER, "Dosimeter");
+        this.add("geiger.title", "===== ☢ GEIGER COUNTER ☢ =====");
+        this.add("geiger.chunkRad", "Current chunk radiation: %s");
+        this.add("geiger.envRad", "Total environmental radiation: %s");
+        this.add("geiger.playerRad", "Player contamination: %s");
+        this.add("geiger.playerRes", "Player resistance: %s");
+        this.add(NtmItems.GEIGER_COUNTER, "Handheld Geiger Counter");
+        this.add("digamma.title", "===== Ϝ DIGAMMA DIAGNOSTIC Ϝ =====");
+        this.add("digamma.playerDigamma", "Digamma exposure: %s");
+        this.add("digamma.playerHealth", "Digamma influence: %s");
+        this.add("digamma.playerRes", "Digamma resistance: %s");
+        this.add(NtmItems.DIGAMMA_DIAGNOSTIC, "Digamma Diagnostic");
+
+        this.add(NtmItems.PIN, "Bobby Pin");
+        this.add(NtmItems.PIN, DESC, "Standard success rate of picking a regular lock is ~10%%.");
+        this.add(NtmItems.KEY, "Key");
+        this.add(NtmItems.KEY_RED, "Red Key");
+        this.add(NtmItems.KEY_RED, DESC, "Explore the other side.");
+        this.add(NtmItems.KEY_RED, DESC + P11, "§4e§r");
+        this.add(NtmItems.KEY_RED_CRACKED, "Red Key");
+        this.add(NtmItems.KEY_RED_CRACKED, DESC, "???");
+        this.add(NtmItems.KEY_RED_CRACKED, DESC + P11,"§4???§r");
+        this.add(NtmItems.KEY_KIT, "Key Imitation Kit");
+        this.add(NtmItems.KEY_FAKE, "Counterfeit Key");
+
+        this.add("item." + NuclearTechMod.MODID + " .obj_missile.tier0", "Tier 0");
+        this.add("item." + NuclearTechMod.MODID + " .obj_missile.tier1", "Tier 1");
+        this.add("item." + NuclearTechMod.MODID + " .obj_missile.tier2", "Tier 2");
+        this.add("item." + NuclearTechMod.MODID + " .obj_missile.tier3", "Tier 3");
+        this.add("item." + NuclearTechMod.MODID + " .obj_missile.tier4", "Tier 4");
+        this.add("item." + NuclearTechMod.MODID + " .obj_missile.not_launchable", "Not launchable!");
+        this.add("item." + NuclearTechMod.MODID + " .obj_missile.desc.fuel", "Fuel");
+        this.add("item." + NuclearTechMod.MODID + " .obj_missile.desc.fuel_cap", "Fuel capacity");
+        this.add("item." + NuclearTechMod.MODID + " .obj_missile.fuel.solid", "Solid Fuel");
+        this.add("item." + NuclearTechMod.MODID + " .obj_missile.fuel.solid.prefueled", "Solid Fuel (pre-fueled)");
+        this.add("item." + NuclearTechMod.MODID + " .obj_missile.fuel.ethanol_peroxide", "Ethanol / Hydrogen Peroxide");
+        this.add("item." + NuclearTechMod.MODID + " .obj_missile.fuel.kerosene_peroxide", "Kerosene / Hydrogen Peroxide");
+        this.add("item." + NuclearTechMod.MODID + " .obj_missile.fuel.kerosene_loxy", "Kerosene / Liquid Oxygen");
+        this.add("item." + NuclearTechMod.MODID + " .obj_missile.fuel.jetfuel_loxy", "Jet Fuel / Liquid Oxygen");
+        this.add(NtmItems.MISSILE_TAINT, "Taint-Tipped Missile");
+        this.add(NtmItems.MISSILE_MICRO, "Micro-Nuclear Missile");
+        this.add(NtmItems.MISSILE_BHOLE, "Black Hole Missile");
+        this.add(NtmItems.MISSILE_SCHRABIDIUM, "Schrabidium Missile");
+        this.add(NtmItems.MISSILE_EMP, "EMP Missile");
+
+        this.add(NtmItems.MISSILE_GENERIC, "High Explosive Missile");
+        this.add(NtmItems.MISSILE_INCENDIARY, "Incendiary Missile");
+        this.add(NtmItems.MISSILE_CLUSTER, "Cluster Missile");
+        this.add(NtmItems.MISSILE_BUSTER, "Bunker Buster");
+        this.add(NtmItems.MISSILE_STEALTH, "Stealth Missile");
+        this.add(NtmItems.MISSILE_DECOY, "Decoy Missile");
+
+        this.add(NtmItems.MISSILE_STRONG, "Strong HE Missile");
+        this.add(NtmItems.MISSILE_INCENDIARY_STRONG, "Strong Incendiary Missile");
+        this.add(NtmItems.MISSILE_CLUSTER_STRONG, "Strong Cluster Missile");
+        this.add(NtmItems.MISSILE_BUSTER_STRONG, "Enhanced Bunker Buster");
+        this.add(NtmItems.MISSILE_EMP_STRONG, "Strong EMP Missile");
+
+        this.add(NtmItems.MISSILE_BURST, "Spare Missile");
+        this.add(NtmItems.MISSILE_INFERNO, "Inferno Missile G.R.N. Mk.II");
+        this.add(NtmItems.MISSILE_RAIN, "Bomblet Rain");
+        this.add(NtmItems.MISSILE_DRILL, "The Concrete Cracker");
+        this.add(NtmItems.MISSILE_SHUTTLE, "Reliant Robin Space Shuttle");
+
+        this.add(NtmItems.MISSILE_NUCLEAR, "Nuclear Missile");
+        this.add(NtmItems.MISSILE_NUCLEAR_CLUSTER, "Thermonuclear Missile");
+        this.add(NtmItems.MISSILE_VOLCANO, "Tectonic Missile");
+        this.add(NtmItems.MISSILE_VOLCANO, DESC, "Using the power of nuclear explosives, we can summon a volcano!");
+        this.add(NtmItems.MISSILE_DOOMSDAY, "Doomsday Missile");
+        this.add(NtmItems.MISSILE_DOOMSDAY_RUSTED, "Damaged Doomsday Missile");
+
+        this.add("item." + NuclearTechMod.MODID + " .obj_soyuz.skin", "Skin:");
+        this.add("item." + NuclearTechMod.MODID + " .obj_soyuz.skin.original", "Original");
+        this.add("item." + NuclearTechMod.MODID + " .obj_soyuz.skin.luna", "Luna Space Center");
+        this.add("item." + NuclearTechMod.MODID + " .obj_soyuz.skin.post", "Post War");
+        this.add(NtmItems.MISSILE_SOYUZ, "Soyuz-FG");
+
+        this.add(NtmItems.SATELLITE_RADAR, "Radar Survey Satellite");
+        this.add(NtmItems.SATELLITE_LASER, "Orbital Death Ray");
+        this.add(NtmItems.SATELLITE_INTERFACE, "Satellite Control Interface");
+
+        this.add(NtmItems.BALEFIRE_AND_STEEL, "Balefire and Steel");
+
+        this.add("item." + NuclearTechMod.MODID + " .obj_drink.requires_opener", "[Requires bottle opener]");
+        this.add(NtmItems.DRINK, this.getName(DrinkType.CAN_EMPTY), "Empty Can");
+        this.add(NtmItems.DRINK, this.getName(DrinkType.SMART), "'Smart' Energy Drink");
+        this.add(NtmItems.DRINK, this.getName(DrinkType.SMART) + DESC, "Cheap and full of bubbles");
+        this.add(NtmItems.DRINK, this.getName(DrinkType.CREATURE), "'Creature' Energy Drink");
+        this.add(NtmItems.DRINK, this.getName(DrinkType.CREATURE) + DESC, "Basically gasoline in a tin can");
+        this.add(NtmItems.DRINK, this.getName(DrinkType.REDBOMB), "'Red Bomb' Energy Drink");
+        this.add(NtmItems.DRINK, this.getName(DrinkType.REDBOMB) + DESC, "Liquefied explosives");
+        this.add(NtmItems.DRINK, this.getName(DrinkType.MRSUGAR), "'Dr. Sugar' Soft Drink");
+        this.add(NtmItems.DRINK, this.getName(DrinkType.MRSUGAR) + DESC, "An intellectual drink, for the chosen ones!");
+        this.add(NtmItems.DRINK, this.getName(DrinkType.OVERCHARGE), "Overcharge Delirium XT");
+        this.add(NtmItems.DRINK, this.getName(DrinkType.OVERCHARGE) + DESC, "Possible side effects include heart attacks, seizures or zombification");
+        this.add(NtmItems.DRINK, this.getName(DrinkType.LUNA), "Black Mesa Luna - Dark Cola");
+        this.add(NtmItems.DRINK, this.getName(DrinkType.LUNA) + DESC, "Contains actual selenium and star metal. Tastes like night.");
+        this.add(NtmItems.DRINK, this.getName(DrinkType.BEPIS), "Bepis");
+        this.add(NtmItems.DRINK, this.getName(DrinkType.BEPIS) + DESC, "beppp");
+        this.add(NtmItems.DRINK, this.getName(DrinkType.BREEN), "Dr>Breens Private Reserve");
+        this.add(NtmItems.DRINK, this.getName(DrinkType.BREEN) + DESC, "Don't drink the water. They put something in it, to make you forget.$I don't even know how I got here.");
+        this.add(NtmItems.DRINK, this.getName(DrinkType.MUG), "MUG Root Beer");
+        this.add(NtmItems.DRINK, this.getName(DrinkType.COFFEE), "Coffee");
+        this.add(NtmItems.DRINK, this.getName(DrinkType.COFFEE_RADIUM), "Radium Coffee");
+        this.add(NtmItems.DRINK, this.getName(DrinkType.BOTTLE_EMPTY), "Empty Bomb-Shaped Bottle");
+        this.add(NtmItems.DRINK, this.getName(DrinkType.NUKA), "Bottle of Nuka Cola");
+        this.add(NtmItems.DRINK, this.getName(DrinkType.NUKA) + DESC, "Contains about 210 kcal and 1500 mSv.");
+        this.add(NtmItems.DRINK, this.getName(DrinkType.CHERRY), "Bottle of Nuka Cherry");
+        this.add(NtmItems.DRINK, this.getName(DrinkType.CHERRY) + DESC, "Now with severe radiation poisoning in every seventh bottle!");
+        this.add(NtmItems.DRINK, this.getName(DrinkType.QUANTUM), "Bottle of Nuka Cola Quantum");
+        this.add(NtmItems.DRINK, this.getName(DrinkType.QUANTUM) + DESC, "Comes with a colorful mix of over 70 isotopes!");
+        this.add(NtmItems.DRINK, this.getName(DrinkType.SPARKLE), "Bottle of S~Cola");
+        this.add(NtmItems.DRINK, this.getName(DrinkType.SPARKLE) + DESC, "The most delicious beverage in the wasteland!");
+        this.add(NtmItems.DRINK, this.getName(DrinkType.SPARKLE) + DESC + P11, "Contains trace amounts of taint.");
+        this.add(NtmItems.DRINK, this.getName(DrinkType.RAD), "Bottle of S~Cola RAD");
+        this.add(NtmItems.DRINK, this.getName(DrinkType.RAD) + DESC, "Tastes like radish and radiation.");
+        this.add(NtmItems.DRINK, this.getName(DrinkType.RAD) + DESC + P11, "Now with 400% more radiation!");
+        this.add(NtmItems.DRINK, this.getName(DrinkType.BOTTLE2_EMPTY), "Empty Bottle");
+        this.add(NtmItems.DRINK, this.getName(DrinkType.KORL), "Korl");
+        this.add(NtmItems.DRINK, this.getName(DrinkType.KORL) + DESC, "Contains actual orange juice!");
+        this.add(NtmItems.DRINK, this.getName(DrinkType.FRITZ), "Fritz Cola");
+        this.add(NtmItems.DRINK, this.getName(DrinkType.FRITZ) + DESC, "moremore caffeine");
+        this.add(NtmItems.BOTTLE_OPENER, "Hbm's Own Self-Made Bottle Opener");
+        this.add(NtmItems.BOTTLE_OPENER, DESC, "My very own bottle opener.$Use with caution!");
+
+        this.add("item." + NuclearTechMod.MODID + " .canned_" + ConserveType.BEEF.name().toLowerCase(Locale.US), "Canned Beef");
+        this.add("item." + NuclearTechMod.MODID + " .canned_" + ConserveType.BEEF.name().toLowerCase(Locale.US) + DESC, "A few centuries ago, a cow died for this.");
+        this.add("item." + NuclearTechMod.MODID + " .canned_" + ConserveType.TUNA.name().toLowerCase(Locale.US), "Canned Tuna");
+        this.add("item." + NuclearTechMod.MODID + " .canned_" + ConserveType.TUNA.name().toLowerCase(Locale.US) + DESC, "I can't tell if that's actually tuna or dried cement.");
+        this.add("item." + NuclearTechMod.MODID + " .canned_" + ConserveType.MYSTERY.name().toLowerCase(Locale.US), "Canned Mystery Meat");
+        this.add("item." + NuclearTechMod.MODID + " .canned_" + ConserveType.MYSTERY.name().toLowerCase(Locale.US) + DESC, "What's inside? Only one way to find out!");
+        this.add("item." + NuclearTechMod.MODID + " .canned_" + ConserveType.PASHTET.name().toLowerCase(Locale.US), "Паштет");
+        this.add("item." + NuclearTechMod.MODID + " .canned_" + ConserveType.PASHTET.name().toLowerCase(Locale.US) + DESC, "услуги перевода недоступны!");
+        this.add("item." + NuclearTechMod.MODID + " .canned_" + ConserveType.CHEESE.name().toLowerCase(Locale.US), "Canned Melted Cheese");
+        this.add("item." + NuclearTechMod.MODID + " .canned_" + ConserveType.CHEESE.name().toLowerCase(Locale.US) + DESC, "Is it cheese? Is it rubber cement? Who knows, who cares.");
+        this.add("item." + NuclearTechMod.MODID + " .canned_" + ConserveType.SLIME.name().toLowerCase(Locale.US), "Condensed Horse Slime");
+        this.add("item." + NuclearTechMod.MODID + " .canned_" + ConserveType.SLIME.name().toLowerCase(Locale.US) + DESC, "Now with extra bone marrow.");
+        this.add("item." + NuclearTechMod.MODID + " .canned_" + ConserveType.MILK.name().toLowerCase(Locale.US), "Canned Evaporated Milk");
+        this.add("item." + NuclearTechMod.MODID + " .canned_" + ConserveType.MILK.name().toLowerCase(Locale.US) + DESC, "Milk 2: More solid than ever before!");
+        this.add("item." + NuclearTechMod.MODID + " .canned_" + ConserveType.ASS.name().toLowerCase(Locale.US), "Canned Ass");
+        this.add("item." + NuclearTechMod.MODID + " .canned_" + ConserveType.ASS.name().toLowerCase(Locale.US) + DESC, "100%% quality donkey meat!*");
+        this.add("item." + NuclearTechMod.MODID + " .canned_" + ConserveType.PIZZA.name().toLowerCase(Locale.US), "Canned Pepperoni Pizza");
+        this.add("item." + NuclearTechMod.MODID + " .canned_" + ConserveType.PIZZA.name().toLowerCase(Locale.US) + DESC, "A crime against humanity.");
+        this.add("item." + NuclearTechMod.MODID + " .canned_" + ConserveType.TUBE.name().toLowerCase(Locale.US), "Astronaut Food Tube");
+        this.add("item." + NuclearTechMod.MODID + " .canned_" + ConserveType.TUBE.name().toLowerCase(Locale.US) + DESC, "Tasty mush.");
+        this.add("item." + NuclearTechMod.MODID + " .canned_" + ConserveType.TOMATO.name().toLowerCase(Locale.US), "Canned Tomato Soup");
+        this.add("item." + NuclearTechMod.MODID + " .canned_" + ConserveType.TOMATO.name().toLowerCase(Locale.US) + DESC, "Who wants some thick red paste?");
+        this.add("item." + NuclearTechMod.MODID + " .canned_" + ConserveType.ASBESTOS.name().toLowerCase(Locale.US), "Canned Asbestos");
+        this.add("item." + NuclearTechMod.MODID + " .canned_" + ConserveType.ASBESTOS.name().toLowerCase(Locale.US) + DESC, "TASTE the asbestosis!");
+        this.add("item." + NuclearTechMod.MODID + " .canned_" + ConserveType.BHOLE.name().toLowerCase(Locale.US), "Canned Black Hole");
+        this.add("item." + NuclearTechMod.MODID + " .canned_" + ConserveType.BHOLE.name().toLowerCase(Locale.US) + DESC, "Made from actual singularities. No, really.");
+        this.add("item." + NuclearTechMod.MODID + " .canned_" + ConserveType.HOTDOGS.name().toLowerCase(Locale.US), "Canned Hotdogs");
+        this.add("item." + NuclearTechMod.MODID + " .canned_" + ConserveType.HOTDOGS.name().toLowerCase(Locale.US) + DESC, "Not to be confused with cool cats.");
+        this.add("item." + NuclearTechMod.MODID + " .canned_" + ConserveType.LEFTOVERS.name().toLowerCase(Locale.US), "Leftover Conserve");
+        this.add("item." + NuclearTechMod.MODID + " .canned_" + ConserveType.LEFTOVERS.name().toLowerCase(Locale.US) + DESC, "ur 2 slow");
+        this.add("item." + NuclearTechMod.MODID + " .canned_" + ConserveType.YOGURT.name().toLowerCase(Locale.US), "Canned Yogurt");
+        this.add("item." + NuclearTechMod.MODID + " .canned_" + ConserveType.YOGURT.name().toLowerCase(Locale.US) + DESC, "Probably spoiled, but whatever.");
+        this.add("item." + NuclearTechMod.MODID + " .canned_" + ConserveType.STEW.name().toLowerCase(Locale.US), "Canned \"Mushroom Stew\"");
+        this.add("item." + NuclearTechMod.MODID + " .canned_" + ConserveType.STEW.name().toLowerCase(Locale.US) + DESC, "...");
+        this.add("item." + NuclearTechMod.MODID + " .canned_" + ConserveType.CHINESE.name().toLowerCase(Locale.US), "Canned Chinese Food");
+        this.add("item." + NuclearTechMod.MODID + " .canned_" + ConserveType.CHINESE.name().toLowerCase(Locale.US) + DESC, "In China, Chinese food is just called food.");
+        this.add("item." + NuclearTechMod.MODID + " .canned_" + ConserveType.OIL.name().toLowerCase(Locale.US), "Canned Engine Oil");
+        this.add("item." + NuclearTechMod.MODID + " .canned_" + ConserveType.OIL.name().toLowerCase(Locale.US) + DESC, "It makes motors go, so why not humans?");
+        this.add("item." + NuclearTechMod.MODID + " .canned_" + ConserveType.FIST.name().toLowerCase(Locale.US), "Canned Fist");
+        this.add("item." + NuclearTechMod.MODID + " .canned_" + ConserveType.FIST.name().toLowerCase(Locale.US) + DESC, "ow");
+        this.add("item." + NuclearTechMod.MODID + " .canned_" + ConserveType.SPAM.name().toLowerCase(Locale.US), "Canned Spam");
+        this.add("item." + NuclearTechMod.MODID + " .canned_" + ConserveType.SPAM.name().toLowerCase(Locale.US) + DESC, "The three-and-a-half-minute sketch is set in the fictional Green Midget Cafe in Bromley.$An argument develops between the waitress, who recites a menu in which nearly$every dish contains Spam, and Mrs. Bun, who does not like Spam. She asks for a$dish without Spam, much to the amazement of her Spam-loving husband. The waitress$responds to this request with disgust. Mr. Bun offers to take her Spam instead,$and asks for a dish containing a lot of Spam and baked beans. The waitress says$no since they are out of baked beans; when Mr. Bun asks for a substitution of Spam,$the waitress again responds with disgust. At several points, a group of Vikings in$the restaurant interrupts conversation by loudly singing about Spam.$The irate waitress orders them to shut up, but they resume singing more loudly.$A Hungarian tourist comes to the counter, trying to order by using a wholly$inaccurate Hungarian/English phrasebook (a reference to a previous sketch).$He is rapidly escorted away by a police constable. The sketch abruptly cuts to a$historian in a television studio talking about the origin of the Vikings in the café.$As he goes on, he begins to increasingly insert the word \"Spam\" into every$sentence, and the backdrop is raised to reveal the restaurant set behind.$The historian joins the Vikings in their song, and Mr. and Mrs. Bun are lifted by$wires out of the scene while the singing continues. In the original televised performance,$the closing credits begin to scroll with the singing still audible in the background.");
+        this.add("item." + NuclearTechMod.MODID + " .canned_" + ConserveType.FRIED.name().toLowerCase(Locale.US), "Canned Fried Chicken");
+        this.add("item." + NuclearTechMod.MODID + " .canned_" + ConserveType.FRIED.name().toLowerCase(Locale.US) + DESC, "Even the can is deep fried!");
+        this.add("item." + NuclearTechMod.MODID + " .canned_" + ConserveType.NAPALM.name().toLowerCase(Locale.US), "Canned Napalm");
+        this.add("item." + NuclearTechMod.MODID + " .canned_" + ConserveType.NAPALM.name().toLowerCase(Locale.US) + DESC, "I love the smell of old memes in the morning!");
+        this.add("item." + NuclearTechMod.MODID + " .canned_" + ConserveType.DIESEL.name().toLowerCase(Locale.US), "Canned Diesel");
+        this.add("item." + NuclearTechMod.MODID + " .canned_" + ConserveType.DIESEL.name().toLowerCase(Locale.US) + DESC, "I'm slowly running out of jokes for these.");
+        this.add("item." + NuclearTechMod.MODID + " .canned_" + ConserveType.KEROSENE.name().toLowerCase(Locale.US), "Canned Kerosene");
+        this.add("item." + NuclearTechMod.MODID + " .canned_" + ConserveType.KEROSENE.name().toLowerCase(Locale.US) + DESC, "Just imagine a witty line here.");
+        this.add("item." + NuclearTechMod.MODID + " .canned_" + ConserveType.RECURSION.name().toLowerCase(Locale.US), "Canned Recursion");
+        this.add("item." + NuclearTechMod.MODID + " .canned_" + ConserveType.RECURSION.name().toLowerCase(Locale.US) + DESC, "Canned Recursion");
+        this.add("item." + NuclearTechMod.MODID + " .canned_" + ConserveType.BARK.name().toLowerCase(Locale.US), "Canned Pine Bark Jerky");
+        this.add("item." + NuclearTechMod.MODID + " .canned_" + ConserveType.BARK.name().toLowerCase(Locale.US) + DESC, "Extra cronchy!");
+
+        this.add(NtmItems.CAP, this.getName(CapType.NUKA), "Nuka Cola Bottle Cap");
+        this.add(NtmItems.CAP, this.getName(CapType.QUANTUM), "Nuka Cola Quantum Bottle Cap");
+        this.add(NtmItems.CAP, this.getName(CapType.SPARKLE), "S~Cola Bottle Cap");
+        this.add(NtmItems.CAP, this.getName(CapType.RAD), "S~Cola RAD Bottle Cap");
+        this.add(NtmItems.CAP, this.getName(CapType.KORL), "Korl Bottle Cap");
+        this.add(NtmItems.CAP, this.getName(CapType.FRITZ), "Fritz Cola Bottle Cap");
+        this.add(NtmItems.RING_PULL, "Ring Pull");
+        this.add(NtmItems.CAN_KEY, "Winding Key");
+
+        this.add(NtmItems.CHOCOLATE_MILK, "Chocolate Milk");
+        this.add(NtmItems.CHOCOLATE_MILK, DESC, "Regular chocolate milk. Safe to drink.$Totally not made from nitroglycerine.");
+        this.add("item." + NuclearTechMod.MODID + " .obj_cigarette.desc0", "✓ Asbestos filter$✓ High in tar$✓ Tobacco contains 100%% Polonium-210$✓ Yum");
+        this.add("item." + NuclearTechMod.MODID + " .obj_cigarette.desc1", "This can't be good for me, but I feel ");
+        this.add("item." + NuclearTechMod.MODID + " .obj_cigarette.desc2", "GREAT");
+        this.add(NtmItems.CIGARETTE, "FFI-Brand Cigarette");
+        this.add(NtmItems.CRACKPIPE, "Health Pipe");
+
+        this.add(NtmItems.EARLY_EXPLOSIVE_LENSES, "Array of First-Generation High-Explosive Lenses");
+        this.add(NtmItems.EARLY_EXPLOSIVE_LENSES, DESC, "Assembly of 8 high-explosive lenses with an aluminium$pusher, duraluminium shell, and bridgewire detonators.");
+        this.add(NtmItems.EXPLOSIVE_LENSES, "Array of High-Explosive Lenses");
+        this.add(NtmItems.EXPLOSIVE_LENSES, DESC, "Assembly of 8 PBX lenses with a thin$aluminium pusher, duraluminium shell, and$miniaturized bridgewire detonators.");
+
+        this.add(NtmItems.GADGET_WIREING, "Wiring");
+        this.add(NtmItems.GADGET_CORE, "Large Plutonium Core");
+
+        this.add(NtmItems.LITTLE_BOY_SHIELDING, "Neutron Shielding");
+        this.add(NtmItems.LITTLE_BOY_TARGET, "Subcritical U235 Target");
+        this.add(NtmItems.LITTLE_BOY_BULLET, "U235 Projectile");
+        this.add(NtmItems.LITTLE_BOY_PROPELLANT, "Propellant");
+        this.add(NtmItems.LITTLE_BOY_IGNITER, "Bomb Igniter");
+
+        this.add(NtmItems.FAT_MAN_IGNITER, "Bomb Firing Unit");
+        this.add(NtmItems.FAT_MAN_CORE, "Plutonium Core");
+
+        this.add(NtmItems.IVY_MIKE_CORE, "Uranium Coated Deuterium Tank");
+        this.add(NtmItems.IVY_MIKE_DEUT, "Deuterium Tank");
+        this.add(NtmItems.IVY_MIKE_COOLING_UNIT, "Deuterium Cooling Unit");
+
+        this.add(NtmItems.TSAR_BOMBA_CORE, "Tsar Bomba Core");
+
+        this.add(NtmItems.FLEIJA_IGNITER, "Pulse Igniter");
+        this.add(NtmItems.FLEIJA_PROPELLANT, "Schrabidium Propellant");
+        this.add(NtmItems.FLEIJA_CORE, "F.L.E.I.J.A. Uranium 235 Charge");
+
+        this.add(NtmItems.SOLINIUM_IGNITER, "SOL Pulse Igniter");
+        this.add(NtmItems.SOLINIUM_PROPELLANT, "SOL Compression Charge");
+        this.add(NtmItems.SOLINIUM_CORE, "Semi-Stable Solinium Core");
+
+        this.add(NtmItems.N2_CHARGE, "Large Explosive Charge");
+
+        this.add(NtmItems.EGG_BALEFIRE_SHARD, "Balefire Shard");
+        this.add(NtmItems.EGG_BALEFIRE, "Balefire Egg");
+
+        this.add(NtmItems.IGNITER, "Igniter");
+        this.add(NtmItems.IGNITER, DESC, "(Used by right-clicking the Prototype)$It's a green metal handle with a$bright red button and a small lid.$At the bottom, the initials N.E. are$engraved. Whoever N.E. was, he had$a great taste in shades of green.");
+        this.add(NtmItems.DETONATOR, "Detonator");
+        this.add(NtmItems.DETONATOR, DESC, "Shift right-click to set position,$right-click to detonate!");
+        this.add(NtmItems.DETONATOR_MULTI, "Multi Detonator");
+        this.add(NtmItems.DETONATOR_MULTI, DESC, "Shift right-click block to add position,$right-click to detonate!$Shift right-click in the air to clear positions.");
+        this.add(NtmItems.DETONATOR_LASER, "Laser Detonator");
+        this.add(NtmItems.DETONATOR_LASER, DESC,"Aim & click to detonate!");
+        this.add(NtmItems.DETONATOR_DEADMAN, "Dead Man's Detonator");
+        this.add(NtmItems.DETONATOR_DEADMAN, DESC, "Shift right-click to set position,$drop to detonate!");
+        this.add(NtmItems.DETONATOR_DE, "Dead Man's Explosive");
+        this.add(NtmItems.DETONATOR_DE, DESC, "Explodes when dropped!");
+        this.add("item." + NuclearTechMod.MODID + " .obj_bomb_caller.desc0", "Type: Carpet bombing");
+        this.add("item." + NuclearTechMod.MODID + " .obj_bomb_caller.desc1", "Type: Napalm");
+        this.add("item." + NuclearTechMod.MODID + " .obj_bomb_caller.desc2", "Type: Atomic bomb");
+        this.add("item." + NuclearTechMod.MODID + " .obj_bomb_caller.call", "Called in airstrike!");
+        this.add(NtmItems.BOMB_CALLER, "Airstrike Designator");
+        this.add(NtmItems.BOMB_CALLER, DESC, "Aim & click to call an airstrike!");
+        this.add(NtmItems.DEFUSER, "High-Tech Bomb Defusing Device");
+        this.add(NtmItems.REACHER, "Tungsten Reacher");
+
+        this.add("item." + NuclearTechMod.MODID + " .obj_polaroid.desc", "Fate chosen");
+        this.add("item." + NuclearTechMod.MODID + " .obj_polaroid.fate1", "...");
+        this.add("item." + NuclearTechMod.MODID + " .obj_polaroid.fate2", "Clear as glass.");
+        this.add("item." + NuclearTechMod.MODID + " .obj_polaroid.fate3", "'M");
+        this.add("item." + NuclearTechMod.MODID + " .obj_polaroid.fate4", "It's about time.");
+        this.add("item." + NuclearTechMod.MODID + " .obj_polaroid.fate5", "If you stare long into the abyss, the abyss stares back.");
+        this.add("item." + NuclearTechMod.MODID + " .obj_polaroid.fate6", "public Party celebration = new Party();");
+        this.add("item." + NuclearTechMod.MODID + " .obj_polaroid.fate7", "V urnerq lbh yvxr EBG13!");
+        this.add("item." + NuclearTechMod.MODID + " .obj_polaroid.fate8", "11011100");
+        this.add("item." + NuclearTechMod.MODID + " .obj_polaroid.fate9", "Vg'f nobhg gvzr.");
+        this.add("item." + NuclearTechMod.MODID + " .obj_polaroid.fate10", "Schrabidium dislikes the breeding reactor.");
+        this.add("item." + NuclearTechMod.MODID + " .obj_polaroid.fate11", "yss stares back.6public Party cel");
+        this.add("item." + NuclearTechMod.MODID + " .obj_polaroid.fate12", "Red streaks.");
+        this.add("item." + NuclearTechMod.MODID + " .obj_polaroid.fate13", "Q1");
+        this.add("item." + NuclearTechMod.MODID + " .obj_polaroid.fate14", "Q4");
+        this.add("item." + NuclearTechMod.MODID + " .obj_polaroid.fate15", "Q3");
+        this.add("item." + NuclearTechMod.MODID + " .obj_polaroid.fate16", "Q2");
+        this.add("item." + NuclearTechMod.MODID + " .obj_polaroid.fate17", "Two friends before christmas.");
+        this.add("item." + NuclearTechMod.MODID + " .obj_polaroid.fate18", "Duchess of the boxcars.$$\"P.S.: Thirty-one.\"$\"Huh, what does thirty-one mean?\"");
+        this.add(NtmItems.POLAROID, "The Polaroid");
+        this.add(NtmItems.BURNT_BARK, "Burnt Bark");
+        this.add(NtmItems.BURNT_BARK, DESC, "A piece of bark from an exploded golden oak tree.");
+
+        this.add("item." + NuclearTechMod.MODID + " .obj_starter_kit.empty_inventory", "Please empty inventory before opening!");
+        this.add(NtmItems.STARTER_KIT, this.getName(KitType.GADGET), "The Gadget Kit");
+        this.add(NtmItems.STARTER_KIT, this.getName(KitType.LITTLE_BOY), "Little Boy Kit");
+        this.add(NtmItems.STARTER_KIT, this.getName(KitType.FAT_MAN), "Fat Man Kit");
+        this.add(NtmItems.STARTER_KIT, this.getName(KitType.IVY_MIKE), "Ivy Mike Kit");
+        this.add(NtmItems.STARTER_KIT, this.getName(KitType.TSAR_BOMBA), "Tsar Bomba Kit");
+        this.add(NtmItems.STARTER_KIT, this.getName(KitType.PROTOTYPE), "Prototype Kit");
+        this.add(NtmItems.STARTER_KIT, this.getName(KitType.FLEIJA), "F.L.E.I.J.A. Kit");
+
+        this.add(NtmItems.TEMPLATE_FOLDER, "Machine Template Folder");
+        this.add(NtmItems.NOTHING, "Nothing");
+
+        // BLOCKS //
+        this.add(NtmBlocks.BOBBLEHEAD, "Bobblehead");
+
+        this.add(NtmBlocks.GRAVEL_OBSIDIAN, "Crushed Obsidian");
+        this.add(NtmBlocks.GRAVEL_DIAMOND, "Diamond Gravel");
+        this.add(NtmBlocks.GRAVEL_DIAMOND, DESC, "There is some kind of joke here,$but I can't quite tell what it is.$$Update, 2020-07-04:$We deny any implications of a joke on$the basis that it was so severely unfunny$that people started stabbing their eyes out.$$Update, 2020-17-04:$As it turns out, \"Diamond Gravel\" was$never really a thing, rendering what might$have been a joke as totally nonsensical.$We apologize for getting your hopes up with$this non-joke that hasn't been made.$$i added an item for a joke that isn't even here, what am i, stupid? can't even tell the difference between gravel and a gavel, how did i not forget how to breathe yet?");
+
+        this.add("block." + NuclearTechMod.MODID + " .obj_blast_info.desc", "Blast Resistance: %s");
+        this.add("block." + NuclearTechMod.MODID + " .obj_speedy.desc", "Increases speed by %s%%");
+        this.add(NtmBlocks.ASPHALT, "Asphalt");
+        this.add(NtmBlocks.ASPHALT_LIGHT, "Glowing Asphalt");
+
+        this.add("block." + NuclearTechMod.MODID + " .obj_no_spawn.desc", "Mobs cannot spawn on this block!");
+        this.add(NtmBlocks.BRICK_CONCRETE, "Concrete Bricks");
+        this.add(NtmBlocks.BRICK_CONCRETE_MOSSY, "Mossy Concrete Bricks");
+        this.add(NtmBlocks.BRICK_CONCRETE_CRACKED, "Cracked Concrete Bricks");
+        this.add(NtmBlocks.BRICK_CONCRETE_BROKEN, "Broken Concrete Bricks");
+        this.add(NtmBlocks.BRICK_CONCRETE_MARKED, "Marked Concrete Bricks");
+        this.add(NtmBlocks.BRICK_OBSIDIAN, "Obsidian Bricks");
+        this.add(NtmBlocks.BRICK_LIGHT, "Light Bricks");
+        this.add(NtmBlocks.BRICK_ASBESTOS, "Asbestos Bricks");
+        this.add(NtmBlocks.BRICK_FIRE, "Firebricks");
+
+        this.add(NtmBlocks.BRICK_CONCRETE_SLAB, "Concrete Brick Slab");
+        this.add(NtmBlocks.BRICK_CONCRETE_MOSSY_SLAB, "Mossy Concrete Brick Slab");
+        this.add(NtmBlocks.BRICK_CONCRETE_CRACKED_SLAB, "Cracked Concrete Brick Slab");
+        this.add(NtmBlocks.BRICK_CONCRETE_BROKEN_SLAB, "Broken Concrete Brick Slab");
+
+        this.add(NtmBlocks.BRICK_CONCRETE_STAIRS, "Concrete Brick Stairs");
+        this.add(NtmBlocks.BRICK_CONCRETE_MOSSY_STAIRS, "Mossy Concrete Brick Stairs");
+        this.add(NtmBlocks.BRICK_CONCRETE_CRACKED_STAIRS, "Cracked Concrete Brick Stairs");
+        this.add(NtmBlocks.BRICK_CONCRETE_BROKEN_STAIRS, "Broken Concrete Brick Stairs");
+
+        this.add(NtmBlocks.BARBED_WIRE, this.getName(BarbedWireType.STANDARD),   "Barbed Wire");
+        this.add(NtmBlocks.BARBED_WIRE, this.getName(BarbedWireType.FIRE),       "Flaming Barbed Wire");
+        this.add(NtmBlocks.BARBED_WIRE, this.getName(BarbedWireType.POISON),     "Poisoned Barbed Wire");
+        this.add(NtmBlocks.BARBED_WIRE, this.getName(BarbedWireType.ACID),       "Caustic Barbed Wire");
+        this.add(NtmBlocks.BARBED_WIRE, this.getName(BarbedWireType.WITHER),     "Withered Barbed Wire");
+        this.add(NtmBlocks.BARBED_WIRE, this.getName(BarbedWireType.ULTRADEATH), "Radioactive Barbed Wire");
+        this.add(NtmBlocks.SPIKES, "Spikes");
+
+        this.add(NtmBlocks.OIL_PIPE, "Oil Pipe");
+        this.add(NtmBlocks.STONE_CRACKED, "Cracked Stone");
+        this.add(NtmBlocks.DIRT_DEAD, "Dead Dirt");
+        this.add(NtmBlocks.DIRT_OILY, "Oily Dirt");
+        this.add(NtmBlocks.ORE_OIL_SAND, "Sand Oil Deposit");
+        this.add(NtmBlocks.SAND_OILY, "Oily Sand");
+        this.add(NtmBlocks.SAND_RED_OILY, "Oily Red Sand");
+
+        this.add(NtmBlocks.WASTE_EARTH, "Dead Grass");
+        this.add(NtmBlocks.WASTE_MYCELIUM, "Glowing Mycelium");
+        this.add(NtmBlocks.WASTE_TRINITITE, "Trinitite Ore");
+        this.add(NtmBlocks.WASTE_TRINITITE_RED, "Red Trinitite Ore");
+        this.add(NtmBlocks.WASTE_LOG, "Broken Concrete Brick Stairs");
+        this.add(NtmBlocks.WASTE_LEAVES, "Dead Leaves");
+        this.add(NtmBlocks.WASTE_PLANKS, "Charred Wooden Planks");
+        this.add(NtmBlocks.FROZEN_DIRT, "Frozen Dirt");
+        this.add(NtmBlocks.FROZEN_GRASS, "Frozen Grass");
+        this.add(NtmBlocks.FROZEN_LOG, "Frozen Log");
+        this.add(NtmBlocks.FROZEN_PLANKS, "Frozen Planks");
+        this.add(NtmBlocks.LEAVES_LAYER, "Fallen Leaves");
+        this.add(NtmBlocks.FALLOUT, "Fallout");
+        this.add(NtmBlocks.SELLAFIELD_SLAKED, "Slaked Sellafite");
+        this.add(NtmBlocks.ORE_SELLAFIELD_DIAMOND, "Sellafite Diamond Ore");
+        this.add(NtmBlocks.ORE_SELLAFIELD_EMERALD, "Sellafite Emerald Ore");
+        this.add(NtmBlocks.SELLAFIELD_BEDROCK, "Bedrock Sellafite");
+
+        this.add(NtmBlocks.NUKE_GADGET, "The Gadget");
+        this.add(NtmBlocks.NUKE_LITTLE_BOY, "Little Boy");
+        this.add(NtmBlocks.NUKE_FAT_MAN, "Fat Man");
+        this.add(NtmBlocks.NUKE_IVY_MIKE, "Ivy Mike");
+        this.add(NtmBlocks.NUKE_TSAR_BOMBA, "Tsar Bomba");
+        this.add(NtmBlocks.NUKE_PROTOTYPE, "The Prototype");
+        this.add(NtmBlocks.NUKE_PROTOTYPE, DESC, "It didn't have to be like this.$ $You monster.");
+        this.add(NtmBlocks.NUKE_FLEIJA, "F.L.E.I.J.A.");
+        this.add(NtmBlocks.NUKE_N2, "N² Mine");
+        this.add(NtmBlocks.NUKE_FSTBMB, "Balefire Bomb");
+
+        this.add(NtmBlocks.CRASHED_BOMB, "Dud");
+        this.add(NtmBlocks.DYNAMITE, "Dynamite");
+        this.add(NtmBlocks.TNT, "Actual TNT");
+        this.add(NtmBlocks.SEMTEX, "Semtex");
+        this.add(NtmBlocks.C4, "C-4");
+        this.add(NtmBlocks.FISSURE_BOMB, "Fissure Bomb");
+
+        this.add(NtmBlocks.MINE_AP, "Anti-Personell Mine");
+        this.add(NtmBlocks.MINE_HE, "Anti-Tank Mine");
+        this.add(NtmBlocks.MINE_SHRAP, "Shrapnel Mine");
+        this.add(NtmBlocks.MINE_FAT, "Fat Mine");
+        this.add(NtmBlocks.MINE_NAVAL, "Naval Mine");
+
+        this.add(NtmBlocks.DET_CHARGE, "Explosive Charge");
+        this.add(NtmBlocks.DET_CORD, "Det Cord");
+        this.add(NtmBlocks.DET_NUKE, "Nuclear Charge");
+        this.add(NtmBlocks.DET_MINER, "Mining Charge");
+        this.add("block." + NuclearTechMod.MODID + " .obj_red_barrel.desc", "Static Fluid Barrel");
+        this.add(NtmBlocks.BARREL_RED, "Explosive Barrel");
+        this.add(NtmBlocks.BARREL_PINK, "Kerosene Barrel");
+        this.add(NtmBlocks.BARREL_LOX, "LOX Barrel");
+        this.add(NtmBlocks.BARREL_TAINT, "IMP Residue Barrel");
+
+        this.add(NtmBlocks.GEIGER, "Geiger Counter");
+
+        this.add(NtmBlocks.MACHINE_PRESS, "Burner Press");
+        this.add(NtmBlocks.MACHINE_SHREDDER, "Shredder");
+        this.add(NtmBlocks.HEATER_FIREBOX, "Firebox");
+        this.add(NtmBlocks.HEATER_OVEN, "Heating Oven");
+        this.add(NtmBlocks.HEATER_FLUID_BURNER, "Fluid Burner");
+        this.add(NtmBlocks.HEATER_ELECTRIC, "Electric Heater");
+        this.add(NtmBlocks.HEATER_HEATEX, "Heat Exchanging Heater");
+
+
+        this.add(NtmBlocks.RED_CABLE, "Red Copper Cable");
+
+        this.add(NtmBlocks.FLUID_DUCT_NEO, "Universal Fluid Duct");
+
+        this.add(NtmBlocks.MACHINE_BATTERY_SOCKET, "Battery Socket");
+        this.add(NtmBlocks.MACHINE_BATTERY_SOCKET, DESC,"Allows battery items to be connected$to the power grid directly.$Acts as a cable, all ports are connected$to the same network.");
+        this.add(NtmBlocks.MACHINE_BATTERY_REDD, "FEnSU");
+        this.add(NtmBlocks.MACHINE_ASSEMBLY_MACHINE, "Assembly Machine");
+        this.add(NtmBlocks.MACHINE_CHEMICAL_PLANT, "Chemical Plant");
+        this.add(NtmBlocks.MACHINE_CENTRIFUGE, "Centrifuge");
+        this.add(NtmBlocks.MACHINE_GAS_CENTRIFUGE, "Gas Centrifuge");
+        this.add(NtmBlocks.MACHINE_SOLDERING_STATION, "Soldering Station");
+        this.add(NtmBlocks.MACHINE_ARC_WELDER, "Arc Welder");
+        this.add(NtmBlocks.HEAT_BOILER, "Boiler");
+        this.add(NtmBlocks.MACHINE_INDUSTRIAL_BOILER, "Industrial Boiler");
+        this.add(NtmBlocks.FURNACE_COMBINATION, "Combination Oven");
+        this.add(NtmBlocks.FURNACE_COMBINATION, DESC, "A large furnace that can produce charcoal and coal coke.$Produces fluid byproducts.$Heat transfer rate: ΔT*0.25 TU/t");
+        this.add(NtmBlocks.MACHINE_BLAST_FURNACE, "Blast Furnace");
+
+        this.add(NtmBlocks.MACHINE_FLUID_TANK, "Tank");
+
+        this.add(NtmBlocks.MACHINE_OIL_DERRICK, "Oil Derrick");
+        this.add(NtmBlocks.MACHINE_PUMPJACK, "Pumpjack");
+        this.add(NtmBlocks.MACHINE_FRACKING_TOWER, "Hydraulic Fracking Tower");
+        this.add(NtmBlocks.MACHINE_REFINERY, "Refinery");
+
+        this.add(NtmBlocks.MACHINE_SATLINKER, "SatLink Device");
+
+        this.add(NtmBlocks.CRATE_IRON, "Iron Crate");
+        this.add(NtmBlocks.CRATE_TUNGSTEN, "Tungsten Crate");
+        this.add(NtmBlocks.CRATE_STEEL, "Steel Crate");
+        this.add(NtmBlocks.CRATE_DESH, "Desh Crate");
+
+        this.add(NtmBlocks.DECONTAMINATOR, "Player Decontaminator");
+
+        this.add(NtmBlocks.PWR_CONTROLLER, "PWR Controller");
+
+        this.add(NtmBlocks.BALEFIRE, "Balefire");
+        this.add(NtmBlocks.FIRE_DIGAMMA, "Lingering Digamma");
+        this.add("block." + NuclearTechMod.MODID + " .obj_volcano.desc0", "SHIELD VOLCANO");
+        this.add("block." + NuclearTechMod.MODID + " .obj_volcano.desc1", "DOES GROW");
+        this.add("block." + NuclearTechMod.MODID + " .obj_volcano.desc2", "DOES NOT GROW");
+        this.add("block." + NuclearTechMod.MODID + " .obj_volcano.desc3", "DOES EXTINGUISH");
+        this.add("block." + NuclearTechMod.MODID + " .obj_volcano.desc4", "DOES NOT EXTINGUISH");
+        this.add(NtmBlocks.VOLCANO_CORE, "Volcano Core");
+        this.add(NtmBlocks.VOLCANO_RAD_CORE, "Rad Volcano Core");
+
+        this.add(NtmBlocks.LAUNCH_PAD, "Silo Launch Pad");
+        this.add(NtmBlocks.SOYUZ_LAUNCHER, "Soyuz Launch Platform");
+
+        this.add(NtmBlocks.VOLCANIC_LAVA, "Volcanic Lava");
+        this.add(NtmBlocks.RAD_LAVA, "Radioactive Volcanic Lava");
+
+        this.add(NtmBlocks.GAS_RADON, "Radon Gas");
+        this.add(NtmBlocks.GAS_RADON_DENSE, "Dense Radon Gas");
+        this.add(NtmBlocks.GAS_RADON_TOMB, "Tomb Gas");
+        this.add(NtmBlocks.GAS_MELTDOWN, "Meltdown Gas");
+        this.add(NtmBlocks.GAS_MONOXIDE, "Carbon Monoxide");
+        this.add(NtmBlocks.GAS_ASBESTOS, "Airborne Asbestos Particles");
+        this.add(NtmBlocks.GAS_COAL, "Airborne Coal Dust");
+        this.add(NtmBlocks.GAS_FLAMMABLE, "Flammable Gas");
+        this.add(NtmBlocks.GAS_EXPLOSIVE, "Explosive Gas");
+
+        this.add(NtmBlocks.TAINT, "Taint");
+        this.add(NtmBlocks.TAINT, DESC,"DO NOT TOUCH, BREATHE OR STARE AT.");
+
+        // FLUIDS //
+        this.add("hbmfluid.none", "None");
+        this.add("hbmfluid.air", "Compressed Air");
+        this.add("hbmfluid.airblast", "Hot Air Blast");
+        this.add("hbmfluid.water", "Water");
+        this.add("hbmfluid.heavywater", "Heavy Water");
+        this.add("hbmfluid.heavywater_hot", "Hot Heavy Water");
+        this.add("hbmfluid.lava", "Lava");
+        this.add("hbmfluid.steam", "Steam");
+        this.add("hbmfluid.hotsteam", "dense Steam");
+        this.add("hbmfluid.superhotsteam", "Super Dense Steam");
+        this.add("hbmfluid.ultrahotsteam", "Ultra Dense Steam");
+        this.add("hbmfluid.spentsteam", "Low-Pressure Steam");
+        this.add("hbmfluid.carbondioxide", "Carbon Dioxide");
+        this.add("hbmfluid.coolant", "Coolant");
+        this.add("hbmfluid.coolant_hot", "Hot Coolant");
+        this.add("hbmfluid.perfluoromethyl", "Perfluoromethyl");
+        this.add("hbmfluid.perfluoromethyl_cold", "Cold Perfluoromethyl");
+        this.add("hbmfluid.perfluoromethyl_hot", "Hot Perfluoromethyl");
+        this.add("hbmfluid.cryogel", "Cryogel");
+        this.add("hbmfluid.mug", "Mug Root Beer");
+        this.add("hbmfluid.mug_hot", "Hot Mug Root Beer");
+        this.add("hbmfluid.blood", "Blood");
+        this.add("hbmfluid.blood_hot", "Hot Blood");
+        this.add("hbmfluid.sodium", "Liquid Sodium");
+        this.add("hbmfluid.sodium_hot", "Hot Liquid Sodium");
+        this.add("hbmfluid.lead", "Liquid Lead");
+        this.add("hbmfluid.lead_hot", "Hot Liquid Lead");
+        this.add("hbmfluid.thorium_salt", "Liquid Thorium Salt");
+        this.add("hbmfluid.thorium_salt_hot", "Hot Liquid Thorium Salt");
+        this.add("hbmfluid.thorium_salt_depleted", "Depleted Liquid Thorium Salt");
+        this.add("hbmfluid.hydrogen", "Liquid Hydrogen");
+        this.add("hbmfluid.deuterium", "Deuterium");
+        this.add("hbmfluid.tritium", "Tritium");
+        this.add("hbmfluid.helium3", "Helium-3");
+        this.add("hbmfluid.helium4", "Helium-4");
+        this.add("hbmfluid.oxygen", "Liquid Oxygen");
+        this.add("hbmfluid.xenon", "Xenon Gas");
+        this.add("hbmfluid.chlorine", "Chlorine Gas");
+        this.add("hbmfluid.mercury", "Mercury");
+        this.add("hbmfluid.oil", "Crude Oil");
+        this.add("hbmfluid.oil_ds", "Desulfurized Crud Oil");
+        this.add("hbmfluid.crackoil", "Cracked Oil");
+        this.add("hbmfluid.crackoil_ds", "Desulfurized Cracked Oil");
+        this.add("hbmfluid.coaloil", "Coal Oil");
+        this.add("hbmfluid.oil_coker", "Coker Oil");
+        this.add("hbmfluid.hotoil", "Hot Crude Oil");
+        this.add("hbmfluid.hotoil_ds", "Hot DesulfurizedC Crude Oil");
+        this.add("hbmfluid.hotcrackoil", "Hot Cracked Oil");
+        this.add("hbmfluid.hotcrackoil_ds", "Hot Desulfurized Cracked Oil");
+        this.add("hbmfluid.heavyoil", "Heavy Oil");
+        this.add("hbmfluid.heavyoil_vacuum", "Vacuum Heavy Oil");
+        this.add("hbmfluid.naphtha", "Naphtha");
+        this.add("hbmfluid.naphtha_ds", "Desulfurized Naphtha");
+        this.add("hbmfluid.naphtha_crack", "Cracked Naphtha");
+        this.add("hbmfluid.naphtha_coker", "Coker Naphtha");
+        this.add("hbmfluid.reformate", "Reformate");
+        this.add("hbmfluid.lightoil", "Light Oil");
+        this.add("hbmfluid.lightoil_ds", "Desulfurized Light Oil");
+        this.add("hbmfluid.lightoil_crack", "Cracked Light Oil");
+        this.add("hbmfluid.lightoil_vacuum", "Vacuum Light Oil");
+        this.add("hbmfluid.bitumen", "Bitumen");
+        this.add("hbmfluid.smear", "Industrial Oil");
+        this.add("hbmfluid.heatingoil", "Heating Oil");
+        this.add("hbmfluid.heatingoil_vacuum", "Heavy Heating Oil");
+        this.add("hbmfluid.reclaimed", "Reclaimed Industrial Oil");
+        this.add("hbmfluid.lubricant", "Engine Lubricant");
+        this.add("hbmfluid.flue", "Flue Gas");
+        this.add("hbmfluid.gas", "Natural Gas");
+        this.add("hbmfluid.gas_coker", "Coker Gas");
+        this.add("hbmfluid.petroleum", "Petroleum");
+        this.add("hbmfluid.sourgas", "Sour Gas");
+        this.add("hbmfluid.lpg", "LPG");
+        this.add("hbmfluid.syngas", "Syngas");
+        this.add("hbmfluid.oxyhydrogen", "Oxyhydrogen");
+        this.add("hbmfluid.aromatics", "Aromatic Hydrocarbons");
+        this.add("hbmfluid.unsaturateds", "Unsaturated Hydrocarbons");
+        this.add("hbmfluid.xylene", "BTX");
+        this.add("hbmfluid.reformgas", "Reformate Gas");
+        this.add("hbmfluid.diesel", "Diesel");
+        this.add("hbmfluid.diesel_reform", "High-Cetane Diesel");
+        this.add("hbmfluid.diesel_crack", "Cracked Diesel");
+        this.add("hbmfluid.diesel_crack_reform", "High-Cetane Cracked Diesel");
+        this.add("hbmfluid.kerosene", "Kerosene");
+        this.add("hbmfluid.kerosene_reform", "Jet Fuel");
+        this.add("hbmfluid.petroil", "Petroil");
+        this.add("hbmfluid.petroil_leaded", "Leaded Petroil");
+        this.add("hbmfluid.gasoline", "Gasoline");
+        this.add("hbmfluid.gasoline_leaded", "Leaded Gasoline");
+        this.add("hbmfluid.coalgas", "Coal Gasoline");
+        this.add("hbmfluid.coalgas_leaded", "Leaded Coal Gasoline");
+        this.add("hbmfluid.coalcreosote", "Coal Tar Creosote");
+        this.add("hbmfluid.woodoil", "Wood Oil");
+        this.add("hbmfluid.biogas", "Biogas");
+        this.add("hbmfluid.biofuel", "Biofuel");
+        this.add("hbmfluid.ethanol", "Ethanol");
+        this.add("hbmfluid.fishoil", "Fish Oil");
+        this.add("hbmfluid.sunfloweroil", "Sunflower Seed Oil");
+        this.add("hbmfluid.nitan", "NITAN© 100 Octane Super Fuel ");
+        this.add("hbmfluid.dhc", "Deuterated Hydrocarbon");
+        this.add("hbmfluid.balefire", "BF Rockeft Fuel");
+        this.add("hbmfluid.salient", "Salient Green");
+        this.add("hbmfluid.seedslurry", "Seeding Slurry");
+        this.add("hbmfluid.colloid", "Colloid");
+        this.add("hbmfluid.vitriol", "Vitriol");
+        this.add("hbmfluid.slop", "Ore Slop");
+        this.add("hbmfluid.iongel", "Ionic Gel");
+        this.add("hbmfluid.peroxide", "Hydrogen Peroxide");
+        this.add("hbmfluid.sulfuric_acid", "Sulfuric Acid");
+        this.add("hbmfluid.nitric_acid", "Nitric Acid");
+        this.add("hbmfluid.solvent", "Solvent");
+        this.add("hbmfluid.radiosolvent", "High-Performance Solvent");
+        this.add("hbmfluid.schrabidic", "Schrabidic Acid");
+        this.add("hbmfluid.uf6", "Uranium Hexafluoride");
+        this.add("hbmfluid.puf6", "Plutonium Hexafluoride");
+        this.add("hbmfluid.sas3", "Schrabidium Trisulfide");
+        this.add("hbmfluid.pain", "Pandemonium(III)tantalite Solution");
+        this.add("hbmfluid.death", "Osmiridic Solution");
+        this.add("hbmfluid.watz", "Poisonous Mud");
+        this.add("hbmfluid.redmud", "Red Mud");
+        this.add("hbmfluid.fullerene", "Fullerene Solution");
+        this.add("hbmfluid.egg", "Dissolved Egg");
+        this.add("hbmfluid.cholesterol", "Cholesterol Solution");
+        this.add("hbmfluid.chlorocalcite_solution", "Chlorocalcite Solution");
+        this.add("hbmfluid.chlorocalcite_mix", "Mixed Chlorocalcite Solution");
+        this.add("hbmfluid.chlorocalcite_cleaned", "Cleaned Chlorocalcite Solution");
+        this.add("hbmfluid.potassium_chloride", "Potassium Chloride Solution");
+        this.add("hbmfluid.calcium_chloride", "Calcium Chloride Solution");
+        this.add("hbmfluid.calcium_solution", "Calcium Solution");
+        this.add("hbmfluid.sodium_aluminate", "Sodium Aluminate");
+        this.add("hbmfluid.bauxite_solution", "Bauxite Solution");
+        this.add("hbmfluid.alumina", "Alumina");
+        this.add("hbmfluid.concrete", "Liquid Concrete");
+        this.add("hbmfluid.fracksol", "Fracking Solution");
+        this.add("hbmfluid.lye", "Lye");
+        this.add("hbmfluid.phosgene", "Phosgene");
+        this.add("hbmfluid.mustardgas", "Mustard Gas");
+        this.add("hbmfluid.estradiol", "Estradiol Solution");
+        this.add("hbmfluid.nitroglycerin", "Nitroglycerin");
+        this.add("hbmfluid.amat", "Antimatter");
+        this.add("hbmfluid.aschrab", "Antischrabidium");
+        this.add("hbmfluid.wastefluid", "Liquid Nuclear Waste");
+        this.add("hbmfluid.wastegas", "Gaseous Nuclear Waste");
+        this.add("hbmfluid.xpjuice", "Experience Juice");
+        this.add("hbmfluid.enderjuice", "Ender Juice");
+        this.add("hbmfluid.stellar_flux", "Stellar Flux");
+        this.add("hbmfluid.plasma_dt", "Deuterium-Tritium Plasma");
+        this.add("hbmfluid.plasma_hd", "Hydrogen-Deuterium Plasma");
+        this.add("hbmfluid.plasma_ht", "Hydrogen-Tritium Plasma");
+        this.add("hbmfluid.plasma_dh3", "Deuterium-Helium-3 Plasma");
+        this.add("hbmfluid.plasma_xm", "Helium-4-Oxygen Plasma");
+        this.add("hbmfluid.plasma_bf", "Balefire Plasma");
+        this.add("hbmfluid.smoke", "Smoke");
+        this.add("hbmfluid.smoke_leaded", "Leaded Smoke");
+        this.add("hbmfluid.smoke_poison", "Poison Smoke");
+        this.add("hbmfluid.pheromone", "Booster Pheromone");
+        this.add("hbmfluid.pheromone_m", "Modified Booster Pheromone");
+
+        // CONTAINERS //
+        this.add("container.crateIron", "Iron Crate");
+        this.add("container.crateTungsten", "Tungsten Crate");
+        this.add("container.crateSteel", "Steel Crate");
+        this.add("container.crateDesh", "Desh Crate");
+        this.add("desc.crate_slots_used", "%s / %s slots used (%s%%)");
+        this.add("container.nuke_gadget", "The Gadget");
+        this.add("container.nuke_gadget.desc", "§1Requires:§r$ * 4 Arrays of First-Generation$   High-Explosive Lenses$ * Large Plutonium Core$ * Wiring");
+        this.add("container.nuke_fat_man", "Fat Man");
+        this.add("container.nuke_fat_man.desc", "§1Requires:§r$ * 4 Arrays of First-Generation$   High-Explosive Lenses$ * Plutonium Core$ * Bomb Firing Unit");
+        this.add("container.nuke_little_boy", "Little Boy");
+        this.add("container.nuke_little_boy.desc", "§1Requires:§r$ * Neutron Shielding$ * U235 Projectile$ * Subcritical U235 Target$ * Propellant$ * Bomb Igniter");
+        this.add("container.nuke_ivy_mike", "Ivy Mike");
+        this.add("container.nuke_ivy_mike.desc", "§1Requires:§r$ * 4 Arrays of High-Explosive Lenses$ * Plutonium Core$ * Deuterium Cooling Unit$ * Uranium Coated Deuterium Tank$ * Deuterium Tank");
+        this.add("container.nuke_tsar_bomba", "Tsar Bomba");
+        this.add("container.nuke_tsar_bomba.desc", "§1Requires:§r$ * 4 Arrays of High-Explosive Lenses$ * Plutonium Core$§9Optional:§r$ * Tsar Bomba Core");
+        this.add("container.nuke_prototype", "The Prototype");
+        this.add("container.nuke_fleija", "F.L.E.I.J.A.");
+        this.add("container.nuke_n2", "N² Mine");
+        this.add("container.nuke_fstbmb", "Balefire Bomb");
+        this.add("container.battery_socket", "Battery Socket");
+        this.add("container.battery_redd", "FEnSU");
+        this.add("container.machine_assembly_machine", "Assembly Machine");
+        this.add("container.machine_chemical_plant", "Chemical Plant");
+        this.add("container.machine_shredder", "Shredder");
+        this.add("container.machine_press", "Burner Press");
+        this.add("container.machine_centrifuge", "Centrifuge");
+        this.add("container.machine_gas_centrifuge", "Gas Centrifuge");
+        this.add("container.machine_soldering_station", "Soldering Station");
+        this.add("container.machine_arc_welder", "Arc Welder");
+        this.add("container.machine_oil_derrick", "Oil Derrick");
+        this.add("container.machine_pumpjack", "Pumpjack");
+        this.add("container.machine_fracking_tower", "H. F. T.");
+        this.add("container.machine_refinery", "Refinery");
+        this.add("container.heat_boiler", "Boiler");
+        this.add("container.machine_industrial_boiler", "Industrial Boiler");
+        this.add("container.furnace_combination", "Combination Oven");
+        this.add("container.fluidtank", "Tank");
+        this.add("container.sat_linker", "SatLink Device");
+        this.add("container.launch_pad", "Launch Pad");
+        this.add("container.launch_pad.not_ready", "Not ready");
+        this.add("container.launch_pad.loading", "Loading...");
+        this.add("container.launch_pad.ready", "Ready");
+        this.add("container.recipe_selector.close", "Close");
+        this.add("container.recipe_selector.close_search", "Clear search");
+        this.add("container.recipe_selector.toggle_focus", "Press ENTER to toggle focus");
+        this.add("container.recipe.duration", "Duration");
+        this.add("container.recipe.consumption", "Consumption");
+        this.add("container.recipe.input", "Input");
+        this.add("container.recipe.output", "Output");
+        this.add("container.recipe.at_pressure", "at");
+        this.add("container.recipe.set_recipe", "Click to set recipe");
+        this.add("block.hbm.heater_firebox.desc", "Burns solid fuel to produce heat.");
+        this.add("tile.heater_firebox.desc", "Burns solid fuel to produce heat.");
+        this.add("block.hbm.heater_oven.desc", "Burns solid fuel to produce heat.$Accepts heat from the bottom with 50%% efficiency.");
+        this.add("tile.heater_oven.desc", "Burns solid fuel to produce heat.$Accepts heat from the bottom with 50%% efficiency.");
+        this.add("block.hbm.heater_oilburner.desc", "Burns fluids to produce heat.$Can be configured with a screwdriver.$Can be configured with a hand drill.");
+        this.add("tile.heater_oilburner.desc", "Burns fluids to produce heat.$Can be configured with a screwdriver.$Can be configured with a hand drill.");
+        this.add("block.hbm.heater_heatex.desc", "Produces heat from hot fluids.");
+        this.add("tile.heater_heatex.desc", "Produces heat from hot fluids.");
+        this.add("container.machine_blast_furnace", "Blast Furnace");
+
+
+        // COMMANDS //
+        this.add("commands.props.get", "Living property %s of %s is %s");
+        this.add("commands.props.set", "Living property %s of %s set to %s");
+        this.add("commands.props.not_living", "Target is not a living entity!");
+        this.add("commands.satellite.no_active_satellites", "No active satellites found!");
+        this.add("commands.satellite.no_satellite", "No satellite using this frequency found!");
+        this.add("commands.satellite.not_a_satellite", "The held item is not a satellite!");
+        this.add("commands.satellite.satellite_descended", "Satellite successfully descended.");
+        this.add("commands.satellite.satellite_orbited", "Satellite launched.");
+        this.add("commands.satellite.should_be_run_as_player", "This command should be run by a player!");
+        this.add("commands.chunkrad.setrad", "Chunk radiation set to %s");
+
+        // MISC //
+        this.add("message." + NuclearTechMod.MODID + ".loaded", "Loaded world with Hbm's Nuclear Tech Mod %s for Minecraft 1.21.1!");
+        this.add("message." + NuclearTechMod.MODID + ".resurrection", "Resurrection");
+        this.add("message." + NuclearTechMod.MODID + ".new_version", "New version %s is available! Click ");
+        this.add("message." + NuclearTechMod.MODID + ".click_here", "[here]");
+        this.add("message." + NuclearTechMod.MODID + ".to_download", " to download!");
+
+        this.add("itemGroup.parts", "NTM Resources and Parts");
+        this.add("itemGroup.control", "NTM Machine Items and Fuel");
+        this.add("itemGroup.blocks", "NTM Ores and Blocks");
+        this.add("itemGroup.machine", "NTM Machines");
+        this.add("itemGroup.nuke", "NTM Bombs");
+        this.add("itemGroup.missile", "NTM Missiles and Satellites");
+        this.add("itemGroup.consumable", "NTM Consumables and Gear");
+
+        this.add("fluid.pressurized", "Pressurized, use compressor!");
+
+        this.add("he", "HE"); // hbm energy
+        this.add("mb", "mB"); // milibuckets
+        this.add("pu", "PU"); // pressure units
+        this.add("rad", "RAD"); // radiation
+        this.add("drx", "DRX"); // digamma thing
+        this.add("t", "t"); // ticks
+        this.add("s", "s"); // seconds
+        this.add("h", "h"); // hours
+        this.add("min", "min");
+        this.add("max", "max");
+
+        this.add("autoswitch", "Part of auto switch group \"%s\"$Recipe changes based on first ingredient");
+    }
+
+    // HELPERS //
+    public void add(DeferredBlock<? extends Block> key, String name) { this.add(key.get(), name); }
+    public void add(DeferredItem<? extends Item> key, String name) { this.add(key.get(), name); }
+
+    public void add(DeferredBlock<? extends Block> key, String toAppend, String name) { this.add(key.get().getDescriptionId() + toAppend, name); }
+    public void add(DeferredItem<? extends Item> key, String toAppend, String name) { this.add(key.get().getDescriptionId() + toAppend, name); }
+
+    public String getName(Enum<?> theEnum) { return "." + theEnum.name().toLowerCase(Locale.US); }
+
+    private static String capitalize(String s) {
+        if (s == null || s.isEmpty()) return s;
+        return Character.toUpperCase(s.charAt(0)) + s.substring(1).toLowerCase(Locale.US);
+    }
+//yoooooo
+    /** Returns the display-friendly singular form of a shape's tag segment (e.g. "ingots" -> "Ingot") */
+    private static String shapeSingular(com.hbm.inventory.material.MaterialShapes shape) {
+        if (shape.tagSegment == null) return "Unknown";
+        String seg = shape.tagSegment; // e.g. "ingots", "wires", "blocks"
+        // Strip trailing 's'
+        if (seg.endsWith("s")) seg = seg.substring(0, seg.length() - 1);
+        // Replace underscores with spaces and capitalize each word
+        String[] words = seg.split("_");
+        StringBuilder sb = new StringBuilder();
+        for (String word : words) {
+            if (!sb.isEmpty()) sb.append(" ");
+            sb.append(capitalize(word));
+        }
+        return sb.toString();
+    }
+}
