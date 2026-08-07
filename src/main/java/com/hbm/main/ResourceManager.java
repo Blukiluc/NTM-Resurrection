@@ -210,6 +210,7 @@ public class ResourceManager {
     public static IModelCustom industrial_boiler;
     public static IModelCustom furnace_combination;
     public static IModelCustom blast_furnace;
+    public static HFRWavefrontObject anvil;
 
     public static IModelCustom oil_derrick;
     public static IModelCustom pumpjack;
@@ -317,6 +318,7 @@ public class ResourceManager {
         industrial_boiler = new HFRWavefrontObject("models/obj/machines/industrial_boiler.obj").asVBO();
         furnace_combination = new HFRWavefrontObject("models/obj/machines/combination_oven.obj").asVBO();
         blast_furnace = new HFRWavefrontObject("models/obj/machines/blast_furnace.obj").asVBO();
+        anvil = new HFRWavefrontObject("models/obj/block/anvil.obj");
 
         oil_derrick = new HFRWavefrontObject("models/obj/machines/oil_derrick.obj").asVBO();
         pumpjack = new HFRWavefrontObject("models/obj/machines/pumpjack.obj").asVBO();

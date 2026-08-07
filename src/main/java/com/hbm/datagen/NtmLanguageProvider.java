@@ -2,6 +2,7 @@ package com.hbm.datagen;
 
 import com.hbm.blocks.NtmBlocks;
 import com.hbm.blocks.generic.BarbedWireBlock.BarbedWireType;
+import com.hbm.blocks.machine.NTMAnvilBlock;
 import com.hbm.items.ItemEnums.CapType;
 import com.hbm.items.NtmItems;
 import com.hbm.items.food.ConserveItem.ConserveType;
@@ -588,6 +589,7 @@ public class NtmLanguageProvider extends LanguageProvider {
         this.add(NtmItems.FLUID_BARREL_FULL, "Fluid Barrel: %s");
         this.add(NtmItems.FLUID_BARREL_INFINITE, "Infinite Fluid Barrel");
 
+
         this.add(NtmItems.FLUID_PACK_EMPTY, "Large Fluid Container");
         this.add(NtmItems.FLUID_PACK_FULL, "Packaged %s");
 
@@ -1115,6 +1117,19 @@ public class NtmLanguageProvider extends LanguageProvider {
         this.add(NtmBlocks.FURNACE_COMBINATION, "Combination Oven");
         this.add(NtmBlocks.FURNACE_COMBINATION, DESC, "A large furnace that can produce charcoal and coal coke.$Produces fluid byproducts.$Heat transfer rate: ΔT*0.25 TU/t");
         this.add(NtmBlocks.MACHINE_BLAST_FURNACE, "Blast Furnace");
+        this.add(NtmBlocks.ANVIL, "Anvil");
+        this.add(NtmBlocks.ANVIL, this.getName(NTMAnvilBlock.Variant.IRON), "Iron Anvil");
+        this.add(NtmBlocks.ANVIL, this.getName(NTMAnvilBlock.Variant.LEAD), "Lead Anvil");
+        this.add(NtmBlocks.ANVIL, this.getName(NTMAnvilBlock.Variant.STEEL), "Steel Anvil");
+        this.add(NtmBlocks.ANVIL, this.getName(NTMAnvilBlock.Variant.DESH), "Desh Anvil");
+        this.add(NtmBlocks.ANVIL, this.getName(NTMAnvilBlock.Variant.FERROURANIUM), "Ferrouranium Anvil");
+        this.add(NtmBlocks.ANVIL, this.getName(NTMAnvilBlock.Variant.SATURNITE), "Saturnite Anvil");
+        this.add(NtmBlocks.ANVIL, this.getName(NTMAnvilBlock.Variant.BISMUTH_BRONZE), "Bismuth Bronze Anvil");
+        this.add(NtmBlocks.ANVIL, this.getName(NTMAnvilBlock.Variant.ARSENIC_BRONZE), "Arsenic Bronze Anvil");
+        this.add(NtmBlocks.ANVIL, this.getName(NTMAnvilBlock.Variant.FERRIC_SCHRABIDATE), "Ferric Schrabidate Anvil");
+        this.add(NtmBlocks.ANVIL, this.getName(NTMAnvilBlock.Variant.DINEUTRONIUM), "Dineutronium Anvil");
+        this.add(NtmBlocks.ANVIL, this.getName(NTMAnvilBlock.Variant.OSMIRIDIUM), "Osmiridium Anvil");
+        this.add("block.hbmsntm.anvil.tier", "Tier: %s");
 
         this.add(NtmBlocks.MACHINE_FLUID_TANK, "Tank");
 
@@ -1322,6 +1337,7 @@ public class NtmLanguageProvider extends LanguageProvider {
         this.add("hbmfluid.pheromone_m", "Modified Booster Pheromone");
 
         // CONTAINERS //
+        this.add("container.anvil", "Anvil");
         this.add("container.crateIron", "Iron Crate");
         this.add("container.crateTungsten", "Tungsten Crate");
         this.add("container.crateSteel", "Steel Crate");

@@ -690,7 +690,8 @@ public class NtmCreativeTabs {
                         output.accept(NtmBlocks.HEATER_FLUID_BURNER);
                         output.accept(NtmBlocks.HEATER_ELECTRIC);
                         output.accept(NtmBlocks.HEATER_HEATEX);
-                      
+
+                        addMetaItems(output, NtmBlocks.ANVIL.asItem());
                         output.accept(NtmBlocks.MACHINE_SATLINKER);
                         output.accept(NtmBlocks.DECONTAMINATOR);
 

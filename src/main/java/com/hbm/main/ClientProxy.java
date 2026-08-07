@@ -67,6 +67,7 @@ public class ClientProxy extends ServerProxy {
         registerItemRenderer(event, new RenderDetCordItem(), NtmBlocks.DET_CORD.asItem());
 
         registerItemRenderer(event, new RenderPipeItem(), NtmBlocks.FLUID_DUCT_NEO.asItem());
+        registerItemRenderer(event, new RenderAnvilItem(), NtmBlocks.ANVIL.asItem());
 
         registerItemRenderer(event, new RenderBarrelItem(),
                 NtmBlocks.BARREL_RED.asItem(),

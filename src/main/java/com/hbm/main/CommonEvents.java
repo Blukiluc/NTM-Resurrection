@@ -174,6 +174,7 @@ public class CommonEvents {
         event.register(NtmMenuTypes.MACHINE_BLAST_FURNACE.get(), MachineBlastFurnaceScreen::new);
         event.register(NtmMenuTypes.MACHINE_OIL.get(), MachineOilScreen::new);
         event.register(NtmMenuTypes.REFINERY.get(), MachineRefineryScreen::new);
+        event.register(NtmMenuTypes.ANVIL.get(), AnvilMenuScreen::new);
 
         event.register(NtmMenuTypes.CRATE.get(), CrateScreen::new);
 

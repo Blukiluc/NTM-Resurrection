@@ -287,7 +287,12 @@ public class NtmBlockStateProvider extends BlockStateProvider {
 
         this.simpleCubeAllBlock(NtmBlocks.TAINT);
     }
-
+    public static class AnvilLoaderBuilder extends BlockModelBuilderBase {
+        public AnvilLoaderBuilder(BlockModelBuilder parent, ExistingFileHelper helper) {
+            super(parent, helper);
+        }
+        @Override public BakedModelType getType() { return BakedModelType.ANVIL; }
+    }
     private void registerShredder() {
         Block block = NtmBlocks.MACHINE_SHREDDER.get();
 
@@ -397,6 +402,7 @@ public class NtmBlockStateProvider extends BlockStateProvider {
         this.simpleBlock(block, this.models().getBuilder(this.key(block).getPath()).customLoader(SpikesLoaderBuilder::new).texture("texture", modLoc("block/spikes")).end());
         this.entityBlockItem(block, false);
     }
+
 
     private void barrelLoaderBlockItem(Block block, ResourceLocation texture) {
         this.simpleBlock(block, this.models().getBuilder(this.key(block).getPath()).customLoader(BarrelBlockModelBuilder::new).texture("texture", texture).end());

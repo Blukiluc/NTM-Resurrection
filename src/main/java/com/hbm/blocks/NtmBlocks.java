@@ -183,6 +183,7 @@ public class NtmBlocks {
     public static final DeferredBlock<Block> MACHINE_ARC_WELDER = register("machine_arc_welder", () -> new MachineArcWelderBlock(BlockBehaviour.Properties.of().noOcclusion().strength(5.0F, 10.0F).sound(SoundType.METAL).mapColor(MapColor.METAL)));
     public static final DeferredBlock<Block> MACHINE_FLUID_TANK = register("machine_fluid_tank", () -> new MachineFluidTankBlock(BlockBehaviour.Properties.of().noOcclusion().strength(5.0F, 20.0F).sound(SoundType.METAL).mapColor(MapColor.METAL)));
     public static final DeferredBlock<Block> MACHINE_SATLINKER = register("machine_satlinker", () -> new MachineSatLinkerBlock(BlockBehaviour.Properties.of().strength(5.0F, 10.0F).sound(SoundType.METAL).mapColor(MapColor.METAL)));
+    public static final DeferredBlock<Block> ANVIL = registerNew("anvil", () -> new NTMAnvilBlock(BlockBehaviour.Properties.of().strength(0.6F, 100.0F).sound(SoundType.ANVIL).mapColor(MapColor.METAL).requiresCorrectToolForDrops().noOcclusion()));
 
     public static final DeferredBlock<Block> CRATE_IRON = registerNew("crate_iron", () ->  new CrateBlock(BlockBehaviour.Properties.of().strength(0.6F, 6.0F).sound(SoundType.METAL).mapColor(MapColor.METAL).requiresCorrectToolForDrops(), CrateBlock.Type.IRON));
     public static final DeferredBlock<Block> CRATE_TUNGSTEN = registerNew("crate_tungsten", () ->  new CrateBlock(BlockBehaviour.Properties.of().strength(0.6F, 6.0F).sound(SoundType.METAL).mapColor(MapColor.METAL).requiresCorrectToolForDrops(), CrateBlock.Type.TUNGSTEN));
