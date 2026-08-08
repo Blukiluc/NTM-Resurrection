@@ -1128,6 +1128,7 @@ public class NtmLanguageProvider extends LanguageProvider {
         this.add(NtmBlocks.MACHINE_BLAST_FURNACE, "Blast Furnace");
 
         this.add(NtmBlocks.MACHINE_FLUID_TANK, "Tank");
+        this.add(NtmBlocks.MACHINE_BIG_ASS_TANK, "Big Ass Tank");
 
         this.add(NtmBlocks.MACHINE_OIL_DERRICK, "Oil Derrick");
         this.add(NtmBlocks.MACHINE_PUMPJACK, "Pumpjack");
@@ -1381,6 +1382,7 @@ public class NtmLanguageProvider extends LanguageProvider {
         this.add("container.machine_industrial_boiler", "Industrial Boiler");
         this.add("container.furnace_combination", "Combination Oven");
         this.add("container.fluidtank", "Tank");
+        this.add("container.bigAssTank", "Big Ass Tank");
         this.add("container.sat_linker", "SatLink Device");
         this.add("container.launch_pad", "Launch Pad");
         this.add("container.launch_pad.not_ready", "Not ready");

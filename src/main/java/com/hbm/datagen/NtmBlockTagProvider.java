@@ -125,6 +125,7 @@ public class NtmBlockTagProvider extends BlockTagsProvider {
                         NtmBlocks.ORE_SELLAFIELD_DIAMOND.get(),
 
                         NtmBlocks.MACHINE_FLUID_TANK.get(),
+                        NtmBlocks.MACHINE_BIG_ASS_TANK.get(),
                         NtmBlocks.MACHINE_BATTERY_REDD.get(),
                         NtmBlocks.MACHINE_BATTERY_SOCKET.get(),
                         NtmBlocks.LAUNCH_PAD.get(),

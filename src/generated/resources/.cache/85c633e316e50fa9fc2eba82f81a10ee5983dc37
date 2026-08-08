@@ -1,4 +1,4 @@
-// 1.21.1	2026-08-08T12:18:45.5650445	Block States: hbm
+// 1.21.1	2026-08-08T13:34:24.3833917	Block States: hbm
 771df07d065b33c7dcf62cfb69b5cd3a3cb4feed assets/hbm/blockstates/asphalt.json
 c0f05f08a475704e80a5d657d494bf5a829fab8f assets/hbm/blockstates/asphalt_light.json
 8c6c51f054fa20e59275bf5c7c77e28e7790b34c assets/hbm/blockstates/balefire.json
@@ -65,6 +65,7 @@ d1ccda191cfa6fdb2bebb37756413d1263d21de1 assets/hbm/blockstates/leaves_layer.jso
 de9090d28992a3a6abcd8872803fc003989ba74d assets/hbm/blockstates/machine_assembly_machine.json
 fbf154acd2c6f78d210fba28e963956b5d06ee18 assets/hbm/blockstates/machine_battery_redd.json
 c29a994247ec12c14b3d49267a6ad50fcc9feb8b assets/hbm/blockstates/machine_battery_socket.json
+a93ef29406a134495f0eb8387dead0f2a3b56ac6 assets/hbm/blockstates/machine_big_ass_tank.json
 e421acbea1f25b792469ddf89a371f3efebd8525 assets/hbm/blockstates/machine_blast_furnace.json
 2fdf8b9f810fda7ea76b1a3f58529d980a8d81a0 assets/hbm/blockstates/machine_catalytic_cracking_tower.json
 293e0ecaa12a45a5cc9adaba3260f858409abb2c assets/hbm/blockstates/machine_catalytic_reformer.json
@@ -232,6 +233,7 @@ f55d5c93f0423e66d4aae3b691b0bb51957b9d98 assets/hbm/models/block/machine_arc_wel
 f55d5c93f0423e66d4aae3b691b0bb51957b9d98 assets/hbm/models/block/machine_assembly_machine_particle.json
 f55d5c93f0423e66d4aae3b691b0bb51957b9d98 assets/hbm/models/block/machine_battery_redd_particle.json
 f55d5c93f0423e66d4aae3b691b0bb51957b9d98 assets/hbm/models/block/machine_battery_socket_particle.json
+f55d5c93f0423e66d4aae3b691b0bb51957b9d98 assets/hbm/models/block/machine_big_ass_tank_particle.json
 f55d5c93f0423e66d4aae3b691b0bb51957b9d98 assets/hbm/models/block/machine_blast_furnace_particle.json
 f55d5c93f0423e66d4aae3b691b0bb51957b9d98 assets/hbm/models/block/machine_catalytic_cracking_tower_particle.json
 f55d5c93f0423e66d4aae3b691b0bb51957b9d98 assets/hbm/models/block/machine_catalytic_reformer_particle.json
@@ -389,6 +391,7 @@ b5cb531f9c015e4129f955f3e0b582e62505b659 assets/hbm/models/item/gravel_diamond.j
 1ae5a980018cda4e68cafcf4ce293349827b23ab assets/hbm/models/item/machine_assembly_machine.json
 1ae5a980018cda4e68cafcf4ce293349827b23ab assets/hbm/models/item/machine_battery_redd.json
 1ae5a980018cda4e68cafcf4ce293349827b23ab assets/hbm/models/item/machine_battery_socket.json
+1ae5a980018cda4e68cafcf4ce293349827b23ab assets/hbm/models/item/machine_big_ass_tank.json
 1ae5a980018cda4e68cafcf4ce293349827b23ab assets/hbm/models/item/machine_blast_furnace.json
 1ae5a980018cda4e68cafcf4ce293349827b23ab assets/hbm/models/item/machine_catalytic_cracking_tower.json
 1ae5a980018cda4e68cafcf4ce293349827b23ab assets/hbm/models/item/machine_catalytic_reformer.json
