@@ -1131,6 +1131,10 @@ public class NtmLanguageProvider extends LanguageProvider {
         this.add(NtmBlocks.MACHINE_MIXER, "Industrial Mixer");
         this.add(NtmBlocks.HEAT_BOILER, "Boiler");
         this.add(NtmBlocks.MACHINE_INDUSTRIAL_BOILER, "Industrial Boiler");
+        this.add(NtmBlocks.MACHINE_INDUSTRIAL_TURBINE, "Industrial Steam Turbine");
+        this.add(NtmBlocks.MACHINE_CHUNGUS, "Leviathan Steam Turbine");
+        this.add(NtmBlocks.MACHINE_TOWER_SMALL, "Auxiliary Cooling Tower");
+        this.add(NtmBlocks.MACHINE_TOWER_LARGE, "Cooling Tower");
         this.add(NtmBlocks.FURNACE_IRON, "Iron Furnace");
         this.add(NtmBlocks.FURNACE_IRON, DESC, "Larger and more efficient furnace,$does not waste fuel when idle.");
         this.add(NtmBlocks.FURNACE_STEEL, "Steel Furnace");
@@ -1424,6 +1428,8 @@ public class NtmLanguageProvider extends LanguageProvider {
         this.add("tile.heater_oilburner.desc", "Burns fluids to produce heat.$Can be configured with a screwdriver.$Can be configured with a hand drill.");
         this.add("block.hbm.heater_heatex.desc", "Produces heat from hot fluids.");
         this.add("tile.heater_heatex.desc", "Produces heat from hot fluids.");
+        this.add(NtmBlocks.MACHINE_INDUSTRIAL_TURBINE, DESC, "Efficiency: 100%");
+        this.add(NtmBlocks.MACHINE_CHUNGUS, DESC, "Efficiency: 85%");
         this.add("container.machine_blast_furnace", "Blast Furnace");
         this.add("chat.catalytic_cracking_tower.changed", "Changed type to ");
         this.add("chat.fraction_tower.bottom_only", "You can only change the type in the bottom segment!");
@@ -1448,6 +1454,7 @@ public class NtmLanguageProvider extends LanguageProvider {
         this.add("message." + NuclearTechMod.MODID + ".new_version", "New version %s is available! Click ");
         this.add("message." + NuclearTechMod.MODID + ".click_here", "[here]");
         this.add("message." + NuclearTechMod.MODID + ".to_download", " to download!");
+        this.add("message." + NuclearTechMod.MODID + ".turbine.operational", "Cannot change compressor setting while operational!");
 
         this.add("itemGroup.parts", "NTM Resources and Parts");
         this.add("itemGroup.control", "NTM Machine Items and Fuel");

@@ -58,6 +58,10 @@ public class ResourceManager {
     public static final ResourceLocation FURNACE_STEEL_TEX = NuclearTechMod.withDefaultNamespace("textures/models/machines/furnace_steel.png");
     public static final ResourceLocation BOILER_TEX = NuclearTechMod.withDefaultNamespace("textures/models/machines/boiler.png");
     public static final ResourceLocation INDUSTRIAL_BOILER_TEX = NuclearTechMod.withDefaultNamespace("textures/models/machines/industrial_boiler.png");
+    public static final ResourceLocation INDUSTRIAL_TURBINE_TEX = NuclearTechMod.withDefaultNamespace("textures/models/machines/industrial_turbine.png");
+    public static final ResourceLocation LEVIATHAN_TURBINE_TEX = NuclearTechMod.withDefaultNamespace("textures/models/machines/chungus.png");
+    public static final ResourceLocation TOWER_SMALL_TEX = NuclearTechMod.withDefaultNamespace("textures/models/machines/tower_small.png");
+    public static final ResourceLocation TOWER_LARGE_TEX = NuclearTechMod.withDefaultNamespace("textures/models/machines/tower_large.png");
     public static final ResourceLocation FURNACE_COMBINATION_TEX = NuclearTechMod.withDefaultNamespace("textures/models/machines/combination_oven.png");
     public static final ResourceLocation BLAST_FURNACE_TEX = NuclearTechMod.withDefaultNamespace("textures/models/machines/blast_furnace.png");
 
@@ -234,6 +238,10 @@ public class ResourceManager {
     public static IModelCustom boiler;
     public static IModelCustom boiler_burst;
     public static IModelCustom industrial_boiler;
+    public static IModelCustom industrial_turbine;
+    public static IModelCustom leviathan_turbine;
+    public static IModelCustom tower_small;
+    public static IModelCustom tower_large;
     public static IModelCustom furnace_combination;
     public static IModelCustom blast_furnace;
 
@@ -357,6 +365,10 @@ public class ResourceManager {
         boiler = new HFRWavefrontObject("models/obj/machines/boiler.obj").asVBO();
         boiler_burst = new HFRWavefrontObject("models/obj/machines/boiler_burst.obj").asVBO();
         industrial_boiler = new HFRWavefrontObject("models/obj/machines/industrial_boiler.obj").asVBO();
+        industrial_turbine = new HFRWavefrontObject("models/obj/machines/industrial_turbine.obj").asVBO();
+        leviathan_turbine = new HFRWavefrontObject("models/obj/machines/chungus.obj").asVBO();
+        tower_small = new HFRWavefrontObject("models/obj/machines/tower_small.obj").asVBO();
+        tower_large = new HFRWavefrontObject("models/obj/machines/tower_large.obj").asVBO();
         furnace_combination = new HFRWavefrontObject("models/obj/machines/combination_oven.obj").asVBO();
         blast_furnace = new HFRWavefrontObject("models/obj/machines/blast_furnace.obj").asVBO();
 

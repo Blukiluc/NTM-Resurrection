@@ -192,6 +192,15 @@ public class NtmSoundDefinitionsProvider extends SoundDefinitionsProvider {
                         sound(NuclearTechMod.MODID + ":block/metal_impact2")
                 )
         );
+        this.add(NtmSoundEvents.TURBINE_INDUSTRIAL_LOOP, SoundDefinition.definition()
+                .with(sound(NuclearTechMod.MODID + ":block/turbine_industrial"))
+        );
+        this.add(NtmSoundEvents.TURBINE_LEVIATHAN_LOOP, SoundDefinition.definition()
+                .with(sound(NuclearTechMod.MODID + ":block/turbine_leviathan"))
+        );
+        this.add(NtmSoundEvents.TURBINE_LEVER, SoundDefinition.definition()
+                .with(sound(NuclearTechMod.MODID + ":block/turbine_lever"))
+        );
         /// ITEMS
         this.add(NtmSoundEvents.TECH_BLEEP, SoundDefinition.definition()
                 .with(sound(NuclearTechMod.MODID + ":tool/tech_bleep"))

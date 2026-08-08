@@ -684,6 +684,10 @@ public class NtmCreativeTabs {
                         output.accept(NtmBlocks.MACHINE_ARC_WELDER);
                         output.accept(NtmBlocks.HEAT_BOILER);
                         output.accept(NtmBlocks.MACHINE_INDUSTRIAL_BOILER);
+                        output.accept(NtmBlocks.MACHINE_INDUSTRIAL_TURBINE);
+                        output.accept(NtmBlocks.MACHINE_CHUNGUS);
+                        output.accept(NtmBlocks.MACHINE_TOWER_SMALL);
+                        output.accept(NtmBlocks.MACHINE_TOWER_LARGE);
 
                         output.accept(NtmBlocks.MACHINE_OIL_DERRICK);
                         output.accept(NtmBlocks.MACHINE_PUMPJACK);

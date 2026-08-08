@@ -103,6 +103,21 @@
       "hbm:block/squeaky_toy"
     ]
   },
+  "block.turbine_industrial": {
+    "sounds": [
+      "hbm:block/turbine_industrial"
+    ]
+  },
+  "block.turbine_lever": {
+    "sounds": [
+      "hbm:block/turbine_lever"
+    ]
+  },
+  "block.turbine_leviathan": {
+    "sounds": [
+      "hbm:block/turbine_leviathan"
+    ]
+  },
   "crate_close": {
     "sounds": [
       "hbm:block/crate_close"

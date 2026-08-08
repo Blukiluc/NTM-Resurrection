@@ -298,6 +298,25 @@ public class Fluids {
         GASOLINE =          new FluidType("GASOLINE",       0x445772, 1, 2, 0, EnumSymbol.NONE).addContainers(new CD_Canister(0x2F7747)).addTraits(new FT_Flammable(400_000), new FT_Combustible(FuelGrade.HIGH, 1_000_000), LIQUID, P_FUEL);
         COALGAS =           new FluidType("COALGAS",        0x445772, 1, 2, 0, EnumSymbol.NONE).addContainers(new CD_Canister(0x2E155F)).addTraits(new FT_Flammable(75_000), new FT_Combustible(FuelGrade.MEDIUM, 150_000), LIQUID, P_FUEL);
         SPENTSTEAM =        new FluidType("SPENTSTEAM",     0x445772, 2, 0, 0, EnumSymbol.NONE).addTraits(NOCON, GASEOUS);
+        WATER.addTraits(new FT_Heatable()
+                .setEff(FT_Heatable.HeatingType.BOILER, 1D)
+                .setEff(FT_Heatable.HeatingType.HEATEXCHANGER, 0.25D)
+                .addStep(200, 1, STEAM, 100)
+                .addStep(220, 1, HOTSTEAM, 10)
+                .addStep(238, 1, SUPERHOTSTEAM, 1)
+                .addStep(2500, 10, ULTRAHOTSTEAM, 1));
+        STEAM.addTraits(new FT_Coolable().addStep(200, 100, SPENTSTEAM, 1)
+                .setEff(FT_Coolable.CoolingType.TURBINE, 1D)
+                .setEff(FT_Coolable.CoolingType.HEATEXCHANGER, 0.5D));
+        HOTSTEAM.addTraits(new FT_Coolable().addStep(2, 1, STEAM, 10)
+                .setEff(FT_Coolable.CoolingType.TURBINE, 1D)
+                .setEff(FT_Coolable.CoolingType.HEATEXCHANGER, 0.5D));
+        SUPERHOTSTEAM.addTraits(new FT_Coolable().addStep(18, 1, HOTSTEAM, 10)
+                .setEff(FT_Coolable.CoolingType.TURBINE, 1D)
+                .setEff(FT_Coolable.CoolingType.HEATEXCHANGER, 0.5D));
+        ULTRAHOTSTEAM.addTraits(new FT_Coolable().addStep(120, 1, SUPERHOTSTEAM, 10)
+                .setEff(FT_Coolable.CoolingType.TURBINE, 1D)
+                .setEff(FT_Coolable.CoolingType.HEATEXCHANGER, 0.5D));
         FRACKSOL =          new FluidType("FRACKSOL",       0x798A6B, 1, 3, 3, EnumSymbol.ACID);//.addContainers(new CD_Canister(0x4F887F)).addTraits(new FT_Corrosive(15), new FT_Poison(false, 0), LIQUID, VISCOUS);
         PLASMA_DT =         new FluidType("PLASMA_DT",      0xF7AFDE, 0, 4, 0, EnumSymbol.RADIATION).setTemp(3250).addTraits(NOCON, NOID, PLASMA);
         PLASMA_HD =         new FluidType("PLASMA_HD",      0xF0ADF4, 0, 4, 0, EnumSymbol.RADIATION).setTemp(2500).addTraits(NOCON, NOID, PLASMA);

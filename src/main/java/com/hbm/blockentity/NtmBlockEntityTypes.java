@@ -11,6 +11,9 @@ import com.hbm.blockentity.machine.heater.HeaterFluidBurnerBlockEntity;
 import com.hbm.blockentity.machine.heater.HeaterOvenBlockEntity;
 import com.hbm.blockentity.machine.oil.*;
 import com.hbm.blockentity.machine.storage.*;
+import com.hbm.blockentity.machine.tower.*;
+import com.hbm.blockentity.machine.turbine.MachineIndustrialTurbineBlockEntity;
+import com.hbm.blockentity.machine.turbine.MachineLeviathanTurbineBlockEntity;
 import com.hbm.blockentity.network.CableBaseBlockEntity;
 import com.hbm.blockentity.network.PipeBaseBlockEntity;
 import com.hbm.blocks.NtmBlocks;
@@ -66,6 +69,30 @@ public class NtmBlockEntityTypes {
             () -> BlockEntityType.Builder.of(
                             MachineIndustrialBoilerBlockEntity::new,
                             NtmBlocks.MACHINE_INDUSTRIAL_BOILER.get())
+                    .build(null));
+    public static final Supplier<BlockEntityType<MachineIndustrialTurbineBlockEntity>> MACHINE_INDUSTRIAL_TURBINE = REGISTER.register(
+            "machine_industrial_turbine",
+            () -> BlockEntityType.Builder.of(
+                            MachineIndustrialTurbineBlockEntity::new,
+                            NtmBlocks.MACHINE_INDUSTRIAL_TURBINE.get())
+                    .build(null));
+    public static final Supplier<BlockEntityType<MachineLeviathanTurbineBlockEntity>> MACHINE_CHUNGUS = REGISTER.register(
+            "machine_chungus",
+            () -> BlockEntityType.Builder.of(
+                            MachineLeviathanTurbineBlockEntity::new,
+                            NtmBlocks.MACHINE_CHUNGUS.get())
+                    .build(null));
+    public static final Supplier<BlockEntityType<MachineAuxiliaryCoolingTowerBlockEntity>> MACHINE_TOWER_SMALL = REGISTER.register(
+            "machine_tower_small",
+            () -> BlockEntityType.Builder.of(
+                            MachineAuxiliaryCoolingTowerBlockEntity::new,
+                            NtmBlocks.MACHINE_TOWER_SMALL.get())
+                    .build(null));
+    public static final Supplier<BlockEntityType<MachineCoolingTowerBlockEntity>> MACHINE_TOWER_LARGE = REGISTER.register(
+            "machine_tower_large",
+            () -> BlockEntityType.Builder.of(
+                            MachineCoolingTowerBlockEntity::new,
+                            NtmBlocks.MACHINE_TOWER_LARGE.get())
                     .build(null));
     public static final Supplier<BlockEntityType<HeaterFireboxBlockEntity>> HEATER_FIREBOX = REGISTER.register(
             "heater_firebox",

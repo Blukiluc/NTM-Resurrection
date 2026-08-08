@@ -62,6 +62,9 @@ public class NtmSoundEvents {
     public static final DeferredHolder<SoundEvent, SoundEvent> METAL_IMPACT = reg("block.metal_impact"); // BLOCKS CATEGORY
     public static final DeferredHolder<SoundEvent, SoundEvent> BOILER = reg("block.boiler"); // BLOCKS CATEGORY
     public static final DeferredHolder<SoundEvent, SoundEvent> BOILER_GROAN = reg("block.boilergroan"); // BLOCKS CATEGORY
+    public static final DeferredHolder<SoundEvent, SoundEvent> TURBINE_INDUSTRIAL_LOOP = reg("block.turbine_industrial");
+    public static final DeferredHolder<SoundEvent, SoundEvent> TURBINE_LEVIATHAN_LOOP = reg("block.turbine_leviathan");
+    public static final DeferredHolder<SoundEvent, SoundEvent> TURBINE_LEVER = reg("block.turbine_lever");
     /// ITEMS
     public static final DeferredHolder<SoundEvent, SoundEvent> TECH_BLEEP = reg("item.tech_bleep"); // PLAYERS CATEGORY
     public static final DeferredHolder<SoundEvent, SoundEvent> TECH_BOOP = reg("item.tech_boop"); // PLAYERS CATEGORY
