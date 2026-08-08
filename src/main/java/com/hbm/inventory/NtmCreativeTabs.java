@@ -634,6 +634,7 @@ public class NtmCreativeTabs {
                         output.accept(NtmBlocks.FROZEN_LOG);
                         output.accept(NtmBlocks.FALLOUT);
                         output.accept(NtmBlocks.LEAVES_LAYER);
+                        output.accept(NtmBlocks.OIL_SPILL);
 
                         output.accept(NtmBlocks.SELLAFIELD_SLAKED);
                         output.accept(NtmBlocks.SELLAFIELD_BEDROCK);
@@ -676,6 +677,7 @@ public class NtmCreativeTabs {
                         output.accept(NtmBlocks.MACHINE_GAS_CENTRIFUGE);
                         output.accept(NtmBlocks.MACHINE_FLUID_TANK);
                         output.accept(NtmBlocks.MACHINE_BIG_ASS_TANK);
+                        output.accept(NtmBlocks.MACHINE_DRAIN);
                         output.accept(NtmBlocks.MACHINE_SHREDDER);
                         output.accept(NtmBlocks.MACHINE_SOLDERING_STATION);
                         output.accept(NtmBlocks.MACHINE_ARC_WELDER);

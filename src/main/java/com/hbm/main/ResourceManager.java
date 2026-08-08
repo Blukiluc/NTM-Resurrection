@@ -35,6 +35,7 @@ public class ResourceManager {
     public static final ResourceLocation TANK_TEX = NuclearTechMod.withDefaultNamespace("textures/models/machines/tank.png");
     public static final ResourceLocation TANK_INNER_TEX = NuclearTechMod.withDefaultNamespace("textures/models/machines/tank_inner.png");
     public static final ResourceLocation BIG_ASS_TANK_TEX = NuclearTechMod.withDefaultNamespace("textures/models/machines/big_ass_tank.png");
+    public static final ResourceLocation DRAIN_TEX = NuclearTechMod.withDefaultNamespace("textures/models/machines/drain.png");
 
     public static final ResourceLocation BATTERY_SOCKET_TEX = NuclearTechMod.withDefaultNamespace("textures/models/machines/battery_socket.png");
     public static final ResourceLocation BATTERY_SC_TEX = NuclearTechMod.withDefaultNamespace("textures/models/machines/battery_sc.png");
@@ -209,6 +210,7 @@ public class ResourceManager {
     public static IModelCustom fluid_tank;
     public static IModelCustom fluid_tank_exploded;
     public static IModelCustom big_ass_tank;
+    public static IModelCustom drain;
 
     // Assembler
     public static IModelCustom assembly_machine;
@@ -329,6 +331,7 @@ public class ResourceManager {
         fluid_tank = new HFRWavefrontObject("models/obj/machines/fluid_tank.obj").asVBO();
         fluid_tank_exploded = new HFRWavefrontObject("models/obj/machines/fluid_tank_exploded.obj").asVBO();
         big_ass_tank = new HFRWavefrontObject("models/obj/machines/big_ass_tank.obj").asVBO();
+        drain = new HFRWavefrontObject("models/obj/machines/drain.obj").asVBO();
 
         assembly_machine = new HFRWavefrontObject("models/obj/machines/assembly_machine.obj").asVBO();
         assembly_factory = new HFRWavefrontObject("models/obj/machines/assembly_factory.obj").asVBO();

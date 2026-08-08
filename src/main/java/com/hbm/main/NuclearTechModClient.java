@@ -942,6 +942,16 @@ public class NuclearTechModClient {
                 }
             }
 
+            if ("splash".equals(type)) {
+                if (particleSetting == 0 || (particleSetting == 1 && rand.nextBoolean())) {
+                    Particle particle = innerMc.particleEngine.createParticle(ParticleTypes.FALLING_WATER, x, y, z, 0D, 0D, 0D);
+                    if(particle != null) {
+                        int color = data.getInt("color");
+                        particle.setColor((color >> 16 & 255) / 255F, (color >> 8 & 255) / 255F, (color & 255) / 255F);
+                    }
+                }
+            }
+
             if ("network".equals(type)) {
                 DebugParticle particle = null;
                 double mX = data.getDouble("mX");

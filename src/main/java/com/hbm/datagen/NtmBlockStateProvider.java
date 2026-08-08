@@ -149,7 +149,8 @@ public class NtmBlockStateProvider extends BlockStateProvider {
         );
         this.logBlock(NtmBlocks.FROZEN_LOG.get());
         this.simpleCubeAllBlock(NtmBlocks.FROZEN_PLANKS);
-        this.layeringBlock(NtmBlocks.LEAVES_LAYER.get());
+        this.layeringBlock(NtmBlocks.LEAVES_LAYER.get(), modLoc("block/waste_leaves"), "layering");
+        this.layeringBlock(NtmBlocks.OIL_SPILL.get(), modLoc("block/oil_spill"), "oil_spill");
         ResourceLocation texture = modLoc("block/ash");
         ModelFile falloutModel = models()
                 .getBuilder("fallout")
@@ -236,6 +237,7 @@ public class NtmBlockStateProvider extends BlockStateProvider {
 
         this.particleOnlyBlock(NtmBlocks.MACHINE_FLUID_TANK, modLoc("block/block_steel"));
         this.particleOnlyBlock(NtmBlocks.MACHINE_BIG_ASS_TANK, modLoc("block/block_steel"));
+        this.particleOnlyBlock(NtmBlocks.MACHINE_DRAIN, modLoc("block/block_steel"));
 
         this.particleOnlyBlock(NtmBlocks.MACHINE_OIL_DERRICK, modLoc("block/block_steel"));
         this.particleOnlyBlock(NtmBlocks.MACHINE_PUMPJACK, modLoc("block/block_steel"));
@@ -415,16 +417,14 @@ public class NtmBlockStateProvider extends BlockStateProvider {
         this.entityBlockItem(block, false);
     }
 
-    private void layeringBlock(Block block) {
-        ResourceLocation texture = modLoc("block/waste_leaves");
-
+    private void layeringBlock(Block block, ResourceLocation texture, String modelPrefix) {
         MultiPartBlockStateBuilder builder = getMultipartBuilder(block);
 
         for(int i = 1; i <= 8; i++) {
             float height = i * 2f / 16f;
 
             ModelFile model = models()
-                    .withExistingParent("layering_" + i, mcLoc("block/block"))
+                    .withExistingParent(modelPrefix + "_" + i, mcLoc("block/block"))
                     .texture("all", texture)
                     .texture("particle", texture)
                     .renderType("cutout_mipped")

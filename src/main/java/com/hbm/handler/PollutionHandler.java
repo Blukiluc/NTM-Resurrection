@@ -43,8 +43,7 @@ public class PollutionHandler {
 
         if(!NtmConfig.COMMON.ENABLE_POLLUTION.get()) return;
 
-        PollutionPerLevel ppw = perLevel.get(level);
-        if(ppw == null) return;
+        PollutionPerLevel ppw = perLevel.computeIfAbsent(level, ignored -> new PollutionPerLevel());
         ChunkPos pos = new ChunkPos(toChange);
         PollutionData data = ppw.pollution.get(pos);
         if(data == null) {

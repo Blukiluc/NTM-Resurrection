@@ -105,6 +105,7 @@ public class NtmBlockLootTableProvider extends BlockLootSubProvider {
         this.add(NtmBlocks.FROZEN_LOG.get(), block -> createSingleItemTable(Items.SNOWBALL));
         this.add(NtmBlocks.FROZEN_PLANKS.get(), block -> createSingleItemTable(Items.SNOWBALL));
         this.add(NtmBlocks.LEAVES_LAYER.get(), BlockLootSubProvider::createShearsOnlyDrop);
+        this.dropSelf(NtmBlocks.OIL_SPILL.get());
         this.dropSelf(NtmBlocks.FALLOUT.get()); // todo make item drop
         this.dropSelf(NtmBlocks.SELLAFIELD_SLAKED.get());
         this.add(NtmBlocks.ORE_SELLAFIELD_EMERALD.get(), block -> this.createOreDrop(block, Items.EMERALD));
@@ -176,6 +177,7 @@ public class NtmBlockLootTableProvider extends BlockLootSubProvider {
 
         this.dropSelf(NtmBlocks.MACHINE_FLUID_TANK.get());
         this.dropSelf(NtmBlocks.MACHINE_BIG_ASS_TANK.get());
+        this.dropSelf(NtmBlocks.MACHINE_DRAIN.get());
 
         this.dropSelf(NtmBlocks.MACHINE_OIL_DERRICK.get());
         this.dropSelf(NtmBlocks.MACHINE_PUMPJACK.get());

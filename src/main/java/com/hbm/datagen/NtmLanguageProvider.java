@@ -1056,6 +1056,7 @@ public class NtmLanguageProvider extends LanguageProvider {
         this.add(NtmBlocks.FROZEN_LOG, "Frozen Log");
         this.add(NtmBlocks.FROZEN_PLANKS, "Frozen Planks");
         this.add(NtmBlocks.LEAVES_LAYER, "Fallen Leaves");
+        this.add(NtmBlocks.OIL_SPILL, "Oil Spill");
         this.add(NtmBlocks.FALLOUT, "Fallout");
         this.add(NtmBlocks.SELLAFIELD_SLAKED, "Slaked Sellafite");
         this.add(NtmBlocks.ORE_SELLAFIELD_DIAMOND, "Sellafite Diamond Ore");
@@ -1133,6 +1134,7 @@ public class NtmLanguageProvider extends LanguageProvider {
 
         this.add(NtmBlocks.MACHINE_FLUID_TANK, "Tank");
         this.add(NtmBlocks.MACHINE_BIG_ASS_TANK, "Big Ass Tank");
+        this.add(NtmBlocks.MACHINE_DRAIN, "Drainage Pipe");
 
         this.add(NtmBlocks.MACHINE_OIL_DERRICK, "Oil Derrick");
         this.add(NtmBlocks.MACHINE_PUMPJACK, "Pumpjack");

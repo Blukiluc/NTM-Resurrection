@@ -126,6 +126,7 @@ public class NtmBlockTagProvider extends BlockTagsProvider {
 
                         NtmBlocks.MACHINE_FLUID_TANK.get(),
                         NtmBlocks.MACHINE_BIG_ASS_TANK.get(),
+                        NtmBlocks.MACHINE_DRAIN.get(),
                         NtmBlocks.MACHINE_BATTERY_REDD.get(),
                         NtmBlocks.MACHINE_BATTERY_SOCKET.get(),
                         NtmBlocks.LAUNCH_PAD.get(),
@@ -149,6 +150,7 @@ public class NtmBlockTagProvider extends BlockTagsProvider {
                         NtmBlocks.WASTE_TRINITITE_RED.get(),
                         NtmBlocks.FROZEN_DIRT.get(),
                         NtmBlocks.FROZEN_GRASS.get(),
+                        NtmBlocks.OIL_SPILL.get(),
                         NtmBlocks.FALLOUT.get()
                 );
 

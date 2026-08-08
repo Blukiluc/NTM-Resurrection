@@ -155,6 +155,13 @@ public class NtmBlockEntityTypes {
                             NtmBlocks.MACHINE_BIG_ASS_TANK.get())
                     .build(null));
 
+    public static final Supplier<BlockEntityType<MachineDrainBlockEntity>> MACHINE_DRAIN = REGISTER.register(
+            "machine_drain",
+            () -> BlockEntityType.Builder.of(
+                            MachineDrainBlockEntity::new,
+                            NtmBlocks.MACHINE_DRAIN.get())
+                    .build(null));
+
     public static final Supplier<BlockEntityType<BatterySocketBlockEntity>> BATTERY_SOCKET = REGISTER.register(
             "battery_socket",
             () -> BlockEntityType.Builder.of(

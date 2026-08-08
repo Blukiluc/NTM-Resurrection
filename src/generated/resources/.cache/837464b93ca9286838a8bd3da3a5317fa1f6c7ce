@@ -1,4 +1,4 @@
-// 1.21.1	2026-08-07T19:07:13.0138384	Item Models: hbm
+// 1.21.1	2026-08-08T16:46:11.7248312	Item Models: hbm
 c4e09d2d0fd2bef45dc51c8da0c70bab4652e4b1 assets/hbm/models/item/acetylene_torch.json
 6c4e747554da913978325893b69ca977467a483c assets/hbm/models/item/ammo_secret.json
 99443ea6db20add27ff0bd97f72d22bbf1493cd1 assets/hbm/models/item/ammo_secret_0.json
@@ -580,6 +580,7 @@ d865ddef58ce3a5b4cc51add2bd36ed3c67cd943 assets/hbm/models/item/nugget_u238.json
 39b3be4521a8e6f2fb2529093ed0cb8fdf3135ee assets/hbm/models/item/nugget_uranium.json
 80a3a31dbe03bae8697b062b67e63985315d5ab3 assets/hbm/models/item/nugget_uranium_fuel.json
 0e21d8693f1393c59515a4b9dee6e6b622209531 assets/hbm/models/item/nugget_zirconium.json
+2df2c984bd0a47f7768ee0fd9723218c15c99391 assets/hbm/models/item/oil_spill.json
 45ed8241f858605be1bb05455bf6e5fa1df9e02e assets/hbm/models/item/particle_digamma.json
 056ae5510c35631b5bd977cbfd9e6f7609b3ee2c assets/hbm/models/item/particle_lutece.json
 2f343bd033199b7140f2a270077380b0179b34fb assets/hbm/models/item/pellet_antimatter.json
