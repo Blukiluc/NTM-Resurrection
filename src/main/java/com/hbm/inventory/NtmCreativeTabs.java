@@ -668,10 +668,12 @@ public class NtmCreativeTabs {
                         output.accept(NtmBlocks.MACHINE_BATTERY_REDD);
                         output.accept(NtmBlocks.MACHINE_ASSEMBLY_MACHINE);
                         output.accept(NtmBlocks.MACHINE_CHEMICAL_PLANT);
+                        output.accept(NtmBlocks.MACHINE_WOOD_BURNER);
                         output.accept(NtmBlocks.MACHINE_PRESS);
                         output.accept(NtmBlocks.MACHINE_CENTRIFUGE);
                         output.accept(NtmBlocks.MACHINE_GAS_CENTRIFUGE);
                         output.accept(NtmBlocks.MACHINE_FLUID_TANK);
+                        output.accept(NtmBlocks.MACHINE_BIG_ASS_TANK);
                         output.accept(NtmBlocks.MACHINE_SHREDDER);
                         output.accept(NtmBlocks.MACHINE_SOLDERING_STATION);
                         output.accept(NtmBlocks.MACHINE_ARC_WELDER);

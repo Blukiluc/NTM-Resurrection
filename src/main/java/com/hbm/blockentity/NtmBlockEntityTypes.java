@@ -141,6 +141,13 @@ public class NtmBlockEntityTypes {
                             NtmBlocks.MACHINE_FLUID_TANK.get())
                     .build(null));
 
+    public static final Supplier<BlockEntityType<MachineBigAssTankBlockEntity>> BIG_ASS_TANK = REGISTER.register(
+            "big_ass_tank",
+            () -> BlockEntityType.Builder.of(
+                            MachineBigAssTankBlockEntity::new,
+                            NtmBlocks.MACHINE_BIG_ASS_TANK.get())
+                    .build(null));
+
     public static final Supplier<BlockEntityType<BatterySocketBlockEntity>> BATTERY_SOCKET = REGISTER.register(
             "battery_socket",
             () -> BlockEntityType.Builder.of(
@@ -167,6 +174,13 @@ public class NtmBlockEntityTypes {
             () -> BlockEntityType.Builder.of(
                             MachineChemicalPlantBlockEntity::new,
                             NtmBlocks.MACHINE_CHEMICAL_PLANT.get())
+                    .build(null));
+
+    public static final Supplier<BlockEntityType<MachineWoodBurnerBlockEntity>> WOOD_BURNER = REGISTER.register(
+            "wood_burner",
+            () -> BlockEntityType.Builder.of(
+                            MachineWoodBurnerBlockEntity::new,
+                            NtmBlocks.MACHINE_WOOD_BURNER.get())
                     .build(null));
 
     public static final Supplier<BlockEntityType<MachineCentrifugeBlockEntity>> CENTRIFUGE = REGISTER.register(

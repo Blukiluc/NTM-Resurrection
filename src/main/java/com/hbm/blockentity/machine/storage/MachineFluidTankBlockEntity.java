@@ -37,6 +37,7 @@ import net.minecraft.world.entity.player.Player;
 import net.minecraft.world.inventory.AbstractContainerMenu;
 import net.minecraft.world.level.Explosion;
 import net.minecraft.world.level.Level;
+import net.minecraft.world.level.block.entity.BlockEntityType;
 import net.minecraft.world.level.block.state.BlockState;
 import net.minecraft.world.phys.AABB;
 
@@ -60,9 +61,13 @@ public class MachineFluidTankBlockEntity extends MachineBaseBlockEntity implemen
     public int age = 0;
 
     public MachineFluidTankBlockEntity(BlockPos pos, BlockState state) {
-        super(NtmBlockEntityTypes.FLUID_TANK.get(), pos, state, 6);
+        this(NtmBlockEntityTypes.FLUID_TANK.get(), pos, state, 256000);
+    }
 
-        this.tank = new FluidTank(Fluids.NONE, 256000);
+    protected MachineFluidTankBlockEntity(BlockEntityType<? extends MachineFluidTankBlockEntity> type, BlockPos pos, BlockState state, int capacity) {
+        super(type, pos, state, 6);
+
+        this.tank = new FluidTank(Fluids.NONE, capacity);
     }
 
     @Override public Component getDefaultName() { return Component.translatable("container.fluidtank"); }

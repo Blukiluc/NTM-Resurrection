@@ -1116,6 +1116,8 @@ public class NtmLanguageProvider extends LanguageProvider {
         this.add(NtmBlocks.MACHINE_BATTERY_REDD, "FEnSU");
         this.add(NtmBlocks.MACHINE_ASSEMBLY_MACHINE, "Assembly Machine");
         this.add(NtmBlocks.MACHINE_CHEMICAL_PLANT, "Chemical Plant");
+        this.add(NtmBlocks.MACHINE_WOOD_BURNER, "Wood-Burning Generator");
+        this.add(NtmBlocks.MACHINE_WOOD_BURNER, DESC, "Generates 100HE/t when burning items$Collects ashes$Can burn fluids at 50%% efficiency at 40mB/s");
         this.add(NtmBlocks.MACHINE_CENTRIFUGE, "Centrifuge");
         this.add(NtmBlocks.MACHINE_GAS_CENTRIFUGE, "Gas Centrifuge");
         this.add(NtmBlocks.MACHINE_SOLDERING_STATION, "Soldering Station");
@@ -1128,6 +1130,7 @@ public class NtmLanguageProvider extends LanguageProvider {
         this.add(NtmBlocks.MACHINE_BLAST_FURNACE, "Blast Furnace");
 
         this.add(NtmBlocks.MACHINE_FLUID_TANK, "Tank");
+        this.add(NtmBlocks.MACHINE_BIG_ASS_TANK, "Big Ass Tank");
 
         this.add(NtmBlocks.MACHINE_OIL_DERRICK, "Oil Derrick");
         this.add(NtmBlocks.MACHINE_PUMPJACK, "Pumpjack");
@@ -1363,6 +1366,7 @@ public class NtmLanguageProvider extends LanguageProvider {
         this.add("container.battery_redd", "FEnSU");
         this.add("container.machine_assembly_machine", "Assembly Machine");
         this.add("container.machine_chemical_plant", "Chemical Plant");
+        this.add("container.machine_wood_burner", "Wood-Burner");
         this.add("container.machine_shredder", "Shredder");
         this.add("container.machine_press", "Burner Press");
         this.add("container.machine_centrifuge", "Centrifuge");
@@ -1381,6 +1385,7 @@ public class NtmLanguageProvider extends LanguageProvider {
         this.add("container.machine_industrial_boiler", "Industrial Boiler");
         this.add("container.furnace_combination", "Combination Oven");
         this.add("container.fluidtank", "Tank");
+        this.add("container.bigAssTank", "Big Ass Tank");
         this.add("container.sat_linker", "SatLink Device");
         this.add("container.launch_pad", "Launch Pad");
         this.add("container.launch_pad.not_ready", "Not ready");

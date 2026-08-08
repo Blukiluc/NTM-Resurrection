@@ -34,6 +34,7 @@ public class ResourceManager {
 
     public static final ResourceLocation TANK_TEX = NuclearTechMod.withDefaultNamespace("textures/models/machines/tank.png");
     public static final ResourceLocation TANK_INNER_TEX = NuclearTechMod.withDefaultNamespace("textures/models/machines/tank_inner.png");
+    public static final ResourceLocation BIG_ASS_TANK_TEX = NuclearTechMod.withDefaultNamespace("textures/models/machines/big_ass_tank.png");
 
     public static final ResourceLocation BATTERY_SOCKET_TEX = NuclearTechMod.withDefaultNamespace("textures/models/machines/battery_socket.png");
     public static final ResourceLocation BATTERY_SC_TEX = NuclearTechMod.withDefaultNamespace("textures/models/machines/battery_sc.png");
@@ -42,6 +43,7 @@ public class ResourceManager {
     public static final ResourceLocation GEIGER_TEX = NuclearTechMod.withDefaultNamespace("textures/block/geiger.png");
     public static final ResourceLocation ASSEMBLY_MACHINE_TEX = NuclearTechMod.withDefaultNamespace("textures/models/machines/assembly_machine.png");
     public static final ResourceLocation CHEMICAL_PLANT_TEX = NuclearTechMod.withDefaultNamespace("textures/models/machines/chemical_plant.png");
+    public static final ResourceLocation WOOD_BURNER_TEX = NuclearTechMod.withDefaultNamespace("textures/models/machines/wood_burner.png");
     public static final ResourceLocation PRESS_TEX = NuclearTechMod.withDefaultNamespace("textures/models/machines/press.png");
     public static final ResourceLocation CENTRIFUGE_TEX = NuclearTechMod.withDefaultNamespace("textures/models/machines/centrifuge.png");
     public static final ResourceLocation GAS_CENTRIFUGE_TEX = NuclearTechMod.withDefaultNamespace("textures/models/machines/gas_centrifuge.png");
@@ -205,11 +207,13 @@ public class ResourceManager {
     // Tank
     public static IModelCustom fluid_tank;
     public static IModelCustom fluid_tank_exploded;
+    public static IModelCustom big_ass_tank;
 
     // Assembler
     public static IModelCustom assembly_machine;
     public static IModelCustom assembly_factory;
     public static IModelCustom chemical_plant;
+    public static IModelCustom wood_burner;
     public static IModelCustom press;
     public static IModelCustom centrifuge;
     public static IModelCustom gas_centrifuge;
@@ -321,10 +325,12 @@ public class ResourceManager {
 
         fluid_tank = new HFRWavefrontObject("models/obj/machines/fluid_tank.obj").asVBO();
         fluid_tank_exploded = new HFRWavefrontObject("models/obj/machines/fluid_tank_exploded.obj").asVBO();
+        big_ass_tank = new HFRWavefrontObject("models/obj/machines/big_ass_tank.obj").asVBO();
 
         assembly_machine = new HFRWavefrontObject("models/obj/machines/assembly_machine.obj").asVBO();
         assembly_factory = new HFRWavefrontObject("models/obj/machines/assembly_factory.obj").asVBO();
         chemical_plant = new HFRWavefrontObject("models/obj/machines/chemical_plant.obj").asVBO();
+        wood_burner = new HFRWavefrontObject("models/obj/machines/wood_burner.obj").asVBO();
         press = new HFRWavefrontObject("models/obj/machines/press.obj").asVBO();
         centrifuge = new HFRWavefrontObject("models/obj/machines/centrifuge.obj").asVBO();
         gas_centrifuge = new HFRWavefrontObject("models/obj/machines/gas_centrifuge.obj").asVBO();
