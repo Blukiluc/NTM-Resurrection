@@ -990,10 +990,12 @@ public class NtmLanguageProvider extends LanguageProvider {
         // upgrades
         this.add("desc.gui.upgrade", "Upgrade slots");
         this.add("desc.gui.upgrade.speed", "Speed upgrades");
+        this.add("desc.gui.upgrade.effectiveness", "Effectiveness upgrades");
         this.add("desc.gui.upgrade.power", "Power upgrades");
         this.add("desc.gui.upgrade.overdrive", "Overdrive upgrades");
         this.add("upgrade.delay", "Delay: %s");
         this.add("upgrade.consumption", "Consumption: %s");
+        this.add("upgrade.efficiency", "Efficiency %s");
 
         // BLOCKS //
         this.add(NtmBlocks.BOBBLEHEAD, "Bobblehead");
@@ -1118,6 +1120,7 @@ public class NtmLanguageProvider extends LanguageProvider {
         this.add(NtmBlocks.MACHINE_BATTERY_REDD, "FEnSU");
         this.add(NtmBlocks.MACHINE_ASSEMBLY_MACHINE, "Assembly Machine");
         this.add(NtmBlocks.MACHINE_CHEMICAL_PLANT, "Chemical Plant");
+        this.add(NtmBlocks.MACHINE_CRYSTALLIZER, "Ore Acidizer");
         this.add(NtmBlocks.MACHINE_WOOD_BURNER, "Wood-Burning Generator");
         this.add(NtmBlocks.MACHINE_WOOD_BURNER, DESC, "Generates 100HE/t when burning items$Collects ashes$Can burn fluids at 50%% efficiency at 40mB/s");
         this.add(NtmBlocks.MACHINE_DIESEL, "Diesel Generator");
@@ -1374,6 +1377,7 @@ public class NtmLanguageProvider extends LanguageProvider {
         this.add("container.battery_redd", "FEnSU");
         this.add("container.machine_assembly_machine", "Assembly Machine");
         this.add("container.machine_chemical_plant", "Chemical Plant");
+        this.add("container.crystallizer", "Ore Acidizer");
         this.add("container.machine_wood_burner", "Wood-Burner");
         this.add("container.machine_diesel", "Diesel Generator");
         this.add("container.machine_shredder", "Shredder");

@@ -44,6 +44,7 @@ public class ResourceManager {
     public static final ResourceLocation GEIGER_TEX = NuclearTechMod.withDefaultNamespace("textures/block/geiger.png");
     public static final ResourceLocation ASSEMBLY_MACHINE_TEX = NuclearTechMod.withDefaultNamespace("textures/models/machines/assembly_machine.png");
     public static final ResourceLocation CHEMICAL_PLANT_TEX = NuclearTechMod.withDefaultNamespace("textures/models/machines/chemical_plant.png");
+    public static final ResourceLocation CRYSTALLIZER_TEX = NuclearTechMod.withDefaultNamespace("textures/models/machines/acidizer.png");
     public static final ResourceLocation WOOD_BURNER_TEX = NuclearTechMod.withDefaultNamespace("textures/models/machines/wood_burner.png");
     public static final ResourceLocation DIESEL_GENERATOR_TEX = NuclearTechMod.withDefaultNamespace("textures/models/machines/dieselgen.png");
     public static final ResourceLocation PRESS_TEX = NuclearTechMod.withDefaultNamespace("textures/models/machines/press.png");
@@ -218,6 +219,7 @@ public class ResourceManager {
     public static IModelCustom assembly_machine;
     public static IModelCustom assembly_factory;
     public static IModelCustom chemical_plant;
+    public static IModelCustom crystallizer;
     public static IModelCustom wood_burner;
     public static IModelCustom dieselGenerator;
     public static IModelCustom press;
@@ -340,6 +342,7 @@ public class ResourceManager {
         assembly_machine = new HFRWavefrontObject("models/obj/machines/assembly_machine.obj").asVBO();
         assembly_factory = new HFRWavefrontObject("models/obj/machines/assembly_factory.obj").asVBO();
         chemical_plant = new HFRWavefrontObject("models/obj/machines/chemical_plant.obj").asVBO();
+        crystallizer = new HFRWavefrontObject("models/obj/machines/acidizer.obj").asVBO();
         wood_burner = new HFRWavefrontObject("models/obj/machines/wood_burner.obj").asVBO();
         dieselGenerator = new HFRWavefrontObject("models/obj/machines/dieselgen.obj").asVBO();
         press = new HFRWavefrontObject("models/obj/machines/press.obj").asVBO();

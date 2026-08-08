@@ -202,6 +202,13 @@ public class NtmBlockEntityTypes {
                             NtmBlocks.MACHINE_CHEMICAL_PLANT.get())
                     .build(null));
 
+    public static final Supplier<BlockEntityType<MachineCrystallizerBlockEntity>> CRYSTALLIZER = REGISTER.register(
+            "crystallizer",
+            () -> BlockEntityType.Builder.of(
+                            MachineCrystallizerBlockEntity::new,
+                            NtmBlocks.MACHINE_CRYSTALLIZER.get())
+                    .build(null));
+
     public static final Supplier<BlockEntityType<MachineWoodBurnerBlockEntity>> WOOD_BURNER = REGISTER.register(
             "wood_burner",
             () -> BlockEntityType.Builder.of(

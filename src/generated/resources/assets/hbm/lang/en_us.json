@@ -107,6 +107,7 @@
   "block.hbm.machine_chemical_plant": "Chemical Plant",
   "block.hbm.machine_compressor": "Industrial Compressor",
   "block.hbm.machine_compressor_compact": "Compact Compressor",
+  "block.hbm.machine_crystallizer": "Ore Acidizer",
   "block.hbm.machine_diesel": "Diesel Generator",
   "block.hbm.machine_drain": "Drainage Pipe",
   "block.hbm.machine_electric_press": "Electric Press",
@@ -193,6 +194,7 @@
   "container.crateIron": "Iron Crate",
   "container.crateSteel": "Steel Crate",
   "container.crateTungsten": "Tungsten Crate",
+  "container.crystallizer": "Ore Acidizer",
   "container.fluidtank": "Tank",
   "container.furnace_combination": "Combination Oven",
   "container.furnace_iron": "Iron Furnace",
@@ -249,6 +251,7 @@
   "container.sat_linker": "SatLink Device",
   "desc.crate_slots_used": "%s / %s slots used (%s%%)",
   "desc.gui.upgrade": "Upgrade slots",
+  "desc.gui.upgrade.effectiveness": "Effectiveness upgrades",
   "desc.gui.upgrade.overdrive": "Overdrive upgrades",
   "desc.gui.upgrade.power": "Power upgrades",
   "desc.gui.upgrade.speed": "Speed upgrades",
@@ -1325,5 +1328,6 @@
   "tile.heater_oilburner.desc": "Burns fluids to produce heat.$Can be configured with a screwdriver.$Can be configured with a hand drill.",
   "tile.heater_oven.desc": "Burns solid fuel to produce heat.$Accepts heat from the bottom with 50%% efficiency.",
   "upgrade.consumption": "Consumption: %s",
-  "upgrade.delay": "Delay: %s"
+  "upgrade.delay": "Delay: %s",
+  "upgrade.efficiency": "Efficiency %s"
 }
