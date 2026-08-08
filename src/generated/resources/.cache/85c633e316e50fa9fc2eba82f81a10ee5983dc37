@@ -1,4 +1,4 @@
-// 1.21.1	2026-08-08T16:46:11.73341	Block States: hbm
+// 1.21.1	2026-08-08T17:29:17.7165416	Block States: hbm
 771df07d065b33c7dcf62cfb69b5cd3a3cb4feed assets/hbm/blockstates/asphalt.json
 c0f05f08a475704e80a5d657d494bf5a829fab8f assets/hbm/blockstates/asphalt_light.json
 8c6c51f054fa20e59275bf5c7c77e28e7790b34c assets/hbm/blockstates/balefire.json
@@ -50,6 +50,8 @@ f70d183ecd51acf4d87f9b8762a4f9152caab9f8 assets/hbm/blockstates/fissure_bomb.jso
 a56c4064bba21128455caceebefa280d8eb023a4 assets/hbm/blockstates/frozen_log.json
 4e719f72a49e8a97bc8cab3c8f01f68d2fe2c9ef assets/hbm/blockstates/frozen_planks.json
 c8fbcc9c34439a6c5e5f66de8de81131dc741e39 assets/hbm/blockstates/furnace_combination.json
+d141a11e4f7f67a0556c81a75457306e7a33a092 assets/hbm/blockstates/furnace_iron.json
+8a3513a0656f40ab997f3eb7d6466ec5c4a63716 assets/hbm/blockstates/furnace_steel.json
 70fc28e5564e84ae084f965f9845e97fcec3d8ac assets/hbm/blockstates/geiger.json
 201b35c379bc4cc4857a6396fded869e8d8b7c22 assets/hbm/blockstates/gravel_diamond.json
 4189995001201463183eb7de53faa8021f68381c assets/hbm/blockstates/gravel_obsidian.json
@@ -215,6 +217,8 @@ f55d5c93f0423e66d4aae3b691b0bb51957b9d98 assets/hbm/models/block/fraction_spacer
 424262f7011eb76385839c7a036d952f4283af93 assets/hbm/models/block/frozen_log_horizontal.json
 0492c29c1deff60aa82073474a93f8a35f94d55e assets/hbm/models/block/frozen_planks.json
 f55d5c93f0423e66d4aae3b691b0bb51957b9d98 assets/hbm/models/block/furnace_combination_particle.json
+8b80edef52e0000b0d56f2dfdf26cf9855a0fd59 assets/hbm/models/block/furnace_iron_particle.json
+f55d5c93f0423e66d4aae3b691b0bb51957b9d98 assets/hbm/models/block/furnace_steel_particle.json
 ed0e5535ff74afc715a574e69ae299d71f4310ea assets/hbm/models/block/geiger_particle.json
 cc3c8f6fe76de4f085763ddb63beb73c81da7c08 assets/hbm/models/block/gravel_diamond.json
 ca482176339d1f2c848de51381527253f47f88db assets/hbm/models/block/gravel_obsidian.json
@@ -383,6 +387,8 @@ e0fb04c57fd160b5e958952ed50e17a50225d2ed assets/hbm/models/item/frozen_dirt.json
 a1d91526223ea339d5a3cd0edad9bd3e7839d5d7 assets/hbm/models/item/frozen_grass.json
 15f280e1ef9db44b07004932f2ebe42f440ef3bd assets/hbm/models/item/frozen_planks.json
 1ae5a980018cda4e68cafcf4ce293349827b23ab assets/hbm/models/item/furnace_combination.json
+1ae5a980018cda4e68cafcf4ce293349827b23ab assets/hbm/models/item/furnace_iron.json
+1ae5a980018cda4e68cafcf4ce293349827b23ab assets/hbm/models/item/furnace_steel.json
 bc75ddd003491b0a30fe4c6040cd8ee1aa70f2bd assets/hbm/models/item/gas_asbestos.json
 59032279666b84ed73247cd4547ed429e29da766 assets/hbm/models/item/gas_coal.json
 a07bfc7d790b85abb5f29b4ad9e9ea7e285fe262 assets/hbm/models/item/gas_explosive.json

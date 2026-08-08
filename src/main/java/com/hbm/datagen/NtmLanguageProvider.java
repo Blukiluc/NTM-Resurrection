@@ -1128,6 +1128,10 @@ public class NtmLanguageProvider extends LanguageProvider {
         this.add(NtmBlocks.MACHINE_MIXER, "Industrial Mixer");
         this.add(NtmBlocks.HEAT_BOILER, "Boiler");
         this.add(NtmBlocks.MACHINE_INDUSTRIAL_BOILER, "Industrial Boiler");
+        this.add(NtmBlocks.FURNACE_IRON, "Iron Furnace");
+        this.add(NtmBlocks.FURNACE_IRON, DESC, "Larger and more efficient furnace,$does not waste fuel when idle.");
+        this.add(NtmBlocks.FURNACE_STEEL, "Steel Furnace");
+        this.add(NtmBlocks.FURNACE_STEEL, DESC, "Very large furnace that can provide bonus items$when smelting ores. Requires external heat source.$Heat transfer rate: ΔT*0.05 TU/t$(Δ means difference and T means temperature)");
         this.add(NtmBlocks.FURNACE_COMBINATION, "Combination Oven");
         this.add(NtmBlocks.FURNACE_COMBINATION, DESC, "A large furnace that can produce charcoal and coal coke.$Produces fluid byproducts.$Heat transfer rate: ΔT*0.25 TU/t");
         this.add(NtmBlocks.MACHINE_BLAST_FURNACE, "Blast Furnace");
@@ -1389,6 +1393,8 @@ public class NtmLanguageProvider extends LanguageProvider {
         this.add("container.machine_mixer", "Industrial Mixer");
         this.add("container.heat_boiler", "Boiler");
         this.add("container.machine_industrial_boiler", "Industrial Boiler");
+        this.add("container.furnace_iron", "Iron Furnace");
+        this.add("container.furnace_steel", "Steel Furnace");
         this.add("container.furnace_combination", "Combination Oven");
         this.add("container.fluidtank", "Tank");
         this.add("container.bigAssTank", "Big Ass Tank");

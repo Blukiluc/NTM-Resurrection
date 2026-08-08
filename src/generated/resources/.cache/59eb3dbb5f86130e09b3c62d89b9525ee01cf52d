@@ -1,4 +1,4 @@
-// 1.21.1	2026-08-08T16:46:11.7364259	Loot Tables
+// 1.21.1	2026-08-08T17:29:17.7218163	Loot Tables
 4dea21baadd671e0fc70004833537e05da50d388 data/hbm/loot_table/blocks/asphalt.json
 fb8bbca081abce158c2e2c99aad65884a8ac42bc data/hbm/loot_table/blocks/asphalt_light.json
 ac4aa7fb9a18c76eab92c1ad6d77a20da10a52ed data/hbm/loot_table/blocks/balefire.json
@@ -49,6 +49,8 @@ de56993a24fa8c6f6eb1e3e81b7704c3d961cb82 data/hbm/loot_table/blocks/frozen_dirt.
 30994c6c1664f25721e06afcb07ca15291c340e1 data/hbm/loot_table/blocks/frozen_log.json
 3ac5c85059e588996e3012285f782a9e8caf6187 data/hbm/loot_table/blocks/frozen_planks.json
 7f638c315ea850c0f7d2f6144b5015246b11a8d6 data/hbm/loot_table/blocks/furnace_combination.json
+b74e29d469d2983d2e89c05e9af3a130171f0c82 data/hbm/loot_table/blocks/furnace_iron.json
+b29fbb68916f8e9f0c8acf4a4adc37ba321c5943 data/hbm/loot_table/blocks/furnace_steel.json
 7bc4eedd5e7f9ce92b78ce6212cf5962b9fedcb6 data/hbm/loot_table/blocks/geiger.json
 d3a9cd0620e6a3596c3c11bf8f108cc3016dce32 data/hbm/loot_table/blocks/gravel_diamond.json
 f9fd90cf619aaa97be8aed12294b655b9cf5c822 data/hbm/loot_table/blocks/gravel_obsidian.json

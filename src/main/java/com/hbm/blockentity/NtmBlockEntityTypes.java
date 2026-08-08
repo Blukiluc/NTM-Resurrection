@@ -29,17 +29,29 @@ public class NtmBlockEntityTypes {
     public static final DeferredRegister<BlockEntityType<?>> REGISTER = DeferredRegister.create(BuiltInRegistries.BLOCK_ENTITY_TYPE, NuclearTechMod.MODID);
 
     // Machines
-    public static final Supplier<BlockEntityType<MachineBlastFurnaceBlockEntity>> MACHINE_BLAST_FURNACE = REGISTER.register(
-            "machine_blast_furnace",
+    public static final Supplier<BlockEntityType<MachineFurnaceIronBlockEntity>> FURNACE_IRON = REGISTER.register(
+            "furnace_iron",
             () -> BlockEntityType.Builder.of(
-                            MachineBlastFurnaceBlockEntity::new,
-                            NtmBlocks.MACHINE_BLAST_FURNACE.get())
+                            MachineFurnaceIronBlockEntity::new,
+                            NtmBlocks.FURNACE_IRON.get())
+                    .build(null));
+    public static final Supplier<BlockEntityType<MachineFurnaceSteelBlockEntity>> FURNACE_STEEL = REGISTER.register(
+            "furnace_steel",
+            () -> BlockEntityType.Builder.of(
+                            MachineFurnaceSteelBlockEntity::new,
+                            NtmBlocks.FURNACE_STEEL.get())
                     .build(null));
     public static final Supplier<BlockEntityType<MachineFurnaceCombinationBlockEntity>> FURNACE_COMBINATION = REGISTER.register(
             "furnace_combination",
             () -> BlockEntityType.Builder.of(
                             MachineFurnaceCombinationBlockEntity::new,
                             NtmBlocks.FURNACE_COMBINATION.get())
+                    .build(null));
+    public static final Supplier<BlockEntityType<MachineBlastFurnaceBlockEntity>> MACHINE_BLAST_FURNACE = REGISTER.register(
+            "machine_blast_furnace",
+            () -> BlockEntityType.Builder.of(
+                            MachineBlastFurnaceBlockEntity::new,
+                            NtmBlocks.MACHINE_BLAST_FURNACE.get())
                     .build(null));
 
     public static final Supplier<BlockEntityType<MachineHeatBoilerBlockEntity>> HEAT_BOILER = REGISTER.register(

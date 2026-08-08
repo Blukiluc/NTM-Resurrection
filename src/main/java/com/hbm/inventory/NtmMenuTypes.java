@@ -32,7 +32,13 @@ public class NtmMenuTypes {
 
     public static final DeferredHolder<MenuType<?>, MenuType<MachineCentrifugeMenu>> CENTRIFUGE = reg("centrifuge", MachineCentrifugeMenu::new);
 
+    public static final DeferredHolder<MenuType<?>, MenuType<MachineFurnaceIronMenu>> FURNACE_IRON = reg("furnace_iron", MachineFurnaceIronMenu::new);
+
+    public static final DeferredHolder<MenuType<?>, MenuType<MachineFurnaceSteelMenu>> FURNACE_STEEL = reg("furnace_steel", MachineFurnaceSteelMenu::new);
+
     public static final DeferredHolder<MenuType<?>, MenuType<MachineFurnaceCombinationMenu>> FURNACE_COMBINATION = reg("furnace_combination", MachineFurnaceCombinationMenu::new);
+
+    public static final DeferredHolder<MenuType<?>, MenuType<MachineBlastFurnaceMenu>> MACHINE_BLAST_FURNACE = reg("machine_blast_furnace", MachineBlastFurnaceMenu::new);
 
     public static final DeferredHolder<MenuType<?>, MenuType<MachineGasCentrifugeMenu>> GAS_CENTRIFUGE = reg("gas_centrifuge", MachineGasCentrifugeMenu::new);
 
@@ -43,8 +49,6 @@ public class NtmMenuTypes {
     public static final DeferredHolder<MenuType<?>, MenuType<HeaterFluidBurnerMenu>> HEATER_OILBURNER = reg("heater_oilburner", HeaterFluidBurnerMenu::new);
 
     public static final DeferredHolder<MenuType<?>, MenuType<HeaterHeatexMenu>> HEATER_HEATEX = reg("heater_heatex", HeaterHeatexMenu::new);
-
-    public static final DeferredHolder<MenuType<?>, MenuType<MachineBlastFurnaceMenu>> MACHINE_BLAST_FURNACE = reg("machine_blast_furnace", MachineBlastFurnaceMenu::new);
 
     public static final DeferredHolder<MenuType<?>, MenuType<MachineSolderingStationMenu>> SOLDERING_STATION = reg("soldering_station", MachineSolderingStationMenu::new);
 

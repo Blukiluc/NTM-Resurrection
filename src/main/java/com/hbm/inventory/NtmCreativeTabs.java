@@ -697,6 +697,8 @@ public class NtmCreativeTabs {
                         output.accept(NtmBlocks.MACHINE_COMPRESSOR);
                         output.accept(NtmBlocks.MACHINE_COMPRESSOR_COMPACT);
 
+                        output.accept(NtmBlocks.FURNACE_IRON);
+                        output.accept(NtmBlocks.FURNACE_STEEL);
                         output.accept(NtmBlocks.FURNACE_COMBINATION);
                         output.accept(NtmBlocks.MACHINE_BLAST_FURNACE);
 
