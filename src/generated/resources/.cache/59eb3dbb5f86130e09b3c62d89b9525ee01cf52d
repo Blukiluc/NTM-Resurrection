@@ -1,4 +1,4 @@
-// 1.21.1	2026-08-07T23:01:14.1595876	Loot Tables
+// 1.21.1	2026-08-08T02:06:24.802227	Loot Tables
 4dea21baadd671e0fc70004833537e05da50d388 data/hbm/loot_table/blocks/asphalt.json
 fb8bbca081abce158c2e2c99aad65884a8ac42bc data/hbm/loot_table/blocks/asphalt_light.json
 ac4aa7fb9a18c76eab92c1ad6d77a20da10a52ed data/hbm/loot_table/blocks/balefire.json
@@ -43,6 +43,7 @@ d4e43ab25215da169218688dc1f4f67cb02b1547 data/hbm/loot_table/blocks/dynamite.jso
 5bccf5f981b39d0bf7457f33eae9bdea4c44d170 data/hbm/loot_table/blocks/fire_digamma.json
 c60166fe1adc4474471476f84c9216eb096c5835 data/hbm/loot_table/blocks/fissure_bomb.json
 acea5bcb24e57e81fb9bedd5520bfb3ec42c7d2c data/hbm/loot_table/blocks/fluid_duct_neo.json
+8b4edadc932081a3a1b359d3fcd5dc3e10437c25 data/hbm/loot_table/blocks/fraction_spacer.json
 de56993a24fa8c6f6eb1e3e81b7704c3d961cb82 data/hbm/loot_table/blocks/frozen_dirt.json
 45ae55cbc76dbfa4b0daa5df49b7a48c75b0aac4 data/hbm/loot_table/blocks/frozen_grass.json
 30994c6c1664f25721e06afcb07ca15291c340e1 data/hbm/loot_table/blocks/frozen_log.json
@@ -70,8 +71,10 @@ a14174d80abdd48ee8b985d436ffbf820afac5ed data/hbm/loot_table/blocks/machine_cent
 22bd8a3c270a5f3519a1e78e43c7c80d9ebec9f8 data/hbm/loot_table/blocks/machine_chemical_plant.json
 6b4aeb33c76085c8052563804d44c19d08176720 data/hbm/loot_table/blocks/machine_fluid_tank.json
 668a95619171cb8bbd680bd095a4814f0e64f63d data/hbm/loot_table/blocks/machine_fracking_tower.json
+dc121c4806dbba47b3feb0c9d17570c21ea3af51 data/hbm/loot_table/blocks/machine_fraction_tower.json
 4dce99236170356b07b7d6c2f45c107175f54f27 data/hbm/loot_table/blocks/machine_gas_centrifuge.json
 bda8225ec56b92d7aa0a545535355592ead03ee6 data/hbm/loot_table/blocks/machine_industrial_boiler.json
+ffb9cf191ce9ddc0efd7d22622ff639f8ba47aef data/hbm/loot_table/blocks/machine_mixer.json
 e2d4d4f09e5a4ebe2b717aac70c01afacfde863c data/hbm/loot_table/blocks/machine_oil_derrick.json
 18cdfc5ed84584904e1b8ecb75c7b817e232db4c data/hbm/loot_table/blocks/machine_press.json
 2460e319a473dfff9e1e0bb36e834aeb6a5e4fa0 data/hbm/loot_table/blocks/machine_pumpjack.json

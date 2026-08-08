@@ -2,6 +2,7 @@ package com.hbm.main;
 
 import com.hbm.render.loader.HFRWavefrontObject;
 import com.hbm.render.loader.IModelCustom;
+import net.minecraft.client.Minecraft;
 import net.minecraft.resources.ResourceLocation;
 
 public class ResourceManager {
@@ -56,6 +57,10 @@ public class ResourceManager {
     public static final ResourceLocation FRACKING_TOWER_TEX = NuclearTechMod.withDefaultNamespace("textures/models/machines/fracking_tower.png");
     public static final ResourceLocation REFINERY_TEX = NuclearTechMod.withDefaultNamespace("textures/models/machines/refinery.png");
     public static final ResourceLocation VACUUM_REFINERY_TEX = NuclearTechMod.withDefaultNamespace("textures/models/machines/vacuum_refinery.png");
+    public static final ResourceLocation MIXER_TEX = NuclearTechMod.withDefaultNamespace("textures/models/machines/mixer.png");
+    public static final ResourceLocation MIXER_MODEL = NuclearTechMod.withDefaultNamespace("models/obj/machines/mixer.obj");
+    public static final ResourceLocation FRACTION_TOWER_TEX = NuclearTechMod.withDefaultNamespace("textures/models/machines/fraction_tower.png");
+    public static final ResourceLocation FRACTION_SPACER_TEX = NuclearTechMod.withDefaultNamespace("textures/models/machines/fraction_spacer.png");
     public static final ResourceLocation CATALYTIC_REFORMER_TEX = NuclearTechMod.withDefaultNamespace("textures/models/machines/catalytic_reformer.png");
     public static final ResourceLocation CATALYTIC_CRACKING_TOWER_TEX = NuclearTechMod.withDefaultNamespace("textures/models/machines/catalytic_cracking_tower.png");
 
@@ -219,6 +224,9 @@ public class ResourceManager {
     public static IModelCustom fracking_tower;
     public static IModelCustom refinery;
     public static IModelCustom vacuum_refinery;
+    public static IModelCustom mixer;
+    public static IModelCustom fraction_tower;
+    public static IModelCustom fraction_spacer;
     public static IModelCustom catalytic_reformer;
     public static IModelCustom catalytic_cracking_tower;
 
@@ -329,6 +337,11 @@ public class ResourceManager {
         fracking_tower = new HFRWavefrontObject("models/obj/machines/fracking_tower.obj").asVBO();
         refinery = new HFRWavefrontObject("models/obj/machines/refinery.obj").asVBO();
         vacuum_refinery = new HFRWavefrontObject("models/obj/machines/vacuum_refinery.obj").asVBO();
+        if(Minecraft.getInstance().getResourceManager().getResource(MIXER_MODEL).isPresent()) {
+            mixer = new HFRWavefrontObject(MIXER_MODEL).asVBO();
+        }
+        fraction_tower = new HFRWavefrontObject("models/obj/machines/fraction_tower.obj").asVBO();
+        fraction_spacer = new HFRWavefrontObject("models/obj/machines/fraction_spacer.obj").asVBO();
         catalytic_reformer = new HFRWavefrontObject("models/obj/machines/catalytic_reformer.obj").asVBO();
         catalytic_cracking_tower = new HFRWavefrontObject("models/obj/machines/catalytic_cracking_tower.obj").asVBO();
       

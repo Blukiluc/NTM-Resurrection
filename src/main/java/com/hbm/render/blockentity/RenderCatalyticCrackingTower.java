@@ -36,9 +36,9 @@ public class RenderCatalyticCrackingTower extends BlockEntityRendererNT<MachineC
         Direction facing = be.getBlockState().getValue(DummyableBlock.FACING);
         switch (facing) {
             case NORTH -> RenderContext.mulPose(Axis.YP.rotationDegrees(0F));
-            case EAST  -> RenderContext.mulPose(Axis.YP.rotationDegrees(90F));
+            case WEST  -> RenderContext.mulPose(Axis.YP.rotationDegrees(90F));
             case SOUTH -> RenderContext.mulPose(Axis.YP.rotationDegrees(180F));
-            case WEST  -> RenderContext.mulPose(Axis.YP.rotationDegrees(270F));
+            case EAST  -> RenderContext.mulPose(Axis.YP.rotationDegrees(270F));
         }
 
         bindTexture(ResourceManager.CATALYTIC_CRACKING_TOWER_TEX);

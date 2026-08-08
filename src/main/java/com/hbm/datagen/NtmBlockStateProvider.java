@@ -237,6 +237,9 @@ public class NtmBlockStateProvider extends BlockStateProvider {
         this.particleOnlyBlock(NtmBlocks.MACHINE_FRACKING_TOWER, modLoc("block/block_steel"));
         this.particleOnlyBlock(NtmBlocks.MACHINE_REFINERY, modLoc("block/block_steel"));
         this.particleOnlyBlock(NtmBlocks.MACHINE_VACUUM_REFINERY, modLoc("block/block_steel"));
+        this.particleOnlyBlock(NtmBlocks.MACHINE_MIXER, modLoc("block/block_steel"));
+        this.particleOnlyBlock(NtmBlocks.MACHINE_FRACTION_TOWER, modLoc("block/block_steel"));
+        this.particleOnlyBlock(NtmBlocks.FRACTION_SPACER, modLoc("block/block_steel"));
         this.particleOnlyBlock(NtmBlocks.MACHINE_CATALYTIC_REFORMER, modLoc("block/block_steel"));
         this.particleOnlyBlock(NtmBlocks.MACHINE_CATALYTIC_CRACKING_TOWER, modLoc("block/block_steel"));
 

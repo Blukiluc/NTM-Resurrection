@@ -1125,6 +1125,16 @@ public class NtmLanguageProvider extends LanguageProvider {
         this.add(NtmBlocks.MACHINE_FRACKING_TOWER, "Hydraulic Fracking Tower");
         this.add(NtmBlocks.MACHINE_REFINERY, "Oil Refinery");
         this.add(NtmBlocks.MACHINE_VACUUM_REFINERY, "Vacuum Refinery");
+        this.add(NtmBlocks.MACHINE_MIXER, "Industrial Mixer");
+        this.add("container.machine_mixer", "Industrial Mixer");
+        this.add("desc.gui.upgrade", "Upgrade slots");
+        this.add("desc.gui.upgrade.speed", "Speed upgrades");
+        this.add("desc.gui.upgrade.power", "Power upgrades");
+        this.add("desc.gui.upgrade.overdrive", "Overdrive upgrades");
+        this.add("upgrade.delay", "Delay: %s");
+        this.add("upgrade.consumption", "Consumption: %s");
+        this.add(NtmBlocks.MACHINE_FRACTION_TOWER, "Fractioning Tower");
+        this.add(NtmBlocks.FRACTION_SPACER, "Fractioning Tower Spacer");
         this.add(NtmBlocks.MACHINE_CATALYTIC_REFORMER, "Catalytic Reformer");
         this.add(NtmBlocks.MACHINE_CATALYTIC_CRACKING_TOWER, "Catalytic Cracking Tower");
 
@@ -1390,6 +1400,8 @@ public class NtmLanguageProvider extends LanguageProvider {
         this.add("tile.heater_heatex.desc", "Produces heat from hot fluids.");
         this.add("container.machine_blast_furnace", "Blast Furnace");
         this.add("chat.catalytic_cracking_tower.changed", "Changed type to ");
+        this.add("chat.fraction_tower.bottom_only", "You can only change the type in the bottom segment!");
+        this.add("chat.fraction_tower.changed", "Changed type to %s!");
 
 
         // COMMANDS //

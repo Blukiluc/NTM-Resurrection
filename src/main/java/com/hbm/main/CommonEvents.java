@@ -175,6 +175,7 @@ public class CommonEvents {
         event.register(NtmMenuTypes.MACHINE_OIL.get(), MachineOilScreen::new);
         event.register(NtmMenuTypes.REFINERY.get(), MachineRefineryScreen::new);
         event.register(NtmMenuTypes.VACUUM_REFINERY.get(), MachineVacuumDistillScreen::new);
+        event.register(NtmMenuTypes.MIXER.get(), MachineMixerScreen::new);
         event.register(NtmMenuTypes.CATALYTIC_REFORMER.get(), MachineCatalyticReformerScreen::new);
 
         event.register(NtmMenuTypes.CRATE.get(), CrateScreen::new);

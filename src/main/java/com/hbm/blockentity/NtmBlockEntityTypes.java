@@ -233,6 +233,27 @@ public class NtmBlockEntityTypes {
                             NtmBlocks.MACHINE_VACUUM_REFINERY.get())
                     .build(null));
 
+    public static final Supplier<BlockEntityType<MachineMixerBlockEntity>> MIXER = REGISTER.register(
+            "mixer",
+            () -> BlockEntityType.Builder.of(
+                            MachineMixerBlockEntity::new,
+                            NtmBlocks.MACHINE_MIXER.get())
+                    .build(null));
+
+    public static final Supplier<BlockEntityType<MachineFractioningTowerBlockEntity>> FRACTION_TOWER = REGISTER.register(
+            "fraction_tower",
+            () -> BlockEntityType.Builder.of(
+                            MachineFractioningTowerBlockEntity::new,
+                            NtmBlocks.MACHINE_FRACTION_TOWER.get())
+                    .build(null));
+
+    public static final Supplier<BlockEntityType<FractioningSpacerBlockEntity>> FRACTION_SPACER = REGISTER.register(
+            "fraction_spacer",
+            () -> BlockEntityType.Builder.of(
+                            FractioningSpacerBlockEntity::new,
+                            NtmBlocks.FRACTION_SPACER.get())
+                    .build(null));
+
     public static final Supplier<BlockEntityType<MachineCatalyticReformerBlockEntity>> CATALYTIC_REFORMER = REGISTER.register(
             "catalytic_reformer",
             () -> BlockEntityType.Builder.of(
