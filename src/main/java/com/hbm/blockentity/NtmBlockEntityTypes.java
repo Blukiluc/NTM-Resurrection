@@ -190,6 +190,13 @@ public class NtmBlockEntityTypes {
                             NtmBlocks.MACHINE_WOOD_BURNER.get())
                     .build(null));
 
+    public static final Supplier<BlockEntityType<MachineDieselBlockEntity>> DIESEL = REGISTER.register(
+            "diesel",
+            () -> BlockEntityType.Builder.of(
+                            MachineDieselBlockEntity::new,
+                            NtmBlocks.MACHINE_DIESEL.get())
+                    .build(null));
+
     public static final Supplier<BlockEntityType<MachineCentrifugeBlockEntity>> CENTRIFUGE = REGISTER.register(
             "centrifuge",
             () -> BlockEntityType.Builder.of(

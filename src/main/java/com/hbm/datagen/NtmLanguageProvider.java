@@ -1119,6 +1119,7 @@ public class NtmLanguageProvider extends LanguageProvider {
         this.add(NtmBlocks.MACHINE_CHEMICAL_PLANT, "Chemical Plant");
         this.add(NtmBlocks.MACHINE_WOOD_BURNER, "Wood-Burning Generator");
         this.add(NtmBlocks.MACHINE_WOOD_BURNER, DESC, "Generates 100HE/t when burning items$Collects ashes$Can burn fluids at 50%% efficiency at 40mB/s");
+        this.add(NtmBlocks.MACHINE_DIESEL, "Diesel Generator");
         this.add(NtmBlocks.MACHINE_CENTRIFUGE, "Centrifuge");
         this.add(NtmBlocks.MACHINE_GAS_CENTRIFUGE, "Gas Centrifuge");
         this.add(NtmBlocks.MACHINE_SOLDERING_STATION, "Soldering Station");
@@ -1368,6 +1369,7 @@ public class NtmLanguageProvider extends LanguageProvider {
         this.add("container.machine_assembly_machine", "Assembly Machine");
         this.add("container.machine_chemical_plant", "Chemical Plant");
         this.add("container.machine_wood_burner", "Wood-Burner");
+        this.add("container.machine_diesel", "Diesel Generator");
         this.add("container.machine_shredder", "Shredder");
         this.add("container.machine_press", "Burner Press");
         this.add("container.machine_electric_press", "Electric Press");

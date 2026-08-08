@@ -22,6 +22,8 @@ public class NtmMenuTypes {
 
     public static final DeferredHolder<MenuType<?>, MenuType<MachineWoodBurnerMenu>> WOOD_BURNER = reg("wood_burner", MachineWoodBurnerMenu::new);
 
+    public static final DeferredHolder<MenuType<?>, MenuType<MachineDieselMenu>> DIESEL = reg("diesel", MachineDieselMenu::new);
+
     public static final DeferredHolder<MenuType<?>, MenuType<MachineShredderMenu>> SHREDDER = reg("shredder", MachineShredderMenu::new);
 
     public static final DeferredHolder<MenuType<?>, MenuType<MachinePressMenu>> PRESS = reg("press", MachinePressMenu::new);

@@ -159,6 +159,9 @@ public class NtmSoundDefinitionsProvider extends SoundDefinitionsProvider {
         this.add(NtmSoundEvents.ELECTRIC_MOTOR_LOOP, SoundDefinition.definition()
                 .with(sound(NuclearTechMod.MODID + ":block/motor"))
         );
+        this.add(NtmSoundEvents.ENGINE_LOOP, SoundDefinition.definition()
+                .with(sound(NuclearTechMod.MODID + ":block/engine"))
+        );
         this.add(NtmSoundEvents.ASSEMBLER_STRIKE, SoundDefinition.definition()
                 .with(
                         sound(NuclearTechMod.MODID + ":block/assembler_strike1"),

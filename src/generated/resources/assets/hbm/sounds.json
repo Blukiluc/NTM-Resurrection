@@ -52,6 +52,11 @@
       "hbm:block/debris3"
     ]
   },
+  "block.engine": {
+    "sounds": [
+      "hbm:block/engine"
+    ]
+  },
   "block.fensu_hum": {
     "sounds": [
       "hbm:block/fensu_hum"
