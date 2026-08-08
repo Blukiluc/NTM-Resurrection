@@ -56,6 +56,8 @@ public class NtmMenuTypes {
 
     public static final DeferredHolder<MenuType<?>, MenuType<MachineFluidTankMenu>> FLUID_TANK = reg("fluid_tank", MachineFluidTankMenu::new);
 
+    public static final DeferredHolder<MenuType<?>, MenuType<MachineCrucibleMenu>> CRUCIBLE = reg("crucible", MachineCrucibleMenu::new);
+
     public static final DeferredHolder<MenuType<?>, MenuType<MachineOilMenu>> MACHINE_OIL = reg("machine_oil", MachineOilMenu::new);
     public static final DeferredHolder<MenuType<?>, MenuType<MachineRefineryMenu>> REFINERY = reg("refinery", MachineRefineryMenu::new);
     public static final DeferredHolder<MenuType<?>, MenuType<MachineVacuumDistillMenu>> VACUUM_REFINERY = reg("vacuum_refinery", MachineVacuumDistillMenu::new);

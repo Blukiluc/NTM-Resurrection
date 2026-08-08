@@ -2,13 +2,13 @@ package com.hbm.inventory.material;
 
 import net.minecraft.world.item.Item;
 import net.minecraft.world.item.ItemStack;
-import net.neoforged.neoforge.registries.DeferredItem;
 
 import java.util.HashMap;
 import java.util.HashSet;
 import java.util.Locale;
 import java.util.Map;
 import java.util.Set;
+import java.util.function.Supplier;
 
 /**
  * Encapsulates a material (iron, copper, schrabidium...) used by the auto-gen and crucible systems.
@@ -39,13 +39,13 @@ public class NTMMaterial {
     public Set<MaterialShapes> autogen = new HashSet<>();
     public Set<MatTraits> traits = new HashSet<>();
 
-    /** Populated by MatsItemGen during item registration - maps shape -> the real DeferredItem */
-    public final Map<MaterialShapes, DeferredItem<Item>> generatedItems = new HashMap<>();
+    public final Map<MaterialShapes, Supplier<? extends Item>> generatedItems = new HashMap<>();
     public SmeltingBehavior smeltable = SmeltingBehavior.NOT_SMELTABLE;
 
     public int solidColorLight = 0xFF4A00;
     public int solidColorDark  = 0x802000;
     public int moltenColor     = 0xFF4A00;
+    private String translationKey;
 
     public NTMMaterial smeltsInto;
     public int convIn  = 1;
@@ -73,7 +73,17 @@ public class NTMMaterial {
 
     /** Localization key for this material's display name, e.g. "hbmmat.iron" */
     public String getTranslationKey() {
-        return "hbmmat." + getCanonicalName();
+        return this.translationKey != null ? this.translationKey : "hbmmat." + getCanonicalName();
+    }
+
+    public NTMMaterial setTranslationKey(String translationKey) {
+        this.translationKey = translationKey;
+        return this;
+    }
+
+    public NTMMaterial setItem(MaterialShapes shape, Supplier<? extends Item> item) {
+        this.generatedItems.put(shape, item);
+        return this;
     }
 
     public NTMMaterial setConversion(NTMMaterial into, int unitsIn, int unitsOut) {
@@ -124,8 +134,8 @@ public class NTMMaterial {
 
     /** Returns the auto-generated item for this shape, or null if none was generated */
     public Item getItem(MaterialShapes shape) {
-        DeferredItem<Item> di = this.generatedItems.get(shape);
-        return di != null ? di.get() : null;
+        Supplier<? extends Item> item = this.generatedItems.get(shape);
+        return item != null ? item.get() : null;
     }
 
     /** Creates an ItemStack of the auto-generated item for this shape, or ItemStack.EMPTY if none */

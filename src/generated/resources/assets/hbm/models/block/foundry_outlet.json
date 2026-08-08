@@ -1,0 +1,112 @@
+{
+  "parent": "minecraft:block/block",
+  "ambientocclusion": false,
+  "elements": [
+    {
+      "faces": {
+        "down": {
+          "texture": "#bottom"
+        },
+        "east": {
+          "texture": "#side"
+        },
+        "north": {
+          "texture": "#front"
+        },
+        "south": {
+          "texture": "#side"
+        },
+        "up": {
+          "texture": "#bottom"
+        },
+        "west": {
+          "texture": "#side"
+        }
+      },
+      "from": [
+        5,
+        0,
+        10
+      ],
+      "to": [
+        11,
+        2,
+        16
+      ]
+    },
+    {
+      "faces": {
+        "down": {
+          "texture": "#side"
+        },
+        "east": {
+          "texture": "#inner"
+        },
+        "north": {
+          "texture": "#front"
+        },
+        "south": {
+          "texture": "#inner"
+        },
+        "up": {
+          "texture": "#top"
+        },
+        "west": {
+          "texture": "#side"
+        }
+      },
+      "from": [
+        5,
+        2,
+        10
+      ],
+      "to": [
+        6,
+        8,
+        16
+      ]
+    },
+    {
+      "faces": {
+        "down": {
+          "texture": "#side"
+        },
+        "east": {
+          "texture": "#side"
+        },
+        "north": {
+          "texture": "#front"
+        },
+        "south": {
+          "texture": "#inner"
+        },
+        "up": {
+          "texture": "#top"
+        },
+        "west": {
+          "texture": "#inner"
+        }
+      },
+      "from": [
+        10,
+        2,
+        10
+      ],
+      "to": [
+        11,
+        8,
+        16
+      ]
+    }
+  ],
+  "gui_light": "front",
+  "render_type": "minecraft:cutout",
+  "textures": {
+    "bottom": "hbm:block/foundry_outlet_bottom",
+    "front": "hbm:block/foundry_outlet_front",
+    "inner": "hbm:block/foundry_outlet_inner",
+    "particle": "hbm:block/foundry_outlet_side",
+    "side": "hbm:block/foundry_outlet_side",
+    "top": "hbm:block/foundry_outlet_top"
+  }
+}

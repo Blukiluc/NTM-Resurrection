@@ -1,4 +1,4 @@
-// 1.21.1	2026-06-30T16:57:29.3391667	Recipes
+// 1.21.1	2026-08-08T18:35:42.3928428	Recipes
 1536fcea0365a5460aaf996f68cf35ff80f01395 data/hbm/advancement/recipes/building_blocks/brick_concrete_broken.json
 477971291afdac191fa097592d9dc49fb08dbf95 data/hbm/advancement/recipes/building_blocks/brick_concrete_broken_slab.json
 5708f760161b6762082ec84c47371320fcbe99e0 data/hbm/advancement/recipes/building_blocks/brick_concrete_broken_stairs.json
@@ -12,6 +12,15 @@ db7894bc4b68df2c3fb86c9df7eaa95f96c84835 data/hbm/advancement/recipes/building_b
 7cc4f56b00777539c66db2c311759fa4890783f5 data/hbm/advancement/recipes/building_blocks/brick_concrete_stairs.json
 1e9c1f6b5ced05c5883d8a269513eb3770cfd006 data/hbm/advancement/recipes/misc/egg_balefire.json
 200578db1311e2c241c8d591914584a0acdedb93 data/hbm/advancement/recipes/misc/egg_balefire_shard.json
+8ac2d638106feecf57b160e3ebc1e3aae75bb717 data/hbm/advancement/recipes/misc/foundry_basin.json
+de305b8e412be66dac3f44e4c481d7e29ea1217f data/hbm/advancement/recipes/misc/foundry_channel.json
+c58a383a29af3de05952c4e024c7836ce4a72129 data/hbm/advancement/recipes/misc/foundry_mold.json
+6f9698f5e68215638d3363020cd267cf26a75237 data/hbm/advancement/recipes/misc/foundry_outlet.json
+06ba4317435ede1fc3d6df10003ca756d5b47032 data/hbm/advancement/recipes/misc/foundry_slagtap.json
+0ddcf1224e5ec20f4c5c101ffc188ffae4e0bf13 data/hbm/advancement/recipes/misc/foundry_tank.json
+1c5c9114d0a1e16d1f7524b564f3ad95fd414e2d data/hbm/advancement/recipes/misc/mold_base.json
+b7db6714af051d3f5a7c5ccd1e29aab3293a47fa data/hbm/advancement/recipes/misc/mold_block.json
+11f6b86f61f6041b875a8909dabdd00385b371f9 data/hbm/advancement/recipes/misc/mold_ingot.json
 3ebca8a140b84b6dd37eff22147889d9cc3922e9 data/hbm/recipe/brick_concrete_broken.json
 ddffb66f89657cd06bb0e001b80d9b37ef422b46 data/hbm/recipe/brick_concrete_broken_slab.json
 43ce538f315deb4da272ec75249f2dc7d2866e50 data/hbm/recipe/brick_concrete_broken_stairs.json
@@ -25,3 +34,12 @@ c2ed801621e0cd4c3a6f9ac336b9df75004a4e20 data/hbm/recipe/brick_concrete_slab.jso
 d73e332bfb51342581d87444cf7c051910f261f2 data/hbm/recipe/brick_concrete_stairs.json
 ee79acd19d30e71c74f8df5ab6b749d4faff19f1 data/hbm/recipe/egg_balefire.json
 895b068b57461f4e6ab3e4b81144569176ee55c4 data/hbm/recipe/egg_balefire_shard.json
+951d41cb6927e62462c2762afb1e4b8c460de2df data/hbm/recipe/foundry_basin.json
+a8646984f5aa6ba9512692a1eb42cf85191c1751 data/hbm/recipe/foundry_channel.json
+7f352c49ca2aed5720d25d3d160d388d1f929850 data/hbm/recipe/foundry_mold.json
+5f1e6dc78a63b14b445cc194f7743db2e5a335b0 data/hbm/recipe/foundry_outlet.json
+7416def3d1ef10e4c492debfb004e89eef6ae105 data/hbm/recipe/foundry_slagtap.json
+6bb8834075624729ec5904ea02618a14a36dad2d data/hbm/recipe/foundry_tank.json
+5bbd5b5f58c8fadb660fb77763ecfdaffbbca4cc data/hbm/recipe/mold_base.json
+badffc2de1eb6edc255e3d8be50776cdbe9e1fdd data/hbm/recipe/mold_block.json
+72c30e9e02ac3d7b3786d1d5cfdca397a1539361 data/hbm/recipe/mold_ingot.json

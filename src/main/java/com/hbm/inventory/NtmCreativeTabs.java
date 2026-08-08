@@ -18,7 +18,6 @@ import net.minecraft.world.item.CreativeModeTab;
 import net.minecraft.world.item.Item;
 import net.minecraft.world.item.ItemStack;
 import net.neoforged.bus.api.IEventBus;
-import net.neoforged.neoforge.registries.DeferredItem;
 import net.neoforged.neoforge.registries.DeferredRegister;
 
 import java.util.ArrayList;
@@ -684,6 +683,17 @@ public class NtmCreativeTabs {
                         output.accept(NtmBlocks.HEAT_BOILER);
                         output.accept(NtmBlocks.MACHINE_INDUSTRIAL_BOILER);
 
+                        output.accept(NtmBlocks.MACHINE_CRUCIBLE);
+                        output.accept(NtmBlocks.FOUNDRY_MOLD);
+                        output.accept(NtmBlocks.FOUNDRY_BASIN);
+                        output.accept(NtmBlocks.FOUNDRY_CHANNEL);
+                        output.accept(NtmBlocks.FOUNDRY_TANK);
+                        output.accept(NtmBlocks.FOUNDRY_OUTLET);
+                        output.accept(NtmBlocks.FOUNDRY_SLAGTAP);
+                        output.accept(NtmItems.MOLD_BLANK);
+                        output.accept(NtmItems.MOLD_INGOT);
+                        output.accept(NtmItems.MOLD_BLOCK);
+
                         output.accept(NtmBlocks.MACHINE_OIL_DERRICK);
                         output.accept(NtmBlocks.MACHINE_PUMPJACK);
                         output.accept(NtmBlocks.MACHINE_FRACKING_TOWER);
@@ -946,7 +956,7 @@ public class NtmCreativeTabs {
 
                         for (NTMMaterial mat : Mats.orderedList) {
                             for (MaterialShapes shape : mat.autogen) {
-                                DeferredItem<Item> item = mat.generatedItems.get(shape);
+                                Supplier<? extends Item> item = mat.generatedItems.get(shape);
                                 if (item != null) output.accept(item.get());
                             }
                         }

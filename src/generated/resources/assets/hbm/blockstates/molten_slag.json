@@ -1,0 +1,52 @@
+{
+  "variants": {
+    "layers=1": {
+      "model": "hbm:block/molten_slag_1"
+    },
+    "layers=10": {
+      "model": "hbm:block/molten_slag_10"
+    },
+    "layers=11": {
+      "model": "hbm:block/molten_slag_11"
+    },
+    "layers=12": {
+      "model": "hbm:block/molten_slag_12"
+    },
+    "layers=13": {
+      "model": "hbm:block/molten_slag_13"
+    },
+    "layers=14": {
+      "model": "hbm:block/molten_slag_14"
+    },
+    "layers=15": {
+      "model": "hbm:block/molten_slag_15"
+    },
+    "layers=16": {
+      "model": "hbm:block/molten_slag_16"
+    },
+    "layers=2": {
+      "model": "hbm:block/molten_slag_2"
+    },
+    "layers=3": {
+      "model": "hbm:block/molten_slag_3"
+    },
+    "layers=4": {
+      "model": "hbm:block/molten_slag_4"
+    },
+    "layers=5": {
+      "model": "hbm:block/molten_slag_5"
+    },
+    "layers=6": {
+      "model": "hbm:block/molten_slag_6"
+    },
+    "layers=7": {
+      "model": "hbm:block/molten_slag_7"
+    },
+    "layers=8": {
+      "model": "hbm:block/molten_slag_8"
+    },
+    "layers=9": {
+      "model": "hbm:block/molten_slag_9"
+    }
+  }
+}

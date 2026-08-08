@@ -505,6 +505,9 @@ public class NtmLanguageProvider extends LanguageProvider {
         this.add(NtmItems.PLATE_ARMOR_DNT.get(), "DNT Armor Plating");
 
         this.add(NtmItems.SCRAP, "Scrap");
+        this.add(NtmItems.MOLD_BLANK, "Blank Casting Mold");
+        this.add(NtmItems.MOLD_INGOT, "Ingot Casting Mold");
+        this.add(NtmItems.MOLD_BLOCK, "Block Casting Mold");
 
         this.add(NtmItems.PELLET_RTG, "Plutonium-238 RTG Pellet");
 
@@ -1159,6 +1162,14 @@ public class NtmLanguageProvider extends LanguageProvider {
         this.add(NtmBlocks.CRATE_STEEL, "Steel Crate");
         this.add(NtmBlocks.CRATE_DESH, "Desh Crate");
 
+        this.add(NtmBlocks.MACHINE_CRUCIBLE, "Crucible");
+        this.add(NtmBlocks.FOUNDRY_MOLD, "Casting Mold Basin");
+        this.add(NtmBlocks.FOUNDRY_BASIN, "Casting Basin");
+        this.add(NtmBlocks.FOUNDRY_CHANNEL, "Foundry Channel");
+        this.add(NtmBlocks.FOUNDRY_TANK, "Foundry Tank");
+        this.add(NtmBlocks.FOUNDRY_OUTLET, "Foundry Outlet");
+        this.add(NtmBlocks.FOUNDRY_SLAGTAP, "Foundry Slag Tap");
+
         this.add(NtmBlocks.DECONTAMINATOR, "Player Decontaminator");
 
         this.add(NtmBlocks.PWR_CONTROLLER, "PWR Controller");
@@ -1383,6 +1394,8 @@ public class NtmLanguageProvider extends LanguageProvider {
         this.add("container.machine_gas_centrifuge", "Gas Centrifuge");
         this.add("container.machine_soldering_station", "Soldering Station");
         this.add("container.machine_arc_welder", "Arc Welder");
+        this.add("container.machine_crucible", "Crucible");
+        this.add("container.machine_crucible.empty", "Empty");
         this.add("container.machine_oil_derrick", "Oil Derrick");
         this.add("container.machine_pumpjack", "Pumpjack");
         this.add("container.machine_fracking_tower", "H. F. T.");
@@ -1424,6 +1437,11 @@ public class NtmLanguageProvider extends LanguageProvider {
         this.add("chat.catalytic_cracking_tower.changed", "Changed type to ");
         this.add("chat.fraction_tower.bottom_only", "You can only change the type in the bottom segment!");
         this.add("chat.fraction_tower.changed", "Changed type to %s!");
+        this.add("chat.foundry_outlet.closed", "Foundry outlet closed");
+        this.add("chat.foundry_outlet.open", "Foundry outlet open");
+        this.add("foundry.filter", "Filter: %s");
+        this.add("foundry.inverted", "Redstone inverted");
+        this.add("foundry.invert_filter", "Filter inverted");
 
 
         // COMMANDS //
