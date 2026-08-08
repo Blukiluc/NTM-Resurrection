@@ -170,12 +170,13 @@ public class CommonEvents {
         event.register(NtmMenuTypes.GAS_CENTRIFUGE.get(), MachineGasCentrifugeScreen::new);
         event.register(NtmMenuTypes.SOLDERING_STATION.get(), MachineSolderingStationScreen::new);
         event.register(NtmMenuTypes.ARC_WELDER.get(), MachineArcWelderScreen::new);
+        event.register(NtmMenuTypes.MIXER.get(), MachineMixerScreen::new);
         event.register(NtmMenuTypes.FURNACE_COMBINATION.get(), MachineFurnaceCombinationScreen::new);
         event.register(NtmMenuTypes.MACHINE_BLAST_FURNACE.get(), MachineBlastFurnaceScreen::new);
         event.register(NtmMenuTypes.MACHINE_OIL.get(), MachineOilScreen::new);
         event.register(NtmMenuTypes.REFINERY.get(), MachineRefineryScreen::new);
         event.register(NtmMenuTypes.VACUUM_REFINERY.get(), MachineVacuumDistillScreen::new);
-        event.register(NtmMenuTypes.MIXER.get(), MachineMixerScreen::new);
+        event.register(NtmMenuTypes.COMPRESSOR.get(), MachineCompressorScreen::new);
         event.register(NtmMenuTypes.CATALYTIC_REFORMER.get(), MachineCatalyticReformerScreen::new);
 
         event.register(NtmMenuTypes.CRATE.get(), CrateScreen::new);

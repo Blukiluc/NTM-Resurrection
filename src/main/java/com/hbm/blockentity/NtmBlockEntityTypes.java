@@ -190,6 +190,13 @@ public class NtmBlockEntityTypes {
                             NtmBlocks.MACHINE_SOLDERING_STATION.get())
                     .build(null));
 
+    public static final Supplier<BlockEntityType<MachineMixerBlockEntity>> MIXER = REGISTER.register(
+            "mixer",
+            () -> BlockEntityType.Builder.of(
+                            MachineMixerBlockEntity::new,
+                            NtmBlocks.MACHINE_MIXER.get())
+                    .build(null));
+
     public static final Supplier<BlockEntityType<MachineArcWelderBlockEntity>> ARC_WELDER = REGISTER.register(
             "arc_welder",
             () -> BlockEntityType.Builder.of(
@@ -233,13 +240,6 @@ public class NtmBlockEntityTypes {
                             NtmBlocks.MACHINE_VACUUM_REFINERY.get())
                     .build(null));
 
-    public static final Supplier<BlockEntityType<MachineMixerBlockEntity>> MIXER = REGISTER.register(
-            "mixer",
-            () -> BlockEntityType.Builder.of(
-                            MachineMixerBlockEntity::new,
-                            NtmBlocks.MACHINE_MIXER.get())
-                    .build(null));
-
     public static final Supplier<BlockEntityType<MachineFractioningTowerBlockEntity>> FRACTION_TOWER = REGISTER.register(
             "fraction_tower",
             () -> BlockEntityType.Builder.of(
@@ -267,6 +267,20 @@ public class NtmBlockEntityTypes {
             () -> BlockEntityType.Builder.of(
                             MachineCatalyticCrackingTowerBlockEntity::new,
                             NtmBlocks.MACHINE_CATALYTIC_CRACKING_TOWER.get())
+                    .build(null));
+
+    public static final Supplier<BlockEntityType<MachineCompressorBlockEntity>> COMPRESSOR = REGISTER.register(
+            "compressor",
+            () -> BlockEntityType.Builder.of(
+                            MachineCompressorBlockEntity::new,
+                            NtmBlocks.MACHINE_COMPRESSOR.get())
+                    .build(null));
+
+    public static final Supplier<BlockEntityType<MachineCompressorCompactBlockEntity>> COMPRESSOR_COMPACT = REGISTER.register(
+            "compressor_compact",
+            () -> BlockEntityType.Builder.of(
+                            MachineCompressorCompactBlockEntity::new,
+                            NtmBlocks.MACHINE_COMPRESSOR_COMPACT.get())
                     .build(null));
 
     public static final Supplier<BlockEntityType<ProxyComboBlockEntity>> PROXY_COMBO = REGISTER.register("proxy_combo", () -> BlockEntityType.Builder.of(ProxyComboBlockEntity::new).build(null));

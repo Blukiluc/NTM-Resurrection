@@ -225,6 +225,7 @@ public class NtmBlockStateProvider extends BlockStateProvider {
         this.particleOnlyBlock(NtmBlocks.MACHINE_GAS_CENTRIFUGE, modLoc("block/block_steel"));
         this.particleOnlyBlock(NtmBlocks.MACHINE_SOLDERING_STATION, modLoc("block/block_steel"));
         this.particleOnlyBlock(NtmBlocks.MACHINE_ARC_WELDER, modLoc("block/block_steel"));
+        this.particleOnlyBlock(NtmBlocks.MACHINE_MIXER, modLoc("block/block_steel"));
         this.particleOnlyBlock(NtmBlocks.HEAT_BOILER, modLoc("block/block_steel"));
         this.particleOnlyBlock(NtmBlocks.MACHINE_INDUSTRIAL_BOILER, modLoc("block/block_steel"));
         this.particleOnlyBlock(NtmBlocks.FURNACE_COMBINATION, modLoc("block/block_steel"));
@@ -237,11 +238,12 @@ public class NtmBlockStateProvider extends BlockStateProvider {
         this.particleOnlyBlock(NtmBlocks.MACHINE_FRACKING_TOWER, modLoc("block/block_steel"));
         this.particleOnlyBlock(NtmBlocks.MACHINE_REFINERY, modLoc("block/block_steel"));
         this.particleOnlyBlock(NtmBlocks.MACHINE_VACUUM_REFINERY, modLoc("block/block_steel"));
-        this.particleOnlyBlock(NtmBlocks.MACHINE_MIXER, modLoc("block/block_steel"));
         this.particleOnlyBlock(NtmBlocks.MACHINE_FRACTION_TOWER, modLoc("block/block_steel"));
         this.particleOnlyBlock(NtmBlocks.FRACTION_SPACER, modLoc("block/block_steel"));
         this.particleOnlyBlock(NtmBlocks.MACHINE_CATALYTIC_REFORMER, modLoc("block/block_steel"));
         this.particleOnlyBlock(NtmBlocks.MACHINE_CATALYTIC_CRACKING_TOWER, modLoc("block/block_steel"));
+        this.particleOnlyBlock(NtmBlocks.MACHINE_COMPRESSOR, modLoc("block/block_steel"));
+        this.particleOnlyBlock(NtmBlocks.MACHINE_COMPRESSOR_COMPACT, modLoc("block/block_steel"));
 
         this.cubeTop(NtmBlocks.MACHINE_SATLINKER);
 

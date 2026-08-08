@@ -165,6 +165,7 @@ public class NtmBlockLootTableProvider extends BlockLootSubProvider {
         this.dropSelf(NtmBlocks.MACHINE_GAS_CENTRIFUGE.get());
         this.dropSelf(NtmBlocks.MACHINE_SOLDERING_STATION.get());
         this.dropSelf(NtmBlocks.MACHINE_ARC_WELDER.get());
+        this.dropSelf(NtmBlocks.MACHINE_MIXER.get());
         this.dropSelf(NtmBlocks.HEAT_BOILER.get());
         this.dropSelf(NtmBlocks.MACHINE_INDUSTRIAL_BOILER.get());
         this.dropSelf(NtmBlocks.FURNACE_COMBINATION.get());
@@ -177,11 +178,12 @@ public class NtmBlockLootTableProvider extends BlockLootSubProvider {
         this.dropSelf(NtmBlocks.MACHINE_FRACKING_TOWER.get());
         this.dropSelf(NtmBlocks.MACHINE_REFINERY.get());
         this.dropSelf(NtmBlocks.MACHINE_VACUUM_REFINERY.get());
-        this.dropSelf(NtmBlocks.MACHINE_MIXER.get());
         this.dropSelf(NtmBlocks.MACHINE_FRACTION_TOWER.get());
         this.dropSelf(NtmBlocks.FRACTION_SPACER.get());
         this.dropSelf(NtmBlocks.MACHINE_CATALYTIC_REFORMER.get());
         this.dropSelf(NtmBlocks.MACHINE_CATALYTIC_CRACKING_TOWER.get());
+        this.dropSelf(NtmBlocks.MACHINE_COMPRESSOR.get());
+        this.dropSelf(NtmBlocks.MACHINE_COMPRESSOR_COMPACT.get());
 
         this.dropSelf(NtmBlocks.MACHINE_SATLINKER.get());
 

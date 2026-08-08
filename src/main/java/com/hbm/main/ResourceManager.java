@@ -59,6 +59,8 @@ public class ResourceManager {
     public static final ResourceLocation VACUUM_REFINERY_TEX = NuclearTechMod.withDefaultNamespace("textures/models/machines/vacuum_refinery.png");
     public static final ResourceLocation MIXER_TEX = NuclearTechMod.withDefaultNamespace("textures/models/machines/mixer.png");
     public static final ResourceLocation MIXER_MODEL = NuclearTechMod.withDefaultNamespace("models/obj/machines/mixer.obj");
+    public static final ResourceLocation COMPRESSOR_TEX = NuclearTechMod.withDefaultNamespace("textures/models/machines/compressor.png");
+    public static final ResourceLocation COMPRESSOR_COMPACT_TEX = NuclearTechMod.withDefaultNamespace("textures/models/machines/compressor_compact.png");
     public static final ResourceLocation FRACTION_TOWER_TEX = NuclearTechMod.withDefaultNamespace("textures/models/machines/fraction_tower.png");
     public static final ResourceLocation FRACTION_SPACER_TEX = NuclearTechMod.withDefaultNamespace("textures/models/machines/fraction_spacer.png");
     public static final ResourceLocation CATALYTIC_REFORMER_TEX = NuclearTechMod.withDefaultNamespace("textures/models/machines/catalytic_reformer.png");
@@ -213,6 +215,7 @@ public class ResourceManager {
     public static IModelCustom gas_centrifuge;
     public static IModelCustom soldering_station;
     public static IModelCustom arc_welder;
+    public static IModelCustom mixer;
     public static IModelCustom boiler;
     public static IModelCustom boiler_burst;
     public static IModelCustom industrial_boiler;
@@ -224,11 +227,12 @@ public class ResourceManager {
     public static IModelCustom fracking_tower;
     public static IModelCustom refinery;
     public static IModelCustom vacuum_refinery;
-    public static IModelCustom mixer;
     public static IModelCustom fraction_tower;
     public static IModelCustom fraction_spacer;
     public static IModelCustom catalytic_reformer;
     public static IModelCustom catalytic_cracking_tower;
+    public static IModelCustom compressor;
+    public static IModelCustom compressor_compact;
 
     public static IModelCustom heater_firebox;
     public static IModelCustom heater_oven;
@@ -340,6 +344,8 @@ public class ResourceManager {
         if(Minecraft.getInstance().getResourceManager().getResource(MIXER_MODEL).isPresent()) {
             mixer = new HFRWavefrontObject(MIXER_MODEL).asVBO();
         }
+        compressor = new HFRWavefrontObject("models/obj/machines/compressor.obj").asVBO();
+        compressor_compact = new HFRWavefrontObject("models/obj/machines/compressor_compact.obj").asVBO();
         fraction_tower = new HFRWavefrontObject("models/obj/machines/fraction_tower.obj").asVBO();
         fraction_spacer = new HFRWavefrontObject("models/obj/machines/fraction_spacer.obj").asVBO();
         catalytic_reformer = new HFRWavefrontObject("models/obj/machines/catalytic_reformer.obj").asVBO();

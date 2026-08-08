@@ -688,6 +688,8 @@ public class NtmCreativeTabs {
                         output.accept(NtmBlocks.FRACTION_SPACER);
                         output.accept(NtmBlocks.MACHINE_CATALYTIC_REFORMER);
                         output.accept(NtmBlocks.MACHINE_CATALYTIC_CRACKING_TOWER);
+                        output.accept(NtmBlocks.MACHINE_COMPRESSOR);
+                        output.accept(NtmBlocks.MACHINE_COMPRESSOR_COMPACT);
 
                         output.accept(NtmBlocks.FURNACE_COMBINATION);
                         output.accept(NtmBlocks.MACHINE_BLAST_FURNACE);
