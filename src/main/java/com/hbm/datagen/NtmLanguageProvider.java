@@ -1099,6 +1099,7 @@ public class NtmLanguageProvider extends LanguageProvider {
         this.add(NtmBlocks.GEIGER, "Geiger Counter");
 
         this.add(NtmBlocks.MACHINE_PRESS, "Burner Press");
+        this.add(NtmBlocks.MACHINE_ELECTRIC_PRESS, "Electric Press");
         this.add(NtmBlocks.MACHINE_SHREDDER, "Shredder");
         this.add(NtmBlocks.HEATER_FIREBOX, "Firebox");
         this.add(NtmBlocks.HEATER_OVEN, "Heating Oven");
@@ -1369,6 +1370,7 @@ public class NtmLanguageProvider extends LanguageProvider {
         this.add("container.machine_wood_burner", "Wood-Burner");
         this.add("container.machine_shredder", "Shredder");
         this.add("container.machine_press", "Burner Press");
+        this.add("container.machine_electric_press", "Electric Press");
         this.add("container.machine_centrifuge", "Centrifuge");
         this.add("container.machine_gas_centrifuge", "Gas Centrifuge");
         this.add("container.machine_soldering_station", "Soldering Station");

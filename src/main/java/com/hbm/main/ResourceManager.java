@@ -45,6 +45,7 @@ public class ResourceManager {
     public static final ResourceLocation CHEMICAL_PLANT_TEX = NuclearTechMod.withDefaultNamespace("textures/models/machines/chemical_plant.png");
     public static final ResourceLocation WOOD_BURNER_TEX = NuclearTechMod.withDefaultNamespace("textures/models/machines/wood_burner.png");
     public static final ResourceLocation PRESS_TEX = NuclearTechMod.withDefaultNamespace("textures/models/machines/press.png");
+    public static final ResourceLocation ELECTRIC_PRESS_TEX = NuclearTechMod.withDefaultNamespace("textures/models/machines/electric_press.png");
     public static final ResourceLocation CENTRIFUGE_TEX = NuclearTechMod.withDefaultNamespace("textures/models/machines/centrifuge.png");
     public static final ResourceLocation GAS_CENTRIFUGE_TEX = NuclearTechMod.withDefaultNamespace("textures/models/machines/gas_centrifuge.png");
     public static final ResourceLocation SOLDERING_STATION_TEX = NuclearTechMod.withDefaultNamespace("textures/models/machines/soldering_station.png");
@@ -60,7 +61,6 @@ public class ResourceManager {
     public static final ResourceLocation REFINERY_TEX = NuclearTechMod.withDefaultNamespace("textures/models/machines/refinery.png");
     public static final ResourceLocation VACUUM_REFINERY_TEX = NuclearTechMod.withDefaultNamespace("textures/models/machines/vacuum_refinery.png");
     public static final ResourceLocation MIXER_TEX = NuclearTechMod.withDefaultNamespace("textures/models/machines/mixer.png");
-    public static final ResourceLocation MIXER_MODEL = NuclearTechMod.withDefaultNamespace("models/obj/machines/mixer.obj");
     public static final ResourceLocation COMPRESSOR_TEX = NuclearTechMod.withDefaultNamespace("textures/models/machines/compressor.png");
     public static final ResourceLocation COMPRESSOR_COMPACT_TEX = NuclearTechMod.withDefaultNamespace("textures/models/machines/compressor_compact.png");
     public static final ResourceLocation FRACTION_TOWER_TEX = NuclearTechMod.withDefaultNamespace("textures/models/machines/fraction_tower.png");
@@ -215,6 +215,7 @@ public class ResourceManager {
     public static IModelCustom chemical_plant;
     public static IModelCustom wood_burner;
     public static IModelCustom press;
+    public static IModelCustom electric_press;
     public static IModelCustom centrifuge;
     public static IModelCustom gas_centrifuge;
     public static IModelCustom soldering_station;
@@ -332,10 +333,12 @@ public class ResourceManager {
         chemical_plant = new HFRWavefrontObject("models/obj/machines/chemical_plant.obj").asVBO();
         wood_burner = new HFRWavefrontObject("models/obj/machines/wood_burner.obj").asVBO();
         press = new HFRWavefrontObject("models/obj/machines/press.obj").asVBO();
+        electric_press = new HFRWavefrontObject("models/obj/machines/electric_press.obj").asVBO();
         centrifuge = new HFRWavefrontObject("models/obj/machines/centrifuge.obj").asVBO();
         gas_centrifuge = new HFRWavefrontObject("models/obj/machines/gas_centrifuge.obj").asVBO();
         soldering_station = new HFRWavefrontObject("models/obj/machines/soldering_station.obj").asVBO();
         arc_welder = new HFRWavefrontObject("models/obj/machines/arc_welder.obj").asVBO();
+        mixer = new HFRWavefrontObject("models/obj/machines/mixer.obj").asVBO();
         boiler = new HFRWavefrontObject("models/obj/machines/boiler.obj").asVBO();
         boiler_burst = new HFRWavefrontObject("models/obj/machines/boiler_burst.obj").asVBO();
         industrial_boiler = new HFRWavefrontObject("models/obj/machines/industrial_boiler.obj").asVBO();
@@ -347,9 +350,6 @@ public class ResourceManager {
         fracking_tower = new HFRWavefrontObject("models/obj/machines/fracking_tower.obj").asVBO();
         refinery = new HFRWavefrontObject("models/obj/machines/refinery.obj").asVBO();
         vacuum_refinery = new HFRWavefrontObject("models/obj/machines/vacuum_refinery.obj").asVBO();
-        if(Minecraft.getInstance().getResourceManager().getResource(MIXER_MODEL).isPresent()) {
-            mixer = new HFRWavefrontObject(MIXER_MODEL).asVBO();
-        }
         compressor = new HFRWavefrontObject("models/obj/machines/compressor.obj").asVBO();
         compressor_compact = new HFRWavefrontObject("models/obj/machines/compressor_compact.obj").asVBO();
         fraction_tower = new HFRWavefrontObject("models/obj/machines/fraction_tower.obj").asVBO();

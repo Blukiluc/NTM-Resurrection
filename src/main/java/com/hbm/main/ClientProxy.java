@@ -168,6 +168,7 @@ public class ClientProxy extends ServerProxy {
         BlockEntityRenderers.register(NtmBlockEntityTypes.CHEMICAL_PLANT.get(), new RenderChemicalPlant());
         BlockEntityRenderers.register(NtmBlockEntityTypes.WOOD_BURNER.get(), new RenderWoodBurner());
         BlockEntityRenderers.register(NtmBlockEntityTypes.PRESS.get(), new RenderPress());
+        BlockEntityRenderers.register(NtmBlockEntityTypes.ELECTRIC_PRESS.get(), new RenderElectricPress());
         BlockEntityRenderers.register(NtmBlockEntityTypes.CENTRIFUGE.get(), new RenderCentrifuge());
         BlockEntityRenderers.register(NtmBlockEntityTypes.GAS_CENTRIFUGE.get(), new RenderGasCentrifuge());
         BlockEntityRenderers.register(NtmBlockEntityTypes.SOLDERING_STATION.get(), new RenderSolderingStation());

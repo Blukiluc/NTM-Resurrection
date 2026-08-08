@@ -26,6 +26,8 @@ public class NtmMenuTypes {
 
     public static final DeferredHolder<MenuType<?>, MenuType<MachinePressMenu>> PRESS = reg("press", MachinePressMenu::new);
 
+    public static final DeferredHolder<MenuType<?>, MenuType<MachineElectricPressMenu>> ELECTRIC_PRESS = reg("electric_press", MachineElectricPressMenu::new);
+
     public static final DeferredHolder<MenuType<?>, MenuType<MachineCentrifugeMenu>> CENTRIFUGE = reg("centrifuge", MachineCentrifugeMenu::new);
 
     public static final DeferredHolder<MenuType<?>, MenuType<MachineFurnaceCombinationMenu>> FURNACE_COMBINATION = reg("furnace_combination", MachineFurnaceCombinationMenu::new);

@@ -41,6 +41,11 @@ public abstract class MachineBaseBlockEntity extends LoadedBaseBlockEntity imple
         return this.customName;
     }
 
+    public void setCustomName(Component customName) {
+        this.customName = customName;
+        this.setChanged();
+    }
+
     protected abstract Component getDefaultName();
 
     @Override

@@ -146,6 +146,7 @@ public class NtmBlockLootTableProvider extends BlockLootSubProvider {
         this.dropSelf(NtmBlocks.GEIGER.get());
 
         this.dropSelf(NtmBlocks.MACHINE_PRESS.get());
+        this.dropSelf(NtmBlocks.MACHINE_ELECTRIC_PRESS.get());
         this.dropSelf(NtmBlocks.MACHINE_SHREDDER.get());
 
         this.dropSelf(NtmBlocks.RED_CABLE.get());

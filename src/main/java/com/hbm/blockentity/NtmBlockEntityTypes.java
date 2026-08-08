@@ -127,6 +127,13 @@ public class NtmBlockEntityTypes {
                             NtmBlocks.MACHINE_PRESS.get())
                     .build(null));
 
+    public static final Supplier<BlockEntityType<MachineElectricPressBlockEntity>> ELECTRIC_PRESS = REGISTER.register(
+            "electric_press",
+            () -> BlockEntityType.Builder.of(
+                            MachineElectricPressBlockEntity::new,
+                            NtmBlocks.MACHINE_ELECTRIC_PRESS.get())
+                    .build(null));
+
     public static final Supplier<BlockEntityType<MachineShredderBlockEntity>> SHREDDER = REGISTER.register(
             "shredder",
             () -> BlockEntityType.Builder.of(
