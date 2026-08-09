@@ -1,0 +1,9 @@
+{
+  "type": "paintable_cable",
+  "parent": "minecraft:block/block",
+  "loader": "hbm:ntm_geometry_loader",
+  "textures": {
+    "overlay": "hbm:block/red_cable_overlay",
+    "texture": "hbm:block/red_cable_base"
+  }
+}

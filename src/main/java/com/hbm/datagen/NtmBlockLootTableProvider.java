@@ -151,6 +151,14 @@ public class NtmBlockLootTableProvider extends BlockLootSubProvider {
         this.dropSelf(NtmBlocks.MACHINE_SHREDDER.get());
 
         this.dropSelf(NtmBlocks.RED_CABLE.get());
+        this.dropSelf(NtmBlocks.RED_CABLE_CLASSIC.get());
+        this.dropSelf(NtmBlocks.RED_CABLE_PAINTABLE.get());
+        this.dropSelf(NtmBlocks.RED_CABLE_BOX_HUGE.get());
+        this.dropSelf(NtmBlocks.RED_CABLE_BOX_LARGE.get());
+        this.dropSelf(NtmBlocks.RED_CABLE_BOX_MEDIUM.get());
+        this.dropSelf(NtmBlocks.RED_CABLE_BOX_SMALL.get());
+        this.dropSelf(NtmBlocks.RED_CABLE_BOX_TINY.get());
+        this.dropSelf(NtmBlocks.RED_WIRE_COATED.get());
         this.dropSelf(NtmBlocks.RED_CONNECTOR.get());
         this.dropSelf(NtmBlocks.RED_CONNECTOR_SUPER.get());
         this.dropSelf(NtmBlocks.RED_PYLON.get());
@@ -163,6 +171,21 @@ public class NtmBlockLootTableProvider extends BlockLootSubProvider {
         this.dropSelf(NtmBlocks.SUBSTATION.get());
 
         this.dropSelf(NtmBlocks.FLUID_DUCT_NEO.get());
+        this.dropSelf(NtmBlocks.FLUID_DUCT_BOX_IRON_HUGE.get());
+        this.dropSelf(NtmBlocks.FLUID_DUCT_BOX_COPPER_HUGE.get());
+        this.dropSelf(NtmBlocks.FLUID_DUCT_BOX_ALUMINIUM_HUGE.get());
+        this.dropSelf(NtmBlocks.FLUID_DUCT_BOX_IRON_LARGE.get());
+        this.dropSelf(NtmBlocks.FLUID_DUCT_BOX_COPPER_LARGE.get());
+        this.dropSelf(NtmBlocks.FLUID_DUCT_BOX_ALUMINIUM_LARGE.get());
+        this.dropSelf(NtmBlocks.FLUID_DUCT_BOX_IRON_MEDIUM.get());
+        this.dropSelf(NtmBlocks.FLUID_DUCT_BOX_COPPER_MEDIUM.get());
+        this.dropSelf(NtmBlocks.FLUID_DUCT_BOX_ALUMINIUM_MEDIUM.get());
+        this.dropSelf(NtmBlocks.FLUID_DUCT_BOX_IRON_SMALL.get());
+        this.dropSelf(NtmBlocks.FLUID_DUCT_BOX_COPPER_SMALL.get());
+        this.dropSelf(NtmBlocks.FLUID_DUCT_BOX_ALUMINIUM_SMALL.get());
+        this.dropSelf(NtmBlocks.FLUID_DUCT_BOX_IRON_TINY.get());
+        this.dropSelf(NtmBlocks.FLUID_DUCT_BOX_COPPER_TINY.get());
+        this.dropSelf(NtmBlocks.FLUID_DUCT_BOX_ALUMINIUM_TINY.get());
 
         this.dropSelf(NtmBlocks.HEATER_FIREBOX.get());
         this.dropSelf(NtmBlocks.HEATER_OVEN.get());

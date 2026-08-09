@@ -1114,6 +1114,14 @@ public class NtmLanguageProvider extends LanguageProvider {
 
 
         this.add(NtmBlocks.RED_CABLE, "Red Copper Cable");
+        this.add(NtmBlocks.RED_CABLE_CLASSIC, "Red Copper Cable (Classic)");
+        this.add(NtmBlocks.RED_CABLE_PAINTABLE, "Paintable Red Copper Cable");
+        this.add(NtmBlocks.RED_CABLE_BOX_HUGE, "Red Copper Boxcable (Huge)");
+        this.add(NtmBlocks.RED_CABLE_BOX_LARGE, "Red Copper Boxcable (Large)");
+        this.add(NtmBlocks.RED_CABLE_BOX_MEDIUM, "Red Copper Boxcable (Medium)");
+        this.add(NtmBlocks.RED_CABLE_BOX_SMALL, "Red Copper Boxcable (Small)");
+        this.add(NtmBlocks.RED_CABLE_BOX_TINY, "Red Copper Boxcable (Tiny)");
+        this.add(NtmBlocks.RED_WIRE_COATED, "Coated Red Copper Cable");
         this.add(NtmBlocks.RED_CONNECTOR, "Electricity Connector");
         this.add(NtmBlocks.RED_CONNECTOR_SUPER, "Heavy Duty Electricity Connector");
         this.add(NtmBlocks.RED_PYLON, "Wooden Electricity Pylon");
@@ -1126,6 +1134,21 @@ public class NtmLanguageProvider extends LanguageProvider {
         this.add(NtmBlocks.SUBSTATION, "Substation");
 
         this.add(NtmBlocks.FLUID_DUCT_NEO, "Universal Fluid Duct");
+        this.add(NtmBlocks.FLUID_DUCT_BOX_IRON_HUGE, "Iron Fluid Boxduct (Huge)");
+        this.add(NtmBlocks.FLUID_DUCT_BOX_COPPER_HUGE, "Copper Fluid Boxduct (Huge)");
+        this.add(NtmBlocks.FLUID_DUCT_BOX_ALUMINIUM_HUGE, "Aluminium Fluid Boxduct (Huge)");
+        this.add(NtmBlocks.FLUID_DUCT_BOX_IRON_LARGE, "Iron Fluid Boxduct (Large)");
+        this.add(NtmBlocks.FLUID_DUCT_BOX_COPPER_LARGE, "Copper Fluid Boxduct (Large)");
+        this.add(NtmBlocks.FLUID_DUCT_BOX_ALUMINIUM_LARGE, "Aluminium Fluid Boxduct (Large)");
+        this.add(NtmBlocks.FLUID_DUCT_BOX_IRON_MEDIUM, "Iron Fluid Boxduct (Medium)");
+        this.add(NtmBlocks.FLUID_DUCT_BOX_COPPER_MEDIUM, "Copper Fluid Boxduct (Medium)");
+        this.add(NtmBlocks.FLUID_DUCT_BOX_ALUMINIUM_MEDIUM, "Aluminium Fluid Boxduct (Medium)");
+        this.add(NtmBlocks.FLUID_DUCT_BOX_IRON_SMALL, "Iron Fluid Boxduct (Small)");
+        this.add(NtmBlocks.FLUID_DUCT_BOX_COPPER_SMALL, "Copper Fluid Boxduct (Small)");
+        this.add(NtmBlocks.FLUID_DUCT_BOX_ALUMINIUM_SMALL, "Aluminium Fluid Boxduct (Small)");
+        this.add(NtmBlocks.FLUID_DUCT_BOX_IRON_TINY, "Iron Fluid Boxduct (Tiny)");
+        this.add(NtmBlocks.FLUID_DUCT_BOX_COPPER_TINY, "Copper Fluid Boxduct (Tiny)");
+        this.add(NtmBlocks.FLUID_DUCT_BOX_ALUMINIUM_TINY, "Aluminium Fluid Boxduct (Tiny)");
 
         this.add(NtmBlocks.MACHINE_BATTERY_SOCKET, "Battery Socket");
         this.add(NtmBlocks.MACHINE_BATTERY_REDD, "FEnSU");
@@ -1469,6 +1492,7 @@ public class NtmLanguageProvider extends LanguageProvider {
         this.add("tile.heater_oilburner.desc", "Burns fluids to produce heat.$Can be configured with a screwdriver.$Can be configured with a hand drill.");
         this.add("block.hbm.heater_heatex.desc", "Produces heat from hot fluids.");
         this.add("tile.heater_heatex.desc", "Produces heat from hot fluids.");
+        this.add("block.hbm.red_cable_paintable.desc", "Right-click with a solid block to set a paint$Paint can be cleared with a screwdriver$Port texture can be disabled with a defuser$Paints can be copied with the copy tool");
         this.add(NtmBlocks.MACHINE_INDUSTRIAL_TURBINE, DESC, "Efficiency: 100%");
         this.add(NtmBlocks.MACHINE_CHUNGUS, DESC, "Efficiency: 85%");
         this.add("container.machine_blast_furnace", "Blast Furnace");

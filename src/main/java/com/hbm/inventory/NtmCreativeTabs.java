@@ -665,6 +665,14 @@ public class NtmCreativeTabs {
                         output.accept(NtmBlocks.GEIGER);
 
                         output.accept(NtmBlocks.RED_CABLE);
+                        output.accept(NtmBlocks.RED_CABLE_CLASSIC);
+                        output.accept(NtmBlocks.RED_CABLE_PAINTABLE);
+                        output.accept(NtmBlocks.RED_CABLE_BOX_HUGE);
+                        output.accept(NtmBlocks.RED_CABLE_BOX_LARGE);
+                        output.accept(NtmBlocks.RED_CABLE_BOX_MEDIUM);
+                        output.accept(NtmBlocks.RED_CABLE_BOX_SMALL);
+                        output.accept(NtmBlocks.RED_CABLE_BOX_TINY);
+                        output.accept(NtmBlocks.RED_WIRE_COATED);
                         output.accept(NtmBlocks.RED_CONNECTOR);
                         output.accept(NtmBlocks.RED_CONNECTOR_SUPER);
                         output.accept(NtmBlocks.RED_PYLON);
@@ -677,6 +685,21 @@ public class NtmCreativeTabs {
                         output.accept(NtmBlocks.SUBSTATION);
 
                         addMetaItems(output, NtmBlocks.FLUID_DUCT_NEO.asItem());
+                        output.accept(NtmBlocks.FLUID_DUCT_BOX_IRON_HUGE);
+                        output.accept(NtmBlocks.FLUID_DUCT_BOX_COPPER_HUGE);
+                        output.accept(NtmBlocks.FLUID_DUCT_BOX_ALUMINIUM_HUGE);
+                        output.accept(NtmBlocks.FLUID_DUCT_BOX_IRON_LARGE);
+                        output.accept(NtmBlocks.FLUID_DUCT_BOX_COPPER_LARGE);
+                        output.accept(NtmBlocks.FLUID_DUCT_BOX_ALUMINIUM_LARGE);
+                        output.accept(NtmBlocks.FLUID_DUCT_BOX_IRON_MEDIUM);
+                        output.accept(NtmBlocks.FLUID_DUCT_BOX_COPPER_MEDIUM);
+                        output.accept(NtmBlocks.FLUID_DUCT_BOX_ALUMINIUM_MEDIUM);
+                        output.accept(NtmBlocks.FLUID_DUCT_BOX_IRON_SMALL);
+                        output.accept(NtmBlocks.FLUID_DUCT_BOX_COPPER_SMALL);
+                        output.accept(NtmBlocks.FLUID_DUCT_BOX_ALUMINIUM_SMALL);
+                        output.accept(NtmBlocks.FLUID_DUCT_BOX_IRON_TINY);
+                        output.accept(NtmBlocks.FLUID_DUCT_BOX_COPPER_TINY);
+                        output.accept(NtmBlocks.FLUID_DUCT_BOX_ALUMINIUM_TINY);
 
                         output.accept(NtmBlocks.MACHINE_BATTERY_SOCKET);
                         output.accept(NtmBlocks.MACHINE_BATTERY_REDD);

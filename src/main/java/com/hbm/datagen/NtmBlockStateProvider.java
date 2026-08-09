@@ -211,7 +211,7 @@ public class NtmBlockStateProvider extends BlockStateProvider {
         this.particleOnlyBlock(NtmBlocks.MACHINE_ELECTRIC_PRESS, modLoc("block/block_steel"));
         this.registerShredder();
 
-        this.registerCable();
+        this.registerCables();
 
         this.particleOnlyBlock(NtmBlocks.RED_CONNECTOR, modLoc("block/block_steel"));
         this.particleOnlyBlock(NtmBlocks.RED_CONNECTOR_SUPER, modLoc("block/block_steel"));
@@ -224,7 +224,7 @@ public class NtmBlockStateProvider extends BlockStateProvider {
         this.particleOnlyBlock(NtmBlocks.RED_PYLON_STEEL, modLoc("block/block_steel"));
         this.particleOnlyBlock(NtmBlocks.SUBSTATION, modLoc("block/block_steel"));
 
-        this.registerFluidDuct();
+        this.registerFluidDucts();
         this.particleOnlyBlock(NtmBlocks.HEATER_FIREBOX, modLoc("block/block_steel"));
         this.particleOnlyBlock(NtmBlocks.HEATER_OVEN, modLoc("block/block_steel"));
         this.particleOnlyBlock(NtmBlocks.HEATER_FLUID_BURNER, modLoc("block/block_steel"));
@@ -373,11 +373,30 @@ public class NtmBlockStateProvider extends BlockStateProvider {
         );
     }
 
-    private void registerCable() {
+    private void registerCables() {
         Block block = NtmBlocks.RED_CABLE.get();
 
         this.simpleBlock(block, this.models().getBuilder(this.key(block).getPath()).customLoader(CableBlockLoaderBuilder::new).texture("texture", modLoc("block/cable_neo")).end());
         this.entityBlockItem(block, false);
+
+        this.registerBoxDuctModel(NtmBlocks.RED_CABLE_CLASSIC.get(), "red_cable_classic", "red_cable_classic", "red_cable_classic", 5, 5);
+
+        Block paintable = NtmBlocks.RED_CABLE_PAINTABLE.get();
+        ModelFile paintableModel = this.models().withExistingParent(this.name(paintable), mcLoc("block/block"))
+                .customLoader(PaintableCableLoaderBuilder::new)
+                .texture("texture", modLoc("block/red_cable_base"))
+                .texture("overlay", modLoc("block/red_cable_overlay"))
+                .end();
+        this.simpleBlock(paintable, paintableModel);
+        this.simpleBlockItem(paintable, paintableModel);
+
+        this.registerCableBox(NtmBlocks.RED_CABLE_BOX_HUGE.get(), 0, 12);
+        this.registerCableBox(NtmBlocks.RED_CABLE_BOX_LARGE.get(), 1, 10);
+        this.registerCableBox(NtmBlocks.RED_CABLE_BOX_MEDIUM.get(), 2, 8);
+        this.registerCableBox(NtmBlocks.RED_CABLE_BOX_SMALL.get(), 3, 6);
+        this.registerCableBox(NtmBlocks.RED_CABLE_BOX_TINY.get(), 4, 4);
+
+        this.simpleCubeAllBlock(NtmBlocks.RED_WIRE_COATED);
     }
 
     private void registerDetCord() {
@@ -387,7 +406,7 @@ public class NtmBlockStateProvider extends BlockStateProvider {
         this.entityBlockItem(block, false);
     }
 
-    private void registerFluidDuct() {
+    private void registerFluidDucts() {
         Block block = NtmBlocks.FLUID_DUCT_NEO.get();
 
         this.getVariantBuilder(block).forAllStatesExcept(state -> {
@@ -406,6 +425,48 @@ public class NtmBlockStateProvider extends BlockStateProvider {
         }, FluidDuctConnectingBlock.NORTH, FluidDuctConnectingBlock.SOUTH, FluidDuctConnectingBlock.EAST, FluidDuctConnectingBlock.WEST, FluidDuctConnectingBlock.UP, FluidDuctConnectingBlock.DOWN);
 
         this.entityBlockItem(block, false);
+
+        this.registerFluidDuctBox(NtmBlocks.FLUID_DUCT_BOX_IRON_HUGE.get(), "silver", 0, 12, 14);
+        this.registerFluidDuctBox(NtmBlocks.FLUID_DUCT_BOX_COPPER_HUGE.get(), "copper", 0, 12, 14);
+        this.registerFluidDuctBox(NtmBlocks.FLUID_DUCT_BOX_ALUMINIUM_HUGE.get(), "white", 0, 12, 14);
+        this.registerFluidDuctBox(NtmBlocks.FLUID_DUCT_BOX_IRON_LARGE.get(), "silver", 1, 10, 12);
+        this.registerFluidDuctBox(NtmBlocks.FLUID_DUCT_BOX_COPPER_LARGE.get(), "copper", 1, 10, 12);
+        this.registerFluidDuctBox(NtmBlocks.FLUID_DUCT_BOX_ALUMINIUM_LARGE.get(), "white", 1, 10, 12);
+        this.registerFluidDuctBox(NtmBlocks.FLUID_DUCT_BOX_IRON_MEDIUM.get(), "silver", 2, 8, 10);
+        this.registerFluidDuctBox(NtmBlocks.FLUID_DUCT_BOX_COPPER_MEDIUM.get(), "copper", 2, 8, 10);
+        this.registerFluidDuctBox(NtmBlocks.FLUID_DUCT_BOX_ALUMINIUM_MEDIUM.get(), "white", 2, 8, 10);
+        this.registerFluidDuctBox(NtmBlocks.FLUID_DUCT_BOX_IRON_SMALL.get(), "silver", 3, 6, 8);
+        this.registerFluidDuctBox(NtmBlocks.FLUID_DUCT_BOX_COPPER_SMALL.get(), "copper", 3, 6, 8);
+        this.registerFluidDuctBox(NtmBlocks.FLUID_DUCT_BOX_ALUMINIUM_SMALL.get(), "white", 3, 6, 8);
+        this.registerFluidDuctBox(NtmBlocks.FLUID_DUCT_BOX_IRON_TINY.get(), "silver", 4, 4, 6);
+        this.registerFluidDuctBox(NtmBlocks.FLUID_DUCT_BOX_COPPER_TINY.get(), "copper", 4, 4, 6);
+        this.registerFluidDuctBox(NtmBlocks.FLUID_DUCT_BOX_ALUMINIUM_TINY.get(), "white", 4, 4, 6);
+    }
+
+    private void registerCableBox(Block block, int sizeIndex, int diameter) {
+        this.registerBoxDuctModel(block, "boxduct_cable_straight", "boxduct_cable_end_" + sizeIndex, "boxduct_cable_junction", diameter, diameter);
+    }
+
+    private void registerFluidDuctBox(Block block, String material, int sizeIndex, int diameter, int junctionDiameter) {
+        this.registerBoxDuctModel(block, "boxduct_" + material + "_straight", "boxduct_" + material + "_end", "boxduct_" + material + "_junction_" + sizeIndex, diameter, junctionDiameter);
+    }
+
+    private void registerBoxDuctModel(Block block, String straightTexture, String endTexture, String junctionTexture, int diameter, int junctionDiameter) {
+        String curvePrefix = straightTexture.substring(0, straightTexture.length() - "straight".length());
+        boolean singleTexture = straightTexture.equals(endTexture) && straightTexture.equals(junctionTexture);
+        BoxDuctBlockLoaderBuilder loader = this.models().withExistingParent(this.name(block), mcLoc("block/block"))
+                .customLoader(BoxDuctBlockLoaderBuilder::new)
+                .dimensions(diameter / 16.0F, junctionDiameter / 16.0F);
+        loader.texture("straight", modLoc("block/" + straightTexture));
+        loader.texture("end", modLoc("block/" + endTexture));
+        loader.texture("curve_tl", modLoc("block/" + (singleTexture ? straightTexture : curvePrefix + "curve_tl")));
+        loader.texture("curve_tr", modLoc("block/" + (singleTexture ? straightTexture : curvePrefix + "curve_tr")));
+        loader.texture("curve_bl", modLoc("block/" + (singleTexture ? straightTexture : curvePrefix + "curve_bl")));
+        loader.texture("curve_br", modLoc("block/" + (singleTexture ? straightTexture : curvePrefix + "curve_br")));
+        loader.texture("junction", modLoc("block/" + junctionTexture));
+        ModelFile model = loader.end();
+        this.simpleBlock(block, model);
+        this.simpleBlockItem(block, model);
     }
 
     private void registerBarbedWire() {
@@ -579,6 +640,36 @@ public class NtmBlockStateProvider extends BlockStateProvider {
             super(parent, helper);
         }
         @Override public BakedModelType getType() { return BakedModelType.CABLE; }
+    }
+    protected static class BoxDuctBlockLoaderBuilder extends BlockModelBuilderBase {
+        private float diameter;
+        private float junctionDiameter;
+
+        public BoxDuctBlockLoaderBuilder(BlockModelBuilder parent, ExistingFileHelper helper) {
+            super(parent, helper);
+        }
+
+        public BoxDuctBlockLoaderBuilder dimensions(float diameter, float junctionDiameter) {
+            this.diameter = diameter;
+            this.junctionDiameter = junctionDiameter;
+            return this;
+        }
+
+        @Override
+        public JsonObject toJson(JsonObject json) {
+            super.toJson(json);
+            json.addProperty("diameter", this.diameter);
+            json.addProperty("junction_diameter", this.junctionDiameter);
+            return json;
+        }
+
+        @Override public BakedModelType getType() { return BakedModelType.BOX_DUCT; }
+    }
+    protected static class PaintableCableLoaderBuilder extends BlockModelBuilderBase {
+        public PaintableCableLoaderBuilder(BlockModelBuilder parent, ExistingFileHelper helper) {
+            super(parent, helper);
+        }
+        @Override public BakedModelType getType() { return BakedModelType.PAINTABLE_CABLE; }
     }
     protected static class DetCordBlockLoaderBuilder extends BlockModelBuilderBase {
         public DetCordBlockLoaderBuilder(BlockModelBuilder parent, ExistingFileHelper helper) {

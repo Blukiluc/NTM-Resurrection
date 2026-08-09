@@ -412,7 +412,20 @@ public class NtmBlockEntityTypes {
     public static final Supplier<BlockEntityType<ProxyComboBlockEntity>> PROXY_COMBO = REGISTER.register("proxy_combo", () -> BlockEntityType.Builder.of(ProxyComboBlockEntity::new).build(null));
 
     public static final Supplier<BlockEntityType<BobbleBlockEntity>> BOBBLEHEAD = REGISTER.register("bobblehead", () -> BlockEntityType.Builder.of(BobbleBlockEntity::new, NtmBlocks.BOBBLEHEAD.get()).build(null));
-    public static final Supplier<BlockEntityType<CableBaseBlockEntity>> NETWORK_CABLE = REGISTER.register("network_cable", () -> BlockEntityType.Builder.of(CableBaseBlockEntity::new, NtmBlocks.RED_CABLE.get()).build(null));
+    public static final Supplier<BlockEntityType<CableBaseBlockEntity>> NETWORK_CABLE = REGISTER.register(
+            "network_cable",
+            () -> BlockEntityType.Builder.of(
+                            CableBaseBlockEntity::new,
+                            NtmBlocks.RED_CABLE.get(),
+                            NtmBlocks.RED_CABLE_CLASSIC.get(),
+                            NtmBlocks.RED_CABLE_PAINTABLE.get(),
+                            NtmBlocks.RED_CABLE_BOX_HUGE.get(),
+                            NtmBlocks.RED_CABLE_BOX_LARGE.get(),
+                            NtmBlocks.RED_CABLE_BOX_MEDIUM.get(),
+                            NtmBlocks.RED_CABLE_BOX_SMALL.get(),
+                            NtmBlocks.RED_CABLE_BOX_TINY.get(),
+                            NtmBlocks.RED_WIRE_COATED.get())
+                    .build(null));
     public static final Supplier<BlockEntityType<PylonConnectorBlockEntity>> PYLON_CONNECTOR = REGISTER.register(
             "pylon_connector",
             () -> BlockEntityType.Builder.of(
@@ -433,7 +446,27 @@ public class NtmBlockEntityTypes {
                             NtmBlocks.RED_PYLON_STEEL.get(),
                             NtmBlocks.SUBSTATION.get())
                     .build(null));
-    public static final Supplier<BlockEntityType<PipeBaseBlockEntity>> FLUID_DUCT = REGISTER.register("fluid_duct", () -> BlockEntityType.Builder.of(PipeBaseBlockEntity::new, NtmBlocks.FLUID_DUCT_NEO.get()).build(null));
+    public static final Supplier<BlockEntityType<PipeBaseBlockEntity>> FLUID_DUCT = REGISTER.register(
+            "fluid_duct",
+            () -> BlockEntityType.Builder.of(
+                            PipeBaseBlockEntity::new,
+                            NtmBlocks.FLUID_DUCT_NEO.get(),
+                            NtmBlocks.FLUID_DUCT_BOX_IRON_HUGE.get(),
+                            NtmBlocks.FLUID_DUCT_BOX_COPPER_HUGE.get(),
+                            NtmBlocks.FLUID_DUCT_BOX_ALUMINIUM_HUGE.get(),
+                            NtmBlocks.FLUID_DUCT_BOX_IRON_LARGE.get(),
+                            NtmBlocks.FLUID_DUCT_BOX_COPPER_LARGE.get(),
+                            NtmBlocks.FLUID_DUCT_BOX_ALUMINIUM_LARGE.get(),
+                            NtmBlocks.FLUID_DUCT_BOX_IRON_MEDIUM.get(),
+                            NtmBlocks.FLUID_DUCT_BOX_COPPER_MEDIUM.get(),
+                            NtmBlocks.FLUID_DUCT_BOX_ALUMINIUM_MEDIUM.get(),
+                            NtmBlocks.FLUID_DUCT_BOX_IRON_SMALL.get(),
+                            NtmBlocks.FLUID_DUCT_BOX_COPPER_SMALL.get(),
+                            NtmBlocks.FLUID_DUCT_BOX_ALUMINIUM_SMALL.get(),
+                            NtmBlocks.FLUID_DUCT_BOX_IRON_TINY.get(),
+                            NtmBlocks.FLUID_DUCT_BOX_COPPER_TINY.get(),
+                            NtmBlocks.FLUID_DUCT_BOX_ALUMINIUM_TINY.get())
+                    .build(null));
 
     public static final Supplier<BlockEntityType<DecontaminatorBlockEntity>> DECONTAMINATOR = REGISTER.register(
             "decontaminator",

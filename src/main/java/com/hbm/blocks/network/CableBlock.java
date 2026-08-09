@@ -32,8 +32,15 @@ public class CableBlock extends Block implements EntityBlock {
     public static final BooleanProperty UP =    BlockStateProperties.UP;
     public static final BooleanProperty DOWN =  BlockStateProperties.DOWN;
 
+    private final double diameter;
+
     public CableBlock(Properties properties) {
+        this(properties, 5.0D);
+    }
+
+    protected CableBlock(Properties properties, double diameter) {
         super(properties);
+        this.diameter = diameter;
         this.registerDefaultState(this.stateDefinition.any()
                 .setValue(NORTH, Boolean.FALSE)
                 .setValue(SOUTH, Boolean.FALSE)
@@ -117,19 +124,16 @@ public class CableBlock extends Block implements EntityBlock {
         return this.getBlockBounds(posX, negX, posY, negY, posZ, negZ);
     }
 
-    private VoxelShape getBlockBounds(boolean posX, boolean negX, boolean posY, boolean negY, boolean posZ, boolean negZ) {
-
-        double pixel = 0.0625D;
-        double min = pixel * 5.5D;
-        double max = pixel * 10.5D;
-
-        double minX = negX ? 0D : min;
-        double maxX = posX ? 1D : max;
-        double minY = negY ? 0D : min;
-        double maxY = posY ? 1D : max;
-        double minZ = negZ ? 0D : min;
-        double maxZ = posZ ? 1D : max;
-
-        return Shapes.box(minX, minY, minZ, maxX, maxY, maxZ);
+    protected VoxelShape getBlockBounds(boolean posX, boolean negX, boolean posY, boolean negY, boolean posZ, boolean negZ) {
+        double min = (16.0D - this.diameter) / 32.0D;
+        double max = 1.0D - min;
+        return Shapes.box(
+                negX ? 0.0D : min,
+                negY ? 0.0D : min,
+                negZ ? 0.0D : min,
+                posX ? 1.0D : max,
+                posY ? 1.0D : max,
+                posZ ? 1.0D : max
+        );
     }
 }
