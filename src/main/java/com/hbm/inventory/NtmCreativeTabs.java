@@ -312,6 +312,9 @@ public class NtmCreativeTabs {
                         output.accept(NtmItems.POWDER_ASBESTOS.get());
                         output.accept(NtmItems.POWDER_MAGIC.get());
                         output.accept(NtmItems.POWDER_SAWDUST.get());
+                        output.accept(NtmItems.GEAR_LARGE.get());
+                        output.accept(NtmItems.GEAR_LARGE_STEEL.get());
+                        output.accept(NtmItems.SAWBLADE.get());
                         output.accept(NtmItems.POWDER_FLUX.get());
                         output.accept(NtmItems.POWDER_FERTILIZER.get());
                         output.accept(NtmItems.POWDER_BALEFIRE.get());
@@ -662,6 +665,16 @@ public class NtmCreativeTabs {
                         output.accept(NtmBlocks.GEIGER);
 
                         output.accept(NtmBlocks.RED_CABLE);
+                        output.accept(NtmBlocks.RED_CONNECTOR);
+                        output.accept(NtmBlocks.RED_CONNECTOR_SUPER);
+                        output.accept(NtmBlocks.RED_PYLON);
+                        output.accept(NtmBlocks.RED_PYLON_MEDIUM_WOOD);
+                        output.accept(NtmBlocks.RED_PYLON_MEDIUM_WOOD_TRANSFORMER);
+                        output.accept(NtmBlocks.RED_PYLON_MEDIUM_STEEL);
+                        output.accept(NtmBlocks.RED_PYLON_MEDIUM_STEEL_TRANSFORMER);
+                        output.accept(NtmBlocks.RED_PYLON_LARGE);
+                        output.accept(NtmBlocks.RED_PYLON_STEEL);
+                        output.accept(NtmBlocks.SUBSTATION);
 
                         addMetaItems(output, NtmBlocks.FLUID_DUCT_NEO.asItem());
 
@@ -672,6 +685,15 @@ public class NtmCreativeTabs {
                         output.accept(NtmBlocks.MACHINE_CRYSTALLIZER);
                         output.accept(NtmBlocks.MACHINE_WOOD_BURNER);
                         output.accept(NtmBlocks.MACHINE_DIESEL);
+                        output.accept(NtmBlocks.MACHINE_STIRLING);
+                        output.accept(NtmBlocks.MACHINE_STIRLING_STEEL);
+                        output.accept(NtmBlocks.MACHINE_STIRLING_CREATIVE);
+                        output.accept(NtmBlocks.MACHINE_SAWMILL);
+                        output.accept(NtmBlocks.PUMP_STEAM);
+                        output.accept(NtmBlocks.PUMP_ELECTRIC);
+                        output.accept(NtmBlocks.MACHINE_CONDENSER);
+                        output.accept(NtmBlocks.MACHINE_CONDENSER_POWERED);
+                        output.accept(NtmBlocks.MACHINE_STEAM_ENGINE);
                         output.accept(NtmBlocks.MACHINE_PRESS);
                         output.accept(NtmBlocks.MACHINE_ELECTRIC_PRESS);
                         output.accept(NtmBlocks.MACHINE_CENTRIFUGE);
@@ -926,6 +948,7 @@ public class NtmCreativeTabs {
                         output.accept(NtmItems.DIGAMMA_DIAGNOSTIC);
 
                         output.accept(NtmItems.BALEFIRE_AND_STEEL);
+                        output.accept(NtmItems.WIRING_RED_COPPER);
 
                         addMetaItems(output, NtmItems.DRINK.get());
                         output.accept(NtmItems.BOTTLE_OPENER);

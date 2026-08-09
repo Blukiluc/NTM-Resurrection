@@ -169,6 +169,11 @@ public class ClientProxy extends ServerProxy {
         BlockEntityRenderers.register(NtmBlockEntityTypes.CRYSTALLIZER.get(), new RenderCrystallizer());
         BlockEntityRenderers.register(NtmBlockEntityTypes.WOOD_BURNER.get(), new RenderWoodBurner());
         BlockEntityRenderers.register(NtmBlockEntityTypes.DIESEL.get(), new RenderDieselGen());
+        BlockEntityRenderers.register(NtmBlockEntityTypes.STIRLING.get(), new RenderStirling());
+        BlockEntityRenderers.register(NtmBlockEntityTypes.SAWMILL.get(), new RenderSawmill());
+        BlockEntityRenderers.register(NtmBlockEntityTypes.GROUNDWATER_PUMP.get(), new RenderGroundwaterPump());
+        BlockEntityRenderers.register(NtmBlockEntityTypes.CONDENSER_POWERED.get(), new RenderPoweredCondenser());
+        BlockEntityRenderers.register(NtmBlockEntityTypes.STEAM_ENGINE.get(), new RenderSteamEngine());
         BlockEntityRenderers.register(NtmBlockEntityTypes.PRESS.get(), new RenderPress());
         BlockEntityRenderers.register(NtmBlockEntityTypes.ELECTRIC_PRESS.get(), new RenderElectricPress());
         BlockEntityRenderers.register(NtmBlockEntityTypes.CENTRIFUGE.get(), new RenderCentrifuge());
@@ -203,6 +208,8 @@ public class ClientProxy extends ServerProxy {
         BlockEntityRenderers.register(NtmBlockEntityTypes.GEIGER_COUNTER.get(), new RenderGeigerBlock());
         BlockEntityRenderers.register(NtmBlockEntityTypes.BATTERY_SOCKET.get(), new RenderBatterySocket());
         BlockEntityRenderers.register(NtmBlockEntityTypes.BATTERY_REDD.get(), new RenderBatteryREDD());
+        BlockEntityRenderers.register(NtmBlockEntityTypes.PYLON_CONNECTOR.get(), new RenderElectricityConnector());
+        BlockEntityRenderers.register(NtmBlockEntityTypes.PYLON.get(), new RenderElectricityPylon());
         //missile blocks
         BlockEntityRenderers.register(NtmBlockEntityTypes.LAUNCH_PAD.get(), new RenderLaunchPad());
         BlockEntityRenderers.register(NtmBlockEntityTypes.SOYUZ_LAUNCHER.get(), new RenderSoyuzLauncher());

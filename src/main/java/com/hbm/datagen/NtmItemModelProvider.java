@@ -323,6 +323,9 @@ public class NtmItemModelProvider extends ItemModelProvider {
         this.basicItem(NtmItems.POWDER_ASBESTOS.get());
         this.basicItem(NtmItems.POWDER_MAGIC.get());
         this.basicItem(NtmItems.POWDER_SAWDUST.get());
+        this.basicItem(NtmItems.GEAR_LARGE.get());
+        this.basicItem(NtmItems.GEAR_LARGE_STEEL.get());
+        this.basicItem(NtmItems.SAWBLADE.get());
         this.basicItem(NtmItems.POWDER_FLUX.get());
         this.basicItem(NtmItems.POWDER_FERTILIZER.get());
         this.basicItem(NtmItems.POWDER_BALEFIRE.get());
@@ -641,6 +644,7 @@ public class NtmItemModelProvider extends ItemModelProvider {
         this.basicItem(NtmItems.SATELLITE_INTERFACE.get());
 
         this.basicItem(NtmItems.BALEFIRE_AND_STEEL.get());
+        this.basicItem(NtmItems.WIRING_RED_COPPER.get());
 
         // DRINK uses ICustomItemModelRegister
         this.handheldItem(NtmItems.BOTTLE_OPENER.get());

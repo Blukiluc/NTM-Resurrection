@@ -47,6 +47,14 @@ public class ResourceManager {
     public static final ResourceLocation CRYSTALLIZER_TEX = NuclearTechMod.withDefaultNamespace("textures/models/machines/acidizer.png");
     public static final ResourceLocation WOOD_BURNER_TEX = NuclearTechMod.withDefaultNamespace("textures/models/machines/wood_burner.png");
     public static final ResourceLocation DIESEL_GENERATOR_TEX = NuclearTechMod.withDefaultNamespace("textures/models/machines/dieselgen.png");
+    public static final ResourceLocation STIRLING_TEX = NuclearTechMod.withDefaultNamespace("textures/models/machines/stirling.png");
+    public static final ResourceLocation STIRLING_STEEL_TEX = NuclearTechMod.withDefaultNamespace("textures/models/machines/stirling_steel.png");
+    public static final ResourceLocation STIRLING_CREATIVE_TEX = NuclearTechMod.withDefaultNamespace("textures/models/machines/stirling_creative.png");
+    public static final ResourceLocation SAWMILL_TEX = NuclearTechMod.withDefaultNamespace("textures/models/machines/sawmill.png");
+    public static final ResourceLocation PUMP_STEAM_TEX = NuclearTechMod.withDefaultNamespace("textures/models/machines/pump_steam.png");
+    public static final ResourceLocation PUMP_ELECTRIC_TEX = NuclearTechMod.withDefaultNamespace("textures/models/machines/pump_electric.png");
+    public static final ResourceLocation CONDENSER_TEX = NuclearTechMod.withDefaultNamespace("textures/models/machines/condenser.png");
+    public static final ResourceLocation STEAM_ENGINE_TEX = NuclearTechMod.withDefaultNamespace("textures/models/machines/steam_engine.png");
     public static final ResourceLocation PRESS_TEX = NuclearTechMod.withDefaultNamespace("textures/models/machines/press.png");
     public static final ResourceLocation ELECTRIC_PRESS_TEX = NuclearTechMod.withDefaultNamespace("textures/models/machines/electric_press.png");
     public static final ResourceLocation CENTRIFUGE_TEX = NuclearTechMod.withDefaultNamespace("textures/models/machines/centrifuge.png");
@@ -64,6 +72,15 @@ public class ResourceManager {
     public static final ResourceLocation TOWER_LARGE_TEX = NuclearTechMod.withDefaultNamespace("textures/models/machines/tower_large.png");
     public static final ResourceLocation FURNACE_COMBINATION_TEX = NuclearTechMod.withDefaultNamespace("textures/models/machines/combination_oven.png");
     public static final ResourceLocation BLAST_FURNACE_TEX = NuclearTechMod.withDefaultNamespace("textures/models/machines/blast_furnace.png");
+
+    public static final ResourceLocation CONNECTOR_TEX = NuclearTechMod.withDefaultNamespace("textures/models/network/connector.png");
+    public static final ResourceLocation CONNECTOR_SUPER_TEX = NuclearTechMod.withDefaultNamespace("textures/models/network/connector_super.png");
+    public static final ResourceLocation PYLON_TEX = NuclearTechMod.withDefaultNamespace("textures/models/network/pylon.png");
+    public static final ResourceLocation PYLON_STEEL_TEX = NuclearTechMod.withDefaultNamespace("textures/models/network/pylon_steel.png");
+    public static final ResourceLocation PYLON_MEDIUM_TEX = NuclearTechMod.withDefaultNamespace("textures/models/network/pylon_medium.png");
+    public static final ResourceLocation PYLON_MEDIUM_STEEL_TEX = NuclearTechMod.withDefaultNamespace("textures/models/network/pylon_medium_steel.png");
+    public static final ResourceLocation PYLON_LARGE_TEX = NuclearTechMod.withDefaultNamespace("textures/models/network/pylon_large.png");
+    public static final ResourceLocation SUBSTATION_TEX = NuclearTechMod.withDefaultNamespace("textures/models/network/substation.png");
 
     public static final ResourceLocation OIL_DERRICK_TEX = NuclearTechMod.withDefaultNamespace("textures/models/machines/oil_derrick.png");
     public static final ResourceLocation PUMPJACK_TEX = NuclearTechMod.withDefaultNamespace("textures/models/machines/pumpjack.png");
@@ -226,6 +243,11 @@ public class ResourceManager {
     public static IModelCustom crystallizer;
     public static IModelCustom wood_burner;
     public static IModelCustom dieselGenerator;
+    public static IModelCustom stirling;
+    public static IModelCustom sawmill;
+    public static IModelCustom pump;
+    public static IModelCustom condenser;
+    public static IModelCustom steam_engine;
     public static IModelCustom press;
     public static IModelCustom electric_press;
     public static IModelCustom centrifuge;
@@ -244,6 +266,13 @@ public class ResourceManager {
     public static IModelCustom tower_large;
     public static IModelCustom furnace_combination;
     public static IModelCustom blast_furnace;
+
+    public static IModelCustom connector;
+    public static IModelCustom connector_super;
+    public static IModelCustom pylon;
+    public static IModelCustom pylon_medium;
+    public static IModelCustom pylon_large;
+    public static IModelCustom substation;
 
     public static IModelCustom oil_derrick;
     public static IModelCustom pumpjack;
@@ -353,6 +382,11 @@ public class ResourceManager {
         crystallizer = new HFRWavefrontObject("models/obj/machines/acidizer.obj").asVBO();
         wood_burner = new HFRWavefrontObject("models/obj/machines/wood_burner.obj").asVBO();
         dieselGenerator = new HFRWavefrontObject("models/obj/machines/dieselgen.obj").asVBO();
+        stirling = new HFRWavefrontObject("models/obj/machines/stirling.obj").asVBO();
+        sawmill = new HFRWavefrontObject("models/obj/machines/sawmill.obj").asVBO();
+        pump = new HFRWavefrontObject("models/obj/machines/pump.obj").asVBO();
+        condenser = new HFRWavefrontObject("models/obj/machines/condenser.obj").asVBO();
+        steam_engine = new HFRWavefrontObject("models/obj/machines/steam_engine.obj").asVBO();
         press = new HFRWavefrontObject("models/obj/machines/press.obj").asVBO();
         electric_press = new HFRWavefrontObject("models/obj/machines/electric_press.obj").asVBO();
         centrifuge = new HFRWavefrontObject("models/obj/machines/centrifuge.obj").asVBO();
@@ -371,6 +405,13 @@ public class ResourceManager {
         tower_large = new HFRWavefrontObject("models/obj/machines/tower_large.obj").asVBO();
         furnace_combination = new HFRWavefrontObject("models/obj/machines/combination_oven.obj").asVBO();
         blast_furnace = new HFRWavefrontObject("models/obj/machines/blast_furnace.obj").asVBO();
+
+        connector = new HFRWavefrontObject("models/obj/network/connector.obj").asVBO();
+        connector_super = new HFRWavefrontObject("models/obj/network/connector_super.obj").asVBO();
+        pylon = new HFRWavefrontObject("models/obj/network/pylon.obj").asVBO();
+        pylon_medium = new HFRWavefrontObject("models/obj/network/pylon_medium.obj").asVBO();
+        pylon_large = new HFRWavefrontObject("models/obj/network/pylon_large.obj").asVBO();
+        substation = new HFRWavefrontObject("models/obj/network/substation.obj").asVBO();
 
         oil_derrick = new HFRWavefrontObject("models/obj/machines/oil_derrick.obj").asVBO();
         pumpjack = new HFRWavefrontObject("models/obj/machines/pumpjack.obj").asVBO();

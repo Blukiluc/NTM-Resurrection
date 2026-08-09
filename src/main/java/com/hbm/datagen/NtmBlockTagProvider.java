@@ -133,6 +133,22 @@ public class NtmBlockTagProvider extends BlockTagsProvider {
                         NtmBlocks.MACHINE_TOWER_LARGE.get(),
                         NtmBlocks.MACHINE_BATTERY_REDD.get(),
                         NtmBlocks.MACHINE_BATTERY_SOCKET.get(),
+                        NtmBlocks.RED_CONNECTOR.get(),
+                        NtmBlocks.RED_CONNECTOR_SUPER.get(),
+                        NtmBlocks.RED_PYLON_MEDIUM_STEEL.get(),
+                        NtmBlocks.RED_PYLON_MEDIUM_STEEL_TRANSFORMER.get(),
+                        NtmBlocks.RED_PYLON_LARGE.get(),
+                        NtmBlocks.RED_PYLON_STEEL.get(),
+                        NtmBlocks.SUBSTATION.get(),
+                        NtmBlocks.MACHINE_STIRLING.get(),
+                        NtmBlocks.MACHINE_STIRLING_STEEL.get(),
+                        NtmBlocks.MACHINE_STIRLING_CREATIVE.get(),
+                        NtmBlocks.MACHINE_SAWMILL.get(),
+                        NtmBlocks.PUMP_STEAM.get(),
+                        NtmBlocks.PUMP_ELECTRIC.get(),
+                        NtmBlocks.MACHINE_CONDENSER.get(),
+                        NtmBlocks.MACHINE_CONDENSER_POWERED.get(),
+                        NtmBlocks.MACHINE_STEAM_ENGINE.get(),
                         NtmBlocks.LAUNCH_PAD.get(),
                         NtmBlocks.SOYUZ_LAUNCHER.get(),
                         NtmBlocks.MACHINE_SATLINKER.get()
@@ -143,7 +159,10 @@ public class NtmBlockTagProvider extends BlockTagsProvider {
                         NtmBlocks.WASTE_LOG.get(),
                         NtmBlocks.WASTE_PLANKS.get(),
                         NtmBlocks.FROZEN_LOG.get(),
-                        NtmBlocks.FROZEN_PLANKS.get()
+                        NtmBlocks.FROZEN_PLANKS.get(),
+                        NtmBlocks.RED_PYLON.get(),
+                        NtmBlocks.RED_PYLON_MEDIUM_WOOD.get(),
+                        NtmBlocks.RED_PYLON_MEDIUM_WOOD_TRANSFORMER.get()
                 );
 
         this.tag(BlockTags.MINEABLE_WITH_SHOVEL)

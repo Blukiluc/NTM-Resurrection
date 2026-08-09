@@ -312,6 +312,9 @@ public class NtmItems {
     public static final DeferredItem<Item> POWDER_ASBESTOS = ITEMS.register("powder_asbestos", () -> new Item(new Item.Properties()));
     public static final DeferredItem<Item> POWDER_MAGIC = ITEMS.register("powder_magic", () -> new Item(new Item.Properties()));
     public static final DeferredItem<Item> POWDER_SAWDUST = ITEMS.register("powder_sawdust", () -> new Item(new Item.Properties()));
+    public static final DeferredItem<Item> GEAR_LARGE = ITEMS.register("gear_large", () -> new Item(new Item.Properties().stacksTo(1)));
+    public static final DeferredItem<Item> GEAR_LARGE_STEEL = ITEMS.register("gear_large_steel", () -> new Item(new Item.Properties().stacksTo(1)));
+    public static final DeferredItem<Item> SAWBLADE = ITEMS.register("sawblade", () -> new Item(new Item.Properties().stacksTo(1)));
     public static final DeferredItem<Item> POWDER_FLUX = ITEMS.register("powder_flux", () -> new Item(new Item.Properties()));
     public static final DeferredItem<Item> POWDER_FERTILIZER = ITEMS.register("powder_fertilizer", () -> new Item(new Item.Properties()));
     public static final DeferredItem<Item> POWDER_BALEFIRE = ITEMS.register("powder_balefire", () -> new Item(new Item.Properties()));
@@ -666,6 +669,7 @@ public class NtmItems {
 
     // Tools
     public static final DeferredItem<Item> BALEFIRE_AND_STEEL = ITEMS.register("balefire_and_steel", () -> new BalefireAndSteelItem(new Item.Properties().stacksTo(1).durability(256)));
+    public static final DeferredItem<Item> WIRING_RED_COPPER = ITEMS.register("wiring_red_copper", () -> new CableDrumItem(new Item.Properties().stacksTo(1)));
 
     // Energy Drinks
     public static final DeferredItem<Item> DRINK = ITEMS.register("drink", () -> new DrinkItem(new Item.Properties()));

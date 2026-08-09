@@ -1,9 +1,9 @@
-// 1.21.1	2026-08-09T01:14:09.7424054	Tags for minecraft:block mod id hbm
+// 1.21.1	2026-08-09T02:22:59.1864715	Tags for minecraft:block mod id hbm
 b322d04019fbe91dc2254f197ab5c570a408a930 data/hbm/tags/block/actually_stone.json
 56c90b03d015c731cda937a5cb494816c5e3888c data/hbm/tags/block/ground.json
 d9de2bbb96b59fc4a9f8feb0386197296b2e4d34 data/hbm/tags/block/plants.json
-f3608b919eed02bdbd3bba89ea61cd737e0f6ca0 data/minecraft/tags/block/mineable/axe.json
+4442f809dec2195f54f3a28c8466049e551b3f01 data/minecraft/tags/block/mineable/axe.json
 188a05f5999468c08e1cb0112d70aec61feda03c data/minecraft/tags/block/mineable/hoe.json
-601cf2596400478f8b9493839c84614b75d36ee6 data/minecraft/tags/block/mineable/pickaxe.json
+5f879348cb4532255abe48e0c5c213616826be90 data/minecraft/tags/block/mineable/pickaxe.json
 fbc6f922a94d2d2d714e11a9db905eaac4f21fe6 data/minecraft/tags/block/mineable/shovel.json
 cea975ced1b69d0b7700e89acf9c045ac64743dc data/minecraft/tags/block/strider_warm_blocks.json

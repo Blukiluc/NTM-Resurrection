@@ -151,6 +151,16 @@ public class NtmBlockLootTableProvider extends BlockLootSubProvider {
         this.dropSelf(NtmBlocks.MACHINE_SHREDDER.get());
 
         this.dropSelf(NtmBlocks.RED_CABLE.get());
+        this.dropSelf(NtmBlocks.RED_CONNECTOR.get());
+        this.dropSelf(NtmBlocks.RED_CONNECTOR_SUPER.get());
+        this.dropSelf(NtmBlocks.RED_PYLON.get());
+        this.dropSelf(NtmBlocks.RED_PYLON_MEDIUM_WOOD.get());
+        this.dropSelf(NtmBlocks.RED_PYLON_MEDIUM_WOOD_TRANSFORMER.get());
+        this.dropSelf(NtmBlocks.RED_PYLON_MEDIUM_STEEL.get());
+        this.dropSelf(NtmBlocks.RED_PYLON_MEDIUM_STEEL_TRANSFORMER.get());
+        this.dropSelf(NtmBlocks.RED_PYLON_LARGE.get());
+        this.dropSelf(NtmBlocks.RED_PYLON_STEEL.get());
+        this.dropSelf(NtmBlocks.SUBSTATION.get());
 
         this.dropSelf(NtmBlocks.FLUID_DUCT_NEO.get());
 
@@ -166,6 +176,15 @@ public class NtmBlockLootTableProvider extends BlockLootSubProvider {
         this.dropSelf(NtmBlocks.MACHINE_CRYSTALLIZER.get());
         this.dropSelf(NtmBlocks.MACHINE_WOOD_BURNER.get());
         this.dropSelf(NtmBlocks.MACHINE_DIESEL.get());
+        this.dropSelf(NtmBlocks.MACHINE_STIRLING.get());
+        this.dropSelf(NtmBlocks.MACHINE_STIRLING_STEEL.get());
+        this.dropSelf(NtmBlocks.MACHINE_STIRLING_CREATIVE.get());
+        this.dropSelf(NtmBlocks.MACHINE_SAWMILL.get());
+        this.dropSelf(NtmBlocks.PUMP_STEAM.get());
+        this.dropSelf(NtmBlocks.PUMP_ELECTRIC.get());
+        this.dropSelf(NtmBlocks.MACHINE_CONDENSER.get());
+        this.dropSelf(NtmBlocks.MACHINE_CONDENSER_POWERED.get());
+        this.dropSelf(NtmBlocks.MACHINE_STEAM_ENGINE.get());
         this.dropSelf(NtmBlocks.MACHINE_CENTRIFUGE.get());
         this.dropSelf(NtmBlocks.MACHINE_GAS_CENTRIFUGE.get());
         this.dropSelf(NtmBlocks.MACHINE_SOLDERING_STATION.get());

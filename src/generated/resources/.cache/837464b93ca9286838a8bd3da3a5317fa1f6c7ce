@@ -1,4 +1,4 @@
-// 1.21.1	2026-08-08T16:46:11.7248312	Item Models: hbm
+// 1.21.1	2026-08-09T02:22:59.178021	Item Models: hbm
 c4e09d2d0fd2bef45dc51c8da0c70bab4652e4b1 assets/hbm/models/item/acetylene_torch.json
 6c4e747554da913978325893b69ca977467a483c assets/hbm/models/item/ammo_secret.json
 99443ea6db20add27ff0bd97f72d22bbf1493cd1 assets/hbm/models/item/ammo_secret_0.json
@@ -362,6 +362,8 @@ d6497a0a5e43d20d64a2e55050eab89ad7153c8b assets/hbm/models/item/fragment_neodymi
 d918b0a9467f3cdff706842b056aab411fc9af78 assets/hbm/models/item/frozen_log.json
 5ad528a6dcd9019a093e5e92f114d8e15084c1a6 assets/hbm/models/item/gadget_core.json
 b980a960c44be9a12a42365a8c003a9a1bbdc366 assets/hbm/models/item/gadget_wireing.json
+e1e8a0cbeac607b8e2f000b7dbd2cdeb6cf07219 assets/hbm/models/item/gear_large.json
+a3a6a202f12fdbda0ae485aeaf84dfaf746ff9e0 assets/hbm/models/item/gear_large_steel.json
 82f65799b13016f6749a5764a551fc650429b92a assets/hbm/models/item/geiger_counter.json
 ba52c64533766c28e692dc718e798658959e7550 assets/hbm/models/item/gem_alexandrite.json
 9720f3f4fc139ffae642b0315f9e361a62d90b17 assets/hbm/models/item/gem_rad.json
@@ -810,6 +812,7 @@ d7271e4faecd37f2f4292aa2bd0502efc1b54635 assets/hbm/models/item/rod_quad_9.json
 1b794eb7489ce437435b7fc117a332010096e58c assets/hbm/models/item/satellite_interface.json
 2764632ea9b1361aa2615273659c7c18ea36d8ce assets/hbm/models/item/satellite_laser.json
 148ede98074ee0173e1e003f14bc76f6290af6c4 assets/hbm/models/item/satellite_radar.json
+e70be8bff8f99d7368e4c86524b7be3c968872eb assets/hbm/models/item/sawblade.json
 e3a1aaabafd9820e70c898f0a45568f17ac7cc93 assets/hbm/models/item/scrap.json
 6856235de6d3c910d1b38c42cd4afa8860abde2f assets/hbm/models/item/screwdriver.json
 6ce5acfda34e6c9b3c7153b20fdaf667615532b5 assets/hbm/models/item/screwdriver_desh.json
@@ -880,3 +883,4 @@ bb8129c1efbe8949b6d4b621384ce18f0a8d4e07 assets/hbm/models/item/waste_log.json
 d9d920fb73ec2a70c78d23141da57148da121dea assets/hbm/models/item/wax_paraffin.json
 80a929b9ea8d89d1eaf9c004e531f50347beff1b assets/hbm/models/item/wax_petroleum.json
 41dba728ec0e8e23c618ba2722ce91a477dcadd7 assets/hbm/models/item/wire_tungtungsten.json
+11d7ca6cdba38503c34e4a238bf1161c7ddc74d2 assets/hbm/models/item/wiring_red_copper.json

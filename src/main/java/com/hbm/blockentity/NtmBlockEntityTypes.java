@@ -14,8 +14,8 @@ import com.hbm.blockentity.machine.storage.*;
 import com.hbm.blockentity.machine.tower.*;
 import com.hbm.blockentity.machine.turbine.MachineIndustrialTurbineBlockEntity;
 import com.hbm.blockentity.machine.turbine.MachineLeviathanTurbineBlockEntity;
-import com.hbm.blockentity.network.CableBaseBlockEntity;
-import com.hbm.blockentity.network.PipeBaseBlockEntity;
+import com.hbm.blockentity.machine.turbine.MachineSteamEngineBlockEntity;
+import com.hbm.blockentity.network.*;
 import com.hbm.blocks.NtmBlocks;
 import com.hbm.blocks.bomb.VolcanoBlock.VolcanoCoreBlockEntity;
 import com.hbm.blocks.generic.BobbleBlock.BobbleBlockEntity;
@@ -250,6 +250,51 @@ public class NtmBlockEntityTypes {
                             NtmBlocks.MACHINE_DIESEL.get())
                     .build(null));
 
+    public static final Supplier<BlockEntityType<MachineStirlingBlockEntity>> STIRLING = REGISTER.register(
+            "stirling",
+            () -> BlockEntityType.Builder.of(
+                            MachineStirlingBlockEntity::new,
+                            NtmBlocks.MACHINE_STIRLING.get(),
+                            NtmBlocks.MACHINE_STIRLING_STEEL.get(),
+                            NtmBlocks.MACHINE_STIRLING_CREATIVE.get())
+                    .build(null));
+
+    public static final Supplier<BlockEntityType<MachineSawmillBlockEntity>> SAWMILL = REGISTER.register(
+            "sawmill",
+            () -> BlockEntityType.Builder.of(
+                            MachineSawmillBlockEntity::new,
+                            NtmBlocks.MACHINE_SAWMILL.get())
+                    .build(null));
+
+    public static final Supplier<BlockEntityType<MachineGroundwaterPumpBlockEntity>> GROUNDWATER_PUMP = REGISTER.register(
+            "groundwater_pump",
+            () -> BlockEntityType.Builder.of(
+                            MachineGroundwaterPumpBlockEntity::new,
+                            NtmBlocks.PUMP_STEAM.get(),
+                            NtmBlocks.PUMP_ELECTRIC.get())
+                    .build(null));
+
+    public static final Supplier<BlockEntityType<MachineCondenserBlockEntity>> CONDENSER = REGISTER.register(
+            "condenser",
+            () -> BlockEntityType.Builder.of(
+                            MachineCondenserBlockEntity::new,
+                            NtmBlocks.MACHINE_CONDENSER.get())
+                    .build(null));
+
+    public static final Supplier<BlockEntityType<MachineCondenserPoweredBlockEntity>> CONDENSER_POWERED = REGISTER.register(
+            "condenser_powered",
+            () -> BlockEntityType.Builder.of(
+                            MachineCondenserPoweredBlockEntity::new,
+                            NtmBlocks.MACHINE_CONDENSER_POWERED.get())
+                    .build(null));
+
+    public static final Supplier<BlockEntityType<MachineSteamEngineBlockEntity>> STEAM_ENGINE = REGISTER.register(
+            "steam_engine",
+            () -> BlockEntityType.Builder.of(
+                            MachineSteamEngineBlockEntity::new,
+                            NtmBlocks.MACHINE_STEAM_ENGINE.get())
+                    .build(null));
+
     public static final Supplier<BlockEntityType<MachineCentrifugeBlockEntity>> CENTRIFUGE = REGISTER.register(
             "centrifuge",
             () -> BlockEntityType.Builder.of(
@@ -368,6 +413,26 @@ public class NtmBlockEntityTypes {
 
     public static final Supplier<BlockEntityType<BobbleBlockEntity>> BOBBLEHEAD = REGISTER.register("bobblehead", () -> BlockEntityType.Builder.of(BobbleBlockEntity::new, NtmBlocks.BOBBLEHEAD.get()).build(null));
     public static final Supplier<BlockEntityType<CableBaseBlockEntity>> NETWORK_CABLE = REGISTER.register("network_cable", () -> BlockEntityType.Builder.of(CableBaseBlockEntity::new, NtmBlocks.RED_CABLE.get()).build(null));
+    public static final Supplier<BlockEntityType<PylonConnectorBlockEntity>> PYLON_CONNECTOR = REGISTER.register(
+            "pylon_connector",
+            () -> BlockEntityType.Builder.of(
+                            PylonConnectorBlockEntity::new,
+                            NtmBlocks.RED_CONNECTOR.get(),
+                            NtmBlocks.RED_CONNECTOR_SUPER.get())
+                    .build(null));
+    public static final Supplier<BlockEntityType<PylonBlockEntity>> PYLON = REGISTER.register(
+            "pylon",
+            () -> BlockEntityType.Builder.of(
+                            PylonBlockEntity::new,
+                            NtmBlocks.RED_PYLON.get(),
+                            NtmBlocks.RED_PYLON_MEDIUM_WOOD.get(),
+                            NtmBlocks.RED_PYLON_MEDIUM_WOOD_TRANSFORMER.get(),
+                            NtmBlocks.RED_PYLON_MEDIUM_STEEL.get(),
+                            NtmBlocks.RED_PYLON_MEDIUM_STEEL_TRANSFORMER.get(),
+                            NtmBlocks.RED_PYLON_LARGE.get(),
+                            NtmBlocks.RED_PYLON_STEEL.get(),
+                            NtmBlocks.SUBSTATION.get())
+                    .build(null));
     public static final Supplier<BlockEntityType<PipeBaseBlockEntity>> FLUID_DUCT = REGISTER.register("fluid_duct", () -> BlockEntityType.Builder.of(PipeBaseBlockEntity::new, NtmBlocks.FLUID_DUCT_NEO.get()).build(null));
 
     public static final Supplier<BlockEntityType<DecontaminatorBlockEntity>> DECONTAMINATOR = REGISTER.register(

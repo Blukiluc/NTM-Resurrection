@@ -213,6 +213,17 @@ public class NtmBlockStateProvider extends BlockStateProvider {
 
         this.registerCable();
 
+        this.particleOnlyBlock(NtmBlocks.RED_CONNECTOR, modLoc("block/block_steel"));
+        this.particleOnlyBlock(NtmBlocks.RED_CONNECTOR_SUPER, modLoc("block/block_steel"));
+        this.particleOnlyBlock(NtmBlocks.RED_PYLON, modLoc("block/block_steel"));
+        this.particleOnlyBlock(NtmBlocks.RED_PYLON_MEDIUM_WOOD, modLoc("block/block_steel"));
+        this.particleOnlyBlock(NtmBlocks.RED_PYLON_MEDIUM_WOOD_TRANSFORMER, modLoc("block/block_steel"));
+        this.particleOnlyBlock(NtmBlocks.RED_PYLON_MEDIUM_STEEL, modLoc("block/block_steel"));
+        this.particleOnlyBlock(NtmBlocks.RED_PYLON_MEDIUM_STEEL_TRANSFORMER, modLoc("block/block_steel"));
+        this.particleOnlyBlock(NtmBlocks.RED_PYLON_LARGE, modLoc("block/block_steel"));
+        this.particleOnlyBlock(NtmBlocks.RED_PYLON_STEEL, modLoc("block/block_steel"));
+        this.particleOnlyBlock(NtmBlocks.SUBSTATION, modLoc("block/block_steel"));
+
         this.registerFluidDuct();
         this.particleOnlyBlock(NtmBlocks.HEATER_FIREBOX, modLoc("block/block_steel"));
         this.particleOnlyBlock(NtmBlocks.HEATER_OVEN, modLoc("block/block_steel"));
@@ -226,6 +237,15 @@ public class NtmBlockStateProvider extends BlockStateProvider {
         this.particleOnlyBlock(NtmBlocks.MACHINE_CRYSTALLIZER, modLoc("block/block_steel"));
         this.particleOnlyBlock(NtmBlocks.MACHINE_WOOD_BURNER, modLoc("block/block_steel"));
         this.particleOnlyBlock(NtmBlocks.MACHINE_DIESEL, modLoc("block/block_steel"));
+        this.particleOnlyBlock(NtmBlocks.MACHINE_STIRLING, modLoc("block/block_steel"));
+        this.particleOnlyBlock(NtmBlocks.MACHINE_STIRLING_STEEL, modLoc("block/block_steel"));
+        this.particleOnlyBlock(NtmBlocks.MACHINE_STIRLING_CREATIVE, modLoc("block/block_steel"));
+        this.particleOnlyBlock(NtmBlocks.MACHINE_SAWMILL, modLoc("block/block_steel"));
+        this.particleOnlyBlock(NtmBlocks.PUMP_STEAM, modLoc("block/block_steel"));
+        this.particleOnlyBlock(NtmBlocks.PUMP_ELECTRIC, modLoc("block/block_steel"));
+        this.simpleCubeAllBlock(NtmBlocks.MACHINE_CONDENSER);
+        this.particleOnlyBlock(NtmBlocks.MACHINE_CONDENSER_POWERED, modLoc("block/block_steel"));
+        this.particleOnlyBlock(NtmBlocks.MACHINE_STEAM_ENGINE, modLoc("block/block_steel"));
         this.particleOnlyBlock(NtmBlocks.MACHINE_CENTRIFUGE, modLoc("block/block_steel"));
         this.particleOnlyBlock(NtmBlocks.MACHINE_GAS_CENTRIFUGE, modLoc("block/block_steel"));
         this.particleOnlyBlock(NtmBlocks.MACHINE_SOLDERING_STATION, modLoc("block/block_steel"));
