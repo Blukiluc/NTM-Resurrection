@@ -40,40 +40,56 @@ public class PylonBlockEntity extends PylonBaseBlockEntity {
     @Override
     public Vec3[] getMountPositions() {
         Direction facing = this.getBlockState().getValue(DummyableBlock.FACING);
-        Direction side = facing.getClockWise();
         return switch(this.getVariant()) {
             case WOOD, STEEL -> new Vec3[] {new Vec3(0.5D, 5.5D, 0.5D)};
             case MEDIUM_WOOD, MEDIUM_WOOD_TRANSFORMER, MEDIUM_STEEL, MEDIUM_STEEL_TRANSFORMER -> new Vec3[] {
-                    new Vec3(0.5D - side.getStepX(), 7.5D, 0.5D - side.getStepZ()),
                     new Vec3(0.5D, 7.5D, 0.5D),
-                    new Vec3(0.5D + side.getStepX(), 7.5D, 0.5D + side.getStepZ())
+                    new Vec3(0.5D + facing.getStepX(), 7.5D, 0.5D + facing.getStepZ()),
+                    new Vec3(0.5D + facing.getStepX() * 2D, 7.5D, 0.5D + facing.getStepZ() * 2D)
             };
-            case LARGE -> new Vec3[] {
-                    new Vec3(0.5D - side.getStepX() * 3.375D, 13.8125D, 0.5D - side.getStepZ() * 3.375D),
-                    new Vec3(0.5D - side.getStepX() * 1.125D, 14.625D, 0.5D - side.getStepZ() * 1.125D),
-                    new Vec3(0.5D + side.getStepX() * 1.125D, 14.625D, 0.5D + side.getStepZ() * 1.125D),
-                    new Vec3(0.5D + side.getStepX() * 3.375D, 13.8125D, 0.5D + side.getStepZ() * 3.375D)
-            };
-            case SUBSTATION -> new Vec3[] {
-                    new Vec3(0.5D - side.getStepX() * 1.5D - facing.getStepX(), 4.5D, 0.5D - side.getStepZ() * 1.5D - facing.getStepZ()),
-                    new Vec3(0.5D - side.getStepX() * 0.5D - facing.getStepX(), 4.5D, 0.5D - side.getStepZ() * 0.5D - facing.getStepZ()),
-                    new Vec3(0.5D + side.getStepX() * 0.5D - facing.getStepX(), 4.5D, 0.5D + side.getStepZ() * 0.5D - facing.getStepZ()),
-                    new Vec3(0.5D + side.getStepX() * 1.5D - facing.getStepX(), 4.5D, 0.5D + side.getStepZ() * 1.5D - facing.getStepZ())
-            };
+            case LARGE -> this.getLargeMountPositions(facing);
+            case SUBSTATION -> this.getSubstationMountPositions(facing);
+        };
+    }
+
+    private Vec3[] getLargeMountPositions(Direction facing) {
+        double diagonal = Math.sqrt(0.5D);
+        Vec3 axis = switch(facing) {
+            case EAST -> new Vec3(-diagonal, 0D, -diagonal);
+            case SOUTH -> new Vec3(0D, 0D, -1D);
+            case WEST -> new Vec3(diagonal, 0D, -diagonal);
+            default -> new Vec3(1D, 0D, 0D);
+        };
+        double sideOffset = 3.375D;
+        double topOffset = 0.8125D;
+        return new Vec3[] {
+                new Vec3(0.5D + axis.x * sideOffset, 11.5D + topOffset, 0.5D + axis.z * sideOffset),
+                new Vec3(0.5D + axis.x * sideOffset, 11.5D - topOffset, 0.5D + axis.z * sideOffset),
+                new Vec3(0.5D - axis.x * sideOffset, 11.5D + topOffset, 0.5D - axis.z * sideOffset),
+                new Vec3(0.5D - axis.x * sideOffset, 11.5D - topOffset, 0.5D - axis.z * sideOffset)
+        };
+    }
+
+    private Vec3[] getSubstationMountPositions(Direction facing) {
+        boolean alongX = facing == Direction.NORTH || facing == Direction.SOUTH;
+        Vec3 axis = alongX ? new Vec3(1D, 0D, 0D) : new Vec3(0D, 0D, -1D);
+        return new Vec3[] {
+                new Vec3(0.5D + axis.x * 0.5D, 5.25D, 0.5D + axis.z * 0.5D),
+                new Vec3(0.5D + axis.x * 1.5D, 5.25D, 0.5D + axis.z * 1.5D),
+                new Vec3(0.5D - axis.x * 0.5D, 5.25D, 0.5D - axis.z * 0.5D),
+                new Vec3(0.5D - axis.x * 1.5D, 5.25D, 0.5D - axis.z * 1.5D)
         };
     }
 
     @Override
     protected BlockPos[] getNodePositions() {
         if(this.getVariant() != ElectricityPylonBlock.Variant.SUBSTATION) return super.getNodePositions();
-        Direction facing = this.getBlockState().getValue(DummyableBlock.FACING);
-        Direction side = facing.getClockWise();
         return new BlockPos[] {
                 this.worldPosition,
-                this.worldPosition.relative(facing).relative(side, 2),
-                this.worldPosition.relative(facing).relative(side.getOpposite(), 2),
-                this.worldPosition.relative(facing.getOpposite()).relative(side, 2),
-                this.worldPosition.relative(facing.getOpposite()).relative(side.getOpposite(), 2)
+                this.worldPosition.offset(1, 0, 1),
+                this.worldPosition.offset(1, 0, -1),
+                this.worldPosition.offset(-1, 0, 1),
+                this.worldPosition.offset(-1, 0, -1)
         };
     }
 
@@ -92,12 +108,14 @@ public class PylonBlockEntity extends PylonBaseBlockEntity {
         }
 
         if(variant == ElectricityPylonBlock.Variant.SUBSTATION) {
-            Direction side = facing.getClockWise();
-            for(BlockPos nodePos : this.getNodePositions()) {
-                if(nodePos.equals(this.worldPosition)) continue;
-                Direction outward = nodePos.getX() == this.worldPosition.getX() ? facing : nodePos.getZ() == this.worldPosition.getZ() ? side : Direction.getNearest(nodePos.getX() - this.worldPosition.getX(), 0, nodePos.getZ() - this.worldPosition.getZ());
-                positions.add(new DirPos(nodePos.relative(outward), outward));
-            }
+            positions.add(new DirPos(this.worldPosition.offset(2, 0, -1), Direction.EAST));
+            positions.add(new DirPos(this.worldPosition.offset(2, 0, 1), Direction.EAST));
+            positions.add(new DirPos(this.worldPosition.offset(-2, 0, -1), Direction.WEST));
+            positions.add(new DirPos(this.worldPosition.offset(-2, 0, 1), Direction.WEST));
+            positions.add(new DirPos(this.worldPosition.offset(-1, 0, 2), Direction.SOUTH));
+            positions.add(new DirPos(this.worldPosition.offset(1, 0, 2), Direction.SOUTH));
+            positions.add(new DirPos(this.worldPosition.offset(-1, 0, -2), Direction.NORTH));
+            positions.add(new DirPos(this.worldPosition.offset(1, 0, -2), Direction.NORTH));
         }
 
         return positions.toArray(DirPos[]::new);

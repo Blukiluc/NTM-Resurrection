@@ -2,12 +2,15 @@ package com.hbm.items.tools;
 
 import com.hbm.blockentity.network.PylonBaseBlockEntity;
 import com.hbm.blocks.DummyableBlock;
+import com.hbm.main.NuclearTechMod;
+import com.hbm.main.NuclearTechModClient;
 import com.hbm.util.TagsUtil;
 import net.minecraft.ChatFormatting;
 import net.minecraft.core.BlockPos;
 import net.minecraft.nbt.CompoundTag;
 import net.minecraft.network.chat.Component;
 import net.minecraft.world.InteractionResult;
+import net.minecraft.world.entity.Entity;
 import net.minecraft.world.entity.player.Player;
 import net.minecraft.world.item.Item;
 import net.minecraft.world.item.ItemStack;
@@ -15,6 +18,7 @@ import net.minecraft.world.item.TooltipFlag;
 import net.minecraft.world.item.context.UseOnContext;
 import net.minecraft.world.level.Level;
 import net.minecraft.world.level.block.entity.BlockEntity;
+import net.minecraft.world.phys.Vec3;
 
 import java.util.List;
 
@@ -77,6 +81,22 @@ public class CableDrumItem extends Item {
     private BlockPos findPylon(Level level, BlockPos pos) {
         if(level.getBlockState(pos).getBlock() instanceof DummyableBlock dummy) return dummy.findCore(level, pos);
         return level.getBlockEntity(pos) instanceof PylonBaseBlockEntity ? pos : null;
+    }
+
+    @Override
+    public void inventoryTick(ItemStack stack, Level level, Entity entity, int slotId, boolean isSelected) {
+        if(!level.isClientSide) return;
+
+        CompoundTag tag = TagsUtil.getCustomData(stack);
+        if(!tag.contains(START)) return;
+
+        BlockPos start = BlockPos.of(tag.getLong(START));
+        int distance = (int)entity.position().distanceTo(Vec3.atLowerCornerOf(start));
+        NuclearTechMod.proxy.displayTooltip(
+                stack.getHoverName().copy().append(Component.literal(": " + distance + "m")),
+                100,
+                NuclearTechModClient.ID_CABLE
+        );
     }
 
     @Override

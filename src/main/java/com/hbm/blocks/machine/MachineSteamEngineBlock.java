@@ -1,10 +1,9 @@
 package com.hbm.blocks.machine;
 
-import com.hbm.blockentity.ITickable;
 import com.hbm.blockentity.ProxyComboBlockEntity;
+import com.hbm.blockentity.machine.turbine.AbstractTurbineBlockEntity;
 import com.hbm.blockentity.machine.turbine.MachineSteamEngineBlockEntity;
 import com.hbm.blocks.DummyBlockType;
-import com.hbm.blocks.DummyableBlock;
 import com.hbm.blocks.ITooltipProvider;
 import com.mojang.serialization.MapCodec;
 import net.minecraft.core.BlockPos;
@@ -15,13 +14,11 @@ import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.item.TooltipFlag;
 import net.minecraft.world.level.Level;
 import net.minecraft.world.level.block.entity.BlockEntity;
-import net.minecraft.world.level.block.entity.BlockEntityTicker;
-import net.minecraft.world.level.block.entity.BlockEntityType;
 import net.minecraft.world.level.block.state.BlockState;
 
 import java.util.List;
 
-public class MachineSteamEngineBlock extends DummyableBlock implements ITooltipProvider {
+public class MachineSteamEngineBlock extends AbstractTurbineBlock implements ITooltipProvider {
 
     public MachineSteamEngineBlock(Properties properties) {
         super(properties);
@@ -33,14 +30,6 @@ public class MachineSteamEngineBlock extends DummyableBlock implements ITooltipP
             case CORE -> new MachineSteamEngineBlockEntity(pos, state);
             case EXTRA -> new ProxyComboBlockEntity(pos, state).power().fluid();
             default -> null;
-        };
-    }
-
-    @Override
-    public <T extends BlockEntity> BlockEntityTicker<T> getTicker(Level level, BlockState state, BlockEntityType<T> type) {
-        if(state.getValue(TYPE) != DummyBlockType.CORE) return null;
-        return (tickerLevel, pos, tickerState, blockEntity) -> {
-            if(blockEntity instanceof ITickable tickable) tickable.updateEntity();
         };
     }
 
@@ -62,6 +51,11 @@ public class MachineSteamEngineBlock extends DummyableBlock implements ITooltipP
         this.makeExtra(level, core.relative(side).above());
         this.makeExtra(level, core.relative(side).relative(dir).above());
         this.makeExtra(level, core.relative(side).relative(dir.getOpposite()).above());
+    }
+
+    @Override
+    protected boolean isLeverPosition(BlockPos pos, AbstractTurbineBlockEntity turbine) {
+        return false;
     }
 
     @Override

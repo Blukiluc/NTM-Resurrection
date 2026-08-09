@@ -5,9 +5,12 @@ import com.hbm.blockentity.ProxyComboBlockEntity;
 import com.hbm.blockentity.machine.MachineStirlingBlockEntity;
 import com.hbm.blocks.DummyBlockType;
 import com.hbm.blocks.DummyableBlock;
+import com.hbm.blocks.ILookOverlay;
 import com.hbm.blocks.ITooltipProvider;
 import com.hbm.items.NtmItems;
+import com.hbm.util.BobMathUtil;
 import com.mojang.serialization.MapCodec;
+import net.minecraft.ChatFormatting;
 import net.minecraft.core.BlockPos;
 import net.minecraft.core.Direction;
 import net.minecraft.network.chat.Component;
@@ -23,10 +26,12 @@ import net.minecraft.world.level.block.entity.BlockEntityTicker;
 import net.minecraft.world.level.block.entity.BlockEntityType;
 import net.minecraft.world.level.block.state.BlockState;
 import net.minecraft.world.phys.BlockHitResult;
+import net.neoforged.neoforge.client.event.RenderGuiEvent;
 
+import java.util.ArrayList;
 import java.util.List;
 
-public class MachineStirlingBlock extends DummyableBlock implements ITooltipProvider {
+public class MachineStirlingBlock extends DummyableBlock implements ITooltipProvider, ILookOverlay {
 
     public enum Variant {
         STANDARD,
@@ -105,6 +110,32 @@ public class MachineStirlingBlock extends DummyableBlock implements ITooltipProv
     @Override
     public void appendHoverText(ItemStack stack, Item.TooltipContext context, List<Component> components, TooltipFlag flag) {
         this.addStandardInfo(components);
+    }
+
+    @Override
+    public void printHook(RenderGuiEvent.Pre event, Level level, BlockPos pos) {
+        BlockPos corePos = this.findCore(level, pos);
+        if(corePos == null || !(level.getBlockEntity(corePos) instanceof MachineStirlingBlockEntity stirling)) return;
+
+        List<Component> text = new ArrayList<>();
+        text.add(Component.literal(stirling.heat + " TU/t"));
+        text.add(Component.literal((stirling.hasGear ? stirling.powerBuffer : 0) + " HE/t"));
+
+        if(this.variant != Variant.CREATIVE) {
+            int maxHeat = stirling.getMaxHeat();
+            double percent = (double)stirling.heat / maxHeat;
+            int color = percent > 1D ? 0xFF0000 : ((int)(0xFF - 0xFF * percent)) << 16 | ((int)(0xFF * percent)) << 8;
+            text.add(Component.literal((stirling.heat * 1000 / maxHeat) / 10D + "%").withColor(color));
+
+            if(stirling.heat > maxHeat) {
+                text.add(Component.literal("! ! ! OVERSPEED ! ! !").withColor(BobMathUtil.getBlink() ? 0xFF0000 : 0xFFFF00));
+            }
+            if(!stirling.hasGear) {
+                text.add(Component.literal("Gear missing!").withStyle(ChatFormatting.RED));
+            }
+        }
+
+        ILookOverlay.printGeneric(event, Component.translatable(this.getDescriptionId()), 0xFFFF00, 0x404000, text);
     }
 
     public static final MapCodec<MachineStirlingBlock> CODEC = simpleCodec(properties -> new MachineStirlingBlock(properties, Variant.STANDARD));

@@ -32,7 +32,7 @@ public class PylonConnectorBlockEntity extends PylonBaseBlockEntity {
     @Override
     public Vec3[] getMountPositions() {
         Direction facing = this.getBlockState().getValue(ElectricityConnectorBlock.FACING);
-        double distance = this.isHeavy() ? 0.375D : 0.25D;
+        double distance = this.isHeavy() ? 0.375D : 0D;
         return new Vec3[] {new Vec3(0.5D + facing.getStepX() * distance, 0.5D + facing.getStepY() * distance, 0.5D + facing.getStepZ() * distance)};
     }
 

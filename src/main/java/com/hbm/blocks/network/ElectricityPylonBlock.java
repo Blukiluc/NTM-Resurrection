@@ -12,18 +12,22 @@ import net.minecraft.ChatFormatting;
 import net.minecraft.core.BlockPos;
 import net.minecraft.core.Direction;
 import net.minecraft.network.chat.Component;
+import net.minecraft.util.Mth;
 import net.minecraft.world.InteractionHand;
 import net.minecraft.world.ItemInteractionResult;
 import net.minecraft.world.entity.player.Player;
 import net.minecraft.world.item.Item;
 import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.item.TooltipFlag;
+import net.minecraft.world.item.context.BlockPlaceContext;
 import net.minecraft.world.level.Level;
 import net.minecraft.world.level.block.entity.BlockEntity;
 import net.minecraft.world.level.block.entity.BlockEntityTicker;
 import net.minecraft.world.level.block.entity.BlockEntityType;
 import net.minecraft.world.level.block.state.BlockState;
 import net.minecraft.world.phys.BlockHitResult;
+
+import javax.annotation.Nullable;
 
 import java.util.List;
 
@@ -84,15 +88,29 @@ public class ElectricityPylonBlock extends DummyableBlock implements ITooltipPro
     }
 
     @Override
+    public @Nullable BlockState getStateForPlacement(BlockPlaceContext context) {
+        BlockState state = super.getStateForPlacement(context);
+        if(state == null || this.variant != Variant.LARGE || context.getPlayer() == null) return state;
+
+        int rotation = Mth.floor(context.getPlayer().getYRot() * 4F / 180F + 0.5D) & 3;
+        Direction facing = switch(rotation) {
+            case 1 -> Direction.EAST;
+            case 2 -> Direction.SOUTH;
+            case 3 -> Direction.WEST;
+            default -> Direction.NORTH;
+        };
+        return state.setValue(FACING, facing);
+    }
+
+    @Override
     protected void fillSpace(Level level, BlockPos pos, Direction dir, int offset) {
         super.fillSpace(level, pos, dir, offset);
         if(this.variant != Variant.SUBSTATION) return;
         BlockPos core = pos.relative(dir, offset);
-        Direction side = dir.getClockWise();
-        this.makeExtra(level, core.relative(dir).relative(side, 2));
-        this.makeExtra(level, core.relative(dir).relative(side.getOpposite(), 2));
-        this.makeExtra(level, core.relative(dir.getOpposite()).relative(side, 2));
-        this.makeExtra(level, core.relative(dir.getOpposite()).relative(side.getOpposite(), 2));
+        this.makeExtra(level, core.offset(1, 0, 1));
+        this.makeExtra(level, core.offset(1, 0, -1));
+        this.makeExtra(level, core.offset(-1, 0, 1));
+        this.makeExtra(level, core.offset(-1, 0, -1));
     }
 
     @Override

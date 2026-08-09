@@ -28,7 +28,13 @@ public class MachineCondenserPoweredBlockEntity extends MachineCondenserBlockEnt
 
         if(this.level.isClientSide) {
             this.lastFanRotation = this.fanRotation;
-            if(this.waterTimer > 0) this.fanRotation = (this.fanRotation + 30F) % 360F;
+            if(this.waterTimer > 0) {
+                this.fanRotation += 30F;
+                if(this.fanRotation >= 360F) {
+                    this.fanRotation -= 360F;
+                    this.lastFanRotation -= 360F;
+                }
+            }
             return;
         }
 
@@ -58,10 +64,10 @@ public class MachineCondenserPoweredBlockEntity extends MachineCondenserBlockEnt
         return new Connection[] {
                 new Connection(center.relative(side, 4), side),
                 new Connection(center.relative(side.getOpposite(), 4), side.getOpposite()),
-                new Connection(center.relative(facing, 2).relative(side, 3), facing),
-                new Connection(center.relative(facing, 2).relative(side.getOpposite(), 3), facing),
-                new Connection(center.relative(facing.getOpposite(), 2).relative(side, 3), facing.getOpposite()),
-                new Connection(center.relative(facing.getOpposite(), 2).relative(side.getOpposite(), 3), facing.getOpposite())
+                new Connection(center.relative(facing, 2).relative(side), facing),
+                new Connection(center.relative(facing, 2).relative(side.getOpposite()), facing),
+                new Connection(center.relative(facing.getOpposite(), 2).relative(side), facing.getOpposite()),
+                new Connection(center.relative(facing.getOpposite(), 2).relative(side.getOpposite()), facing.getOpposite())
         };
     }
 
@@ -104,7 +110,6 @@ public class MachineCondenserPoweredBlockEntity extends MachineCondenserBlockEnt
         super.serialize(buf);
         buf.writeLong(this.power);
         buf.writeInt(this.waterTimer);
-        buf.writeFloat(this.fanRotation);
     }
 
     @Override
@@ -112,7 +117,6 @@ public class MachineCondenserPoweredBlockEntity extends MachineCondenserBlockEnt
         super.deserialize(buf);
         this.power = buf.readLong();
         this.waterTimer = buf.readInt();
-        this.fanRotation = buf.readFloat();
     }
 
     private record Connection(BlockPos pos, Direction direction) { }

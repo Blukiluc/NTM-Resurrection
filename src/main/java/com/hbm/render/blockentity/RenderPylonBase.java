@@ -1,6 +1,8 @@
 package com.hbm.render.blockentity;
 
 import com.hbm.blockentity.network.PylonBaseBlockEntity;
+import com.hbm.blockentity.network.PylonBlockEntity;
+import com.hbm.blocks.DummyableBlock;
 import com.hbm.render.util.RenderContext;
 import com.mojang.blaze3d.vertex.DefaultVertexFormat;
 import com.mojang.blaze3d.vertex.VertexConsumer;
@@ -9,6 +11,7 @@ import net.minecraft.client.renderer.MultiBufferSource;
 import net.minecraft.client.renderer.RenderStateShard;
 import net.minecraft.client.renderer.RenderType;
 import net.minecraft.core.BlockPos;
+import net.minecraft.core.Direction;
 import net.minecraft.world.level.block.entity.BlockEntity;
 import net.minecraft.world.phys.Vec3;
 import org.joml.Matrix4f;
@@ -43,11 +46,23 @@ public abstract class RenderPylonBase<T extends PylonBaseBlockEntity> extends Bl
             int count = Math.min(localMounts.length, remoteMounts.length);
             for(int index = 0; index < count; index++) {
                 Vec3 start = localMounts[index];
-                Vec3 remoteMount = remoteMounts[index].add(remotePos.getX() - be.getBlockPos().getX(), remotePos.getY() - be.getBlockPos().getY(), remotePos.getZ() - be.getBlockPos().getZ());
+                int remoteIndex = this.getRemoteMountIndex(be, remote, index, count);
+                Vec3 remoteMount = remoteMounts[remoteIndex].add(remotePos.getX() - be.getBlockPos().getX(), remotePos.getY() - be.getBlockPos().getY(), remotePos.getZ() - be.getBlockPos().getZ());
                 Vec3 end = start.add(remoteMount).scale(0.5D);
                 this.renderWireHalf(consumer, matrix, packedLight, start, end, red, green, blue);
             }
         }
+    }
+
+    private int getRemoteMountIndex(PylonBaseBlockEntity local, PylonBaseBlockEntity remote, int index, int count) {
+        if(count == 4 && local instanceof PylonBlockEntity localPylon && remote instanceof PylonBlockEntity remotePylon) {
+            Direction localFacing = localPylon.getBlockState().getValue(DummyableBlock.FACING);
+            Direction remoteFacing = remotePylon.getBlockState().getValue(DummyableBlock.FACING);
+            if((localFacing == Direction.EAST && remoteFacing == Direction.NORTH) || (localFacing == Direction.NORTH && remoteFacing == Direction.EAST)) {
+                return (index + 2) % count;
+            }
+        }
+        return index;
     }
 
     private void renderWireHalf(VertexConsumer consumer, Matrix4f matrix, int packedLight, Vec3 start, Vec3 end, float red, float green, float blue) {

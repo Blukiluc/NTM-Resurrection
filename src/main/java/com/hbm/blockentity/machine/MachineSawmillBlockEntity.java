@@ -47,8 +47,12 @@ public class MachineSawmillBlockEntity extends MachineBaseBlockEntity {
 
         if(this.level.isClientSide) {
             this.lastBladeRotation = this.bladeRotation;
-            if(this.hasBlade && this.heat >= 100 && !this.getItem(0).isEmpty()) {
-                this.bladeRotation = (this.bladeRotation + this.heat / 10F) % 360F;
+            if(this.hasBlade) {
+                this.bladeRotation += this.heat * 25F / 300F;
+                if(this.bladeRotation >= 360F) {
+                    this.bladeRotation -= 360F;
+                    this.lastBladeRotation -= 360F;
+                }
             }
             return;
         }
@@ -73,9 +77,9 @@ public class MachineSawmillBlockEntity extends MachineBaseBlockEntity {
             this.overspeed = Math.max(0, this.overspeed - 1);
         }
 
+        this.networkPackNT(50);
         this.heat = 0;
         this.setChanged();
-        this.networkPackNT(50);
     }
 
     private void drawHeat() {
@@ -185,7 +189,6 @@ public class MachineSawmillBlockEntity extends MachineBaseBlockEntity {
         buf.writeInt(this.heat);
         buf.writeInt(this.progress);
         buf.writeBoolean(this.hasBlade);
-        buf.writeFloat(this.bladeRotation);
     }
 
     @Override
@@ -194,6 +197,5 @@ public class MachineSawmillBlockEntity extends MachineBaseBlockEntity {
         this.heat = buf.readInt();
         this.progress = buf.readInt();
         this.hasBlade = buf.readBoolean();
-        this.bladeRotation = buf.readFloat();
     }
 }

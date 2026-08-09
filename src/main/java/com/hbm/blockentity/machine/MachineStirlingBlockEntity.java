@@ -42,8 +42,13 @@ public class MachineStirlingBlockEntity extends LoadedBaseBlockEntity implements
         MachineStirlingBlock.Variant variant = this.getVariant();
         if(this.level.isClientSide) {
             this.lastSpin = this.spin;
-            float target = this.hasGear ? Math.min(45F, this.powerBuffer * 45F / Math.max(this.getMaxHeat(), 1)) : 0F;
-            this.spin += (target - this.spin) * 0.2F;
+            float momentum = this.hasGear ? this.powerBuffer * 50F / Math.max(this.getMaxHeat(), 1) : 0F;
+            if(variant == MachineStirlingBlock.Variant.CREATIVE) momentum = Math.min(momentum, 45F);
+            this.spin += momentum;
+            if(this.spin >= 360F) {
+                this.spin -= 360F;
+                this.lastSpin -= 360F;
+            }
             return;
         }
 
@@ -68,6 +73,8 @@ public class MachineStirlingBlockEntity extends LoadedBaseBlockEntity implements
             }
         }
 
+        this.networkPackNT(50);
+
         for(Direction direction : Direction.Plane.HORIZONTAL) {
             BlockPos output = this.worldPosition.relative(direction, 2);
             this.tryProvide(this.level, output, direction);
@@ -75,7 +82,6 @@ public class MachineStirlingBlockEntity extends LoadedBaseBlockEntity implements
 
         this.heat = 0;
         this.setChanged();
-        this.networkPackNT(50);
     }
 
     private void drawHeat() {
@@ -87,8 +93,8 @@ public class MachineStirlingBlockEntity extends LoadedBaseBlockEntity implements
         }
     }
 
-    private int getMaxHeat() {
-        return this.getVariant() == MachineStirlingBlock.Variant.HEAVY ? 1_500 : 300;
+    public int getMaxHeat() {
+        return this.getVariant() == MachineStirlingBlock.Variant.STANDARD ? 300 : 1_500;
     }
 
     @Override
@@ -135,7 +141,6 @@ public class MachineStirlingBlockEntity extends LoadedBaseBlockEntity implements
         buf.writeLong(this.powerBuffer);
         buf.writeInt(this.heat);
         buf.writeBoolean(this.hasGear);
-        buf.writeFloat(this.spin);
     }
 
     @Override
@@ -144,6 +149,5 @@ public class MachineStirlingBlockEntity extends LoadedBaseBlockEntity implements
         this.powerBuffer = buf.readLong();
         this.heat = buf.readInt();
         this.hasGear = buf.readBoolean();
-        this.spin = buf.readFloat();
     }
 }

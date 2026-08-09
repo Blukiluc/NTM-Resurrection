@@ -31,6 +31,7 @@ import net.minecraft.client.renderer.entity.EntityRenderers;
 import net.minecraft.client.renderer.entity.ThrownItemRenderer;
 import net.minecraft.client.resources.sounds.SimpleSoundInstance;
 import net.minecraft.core.BlockPos;
+import net.minecraft.network.chat.Component;
 import net.minecraft.sounds.SoundEvent;
 import net.minecraft.sounds.SoundSource;
 import net.minecraft.util.RandomSource;
@@ -286,6 +287,11 @@ public class ClientProxy extends ServerProxy {
         } else {
             minecraft.getSoundManager().play(instance);
         }
+    }
+
+    @Override
+    public void displayTooltip(Component component, int time, int id) {
+        NuclearTechModClient.displayTooltip(component, time, id);
     }
 
     @Override

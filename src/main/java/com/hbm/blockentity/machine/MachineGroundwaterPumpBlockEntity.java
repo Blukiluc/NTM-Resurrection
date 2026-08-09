@@ -43,7 +43,13 @@ public class MachineGroundwaterPumpBlockEntity extends LoadedBaseBlockEntity imp
 
         if(this.level.isClientSide) {
             this.lastRotor = this.rotor;
-            if(this.isOn) this.rotor = (this.rotor + 10F) % 360F;
+            if(this.isOn) {
+                this.rotor += 10F;
+                if(this.rotor >= 360F) {
+                    this.rotor -= 360F;
+                    this.lastRotor -= 360F;
+                }
+            }
             return;
         }
 
@@ -173,7 +179,6 @@ public class MachineGroundwaterPumpBlockEntity extends LoadedBaseBlockEntity imp
         buf.writeLong(this.power);
         buf.writeBoolean(this.isOn);
         buf.writeBoolean(this.onGround);
-        buf.writeFloat(this.rotor);
     }
 
     @Override
@@ -185,6 +190,5 @@ public class MachineGroundwaterPumpBlockEntity extends LoadedBaseBlockEntity imp
         this.power = buf.readLong();
         this.isOn = buf.readBoolean();
         this.onGround = buf.readBoolean();
-        this.rotor = buf.readFloat();
     }
 }

@@ -89,13 +89,22 @@ public class ElectricityConnectorBlock extends BaseEntityBlock implements IToolt
         Direction facing = state.getValue(FACING);
         double min = 5D / 16D;
         double max = 11D / 16D;
+        if(this.heavy) {
+            return switch(facing.getAxis()) {
+                case X -> Shapes.box(0D, min, min, 1D, max, max);
+                case Y -> Shapes.box(min, 0D, min, max, 1D, max);
+                case Z -> Shapes.box(min, min, 0D, max, max, 1D);
+            };
+        }
+        double attachmentMin = 7D / 16D;
+        double attachmentMax = 9D / 16D;
         return switch(facing) {
-            case DOWN -> Shapes.box(min, 0D, min, max, 0.625D, max);
-            case UP -> Shapes.box(min, 0.375D, min, max, 1D, max);
-            case NORTH -> Shapes.box(min, min, 0D, max, max, 0.625D);
-            case SOUTH -> Shapes.box(min, min, 0.375D, max, max, 1D);
-            case WEST -> Shapes.box(0D, min, min, 0.625D, max, max);
-            case EAST -> Shapes.box(0.375D, min, min, 1D, max, max);
+            case DOWN -> Shapes.box(min, attachmentMin, min, max, 1D, max);
+            case UP -> Shapes.box(min, 0D, min, max, attachmentMax, max);
+            case NORTH -> Shapes.box(min, min, attachmentMin, max, max, 1D);
+            case SOUTH -> Shapes.box(min, min, 0D, max, max, attachmentMax);
+            case WEST -> Shapes.box(attachmentMin, min, min, 1D, max, max);
+            case EAST -> Shapes.box(0D, min, min, attachmentMax, max, max);
         };
     }
 

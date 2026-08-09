@@ -5,12 +5,16 @@ import com.hbm.blockentity.ProxyComboBlockEntity;
 import com.hbm.blockentity.machine.MachineSawmillBlockEntity;
 import com.hbm.blocks.DummyBlockType;
 import com.hbm.blocks.DummyableBlock;
+import com.hbm.blocks.ILookOverlay;
 import com.hbm.blocks.ITooltipProvider;
 import com.hbm.items.NtmItems;
+import com.hbm.util.BobMathUtil;
 import com.mojang.serialization.MapCodec;
+import net.minecraft.ChatFormatting;
 import net.minecraft.core.BlockPos;
 import net.minecraft.core.Direction;
 import net.minecraft.network.chat.Component;
+import net.minecraft.network.chat.MutableComponent;
 import net.minecraft.world.InteractionHand;
 import net.minecraft.world.ItemInteractionResult;
 import net.minecraft.world.item.Item;
@@ -24,10 +28,12 @@ import net.minecraft.world.level.block.entity.BlockEntityType;
 import net.minecraft.world.level.block.state.BlockState;
 import net.minecraft.world.phys.AABB;
 import net.minecraft.world.phys.BlockHitResult;
+import net.neoforged.neoforge.client.event.RenderGuiEvent;
 
+import java.util.ArrayList;
 import java.util.List;
 
-public class MachineSawmillBlock extends DummyableBlock implements ITooltipProvider {
+public class MachineSawmillBlock extends DummyableBlock implements ITooltipProvider, ILookOverlay {
 
     public MachineSawmillBlock(Properties properties) {
         super(properties);
@@ -109,6 +115,45 @@ public class MachineSawmillBlock extends DummyableBlock implements ITooltipProvi
     @Override
     public void appendHoverText(ItemStack stack, Item.TooltipContext context, List<Component> components, TooltipFlag flag) {
         this.addStandardInfo(components);
+    }
+
+    @Override
+    public void printHook(RenderGuiEvent.Pre event, Level level, BlockPos pos) {
+        BlockPos corePos = this.findCore(level, pos);
+        if(corePos == null || !(level.getBlockEntity(corePos) instanceof MachineSawmillBlockEntity sawmill)) return;
+
+        List<Component> text = new ArrayList<>();
+        text.add(Component.literal(sawmill.heat + " TU/t"));
+
+        double percent = (double)sawmill.heat / 300D;
+        int color = percent > 1D ? 0xFF0000 : ((int)(0xFF - 0xFF * percent)) << 16 | ((int)(0xFF * percent)) << 8;
+        text.add(Component.literal((sawmill.heat * 1000 / 300) / 10D + "%").withColor(color));
+
+        int limiter = sawmill.progress * 25 / 600;
+        MutableComponent bar = Component.literal("[ ").withStyle(ChatFormatting.GREEN);
+        for(int i = 0; i < 25; i++) {
+            bar.append(Component.literal("\u258F").withStyle(i < limiter ? ChatFormatting.GREEN : ChatFormatting.WHITE));
+        }
+        bar.append(Component.literal(" ]").withStyle(ChatFormatting.GREEN));
+        text.add(bar);
+
+        for(int i = 0; i < 3; i++) {
+            ItemStack slot = sawmill.getItem(i);
+            if(!slot.isEmpty()) {
+                text.add(Component.literal(i == 0 ? "-> " : "<- ").withStyle(i == 0 ? ChatFormatting.GREEN : ChatFormatting.RED)
+                        .append(slot.getHoverName().copy().withStyle(ChatFormatting.WHITE))
+                        .append(slot.getCount() > 1 ? Component.literal(" x" + slot.getCount()).withStyle(ChatFormatting.WHITE) : Component.empty()));
+            }
+        }
+
+        if(sawmill.heat > 300) {
+            text.add(Component.literal("! ! ! OVERSPEED ! ! !").withColor(BobMathUtil.getBlink() ? 0xFF0000 : 0xFFFF00));
+        }
+        if(!sawmill.hasBlade) {
+            text.add(Component.literal("Blade missing!").withStyle(ChatFormatting.RED));
+        }
+
+        ILookOverlay.printGeneric(event, Component.translatable(this.getDescriptionId()), 0xFFFF00, 0x404000, text);
     }
 
     public static final MapCodec<MachineSawmillBlock> CODEC = simpleCodec(MachineSawmillBlock::new);

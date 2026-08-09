@@ -29,7 +29,7 @@ public class RenderElectricityPylon extends RenderPylonBase<PylonBlockEntity> im
     public void render(PylonBlockEntity be, MultiBufferSource buffer, float partialTicks) {
         RenderContext.pushPose();
         RenderContext.translate(0.5F, 0F, 0.5F);
-        rotateForFacing(be.getBlockState().getValue(DummyableBlock.FACING));
+        rotateForFacing(be.getBlockState().getValue(DummyableBlock.FACING), be.getVariant());
         this.renderModel(be.getVariant());
         RenderContext.popPose();
         this.renderLines(be, buffer);
@@ -72,13 +72,38 @@ public class RenderElectricityPylon extends RenderPylonBase<PylonBlockEntity> im
         }
     }
 
-    private static void rotateForFacing(Direction facing) {
-        switch(facing) {
-            case EAST -> RenderContext.mulPose(Axis.YP.rotationDegrees(90F));
-            case SOUTH -> RenderContext.mulPose(Axis.YP.rotationDegrees(180F));
-            case WEST -> RenderContext.mulPose(Axis.YP.rotationDegrees(270F));
-            default -> { }
+    private static void rotateForFacing(Direction facing, ElectricityPylonBlock.Variant variant) {
+        float rotation;
+        if(variant == ElectricityPylonBlock.Variant.LARGE) {
+            rotation = switch(facing) {
+                case EAST -> 45F;
+                case NORTH -> 90F;
+                case WEST -> 135F;
+                default -> 0F;
+            };
+        } else if(variant == ElectricityPylonBlock.Variant.SUBSTATION) {
+            rotation = switch(facing) {
+                case EAST -> 180F;
+                case SOUTH -> 270F;
+                case WEST -> 0F;
+                default -> 90F;
+            };
+        } else if(variant == ElectricityPylonBlock.Variant.MEDIUM_WOOD || variant == ElectricityPylonBlock.Variant.MEDIUM_WOOD_TRANSFORMER || variant == ElectricityPylonBlock.Variant.MEDIUM_STEEL || variant == ElectricityPylonBlock.Variant.MEDIUM_STEEL_TRANSFORMER) {
+            rotation = switch(facing) {
+                case EAST -> 90F;
+                case NORTH -> 180F;
+                case WEST -> 270F;
+                default -> 0F;
+            };
+        } else {
+            rotation = switch(facing) {
+                case EAST -> 90F;
+                case SOUTH -> 180F;
+                case WEST -> 270F;
+                default -> 0F;
+            };
         }
+        if(rotation != 0F) RenderContext.mulPose(Axis.YP.rotationDegrees(rotation));
     }
 
     private ElectricityPylonBlock.Variant getVariant(Item item) {
