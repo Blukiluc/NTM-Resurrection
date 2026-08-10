@@ -1,5 +1,7 @@
 package com.hbm.items.weapon;
 
+import com.hbm.render.item.ItemRendererCrucible;
+import net.minecraft.client.renderer.BlockEntityWithoutLevelRenderer;
 import net.minecraft.core.particles.BlockParticleOption;
 import net.minecraft.core.particles.ParticleTypes;
 import net.minecraft.network.chat.Component;
@@ -23,21 +25,23 @@ import net.minecraft.world.item.TooltipFlag;
 import net.minecraft.world.item.component.ItemAttributeModifiers;
 import net.minecraft.world.level.Level;
 import net.minecraft.world.level.block.Blocks;
+import net.neoforged.neoforge.client.extensions.common.IClientItemExtensions;
 
 import java.util.List;
+import java.util.function.Consumer;
 
 public class ItemCrucible extends Item {
 
-	public static final SoundEvent C_DEPLOY = SoundEvent.createVariableRangeEvent(ResourceLocation.fromNamespaceAndPath("hbm", "weapon.cDeploy"));
-	public static final SoundEvent C_SWING = SoundEvent.createVariableRangeEvent(ResourceLocation.fromNamespaceAndPath("hbm", "weapon.cSwing"));
+	public static final SoundEvent C_DEPLOY = SoundEvent.createVariableRangeEvent(ResourceLocation.fromNamespaceAndPath("hbm", "weapon.cdeploy"));
+	public static final SoundEvent C_SWING = SoundEvent.createVariableRangeEvent(ResourceLocation.fromNamespaceAndPath("hbm", "weapon.cswing"));
 
 	private final float attackDamage;
 	private final double movementSpeed;
 
 	public ItemCrucible(float damage, double movement, Properties properties) {
 		super(properties.durability(3).attributes(createAttributes(damage, movement)));
-		this.attackDamage = 5000;
-		this.movementSpeed = 5;
+		this.attackDamage = damage;
+		this.movementSpeed = movement;
 	}
 
 	private static ItemAttributeModifiers createAttributes(float damage, double movement) {
@@ -54,6 +58,9 @@ public class ItemCrucible extends Item {
 				)
 				.build();
 	}
+
+
+
 
 	@Override
 	public void inventoryTick(ItemStack stack, Level level, Entity entity, int slotId, boolean isSelected) {

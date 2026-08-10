@@ -1,4 +1,4 @@
-// 1.21.1	2026-08-09T11:51:00.2876152	Item Models: hbm
+// 1.21.1	2026-08-10T11:39:01.749237	Item Models: hbm
 c4e09d2d0fd2bef45dc51c8da0c70bab4652e4b1 assets/hbm/models/item/acetylene_torch.json
 6c4e747554da913978325893b69ca977467a483c assets/hbm/models/item/ammo_secret.json
 99443ea6db20add27ff0bd97f72d22bbf1493cd1 assets/hbm/models/item/ammo_secret_0.json
@@ -269,6 +269,7 @@ b81d1327a154f8dac98db3111fa888f6f3b1749f assets/hbm/models/item/coal_infernal.js
 d42e0f89957b68fd9a89026629ff142a1ffffa53 assets/hbm/models/item/coke_petroleum.json
 7c3ce8c94c902aff787ffd20379fda26d4fee1a6 assets/hbm/models/item/cordite.json
 44cdd112c5003f9c1aede1e9d6469263633bad8a assets/hbm/models/item/crackpipe.json
+f442b8a7df1464171d655c216fa9edf56a3bac07 assets/hbm/models/item/crucible_sword.json
 afdfa7edac5617658c481a45a09224ddd40f8252 assets/hbm/models/item/crystal_aluminium.json
 db04ba7bde9d5a674732200e5ed55ebae8131cb7 assets/hbm/models/item/crystal_beryllium.json
 bf8ba7fbc7ceff1afeafcf4e6c4fe235e1558f5b assets/hbm/models/item/crystal_cinnabar.json

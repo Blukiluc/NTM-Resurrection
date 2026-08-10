@@ -925,6 +925,7 @@ public class NtmCreativeTabs {
                         output.accept(NtmItems.GEIGER_COUNTER);
                         output.accept(NtmItems.DIGAMMA_DIAGNOSTIC);
                         output.accept(NtmItems.SCREWDRIVER_DESH);
+                        output.accept(NtmItems.CRUCIBLE);
 
                         output.accept(NtmItems.BALEFIRE_AND_STEEL);
 

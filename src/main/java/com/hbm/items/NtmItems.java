@@ -767,6 +767,8 @@ public class NtmItems {
     public static DeferredItem<Item> AMMO_STANDARD;
     public static DeferredItem<Item> AMMO_SECRET;
     // Weapons
+    public static DeferredItem<ItemCrucible> CRUCIBLE = ITEMS.register("crucible_sword",
+            ()-> new ItemCrucible(5000, 5, new Item.Properties().stacksTo(1)));
 
 
     public static void registerOther(DeferredRegister.Items itemRegistry) {

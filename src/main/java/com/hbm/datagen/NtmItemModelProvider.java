@@ -706,6 +706,7 @@ public class NtmItemModelProvider extends ItemModelProvider {
 
         this.basicItem(NtmItems.TEMPLATE_FOLDER.get());
         this.basicItem(NtmItems.NOTHING.get());
+        this.basicItem(NtmItems.CRUCIBLE.get());
 
         // welp
         this.getBuilder(NtmBlocks.LEAVES_LAYER.getId().getPath()).parent(new ModelFile.UncheckedModelFile(modLoc("block/layering_1")));
