@@ -124,11 +124,40 @@ public class Mats {
             .setAutogen(MaterialShapes.GRIP,
                     MaterialShapes.STOCK)
                     ;
-    public static final NTMMaterial MAT_REDCOPPER = makeSmeltable(1611, "red_copper",0xFFBA7D, 0xAF1700, 0xE44C0F)
+    public static final NTMMaterial MAT_REDCOPPER = makeSmeltable(1613, "red_copper",0xFFBA7D, 0xAF1700, 0xE44C0F)
             .setAutogen(MaterialShapes.DUSTTINY,
                     MaterialShapes.BOLT,
                     MaterialShapes.WIRE,
                     MaterialShapes.DENSEWIRE,
                     MaterialShapes.SHELL,
                     MaterialShapes.PIPE);
+    public static final NTMMaterial MAT_GUNMETAL = makeSmeltable(1614, "gunmetal",0xFFEF3F, 0xAD3600, 0xF9C62C)
+            .setAutogen(
+                    MaterialShapes.WIRE,
+                    MaterialShapes.DENSEWIRE,
+                    MaterialShapes.SHELL,
+                    MaterialShapes.STOCK,
+                    MaterialShapes.GRIP,
+                    MaterialShapes.GEAR,
+                    MaterialShapes.PIPE);
+    public static final NTMMaterial MAT_WEAPONSTEEL = makeSmeltable(1615, "weaponsteel",0xA0A0A0, 0x000000, 0x808080)
+            .setAutogen(
+                    MaterialShapes.WIRE,
+                    MaterialShapes.DENSEWIRE,
+                    MaterialShapes.SHELL,
+                    MaterialShapes.STOCK,
+                    MaterialShapes.GRIP,
+                    MaterialShapes.GEAR,
+                    MaterialShapes.PIPE);
+    public static final NTMMaterial MAT_BSCCO = makeSmeltable(1616, "bscco",0x767BF1, 0x000000, 0x5E62C0)
+            .setAutogen(
+
+                    MaterialShapes.DENSEWIRE);
+    public static final NTMMaterial MAT_GOLD = makeSmeltable(1617, "golden", 0xFFFF8B, 0xC26E00, 0xE8D754)
+            .setAutogen(MaterialShapes.DUSTTINY,
+
+                    MaterialShapes.WIRE,
+                    MaterialShapes.DENSEWIRE);
+
+
 }

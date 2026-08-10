@@ -152,6 +152,7 @@ public class NtmItems {
     public static final DeferredItem<Item> INGOT_SODIUM = ITEMS.register("ingot_sodium", () -> new Item(new Item.Properties()));
     public static final DeferredItem<Item> INGOT_STRONTIUM = ITEMS.register("ingot_strontium", () -> new Item(new Item.Properties()));
     public static final DeferredItem<Item> INGOT_SLAG = ITEMS.register("ingot_slag", () -> new Item(new Item.Properties()));
+    public static final DeferredItem<Item> INGOT_ASBESTOS = ITEMS.register("ingot_asbestos", () -> new Item(new Item.Properties()));
 
     // Billets
     public static final DeferredItem<Item> BILLET_URANIUM = ITEMS.register("billet_uranium", () -> new Item(new Item.Properties()));

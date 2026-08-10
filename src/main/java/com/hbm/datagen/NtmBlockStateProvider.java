@@ -59,6 +59,38 @@ public class NtmBlockStateProvider extends BlockStateProvider {
         this.simpleCubeAllBlock(NtmBlocks.ORE_GNEISS_URANIUM_SCORCHED);
         this.simpleCubeAllBlock(NtmBlocks.ORE_NETHER_PLUTONIUM);
         this.simpleCubeAllBlock(NtmBlocks.ORE_GNEISS_SCHRABIDIUM);
+        this.simpleCubeAllBlock(NtmBlocks.ORE_ALUMINUM);
+        this.simpleCubeAllBlock(NtmBlocks.ORE_ALUMINUM_DEEPSLATE);
+        this.simpleCubeAllBlock(NtmBlocks.ORE_ASBESTOS);
+        this.simpleCubeAllBlock(NtmBlocks.ORE_DEEPSLATE_ASBESTOS);
+        this.simpleCubeAllBlock(NtmBlocks.ORE_BERYLLIUM);
+        this.simpleCubeAllBlock(NtmBlocks.ORE_BERYLLIUM_DEEPSLATE);
+        this.simpleCubeAllBlock(NtmBlocks.ORE_CINNABAR);
+        this.simpleCubeAllBlock(NtmBlocks.ORE_CINNABAR_DEEPSLATE);
+        this.simpleCubeAllBlock(NtmBlocks.ORE_COBALT);
+        this.simpleCubeAllBlock(NtmBlocks.ORE_COBALT_DEEPSLATE);
+        this.simpleCubeAllBlock(NtmBlocks.ORE_LIGNITE);
+        this.simpleCubeAllBlock(NtmBlocks.ORE_DEEPSLATE_BROWNCOAL);
+        this.simpleCubeAllBlock(NtmBlocks.ORE_FLUORITE);
+        this.simpleCubeAllBlock(NtmBlocks.ORE_DEEPSLATE_FLUORITE);
+        this.simpleCubeAllBlock(NtmBlocks.ORE_LEAD);
+        this.simpleCubeAllBlock(NtmBlocks.ORE_LEAD_DEEPSLATE);
+        this.simpleCubeAllBlock(NtmBlocks.ORE_RAREGROUND);
+        this.simpleCubeAllBlock(NtmBlocks.ORE_RAREGROUND_DEEPSLATE);
+        this.simpleCubeAllBlock(NtmBlocks.ORE_SULFUR);
+        this.simpleCubeAllBlock(NtmBlocks.ORE_DEEPSLATE_SULFUR);
+        this.simpleCubeAllBlock(NtmBlocks.ORE_THORIUM);
+        this.simpleCubeAllBlock(NtmBlocks.ORE_THORIUM_DEEPSLATE);
+        this.simpleCubeAllBlock(NtmBlocks.ORE_TITANIUM);
+        this.simpleCubeAllBlock(NtmBlocks.ORE_TITANIUM_DEEPSLATE);
+        this.simpleCubeAllBlock(NtmBlocks.ORE_TUNGSTEN);
+        this.simpleCubeAllBlock(NtmBlocks.ORE_DEEPSLATE_TUNGSTEN);
+        this.simpleCubeAllBlock(NtmBlocks.ORE_URANIUM_H);
+        this.simpleCubeAllBlock(NtmBlocks.ORE_URANIUM_DEEPSLATE);
+        this.simpleCubeAllBlock(NtmBlocks.ORE_DEEPSLATE_ALEXANDRITE);
+        this.simpleCubeAllBlock(NtmBlocks.ORE_DEEPSLATE_COLTAN);
+        this.simpleCubeAllBlock(NtmBlocks.ORE_DEEPSLATE_NITER);
+        this.simpleCubeAllBlock(NtmBlocks.ORE_SEQUESTRUM);
 
         this.simpleCubeAllBlock(NtmBlocks.BLOCK_SCRAP);
 

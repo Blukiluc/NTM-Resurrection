@@ -1,6 +1,7 @@
 package com.hbm.hazard;
 
 import com.hbm.blocks.NtmBlocks;
+import com.hbm.items.NtmItems;
 import com.hbm.hazard.type.*;
 import com.hbm.inventory.MetaHelper;
 import com.hbm.items.NtmItems;
@@ -162,6 +163,8 @@ public class HazardRegistry {
         HazardSystem.register(Blocks.GREEN_WOOL, makeData(RADIATION, 150F));
         HazardSystem.register(Blocks.WHITE_WOOL, makeData(ASBESTOS, 5F));
         HazardSystem.register(Items.COAL, makeData(COAL, 1F));
+        HazardSystem.register(item(INGOT_ASBESTOS), makeData(ASBESTOS, 1F));
+
 
         HazardSystem.register(NtmBlocks.FALLOUT.get(), makeData(RADIATION, 60F));
 
