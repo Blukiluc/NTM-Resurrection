@@ -1,5 +1,6 @@
 package com.hbm.blockentity;
 
+import api.hbm.block.ICrucibleAcceptor;
 import api.hbm.energymk2.IEnergyConductorMK2;
 import api.hbm.energymk2.IEnergyReceiverMK2;
 import api.hbm.fluidmk2.IFluidReceiverMK2;
@@ -8,6 +9,7 @@ import api.hbm.redstoneoverradio.IRORInteractive;
 import api.hbm.redstoneoverradio.IRORValueProvider;
 import com.hbm.inventory.fluid.FluidType;
 import com.hbm.inventory.fluid.tank.FluidTank;
+import com.hbm.inventory.material.Mats.MaterialStack;
 import net.minecraft.core.BlockPos;
 import net.minecraft.core.Direction;
 import net.minecraft.core.HolderLookup;
@@ -18,8 +20,10 @@ import net.minecraft.world.entity.player.Player;
 import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.level.block.entity.BlockEntity;
 import net.minecraft.world.level.block.state.BlockState;
+import net.minecraft.world.level.Level;
+import net.minecraft.world.phys.Vec3;
 
-public class ProxyComboBlockEntity extends ProxyBaseBlockEntity implements IEnergyReceiverMK2, IEnergyConductorMK2, WorldlyContainer, IFluidReceiverMK2, IRORValueProvider, IRORInteractive {
+public class ProxyComboBlockEntity extends ProxyBaseBlockEntity implements IEnergyReceiverMK2, IEnergyConductorMK2, WorldlyContainer, IFluidReceiverMK2, IRORValueProvider, IRORInteractive, ICrucibleAcceptor {
 
     private BlockEntity be;
     private boolean inventory;
@@ -334,6 +338,30 @@ public class ProxyComboBlockEntity extends ProxyBaseBlockEntity implements IEner
         }
 
         return false;
+    }
+
+    @Override
+    public boolean canAcceptPartialPour(Level level, Vec3 hit, Direction side, MaterialStack stack) {
+        return this.moltenMetal && this.getCoreObject() instanceof ICrucibleAcceptor acceptor
+                && acceptor.canAcceptPartialPour(level, hit, side, stack);
+    }
+
+    @Override
+    public MaterialStack pour(Level level, Vec3 hit, Direction side, MaterialStack stack) {
+        if (!this.moltenMetal || !(this.getCoreObject() instanceof ICrucibleAcceptor acceptor)) return stack;
+        return acceptor.pour(level, hit, side, stack);
+    }
+
+    @Override
+    public boolean canAcceptPartialFlow(Level level, Direction side, MaterialStack stack) {
+        return this.moltenMetal && this.getCoreObject() instanceof ICrucibleAcceptor acceptor
+                && acceptor.canAcceptPartialFlow(level, side, stack);
+    }
+
+    @Override
+    public MaterialStack flow(Level level, Direction side, MaterialStack stack) {
+        if (!this.moltenMetal || !(this.getCoreObject() instanceof ICrucibleAcceptor acceptor)) return stack;
+        return acceptor.flow(level, side, stack);
     }
 
     @Override

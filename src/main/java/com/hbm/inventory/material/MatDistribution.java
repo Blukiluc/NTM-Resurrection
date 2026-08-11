@@ -8,12 +8,15 @@ import com.hbm.inventory.RecipesCommon.AStack;
 import com.hbm.inventory.RecipesCommon.ComparableStack;
 import com.hbm.inventory.material.Mats.MaterialStack;
 import com.hbm.inventory.recipes.loader.SerializableRecipe;
+import com.hbm.items.NtmItems;
 import net.minecraft.world.item.ItemStack;
+import net.minecraft.world.item.Items;
 
 import java.io.IOException;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Map.Entry;
+import java.util.function.Supplier;
 
 /**
  * Defines which items can be smelted in the crucible and what materials/quantities they yield.
@@ -28,10 +31,38 @@ public class MatDistribution extends SerializableRecipe {
 
     @Override
     public void registerDefaults() {
-        // TODO: populate once materials and their items are defined in Mats.java
-        // Example:
-        // registerEntry(Items.IRON_INGOT, Mats.MAT_IRON, MaterialShapes.INGOT.q(1));
-        // registerEntry(Items.GOLD_INGOT, Mats.MAT_GOLD, MaterialShapes.INGOT.q(1));
+        for (NTMMaterial material : Mats.orderedList) {
+            for (Entry<MaterialShapes, Supplier<? extends net.minecraft.world.item.Item>> entry : material.generatedItems.entrySet()) {
+                int amount = entry.getKey().q(material.convOut) / material.convIn;
+                registerEntry(entry.getValue().get(), material.smeltsInto, amount);
+            }
+        }
+
+        registerEntry(Items.IRON_NUGGET, Mats.MAT_IRON, MaterialShapes.NUGGET.q(1));
+        registerEntry(Items.IRON_BLOCK, Mats.MAT_IRON, MaterialShapes.BLOCK.q(1));
+        registerEntry(Items.GOLD_NUGGET, Mats.MAT_GOLD, MaterialShapes.NUGGET.q(1));
+        registerEntry(Items.GOLD_BLOCK, Mats.MAT_GOLD, MaterialShapes.BLOCK.q(1));
+        registerEntry(Items.COPPER_BLOCK, Mats.MAT_COPPER, MaterialShapes.BLOCK.q(1));
+        registerEntry(Items.CHARCOAL, Mats.MAT_CARBON, MaterialShapes.NUGGET.q(3));
+        registerEntry(Items.COAL, Mats.MAT_CARBON, MaterialShapes.INGOT.q(1) / 2);
+        registerEntry(NtmItems.POWDER_COAL.get(), Mats.MAT_CARBON, MaterialShapes.INGOT.q(1) / 2);
+        registerEntry(Items.REDSTONE, Mats.MAT_REDSTONE, MaterialShapes.INGOT.q(1));
+        registerEntry(Items.REDSTONE_BLOCK, Mats.MAT_REDSTONE, MaterialShapes.BLOCK.q(1));
+        registerEntry(NtmItems.POWDER_LIMESTONE.get(), Mats.MAT_FLUX, MaterialShapes.INGOT.q(10));
+    }
+
+    public static List<MaterialStack> getSmeltingMaterials(ItemStack stack) {
+        if (stack.isEmpty()) return List.of();
+
+        for (Entry<ComparableStack, List<MaterialStack>> entry : Mats.materialEntries.entrySet()) {
+            if (entry.getKey().matchesRecipe(stack, true)) {
+                List<MaterialStack> result = new ArrayList<>();
+                for (MaterialStack material : entry.getValue()) result.add(material.copy());
+                return result;
+            }
+        }
+
+        return List.of();
     }
 
     // ---------------------------------------------------------------

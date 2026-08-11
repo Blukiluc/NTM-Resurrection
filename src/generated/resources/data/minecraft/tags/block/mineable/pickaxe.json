@@ -44,6 +44,14 @@
     "hbm:machine_battery_socket",
     "hbm:launch_pad",
     "hbm:soyuz_launcher",
-    "hbm:machine_satlinker"
+    "hbm:machine_satlinker",
+    "hbm:machine_crucible",
+    "hbm:foundry_mold",
+    "hbm:foundry_basin",
+    "hbm:foundry_channel",
+    "hbm:foundry_tank",
+    "hbm:foundry_outlet",
+    "hbm:foundry_slagtap",
+    "hbm:molten_slag"
   ]
 }

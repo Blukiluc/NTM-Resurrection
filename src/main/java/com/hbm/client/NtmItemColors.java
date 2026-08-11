@@ -7,7 +7,6 @@ import com.hbm.main.NuclearTechMod;
 import net.minecraft.world.item.Item;
 import net.neoforged.bus.api.IEventBus;
 import net.neoforged.neoforge.client.event.RegisterColorHandlersEvent;
-import net.neoforged.neoforge.registries.DeferredItem;
 
 import java.util.Map;
 import java.util.concurrent.ConcurrentHashMap;
@@ -44,7 +43,7 @@ public class NtmItemColors {
     private static void onRegisterItemColors(RegisterColorHandlersEvent.Item event) {
         for (NTMMaterial mat : Mats.orderedList) {
             for (MaterialShapes shape : mat.autogen) {
-                DeferredItem<Item> generated = mat.generatedItems.get(shape);
+                var generated = mat.generatedItems.get(shape);
                 if (generated == null) continue;
 
                 String itemName = shape.itemNameFor(mat);

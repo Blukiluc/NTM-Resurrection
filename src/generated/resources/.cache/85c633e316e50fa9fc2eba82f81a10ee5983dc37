@@ -1,4 +1,4 @@
-// 1.21.1	2026-08-09T01:14:09.7437357	Block States: hbm
+// 1.21.1	2026-08-11T17:41:36.9855961	Block States: hbm
 771df07d065b33c7dcf62cfb69b5cd3a3cb4feed assets/hbm/blockstates/asphalt.json
 c0f05f08a475704e80a5d657d494bf5a829fab8f assets/hbm/blockstates/asphalt_light.json
 8c6c51f054fa20e59275bf5c7c77e28e7790b34c assets/hbm/blockstates/balefire.json
@@ -44,6 +44,12 @@ c7c41c6f0fd43ad1e2867318e31e9111964fa7c3 assets/hbm/blockstates/dynamite.json
 0161fbfb5f220686363b1843d76133eb1c22c63b assets/hbm/blockstates/fire_digamma.json
 f70d183ecd51acf4d87f9b8762a4f9152caab9f8 assets/hbm/blockstates/fissure_bomb.json
 008c8f51eaf870c63b4a718f9c5b28d593865d5f assets/hbm/blockstates/fluid_duct_neo.json
+d50be1d29d5bd73ac773ad1830ad470d6526ed26 assets/hbm/blockstates/foundry_basin.json
+7256add0beba3917dafa7da13d2f7856e5f4abac assets/hbm/blockstates/foundry_channel.json
+22182b5827406a0ba353ee8b4627726af50eca35 assets/hbm/blockstates/foundry_mold.json
+4ddd5dc4106ae582144caedc7e9b6f78bb958a3a assets/hbm/blockstates/foundry_outlet.json
+d6410625c0ef1d6ce73d57024b78e72cb981778d assets/hbm/blockstates/foundry_slagtap.json
+576909ab66df524368d709c63c8a981cd10b40d2 assets/hbm/blockstates/foundry_tank.json
 7e24847eebc0f47efa88b5ca695eec8cec5646e0 assets/hbm/blockstates/fraction_spacer.json
 1092cc3b020793c2ffea711fd2bbbb91b4a7f873 assets/hbm/blockstates/frozen_dirt.json
 1abac97ed1a35f518d3766178511c62a84e8ff45 assets/hbm/blockstates/frozen_grass.json
@@ -76,6 +82,7 @@ a7b03afdb3c1b1f102798c80582ca65dcf706448 assets/hbm/blockstates/machine_centrifu
 98ae4cde8da9a44107117b51b459f06e405f00fd assets/hbm/blockstates/machine_chungus.json
 fb757a40dcbc2b901368172b8b193418456903b6 assets/hbm/blockstates/machine_compressor.json
 419fb57005225987e87aaae7bf712b77aa730e06 assets/hbm/blockstates/machine_compressor_compact.json
+f16612a4c678b99914d6ab770ff1c79c6ea4ae51 assets/hbm/blockstates/machine_crucible.json
 f572122bbb101e95bda13b1a4d199134b2a0773a assets/hbm/blockstates/machine_crystallizer.json
 3af3cb3afd2add26c67ec80850dfeacdfc4a8ed1 assets/hbm/blockstates/machine_diesel.json
 f88d7e0264fc4ed96c5a668e57ffa8358239fcc1 assets/hbm/blockstates/machine_drain.json
@@ -103,6 +110,7 @@ e0dd9747e4623b32ef39894d7ca8b4271fa2804b assets/hbm/blockstates/machine_wood_bur
 46c136a4aa68d2d8bd8f7733e55d34d31f04557f assets/hbm/blockstates/mine_he.json
 e1c2ca91704b94e8a83eaf7defee421e06b24dcb assets/hbm/blockstates/mine_naval.json
 6447bd9a61f1722d0ab1423d3ea1e75288b618f1 assets/hbm/blockstates/mine_shrap.json
+db843830c35c676bc2b520dff7f4233458177cda assets/hbm/blockstates/molten_slag.json
 ace2e8de258ee46aac994b8144426d9980db1e5b assets/hbm/blockstates/nuke_fat_man.json
 ec5eecff5cd22bf4b9b2fb2d0dfe5f490d04a87b assets/hbm/blockstates/nuke_fleija.json
 2d5c850b53c336f1e24efe144e186c61cef5e2ed assets/hbm/blockstates/nuke_fstbmb.json
@@ -216,6 +224,17 @@ e78bfa3df6de95f00e1d96180ad95e471a30e134 assets/hbm/models/block/fissure_bomb.js
 095dda84a419afe11eb30122bfe0077cad9b0cb7 assets/hbm/models/block/fluid_duct_colored.json
 1047c6da40f6050aa254b9d31f8aba6121945107 assets/hbm/models/block/fluid_duct_neo.json
 c76cab36a7055a01c37b958d38d292adefa2b627 assets/hbm/models/block/fluid_duct_silver.json
+52738ddc619162489f9804802045eebbca250185 assets/hbm/models/block/foundry_basin.json
+4bb2084d5802ac219871311fad02159711008cd0 assets/hbm/models/block/foundry_channel.json
+f1e936ad51a850a44cc90355b8a7a0168563d4fd assets/hbm/models/block/foundry_channel_arm.json
+e9eea04db5654b10c08a33136ed1714453c94af2 assets/hbm/models/block/foundry_channel_center.json
+64d8983f2adf9553cd66d6cd1ed184a104489a49 assets/hbm/models/block/foundry_channel_closed.json
+328d918d605595f4eae1445574af180dc14f8617 assets/hbm/models/block/foundry_mold.json
+051278a5e318b2fe9baf8f2dfcafe14dc6af8d39 assets/hbm/models/block/foundry_outlet.json
+15a60c5e816950e5e8eb0fbc9290bbdaa3a38aef assets/hbm/models/block/foundry_outlet_closed.json
+cc166e118f7f355e7cf728d56a7bf770b8155417 assets/hbm/models/block/foundry_slagtap.json
+15a60c5e816950e5e8eb0fbc9290bbdaa3a38aef assets/hbm/models/block/foundry_slagtap_closed.json
+45703af60df592abc09810965678d17d5e263367 assets/hbm/models/block/foundry_tank.json
 f55d5c93f0423e66d4aae3b691b0bb51957b9d98 assets/hbm/models/block/fraction_spacer_particle.json
 8cd7176e53e4bbd8b085e262f8e11c66757e82d5 assets/hbm/models/block/frozen_dirt.json
 3057ad038097159fec18b8858356fa764ad86617 assets/hbm/models/block/frozen_grass.json
@@ -256,6 +275,7 @@ f55d5c93f0423e66d4aae3b691b0bb51957b9d98 assets/hbm/models/block/machine_chemica
 f55d5c93f0423e66d4aae3b691b0bb51957b9d98 assets/hbm/models/block/machine_chungus_particle.json
 f55d5c93f0423e66d4aae3b691b0bb51957b9d98 assets/hbm/models/block/machine_compressor_compact_particle.json
 f55d5c93f0423e66d4aae3b691b0bb51957b9d98 assets/hbm/models/block/machine_compressor_particle.json
+32bd95b27bd333834658fc759e12aef77e954d89 assets/hbm/models/block/machine_crucible_particle.json
 f55d5c93f0423e66d4aae3b691b0bb51957b9d98 assets/hbm/models/block/machine_crystallizer_particle.json
 f55d5c93f0423e66d4aae3b691b0bb51957b9d98 assets/hbm/models/block/machine_diesel_particle.json
 f55d5c93f0423e66d4aae3b691b0bb51957b9d98 assets/hbm/models/block/machine_drain_particle.json
@@ -283,6 +303,22 @@ f55d5c93f0423e66d4aae3b691b0bb51957b9d98 assets/hbm/models/block/machine_wood_bu
 9dbc83c4d82a4f71a4beae9d1b9c67b4d2d201fc assets/hbm/models/block/mine_he_particle.json
 bf08853ecb8d82c8cf016398f50bb3a2605a6b65 assets/hbm/models/block/mine_naval_particle.json
 dd0d1e6cc228f6f7ba7e4a290b291e388d7e52a5 assets/hbm/models/block/mine_shrap_particle.json
+2cc694bd451be839280e8d918f46cea2e363ec8a assets/hbm/models/block/molten_slag_1.json
+8c92886be3636e2571eb8138bc4aff2366ccf930 assets/hbm/models/block/molten_slag_10.json
+5c3c8c11de010acc66550299db825bb499a10824 assets/hbm/models/block/molten_slag_11.json
+fc5457e56c4fc8ca0e7f0bfd76801fbadead5e2c assets/hbm/models/block/molten_slag_12.json
+0bffac3cbd0e7fa9df6fbd4cf860ca87039a9cdf assets/hbm/models/block/molten_slag_13.json
+ee06c5194f435975dbb100aa7e1f24c476c597d8 assets/hbm/models/block/molten_slag_14.json
+107941c7c04fcd43268be53af0c0609a9618ae30 assets/hbm/models/block/molten_slag_15.json
+2ab8c9c40fdd5f5cd69250f40f87434a7c9eca3d assets/hbm/models/block/molten_slag_16.json
+d4586aa341d3361dae8b45dbc6f5d509b2aac561 assets/hbm/models/block/molten_slag_2.json
+ab112a572f0fde0dc967e8a7a66cc2f3ac154f5a assets/hbm/models/block/molten_slag_3.json
+283fa89815de46df8f5c951cafa26d90ab7c0703 assets/hbm/models/block/molten_slag_4.json
+841c3ecf4c81e89dde48cbfbb261507d7c020a8a assets/hbm/models/block/molten_slag_5.json
+34170956456149577f596b03c0f48febaeb8accd assets/hbm/models/block/molten_slag_6.json
+37f07cc018a201320960b0c7129d606e1df4e373 assets/hbm/models/block/molten_slag_7.json
+cd93857302ff871ae080dc609e55bb0d1c862572 assets/hbm/models/block/molten_slag_8.json
+85fe9336eb3640bda7cf02bd426c758c3d2033ce assets/hbm/models/block/molten_slag_9.json
 e81f360919d8f74c0484e57dcef89a39f9c5cc4e assets/hbm/models/block/nuke_fat_man_particle.json
 bb5bd89a58b637f08d5ef854ea553bce5c3c6f91 assets/hbm/models/block/nuke_fleija_particle.json
 a2359240f207e132abb9e77740e428d205947f2e assets/hbm/models/block/nuke_fstbmb_particle.json
@@ -394,6 +430,12 @@ f8b5a9095540e16ba49a294cf5f93840dc671518 assets/hbm/models/item/det_miner.json
 69bb01abce2386b44847394ca6f5e84ce2078be1 assets/hbm/models/item/dynamite.json
 cc0855c569e1d545c24b935cdd2706be68069948 assets/hbm/models/item/fissure_bomb.json
 1ae5a980018cda4e68cafcf4ce293349827b23ab assets/hbm/models/item/fluid_duct_neo.json
+8543bd568b7e4289ee9738d87f8bbe5dbf68554b assets/hbm/models/item/foundry_basin.json
+fb1545c483292603dbb0006c10e0c999d6928b93 assets/hbm/models/item/foundry_channel.json
+bfdc82423808728a9ebb0975e04e48c72236f240 assets/hbm/models/item/foundry_mold.json
+f22024a585e535615fd90f1a49b481f2fd007630 assets/hbm/models/item/foundry_outlet.json
+5f20d9c44e71e313b571379ac68435e16711a621 assets/hbm/models/item/foundry_slagtap.json
+13bd017b668c83e5ba2df2d2c1b63606a1ea4c4d assets/hbm/models/item/foundry_tank.json
 1ae5a980018cda4e68cafcf4ce293349827b23ab assets/hbm/models/item/fraction_spacer.json
 e0fb04c57fd160b5e958952ed50e17a50225d2ed assets/hbm/models/item/frozen_dirt.json
 a1d91526223ea339d5a3cd0edad9bd3e7839d5d7 assets/hbm/models/item/frozen_grass.json
@@ -433,6 +475,7 @@ b5cb531f9c015e4129f955f3e0b582e62505b659 assets/hbm/models/item/gravel_diamond.j
 1ae5a980018cda4e68cafcf4ce293349827b23ab assets/hbm/models/item/machine_chungus.json
 1ae5a980018cda4e68cafcf4ce293349827b23ab assets/hbm/models/item/machine_compressor.json
 1ae5a980018cda4e68cafcf4ce293349827b23ab assets/hbm/models/item/machine_compressor_compact.json
+1ae5a980018cda4e68cafcf4ce293349827b23ab assets/hbm/models/item/machine_crucible.json
 1ae5a980018cda4e68cafcf4ce293349827b23ab assets/hbm/models/item/machine_crystallizer.json
 1ae5a980018cda4e68cafcf4ce293349827b23ab assets/hbm/models/item/machine_diesel.json
 1ae5a980018cda4e68cafcf4ce293349827b23ab assets/hbm/models/item/machine_drain.json

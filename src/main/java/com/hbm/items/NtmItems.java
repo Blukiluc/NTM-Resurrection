@@ -6,6 +6,7 @@ import com.hbm.inventory.NtmFoods;
 import com.hbm.inventory.NtmTiers;
 import com.hbm.inventory.fluid.Fluids;
 import com.hbm.inventory.material.MatsItemGen;
+import com.hbm.inventory.material.MaterialShapes;
 import com.hbm.items.ItemEnums.CapType;
 import com.hbm.items.ItemEnums.CasingType;
 import com.hbm.items.food.ConserveItem;
@@ -485,7 +486,10 @@ public class NtmItems {
     public static final DeferredItem<Item> PLATE_ARMOR_FAU = ITEMS.register("plate_armor_fau", () -> new Item(new Item.Properties()));
     public static final DeferredItem<Item> PLATE_ARMOR_DNT = ITEMS.register("plate_armor_dnt", () -> new Item(new Item.Properties()));
 
-    public static final DeferredItem<Item> SCRAP = ITEMS.register("scrap", () -> new Item(new Item.Properties()));
+    public static final DeferredItem<Item> SCRAP = ITEMS.register("scrap", () -> new FoundryScrapItem(new Item.Properties()));
+    public static final DeferredItem<Item> MOLD_BLANK = ITEMS.register("mold_base", () -> new Item(new Item.Properties()));
+    public static final DeferredItem<Item> MOLD_INGOT = ITEMS.register("mold_ingot", () -> new FoundryMoldItem(new Item.Properties().stacksTo(1), 0, MaterialShapes.INGOT, 1));
+    public static final DeferredItem<Item> MOLD_BLOCK = ITEMS.register("mold_block", () -> new FoundryMoldItem(new Item.Properties().stacksTo(1), 1, MaterialShapes.BLOCK, 1));
 
     // Pellets
     public static final DeferredItem<Item> PELLET_RTG = ITEMS.register("pellet_rtg", () -> new Item(new Item.Properties()));

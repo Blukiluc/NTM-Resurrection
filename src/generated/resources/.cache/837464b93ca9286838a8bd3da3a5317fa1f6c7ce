@@ -1,4 +1,4 @@
-// 1.21.1	2026-08-09T11:51:00.2876152	Item Models: hbm
+// 1.21.1	2026-08-11T17:28:09.1988934	Item Models: hbm
 c4e09d2d0fd2bef45dc51c8da0c70bab4652e4b1 assets/hbm/models/item/acetylene_torch.json
 6c4e747554da913978325893b69ca977467a483c assets/hbm/models/item/ammo_secret.json
 99443ea6db20add27ff0bd97f72d22bbf1493cd1 assets/hbm/models/item/ammo_secret_0.json
@@ -534,6 +534,9 @@ d493ca173821d274745a6e8b5def2310f4a7ef6e assets/hbm/models/item/mercury_nugget_t
 2c8c32d785bfc59bf23083eff8838054ee580570 assets/hbm/models/item/missile_strong.json
 2c8c32d785bfc59bf23083eff8838054ee580570 assets/hbm/models/item/missile_taint.json
 2c8c32d785bfc59bf23083eff8838054ee580570 assets/hbm/models/item/missile_volcano.json
+3537d0311570531f06cb6c389ad537dc7bb4ddd0 assets/hbm/models/item/mold_base.json
+5866e02d5cab64d41740523a012a20e0a52ace8e assets/hbm/models/item/mold_block.json
+eac784c69ecbae3cb1e472a7ea549b69499e9eaa assets/hbm/models/item/mold_ingot.json
 65b195ddd57f1cd47c92273390cb4511a8fd1d15 assets/hbm/models/item/moonstone.json
 432e889fec1472e13e590bb9d0976ed61cf1c210 assets/hbm/models/item/n2_charge.json
 74e7c57d6a2c73ee2cbb9aa1561f0bbeeaaebd76 assets/hbm/models/item/neutron_reflector.json

@@ -8,6 +8,9 @@ import com.hbm.blocks.generic.BarbedWireBlock;
 import com.hbm.blocks.generic.LayeringBlock;
 import com.hbm.blocks.generic.SellafieldSlakedBlock;
 import com.hbm.blocks.network.FluidDuctConnectingBlock;
+import com.hbm.blocks.machine.foundry.DynamicSlagBlock;
+import com.hbm.blocks.machine.foundry.FoundryChannelBlock;
+import com.hbm.blocks.machine.foundry.FoundryOutletBlock;
 import com.hbm.blocks.states.NtmBlockStateProperties;
 import com.hbm.main.NuclearTechMod;
 import com.hbm.render.model.loader.NtmGeometry.BakedModelType;
@@ -230,6 +233,14 @@ public class NtmBlockStateProvider extends BlockStateProvider {
         this.particleOnlyBlock(NtmBlocks.MACHINE_GAS_CENTRIFUGE, modLoc("block/block_steel"));
         this.particleOnlyBlock(NtmBlocks.MACHINE_SOLDERING_STATION, modLoc("block/block_steel"));
         this.particleOnlyBlock(NtmBlocks.MACHINE_ARC_WELDER, modLoc("block/block_steel"));
+        this.particleOnlyBlock(NtmBlocks.MACHINE_CRUCIBLE, modLoc("block/foundry_basin_side"));
+        this.registerFoundryOpenBox(NtmBlocks.FOUNDRY_MOLD, 8, 2);
+        this.registerFoundryOpenBox(NtmBlocks.FOUNDRY_BASIN, 16, 2);
+        this.registerFoundryChannel();
+        this.registerFoundryOpenBox(NtmBlocks.FOUNDRY_TANK, 16, 2);
+        this.registerFoundryOutlet(NtmBlocks.FOUNDRY_OUTLET, "foundry_outlet");
+        this.registerFoundryOutlet(NtmBlocks.FOUNDRY_SLAGTAP, "foundry_slagtap");
+        this.registerMoltenSlag();
         this.particleOnlyBlock(NtmBlocks.MACHINE_MIXER, modLoc("block/block_steel"));
         this.particleOnlyBlock(NtmBlocks.HEAT_BOILER, modLoc("block/block_steel"));
         this.particleOnlyBlock(NtmBlocks.MACHINE_INDUSTRIAL_BOILER, modLoc("block/block_steel"));
@@ -422,6 +433,233 @@ public class NtmBlockStateProvider extends BlockStateProvider {
     private void barrelLoaderBlockItem(Block block, ResourceLocation texture) {
         this.simpleBlock(block, this.models().getBuilder(this.key(block).getPath()).customLoader(BarrelBlockModelBuilder::new).texture("texture", texture).end());
         this.entityBlockItem(block, false);
+    }
+
+    private void registerFoundryOpenBox(DeferredBlock<? extends Block> block, int height, int wall) {
+        String name = name(block);
+        BlockModelBuilder model = models().getBuilder(name)
+                .parent(new ModelFile.UncheckedModelFile("block/block"))
+                .renderType("cutout")
+                .ao(false)
+                .guiLight(BlockModel.GuiLight.FRONT)
+                .texture("particle", modLoc("block/" + name + "_side"))
+                .texture("side", modLoc("block/" + name + "_side"))
+                .texture("top", modLoc("block/" + name + "_top"))
+                .texture("bottom", modLoc("block/" + name + "_bottom"))
+                .texture("inner", modLoc("block/" + name + "_inner"));
+
+        model.element().from(0, 0, 0).to(16, 2, 16)
+                .allFaces((direction, face) -> face.texture(direction.getAxis().isVertical() ? "#bottom" : "#side")).end();
+        model.element().from(0, 2, 0).to(wall, height, 16)
+                .allFaces((direction, face) -> face.texture(direction == Direction.UP ? "#top" : direction == Direction.EAST ? "#inner" : "#side")).end();
+        model.element().from(16 - wall, 2, 0).to(16, height, 16)
+                .allFaces((direction, face) -> face.texture(direction == Direction.UP ? "#top" : direction == Direction.WEST ? "#inner" : "#side")).end();
+        model.element().from(wall, 2, 0).to(16 - wall, height, wall)
+                .allFaces((direction, face) -> face.texture(direction == Direction.UP ? "#top" : direction == Direction.SOUTH ? "#inner" : "#side")).end();
+        model.element().from(wall, 2, 16 - wall).to(16 - wall, height, 16)
+                .allFaces((direction, face) -> face.texture(direction == Direction.UP ? "#top" : direction == Direction.NORTH ? "#inner" : "#side")).end();
+
+        this.simpleBlock(block.get(), model);
+        this.simpleBlockItem(block.get(), model);
+    }
+
+    private void registerFoundryChannel() {
+        String name = name(NtmBlocks.FOUNDRY_CHANNEL);
+        BlockModelBuilder itemModel = models().getBuilder(name)
+                .parent(new ModelFile.UncheckedModelFile("block/block"))
+                .renderType("cutout")
+                .ao(false)
+                .guiLight(BlockModel.GuiLight.FRONT)
+                .texture("particle", modLoc("block/foundry_channel_side"))
+                .texture("side", modLoc("block/foundry_channel_side"))
+                .texture("inner", modLoc("block/foundry_channel_inner"))
+                .texture("top", modLoc("block/foundry_channel_top"))
+                .texture("bottom", modLoc("block/foundry_channel_bottom"));
+        this.addFoundryChannelBottom(itemModel, 5, 5, 11, 11);
+        this.addFoundryChannelBottom(itemModel, 5, 0, 11, 5);
+        this.addFoundryChannelBottom(itemModel, 11, 5, 16, 11);
+        this.addFoundryChannelBottom(itemModel, 5, 11, 11, 16);
+        this.addFoundryChannelBottom(itemModel, 0, 5, 5, 11);
+        this.addFoundryChannelWallX(itemModel, 5, 0, 6, 5, false);
+        this.addFoundryChannelWallX(itemModel, 10, 0, 11, 5, true);
+        this.addFoundryChannelWallZ(itemModel, 11, 5, 16, 6, false);
+        this.addFoundryChannelWallZ(itemModel, 11, 10, 16, 11, true);
+        this.addFoundryChannelWallX(itemModel, 5, 11, 6, 16, false);
+        this.addFoundryChannelWallX(itemModel, 10, 11, 11, 16, true);
+        this.addFoundryChannelWallZ(itemModel, 0, 5, 5, 6, false);
+        this.addFoundryChannelWallZ(itemModel, 0, 10, 5, 11, true);
+        this.addFoundryChannelPost(itemModel, 5, 5);
+        this.addFoundryChannelPost(itemModel, 10, 5);
+        this.addFoundryChannelPost(itemModel, 5, 10);
+        this.addFoundryChannelPost(itemModel, 10, 10);
+
+        BlockModelBuilder center = models().getBuilder(name + "_center")
+                .parent(new ModelFile.UncheckedModelFile("block/block"))
+                .renderType("cutout")
+                .ao(false)
+                .texture("particle", modLoc("block/foundry_channel_side"))
+                .texture("side", modLoc("block/foundry_channel_side"))
+                .texture("inner", modLoc("block/foundry_channel_inner"))
+                .texture("top", modLoc("block/foundry_channel_top"))
+                .texture("bottom", modLoc("block/foundry_channel_bottom"));
+        this.addFoundryChannelBottom(center, 5, 5, 11, 11);
+        this.addFoundryChannelPost(center, 5, 5);
+        this.addFoundryChannelPost(center, 10, 5);
+        this.addFoundryChannelPost(center, 5, 10);
+        this.addFoundryChannelPost(center, 10, 10);
+
+        BlockModelBuilder arm = models().getBuilder(name + "_arm")
+                .parent(new ModelFile.UncheckedModelFile("block/block"))
+                .renderType("cutout")
+                .ao(false)
+                .texture("particle", modLoc("block/foundry_channel_side"))
+                .texture("side", modLoc("block/foundry_channel_side"))
+                .texture("inner", modLoc("block/foundry_channel_inner"))
+                .texture("top", modLoc("block/foundry_channel_top"))
+                .texture("bottom", modLoc("block/foundry_channel_bottom"));
+        this.addFoundryChannelBottom(arm, 5, 0, 11, 5);
+        this.addFoundryChannelWallX(arm, 5, 0, 6, 5, false);
+        this.addFoundryChannelWallX(arm, 10, 0, 11, 5, true);
+
+        BlockModelBuilder closed = models().getBuilder(name + "_closed")
+                .parent(new ModelFile.UncheckedModelFile("block/block"))
+                .renderType("cutout")
+                .ao(false)
+                .texture("particle", modLoc("block/foundry_channel_side"))
+                .texture("side", modLoc("block/foundry_channel_side"))
+                .texture("inner", modLoc("block/foundry_channel_inner"))
+                .texture("top", modLoc("block/foundry_channel_top"));
+        this.addFoundryChannelWallZ(closed, 6, 5, 10, 6, false);
+
+        MultiPartBlockStateBuilder builder = this.getMultipartBuilder(NtmBlocks.FOUNDRY_CHANNEL.get());
+        builder.part().modelFile(center).addModel().end();
+        builder.part().modelFile(arm).addModel().condition(FoundryChannelBlock.NORTH, true).end();
+        builder.part().modelFile(arm).rotationY(90).addModel().condition(FoundryChannelBlock.EAST, true).end();
+        builder.part().modelFile(arm).rotationY(180).addModel().condition(FoundryChannelBlock.SOUTH, true).end();
+        builder.part().modelFile(arm).rotationY(270).addModel().condition(FoundryChannelBlock.WEST, true).end();
+        builder.part().modelFile(closed).addModel().condition(FoundryChannelBlock.NORTH, false).end();
+        builder.part().modelFile(closed).rotationY(90).addModel().condition(FoundryChannelBlock.EAST, false).end();
+        builder.part().modelFile(closed).rotationY(180).addModel().condition(FoundryChannelBlock.SOUTH, false).end();
+        builder.part().modelFile(closed).rotationY(270).addModel().condition(FoundryChannelBlock.WEST, false).end();
+        this.simpleBlockItem(NtmBlocks.FOUNDRY_CHANNEL.get(), itemModel);
+    }
+
+    private void addFoundryChannelBottom(BlockModelBuilder model, int minX, int minZ, int maxX, int maxZ) {
+        model.element().from(minX, 0, minZ).to(maxX, 2, maxZ)
+                .face(Direction.DOWN).texture("#bottom").end()
+                .face(Direction.UP).texture("#bottom").end()
+                .face(Direction.NORTH).texture("#side").end()
+                .face(Direction.SOUTH).texture("#side").end()
+                .face(Direction.WEST).texture("#side").end()
+                .face(Direction.EAST).texture("#side").end()
+                .end();
+    }
+
+    private void addFoundryChannelWallX(BlockModelBuilder model, int minX, int minZ, int maxX, int maxZ, boolean innerWest) {
+        model.element().from(minX, 2, minZ).to(maxX, 8, maxZ)
+                .face(Direction.DOWN).texture("#side").end()
+                .face(Direction.UP).texture("#top").end()
+                .face(Direction.NORTH).texture("#side").end()
+                .face(Direction.SOUTH).texture("#side").end()
+                .face(Direction.WEST).texture(innerWest ? "#inner" : "#side").end()
+                .face(Direction.EAST).texture(innerWest ? "#side" : "#inner").end()
+                .end();
+    }
+
+    private void addFoundryChannelWallZ(BlockModelBuilder model, int minX, int minZ, int maxX, int maxZ, boolean innerNorth) {
+        model.element().from(minX, 2, minZ).to(maxX, 8, maxZ)
+                .face(Direction.DOWN).texture("#side").end()
+                .face(Direction.UP).texture("#top").end()
+                .face(Direction.NORTH).texture(innerNorth ? "#inner" : "#side").end()
+                .face(Direction.SOUTH).texture(innerNorth ? "#side" : "#inner").end()
+                .face(Direction.WEST).texture("#side").end()
+                .face(Direction.EAST).texture("#side").end()
+                .end();
+    }
+
+    private void addFoundryChannelPost(BlockModelBuilder model, int minX, int minZ) {
+        model.element().from(minX, 2, minZ).to(minX + 1, 8, minZ + 1)
+                .face(Direction.DOWN).texture("#side").end()
+                .face(Direction.UP).texture("#top").end()
+                .face(Direction.NORTH).texture("#inner").end()
+                .face(Direction.SOUTH).texture("#inner").end()
+                .face(Direction.WEST).texture("#inner").end()
+                .face(Direction.EAST).texture("#inner").end()
+                .end();
+    }
+
+    private void registerFoundryOutlet(DeferredBlock<? extends Block> block, String textureName) {
+        BlockModelBuilder model = models().getBuilder(name(block))
+                .parent(new ModelFile.UncheckedModelFile("block/block"))
+                .renderType("cutout")
+                .ao(false)
+                .guiLight(BlockModel.GuiLight.FRONT)
+                .texture("particle", modLoc("block/" + textureName + "_side"))
+                .texture("bottom", modLoc("block/" + textureName + "_bottom"))
+                .texture("top", modLoc("block/" + textureName + "_top"))
+                .texture("front", modLoc("block/" + textureName + "_front"))
+                .texture("side", modLoc("block/" + textureName + "_side"))
+                .texture("inner", modLoc("block/" + textureName + "_inner"));
+        model.element().from(5, 0, 10).to(11, 2, 16)
+                .face(Direction.DOWN).texture("#bottom").end()
+                .face(Direction.UP).texture("#bottom").end()
+                .face(Direction.NORTH).texture("#front").end()
+                .face(Direction.SOUTH).texture("#side").end()
+                .face(Direction.WEST).texture("#side").end()
+                .face(Direction.EAST).texture("#side").end()
+                .end();
+        model.element().from(5, 2, 10).to(6, 8, 16)
+                .face(Direction.DOWN).texture("#side").end()
+                .face(Direction.UP).texture("#top").end()
+                .face(Direction.NORTH).texture("#front").end()
+                .face(Direction.SOUTH).texture("#inner").end()
+                .face(Direction.WEST).texture("#side").end()
+                .face(Direction.EAST).texture("#inner").end()
+                .end();
+        model.element().from(10, 2, 10).to(11, 8, 16)
+                .face(Direction.DOWN).texture("#side").end()
+                .face(Direction.UP).texture("#top").end()
+                .face(Direction.NORTH).texture("#front").end()
+                .face(Direction.SOUTH).texture("#inner").end()
+                .face(Direction.WEST).texture("#inner").end()
+                .face(Direction.EAST).texture("#side").end()
+                .end();
+
+        BlockModelBuilder lock = models().getBuilder(name(block) + "_closed")
+                .parent(new ModelFile.UncheckedModelFile("block/block"))
+                .renderType("cutout")
+                .ao(false)
+                .texture("particle", modLoc("block/foundry_outlet_lock"))
+                .texture("lock", modLoc("block/foundry_outlet_lock"));
+        lock.element().from(6, 1, 15.99F).to(10, 8, 16)
+                .face(Direction.NORTH).texture("#lock").end()
+                .face(Direction.SOUTH).texture("#lock").end()
+                .end();
+
+        MultiPartBlockStateBuilder builder = this.getMultipartBuilder(block.get());
+        for (Direction direction : Direction.Plane.HORIZONTAL) {
+            int rotation = ((int) direction.toYRot() + 180) % 360;
+            builder.part().modelFile(model).rotationY(rotation).addModel()
+                    .condition(FoundryOutletBlock.FACING, direction).end();
+            builder.part().modelFile(lock).rotationY(rotation).addModel()
+                    .condition(FoundryOutletBlock.FACING, direction)
+                    .condition(FoundryOutletBlock.CLOSED, true).end();
+        }
+        this.simpleBlockItem(block.get(), model);
+    }
+
+    private void registerMoltenSlag() {
+        this.getVariantBuilder(NtmBlocks.MOLTEN_SLAG.get()).forAllStates(state -> {
+            int layers = state.getValue(DynamicSlagBlock.LAYERS);
+            ModelFile model = models().getBuilder("molten_slag_" + layers)
+                    .parent(new ModelFile.UncheckedModelFile("block/block"))
+                    .texture("particle", modLoc("block/slag"))
+                    .texture("all", modLoc("block/slag"))
+                    .renderType("cutout")
+                    .element().from(0, 0, 0).to(16, layers, 16)
+                    .allFaces((direction, face) -> face.texture("#all").tintindex(0)).end();
+            return ConfiguredModel.builder().modelFile(model).build();
+        });
     }
 
     private void layeringBlock(Block block, ResourceLocation texture, String modelPrefix) {

@@ -135,7 +135,15 @@ public class NtmBlockTagProvider extends BlockTagsProvider {
                         NtmBlocks.MACHINE_BATTERY_SOCKET.get(),
                         NtmBlocks.LAUNCH_PAD.get(),
                         NtmBlocks.SOYUZ_LAUNCHER.get(),
-                        NtmBlocks.MACHINE_SATLINKER.get()
+                        NtmBlocks.MACHINE_SATLINKER.get(),
+                        NtmBlocks.MACHINE_CRUCIBLE.get(),
+                        NtmBlocks.FOUNDRY_MOLD.get(),
+                        NtmBlocks.FOUNDRY_BASIN.get(),
+                        NtmBlocks.FOUNDRY_CHANNEL.get(),
+                        NtmBlocks.FOUNDRY_TANK.get(),
+                        NtmBlocks.FOUNDRY_OUTLET.get(),
+                        NtmBlocks.FOUNDRY_SLAGTAP.get(),
+                        NtmBlocks.MOLTEN_SLAG.get()
                 );
 
         this.tag(BlockTags.MINEABLE_WITH_AXE)

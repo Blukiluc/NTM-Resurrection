@@ -35,6 +35,9 @@ public class NtmLanguageProvider extends LanguageProvider {
 
         // Auto-generated material item translations from Mats.java
         for (com.hbm.inventory.material.NTMMaterial mat : com.hbm.inventory.material.Mats.orderedList) {
+            if (mat.getTranslationKey().startsWith("hbmmat.")) {
+                this.add(mat.getTranslationKey(), title(mat.names[0]));
+            }
             for (com.hbm.inventory.material.MaterialShapes shape : mat.autogen) {
                 String itemName = shape.itemNameFor(mat);
                 if (itemName == null) continue;
@@ -505,6 +508,9 @@ public class NtmLanguageProvider extends LanguageProvider {
         this.add(NtmItems.PLATE_ARMOR_DNT.get(), "DNT Armor Plating");
 
         this.add(NtmItems.SCRAP, "Scrap");
+        this.add(NtmItems.MOLD_BLANK, "Blank Casting Mold");
+        this.add(NtmItems.MOLD_INGOT, "Ingot Casting Mold");
+        this.add(NtmItems.MOLD_BLOCK, "Block Casting Mold");
 
         this.add(NtmItems.PELLET_RTG, "Plutonium-238 RTG Pellet");
 
@@ -1166,6 +1172,15 @@ public class NtmLanguageProvider extends LanguageProvider {
         this.add(NtmBlocks.CRATE_STEEL, "Steel Crate");
         this.add(NtmBlocks.CRATE_DESH, "Desh Crate");
 
+        this.add(NtmBlocks.MACHINE_CRUCIBLE, "Crucible");
+        this.add(NtmBlocks.FOUNDRY_MOLD, "Casting Mold Basin");
+        this.add(NtmBlocks.FOUNDRY_BASIN, "Casting Basin");
+        this.add(NtmBlocks.FOUNDRY_CHANNEL, "Foundry Channel");
+        this.add(NtmBlocks.FOUNDRY_TANK, "Foundry Tank");
+        this.add(NtmBlocks.FOUNDRY_OUTLET, "Foundry Outlet");
+        this.add(NtmBlocks.FOUNDRY_SLAGTAP, "Foundry Slag Tap");
+        this.add(NtmBlocks.MOLTEN_SLAG.get().getDescriptionId(), "Molten Slag");
+
         this.add(NtmBlocks.DECONTAMINATOR, "Player Decontaminator");
 
         this.add(NtmBlocks.PWR_CONTROLLER, "PWR Controller");
@@ -1391,6 +1406,8 @@ public class NtmLanguageProvider extends LanguageProvider {
         this.add("container.machine_gas_centrifuge", "Gas Centrifuge");
         this.add("container.machine_soldering_station", "Soldering Station");
         this.add("container.machine_arc_welder", "Arc Welder");
+        this.add("container.machine_crucible", "Crucible");
+        this.add("container.machine_crucible.empty", "Empty");
         this.add("container.machine_oil_derrick", "Oil Derrick");
         this.add("container.machine_pumpjack", "Pumpjack");
         this.add("container.machine_fracking_tower", "H. F. T.");
@@ -1420,6 +1437,19 @@ public class NtmLanguageProvider extends LanguageProvider {
         this.add("container.recipe.output", "Output");
         this.add("container.recipe.at_pressure", "at");
         this.add("container.recipe.set_recipe", "Click to set recipe");
+        this.add("crucible.steel", "Steel Production");
+        this.add("crucible.redcopper", "Red Copper Production");
+        this.add("crucible.hss", "High-Speed Steel Production");
+        this.add("crucible.ferro", "Ferrouranium Production");
+        this.add("crucible.tcalloy", "Technetium Steel Production");
+        this.add("crucible.cdalloy", "Cadmium Steel Production");
+        this.add("crucible.bbronze", "Bismuth Bronze Production");
+        this.add("crucible.abronze", "Arsenic Bronze Production");
+        this.add("crucible.bscco", "BSCCO Production");
+        this.add("crucible.hematite", "Iron Production from Hematite");
+        this.add("crucible.malachite", "Copper Production from Malachite");
+        this.add("crucible.magtung", "Magnetized Tungsten Production");
+        this.add("crucible.cmb", "CMB Steel Production");
         this.add("block.hbm.heater_firebox.desc", "Burns solid fuel to produce heat.");
         this.add("tile.heater_firebox.desc", "Burns solid fuel to produce heat.");
         this.add("block.hbm.heater_oven.desc", "Burns solid fuel to produce heat.$Accepts heat from the bottom with 50%% efficiency.");
@@ -1434,6 +1464,11 @@ public class NtmLanguageProvider extends LanguageProvider {
         this.add("chat.catalytic_cracking_tower.changed", "Changed type to ");
         this.add("chat.fraction_tower.bottom_only", "You can only change the type in the bottom segment!");
         this.add("chat.fraction_tower.changed", "Changed type to %s!");
+        this.add("chat.foundry_outlet.closed", "Foundry outlet closed");
+        this.add("chat.foundry_outlet.open", "Foundry outlet open");
+        this.add("foundry.filter", "Filter: %s");
+        this.add("foundry.inverted", "Redstone inverted");
+        this.add("foundry.invert_filter", "Filter inverted");
 
 
         // COMMANDS //
@@ -1492,6 +1527,16 @@ public class NtmLanguageProvider extends LanguageProvider {
     private static String capitalize(String s) {
         if (s == null || s.isEmpty()) return s;
         return Character.toUpperCase(s.charAt(0)) + s.substring(1).toLowerCase(Locale.US);
+    }
+
+    private static String title(String value) {
+        String[] words = value.split("_");
+        StringBuilder result = new StringBuilder();
+        for (String word : words) {
+            if (!result.isEmpty()) result.append(' ');
+            result.append(capitalize(word));
+        }
+        return result.toString();
     }
 //yoooooo
     /** Returns the display-friendly singular form of a shape's tag segment (e.g. "ingots" -> "Ingot") */
