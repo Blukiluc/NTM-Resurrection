@@ -1,4 +1,4 @@
-// 1.21.1	2026-08-09T16:40:12.1877447	Loot Tables
+// 1.21.1	2026-08-12T00:25:27.2167537	Loot Tables
 4dea21baadd671e0fc70004833537e05da50d388 data/hbm/loot_table/blocks/asphalt.json
 fb8bbca081abce158c2e2c99aad65884a8ac42bc data/hbm/loot_table/blocks/asphalt_light.json
 ac4aa7fb9a18c76eab92c1ad6d77a20da10a52ed data/hbm/loot_table/blocks/balefire.json
@@ -96,6 +96,7 @@ dcb6a74a41e7c49b5d5a4abec0145c1a75ebe162 data/hbm/loot_table/blocks/machine_comp
 f212856153e70149dd3c87904d568ebf9b730eb2 data/hbm/loot_table/blocks/machine_diesel.json
 69ec76dfa73157f05b1df9bef4081749bb5eaad6 data/hbm/loot_table/blocks/machine_drain.json
 4a5e6609075b633ac6ea6e311ffe47410ebc8979 data/hbm/loot_table/blocks/machine_electric_press.json
+8c2f9d890b5964c3a4549accd10fff965bf992b8 data/hbm/loot_table/blocks/machine_fel.json
 6b4aeb33c76085c8052563804d44c19d08176720 data/hbm/loot_table/blocks/machine_fluid_tank.json
 668a95619171cb8bbd680bd095a4814f0e64f63d data/hbm/loot_table/blocks/machine_fracking_tower.json
 dc121c4806dbba47b3feb0c9d17570c21ea3af51 data/hbm/loot_table/blocks/machine_fraction_tower.json

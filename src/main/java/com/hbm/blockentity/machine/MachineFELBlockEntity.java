@@ -5,6 +5,7 @@ import com.hbm.blockentity.MachineBaseBlockEntity;
 import com.hbm.blockentity.NtmBlockEntityTypes;
 import com.hbm.blocks.DummyableBlock;
 import com.hbm.blocks.NtmBlocks;
+import com.hbm.inventory.menus.MachineFELMenu;
 import com.hbm.lib.Library;
 import com.hbm.registry.NtmSoundEvents;
 import com.hbm.sound.AudioWrapper;
@@ -186,7 +187,6 @@ public class MachineFELBlockEntity extends MachineBaseBlockEntity implements IEn
                             break;
                         }
 
-                        // TODO: getExplosionResistance signature differs in 1.21.1 - approximate with default resistance for now.
                         float hardness = state.getBlock().getExplosionResistance();
                         if(hardness < 75 && level.getRandom().nextInt(5) == 0) {
                             level.playSound(null, bx + 0.5, by + 0.5, bz + 0.5, SoundEvents.FIRE_EXTINGUISH, SoundSource.BLOCKS, 1.0F, 1.0F);
@@ -243,11 +243,10 @@ public class MachineFELBlockEntity extends MachineBaseBlockEntity implements IEn
         }
     }
 
-//    @Override
-//    public AudioWrapper createAudioLoop() {
-//        // TODO: NtmSoundEvents.FEL_LOOP is not registered yet - add it alongside the other machine loop sounds.
-//        return AudioWrapper.getLoopedSound(NtmSoundEvents.FEL_LOOP.get(), SoundSource.BLOCKS, this, 2.0F, 10F, 2.0F, 20);
-//    }
+    @Override
+    public AudioWrapper createAudioLoop() {
+        return AudioWrapper.getLoopedSound(NtmSoundEvents.FEL_LOOP.get(), SoundSource.BLOCKS, this, 2.0F, 10F, 2.0F, 20);
+    }
 
     @Override
     public void onChunkUnloaded() {
@@ -320,7 +319,6 @@ public class MachineFELBlockEntity extends MachineBaseBlockEntity implements IEn
 
     @Override
     public AbstractContainerMenu createMenu(int id, Inventory inventory, Player player) {
-        // TODO: no MachineFELMenu ported yet - GUI/container out of scope for this pass.
-        return null;
+        return new MachineFELMenu(id, inventory, this);
     }
 }

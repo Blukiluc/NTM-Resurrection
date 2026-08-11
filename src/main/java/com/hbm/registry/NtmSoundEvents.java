@@ -57,6 +57,7 @@ public class NtmSoundEvents {
     public static final DeferredHolder<SoundEvent, SoundEvent> ASSEMBLER_START = reg("block.assembler_start"); // BLOCKS CATEGORY
     public static final DeferredHolder<SoundEvent, SoundEvent> ASSEMBLER_STOP = reg("block.assembler_stop"); // BLOCKS CATEGORY
     public static final DeferredHolder<SoundEvent, SoundEvent> CHEMICAL_PLANT_LOOP = reg("block.chemical_plant"); // BLOCKS CATEGORY
+    public static final DeferredHolder<SoundEvent, SoundEvent> FEL_LOOP = reg("block.fel"); // BLOCKS CATEGORY
     public static final DeferredHolder<SoundEvent, SoundEvent> PRESS_OPERATE = reg("block.press"); // BLOCKS CATEGORY
     public static final DeferredHolder<SoundEvent, SoundEvent> CENTRIFUGE_LOOP = reg("block.centrifuge_loop"); // BLOCKS CATEGORY
     public static final DeferredHolder<SoundEvent, SoundEvent> METAL_IMPACT = reg("block.metal_impact"); // BLOCKS CATEGORY

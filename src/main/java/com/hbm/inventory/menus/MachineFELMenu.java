@@ -17,10 +17,10 @@ public class MachineFELMenu extends MenuBase<MachineFELBlockEntity> {
         super(NtmMenuTypes.FEL.get(), be, id);
 
         // Battery
-        this.addSlot(new SlotNonRetarded(be, 0, 152, 81));
+        this.addSlot(new SlotNonRetarded(be, 0, 182, 144));
         // Crystal
-        this.addSlot(new SlotNonRetarded(be, 1, 35, 126));
+        this.addSlot(new SlotNonRetarded(be, 1, 141, 23));
 
-        this.playerInv(inventory, 8, 174);
+        this.playerInv(inventory, 8, 83);
     }
 }

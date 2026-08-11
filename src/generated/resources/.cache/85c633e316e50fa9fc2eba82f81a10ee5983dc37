@@ -1,4 +1,4 @@
-// 1.21.1	2026-08-09T16:40:12.1810356	Block States: hbm
+// 1.21.1	2026-08-12T00:25:27.2116728	Block States: hbm
 771df07d065b33c7dcf62cfb69b5cd3a3cb4feed assets/hbm/blockstates/asphalt.json
 c0f05f08a475704e80a5d657d494bf5a829fab8f assets/hbm/blockstates/asphalt_light.json
 8c6c51f054fa20e59275bf5c7c77e28e7790b34c assets/hbm/blockstates/balefire.json
@@ -97,6 +97,7 @@ f572122bbb101e95bda13b1a4d199134b2a0773a assets/hbm/blockstates/machine_crystall
 3af3cb3afd2add26c67ec80850dfeacdfc4a8ed1 assets/hbm/blockstates/machine_diesel.json
 f88d7e0264fc4ed96c5a668e57ffa8358239fcc1 assets/hbm/blockstates/machine_drain.json
 fb2645b4329ab725059124af528fb28a5288501a assets/hbm/blockstates/machine_electric_press.json
+a7bb625719da81a9740bf28b969cf8a7f79faf19 assets/hbm/blockstates/machine_fel.json
 3676d1d17f1f5f5de079aaa77745e1275db6f621 assets/hbm/blockstates/machine_fluid_tank.json
 9f869570580c9265f10e061606f5964b72933433 assets/hbm/blockstates/machine_fracking_tower.json
 b1be67754adc2d2b60eba3baa6bb0609dfc33ccf assets/hbm/blockstates/machine_fraction_tower.json
@@ -319,6 +320,7 @@ f55d5c93f0423e66d4aae3b691b0bb51957b9d98 assets/hbm/models/block/machine_crystal
 f55d5c93f0423e66d4aae3b691b0bb51957b9d98 assets/hbm/models/block/machine_diesel_particle.json
 f55d5c93f0423e66d4aae3b691b0bb51957b9d98 assets/hbm/models/block/machine_drain_particle.json
 f55d5c93f0423e66d4aae3b691b0bb51957b9d98 assets/hbm/models/block/machine_electric_press_particle.json
+f55d5c93f0423e66d4aae3b691b0bb51957b9d98 assets/hbm/models/block/machine_fel_particle.json
 f55d5c93f0423e66d4aae3b691b0bb51957b9d98 assets/hbm/models/block/machine_fluid_tank_particle.json
 f55d5c93f0423e66d4aae3b691b0bb51957b9d98 assets/hbm/models/block/machine_fracking_tower_particle.json
 f55d5c93f0423e66d4aae3b691b0bb51957b9d98 assets/hbm/models/block/machine_fraction_tower_particle.json
@@ -538,6 +540,7 @@ b5cb531f9c015e4129f955f3e0b582e62505b659 assets/hbm/models/item/gravel_diamond.j
 1ae5a980018cda4e68cafcf4ce293349827b23ab assets/hbm/models/item/machine_diesel.json
 1ae5a980018cda4e68cafcf4ce293349827b23ab assets/hbm/models/item/machine_drain.json
 1ae5a980018cda4e68cafcf4ce293349827b23ab assets/hbm/models/item/machine_electric_press.json
+1ae5a980018cda4e68cafcf4ce293349827b23ab assets/hbm/models/item/machine_fel.json
 1ae5a980018cda4e68cafcf4ce293349827b23ab assets/hbm/models/item/machine_fluid_tank.json
 1ae5a980018cda4e68cafcf4ce293349827b23ab assets/hbm/models/item/machine_fracking_tower.json
 1ae5a980018cda4e68cafcf4ce293349827b23ab assets/hbm/models/item/machine_fraction_tower.json

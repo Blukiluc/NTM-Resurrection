@@ -47,7 +47,7 @@ public class MachineFELBlock extends DummyableBlock {
         return this.standardOpenBehavior(level, pos, player);
     }
 
-    @Override public int[] getDimensions() { return new int[] {2, 0, 1, 1, 1, 1}; }
+    @Override public int[] getDimensions() { return new int[] {2, 0, 2, 3, 1, 1}; }
     @Override public int getOffset() { return 1; }
 
     @Override

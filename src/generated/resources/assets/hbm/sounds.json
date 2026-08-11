@@ -57,6 +57,11 @@
       "hbm:block/engine"
     ]
   },
+  "block.fel": {
+    "sounds": [
+      "hbm:block/fel"
+    ]
+  },
   "block.fensu_hum": {
     "sounds": [
       "hbm:block/fensu_hum"

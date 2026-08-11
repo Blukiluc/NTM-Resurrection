@@ -130,6 +130,7 @@
   "block.hbm.machine_diesel": "Diesel Generator",
   "block.hbm.machine_drain": "Drainage Pipe",
   "block.hbm.machine_electric_press": "Electric Press",
+  "block.hbm.machine_fel": "FEL",
   "block.hbm.machine_fluid_tank": "Tank",
   "block.hbm.machine_fracking_tower": "Hydraulic Fracking Tower",
   "block.hbm.machine_fraction_tower": "Fractioning Tower",

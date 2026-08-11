@@ -2,17 +2,11 @@ package com.hbm.inventory.screens;
 
 import com.hbm.blockentity.machine.MachineFELBlockEntity;
 import com.hbm.inventory.menus.MachineFELMenu;
-import com.hbm.inventory.recipes.loader.GenericRecipe;
-import com.hbm.items.NtmItems;
 import com.hbm.main.NuclearTechMod;
-import com.mojang.blaze3d.systems.RenderSystem;
-import net.minecraft.ChatFormatting;
 import net.minecraft.client.gui.GuiGraphics;
 import net.minecraft.network.chat.Component;
 import net.minecraft.resources.ResourceLocation;
 import net.minecraft.world.entity.player.Inventory;
-import net.minecraft.world.inventory.Slot;
-import net.minecraft.world.item.ItemStack;
 
 public class MachineFELScreen extends InfoScreen<MachineFELMenu> {
 
@@ -33,7 +27,7 @@ public class MachineFELScreen extends InfoScreen<MachineFELMenu> {
     public void render(GuiGraphics guiGraphics, int mouseX, int mouseY, float partialTicks) {
         super.render(guiGraphics, mouseX, mouseY, partialTicks);
 
-        this.drawElectricityInfo(guiGraphics, mouseX, mouseY, this.leftPos + 152, this.topPos + 18, 16, 61, be.power, be.maxPower);
+        this.drawElectricityInfo(guiGraphics, mouseX, mouseY, this.leftPos + 182, this.topPos + 27, 16, 113, be.power, be.maxPower);
 
         this.renderTooltip(guiGraphics, mouseX, mouseY);
     }
@@ -53,8 +47,8 @@ public class MachineFELScreen extends InfoScreen<MachineFELMenu> {
     protected void renderBg(GuiGraphics guiGraphics, float partialTicks, int mouseX, int mouseY) {
         guiGraphics.blit(TEXTURE, this.leftPos, this.topPos, 0, 0, imageWidth, imageHeight);
 
-        int p = (int) (be.power * 61 / be.maxPower);
-        guiGraphics.blit(TEXTURE, this.leftPos + 152, this.topPos + 79 - p, 176, 61 - p, 16, p);
+        int p = (int) (be.power * 113 / be.maxPower);
+        guiGraphics.blit(TEXTURE, this.leftPos + 182, this.topPos + 27 - p, 203, 17 - p, 16, p);
 
     }
 }

@@ -1,13 +1,11 @@
 package com.hbm.render.blockentity;
 
-import com.hbm.blockentity.machine.MachineChemicalPlantBlockEntity;
 import com.hbm.blockentity.machine.MachineFELBlockEntity;
 import com.hbm.blocks.DummyableBlock;
 import com.hbm.blocks.NtmBlocks;
 import com.hbm.main.ResourceManager;
 import com.hbm.render.item.ItemRenderBase;
 import com.hbm.render.util.RenderContext;
-import com.hbm.util.BobMathUtil;
 import com.mojang.blaze3d.vertex.PoseStack;
 import com.mojang.math.Axis;
 import net.minecraft.client.renderer.BlockEntityWithoutLevelRenderer;
@@ -65,8 +63,9 @@ public class RenderFEL extends BlockEntityRendererNT<MachineFELBlockEntity> impl
         return new ItemRenderBase() {
             @Override
             public void renderInventory(ItemStack stack, MultiBufferSource buffer) {
-                RenderContext.translate(0F, -2.75F, 0F);
-                RenderContext.scale(4.5F, 4.5F, 4.5F);
+                RenderContext.translate(0F, 0F, 0F);
+                RenderContext.scale(3F, 3F, 3F);
+                RenderContext.mulPose(Axis.YP.rotationDegrees(180F));
             }
 
             @Override

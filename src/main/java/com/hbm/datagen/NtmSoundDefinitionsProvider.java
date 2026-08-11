@@ -186,6 +186,9 @@ public class NtmSoundDefinitionsProvider extends SoundDefinitionsProvider {
         this.add(NtmSoundEvents.CENTRIFUGE_LOOP, SoundDefinition.definition()
                 .with(sound(NuclearTechMod.MODID + ":block/centrifuge_loop"))
         );
+        this.add(NtmSoundEvents.FEL_LOOP, SoundDefinition.definition()
+                .with(sound(NuclearTechMod.MODID + ":block/fel"))
+        );
         this.add(NtmSoundEvents.METAL_IMPACT, SoundDefinition.definition()
                 .with(
                         sound(NuclearTechMod.MODID + ":block/metal_impact1"),
