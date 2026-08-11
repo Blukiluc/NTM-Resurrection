@@ -85,6 +85,7 @@ public class NtmItemModelProvider extends ItemModelProvider {
         this.basicItem(NtmItems.INGOT_LEAD.get());
         this.basicItem(NtmItems.INGOT_BISMUTH.get());
         this.basicItem(NtmItems.INGOT_ARSENIC.get());
+        this.basicItem(NtmItems.INGOT_ASBESTOS.get());
         this.basicItem(NtmItems.INGOT_CALCIUM.get());
         this.basicItem(NtmItems.INGOT_CADMIUM.get());
         this.basicItem(NtmItems.INGOT_TANTALIUM.get());

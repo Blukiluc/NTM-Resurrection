@@ -1,0 +1,31 @@
+{
+  "values": {
+    "#hbm:is_coke": {
+      "burn_time": 3200
+    },
+    "hbm:lignite": {
+      "burn_time": 1200
+    },
+    "hbm:rocket_fuel": {
+      "burn_time": 6400
+    },
+    "hbm:solid_fuel": {
+      "burn_time": 3200
+    },
+    "hbm:solid_fuel_bf": {
+      "burn_time": 12800
+    },
+    "hbm:solid_fuel_presto": {
+      "burn_time": 9600
+    },
+    "hbm:solid_fuel_presto_bf": {
+      "burn_time": 38400
+    },
+    "hbm:solid_fuel_presto_triplet": {
+      "burn_time": 28800
+    },
+    "hbm:solid_fuel_presto_triplet_bf": {
+      "burn_time": 115200
+    }
+  }
+}

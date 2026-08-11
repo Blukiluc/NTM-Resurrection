@@ -1,4 +1,4 @@
-// 1.21.1	2026-08-10T17:03:33.1017841	Item Models: hbm
+// 1.21.1	2026-08-11T10:29:48.8796933	Item Models: hbm
 c4e09d2d0fd2bef45dc51c8da0c70bab4652e4b1 assets/hbm/models/item/acetylene_torch.json
 6c4e747554da913978325893b69ca977467a483c assets/hbm/models/item/ammo_secret.json
 99443ea6db20add27ff0bd97f72d22bbf1493cd1 assets/hbm/models/item/ammo_secret_0.json
@@ -400,6 +400,7 @@ af9c481381addbdc8c718478d4dcc57551d5cd8e assets/hbm/models/item/ingot_americium_
 d8730acdd70d27cac97219e6a6f4fd3fe23e15b1 assets/hbm/models/item/ingot_am_mix.json
 65054f8c9a3ee11030ce5f91b3fe601370741437 assets/hbm/models/item/ingot_arsenic.json
 303052bba686043fd5ef51d84f25d3af4fcbda8e assets/hbm/models/item/ingot_arsenic_bronze.json
+1588ecbc5ed38578fbb9dd92413a6a41bff24824 assets/hbm/models/item/ingot_asbestos.json
 7aa70f62cfcc052cf1b53eced500cd07f6afb00c assets/hbm/models/item/ingot_au198.json
 b9e526794619335ba39efc7609f1ea80c6a4a252 assets/hbm/models/item/ingot_australium.json
 646791dd4081512bd96ab93ca00dd44f2030816c assets/hbm/models/item/ingot_bakelite.json

@@ -11,7 +11,7 @@ import net.minecraft.world.level.block.Block;
 
 // Basically new ore dict and its vanilla
 // Registration in datagens
-@Deprecated
+
 public class NtmTags {
 
     public static class Blocks {
@@ -39,5 +39,13 @@ public class NtmTags {
         private static TagKey<Item> commonTag(String name) {
             return ItemTags.create(ResourceLocation.fromNamespaceAndPath("c", name));
         }
+        // LE FUELS
+        public static final TagKey<Item> COKE = crateTag("is_coke");
+        public static final TagKey<Item> SOLID_FUEL = crateTag("is_solid_fuel");
+        public static final TagKey<Item> PRESTO_LOG = crateTag("is_presto");
+
+
+
+
     }
 }

@@ -72,6 +72,9 @@ public class ModuleBurnTime {
         if(path.contains("coal")) return mod[MOD_COAL];
         if(path.contains("log")) return mod[MOD_LOG];
         if(path.contains("wood") || path.contains("plank")) return mod[MOD_WOOD];
+        if(path.contains("bf") || path.contains("balefire")) return mod[MOD_BALEFIRE];
+
+
 
         for(String tag : tags) {
             String lower = tag.toLowerCase(Locale.US);
@@ -82,6 +85,8 @@ public class ModuleBurnTime {
             if(lower.contains("coal")) return mod[MOD_COAL];
             if(lower.contains("logs")) return mod[MOD_LOG];
             if(lower.contains("wood") || lower.contains("planks")) return mod[MOD_WOOD];
+            if(lower.contains("bf") || lower.contains("balefire")) return mod[MOD_BALEFIRE];
+
         }
 
         return def;
