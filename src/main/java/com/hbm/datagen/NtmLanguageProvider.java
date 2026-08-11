@@ -1171,6 +1171,7 @@ public class NtmLanguageProvider extends LanguageProvider {
         this.add(NtmBlocks.MACHINE_SOLDERING_STATION, "Soldering Station");
         this.add(NtmBlocks.MACHINE_ARC_WELDER, "Arc Welder");
         this.add(NtmBlocks.MACHINE_MIXER, "Industrial Mixer");
+        this.add(NtmBlocks.MACHINE_FEL, "FEL");
         this.add(NtmBlocks.HEAT_BOILER, "Boiler");
         this.add(NtmBlocks.MACHINE_INDUSTRIAL_BOILER, "Industrial Boiler");
         this.add(NtmBlocks.MACHINE_INDUSTRIAL_TURBINE, "Industrial Steam Turbine");

@@ -740,6 +740,7 @@ public class NtmCreativeTabs {
                         output.accept(NtmBlocks.MACHINE_REFINERY);
                         output.accept(NtmBlocks.MACHINE_VACUUM_REFINERY);
                         output.accept(NtmBlocks.MACHINE_MIXER);
+                        output.accept(NtmBlocks.MACHINE_FEL);
                         output.accept(NtmBlocks.MACHINE_FRACTION_TOWER);
                         output.accept(NtmBlocks.FRACTION_SPACER);
                         output.accept(NtmBlocks.MACHINE_CATALYTIC_REFORMER);

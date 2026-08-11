@@ -323,6 +323,13 @@ public class NtmBlockEntityTypes {
                             NtmBlocks.MACHINE_MIXER.get())
                     .build(null));
 
+    public static final Supplier<BlockEntityType<MachineFELBlockEntity>> FEL = REGISTER.register(
+            "fel",
+            () -> BlockEntityType.Builder.of(
+                            MachineFELBlockEntity::new,
+                            NtmBlocks.MACHINE_FEL.get())
+                    .build(null));
+
     public static final Supplier<BlockEntityType<MachineArcWelderBlockEntity>> ARC_WELDER = REGISTER.register(
             "arc_welder",
             () -> BlockEntityType.Builder.of(
