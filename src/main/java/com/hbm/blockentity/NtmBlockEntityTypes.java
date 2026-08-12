@@ -316,6 +316,13 @@ public class NtmBlockEntityTypes {
                             NtmBlocks.MACHINE_SOLDERING_STATION.get())
                     .build(null));
 
+    public static final Supplier<BlockEntityType<MachineArcWelderBlockEntity>> ARC_WELDER = REGISTER.register(
+            "arc_welder",
+            () -> BlockEntityType.Builder.of(
+                            MachineArcWelderBlockEntity::new,
+                            NtmBlocks.MACHINE_ARC_WELDER.get())
+                    .build(null));
+
     public static final Supplier<BlockEntityType<MachineMixerBlockEntity>> MIXER = REGISTER.register(
             "mixer",
             () -> BlockEntityType.Builder.of(
@@ -330,11 +337,11 @@ public class NtmBlockEntityTypes {
                             NtmBlocks.MACHINE_FEL.get())
                     .build(null));
 
-    public static final Supplier<BlockEntityType<MachineArcWelderBlockEntity>> ARC_WELDER = REGISTER.register(
-            "arc_welder",
+    public static final Supplier<BlockEntityType<MachineSILEXBlockEntity>> SILEX = REGISTER.register(
+            "silex",
             () -> BlockEntityType.Builder.of(
-                            MachineArcWelderBlockEntity::new,
-                            NtmBlocks.MACHINE_ARC_WELDER.get())
+                            MachineSILEXBlockEntity::new,
+                            NtmBlocks.MACHINE_SILEX.get())
                     .build(null));
 
     // Oil

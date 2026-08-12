@@ -176,6 +176,7 @@ public class CommonEvents {
         event.register(NtmMenuTypes.ARC_WELDER.get(), MachineArcWelderScreen::new);
         event.register(NtmMenuTypes.MIXER.get(), MachineMixerScreen::new);
         event.register(NtmMenuTypes.FEL.get(), MachineFELScreen::new);
+        event.register(NtmMenuTypes.SILEX.get(), MachineSILEXScreen::new);
         event.register(NtmMenuTypes.FURNACE_IRON.get(), MachineFurnaceIronScreen::new);
         event.register(NtmMenuTypes.FURNACE_STEEL.get(), MachineFurnaceSteelScreen::new);
         event.register(NtmMenuTypes.FURNACE_COMBINATION.get(), MachineFurnaceCombinationScreen::new);

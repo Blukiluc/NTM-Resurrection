@@ -63,6 +63,7 @@ public class ResourceManager {
     public static final ResourceLocation ARC_WELDER_TEX = NuclearTechMod.withDefaultNamespace("textures/models/machines/arc_welder.png");
     public static final ResourceLocation MIXER_TEX = NuclearTechMod.withDefaultNamespace("textures/models/machines/mixer.png");
     public static final ResourceLocation FEL_TEX = NuclearTechMod.withDefaultNamespace("textures/models/machines/fel.png");
+    public static final ResourceLocation SILEX_TEX = NuclearTechMod.withDefaultNamespace("textures/models/machines/silex.png");
     public static final ResourceLocation FURNACE_IRON_TEX = NuclearTechMod.withDefaultNamespace("textures/models/machines/furnace_iron.png");
     public static final ResourceLocation FURNACE_STEEL_TEX = NuclearTechMod.withDefaultNamespace("textures/models/machines/furnace_steel.png");
     public static final ResourceLocation BOILER_TEX = NuclearTechMod.withDefaultNamespace("textures/models/machines/boiler.png");
@@ -257,6 +258,7 @@ public class ResourceManager {
     public static IModelCustom arc_welder;
     public static IModelCustom mixer;
     public static IModelCustom fel;
+    public static IModelCustom silex;
     public static IModelCustom furnace_iron;
     public static IModelCustom furnace_steel;
     public static IModelCustom boiler;
@@ -397,6 +399,7 @@ public class ResourceManager {
         arc_welder = new HFRWavefrontObject("models/obj/machines/arc_welder.obj").asVBO();
         mixer = new HFRWavefrontObject("models/obj/machines/mixer.obj").asVBO();
         fel = new HFRWavefrontObject("models/obj/machines/fel.obj").asVBO();
+        silex = new HFRWavefrontObject("models/obj/machines/silex.obj").asVBO();
         furnace_iron = new HFRWavefrontObject("models/obj/machines/furnace_iron.obj").asVBO();
         furnace_steel = new HFRWavefrontObject("models/obj/machines/furnace_steel.obj").asVBO();
         boiler = new HFRWavefrontObject("models/obj/machines/boiler.obj").asVBO();

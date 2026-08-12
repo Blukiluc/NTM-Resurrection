@@ -1,4 +1,4 @@
-// 1.21.1	2026-08-12T00:25:27.2167537	Loot Tables
+// 1.21.1	2026-08-12T01:26:12.764907	Loot Tables
 4dea21baadd671e0fc70004833537e05da50d388 data/hbm/loot_table/blocks/asphalt.json
 fb8bbca081abce158c2e2c99aad65884a8ac42bc data/hbm/loot_table/blocks/asphalt_light.json
 ac4aa7fb9a18c76eab92c1ad6d77a20da10a52ed data/hbm/loot_table/blocks/balefire.json
@@ -111,6 +111,7 @@ deccc3c05bd0d1dfa4a09a357809efe08e9e281d data/hbm/loot_table/blocks/machine_refi
 1545751a329c3275952fd22ba4725c1fb09ba3a7 data/hbm/loot_table/blocks/machine_satlinker.json
 374bf0e30bb96c46efcd444405d0856fd17a44bf data/hbm/loot_table/blocks/machine_sawmill.json
 c271c25a17bb58b36e5907a2318565c074d6fa52 data/hbm/loot_table/blocks/machine_shredder.json
+59ad223def3856ace26f87821d93b08633e22e43 data/hbm/loot_table/blocks/machine_silex.json
 89e02344751adf16654e443461eb32c1affa8b5b data/hbm/loot_table/blocks/machine_soldering_station.json
 8338c285bf8f4081d54fb19addca6af85f326b08 data/hbm/loot_table/blocks/machine_steam_engine.json
 edd69c8273cc03956f705bb8f1f405a74d791977 data/hbm/loot_table/blocks/machine_stirling.json

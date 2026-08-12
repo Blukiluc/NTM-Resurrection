@@ -542,6 +542,12 @@ public class NtmItems {
     public static final DeferredItem<Item> BATTERY_SC = ITEMS.register("battery_sc", () -> new BatterySCItem(new Item.Properties()));
     public static final DeferredItem<Item> BATTERY_CREATIVE = ITEMS.register("battery_creative", () -> new BatteryCreativeItem(new Item.Properties().stacksTo(1)));
 
+    public static final DeferredItem<ItemFELCrystal> LASER_CRYSTAL_CO2 = ITEMS.register("laser_crystal_co2", () -> new ItemFELCrystal(new Item.Properties(), ItemFELCrystal.EnumWavelengths.IR));
+    public static final DeferredItem<ItemFELCrystal> LASER_CRYSTAL_BISMUTH = ITEMS.register("laser_crystal_bismuth", () -> new ItemFELCrystal(new Item.Properties(), ItemFELCrystal.EnumWavelengths.VISIBLE));
+    public static final DeferredItem<ItemFELCrystal> LASER_CRYSTAL_CMB = ITEMS.register("laser_crystal_cmb", () -> new ItemFELCrystal(new Item.Properties(), ItemFELCrystal.EnumWavelengths.UV));
+    public static final DeferredItem<ItemFELCrystal> LASER_CRYSTAL_DNT = ITEMS.register("laser_crystal_dnt", () -> new ItemFELCrystal(new Item.Properties(), ItemFELCrystal.EnumWavelengths.GAMMA));
+    public static final DeferredItem<ItemFELCrystal> LASER_CRYSTAL_DIGAMMA = ITEMS.register("laser_crystal_digamma", () -> new ItemFELCrystal(new Item.Properties(), ItemFELCrystal.EnumWavelengths.DRX));
+
     // Folders
     public static final DeferredItem<Item> BLUEPRINTS = ITEMS.register("blueprints", () -> new BlueprintsItem(new Item.Properties()));
 

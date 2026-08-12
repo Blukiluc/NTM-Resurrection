@@ -252,6 +252,7 @@ public class NtmBlockStateProvider extends BlockStateProvider {
         this.particleOnlyBlock(NtmBlocks.MACHINE_ARC_WELDER, modLoc("block/block_steel"));
         this.particleOnlyBlock(NtmBlocks.MACHINE_MIXER, modLoc("block/block_steel"));
         this.particleOnlyBlock(NtmBlocks.MACHINE_FEL, modLoc("block/block_steel"));
+        this.particleOnlyBlock(NtmBlocks.MACHINE_SILEX, modLoc("block/block_steel"));
         this.particleOnlyBlock(NtmBlocks.HEAT_BOILER, modLoc("block/block_steel"));
         this.particleOnlyBlock(NtmBlocks.MACHINE_INDUSTRIAL_BOILER, modLoc("block/block_steel"));
         this.particleOnlyBlock(NtmBlocks.MACHINE_INDUSTRIAL_TURBINE, modLoc("block/block_steel"));

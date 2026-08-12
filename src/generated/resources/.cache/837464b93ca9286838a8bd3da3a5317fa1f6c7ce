@@ -1,4 +1,4 @@
-// 1.21.1	2026-08-09T02:22:59.178021	Item Models: hbm
+// 1.21.1	2026-08-12T01:26:12.7522522	Item Models: hbm
 c4e09d2d0fd2bef45dc51c8da0c70bab4652e4b1 assets/hbm/models/item/acetylene_torch.json
 6c4e747554da913978325893b69ca977467a483c assets/hbm/models/item/ammo_secret.json
 99443ea6db20add27ff0bd97f72d22bbf1493cd1 assets/hbm/models/item/ammo_secret_0.json
@@ -484,6 +484,11 @@ ff73ba2567d49131c4dff135cd9dbce1f777ee80 assets/hbm/models/item/key.json
 39f7a98670aa71dae1125e83d569e818c51d3b4f assets/hbm/models/item/key_kit.json
 f99f9c543763b3643f6130711b7fc9a003fa9c76 assets/hbm/models/item/key_red.json
 78d947c5a888db68c134b8c17488a35279eb4b7e assets/hbm/models/item/key_red_cracked.json
+44b7d22d5c4f3b524d14396e13f4cd8e01dd09fd assets/hbm/models/item/laser_crystal_bismuth.json
+c695596a247f51b9a8733f87aa4091c37b76b49e assets/hbm/models/item/laser_crystal_cmb.json
+83f6f72778242985ada631b8930133cf0e10432b assets/hbm/models/item/laser_crystal_co2.json
+9927eb9a7166298534c947893be8f420bf0acc65 assets/hbm/models/item/laser_crystal_digamma.json
+c8b90621816707ce8a60d8966dce9a5f70e9e3fc assets/hbm/models/item/laser_crystal_dnt.json
 38c6352457119356786b45d7016134006d8afcf5 assets/hbm/models/item/leaves_layer.json
 1d28d25428e9c3e08db4f11fe812fe5372b55684 assets/hbm/models/item/lignite.json
 4774d9c22c9b79e2cf2beb72548651c15f76ad51 assets/hbm/models/item/little_boy_bullet.json

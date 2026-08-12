@@ -561,8 +561,13 @@ public class NtmCreativeTabs {
 
                         addMetaItems(output, NtmItems.BATTERY_PACK.get());
                         addMetaItems(output, NtmItems.BATTERY_SC.get());
-
                         output.accept(NtmItems.BATTERY_CREATIVE);
+
+                        output.accept(NtmItems.LASER_CRYSTAL_CO2);
+                        output.accept(NtmItems.LASER_CRYSTAL_BISMUTH);
+                        output.accept(NtmItems.LASER_CRYSTAL_CMB);
+                        output.accept(NtmItems.LASER_CRYSTAL_DNT);
+                        output.accept(NtmItems.LASER_CRYSTAL_DIGAMMA);
 
                         output.accept(NtmItems.ROD_EMPTY);
                         addMetaItems(output, NtmItems.ROD.get());
@@ -721,6 +726,9 @@ public class NtmCreativeTabs {
                         output.accept(NtmBlocks.MACHINE_ELECTRIC_PRESS);
                         output.accept(NtmBlocks.MACHINE_CENTRIFUGE);
                         output.accept(NtmBlocks.MACHINE_GAS_CENTRIFUGE);
+                        output.accept(NtmBlocks.MACHINE_MIXER);
+                        output.accept(NtmBlocks.MACHINE_FEL);
+                        output.accept(NtmBlocks.MACHINE_SILEX);
                         output.accept(NtmBlocks.MACHINE_FLUID_TANK);
                         output.accept(NtmBlocks.MACHINE_BIG_ASS_TANK);
                         output.accept(NtmBlocks.MACHINE_DRAIN);
@@ -739,8 +747,6 @@ public class NtmCreativeTabs {
                         output.accept(NtmBlocks.MACHINE_FRACKING_TOWER);
                         output.accept(NtmBlocks.MACHINE_REFINERY);
                         output.accept(NtmBlocks.MACHINE_VACUUM_REFINERY);
-                        output.accept(NtmBlocks.MACHINE_MIXER);
-                        output.accept(NtmBlocks.MACHINE_FEL);
                         output.accept(NtmBlocks.MACHINE_FRACTION_TOWER);
                         output.accept(NtmBlocks.FRACTION_SPACER);
                         output.accept(NtmBlocks.MACHINE_CATALYTIC_REFORMER);

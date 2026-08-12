@@ -629,6 +629,16 @@ public class NtmLanguageProvider extends LanguageProvider {
         this.add(NtmItems.BATTERY_SC, this.getName(BatterySCType.AM241), "Americium-241 Self-Charging Battery");
         this.add(NtmItems.BATTERY_CREATIVE, "Infinite Battery");
 
+        this.add(NtmItems.LASER_CRYSTAL_CO2, "CO2-Desh Laser Crystal");
+        this.add(NtmItems.LASER_CRYSTAL_CO2, ".desc", "Carbon Dioxide encased in Crystalline Desh");
+        this.add(NtmItems.LASER_CRYSTAL_BISMUTH, "BiSmUTh Laser Crystal");
+        this.add(NtmItems.LASER_CRYSTAL_BISMUTH, ".desc", "Bismuth-Samarium-Uranium-Thorium crystal matrix");
+        this.add(NtmItems.LASER_CRYSTAL_CMB, "CMB-Schrabidate Antimatter Laser Crystal");
+        this.add(NtmItems.LASER_CRYSTAL_CMB, ".desc", "Antischrabidium Suspended in a CMB-Schrabidate Alloy Lattice");
+        this.add(NtmItems.LASER_CRYSTAL_DNT, "Spark Laser Crystal");
+        this.add(NtmItems.LASER_CRYSTAL_DNT, ".desc", "Dineutronium-Spark Fermion Supercrystal");
+        this.add(NtmItems.LASER_CRYSTAL_DIGAMMA, "Digamma Laser Crystal");
+
         this.add(NtmItems.BLUEPRINTS, "Blueprints");
 
         //this.add(NtmItems.FLUID_ICON, "");
@@ -1172,6 +1182,7 @@ public class NtmLanguageProvider extends LanguageProvider {
         this.add(NtmBlocks.MACHINE_ARC_WELDER, "Arc Welder");
         this.add(NtmBlocks.MACHINE_MIXER, "Industrial Mixer");
         this.add(NtmBlocks.MACHINE_FEL, "FEL");
+        this.add(NtmBlocks.MACHINE_SILEX, "Laser Isotope Separation Chamber (SILEX)");
         this.add(NtmBlocks.HEAT_BOILER, "Boiler");
         this.add(NtmBlocks.MACHINE_INDUSTRIAL_BOILER, "Industrial Boiler");
         this.add(NtmBlocks.MACHINE_INDUSTRIAL_TURBINE, "Industrial Steam Turbine");
@@ -1431,6 +1442,9 @@ public class NtmLanguageProvider extends LanguageProvider {
         this.add("container.machine_gas_centrifuge", "Gas Centrifuge");
         this.add("container.machine_soldering_station", "Soldering Station");
         this.add("container.machine_arc_welder", "Arc Welder");
+        this.add("container.machine_mixer", "Industrial Mixer");
+        this.add("container.machineFEL", "FEL");
+        this.add("container.machineSILEX", "SILEX");
         this.add("container.machine_oil_derrick", "Oil Derrick");
         this.add("container.machine_pumpjack", "Pumpjack");
         this.add("container.machine_fracking_tower", "H. F. T.");
@@ -1438,7 +1452,6 @@ public class NtmLanguageProvider extends LanguageProvider {
         this.add("container.machine_vacuum_refinery", "Vacuum Refinery");
         this.add("container.machine_catalytic_reformer", "Catalytic Reformer");
         this.add("container.machine_compressor", "Compressor");
-        this.add("container.machine_mixer", "Industrial Mixer");
         this.add("container.heat_boiler", "Boiler");
         this.add("container.machine_industrial_boiler", "Industrial Boiler");
         this.add("container.furnace_iron", "Iron Furnace");
@@ -1539,6 +1552,20 @@ public class NtmLanguageProvider extends LanguageProvider {
         this.add("itemGroup.consumable", "NTM Consumables and Gear");
 
         this.add("fluid.pressurized", "Pressurized, use compressor!");
+
+        this.add("wavelengths.name.ir", "Infrared");
+        this.add("wavelengths.name.visible", "Visible Light");
+        this.add("wavelengths.name.uv", "Ultraviolet");
+        this.add("wavelengths.name.gamma", "Gamma");
+        this.add("wavelengths.name.drx", "Digamma");
+        this.add("wavelengths.waveRange.ir", "780nm-1mm");
+        this.add("wavelengths.waveRange.visible", "400nm-780nm");
+        this.add("wavelengths.waveRange.uv", "100nm-400nm");
+        this.add("wavelengths.waveRange.gamma", "<100pm");
+        this.add("wavelengths.waveRange.drx", "1916169 planck lengths");
+        this.add("gui.hbm.fel.error", "ERR.");
+        this.add("gui.hbm.fel.live", "LIVE");
+        this.add("gui.hbm.silex.void", "Void contents");
 
         this.add("he", "HE"); // hbm energy
         this.add("mb", "mB"); // milibuckets
