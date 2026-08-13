@@ -3,6 +3,7 @@ package com.hbm.render.blockentity;
 import com.hbm.blockentity.machine.MachineCrystallizerBlockEntity;
 import com.hbm.blocks.DummyableBlock;
 import com.hbm.blocks.NtmBlocks;
+import com.hbm.inventory.fluid.FluidType;
 import com.hbm.inventory.fluid.Fluids;
 import com.hbm.main.ResourceManager;
 import com.hbm.render.item.ItemRenderBase;
@@ -20,6 +21,7 @@ import net.minecraft.util.Mth;
 import net.minecraft.world.item.Item;
 import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.phys.AABB;
+import org.joml.Matrix4f;
 
 public class RenderCrystallizer extends BlockEntityRendererNT<MachineCrystallizerBlockEntity> implements IBEWLRProvider {
 
@@ -53,12 +55,36 @@ public class RenderCrystallizer extends BlockEntityRendererNT<MachineCrystallize
         ResourceManager.crystallizer.renderPart("Spinner");
         RenderContext.popPose();
 
-        if(be.prevAngle != be.angle && be.tank.getFill() > 0 && be.tank.getTankType() != Fluids.NONE) {
+        if(be.tank.getFill() > 0 && be.tank.getMaxFill() > 0 && be.tank.getTankType() != Fluids.NONE) {
+            FluidType type = be.tank.getTankType();
+            int tint = type.renderWithTint ? type.getTint() : 0xFFFFFF;
+            float fillRatio = Mth.clamp((float) be.tank.getFill() / be.tank.getMaxFill(), 0F, 1F);
+
             RenderSystem.enableBlend();
             RenderSystem.depthMask(false);
             RenderSystem.defaultBlendFunc();
-            bindTexture(be.tank.getTankType().getTexture());
+            bindTexture(type.getTexture());
+            RenderSystem.setTextureMatrix(new Matrix4f().translate(
+                    -(be.getLevel().getGameTime() + partialTicks) / 200F,
+                    0F,
+                    0F
+            ));
+            RenderContext.setColor(
+                    ((tint >> 16) & 0xFF) / 255F,
+                    ((tint >> 8) & 0xFF) / 255F,
+                    (tint & 0xFF) / 255F,
+                    1F
+            );
+
+            RenderContext.pushPose();
+            RenderContext.translate(0F, 2.375F, 0F);
+            RenderContext.scale(1F, fillRatio, 1F);
+            RenderContext.translate(0F, -2.375F, 0F);
             ResourceManager.crystallizer.renderPart("Fluid");
+            RenderContext.popPose();
+
+            RenderSystem.resetTextureMatrix();
+            RenderContext.setColor(1F, 1F, 1F, 1F);
             RenderSystem.depthMask(true);
             RenderSystem.disableBlend();
         }

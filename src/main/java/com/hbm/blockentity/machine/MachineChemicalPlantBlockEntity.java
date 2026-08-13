@@ -165,7 +165,10 @@ public class MachineChemicalPlantBlockEntity extends MachineBaseBlockEntity impl
 
             if(didProcess) {
                 this.spin += spinSpeed;
-                if(this.spin >= 360F) this.spin -= 360F;
+                if(this.spin >= 360F) {
+                    this.spin -= 360F;
+                    this.prevSpin -= 360F;
+                }
 
                 this.slideTick++;
                 this.slide = (float) (Math.sin(this.slideTick * SLIDE_FREQ) * SLIDE_AMPLITUDE);

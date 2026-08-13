@@ -47,6 +47,7 @@ public class ResourceManager {
     public static final ResourceLocation ASSEMBLY_FACTORY_SPARKS_TEX = NuclearTechMod.withDefaultNamespace("textures/models/machines/assembly_factory_sparks.png");
     public static final ResourceLocation PREC_ASS_TEX = NuclearTechMod.withDefaultNamespace("textures/models/machines/precass.png");
     public static final ResourceLocation CHEMICAL_PLANT_TEX = NuclearTechMod.withDefaultNamespace("textures/models/machines/chemical_plant.png");
+    public static final ResourceLocation CHEMICAL_PLANT_FLUID_TEX = NuclearTechMod.withDefaultNamespace("textures/models/machines/chemical_plant_fluid.png");
     public static final ResourceLocation CHEMICAL_FACTORY_TEX = NuclearTechMod.withDefaultNamespace("textures/models/machines/chemical_factory.png");
     public static final ResourceLocation CRYSTALLIZER_TEX = NuclearTechMod.withDefaultNamespace("textures/models/machines/acidizer.png");
     public static final ResourceLocation WOOD_BURNER_TEX = NuclearTechMod.withDefaultNamespace("textures/models/machines/wood_burner.png");
