@@ -33,25 +33,27 @@ public class ItemFELCrystal extends Item {
     }
 
     public enum EnumWavelengths {
-        NULL("la creatura", "6 dollar", 0x010101, 0x010101, ChatFormatting.WHITE), //why do you exist?
-        IR("wavelengths.name.ir", "wavelengths.waveRange.ir", 0xBB1010, 0xCC4040, ChatFormatting.RED),
-        VISIBLE("wavelengths.name.visible", "wavelengths.waveRange.visible", 0, 0, ChatFormatting.GREEN),
-        UV("wavelengths.name.uv", "wavelengths.waveRange.uv", 0x0A1FC4, 0x00EFFF, ChatFormatting.AQUA),
-        GAMMA("wavelengths.name.gamma", "wavelengths.waveRange.gamma", 0x150560, 0xEF00FF, ChatFormatting.LIGHT_PURPLE),
-        DRX("wavelengths.name.drx", "wavelengths.waveRange.drx", 0xFF0000, 0xFF0000, ChatFormatting.DARK_RED);
+        NULL("la creatura", "6 dollar", 0x010101, 0x010101, ChatFormatting.WHITE, 0F), //why do you exist?
+        IR("wavelengths.name.ir", "wavelengths.waveRange.ir", 0xBB1010, 0xCC4040, ChatFormatting.RED, 0.75F),
+        VISIBLE("wavelengths.name.visible", "wavelengths.waveRange.visible", 0, 0, ChatFormatting.GREEN, 1.4F),
+        UV("wavelengths.name.uv", "wavelengths.waveRange.uv", 0x0A1FC4, 0x00EFFF, ChatFormatting.AQUA, 2.05F),
+        GAMMA("wavelengths.name.gamma", "wavelengths.waveRange.gamma", 0x150560, 0xEF00FF, ChatFormatting.LIGHT_PURPLE, 2.7F),
+        DRX("wavelengths.name.drx", "wavelengths.waveRange.drx", 0xFF0000, 0xFF0000, ChatFormatting.DARK_RED, 30.35F);
 
         public final String name;
         public final String wavelengthRange;
         public final int renderedBeamColor;
         public final int guiColor;
         public final ChatFormatting textColor;
+        public final float waveFrequency;
 
-        EnumWavelengths(String name, String wavelengthRange, int renderedBeamColor, int guiColor, ChatFormatting textColor) {
+        EnumWavelengths(String name, String wavelengthRange, int renderedBeamColor, int guiColor, ChatFormatting textColor, float waveFrequency) {
             this.name = name;
             this.wavelengthRange = wavelengthRange;
             this.renderedBeamColor = renderedBeamColor;
             this.guiColor = guiColor;
             this.textColor = textColor;
+            this.waveFrequency = waveFrequency;
         }
 
         public int getBeamColor(long gameTime) {

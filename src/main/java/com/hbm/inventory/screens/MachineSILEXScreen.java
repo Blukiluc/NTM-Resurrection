@@ -42,29 +42,14 @@ public class MachineSILEXScreen extends InfoScreen<MachineSILEXMenu> {
     public void render(GuiGraphics guiGraphics, int mouseX, int mouseY, float partialTicks) {
         super.render(guiGraphics, mouseX, mouseY, partialTicks);
 
-//        if(this.be.mode != EnumWavelengths.NULL && this.be.getLevel() != null) {
-//            float cycles = 0.75F + this.be.mode.ordinal() * 0.65F;
-//            int color = 0xFF000000 | this.be.mode.getGuiColor(this.be.getLevel().getGameTime());
-//            double phase = (this.be.getLevel().getGameTime() + partialTicks) * 0.18D;
-//            this.drawSmoothWave(guiGraphics, WAVE_LEFT, WAVE_TOP, WAVE_WIDTH, WAVE_HEIGHT, cycles, phase, color);
-//        }
-
         if(this.be.mode != EnumWavelengths.NULL && this.be.getLevel() != null) {
-            guiGraphics.pose().pushPose();
-            guiGraphics.pose().translate(0F, 0F, 200F);
-            Matrix4f pose = guiGraphics.pose().last().pose();
-            VertexConsumer buffer = guiGraphics.bufferSource().getBuffer(RenderType.guiOverlay());
-
-            float baseX = this.leftPos + 20;
-            float baseY = this.topPos + 60;
-
-            // segment qui descend vers la droite
-            addThickLineSegment(buffer, pose, baseX, baseY, baseX + 40, baseY + 30, 4F, 0xFFFF0000);
-            // segment qui monte vers la droite
-            addThickLineSegment(buffer, pose, baseX, baseY + 50, baseX + 40, baseY + 20, 4F, 0xFF00FF00);
-
-            guiGraphics.pose().popPose();
-            guiGraphics.flush();
+            float cycles = this.be.mode.waveFrequency;
+            int color = 0xFF000000 | this.be.mode.getGuiColor(this.be.getLevel().getGameTime());
+            double phase = (this.be.getLevel().getGameTime() + partialTicks) * 0.18D;
+            this.drawSmoothWave(guiGraphics, WAVE_LEFT, WAVE_TOP, WAVE_WIDTH, WAVE_HEIGHT, cycles, phase, color);
+            if(this.be.mode == EnumWavelengths.DRX) {
+                this.drawSmoothWave(guiGraphics, WAVE_LEFT, WAVE_TOP, WAVE_WIDTH, WAVE_HEIGHT, cycles, phase, color);
+            }
         }
 
         this.be.tank.renderTankTooltip(guiGraphics, mouseX, mouseY, this.leftPos + 8, this.topPos + 42, 52, 7);
@@ -137,8 +122,6 @@ public class MachineSILEXScreen extends InfoScreen<MachineSILEXMenu> {
         float centerY = top + height * 0.5F;
         float amplitude = (height - 5F) * 0.5F;
 
-        this.drawWaveLayer(buffer, pose.pose(), left, centerY, drawableWidth, amplitude, cycles, phase,3.2F, withAlpha(color, 48));
-        this.drawWaveLayer(buffer, pose.pose(), left, centerY, drawableWidth, amplitude, cycles, phase,1.8F, withAlpha(color, 150));
         this.drawWaveLayer(buffer, pose.pose(), left, centerY, drawableWidth, amplitude, cycles, phase,0.75F, color);
 
         guiGraphics.pose().popPose();
@@ -173,10 +156,10 @@ public class MachineSILEXScreen extends InfoScreen<MachineSILEXMenu> {
         float normalX = -deltaY / length * thickness * 0.5F;
         float normalY = deltaX / length * thickness * 0.5F;
 
-        buffer.addVertex(pose, x1 + normalX, y1 + normalY, 0F).setColor(color);
         buffer.addVertex(pose, x1 - normalX, y1 - normalY, 0F).setColor(color);
-        buffer.addVertex(pose, x2 - normalX, y2 - normalY, 0F).setColor(color);
+        buffer.addVertex(pose, x1 + normalX, y1 + normalY, 0F).setColor(color);
         buffer.addVertex(pose, x2 + normalX, y2 + normalY, 0F).setColor(color);
+        buffer.addVertex(pose, x2 - normalX, y2 - normalY, 0F).setColor(color);
     }
 
     private static int withAlpha(int color, int alpha) {
