@@ -2,9 +2,7 @@ package com.hbm.inventory.recipes;
 
 import com.hbm.blocks.NtmBlocks;
 import com.hbm.inventory.FluidStack;
-import com.hbm.inventory.MetaHelper;
 import com.hbm.inventory.RecipesCommon.ComparableStack;
-import com.hbm.inventory.fluid.FluidType;
 import com.hbm.inventory.fluid.Fluids;
 import com.hbm.inventory.recipes.loader.GenericRecipe;
 import com.hbm.inventory.recipes.loader.GenericRecipes;

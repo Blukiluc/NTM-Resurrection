@@ -1,4 +1,4 @@
-// 1.21.1	2026-08-13T21:43:37.6211619	Block States: hbm
+// 1.21.1	2026-08-13T23:42:38.9316006	Block States: hbm
 771df07d065b33c7dcf62cfb69b5cd3a3cb4feed assets/hbm/blockstates/asphalt.json
 c0f05f08a475704e80a5d657d494bf5a829fab8f assets/hbm/blockstates/asphalt_light.json
 8c6c51f054fa20e59275bf5c7c77e28e7790b34c assets/hbm/blockstates/balefire.json
@@ -91,6 +91,7 @@ a7b03afdb3c1b1f102798c80582ca65dcf706448 assets/hbm/blockstates/machine_centrifu
 cbf334e2adf7eadb28d19242b43c538b27506e7a assets/hbm/blockstates/machine_chemical_factory.json
 5ecfbc83d1f726575800fa2227e4b291e535f615 assets/hbm/blockstates/machine_chemical_plant.json
 98ae4cde8da9a44107117b51b459f06e405f00fd assets/hbm/blockstates/machine_chungus.json
+20cb62d667f1c1445337d7f8b4e607002e55a97d assets/hbm/blockstates/machine_combustion_engine.json
 fb757a40dcbc2b901368172b8b193418456903b6 assets/hbm/blockstates/machine_compressor.json
 419fb57005225987e87aaae7bf712b77aa730e06 assets/hbm/blockstates/machine_compressor_compact.json
 9fed12ac29ff5ef54cd2883c7bab1ec501779cc2 assets/hbm/blockstates/machine_condenser.json
@@ -104,6 +105,7 @@ a7bb625719da81a9740bf28b969cf8a7f79faf19 assets/hbm/blockstates/machine_fel.json
 9f869570580c9265f10e061606f5964b72933433 assets/hbm/blockstates/machine_fracking_tower.json
 b1be67754adc2d2b60eba3baa6bb0609dfc33ccf assets/hbm/blockstates/machine_fraction_tower.json
 bf334ace24f60a9fa60fc3541387f6b9311274d4 assets/hbm/blockstates/machine_gas_centrifuge.json
+bc0e752ca57ec3f9cbe982d8b973c4bdd783afe5 assets/hbm/blockstates/machine_hephaestus.json
 5d3af963e9e2fca010b6f4af0c210a714cd490d8 assets/hbm/blockstates/machine_industrial_boiler.json
 268e1518eea12867af243edbb69649e9957bb3c1 assets/hbm/blockstates/machine_industrial_turbine.json
 981805ed24657c39c6363157c7cc55f9239aaff9 assets/hbm/blockstates/machine_mixer.json
@@ -318,6 +320,7 @@ f55d5c93f0423e66d4aae3b691b0bb51957b9d98 assets/hbm/models/block/machine_centrif
 f55d5c93f0423e66d4aae3b691b0bb51957b9d98 assets/hbm/models/block/machine_chemical_factory_particle.json
 f55d5c93f0423e66d4aae3b691b0bb51957b9d98 assets/hbm/models/block/machine_chemical_plant_particle.json
 f55d5c93f0423e66d4aae3b691b0bb51957b9d98 assets/hbm/models/block/machine_chungus_particle.json
+f55d5c93f0423e66d4aae3b691b0bb51957b9d98 assets/hbm/models/block/machine_combustion_engine_particle.json
 f55d5c93f0423e66d4aae3b691b0bb51957b9d98 assets/hbm/models/block/machine_compressor_compact_particle.json
 f55d5c93f0423e66d4aae3b691b0bb51957b9d98 assets/hbm/models/block/machine_compressor_particle.json
 93882390d10b217e1d03b08477fa66ae9e544445 assets/hbm/models/block/machine_condenser.json
@@ -331,6 +334,7 @@ f55d5c93f0423e66d4aae3b691b0bb51957b9d98 assets/hbm/models/block/machine_fluid_t
 f55d5c93f0423e66d4aae3b691b0bb51957b9d98 assets/hbm/models/block/machine_fracking_tower_particle.json
 f55d5c93f0423e66d4aae3b691b0bb51957b9d98 assets/hbm/models/block/machine_fraction_tower_particle.json
 f55d5c93f0423e66d4aae3b691b0bb51957b9d98 assets/hbm/models/block/machine_gas_centrifuge_particle.json
+f55d5c93f0423e66d4aae3b691b0bb51957b9d98 assets/hbm/models/block/machine_hephaestus_particle.json
 f55d5c93f0423e66d4aae3b691b0bb51957b9d98 assets/hbm/models/block/machine_industrial_boiler_particle.json
 f55d5c93f0423e66d4aae3b691b0bb51957b9d98 assets/hbm/models/block/machine_industrial_turbine_particle.json
 f55d5c93f0423e66d4aae3b691b0bb51957b9d98 assets/hbm/models/block/machine_mixer_particle.json
@@ -542,6 +546,7 @@ b5cb531f9c015e4129f955f3e0b582e62505b659 assets/hbm/models/item/gravel_diamond.j
 1ae5a980018cda4e68cafcf4ce293349827b23ab assets/hbm/models/item/machine_chemical_factory.json
 1ae5a980018cda4e68cafcf4ce293349827b23ab assets/hbm/models/item/machine_chemical_plant.json
 1ae5a980018cda4e68cafcf4ce293349827b23ab assets/hbm/models/item/machine_chungus.json
+1ae5a980018cda4e68cafcf4ce293349827b23ab assets/hbm/models/item/machine_combustion_engine.json
 1ae5a980018cda4e68cafcf4ce293349827b23ab assets/hbm/models/item/machine_compressor.json
 1ae5a980018cda4e68cafcf4ce293349827b23ab assets/hbm/models/item/machine_compressor_compact.json
 0bc5415d24970de7ef2d7c41176a12a96a7902ad assets/hbm/models/item/machine_condenser.json
@@ -555,6 +560,7 @@ b5cb531f9c015e4129f955f3e0b582e62505b659 assets/hbm/models/item/gravel_diamond.j
 1ae5a980018cda4e68cafcf4ce293349827b23ab assets/hbm/models/item/machine_fracking_tower.json
 1ae5a980018cda4e68cafcf4ce293349827b23ab assets/hbm/models/item/machine_fraction_tower.json
 1ae5a980018cda4e68cafcf4ce293349827b23ab assets/hbm/models/item/machine_gas_centrifuge.json
+1ae5a980018cda4e68cafcf4ce293349827b23ab assets/hbm/models/item/machine_hephaestus.json
 1ae5a980018cda4e68cafcf4ce293349827b23ab assets/hbm/models/item/machine_industrial_boiler.json
 1ae5a980018cda4e68cafcf4ce293349827b23ab assets/hbm/models/item/machine_industrial_turbine.json
 1ae5a980018cda4e68cafcf4ce293349827b23ab assets/hbm/models/item/machine_mixer.json

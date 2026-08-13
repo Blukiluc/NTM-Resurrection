@@ -94,6 +94,12 @@ public class NtmBlockEntityTypes {
                             MachineCoolingTowerBlockEntity::new,
                             NtmBlocks.MACHINE_TOWER_LARGE.get())
                     .build(null));
+    public static final Supplier<BlockEntityType<MachineHephaestusBlockEntity>> MACHINE_HEPHAESTUS = REGISTER.register(
+            "machine_hephaestus",
+            () -> BlockEntityType.Builder.of(
+                            MachineHephaestusBlockEntity::new,
+                            NtmBlocks.MACHINE_HEPHAESTUS.get())
+                    .build(null));
     public static final Supplier<BlockEntityType<HeaterFireboxBlockEntity>> HEATER_FIREBOX = REGISTER.register(
             "heater_firebox",
             () -> BlockEntityType.Builder.of(
@@ -269,6 +275,13 @@ public class NtmBlockEntityTypes {
             () -> BlockEntityType.Builder.of(
                             MachineDieselBlockEntity::new,
                             NtmBlocks.MACHINE_DIESEL.get())
+                    .build(null));
+
+    public static final Supplier<BlockEntityType<MachineCombustionEngineBlockEntity>> COMBUSTION_ENGINE = REGISTER.register(
+            "combustion_engine",
+            () -> BlockEntityType.Builder.of(
+                            MachineCombustionEngineBlockEntity::new,
+                            NtmBlocks.MACHINE_COMBUSTION_ENGINE.get())
                     .build(null));
 
     public static final Supplier<BlockEntityType<MachineStirlingBlockEntity>> STIRLING = REGISTER.register(

@@ -648,6 +648,10 @@ public class NtmLanguageProvider extends LanguageProvider {
 
         this.add(NtmItems.SCREWDRIVER, "Screwdriver");
         this.add(NtmItems.SCREWDRIVER_DESH, "Desh Screwdriver");
+        this.add("item.hbm.piston_set.steel", "Steel Piston Set");
+        this.add("item.hbm.piston_set.dura", "High-Speed Steel Piston Set");
+        this.add("item.hbm.piston_set.desh", "Desh Piston Set");
+        this.add("item.hbm.piston_set.starmetal", "Starmetal Piston Set");
         this.add(NtmItems.BLOWTORCH, "Blowtorch");
         this.add(NtmItems.ACETYLENE_TORCH, "Acetylene Welding Torch");
 
@@ -1170,6 +1174,7 @@ public class NtmLanguageProvider extends LanguageProvider {
         this.add(NtmBlocks.MACHINE_CRYSTALLIZER, "Ore Acidizer");
         this.add(NtmBlocks.MACHINE_WOOD_BURNER, "Wood-Burning Generator");
         this.add(NtmBlocks.MACHINE_DIESEL, "Diesel Generator");
+        this.add(NtmBlocks.MACHINE_COMBUSTION_ENGINE, "Industrial Combustion Engine");
         this.add(NtmBlocks.MACHINE_STIRLING, "Stirling Engine");
         this.add(NtmBlocks.MACHINE_STIRLING_STEEL, "Heavy Stirling Engine");
         this.add(NtmBlocks.MACHINE_STIRLING_CREATIVE, "Creative Stirling Engine");
@@ -1192,6 +1197,7 @@ public class NtmLanguageProvider extends LanguageProvider {
         this.add(NtmBlocks.MACHINE_CHUNGUS, "Leviathan Steam Turbine");
         this.add(NtmBlocks.MACHINE_TOWER_SMALL, "Auxiliary Cooling Tower");
         this.add(NtmBlocks.MACHINE_TOWER_LARGE, "Cooling Tower");
+        this.add(NtmBlocks.MACHINE_HEPHAESTUS, "Geothermal Heat Exchanger");
         this.add(NtmBlocks.FURNACE_IRON, "Iron Furnace");
         this.add(NtmBlocks.FURNACE_STEEL, "Steel Furnace");
         this.add(NtmBlocks.FURNACE_COMBINATION, "Combination Oven");
@@ -1440,6 +1446,7 @@ public class NtmLanguageProvider extends LanguageProvider {
         this.add("container.crystallizer", "Ore Acidizer");
         this.add("container.machine_wood_burner", "Wood-Burner");
         this.add("container.machine_diesel", "Diesel Generator");
+        this.add("container.machine_combustion_engine", "Industrial Combustion Engine");
         this.add("container.machine_sawmill", "Stirling Sawmill");
         this.add("container.machine_shredder", "Shredder");
         this.add("container.machine_press", "Burner Press");

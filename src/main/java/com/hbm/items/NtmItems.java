@@ -451,7 +451,7 @@ public class NtmItems {
     public static final DeferredItem<Item> NUGGET_AUSTRALIUM = ITEMS.register("nugget_australium", () -> new Item(new Item.Properties()));
     public static final DeferredItem<Item> NUGGET_AUSTRALIUM_LESSER = ITEMS.register("nugget_australium_lesser", () -> new Item(new Item.Properties()));
     public static final DeferredItem<Item> NUGGET_AUSTRALIUM_GREATER = ITEMS.register("nugget_australium_greater", () -> new Item(new Item.Properties()));
-    public static final DeferredItem<Item> NUGGET_DESH = ITEMS.register("nugget_desh", () -> new Item(new Item.Properties()));;
+    public static final DeferredItem<Item> NUGGET_DESH = ITEMS.register("nugget_desh", () -> new Item(new Item.Properties()));
     public static final DeferredItem<Item> NUGGET_EUPHEMIUM = ITEMS.register("nugget_euphemium", () -> new Item(new Item.Properties()));
     public static final DeferredItem<Item> NUGGET_DINEUTRONIUM = ITEMS.register("nugget_dineutronium", () -> new Item(new Item.Properties()));
     public static final DeferredItem<Item> NUGGET_OSMIRIDIUM = ITEMS.register("nugget_osmiridium", () -> new Item(new Item.Properties()));
@@ -562,6 +562,7 @@ public class NtmItems {
     public static final DeferredItem<Item> SCREWDRIVER_DESH = ITEMS.register("screwdriver_desh", () -> new ToolingItem(ToolType.SCREWDRIVER, new Item.Properties().stacksTo(8)));
     public static final DeferredItem<Item> BLOWTORCH = ITEMS.register("blowtorch", () -> new BlowtorchItem(new Item.Properties().stacksTo(1)));
     public static final DeferredItem<Item> ACETYLENE_TORCH = ITEMS.register("acetylene_torch", () -> new BlowtorchItem(new Item.Properties().stacksTo(1)));
+    public static final DeferredItem<Item> PISTON_SET = ITEMS.register("piston_set", () -> new PistonSetItem(new Item.Properties()));
 
     // Press Stamps
     // TODO durability

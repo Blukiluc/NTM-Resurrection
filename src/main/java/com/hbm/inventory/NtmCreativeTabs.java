@@ -716,6 +716,7 @@ public class NtmCreativeTabs {
                         output.accept(NtmBlocks.MACHINE_CRYSTALLIZER);
                         output.accept(NtmBlocks.MACHINE_WOOD_BURNER);
                         output.accept(NtmBlocks.MACHINE_DIESEL);
+                        output.accept(NtmBlocks.MACHINE_COMBUSTION_ENGINE);
                         output.accept(NtmBlocks.MACHINE_STIRLING);
                         output.accept(NtmBlocks.MACHINE_STIRLING_STEEL);
                         output.accept(NtmBlocks.MACHINE_STIRLING_CREATIVE);
@@ -744,6 +745,7 @@ public class NtmCreativeTabs {
                         output.accept(NtmBlocks.MACHINE_CHUNGUS);
                         output.accept(NtmBlocks.MACHINE_TOWER_SMALL);
                         output.accept(NtmBlocks.MACHINE_TOWER_LARGE);
+                        output.accept(NtmBlocks.MACHINE_HEPHAESTUS);
 
                         output.accept(NtmBlocks.MACHINE_OIL_DERRICK);
                         output.accept(NtmBlocks.MACHINE_PUMPJACK);
@@ -776,6 +778,7 @@ public class NtmCreativeTabs {
                         output.accept(NtmBlocks.CRATE_STEEL);
                         output.accept(NtmBlocks.CRATE_DESH);
 
+                        addMetaItems(output, NtmItems.PISTON_SET.get());
                         output.accept(NtmItems.BLADES_IRON);
                         output.accept(NtmItems.BLADES_STEEL);
                         output.accept(NtmItems.BLADES_DESH);

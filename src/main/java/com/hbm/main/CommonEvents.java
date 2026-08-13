@@ -170,6 +170,7 @@ public class CommonEvents {
         event.register(NtmMenuTypes.CRYSTALLIZER.get(), MachineCrystallizerScreen::new);
         event.register(NtmMenuTypes.WOOD_BURNER.get(), MachineWoodBurnerScreen::new);
         event.register(NtmMenuTypes.DIESEL.get(), MachineDieselScreen::new);
+        event.register(NtmMenuTypes.COMBUSTION_ENGINE.get(), MachineCombustionEngineScreen::new);
         event.register(NtmMenuTypes.SHREDDER.get(), MachineShredderScreen::new);
         event.register(NtmMenuTypes.PRESS.get(), MachinePressScreen::new);
         event.register(NtmMenuTypes.ELECTRIC_PRESS.get(), MachineElectricPressScreen::new);

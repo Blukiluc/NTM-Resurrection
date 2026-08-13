@@ -317,6 +317,12 @@ public class Fluids {
         ULTRAHOTSTEAM.addTraits(new FT_Coolable().addStep(120, 1, SUPERHOTSTEAM, 10)
                 .setEff(FT_Coolable.CoolingType.TURBINE, 1D)
                 .setEff(FT_Coolable.CoolingType.HEATEXCHANGER, 0.5D));
+        OIL.addTraits(new FT_Heatable()
+                .setEff(FT_Heatable.HeatingType.BOILER, 1D)
+                .setEff(FT_Heatable.HeatingType.HEATEXCHANGER, 1D)
+                .addStep(10, 1, HOTOIL, 1));
+        HOTOIL.addTraits(new FT_Coolable().addStep(10, 1, OIL, 1)
+                .setEff(FT_Coolable.CoolingType.HEATEXCHANGER, 1D));
         FRACKSOL =          new FluidType("FRACKSOL",       0x798A6B, 1, 3, 3, EnumSymbol.ACID);//.addContainers(new CD_Canister(0x4F887F)).addTraits(new FT_Corrosive(15), new FT_Poison(false, 0), LIQUID, VISCOUS);
         PLASMA_DT =         new FluidType("PLASMA_DT",      0xF7AFDE, 0, 4, 0, EnumSymbol.RADIATION).setTemp(3250).addTraits(NOCON, NOID, PLASMA);
         PLASMA_HD =         new FluidType("PLASMA_HD",      0xF0ADF4, 0, 4, 0, EnumSymbol.RADIATION).setTemp(2500).addTraits(NOCON, NOID, PLASMA);
