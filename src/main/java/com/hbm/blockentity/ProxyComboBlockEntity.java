@@ -3,6 +3,7 @@ package com.hbm.blockentity;
 import api.hbm.energymk2.IEnergyConductorMK2;
 import api.hbm.energymk2.IEnergyConnectorMK2;
 import api.hbm.energymk2.IEnergyReceiverMK2;
+import api.hbm.fluidmk2.IFluidConnectorMK2;
 import api.hbm.fluidmk2.IFluidReceiverMK2;
 import api.hbm.redstoneoverradio.IRORInfo;
 import api.hbm.redstoneoverradio.IRORInteractive;
@@ -68,7 +69,14 @@ public class ProxyComboBlockEntity extends ProxyBaseBlockEntity implements IEner
     }
 
     /** Returns the core tile entity, or a delegate object. */
-    protected Object getCoreObject() { return this.getBlockEntity(); }
+    protected Object getCoreObject() {
+        BlockEntity blockEntity = this.getBlockEntity();
+        if(blockEntity instanceof IProxyDelegateProvider provider) {
+            Object delegate = provider.getDelegateForPosition(this.getBlockPos());
+            if(delegate != null) return delegate;
+        }
+        return blockEntity;
+    }
 
     @Override
     public void setPower(long i) {
@@ -177,6 +185,16 @@ public class ProxyComboBlockEntity extends ProxyBaseBlockEntity implements IEner
         }
 
         return 0;
+    }
+
+    @Override
+    public boolean canConnect(FluidType type, Direction dir) {
+        if(!this.fluid) return false;
+
+        if(getCoreObject() instanceof IFluidConnectorMK2 connector) {
+            return connector.canConnect(type, dir);
+        }
+        return true;
     }
 
     @Override

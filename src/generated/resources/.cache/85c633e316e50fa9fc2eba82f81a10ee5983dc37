@@ -1,4 +1,4 @@
-// 1.21.1	2026-08-13T20:23:06.9963541	Block States: hbm
+// 1.21.1	2026-08-13T21:43:37.6211619	Block States: hbm
 771df07d065b33c7dcf62cfb69b5cd3a3cb4feed assets/hbm/blockstates/asphalt.json
 c0f05f08a475704e80a5d657d494bf5a829fab8f assets/hbm/blockstates/asphalt_light.json
 8c6c51f054fa20e59275bf5c7c77e28e7790b34c assets/hbm/blockstates/balefire.json
@@ -79,6 +79,7 @@ cb242b8898d1ed2bf303bf4f12aa53e69800c266 assets/hbm/blockstates/heater_electric.
 afa9bb60662baea967549f5151be4c13bda73217 assets/hbm/blockstates/launch_pad.json
 d1ccda191cfa6fdb2bebb37756413d1263d21de1 assets/hbm/blockstates/leaves_layer.json
 911a1f7557d67cd1ace2a866512f1f1aa4fa935c assets/hbm/blockstates/machine_arc_welder.json
+321db0a1f2dc1e8a5a231bc6587bfaf83d91c87d assets/hbm/blockstates/machine_assembly_factory.json
 de9090d28992a3a6abcd8872803fc003989ba74d assets/hbm/blockstates/machine_assembly_machine.json
 fbf154acd2c6f78d210fba28e963956b5d06ee18 assets/hbm/blockstates/machine_battery_redd.json
 c29a994247ec12c14b3d49267a6ad50fcc9feb8b assets/hbm/blockstates/machine_battery_socket.json
@@ -87,6 +88,7 @@ e421acbea1f25b792469ddf89a371f3efebd8525 assets/hbm/blockstates/machine_blast_fu
 2fdf8b9f810fda7ea76b1a3f58529d980a8d81a0 assets/hbm/blockstates/machine_catalytic_cracking_tower.json
 293e0ecaa12a45a5cc9adaba3260f858409abb2c assets/hbm/blockstates/machine_catalytic_reformer.json
 a7b03afdb3c1b1f102798c80582ca65dcf706448 assets/hbm/blockstates/machine_centrifuge.json
+cbf334e2adf7eadb28d19242b43c538b27506e7a assets/hbm/blockstates/machine_chemical_factory.json
 5ecfbc83d1f726575800fa2227e4b291e535f615 assets/hbm/blockstates/machine_chemical_plant.json
 98ae4cde8da9a44107117b51b459f06e405f00fd assets/hbm/blockstates/machine_chungus.json
 fb757a40dcbc2b901368172b8b193418456903b6 assets/hbm/blockstates/machine_compressor.json
@@ -304,6 +306,7 @@ ea0173e09ce923a40b5e21369194502a6c4fefdc assets/hbm/models/block/layering_6.json
 1efc5f86ec7287d11dcab035e97995f70d5fc646 assets/hbm/models/block/layering_7.json
 3829294aa367860f1536bc844d65eae2bf6c98f1 assets/hbm/models/block/layering_8.json
 f55d5c93f0423e66d4aae3b691b0bb51957b9d98 assets/hbm/models/block/machine_arc_welder_particle.json
+f55d5c93f0423e66d4aae3b691b0bb51957b9d98 assets/hbm/models/block/machine_assembly_factory_particle.json
 f55d5c93f0423e66d4aae3b691b0bb51957b9d98 assets/hbm/models/block/machine_assembly_machine_particle.json
 f55d5c93f0423e66d4aae3b691b0bb51957b9d98 assets/hbm/models/block/machine_battery_redd_particle.json
 f55d5c93f0423e66d4aae3b691b0bb51957b9d98 assets/hbm/models/block/machine_battery_socket_particle.json
@@ -312,6 +315,7 @@ f55d5c93f0423e66d4aae3b691b0bb51957b9d98 assets/hbm/models/block/machine_blast_f
 f55d5c93f0423e66d4aae3b691b0bb51957b9d98 assets/hbm/models/block/machine_catalytic_cracking_tower_particle.json
 f55d5c93f0423e66d4aae3b691b0bb51957b9d98 assets/hbm/models/block/machine_catalytic_reformer_particle.json
 f55d5c93f0423e66d4aae3b691b0bb51957b9d98 assets/hbm/models/block/machine_centrifuge_particle.json
+f55d5c93f0423e66d4aae3b691b0bb51957b9d98 assets/hbm/models/block/machine_chemical_factory_particle.json
 f55d5c93f0423e66d4aae3b691b0bb51957b9d98 assets/hbm/models/block/machine_chemical_plant_particle.json
 f55d5c93f0423e66d4aae3b691b0bb51957b9d98 assets/hbm/models/block/machine_chungus_particle.json
 f55d5c93f0423e66d4aae3b691b0bb51957b9d98 assets/hbm/models/block/machine_compressor_compact_particle.json
@@ -526,6 +530,7 @@ b5cb531f9c015e4129f955f3e0b582e62505b659 assets/hbm/models/item/gravel_diamond.j
 1ae5a980018cda4e68cafcf4ce293349827b23ab assets/hbm/models/item/heat_boiler.json
 1ae5a980018cda4e68cafcf4ce293349827b23ab assets/hbm/models/item/launch_pad.json
 1ae5a980018cda4e68cafcf4ce293349827b23ab assets/hbm/models/item/machine_arc_welder.json
+1ae5a980018cda4e68cafcf4ce293349827b23ab assets/hbm/models/item/machine_assembly_factory.json
 1ae5a980018cda4e68cafcf4ce293349827b23ab assets/hbm/models/item/machine_assembly_machine.json
 1ae5a980018cda4e68cafcf4ce293349827b23ab assets/hbm/models/item/machine_battery_redd.json
 1ae5a980018cda4e68cafcf4ce293349827b23ab assets/hbm/models/item/machine_battery_socket.json
@@ -534,6 +539,7 @@ b5cb531f9c015e4129f955f3e0b582e62505b659 assets/hbm/models/item/gravel_diamond.j
 1ae5a980018cda4e68cafcf4ce293349827b23ab assets/hbm/models/item/machine_catalytic_cracking_tower.json
 1ae5a980018cda4e68cafcf4ce293349827b23ab assets/hbm/models/item/machine_catalytic_reformer.json
 1ae5a980018cda4e68cafcf4ce293349827b23ab assets/hbm/models/item/machine_centrifuge.json
+1ae5a980018cda4e68cafcf4ce293349827b23ab assets/hbm/models/item/machine_chemical_factory.json
 1ae5a980018cda4e68cafcf4ce293349827b23ab assets/hbm/models/item/machine_chemical_plant.json
 1ae5a980018cda4e68cafcf4ce293349827b23ab assets/hbm/models/item/machine_chungus.json
 1ae5a980018cda4e68cafcf4ce293349827b23ab assets/hbm/models/item/machine_compressor.json

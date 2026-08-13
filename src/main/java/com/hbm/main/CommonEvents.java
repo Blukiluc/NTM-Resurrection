@@ -163,8 +163,10 @@ public class CommonEvents {
         event.register(NtmMenuTypes.FLUID_TANK.get(), MachineFluidTankScreen::new);
 
         event.register(NtmMenuTypes.ASSEMBLY_MACHINE.get(), MachineAssemblyMachineScreen::new);
+        event.register(NtmMenuTypes.ASSEMBLY_FACTORY.get(), MachineAssemblyFactoryScreen::new);
         event.register(NtmMenuTypes.PREC_ASS.get(), MachinePrecAssScreen::new);
         event.register(NtmMenuTypes.CHEMICAL_PLANT.get(), MachineChemicalPlantScreen::new);
+        event.register(NtmMenuTypes.CHEMICAL_FACTORY.get(), MachineChemicalFactoryScreen::new);
         event.register(NtmMenuTypes.CRYSTALLIZER.get(), MachineCrystallizerScreen::new);
         event.register(NtmMenuTypes.WOOD_BURNER.get(), MachineWoodBurnerScreen::new);
         event.register(NtmMenuTypes.DIESEL.get(), MachineDieselScreen::new);

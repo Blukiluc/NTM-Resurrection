@@ -222,6 +222,13 @@ public class NtmBlockEntityTypes {
                             NtmBlocks.MACHINE_ASSEMBLY_MACHINE.get())
                     .build(null));
 
+    public static final Supplier<BlockEntityType<MachineAssemblyFactoryBlockEntity>> ASSEMBLY_FACTORY = REGISTER.register(
+            "assembly_factory",
+            () -> BlockEntityType.Builder.of(
+                            MachineAssemblyFactoryBlockEntity::new,
+                            NtmBlocks.MACHINE_ASSEMBLY_FACTORY.get())
+                    .build(null));
+
     public static final Supplier<BlockEntityType<MachinePrecAssBlockEntity>> PREC_ASS = REGISTER.register(
             "prec_ass",
             () -> BlockEntityType.Builder.of(
@@ -234,6 +241,13 @@ public class NtmBlockEntityTypes {
             () -> BlockEntityType.Builder.of(
                             MachineChemicalPlantBlockEntity::new,
                             NtmBlocks.MACHINE_CHEMICAL_PLANT.get())
+                    .build(null));
+
+    public static final Supplier<BlockEntityType<MachineChemicalFactoryBlockEntity>> CHEMICAL_FACTORY = REGISTER.register(
+            "chemical_factory",
+            () -> BlockEntityType.Builder.of(
+                            MachineChemicalFactoryBlockEntity::new,
+                            NtmBlocks.MACHINE_CHEMICAL_FACTORY.get())
                     .build(null));
 
     public static final Supplier<BlockEntityType<MachineCrystallizerBlockEntity>> CRYSTALLIZER = REGISTER.register(

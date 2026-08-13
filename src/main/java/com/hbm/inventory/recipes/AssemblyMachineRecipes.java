@@ -52,6 +52,29 @@ public class AssemblyMachineRecipes extends GenericRecipes<GenericRecipe> {
 //                        new ComparableStack(NtmItems.MOTOR.get(), 4),
 //                        new ComparableStack(NtmItems.CIRCUIT_CAPACITOR_BOARD.get(), 4)));
 
+//        this.register(new GenericRecipe("ass.assemfac").setup(400, 100)
+//                .outputItems(new ItemStack(NtmBlocks.MACHINE_ASSEMBLY_FACTORY.get(), 1))
+//                .inputItems(
+//                        new ComparableStack(NtmItems.INGOT_DURA_STEEL.get(), 16),
+//                        new ComparableStack(NtmItems.INGOT_COMBINE_STEEL.get(), 8),
+//                        new ComparableStack(NtmItems.INGOT_RUBBER.get(), 16),
+//                        new ComparableStack(NtmItems.INGOT_BORON.get(), 8),
+//                        new ComparableStack(NtmItems.SHELL_STEEL.get(), 4),
+//                        new ComparableStack(NtmItems.MOTOR.get(), 12),
+//                        new ComparableStack(NtmItems.CIRCUIT_BASIC.get(), 16)));
+
+//        this.register(new GenericRecipe("ass.chemfac").setup(400, 100)
+//                .outputItems(new ItemStack(NtmBlocks.MACHINE_CHEMICAL_FACTORY.get(), 1))
+//                .inputItems(
+//                        new ComparableStack(NtmItems.INGOT_DURA_STEEL.get(), 16),
+//                        new ComparableStack(NtmItems.INGOT_COMBINE_STEEL.get(), 8),
+//                        new ComparableStack(NtmItems.INGOT_RUBBER.get(), 16),
+//                        new ComparableStack(NtmItems.SHELL_STEEL.get(), 12),
+//                        new ComparableStack(NtmItems.PIPE_COPPER.get(), 8),
+//                        new ComparableStack(NtmItems.MOTOR_DESH.get(), 4),
+//                        new ComparableStack(NtmItems.COIL_TUNGSTEN.get(), 16),
+//                        new ComparableStack(NtmItems.CIRCUIT_BASIC.get(), 16)));
+
         FluidType[] order = Fluids.getInNiceOrder();
         for(int i = 1; i < order.length; ++i) {
             FluidType type = order[i];
