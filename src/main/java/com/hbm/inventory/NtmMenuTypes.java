@@ -18,6 +18,8 @@ public class NtmMenuTypes {
 
     public static final DeferredHolder<MenuType<?>, MenuType<MachineAssemblyMachineMenu>> ASSEMBLY_MACHINE = reg("assembly_machine", MachineAssemblyMachineMenu::new);
 
+    public static final DeferredHolder<MenuType<?>, MenuType<MachinePrecAssMenu>> PREC_ASS = reg("prec_ass", MachinePrecAssMenu::new);
+
     public static final DeferredHolder<MenuType<?>, MenuType<MachineChemicalPlantMenu>> CHEMICAL_PLANT = reg("chemical_plant", MachineChemicalPlantMenu::new);
 
     public static final DeferredHolder<MenuType<?>, MenuType<MachineCrystallizerMenu>> CRYSTALLIZER = reg("crystallizer", MachineCrystallizerMenu::new);

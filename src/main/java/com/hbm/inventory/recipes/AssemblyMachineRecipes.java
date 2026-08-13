@@ -44,6 +44,14 @@ public class AssemblyMachineRecipes extends GenericRecipes<GenericRecipe> {
                 .outputItems(new ItemStack(NtmBlocks.NUKE_FAT_MAN.get(), 1))
                 .inputItems(new ComparableStack(NtmItems.PELLET_ANTIMATTER.get(), 1)));
 
+//        this.register(new GenericRecipe("ass.precass").setup(1_200, 100)
+//                .outputItems(new ItemStack(NtmBlocks.MACHINE_PREC_ASS.get(), 1))
+//                .inputItems(
+//                        new OreDictStack(STEEL.plateCast(), 8),
+//                        new ComparableStack(NtmItems.INGOT_ZIRCONIUM.get(), 8),
+//                        new ComparableStack(NtmItems.MOTOR.get(), 4),
+//                        new ComparableStack(NtmItems.CIRCUIT_CAPACITOR_BOARD.get(), 4)));
+
         FluidType[] order = Fluids.getInNiceOrder();
         for(int i = 1; i < order.length; ++i) {
             FluidType type = order[i];

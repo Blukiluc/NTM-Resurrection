@@ -1163,6 +1163,7 @@ public class NtmLanguageProvider extends LanguageProvider {
         this.add(NtmBlocks.MACHINE_BATTERY_SOCKET, "Battery Socket");
         this.add(NtmBlocks.MACHINE_BATTERY_REDD, "FEnSU");
         this.add(NtmBlocks.MACHINE_ASSEMBLY_MACHINE, "Assembly Machine");
+        this.add(NtmBlocks.MACHINE_PREC_ASS, "Precision Assembly Machine");
         this.add(NtmBlocks.MACHINE_CHEMICAL_PLANT, "Chemical Plant");
         this.add(NtmBlocks.MACHINE_CRYSTALLIZER, "Ore Acidizer");
         this.add(NtmBlocks.MACHINE_WOOD_BURNER, "Wood-Burning Generator");
@@ -1430,6 +1431,7 @@ public class NtmLanguageProvider extends LanguageProvider {
         this.add("container.battery_socket", "Battery Socket");
         this.add("container.battery_redd", "FEnSU");
         this.add("container.machine_assembly_machine", "Assembly Machine");
+        this.add("container.machine_precass", "Precision Assembly Machine");
         this.add("container.machine_chemical_plant", "Chemical Plant");
         this.add("container.crystallizer", "Ore Acidizer");
         this.add("container.machine_wood_burner", "Wood-Burner");

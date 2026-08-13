@@ -222,6 +222,13 @@ public class NtmBlockEntityTypes {
                             NtmBlocks.MACHINE_ASSEMBLY_MACHINE.get())
                     .build(null));
 
+    public static final Supplier<BlockEntityType<MachinePrecAssBlockEntity>> PREC_ASS = REGISTER.register(
+            "prec_ass",
+            () -> BlockEntityType.Builder.of(
+                            MachinePrecAssBlockEntity::new,
+                            NtmBlocks.MACHINE_PREC_ASS.get())
+                    .build(null));
+
     public static final Supplier<BlockEntityType<MachineChemicalPlantBlockEntity>> CHEMICAL_PLANT = REGISTER.register(
             "chemical_plant",
             () -> BlockEntityType.Builder.of(

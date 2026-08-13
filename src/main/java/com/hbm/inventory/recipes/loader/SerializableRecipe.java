@@ -61,6 +61,7 @@ public abstract class SerializableRecipe {
 
         //GENERIC
         recipeHandlers.add(AssemblyMachineRecipes.INSTANCE);
+//        recipeHandlers.add(PrecAssRecipes.INSTANCE);
     }
 
     public static void initialize() {

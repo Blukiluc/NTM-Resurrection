@@ -1,4 +1,4 @@
-// 1.21.1	2026-08-12T01:26:12.7603446	Block States: hbm
+// 1.21.1	2026-08-13T20:23:06.9963541	Block States: hbm
 771df07d065b33c7dcf62cfb69b5cd3a3cb4feed assets/hbm/blockstates/asphalt.json
 c0f05f08a475704e80a5d657d494bf5a829fab8f assets/hbm/blockstates/asphalt_light.json
 8c6c51f054fa20e59275bf5c7c77e28e7790b34c assets/hbm/blockstates/balefire.json
@@ -106,6 +106,7 @@ bf334ace24f60a9fa60fc3541387f6b9311274d4 assets/hbm/blockstates/machine_gas_cent
 268e1518eea12867af243edbb69649e9957bb3c1 assets/hbm/blockstates/machine_industrial_turbine.json
 981805ed24657c39c6363157c7cc55f9239aaff9 assets/hbm/blockstates/machine_mixer.json
 9e26a82dbd9fbbb1f85007ee615f46a240b30a7f assets/hbm/blockstates/machine_oil_derrick.json
+2615227ff0165789cc856e5d080be62991b8f800 assets/hbm/blockstates/machine_precass.json
 c148fb71cec7481e3a8dd2d0e804114b41d67c09 assets/hbm/blockstates/machine_press.json
 d7510b455a3e5e2329ea085ff2f489bfa6c24111 assets/hbm/blockstates/machine_pumpjack.json
 6af6907df706281373b19ba367e7368c823a973c assets/hbm/blockstates/machine_refinery.json
@@ -330,6 +331,7 @@ f55d5c93f0423e66d4aae3b691b0bb51957b9d98 assets/hbm/models/block/machine_industr
 f55d5c93f0423e66d4aae3b691b0bb51957b9d98 assets/hbm/models/block/machine_industrial_turbine_particle.json
 f55d5c93f0423e66d4aae3b691b0bb51957b9d98 assets/hbm/models/block/machine_mixer_particle.json
 f55d5c93f0423e66d4aae3b691b0bb51957b9d98 assets/hbm/models/block/machine_oil_derrick_particle.json
+f55d5c93f0423e66d4aae3b691b0bb51957b9d98 assets/hbm/models/block/machine_precass_particle.json
 f55d5c93f0423e66d4aae3b691b0bb51957b9d98 assets/hbm/models/block/machine_press_particle.json
 f55d5c93f0423e66d4aae3b691b0bb51957b9d98 assets/hbm/models/block/machine_pumpjack_particle.json
 f55d5c93f0423e66d4aae3b691b0bb51957b9d98 assets/hbm/models/block/machine_refinery_particle.json
@@ -551,6 +553,7 @@ b5cb531f9c015e4129f955f3e0b582e62505b659 assets/hbm/models/item/gravel_diamond.j
 1ae5a980018cda4e68cafcf4ce293349827b23ab assets/hbm/models/item/machine_industrial_turbine.json
 1ae5a980018cda4e68cafcf4ce293349827b23ab assets/hbm/models/item/machine_mixer.json
 1ae5a980018cda4e68cafcf4ce293349827b23ab assets/hbm/models/item/machine_oil_derrick.json
+1ae5a980018cda4e68cafcf4ce293349827b23ab assets/hbm/models/item/machine_precass.json
 1ae5a980018cda4e68cafcf4ce293349827b23ab assets/hbm/models/item/machine_press.json
 1ae5a980018cda4e68cafcf4ce293349827b23ab assets/hbm/models/item/machine_pumpjack.json
 1ae5a980018cda4e68cafcf4ce293349827b23ab assets/hbm/models/item/machine_refinery.json

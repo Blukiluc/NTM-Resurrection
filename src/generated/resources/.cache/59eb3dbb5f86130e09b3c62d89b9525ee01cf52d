@@ -1,4 +1,4 @@
-// 1.21.1	2026-08-12T01:26:12.764907	Loot Tables
+// 1.21.1	2026-08-13T20:23:07.0021743	Loot Tables
 4dea21baadd671e0fc70004833537e05da50d388 data/hbm/loot_table/blocks/asphalt.json
 fb8bbca081abce158c2e2c99aad65884a8ac42bc data/hbm/loot_table/blocks/asphalt_light.json
 ac4aa7fb9a18c76eab92c1ad6d77a20da10a52ed data/hbm/loot_table/blocks/balefire.json
@@ -105,6 +105,7 @@ bda8225ec56b92d7aa0a545535355592ead03ee6 data/hbm/loot_table/blocks/machine_indu
 2b854843c255ecbb36229aa0663687062063edc0 data/hbm/loot_table/blocks/machine_industrial_turbine.json
 ffb9cf191ce9ddc0efd7d22622ff639f8ba47aef data/hbm/loot_table/blocks/machine_mixer.json
 e2d4d4f09e5a4ebe2b717aac70c01afacfde863c data/hbm/loot_table/blocks/machine_oil_derrick.json
+aa6791de44f70475e94187cd7b44f455e6b75794 data/hbm/loot_table/blocks/machine_precass.json
 18cdfc5ed84584904e1b8ecb75c7b817e232db4c data/hbm/loot_table/blocks/machine_press.json
 2460e319a473dfff9e1e0bb36e834aeb6a5e4fa0 data/hbm/loot_table/blocks/machine_pumpjack.json
 deccc3c05bd0d1dfa4a09a357809efe08e9e281d data/hbm/loot_table/blocks/machine_refinery.json
