@@ -3,6 +3,9 @@
     "hbm:waste_log",
     "hbm:waste_planks",
     "hbm:frozen_log",
-    "hbm:frozen_planks"
+    "hbm:frozen_planks",
+    "hbm:red_pylon",
+    "hbm:red_pylon_medium_wood",
+    "hbm:red_pylon_medium_wood_transformer"
   ]
 }

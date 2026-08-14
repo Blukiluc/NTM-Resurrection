@@ -1,0 +1,32 @@
+{
+  "parent": "minecraft:recipes/root",
+  "criteria": {
+    "has_red_cable": {
+      "conditions": {
+        "items": [
+          {
+            "items": "hbm:red_cable"
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    },
+    "has_the_recipe": {
+      "conditions": {
+        "recipe": "hbm:red_cable_classic"
+      },
+      "trigger": "minecraft:recipe_unlocked"
+    }
+  },
+  "requirements": [
+    [
+      "has_the_recipe",
+      "has_red_cable"
+    ]
+  ],
+  "rewards": {
+    "recipes": [
+      "hbm:red_cable_classic"
+    ]
+  }
+}

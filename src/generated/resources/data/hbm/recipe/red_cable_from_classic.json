@@ -1,0 +1,13 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "category": "redstone",
+  "ingredients": [
+    {
+      "item": "hbm:red_cable_classic"
+    }
+  ],
+  "result": {
+    "count": 1,
+    "id": "hbm:red_cable"
+  }
+}

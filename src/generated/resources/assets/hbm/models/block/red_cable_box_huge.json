@@ -1,0 +1,16 @@
+{
+  "type": "box_duct",
+  "parent": "minecraft:block/block",
+  "diameter": 0.75,
+  "junction_diameter": 0.75,
+  "loader": "hbm:ntm_geometry_loader",
+  "textures": {
+    "curve_bl": "hbm:block/boxduct_cable_curve_bl",
+    "curve_br": "hbm:block/boxduct_cable_curve_br",
+    "curve_tl": "hbm:block/boxduct_cable_curve_tl",
+    "curve_tr": "hbm:block/boxduct_cable_curve_tr",
+    "end": "hbm:block/boxduct_cable_end_0",
+    "junction": "hbm:block/boxduct_cable_junction",
+    "straight": "hbm:block/boxduct_cable_straight"
+  }
+}

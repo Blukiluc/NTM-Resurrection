@@ -29,7 +29,6 @@ import net.minecraft.nbt.CompoundTag;
 import net.minecraft.network.RegistryFriendlyByteBuf;
 import net.minecraft.network.chat.Component;
 import net.minecraft.sounds.SoundSource;
-import net.minecraft.util.RandomSource;
 import net.minecraft.world.entity.player.Inventory;
 import net.minecraft.world.entity.player.Player;
 import net.minecraft.world.inventory.AbstractContainerMenu;
@@ -165,7 +164,10 @@ public class MachineChemicalPlantBlockEntity extends MachineBaseBlockEntity impl
 
             if(didProcess) {
                 this.spin += spinSpeed;
-                if(this.spin >= 360F) this.spin -= 360F;
+                if(this.spin >= 360F) {
+                    this.spin -= 360F;
+                    this.prevSpin -= 360F;
+                }
 
                 this.slideTick++;
                 this.slide = (float) (Math.sin(this.slideTick * SLIDE_FREQ) * SLIDE_AMPLITUDE);

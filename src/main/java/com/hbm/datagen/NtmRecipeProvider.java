@@ -70,5 +70,14 @@ public class NtmRecipeProvider extends RecipeProvider {
         slab(recipeOutput, RecipeCategory.BUILDING_BLOCKS, NtmBlocks.BRICK_CONCRETE_MOSSY_SLAB.get(), NtmBlocks.BRICK_CONCRETE_MOSSY.get());
         slab(recipeOutput, RecipeCategory.BUILDING_BLOCKS, NtmBlocks.BRICK_CONCRETE_CRACKED_SLAB.get(), NtmBlocks.BRICK_CONCRETE_CRACKED.get());
         slab(recipeOutput, RecipeCategory.BUILDING_BLOCKS, NtmBlocks.BRICK_CONCRETE_BROKEN_SLAB.get(), NtmBlocks.BRICK_CONCRETE_BROKEN.get());
+
+        ShapelessRecipeBuilder.shapeless(RecipeCategory.REDSTONE, NtmBlocks.RED_CABLE_CLASSIC.get())
+                .requires(NtmBlocks.RED_CABLE.get())
+                .unlockedBy("has_red_cable", has(NtmBlocks.RED_CABLE.get()))
+                .save(recipeOutput);
+        ShapelessRecipeBuilder.shapeless(RecipeCategory.REDSTONE, NtmBlocks.RED_CABLE.get())
+                .requires(NtmBlocks.RED_CABLE_CLASSIC.get())
+                .unlockedBy("has_red_cable_classic", has(NtmBlocks.RED_CABLE_CLASSIC.get()))
+                .save(recipeOutput, "hbm:red_cable_from_classic");
     }
 }

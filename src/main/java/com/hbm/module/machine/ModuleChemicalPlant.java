@@ -14,7 +14,7 @@ public class ModuleChemicalPlant extends ModuleMachineBase {
     public ModuleChemicalPlant(int index, IEnergyHandlerMK2 battery, NonNullList<ItemStack> slots) {
         super(index, battery, slots);
         this.inputSlots = new int[3];
-        this.outputSlots = new int[1];
+        this.outputSlots = new int[3];
         this.inputTanks = new FluidTank[3];
         this.outputTanks = new FluidTank[3];
     }
@@ -36,8 +36,8 @@ public class ModuleChemicalPlant extends ModuleMachineBase {
         for(int i = 0; i < inputSlots.length; i++) inputSlots[i] = from + i;
         return this;
     }
-    public ModuleChemicalPlant itemOutput(int a) {
-        outputSlots[0] = a;
+    public ModuleChemicalPlant itemOutput(int from) {
+        for(int i = 0; i < outputSlots.length; i++) outputSlots[i] = from + i;
         return this;
     }
 

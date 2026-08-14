@@ -100,6 +100,13 @@ public class UniNodespace {
     /** Checks if the node can be connected to given the DirPos, skipSideCheck will ignore the DirPos' direction value */
     public static boolean checkConnection(GenNode connectsTo, DirPos connectFrom, boolean skipSideCheck) {
         for (DirPos revCon : connectsTo.connections) {
+            if(revCon.getDir() == null || connectFrom.getDir() == null) {
+                if(revCon.getDir() == null && connectFrom.getDir() == null &&
+                        revCon.getX() == connectFrom.getX() && revCon.getY() == connectFrom.getY() && revCon.getZ() == connectFrom.getZ()) {
+                    return true;
+                }
+                continue;
+            }
             if (revCon.getX() - revCon.getDir().getStepX() == connectFrom.getX() && revCon.getY() - revCon.getDir().getStepY() == connectFrom.getY() && revCon.getZ() - revCon.getDir().getStepZ() == connectFrom.getZ() && (revCon.getDir() == connectFrom.getDir().getOpposite() || skipSideCheck)) {
                 return true;
             }
@@ -145,4 +152,3 @@ public class UniNodespace {
         }
     }
 }
-

@@ -3,28 +3,26 @@ package com.hbm.render.blockentity;
 import com.hbm.blockentity.machine.MachineChemicalPlantBlockEntity;
 import com.hbm.blocks.DummyableBlock;
 import com.hbm.blocks.NtmBlocks;
-import com.hbm.inventory.recipes.ChemicalPlantRecipes;
-import com.hbm.inventory.recipes.loader.GenericRecipe;
-import com.hbm.main.NuclearTechMod;
+import com.hbm.inventory.fluid.FluidType;
+import com.hbm.inventory.fluid.Fluids;
+import com.hbm.inventory.fluid.tank.FluidTank;
 import com.hbm.main.ResourceManager;
 import com.hbm.render.item.ItemRenderBase;
 import com.hbm.render.util.RenderContext;
 import com.hbm.util.BobMathUtil;
+import com.mojang.blaze3d.systems.RenderSystem;
 import com.mojang.blaze3d.vertex.PoseStack;
 import com.mojang.math.Axis;
-import net.minecraft.client.Minecraft;
 import net.minecraft.client.renderer.BlockEntityWithoutLevelRenderer;
 import net.minecraft.client.renderer.LevelRenderer;
 import net.minecraft.client.renderer.MultiBufferSource;
 import net.minecraft.client.renderer.blockentity.BlockEntityRenderer;
-import net.minecraft.client.renderer.entity.ItemRenderer;
-import net.minecraft.client.resources.model.BakedModel;
 import net.minecraft.core.Direction;
 import net.minecraft.core.BlockPos;
 import net.minecraft.world.item.Item;
-import net.minecraft.world.item.ItemDisplayContext;
 import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.phys.AABB;
+import org.joml.Matrix4f;
 
 public class RenderChemicalPlant extends BlockEntityRendererNT<MachineChemicalPlantBlockEntity> implements IBEWLRProvider {
 
@@ -68,12 +66,43 @@ public class RenderChemicalPlant extends BlockEntityRendererNT<MachineChemicalPl
 
         RenderContext.popPose();
 
-        if(be.tanks[3].getFill() > 0) {
-            // TODO render fluid, ex:
-            // FluidRenderUtil.renderFluid(be.tanks[i], poseStack, buffer, packedLight);
+        FluidTank displayTank = hasFluid(be.tanks[3]) ? be.tanks[3] : be.tanks[0];
+        if(hasFluid(displayTank)) {
+            renderFluid(displayTank, spin);
         }
 
         RenderContext.end();
+    }
+
+    private static boolean hasFluid(FluidTank tank) {
+        return tank.getFill() > 0 && tank.getTankType() != Fluids.NONE;
+    }
+
+    private void renderFluid(FluidTank tank, float spin) {
+        FluidType type = tank.getTankType();
+        int color = type.getColor();
+        float rotationProgress = spin / 360F;
+
+        RenderSystem.enableBlend();
+        RenderSystem.depthMask(false);
+        RenderSystem.defaultBlendFunc();
+        bindTexture(ResourceManager.CHEMICAL_PLANT_FLUID_TEX);
+        RenderSystem.setTextureMatrix(new Matrix4f().translate(
+                -rotationProgress,
+                (float) BobMathUtil.sps(rotationProgress * Math.PI * 2D) * 0.1F - 0.25F,
+                0F
+        ));
+        RenderContext.setColor(
+                ((color >> 16) & 0xFF) / 255F,
+                ((color >> 8) & 0xFF) / 255F,
+                (color & 0xFF) / 255F,
+                0.5F
+        );
+        ResourceManager.chemical_plant.renderPart("Fluid");
+        RenderSystem.resetTextureMatrix();
+        RenderContext.setColor(1F, 1F, 1F, 1F);
+        RenderSystem.depthMask(true);
+        RenderSystem.disableBlend();
     }
 
     @Override
