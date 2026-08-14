@@ -85,6 +85,7 @@ public class NtmItemModelProvider extends ItemModelProvider {
         this.basicItem(NtmItems.INGOT_LEAD.get());
         this.basicItem(NtmItems.INGOT_BISMUTH.get());
         this.basicItem(NtmItems.INGOT_ARSENIC.get());
+        this.basicItem(NtmItems.INGOT_ASBESTOS.get());
         this.basicItem(NtmItems.INGOT_CALCIUM.get());
         this.basicItem(NtmItems.INGOT_CADMIUM.get());
         this.basicItem(NtmItems.INGOT_TANTALIUM.get());
@@ -716,6 +717,7 @@ public class NtmItemModelProvider extends ItemModelProvider {
 
         this.basicItem(NtmItems.TEMPLATE_FOLDER.get());
         this.basicItem(NtmItems.NOTHING.get());
+        this.basicItem(NtmItems.CRUCIBLE.get());
 
         // welp
         this.getBuilder(NtmBlocks.LEAVES_LAYER.getId().getPath()).parent(new ModelFile.UncheckedModelFile(modLoc("block/layering_1")));
