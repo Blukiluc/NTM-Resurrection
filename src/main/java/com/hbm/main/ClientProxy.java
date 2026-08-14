@@ -218,6 +218,7 @@ public class ClientProxy extends ServerProxy {
         BlockEntityRenderers.register(NtmBlockEntityTypes.BATTERY_REDD.get(), new RenderBatteryREDD());
         BlockEntityRenderers.register(NtmBlockEntityTypes.PYLON_CONNECTOR.get(), new RenderElectricityConnector());
         BlockEntityRenderers.register(NtmBlockEntityTypes.PYLON.get(), new RenderElectricityPylon());
+        BlockEntityRenderers.register(NtmBlockEntityTypes.PIPE_ANCHOR.get(), new RenderPipeAnchor());
         //missile blocks
         BlockEntityRenderers.register(NtmBlockEntityTypes.LAUNCH_PAD.get(), new RenderLaunchPad());
         BlockEntityRenderers.register(NtmBlockEntityTypes.SOYUZ_LAUNCHER.get(), new RenderSoyuzLauncher());

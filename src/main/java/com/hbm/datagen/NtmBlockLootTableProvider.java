@@ -186,6 +186,7 @@ public class NtmBlockLootTableProvider extends BlockLootSubProvider {
         this.dropSelf(NtmBlocks.FLUID_DUCT_BOX_IRON_TINY.get());
         this.dropSelf(NtmBlocks.FLUID_DUCT_BOX_COPPER_TINY.get());
         this.dropSelf(NtmBlocks.FLUID_DUCT_BOX_ALUMINIUM_TINY.get());
+        this.dropSelf(NtmBlocks.PIPE_ANCHOR.get());
 
         this.dropSelf(NtmBlocks.HEATER_FIREBOX.get());
         this.dropSelf(NtmBlocks.HEATER_OVEN.get());

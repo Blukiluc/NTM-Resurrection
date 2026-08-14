@@ -677,6 +677,12 @@ public class NtmItems {
     // Tools
     public static final DeferredItem<Item> BALEFIRE_AND_STEEL = ITEMS.register("balefire_and_steel", () -> new BalefireAndSteelItem(new Item.Properties().stacksTo(1).durability(256)));
     public static final DeferredItem<Item> WIRING_RED_COPPER = ITEMS.register("wiring_red_copper", () -> new CableDrumItem(new Item.Properties().stacksTo(1)));
+    public static final DeferredItem<Item> WRENCH = ITEMS.register("wrench", () -> new WrenchItem(
+            NtmTiers.STEEL,
+            new Item.Properties()
+                    .stacksTo(1)
+                    .attributes(SwordItem.createAttributes(NtmTiers.STEEL, 3, -2.4F))
+    ));
 
     // Energy Drinks
     public static final DeferredItem<Item> DRINK = ITEMS.register("drink", () -> new DrinkItem(new Item.Properties()));

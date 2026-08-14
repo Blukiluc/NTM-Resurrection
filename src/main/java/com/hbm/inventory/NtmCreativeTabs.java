@@ -705,6 +705,7 @@ public class NtmCreativeTabs {
                         output.accept(NtmBlocks.FLUID_DUCT_BOX_IRON_TINY);
                         output.accept(NtmBlocks.FLUID_DUCT_BOX_COPPER_TINY);
                         output.accept(NtmBlocks.FLUID_DUCT_BOX_ALUMINIUM_TINY);
+                        output.accept(NtmBlocks.PIPE_ANCHOR);
 
                         output.accept(NtmBlocks.MACHINE_BATTERY_SOCKET);
                         output.accept(NtmBlocks.MACHINE_BATTERY_REDD);
@@ -985,6 +986,7 @@ public class NtmCreativeTabs {
 
                         output.accept(NtmItems.BALEFIRE_AND_STEEL);
                         output.accept(NtmItems.WIRING_RED_COPPER);
+                        output.accept(NtmItems.WRENCH);
 
                         addMetaItems(output, NtmItems.DRINK.get());
                         output.accept(NtmItems.BOTTLE_OPENER);

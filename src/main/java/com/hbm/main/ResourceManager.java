@@ -84,6 +84,7 @@ public class ResourceManager {
 
     public static final ResourceLocation CONNECTOR_TEX = NuclearTechMod.withDefaultNamespace("textures/models/network/connector.png");
     public static final ResourceLocation CONNECTOR_SUPER_TEX = NuclearTechMod.withDefaultNamespace("textures/models/network/connector_super.png");
+    public static final ResourceLocation PIPE_ANCHOR_TEX = NuclearTechMod.withDefaultNamespace("textures/models/network/pipe_anchor.png");
     public static final ResourceLocation PYLON_TEX = NuclearTechMod.withDefaultNamespace("textures/models/network/pylon.png");
     public static final ResourceLocation PYLON_STEEL_TEX = NuclearTechMod.withDefaultNamespace("textures/models/network/pylon_steel.png");
     public static final ResourceLocation PYLON_MEDIUM_TEX = NuclearTechMod.withDefaultNamespace("textures/models/network/pylon_medium.png");
@@ -283,6 +284,7 @@ public class ResourceManager {
 
     public static IModelCustom connector;
     public static IModelCustom connector_super;
+    public static IModelCustom pipe_anchor;
     public static IModelCustom pylon;
     public static IModelCustom pylon_medium;
     public static IModelCustom pylon_large;
@@ -427,6 +429,7 @@ public class ResourceManager {
 
         connector = new HFRWavefrontObject("models/obj/network/connector.obj").asVBO();
         connector_super = new HFRWavefrontObject("models/obj/network/connector_super.obj").asVBO();
+        pipe_anchor = new HFRWavefrontObject("models/obj/network/pipe_anchor.obj").asVBO();
         pylon = new HFRWavefrontObject("models/obj/network/pylon.obj").asVBO();
         pylon_medium = new HFRWavefrontObject("models/obj/network/pylon_medium.obj").asVBO();
         pylon_large = new HFRWavefrontObject("models/obj/network/pylon_large.obj").asVBO();
