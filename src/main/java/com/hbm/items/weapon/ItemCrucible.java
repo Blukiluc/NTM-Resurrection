@@ -111,7 +111,7 @@ public class ItemCrucible extends Item {
 				serverLevel.sendParticles(
 						new BlockParticleOption(ParticleTypes.BLOCK, Blocks.REDSTONE_BLOCK.defaultBlockState()),
 						victim.getX(), victim.getY() + victim.getBbHeight() * 0.5, victim.getZ(),
-						count * 4, 0.1D, 0.1D, 0.1D, 0.05D
+						count * 6, 0.1D, 0.1D, 0.1D, 0.05D
 				);
 			}
 

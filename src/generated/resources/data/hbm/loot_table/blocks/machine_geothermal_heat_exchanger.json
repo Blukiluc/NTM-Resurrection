@@ -11,11 +11,11 @@
       "entries": [
         {
           "type": "minecraft:item",
-          "name": "hbm:machine_hephaestus"
+          "name": "hbm:machine_geothermal_heat_exchanger"
         }
       ],
       "rolls": 1.0
     }
   ],
-  "random_sequence": "hbm:blocks/machine_hephaestus"
+  "random_sequence": "hbm:blocks/machine_geothermal_heat_exchanger"
 }

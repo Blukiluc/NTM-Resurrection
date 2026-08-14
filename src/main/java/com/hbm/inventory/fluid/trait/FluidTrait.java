@@ -26,10 +26,10 @@ public class FluidTrait {
         registerTrait("heatable", FT_Heatable.class);
         registerTrait("coolable", FT_Coolable.class);
 //        registerTrait("pwrmoderator", FT_PWRModerator.class);
-//        registerTrait("poison", FT_Poison.class);
+        registerTrait("poison", FT_Poison.class);
 //        registerTrait("toxin", FT_Toxin.class);
-//        registerTrait("ventradiation", FT_VentRadiation.class);
-//        registerTrait("pheromone", FT_Pheromone.class);
+        registerTrait("ventradiation", FT_VentRadiation.class);
+       registerTrait("pheromone", FT_Pheromone.class);
         //simple traits, "tags"
         registerTrait("gaseous", FT_Gaseous.class);
         registerTrait("gaseous_art", FT_Gaseous_ART.class);
