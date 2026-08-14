@@ -42,6 +42,10 @@ public class NtmMenuTypes {
 
     public static final DeferredHolder<MenuType<?>, MenuType<MachineCentrifugeMenu>> CENTRIFUGE = reg("centrifuge", MachineCentrifugeMenu::new);
 
+    public static final DeferredHolder<MenuType<?>, MenuType<MachineFurnaceBrickMenu>> FURNACE_BRICK = reg("furnace_brick", MachineFurnaceBrickMenu::new);
+
+    public static final DeferredHolder<MenuType<?>, MenuType<MachineElectricFurnaceMenu>> ELECTRIC_FURNACE = reg("electric_furnace", MachineElectricFurnaceMenu::new);
+
     public static final DeferredHolder<MenuType<?>, MenuType<MachineFurnaceIronMenu>> FURNACE_IRON = reg("furnace_iron", MachineFurnaceIronMenu::new);
 
     public static final DeferredHolder<MenuType<?>, MenuType<MachineFurnaceSteelMenu>> FURNACE_STEEL = reg("furnace_steel", MachineFurnaceSteelMenu::new);

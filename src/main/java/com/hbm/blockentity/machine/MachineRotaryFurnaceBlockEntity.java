@@ -274,7 +274,7 @@ public class MachineRotaryFurnaceBlockEntity extends MachineBaseBlockEntity impl
         if(this.isProgressing) this.anim += (float) Math.max(this.burnHeat, 1.0D);
 
         Direction dir = this.getBlockState().getValue(DummyableBlock.FACING);
-        Direction side = dir.getClockWise();
+        Direction side = dir.getCounterClockWise();
 
         if(this.burnTime > 0 && this.level.random.nextBoolean()) {
             this.level.addParticle(
@@ -287,23 +287,11 @@ public class MachineRotaryFurnaceBlockEntity extends MachineBaseBlockEntity impl
                     0.0D
             );
         }
-
-        if(this.isVenting && this.level.getGameTime() % 2 == 0) {
-            this.level.addParticle(
-                    ParticleTypes.CAMPFIRE_COSY_SMOKE,
-                    this.worldPosition.getX() + 0.5D + side.getStepX(),
-                    this.worldPosition.getY() + 5.0D,
-                    this.worldPosition.getZ() + 0.5D + side.getStepZ(),
-                    0.0D,
-                    0.05D,
-                    0.0D
-            );
-        }
     }
 
     public DirPos[] getSteamPos() {
         Direction dir = this.getBlockState().getValue(DummyableBlock.FACING);
-        Direction side = dir.getClockWise();
+        Direction side = dir.getCounterClockWise();
         BlockPos first = this.worldPosition.relative(dir, -2).relative(side, -2);
         BlockPos second = this.worldPosition.relative(dir, -2).relative(side, -1);
 
@@ -315,7 +303,7 @@ public class MachineRotaryFurnaceBlockEntity extends MachineBaseBlockEntity impl
 
     public DirPos[] getFluidPos() {
         Direction dir = this.getBlockState().getValue(DummyableBlock.FACING);
-        Direction side = dir.getClockWise();
+        Direction side = dir.getCounterClockWise();
         BlockPos first = this.worldPosition.relative(dir).relative(side, 3);
         BlockPos second = this.worldPosition.relative(dir, -1).relative(side, 3);
 
@@ -326,7 +314,7 @@ public class MachineRotaryFurnaceBlockEntity extends MachineBaseBlockEntity impl
     }
 
     public DirPos getSmokePos() {
-        Direction side = this.getBlockState().getValue(DummyableBlock.FACING).getClockWise();
+        Direction side = this.getBlockState().getValue(DummyableBlock.FACING).getCounterClockWise();
         return new DirPos(this.worldPosition.relative(side).above(5), Direction.UP);
     }
 
@@ -361,7 +349,7 @@ public class MachineRotaryFurnaceBlockEntity extends MachineBaseBlockEntity impl
     @Override
     public int[] getAccessibleSlotsFromSide(BlockPos pos, Direction direction) {
         Direction dir = this.getBlockState().getValue(DummyableBlock.FACING);
-        Direction side = dir.getClockWise();
+        Direction side = dir.getCounterClockWise();
 
         if(direction == dir.getOpposite()) {
             if(pos.equals(this.worldPosition.relative(dir, -1).relative(side, 2))) return new int[] {SLOT_INPUT_1};

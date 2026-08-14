@@ -1200,6 +1200,8 @@ public class NtmLanguageProvider extends LanguageProvider {
         this.add(NtmBlocks.MACHINE_TOWER_SMALL, "Auxiliary Cooling Tower");
         this.add(NtmBlocks.MACHINE_TOWER_LARGE, "Cooling Tower");
         this.add(NtmBlocks.MACHINE_GEOTHERMAL_HEAT_EXCHANGER, "Geothermal Heat Exchanger");
+        this.add(NtmBlocks.FURNACE_BRICK, "Bricked Furnace");
+        this.add(NtmBlocks.MACHINE_ELECTRIC_FURNACE, "Electric Furnace");
         this.add(NtmBlocks.FURNACE_IRON, "Iron Furnace");
         this.add(NtmBlocks.FURNACE_STEEL, "Steel Furnace");
         this.add(NtmBlocks.COMBINATION_OVEN, "Combination Oven");
@@ -1470,6 +1472,8 @@ public class NtmLanguageProvider extends LanguageProvider {
         this.add("container.machine_compressor", "Compressor");
         this.add("container.heat_boiler", "Boiler");
         this.add("container.machine_industrial_boiler", "Industrial Boiler");
+        this.add("container.furnace_brick", "Bricked Furnace");
+        this.add("container.machine_electric_furnace", "Electric Furnace");
         this.add("container.furnace_iron", "Iron Furnace");
         this.add("container.furnace_steel", "Steel Furnace");
         this.add("container.combination_oven", "Combination Oven");

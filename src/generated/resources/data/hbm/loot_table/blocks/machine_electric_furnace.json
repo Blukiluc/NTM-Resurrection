@@ -11,11 +11,11 @@
       "entries": [
         {
           "type": "minecraft:item",
-          "name": "hbm:machine_crystallizer"
+          "name": "hbm:machine_electric_furnace"
         }
       ],
       "rolls": 1.0
     }
   ],
-  "random_sequence": "hbm:blocks/machine_crystallizer"
+  "random_sequence": "hbm:blocks/machine_electric_furnace"
 }

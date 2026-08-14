@@ -1,4 +1,4 @@
-// 1.21.1	2026-08-13T23:42:38.9230422	Item Models: hbm
+// 1.21.1	2026-08-14T20:44:18.9285127	Item Models: hbm
 c4e09d2d0fd2bef45dc51c8da0c70bab4652e4b1 assets/hbm/models/item/acetylene_torch.json
 6c4e747554da913978325893b69ca977467a483c assets/hbm/models/item/ammo_secret.json
 99443ea6db20add27ff0bd97f72d22bbf1493cd1 assets/hbm/models/item/ammo_secret_0.json
@@ -930,3 +930,4 @@ d9d920fb73ec2a70c78d23141da57148da121dea assets/hbm/models/item/wax_paraffin.jso
 41dba728ec0e8e23c618ba2722ce91a477dcadd7 assets/hbm/models/item/wire_tungsten.json
 41dba728ec0e8e23c618ba2722ce91a477dcadd7 assets/hbm/models/item/wire_tungtungsten.json
 11d7ca6cdba38503c34e4a238bf1161c7ddc74d2 assets/hbm/models/item/wiring_red_copper.json
+d2940249926ea41d62853a69f2d041a028fe55f5 assets/hbm/models/item/wrench.json

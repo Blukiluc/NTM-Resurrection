@@ -7,6 +7,8 @@ import com.hbm.blocks.NtmBlocks;
 import com.hbm.blocks.generic.BarbedWireBlock;
 import com.hbm.blocks.generic.LayeringBlock;
 import com.hbm.blocks.generic.SellafieldSlakedBlock;
+import com.hbm.blocks.machine.MachineElectricFurnaceBlock;
+import com.hbm.blocks.machine.MachineFurnaceBrickBlock;
 import com.hbm.blocks.network.FluidDuctConnectingBlock;
 import com.hbm.blocks.states.NtmBlockStateProperties;
 import com.hbm.main.NuclearTechMod;
@@ -17,6 +19,8 @@ import net.minecraft.core.registries.BuiltInRegistries;
 import net.minecraft.data.PackOutput;
 import net.minecraft.resources.ResourceLocation;
 import net.minecraft.world.level.block.Block;
+import net.minecraft.world.level.block.state.properties.BooleanProperty;
+import net.minecraft.world.level.block.state.properties.DirectionProperty;
 import net.neoforged.neoforge.client.model.generators.*;
 import net.neoforged.neoforge.common.data.ExistingFileHelper;
 import net.neoforged.neoforge.registries.DeferredBlock;
@@ -265,6 +269,8 @@ public class NtmBlockStateProvider extends BlockStateProvider {
         this.particleOnlyBlock(NtmBlocks.MACHINE_TOWER_SMALL, modLoc("block/brick_concrete"));
         this.particleOnlyBlock(NtmBlocks.MACHINE_TOWER_LARGE, modLoc("block/concrete"));
         this.particleOnlyBlock(NtmBlocks.MACHINE_GEOTHERMAL_HEAT_EXCHANGER, modLoc("block/block_steel"));
+        this.registerFurnace(NtmBlocks.FURNACE_BRICK.get(), MachineFurnaceBrickBlock.FACING, MachineFurnaceBrickBlock.LIT, "machine_furnace_brick");
+        this.registerFurnace(NtmBlocks.MACHINE_ELECTRIC_FURNACE.get(), MachineElectricFurnaceBlock.FACING, MachineElectricFurnaceBlock.LIT, "machine_electric_furnace");
         this.particleOnlyBlock(NtmBlocks.FURNACE_IRON, modLoc("block/block_aluminium"));
         this.particleOnlyBlock(NtmBlocks.FURNACE_STEEL, modLoc("block/block_steel"));
         this.particleOnlyBlock(NtmBlocks.COMBINATION_OVEN, modLoc("block/block_steel"));
@@ -366,6 +372,42 @@ public class NtmBlockStateProvider extends BlockStateProvider {
         });
 
         this.itemModels().getBuilder(this.key(block).getPath()).parent(model);
+    }
+
+    private void registerFurnace(Block block, DirectionProperty facing, BooleanProperty lit, String name) {
+        ModelFile off = this.models().cube(
+                name + "_off",
+                modLoc("block/" + name + "_bottom"),
+                modLoc("block/" + name + "_top"),
+                modLoc("block/" + name + "_front_off"),
+                modLoc("block/" + name + "_side"),
+                modLoc("block/" + name + "_side"),
+                modLoc("block/" + name + "_side")
+        ).texture("particle", modLoc("block/" + name + "_side"));
+
+        ModelFile on = this.models().cube(
+                name + "_on",
+                modLoc("block/" + name + "_bottom"),
+                modLoc("block/" + name + "_top"),
+                modLoc("block/" + name + "_front_on"),
+                modLoc("block/" + name + "_side"),
+                modLoc("block/" + name + "_side"),
+                modLoc("block/" + name + "_side")
+        ).texture("particle", modLoc("block/" + name + "_side"));
+
+        this.getVariantBuilder(block).forAllStates(state -> {
+            Direction direction = state.getValue(facing);
+            ModelFile model = state.getValue(lit) ? on : off;
+            int rotation = switch(direction) {
+                case EAST -> 90;
+                case SOUTH -> 180;
+                case WEST -> 270;
+                default -> 0;
+            };
+            return ConfiguredModel.builder().modelFile(model).rotationY(rotation).build();
+        });
+
+        this.itemModels().getBuilder(this.key(block).getPath()).parent(off);
     }
 
     private void registerCrate(DeferredBlock<? extends Block> block) {

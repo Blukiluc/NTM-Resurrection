@@ -32,6 +32,18 @@ public class NtmBlockEntityTypes {
     public static final DeferredRegister<BlockEntityType<?>> REGISTER = DeferredRegister.create(BuiltInRegistries.BLOCK_ENTITY_TYPE, NuclearTechMod.MODID);
 
     // Machines
+    public static final Supplier<BlockEntityType<MachineFurnaceBrickBlockEntity>> FURNACE_BRICK = REGISTER.register(
+            "furnace_brick",
+            () -> BlockEntityType.Builder.of(
+                            MachineFurnaceBrickBlockEntity::new,
+                            NtmBlocks.FURNACE_BRICK.get())
+                    .build(null));
+    public static final Supplier<BlockEntityType<MachineElectricFurnaceBlockEntity>> ELECTRIC_FURNACE = REGISTER.register(
+            "electric_furnace",
+            () -> BlockEntityType.Builder.of(
+                            MachineElectricFurnaceBlockEntity::new,
+                            NtmBlocks.MACHINE_ELECTRIC_FURNACE.get())
+                    .build(null));
     public static final Supplier<BlockEntityType<MachineFurnaceIronBlockEntity>> FURNACE_IRON = REGISTER.register(
             "furnace_iron",
             () -> BlockEntityType.Builder.of(

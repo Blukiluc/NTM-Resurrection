@@ -11,11 +11,11 @@
       "entries": [
         {
           "type": "minecraft:item",
-          "name": "hbm:machine_hephaestus"
+          "name": "hbm:machine_ore_acidizer"
         }
       ],
       "rolls": 1.0
     }
   ],
-  "random_sequence": "hbm:blocks/machine_hephaestus"
+  "random_sequence": "hbm:blocks/machine_ore_acidizer"
 }

@@ -7,6 +7,7 @@ import net.minecraft.data.PackOutput;
 import net.minecraft.data.recipes.*;
 import net.minecraft.world.item.Items;
 import net.minecraft.world.item.crafting.Ingredient;
+import net.minecraft.world.level.block.Blocks;
 
 import java.util.concurrent.CompletableFuture;
 
@@ -88,6 +89,26 @@ public class NtmRecipeProvider extends RecipeProvider {
                 .define('I', Items.IRON_INGOT)
                 .unlockedBy("has_steel_ingot", has(NtmItems.INGOT_STEEL.get()))
                 .save(recipeOutput);
+
+        ShapedRecipeBuilder.shaped(RecipeCategory.MISC, NtmBlocks.FURNACE_BRICK.get())
+                .pattern("III")
+                .pattern("I I")
+                .pattern("BBB")
+                .define('I', Items.BRICK)
+                .define('B', Blocks.STONE)
+                .unlockedBy("has_brick", has(Items.BRICK))
+                .save(recipeOutput);
+
+//        ShapedRecipeBuilder.shaped(RecipeCategory.MISC, NtmBlocks.MACHINE_ELECTRIC_FURNACE.get())
+//                .pattern("BBB")
+//                .pattern("WFW")
+//                .pattern("RRR")
+//                .define('B', NtmItems.INGOT_BERYLLIUM.get())
+//                .define('W', NtmItems.PLATE_COPPER.get())
+//                .define('F', Blocks.FURNACE)
+//                .define('R', NtmItems.COIL_TUNGSTEN.get())
+//                .unlockedBy("has_tungsten_coil", has(NtmItems.COIL_TUNGSTEN.get()))
+//                .save(recipeOutput);
 
 //        ShapedRecipeBuilder.shaped(RecipeCategory.REDSTONE, NtmBlocks.PIPE_ANCHOR.get(), 2)
 //                .pattern("P")
