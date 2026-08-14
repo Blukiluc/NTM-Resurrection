@@ -85,5 +85,50 @@ public class Mats {
                     MaterialShapes.SHELL,
                     MaterialShapes.PIPE)
             .m();
-
+    public static final NTMMaterial MAT_STEEL = makeSmeltable(1607,"steel", 0xAFAFAF, 0x0F0F0F, 0x4A4A4A)
+            .setAutogen(
+                    MaterialShapes.BOLT,
+                    MaterialShapes.WIRE,
+                    MaterialShapes.SHELL,
+                    MaterialShapes.PIPE)
+            .m();
+    public static final NTMMaterial MAT_TUNGSTEN = makeSmeltable(1608, "tungsten", 0x868686, 0x000000, 0x977474)
+            .setAutogen(MaterialShapes.DUSTTINY,
+                    MaterialShapes.BOLT,
+                    MaterialShapes.WIRE,
+                    MaterialShapes.DENSEWIRE,
+                    MaterialShapes.SHELL,
+                    MaterialShapes.PIPE);
+    public static final NTMMaterial MAT_TITANIUM = makeSmeltable(1609, "titanium", 0xF7F3F2, 0x4F4C4B, 0xA99E79)
+            .setAutogen(MaterialShapes.DUSTTINY,
+                    MaterialShapes.BOLT,
+                    MaterialShapes.WIRE,
+                    MaterialShapes.DENSEWIRE,
+                    MaterialShapes.SHELL,
+                    MaterialShapes.PIPE);
+    public static final NTMMaterial MAT_COPPER = makeSmeltable(1610, "copper",0xFDCA88, 0x601E0D, 0xC18336)
+            .setAutogen(MaterialShapes.DUSTTINY,
+                    MaterialShapes.BOLT,
+                    MaterialShapes.WIRE,
+                    MaterialShapes.DENSEWIRE,
+                    MaterialShapes.SHELL,
+                    MaterialShapes.PIPE);
+    public static final NTMMaterial MAT_SATURNITE = makeSmeltable(1611, "saturnite",0x3AC4DA, 0x09282C, 0x30A4B7)
+            .setAutogen(MaterialShapes.DUSTTINY,
+                    MaterialShapes.BOLT,
+                    MaterialShapes.WIRE,
+                    MaterialShapes.DENSEWIRE,
+                    MaterialShapes.SHELL,
+                    MaterialShapes.PIPE);
+    public static final NTMMaterial MAT_WOOD = makeNonSmeltable(1612, "wooden",0x896727, 0x281E0B, 0x896727)
+            .setAutogen(MaterialShapes.GRIP,
+                    MaterialShapes.STOCK)
+                    ;
+    public static final NTMMaterial MAT_REDCOPPER = makeSmeltable(1611, "red_copper",0xFFBA7D, 0xAF1700, 0xE44C0F)
+            .setAutogen(MaterialShapes.DUSTTINY,
+                    MaterialShapes.BOLT,
+                    MaterialShapes.WIRE,
+                    MaterialShapes.DENSEWIRE,
+                    MaterialShapes.SHELL,
+                    MaterialShapes.PIPE);
 }
