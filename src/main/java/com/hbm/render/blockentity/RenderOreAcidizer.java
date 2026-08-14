@@ -1,6 +1,6 @@
 package com.hbm.render.blockentity;
 
-import com.hbm.blockentity.machine.MachineCrystallizerBlockEntity;
+import com.hbm.blockentity.machine.MachineOreAcidizerBlockEntity;
 import com.hbm.blocks.DummyableBlock;
 import com.hbm.blocks.NtmBlocks;
 import com.hbm.inventory.fluid.FluidType;
@@ -23,19 +23,19 @@ import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.phys.AABB;
 import org.joml.Matrix4f;
 
-public class RenderCrystallizer extends BlockEntityRendererNT<MachineCrystallizerBlockEntity> implements IBEWLRProvider {
+public class RenderOreAcidizer extends BlockEntityRendererNT<MachineOreAcidizerBlockEntity> implements IBEWLRProvider {
 
     @Override
-    public BlockEntityRenderer<MachineCrystallizerBlockEntity> create(Context context) {
-        return new RenderCrystallizer();
+    public BlockEntityRenderer<MachineOreAcidizerBlockEntity> create(Context context) {
+        return new RenderOreAcidizer();
     }
 
     @Override
-    public void render(MachineCrystallizerBlockEntity be, float partialTicks, PoseStack poseStack, MultiBufferSource buffer, int packedLight, int packedOverlay) {
-        if(ResourceManager.crystallizer == null) return;
+    public void render(MachineOreAcidizerBlockEntity be, float partialTicks, PoseStack poseStack, MultiBufferSource buffer, int packedLight, int packedOverlay) {
+        if(ResourceManager.ore_acidizer == null) return;
 
-        int crystallizerLight = LevelRenderer.getLightColor(be.getLevel(), be.getBlockPos().above(3));
-        RenderContext.setup(poseStack, crystallizerLight, packedOverlay);
+        int acidizerLight = LevelRenderer.getLightColor(be.getLevel(), be.getBlockPos().above(3));
+        RenderContext.setup(poseStack, acidizerLight, packedOverlay);
         RenderContext.translate(0.5F, 0F, 0.5F);
 
         Direction facing = be.getBlockState().getValue(DummyableBlock.FACING);
@@ -47,12 +47,12 @@ public class RenderCrystallizer extends BlockEntityRendererNT<MachineCrystallize
         }
 
         RenderSystem.enableCull();
-        bindTexture(ResourceManager.CRYSTALLIZER_TEX);
-        ResourceManager.crystallizer.renderPart("Body");
+        bindTexture(ResourceManager.ORE_ACIDIZER_TEX);
+        ResourceManager.ore_acidizer.renderPart("Body");
 
         RenderContext.pushPose();
         RenderContext.mulPose(Axis.YP.rotationDegrees(Mth.lerp(partialTicks, be.prevAngle, be.angle)));
-        ResourceManager.crystallizer.renderPart("Spinner");
+        ResourceManager.ore_acidizer.renderPart("Spinner");
         RenderContext.popPose();
 
         if(be.tank.getFill() > 0 && be.tank.getMaxFill() > 0 && be.tank.getTankType() != Fluids.NONE) {
@@ -80,7 +80,7 @@ public class RenderCrystallizer extends BlockEntityRendererNT<MachineCrystallize
             RenderContext.translate(0F, 2.375F, 0F);
             RenderContext.scale(1F, fillRatio, 1F);
             RenderContext.translate(0F, -2.375F, 0F);
-            ResourceManager.crystallizer.renderPart("Fluid");
+            ResourceManager.ore_acidizer.renderPart("Fluid");
             RenderContext.popPose();
 
             RenderSystem.resetTextureMatrix();
@@ -93,7 +93,7 @@ public class RenderCrystallizer extends BlockEntityRendererNT<MachineCrystallize
     }
 
     @Override
-    public AABB getRenderBoundingBox(MachineCrystallizerBlockEntity be) {
+    public AABB getRenderBoundingBox(MachineOreAcidizerBlockEntity be) {
         BlockPos pos = be.getBlockPos();
         int x = pos.getX();
         int y = pos.getY();
@@ -104,7 +104,7 @@ public class RenderCrystallizer extends BlockEntityRendererNT<MachineCrystallize
 
     @Override
     public Item getItemForRenderer() {
-        return NtmBlocks.MACHINE_CRYSTALLIZER.asItem();
+        return NtmBlocks.MACHINE_ORE_ACIDIZER.asItem();
     }
 
     @Override
@@ -123,10 +123,10 @@ public class RenderCrystallizer extends BlockEntityRendererNT<MachineCrystallize
 
             @Override
             public void renderCommon(ItemStack stack, MultiBufferSource buffer) {
-                if(ResourceManager.crystallizer == null) return;
-                bindTexture(ResourceManager.CRYSTALLIZER_TEX);
-                ResourceManager.crystallizer.renderPart("Body");
-                ResourceManager.crystallizer.renderPart("Spinner");
+                if(ResourceManager.ore_acidizer == null) return;
+                bindTexture(ResourceManager.ORE_ACIDIZER_TEX);
+                ResourceManager.ore_acidizer.renderPart("Body");
+                ResourceManager.ore_acidizer.renderPart("Spinner");
             }
         };
     }

@@ -2,7 +2,7 @@ package com.hbm.blocks.machine;
 
 import com.hbm.blockentity.ITickable;
 import com.hbm.blockentity.ProxyComboBlockEntity;
-import com.hbm.blockentity.machine.oil.MachineVacuumDistillBlockEntity;
+import com.hbm.blockentity.machine.oil.MachineVacuumRefineryBlockEntity;
 import com.hbm.blocks.DummyBlockType;
 import com.hbm.blocks.DummyableBlock;
 import com.mojang.serialization.MapCodec;
@@ -17,9 +17,9 @@ import net.minecraft.world.level.block.entity.BlockEntityType;
 import net.minecraft.world.level.block.state.BlockState;
 import net.minecraft.world.phys.BlockHitResult;
 
-public class MachineVacuumDistillBlock extends DummyableBlock {
+public class MachineVacuumRefineryBlock extends DummyableBlock {
 
-    public MachineVacuumDistillBlock(Properties properties) {
+    public MachineVacuumRefineryBlock(Properties properties) {
         super(properties);
     }
 
@@ -27,7 +27,7 @@ public class MachineVacuumDistillBlock extends DummyableBlock {
     public BlockEntity newBlockEntity(BlockPos pos, BlockState state) {
         DummyBlockType type = state.getValue(TYPE);
         return switch(type) {
-            case CORE -> new MachineVacuumDistillBlockEntity(pos, state);
+            case CORE -> new MachineVacuumRefineryBlockEntity(pos, state);
             case EXTRA -> new ProxyComboBlockEntity(pos, state).fluid().power().inventory();
             default -> null;
         };
@@ -39,8 +39,8 @@ public class MachineVacuumDistillBlock extends DummyableBlock {
         return (lvl, pos, st, be) -> { if(be instanceof ITickable tickable) tickable.updateEntity(); };
     }
 
-    public static final MapCodec<MachineVacuumDistillBlock> CODEC = simpleCodec(MachineVacuumDistillBlock::new);
-    @Override public MapCodec<MachineVacuumDistillBlock> codec() { return CODEC; }
+    public static final MapCodec<MachineVacuumRefineryBlock> CODEC = simpleCodec(MachineVacuumRefineryBlock::new);
+    @Override public MapCodec<MachineVacuumRefineryBlock> codec() { return CODEC; }
 
     @Override public int[] getDimensions() { return new int[] {8, 0, 1, 1, 1, 1}; }
     @Override public int getOffset() { return 1; }

@@ -2,7 +2,7 @@ package com.hbm.blocks.machine;
 
 import com.hbm.blockentity.ITickable;
 import com.hbm.blockentity.ProxyComboBlockEntity;
-import com.hbm.blockentity.machine.MachineCrystallizerBlockEntity;
+import com.hbm.blockentity.machine.MachineOreAcidizerBlockEntity;
 import com.hbm.blocks.DummyBlockType;
 import com.hbm.blocks.DummyableBlock;
 import com.mojang.serialization.MapCodec;
@@ -17,9 +17,9 @@ import net.minecraft.world.level.block.entity.BlockEntityType;
 import net.minecraft.world.level.block.state.BlockState;
 import net.minecraft.world.phys.BlockHitResult;
 
-public class MachineCrystallizerBlock extends DummyableBlock {
+public class MachineOreAcidizerBlock extends DummyableBlock {
 
-    public MachineCrystallizerBlock(Properties properties) {
+    public MachineOreAcidizerBlock(Properties properties) {
         super(properties);
     }
 
@@ -27,7 +27,7 @@ public class MachineCrystallizerBlock extends DummyableBlock {
     public BlockEntity newBlockEntity(BlockPos pos, BlockState state) {
         DummyBlockType type = state.getValue(TYPE);
         return switch(type) {
-            case CORE -> new MachineCrystallizerBlockEntity(pos, state);
+            case CORE -> new MachineOreAcidizerBlockEntity(pos, state);
             case EXTRA -> new ProxyComboBlockEntity(pos, state).inventory().power().fluid();
             default -> null;
         };
@@ -41,10 +41,10 @@ public class MachineCrystallizerBlock extends DummyableBlock {
         };
     }
 
-    public static final MapCodec<MachineCrystallizerBlock> CODEC = simpleCodec(MachineCrystallizerBlock::new);
+    public static final MapCodec<MachineOreAcidizerBlock> CODEC = simpleCodec(MachineOreAcidizerBlock::new);
 
     @Override
-    public MapCodec<MachineCrystallizerBlock> codec() {
+    public MapCodec<MachineOreAcidizerBlock> codec() {
         return CODEC;
     }
 

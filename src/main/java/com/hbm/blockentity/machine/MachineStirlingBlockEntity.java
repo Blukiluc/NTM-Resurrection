@@ -5,7 +5,6 @@ import api.hbm.tile.IHeatSource;
 import com.hbm.blockentity.ITickable;
 import com.hbm.blockentity.LoadedBaseBlockEntity;
 import com.hbm.blockentity.NtmBlockEntityTypes;
-import com.hbm.blocks.DummyableBlock;
 import com.hbm.blocks.NtmBlocks;
 import com.hbm.blocks.machine.MachineStirlingBlock;
 import net.minecraft.core.BlockPos;

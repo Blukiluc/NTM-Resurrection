@@ -2,15 +2,14 @@ package com.hbm.blockentity.machine;
 
 import api.hbm.fluidmk2.IFluidStandardTransceiverMK2;
 import api.hbm.tile.IHeatSource;
-import com.hbm.blockentity.LoadedBaseBlockEntity;
 import com.hbm.blockentity.MachineBaseBlockEntity;
 import com.hbm.blockentity.NtmBlockEntityTypes;
 import com.hbm.inventory.FluidStack;
 import com.hbm.inventory.fluid.FluidType;
 import com.hbm.inventory.fluid.Fluids;
 import com.hbm.inventory.fluid.tank.FluidTank;
-import com.hbm.inventory.menus.MachineFurnaceCombinationMenu;
-import com.hbm.inventory.recipes.CombinationRecipes;
+import com.hbm.inventory.menus.MachineCombinationOvenMenu;
+import com.hbm.inventory.recipes.CombinationOvenRecipes;
 import com.hbm.util.Tuple;
 import com.hbm.util.fauxpointtwelve.DirPos;
 import net.minecraft.core.BlockPos;
@@ -30,7 +29,7 @@ import net.minecraft.core.particles.ParticleTypes;
 import net.minecraft.world.level.block.entity.BlockEntity;
 import net.minecraft.world.level.block.state.BlockState;
 
-public class MachineFurnaceCombinationBlockEntity extends MachineBaseBlockEntity implements IFluidStandardTransceiverMK2 {
+public class MachineCombinationOvenBlockEntity extends MachineBaseBlockEntity implements IFluidStandardTransceiverMK2 {
 
     public static final int PROCESS_TIME = 20_000;
     public static final int MAX_HEAT = 100_000;
@@ -46,14 +45,14 @@ public class MachineFurnaceCombinationBlockEntity extends MachineBaseBlockEntity
     public boolean wasOn;
     public final FluidTank tank = new FluidTank(Fluids.NONE, 24_000);
 
-    public MachineFurnaceCombinationBlockEntity(BlockPos pos, BlockState state) {
-        super(NtmBlockEntityTypes.FURNACE_COMBINATION.get(), pos, state, 4);
-        CombinationRecipes.registerDefaults();
+    public MachineCombinationOvenBlockEntity(BlockPos pos, BlockState state) {
+        super(NtmBlockEntityTypes.COMBINATION_OVEN.get(), pos, state, 4);
+        CombinationOvenRecipes.registerDefaults();
     }
 
     @Override
     protected Component getDefaultName() {
-        return Component.translatable("container.furnace_combination");
+        return Component.translatable("container.combination_oven");
     }
 
     @Override
@@ -117,7 +116,7 @@ public class MachineFurnaceCombinationBlockEntity extends MachineBaseBlockEntity
     }
 
     private boolean canProcess() {
-        Tuple.Pair<ItemStack, FluidStack> recipe = CombinationRecipes.getOutput(this.slots.get(SLOT_INPUT));
+        Tuple.Pair<ItemStack, FluidStack> recipe = CombinationOvenRecipes.getOutput(this.slots.get(SLOT_INPUT));
         if(recipe == null) return false;
 
         ItemStack itemOutput = recipe.getKey();
@@ -139,7 +138,7 @@ public class MachineFurnaceCombinationBlockEntity extends MachineBaseBlockEntity
     }
 
     private void finishRecipe() {
-        Tuple.Pair<ItemStack, FluidStack> recipe = CombinationRecipes.getOutput(this.slots.get(SLOT_INPUT));
+        Tuple.Pair<ItemStack, FluidStack> recipe = CombinationOvenRecipes.getOutput(this.slots.get(SLOT_INPUT));
         if(recipe == null) return;
 
         ItemStack itemOutput = recipe.getKey();
@@ -264,6 +263,6 @@ public class MachineFurnaceCombinationBlockEntity extends MachineBaseBlockEntity
 
     @Override
     public AbstractContainerMenu createMenu(int id, Inventory inventory, Player player) {
-        return new MachineFurnaceCombinationMenu(id, inventory, this);
+        return new MachineCombinationOvenMenu(id, inventory, this);
     }
 }

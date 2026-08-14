@@ -1,6 +1,6 @@
 package com.hbm.render.blockentity;
 
-import com.hbm.blockentity.machine.oil.MachineVacuumDistillBlockEntity;
+import com.hbm.blockentity.machine.oil.MachineVacuumRefineryBlockEntity;
 import com.hbm.blocks.NtmBlocks;
 import com.hbm.main.ResourceManager;
 import com.hbm.render.item.ItemRenderBase;
@@ -13,15 +13,15 @@ import net.minecraft.world.item.Item;
 import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.phys.AABB;
 
-public class RenderVacuumDistill extends BlockEntityRendererNT<MachineVacuumDistillBlockEntity> implements IBEWLRProvider {
+public class RenderVacuumRefinery extends BlockEntityRendererNT<MachineVacuumRefineryBlockEntity> implements IBEWLRProvider {
 
     @Override
-    public BlockEntityRenderer<MachineVacuumDistillBlockEntity> create(Context context) {
-        return new RenderVacuumDistill();
+    public BlockEntityRenderer<MachineVacuumRefineryBlockEntity> create(Context context) {
+        return new RenderVacuumRefinery();
     }
 
     @Override
-    public void render(MachineVacuumDistillBlockEntity be, MultiBufferSource buffer, float partialTicks) {
+    public void render(MachineVacuumRefineryBlockEntity be, MultiBufferSource buffer, float partialTicks) {
         RenderContext.translate(0.5F, 0F, 0.5F);
 
         bindTexture(ResourceManager.VACUUM_REFINERY_TEX);
@@ -29,7 +29,7 @@ public class RenderVacuumDistill extends BlockEntityRendererNT<MachineVacuumDist
     }
 
     @Override
-    public AABB getRenderBoundingBox(MachineVacuumDistillBlockEntity be) {
+    public AABB getRenderBoundingBox(MachineVacuumRefineryBlockEntity be) {
         BlockPos pos = be.getBlockPos();
         int x = pos.getX();
         int y = pos.getY();

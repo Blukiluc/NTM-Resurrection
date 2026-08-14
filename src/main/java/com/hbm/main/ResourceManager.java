@@ -2,7 +2,6 @@ package com.hbm.main;
 
 import com.hbm.render.loader.HFRWavefrontObject;
 import com.hbm.render.loader.IModelCustom;
-import net.minecraft.client.Minecraft;
 import net.minecraft.resources.ResourceLocation;
 
 public class ResourceManager {
@@ -49,7 +48,7 @@ public class ResourceManager {
     public static final ResourceLocation CHEMICAL_PLANT_TEX = NuclearTechMod.withDefaultNamespace("textures/models/machines/chemical_plant.png");
     public static final ResourceLocation CHEMICAL_PLANT_FLUID_TEX = NuclearTechMod.withDefaultNamespace("textures/models/machines/chemical_plant_fluid.png");
     public static final ResourceLocation CHEMICAL_FACTORY_TEX = NuclearTechMod.withDefaultNamespace("textures/models/machines/chemical_factory.png");
-    public static final ResourceLocation CRYSTALLIZER_TEX = NuclearTechMod.withDefaultNamespace("textures/models/machines/acidizer.png");
+    public static final ResourceLocation ORE_ACIDIZER_TEX = NuclearTechMod.withDefaultNamespace("textures/models/machines/acidizer.png");
     public static final ResourceLocation WOOD_BURNER_TEX = NuclearTechMod.withDefaultNamespace("textures/models/machines/wood_burner.png");
     public static final ResourceLocation DIESEL_GENERATOR_TEX = NuclearTechMod.withDefaultNamespace("textures/models/machines/dieselgen.png");
     public static final ResourceLocation COMBUSTION_ENGINE_TEX = NuclearTechMod.withDefaultNamespace("textures/models/machines/combustion_engine.png");
@@ -78,9 +77,9 @@ public class ResourceManager {
     public static final ResourceLocation LEVIATHAN_TURBINE_TEX = NuclearTechMod.withDefaultNamespace("textures/models/machines/chungus.png");
     public static final ResourceLocation TOWER_SMALL_TEX = NuclearTechMod.withDefaultNamespace("textures/models/machines/tower_small.png");
     public static final ResourceLocation TOWER_LARGE_TEX = NuclearTechMod.withDefaultNamespace("textures/models/machines/tower_large.png");
-    public static final ResourceLocation HEPHAESTUS_TEX = NuclearTechMod.withDefaultNamespace("textures/models/machines/hephaestus.png");
-    public static final ResourceLocation HEPHAESTUS_CORE_TEX = NuclearTechMod.withDefaultNamespace("textures/models/machines/hephaestus_core.png");
-    public static final ResourceLocation FURNACE_COMBINATION_TEX = NuclearTechMod.withDefaultNamespace("textures/models/machines/combination_oven.png");
+    public static final ResourceLocation GEOTHERMAL_HEAT_EXCHANGER_TEX = NuclearTechMod.withDefaultNamespace("textures/models/machines/geothermal_heat_exchanger.png");
+    public static final ResourceLocation GEOTHERMAL_HEAT_EXCHANGER_CORE_TEX = NuclearTechMod.withDefaultNamespace("textures/models/machines/geothermal_heat_exchanger.png");
+    public static final ResourceLocation COMBINATION_OVEN_TEX = NuclearTechMod.withDefaultNamespace("textures/models/machines/combination_oven.png");
     public static final ResourceLocation BLAST_FURNACE_TEX = NuclearTechMod.withDefaultNamespace("textures/models/machines/blast_furnace.png");
 
     public static final ResourceLocation CONNECTOR_TEX = NuclearTechMod.withDefaultNamespace("textures/models/network/connector.png");
@@ -251,7 +250,7 @@ public class ResourceManager {
     public static IModelCustom assembly_factory;
     public static IModelCustom chemical_plant;
     public static IModelCustom chemical_factory;
-    public static IModelCustom crystallizer;
+    public static IModelCustom ore_acidizer;
     public static IModelCustom wood_burner;
     public static IModelCustom dieselGenerator;
     public static IModelCustom combustionEngine;
@@ -278,8 +277,8 @@ public class ResourceManager {
     public static IModelCustom leviathan_turbine;
     public static IModelCustom tower_small;
     public static IModelCustom tower_large;
-    public static IModelCustom hephaestus;
-    public static IModelCustom furnace_combination;
+    public static IModelCustom geothermal_heat_exchanger;
+    public static IModelCustom combination_oven;
     public static IModelCustom blast_furnace;
 
     public static IModelCustom connector;
@@ -395,7 +394,7 @@ public class ResourceManager {
         assembly_factory = new HFRWavefrontObject("models/obj/machines/assembly_factory.obj").asVBO();
         chemical_plant = new HFRWavefrontObject("models/obj/machines/chemical_plant.obj").asVBO();
         chemical_factory = new HFRWavefrontObject("models/obj/machines/chemical_factory.obj").asVBO();
-        crystallizer = new HFRWavefrontObject("models/obj/machines/acidizer.obj").asVBO();
+        ore_acidizer = new HFRWavefrontObject("models/obj/machines/acidizer.obj").asVBO();
         wood_burner = new HFRWavefrontObject("models/obj/machines/wood_burner.obj").asVBO();
         dieselGenerator = new HFRWavefrontObject("models/obj/machines/dieselgen.obj").asVBO();
         combustionEngine = new HFRWavefrontObject("models/obj/machines/combustion_engine.obj").asVBO();
@@ -422,8 +421,8 @@ public class ResourceManager {
         leviathan_turbine = new HFRWavefrontObject("models/obj/machines/chungus.obj").asVBO();
         tower_small = new HFRWavefrontObject("models/obj/machines/tower_small.obj").asVBO();
         tower_large = new HFRWavefrontObject("models/obj/machines/tower_large.obj").asVBO();
-        hephaestus = new HFRWavefrontObject("models/obj/machines/hephaestus.obj").asVBO();
-        furnace_combination = new HFRWavefrontObject("models/obj/machines/combination_oven.obj").asVBO();
+        geothermal_heat_exchanger = new HFRWavefrontObject("models/obj/machines/geothermal_heat_exchanger.obj").asVBO();
+        combination_oven = new HFRWavefrontObject("models/obj/machines/combination_oven.obj").asVBO();
         blast_furnace = new HFRWavefrontObject("models/obj/machines/blast_furnace.obj").asVBO();
 
         connector = new HFRWavefrontObject("models/obj/network/connector.obj").asVBO();

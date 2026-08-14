@@ -1,20 +1,20 @@
 package com.hbm.inventory.screens;
 
-import com.hbm.blockentity.machine.oil.MachineVacuumDistillBlockEntity;
-import com.hbm.inventory.menus.MachineVacuumDistillMenu;
+import com.hbm.blockentity.machine.oil.MachineVacuumRefineryBlockEntity;
+import com.hbm.inventory.menus.MachineVacuumRefineryMenu;
 import com.hbm.main.NuclearTechMod;
 import net.minecraft.client.gui.GuiGraphics;
 import net.minecraft.network.chat.Component;
 import net.minecraft.resources.ResourceLocation;
 import net.minecraft.world.entity.player.Inventory;
 
-public class MachineVacuumDistillScreen extends InfoScreen<MachineVacuumDistillMenu> {
+public class MachineVacuumRefineryScreen extends InfoScreen<MachineVacuumRefineryMenu> {
 
     private static final ResourceLocation TEXTURE = NuclearTechMod.withDefaultNamespace("textures/gui/processing/gui_vacuum_refinery.png");
 
-    private final MachineVacuumDistillBlockEntity be;
+    private final MachineVacuumRefineryBlockEntity be;
 
-    public MachineVacuumDistillScreen(MachineVacuumDistillMenu menu, Inventory inventory, Component title) {
+    public MachineVacuumRefineryScreen(MachineVacuumRefineryMenu menu, Inventory inventory, Component title) {
         super(menu, inventory, title);
         this.be = menu.be;
         this.imageWidth = 176;
@@ -31,7 +31,7 @@ public class MachineVacuumDistillScreen extends InfoScreen<MachineVacuumDistillM
         this.be.tanks[3].renderTankTooltip(guiGraphics, mouseX, mouseY, this.leftPos + 116, this.topPos + 18, 16, 52);
         this.be.tanks[4].renderTankTooltip(guiGraphics, mouseX, mouseY, this.leftPos + 134, this.topPos + 18, 16, 52);
 
-        this.drawElectricityInfo(guiGraphics, mouseX, mouseY, this.leftPos + 26, this.topPos + 18, 16, 52, this.be.power, MachineVacuumDistillBlockEntity.MAX_POWER);
+        this.drawElectricityInfo(guiGraphics, mouseX, mouseY, this.leftPos + 26, this.topPos + 18, 16, 52, this.be.power, MachineVacuumRefineryBlockEntity.MAX_POWER);
         this.renderTooltip(guiGraphics, mouseX, mouseY);
     }
 

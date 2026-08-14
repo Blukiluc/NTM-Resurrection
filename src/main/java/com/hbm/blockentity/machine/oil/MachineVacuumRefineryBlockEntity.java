@@ -11,7 +11,7 @@ import com.hbm.inventory.FluidStack;
 import com.hbm.inventory.fluid.FluidType;
 import com.hbm.inventory.fluid.Fluids;
 import com.hbm.inventory.fluid.tank.FluidTank;
-import com.hbm.inventory.menus.MachineVacuumDistillMenu;
+import com.hbm.inventory.menus.MachineVacuumRefineryMenu;
 import com.hbm.inventory.recipes.VacuumRefineryRecipes;
 import com.hbm.inventory.recipes.VacuumRefineryRecipes.VacuumRefineryRecipe;
 import com.hbm.items.machine.IItemFluidIdentifier;
@@ -32,7 +32,7 @@ import net.minecraft.world.inventory.AbstractContainerMenu;
 import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.level.block.state.BlockState;
 
-public class MachineVacuumDistillBlockEntity extends MachineBaseBlockEntity implements IEnergyReceiverMK2, IFluidStandardTransceiverMK2, IPersistentNBT {
+public class MachineVacuumRefineryBlockEntity extends MachineBaseBlockEntity implements IEnergyReceiverMK2, IFluidStandardTransceiverMK2, IPersistentNBT {
 
     public static final long MAX_POWER = 1_000_000L;
 
@@ -43,7 +43,7 @@ public class MachineVacuumDistillBlockEntity extends MachineBaseBlockEntity impl
     private AudioWrapper audio;
     private int audioTime;
 
-    public MachineVacuumDistillBlockEntity(BlockPos pos, BlockState state) {
+    public MachineVacuumRefineryBlockEntity(BlockPos pos, BlockState state) {
         super(NtmBlockEntityTypes.VACUUM_REFINERY.get(), pos, state, 12);
 
         VacuumRefineryRecipes.INSTANCE.registerDefaults();
@@ -350,7 +350,7 @@ public class MachineVacuumDistillBlockEntity extends MachineBaseBlockEntity impl
 
     @Override
     public AbstractContainerMenu createMenu(int id, Inventory inventory, Player player) {
-        return new MachineVacuumDistillMenu(id, inventory, this);
+        return new MachineVacuumRefineryMenu(id, inventory, this);
     }
 
     @Override

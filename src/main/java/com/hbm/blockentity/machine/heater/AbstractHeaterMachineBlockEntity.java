@@ -3,7 +3,6 @@ package com.hbm.blockentity.machine.heater;
 import api.hbm.tile.IHeatSource;
 import com.hbm.blockentity.MachineBaseBlockEntity;
 import com.hbm.blockentity.IPersistentNBT;
-import io.netty.buffer.ByteBuf;
 import net.minecraft.core.BlockPos;
 import net.minecraft.core.Direction;
 import net.minecraft.core.HolderLookup;

@@ -2,7 +2,7 @@ package com.hbm.blocks.machine;
 
 import com.hbm.blockentity.ITickable;
 import com.hbm.blockentity.ProxyComboBlockEntity;
-import com.hbm.blockentity.machine.MachineHephaestusBlockEntity;
+import com.hbm.blockentity.machine.MachineGeothermalHeatExchangerBlockEntity;
 import com.hbm.blocks.DummyBlockType;
 import com.hbm.blocks.DummyableBlock;
 import com.hbm.blocks.ILookOverlay;
@@ -32,23 +32,23 @@ import net.neoforged.neoforge.client.event.RenderGuiEvent;
 import java.util.ArrayList;
 import java.util.List;
 
-public class MachineHephaestusBlock extends DummyableBlock implements ILookOverlay {
+public class MachineGeothermalHeatExchangerBlock extends DummyableBlock implements ILookOverlay {
 
-    public static final MapCodec<MachineHephaestusBlock> CODEC = simpleCodec(MachineHephaestusBlock::new);
+    public static final MapCodec<MachineGeothermalHeatExchangerBlock> CODEC = simpleCodec(MachineGeothermalHeatExchangerBlock::new);
 
-    public MachineHephaestusBlock(Properties properties) {
+    public MachineGeothermalHeatExchangerBlock(Properties properties) {
         super(properties);
     }
 
     @Override
-    protected MapCodec<MachineHephaestusBlock> codec() {
+    protected MapCodec<MachineGeothermalHeatExchangerBlock> codec() {
         return CODEC;
     }
 
     @Override
     public BlockEntity newBlockEntity(BlockPos pos, BlockState state) {
         return switch(state.getValue(TYPE)) {
-            case CORE -> new MachineHephaestusBlockEntity(pos, state);
+            case CORE -> new MachineGeothermalHeatExchangerBlockEntity(pos, state);
             case EXTRA -> new ProxyComboBlockEntity(pos, state).fluid();
             default -> null;
         };
@@ -100,7 +100,7 @@ public class MachineHephaestusBlock extends DummyableBlock implements ILookOverl
         if(corePos == null) return ItemInteractionResult.FAIL;
 
         BlockEntity blockEntity = level.getBlockEntity(corePos);
-        if(!(blockEntity instanceof MachineHephaestusBlockEntity hephaestus)) return ItemInteractionResult.FAIL;
+        if(!(blockEntity instanceof MachineGeothermalHeatExchangerBlockEntity hephaestus)) return ItemInteractionResult.FAIL;
 
         FluidType type = identifier.getType(level, corePos, stack);
         FT_Heatable trait = type.getTrait(FT_Heatable.class);
@@ -126,7 +126,7 @@ public class MachineHephaestusBlock extends DummyableBlock implements ILookOverl
         if(corePos == null) return;
 
         BlockEntity blockEntity = level.getBlockEntity(corePos);
-        if(!(blockEntity instanceof MachineHephaestusBlockEntity hephaestus)) return;
+        if(!(blockEntity instanceof MachineGeothermalHeatExchangerBlockEntity hephaestus)) return;
 
         List<Component> text = new ArrayList<>();
         text.add(Component.literal(BobMathUtil.format(hephaestus.bufferedHeat) + " TU"));

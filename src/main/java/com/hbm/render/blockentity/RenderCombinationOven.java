@@ -1,6 +1,6 @@
 package com.hbm.render.blockentity;
 
-import com.hbm.blockentity.machine.MachineFurnaceCombinationBlockEntity;
+import com.hbm.blockentity.machine.MachineCombinationOvenBlockEntity;
 import com.hbm.blocks.DummyableBlock;
 import com.hbm.blocks.NtmBlocks;
 import com.hbm.main.ResourceManager;
@@ -14,12 +14,12 @@ import net.minecraft.core.Direction;
 import net.minecraft.world.item.Item;
 import net.minecraft.world.item.ItemStack;
 
-public class RenderFurnaceCombination extends BlockEntityRendererNT<MachineFurnaceCombinationBlockEntity> implements IBEWLRProvider {
+public class RenderCombinationOven extends BlockEntityRendererNT<MachineCombinationOvenBlockEntity> implements IBEWLRProvider {
 
-    @Override public BlockEntityRenderer<MachineFurnaceCombinationBlockEntity> create(Context context) { return new RenderFurnaceCombination(); }
+    @Override public BlockEntityRenderer<MachineCombinationOvenBlockEntity> create(Context context) { return new RenderCombinationOven(); }
 
     @Override
-    public void render(MachineFurnaceCombinationBlockEntity be, MultiBufferSource buffer, float partialTicks) {
+    public void render(MachineCombinationOvenBlockEntity be, MultiBufferSource buffer, float partialTicks) {
 
         RenderContext.translate(0.5F, 0.0F, 0.5F);
 
@@ -31,13 +31,13 @@ public class RenderFurnaceCombination extends BlockEntityRendererNT<MachineFurna
             case EAST -> RenderContext.mulPose(Axis.YP.rotationDegrees(0F));
         }
 
-        bindTexture(ResourceManager.FURNACE_COMBINATION_TEX);
-        ResourceManager.furnace_combination.renderAll();
+        bindTexture(ResourceManager.COMBINATION_OVEN_TEX);
+        ResourceManager.combination_oven.renderAll();
     }
 
     @Override
     public Item getItemForRenderer() {
-        return NtmBlocks.FURNACE_COMBINATION.asItem();
+        return NtmBlocks.COMBINATION_OVEN.asItem();
     }
 
     @Override
@@ -51,8 +51,8 @@ public class RenderFurnaceCombination extends BlockEntityRendererNT<MachineFurna
 
             @Override
             public void renderCommon(ItemStack stack, MultiBufferSource buffer) {
-                bindTexture(ResourceManager.FURNACE_COMBINATION_TEX);
-                ResourceManager.furnace_combination.renderAll();
+                bindTexture(ResourceManager.COMBINATION_OVEN_TEX);
+                ResourceManager.combination_oven.renderAll();
             }
         };
     }

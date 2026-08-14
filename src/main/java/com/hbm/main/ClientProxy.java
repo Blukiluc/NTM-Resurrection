@@ -170,7 +170,7 @@ public class ClientProxy extends ServerProxy {
         BlockEntityRenderers.register(NtmBlockEntityTypes.PREC_ASS.get(), new RenderPrecAss());
         BlockEntityRenderers.register(NtmBlockEntityTypes.CHEMICAL_PLANT.get(), new RenderChemicalPlant());
         BlockEntityRenderers.register(NtmBlockEntityTypes.CHEMICAL_FACTORY.get(), new RenderChemicalFactory());
-        BlockEntityRenderers.register(NtmBlockEntityTypes.CRYSTALLIZER.get(), new RenderCrystallizer());
+        BlockEntityRenderers.register(NtmBlockEntityTypes.ORE_ACIDIZER.get(), new RenderOreAcidizer());
         BlockEntityRenderers.register(NtmBlockEntityTypes.WOOD_BURNER.get(), new RenderWoodBurner());
         BlockEntityRenderers.register(NtmBlockEntityTypes.DIESEL.get(), new RenderDieselGen());
         BlockEntityRenderers.register(NtmBlockEntityTypes.COMBUSTION_ENGINE.get(), new RenderCombustionEngine());
@@ -196,8 +196,8 @@ public class ClientProxy extends ServerProxy {
         BlockEntityRenderers.register(NtmBlockEntityTypes.MACHINE_CHUNGUS.get(), new RenderLeviathanTurbine());
         BlockEntityRenderers.register(NtmBlockEntityTypes.MACHINE_TOWER_SMALL.get(), new RenderCoolingTower<>(false));
         BlockEntityRenderers.register(NtmBlockEntityTypes.MACHINE_TOWER_LARGE.get(), new RenderCoolingTower<>(true));
-        BlockEntityRenderers.register(NtmBlockEntityTypes.MACHINE_HEPHAESTUS.get(), new RenderHephaestus());
-        BlockEntityRenderers.register(NtmBlockEntityTypes.FURNACE_COMBINATION.get(), new RenderFurnaceCombination());
+        BlockEntityRenderers.register(NtmBlockEntityTypes.MACHINE_GEOTHERMAL_HEAT_EXCHANGER.get(), new RenderGeothermalHeatExchanger());
+        BlockEntityRenderers.register(NtmBlockEntityTypes.COMBINATION_OVEN.get(), new RenderCombinationOven());
         BlockEntityRenderers.register(NtmBlockEntityTypes.MACHINE_BLAST_FURNACE.get(), new RenderBlastFurnace());
         BlockEntityRenderers.register(NtmBlockEntityTypes.FLUID_TANK.get(), new RenderFluidTank());
         BlockEntityRenderers.register(NtmBlockEntityTypes.BIG_ASS_TANK.get(), new RenderBigAssTank());
@@ -206,7 +206,7 @@ public class ClientProxy extends ServerProxy {
         BlockEntityRenderers.register(NtmBlockEntityTypes.PUMPJACK.get(), new RenderPumpjack());
         BlockEntityRenderers.register(NtmBlockEntityTypes.FRACKING_TOWER.get(), new RenderFrackingTower());
         BlockEntityRenderers.register(NtmBlockEntityTypes.REFINERY.get(), new RenderRefinery());
-        BlockEntityRenderers.register(NtmBlockEntityTypes.VACUUM_REFINERY.get(), new RenderVacuumDistill());
+        BlockEntityRenderers.register(NtmBlockEntityTypes.VACUUM_REFINERY.get(), new RenderVacuumRefinery());
         BlockEntityRenderers.register(NtmBlockEntityTypes.FRACTION_TOWER.get(), new RenderFractioningTower());
         BlockEntityRenderers.register(NtmBlockEntityTypes.FRACTION_SPACER.get(), new RenderFractioningSpacer());
         BlockEntityRenderers.register(NtmBlockEntityTypes.CATALYTIC_REFORMER.get(), new RenderCatalyticReformer());

@@ -1,7 +1,7 @@
 package com.hbm.inventory.screens;
 
-import com.hbm.blockentity.machine.MachineFurnaceCombinationBlockEntity;
-import com.hbm.inventory.menus.MachineFurnaceCombinationMenu;
+import com.hbm.blockentity.machine.MachineCombinationOvenBlockEntity;
+import com.hbm.inventory.menus.MachineCombinationOvenMenu;
 import com.hbm.main.NuclearTechMod;
 import net.minecraft.ChatFormatting;
 import net.minecraft.client.gui.GuiGraphics;
@@ -9,13 +9,13 @@ import net.minecraft.network.chat.Component;
 import net.minecraft.resources.ResourceLocation;
 import net.minecraft.world.entity.player.Inventory;
 
-public class MachineFurnaceCombinationScreen extends InfoScreen<MachineFurnaceCombinationMenu> {
+public class MachineCombinationOvenScreen extends InfoScreen<MachineCombinationOvenMenu> {
 
-    private static final ResourceLocation TEXTURE = NuclearTechMod.withDefaultNamespace("textures/gui/processing/gui_furnace_combination.png");
+    private static final ResourceLocation TEXTURE = NuclearTechMod.withDefaultNamespace("textures/gui/processing/gui_combination_oven.png");
 
-    private final MachineFurnaceCombinationBlockEntity be;
+    private final MachineCombinationOvenBlockEntity be;
 
-    public MachineFurnaceCombinationScreen(MachineFurnaceCombinationMenu menu, Inventory inventory, Component title) {
+    public MachineCombinationOvenScreen(MachineCombinationOvenMenu menu, Inventory inventory, Component title) {
         super(menu, inventory, title);
         this.be = menu.be;
         this.imageWidth = 176;
@@ -27,9 +27,9 @@ public class MachineFurnaceCombinationScreen extends InfoScreen<MachineFurnaceCo
         super.render(guiGraphics, mouseX, mouseY, partialTicks);
         this.be.tank.renderTankTooltip(guiGraphics, mouseX, mouseY, this.leftPos + 118, this.topPos + 18, 16, 52);
         this.drawCustomInfoStat(guiGraphics, mouseX, mouseY, this.leftPos + 44, this.topPos + 36, 39, 7, mouseX, mouseY,
-                Component.literal(String.format("%,d / %,d TU", this.be.progress, MachineFurnaceCombinationBlockEntity.PROCESS_TIME)).withStyle(ChatFormatting.YELLOW));
+                Component.literal(String.format("%,d / %,d TU", this.be.progress, MachineCombinationOvenBlockEntity.PROCESS_TIME)).withStyle(ChatFormatting.YELLOW));
         this.drawCustomInfoStat(guiGraphics, mouseX, mouseY, this.leftPos + 44, this.topPos + 45, 39, 7, mouseX, mouseY,
-                Component.literal(String.format("%,d / %,d TU", this.be.heat, MachineFurnaceCombinationBlockEntity.MAX_HEAT)).withStyle(ChatFormatting.YELLOW));
+                Component.literal(String.format("%,d / %,d TU", this.be.heat, MachineCombinationOvenBlockEntity.MAX_HEAT)).withStyle(ChatFormatting.YELLOW));
         this.renderTooltip(guiGraphics, mouseX, mouseY);
     }
 

@@ -8,17 +8,13 @@ import com.hbm.blockentity.NtmBlockEntityTypes;
 import com.hbm.blocks.DummyableBlock;
 import com.hbm.interfaces.ICopiable;
 import com.hbm.interfaces.IControlReceiver;
-import com.hbm.util.fauxpointtwelve.DirPos;
-import io.netty.buffer.ByteBuf;
 import net.minecraft.core.BlockPos;
 import net.minecraft.core.Direction;
 import net.minecraft.nbt.CompoundTag;
 import net.minecraft.network.RegistryFriendlyByteBuf;
 import net.minecraft.world.entity.player.Player;
-import net.minecraft.world.level.block.entity.BlockEntityType;
 import net.minecraft.world.level.block.state.BlockState;
 import net.minecraft.world.phys.AABB;
-import org.jetbrains.annotations.NotNull;
 
 public class HeaterElectricBlockEntity extends LoadedBaseBlockEntity implements IHeatSource, IEnergyReceiverMK2, com.hbm.blockentity.ITickable, IBufPacketReceiver, ICopiable, IControlReceiver {
 

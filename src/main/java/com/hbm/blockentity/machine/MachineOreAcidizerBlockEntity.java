@@ -14,9 +14,9 @@ import com.hbm.inventory.FluidContainerRegistry;
 import com.hbm.inventory.UpgradeManagerNT;
 import com.hbm.inventory.fluid.Fluids;
 import com.hbm.inventory.fluid.tank.FluidTank;
-import com.hbm.inventory.menus.MachineCrystallizerMenu;
-import com.hbm.inventory.recipes.CrystallizerRecipes;
-import com.hbm.inventory.recipes.CrystallizerRecipes.CrystallizerRecipe;
+import com.hbm.inventory.menus.MachineOreAcidizerMenu;
+import com.hbm.inventory.recipes.OreAcidizerRecipes;
+import com.hbm.inventory.recipes.OreAcidizerRecipes.OreAcidizerRecipe;
 import com.hbm.items.machine.IItemFluidIdentifier;
 import com.hbm.items.machine.MachineUpgradeItem;
 import com.hbm.items.machine.MachineUpgradeItem.UpgradeType;
@@ -49,7 +49,7 @@ import net.minecraft.world.phys.AABB;
 import java.util.LinkedHashMap;
 import java.util.List;
 
-public class MachineCrystallizerBlockEntity extends MachineBaseBlockEntity implements IEnergyReceiverMK2, IFluidStandardReceiverMK2, IUpgradeInfoProvider, IFluidCopiable {
+public class MachineOreAcidizerBlockEntity extends MachineBaseBlockEntity implements IEnergyReceiverMK2, IFluidStandardReceiverMK2, IUpgradeInfoProvider, IFluidCopiable {
 
     public static final int SLOT_INPUT = 0;
     public static final int SLOT_BATTERY = 1;
@@ -75,13 +75,13 @@ public class MachineCrystallizerBlockEntity extends MachineBaseBlockEntity imple
     public final FluidTank tank = new FluidTank(Fluids.PEROXIDE, 8_000);
     public final UpgradeManagerNT upgradeManager = new UpgradeManagerNT(this);
 
-    public MachineCrystallizerBlockEntity(BlockPos pos, BlockState blockState) {
-        super(NtmBlockEntityTypes.CRYSTALLIZER.get(), pos, blockState, 8);
+    public MachineOreAcidizerBlockEntity(BlockPos pos, BlockState blockState) {
+        super(NtmBlockEntityTypes.ORE_ACIDIZER.get(), pos, blockState, 8);
     }
 
     @Override
     protected Component getDefaultName() {
-        return Component.translatable("container.crystallizer");
+        return Component.translatable("container.ore_acidizer");
     }
 
     @Override
@@ -182,7 +182,7 @@ public class MachineCrystallizerBlockEntity extends MachineBaseBlockEntity imple
     }
 
     private void processItem() {
-        CrystallizerRecipe recipe = CrystallizerRecipes.INSTANCE.getOutput(this.slots.get(SLOT_INPUT), this.tank.getTankType());
+        OreAcidizerRecipe recipe = OreAcidizerRecipes.INSTANCE.getOutput(this.slots.get(SLOT_INPUT), this.tank.getTankType());
         if(recipe == null) return;
 
         ItemStack output = recipe.output.copy();
@@ -207,7 +207,7 @@ public class MachineCrystallizerBlockEntity extends MachineBaseBlockEntity imple
         if(input.isEmpty()) return false;
         if(this.power < this.getPowerRequired()) return false;
 
-        CrystallizerRecipe recipe = CrystallizerRecipes.INSTANCE.getOutput(input, this.tank.getTankType());
+        OreAcidizerRecipe recipe = OreAcidizerRecipes.INSTANCE.getOutput(input, this.tank.getTankType());
         if(recipe == null) return false;
         if(input.getCount() < recipe.itemAmount) return false;
         if(this.tank.getFill() < this.getRequiredAcid(recipe.acidAmount)) return false;
@@ -221,13 +221,13 @@ public class MachineCrystallizerBlockEntity extends MachineBaseBlockEntity imple
         return base;
     }
 
-    public float getFreeChance(CrystallizerRecipe recipe) {
+    public float getFreeChance(OreAcidizerRecipe recipe) {
         int efficiency = this.upgradeManager.getLevel(UpgradeType.EFFECT);
         return efficiency > 0 ? Math.min(efficiency * recipe.productivity, 0.99F) : 0F;
     }
 
     public int getDuration() {
-        CrystallizerRecipe recipe = CrystallizerRecipes.INSTANCE.getOutput(this.slots.get(SLOT_INPUT), this.tank.getTankType());
+        OreAcidizerRecipe recipe = OreAcidizerRecipes.INSTANCE.getOutput(this.slots.get(SLOT_INPUT), this.tank.getTankType());
         int base = recipe != null ? recipe.duration : 600;
         int speed = this.upgradeManager.getLevel(UpgradeType.SPEED);
         return speed > 0 ? (int) Math.ceil(base * Math.max(1F - 0.25F * speed, 0.25F)) : base;
@@ -286,7 +286,7 @@ public class MachineCrystallizerBlockEntity extends MachineBaseBlockEntity imple
 
     @Override
     public boolean canPlaceItem(int slot, ItemStack stack) {
-        if(slot == SLOT_INPUT) return CrystallizerRecipes.INSTANCE.getOutput(stack, this.tank.getTankType()) != null;
+        if(slot == SLOT_INPUT) return OreAcidizerRecipes.INSTANCE.getOutput(stack, this.tank.getTankType()) != null;
         if(slot == SLOT_BATTERY) return stack.getItem() instanceof IBatteryItem;
         if(slot == SLOT_FLUID_INPUT) return FluidContainerRegistry.getFluidContent(stack, this.tank.getTankType()) > 0;
         if(slot == SLOT_UPGRADE_1 || slot == SLOT_UPGRADE_2) return stack.getItem() instanceof MachineUpgradeItem;
@@ -345,7 +345,7 @@ public class MachineCrystallizerBlockEntity extends MachineBaseBlockEntity imple
 
     @Override
     public AbstractContainerMenu createMenu(int id, Inventory inventory, Player player) {
-        return new MachineCrystallizerMenu(id, inventory, this);
+        return new MachineOreAcidizerMenu(id, inventory, this);
     }
 
     @Override
@@ -379,7 +379,7 @@ public class MachineCrystallizerBlockEntity extends MachineBaseBlockEntity imple
 
     @Override
     public void provideInfo(UpgradeType type, int level, List<String> info, boolean extendedInfo) {
-        info.add(IUpgradeInfoProvider.getStandardLabel(NtmBlocks.MACHINE_CRYSTALLIZER.get()).getString());
+        info.add(IUpgradeInfoProvider.getStandardLabel(NtmBlocks.MACHINE_ORE_ACIDIZER.get()).getString());
         if(type == UpgradeType.SPEED) {
             info.add(ChatFormatting.GREEN + I18nUtil.resolveKey(this.KEY_DELAY, "-" + level * 25 + "%"));
             info.add(ChatFormatting.RED + I18nUtil.resolveKey(this.KEY_CONSUMPTION, "+" + level * 100 + "%"));

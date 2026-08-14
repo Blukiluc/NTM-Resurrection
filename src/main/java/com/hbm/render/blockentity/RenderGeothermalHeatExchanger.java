@@ -1,6 +1,6 @@
 package com.hbm.render.blockentity;
 
-import com.hbm.blockentity.machine.MachineHephaestusBlockEntity;
+import com.hbm.blockentity.machine.MachineGeothermalHeatExchangerBlockEntity;
 import com.hbm.blocks.NtmBlocks;
 import com.hbm.main.ResourceManager;
 import com.hbm.render.item.ItemRenderBase;
@@ -17,17 +17,17 @@ import net.minecraft.world.item.Item;
 import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.phys.AABB;
 
-public class RenderHephaestus extends BlockEntityRendererNT<MachineHephaestusBlockEntity> implements IBEWLRProvider {
+public class RenderGeothermalHeatExchanger extends BlockEntityRendererNT<MachineGeothermalHeatExchangerBlockEntity> implements IBEWLRProvider {
 
     private static final ResourceLocation COBBLESTONE_TEXTURE = ResourceLocation.withDefaultNamespace("textures/block/cobblestone.png");
 
     @Override
-    public BlockEntityRenderer<MachineHephaestusBlockEntity> create(Context context) {
-        return new RenderHephaestus();
+    public BlockEntityRenderer<MachineGeothermalHeatExchangerBlockEntity> create(Context context) {
+        return new RenderGeothermalHeatExchanger();
     }
 
     @Override
-    public void render(MachineHephaestusBlockEntity be, MultiBufferSource buffer, float partialTicks) {
+    public void render(MachineGeothermalHeatExchangerBlockEntity be, MultiBufferSource buffer, float partialTicks) {
         RenderContext.translate(0.5F, 0F, 0.5F);
         float movement = Mth.lerp(partialTicks, be.prevRot, be.rot);
         this.renderMachine(movement, be.bufferedHeat > 0);
@@ -35,33 +35,33 @@ public class RenderHephaestus extends BlockEntityRendererNT<MachineHephaestusBlo
 
     private void renderMachine(float movement, boolean isOn) {
         RenderSystem.disableCull();
-        bindTexture(ResourceManager.HEPHAESTUS_TEX);
-        ResourceManager.hephaestus.renderPart("Main");
+        bindTexture(ResourceManager.GEOTHERMAL_HEAT_EXCHANGER_TEX);
+        ResourceManager.geothermal_heat_exchanger.renderPart("Main");
 
         RenderContext.pushPose();
         RenderContext.mulPose(Axis.YP.rotationDegrees(movement));
         for(int i = 0; i < 3; i++) {
-            ResourceManager.hephaestus.renderPart("Rotor");
+            ResourceManager.geothermal_heat_exchanger.renderPart("Rotor");
             RenderContext.mulPose(Axis.YP.rotationDegrees(120F));
         }
         RenderContext.popPose();
 
         if(isOn) {
-            bindTexture(ResourceManager.HEPHAESTUS_CORE_TEX);
+            bindTexture(ResourceManager.GEOTHERMAL_HEAT_EXCHANGER_CORE_TEX);
             RenderContext.setLightning(false);
         } else {
             bindTexture(COBBLESTONE_TEXTURE);
             RenderContext.setColor(0.5F, 0.5F, 0.5F, 1F);
         }
 
-        ResourceManager.hephaestus.renderPart("Core");
+        ResourceManager.geothermal_heat_exchanger.renderPart("Core");
         RenderContext.setLightning(true);
         RenderContext.setColor(1F, 1F, 1F, 1F);
         RenderSystem.enableCull();
     }
 
     @Override
-    public AABB getRenderBoundingBox(MachineHephaestusBlockEntity be) {
+    public AABB getRenderBoundingBox(MachineGeothermalHeatExchangerBlockEntity be) {
         BlockPos pos = be.getBlockPos();
         int x = pos.getX();
         int y = pos.getY();
@@ -72,7 +72,7 @@ public class RenderHephaestus extends BlockEntityRendererNT<MachineHephaestusBlo
 
     @Override
     public Item getItemForRenderer() {
-        return NtmBlocks.MACHINE_HEPHAESTUS.asItem();
+        return NtmBlocks.MACHINE_GEOTHERMAL_HEAT_EXCHANGER.asItem();
     }
 
     @Override
@@ -87,7 +87,7 @@ public class RenderHephaestus extends BlockEntityRendererNT<MachineHephaestusBlo
             @Override
             public void renderCommon(ItemStack stack, MultiBufferSource buffer) {
                 RenderContext.scale(0.5F, 0.5F, 0.5F);
-                RenderHephaestus.this.renderMachine((float)((System.currentTimeMillis() / 10L) % 360L), false);
+                RenderGeothermalHeatExchanger.this.renderMachine((float)((System.currentTimeMillis() / 10L) % 360L), false);
             }
         };
     }

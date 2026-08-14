@@ -1,9 +1,8 @@
 package com.hbm.inventory.menus;
 
-import com.hbm.blockentity.machine.oil.MachineVacuumDistillBlockEntity;
+import com.hbm.blockentity.machine.oil.MachineVacuumRefineryBlockEntity;
 import com.hbm.inventory.NtmMenuTypes;
 import com.hbm.inventory.SlotNonRetarded;
-import com.hbm.inventory.SlotTakeOnly;
 import com.hbm.util.CompatExternal;
 import net.minecraft.network.FriendlyByteBuf;
 import net.minecraft.world.entity.player.Inventory;
@@ -11,13 +10,13 @@ import net.minecraft.world.entity.player.Player;
 import net.minecraft.world.inventory.Slot;
 import net.minecraft.world.item.ItemStack;
 
-public class MachineVacuumDistillMenu extends MenuBase<MachineVacuumDistillBlockEntity> {
+public class MachineVacuumRefineryMenu extends MenuBase<MachineVacuumRefineryBlockEntity> {
 
-    public MachineVacuumDistillMenu(int id, Inventory inventory, FriendlyByteBuf extraData) {
-        this(id, inventory, (MachineVacuumDistillBlockEntity) CompatExternal.getCoreFromPos(inventory.player.level(), extraData.readBlockPos()));
+    public MachineVacuumRefineryMenu(int id, Inventory inventory, FriendlyByteBuf extraData) {
+        this(id, inventory, (MachineVacuumRefineryBlockEntity) CompatExternal.getCoreFromPos(inventory.player.level(), extraData.readBlockPos()));
     }
 
-    public MachineVacuumDistillMenu(int id, Inventory inventory, MachineVacuumDistillBlockEntity be) {
+    public MachineVacuumRefineryMenu(int id, Inventory inventory, MachineVacuumRefineryBlockEntity be) {
         super(NtmMenuTypes.VACUUM_REFINERY.get(), be, id);
 
         // Battery

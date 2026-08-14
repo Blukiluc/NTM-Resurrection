@@ -27,7 +27,7 @@ import net.minecraft.world.level.block.Blocks;
 import net.minecraft.world.level.block.Block;
 import net.minecraft.world.level.block.state.BlockState;
 
-public class MachineHephaestusBlockEntity extends LoadedBaseBlockEntity implements ITickable, IFluidStandardTransceiverMK2, IFluidCopiable {
+public class MachineGeothermalHeatExchangerBlockEntity extends LoadedBaseBlockEntity implements ITickable, IFluidStandardTransceiverMK2, IFluidCopiable {
 
     public static final int TANK_CAPACITY = 24_000;
     private static final int SCAN_DEPTH = 10;
@@ -46,8 +46,8 @@ public class MachineHephaestusBlockEntity extends LoadedBaseBlockEntity implemen
     private boolean volcanoOreResolved;
     private AudioWrapper audio;
 
-    public MachineHephaestusBlockEntity(BlockPos pos, BlockState state) {
-        super(NtmBlockEntityTypes.MACHINE_HEPHAESTUS.get(), pos, state);
+    public MachineGeothermalHeatExchangerBlockEntity(BlockPos pos, BlockState state) {
+        super(NtmBlockEntityTypes.MACHINE_GEOTHERMAL_HEAT_EXCHANGER.get(), pos, state);
     }
 
     @Override

@@ -1,7 +1,7 @@
 package com.hbm.inventory.screens;
 
-import com.hbm.blockentity.machine.MachineCrystallizerBlockEntity;
-import com.hbm.inventory.menus.MachineCrystallizerMenu;
+import com.hbm.blockentity.machine.MachineOreAcidizerBlockEntity;
+import com.hbm.inventory.menus.MachineOreAcidizerMenu;
 import com.hbm.main.NuclearTechMod;
 import net.minecraft.client.gui.GuiGraphics;
 import net.minecraft.network.chat.Component;
@@ -10,13 +10,13 @@ import net.minecraft.world.entity.player.Inventory;
 
 import java.util.List;
 
-public class MachineCrystallizerScreen extends InfoScreen<MachineCrystallizerMenu> {
+public class MachineOreAcidizerScreen extends InfoScreen<MachineOreAcidizerMenu> {
 
-    private static final ResourceLocation TEXTURE = NuclearTechMod.withDefaultNamespace("textures/gui/processing/gui_crystallizer_alt.png");
+    private static final ResourceLocation TEXTURE = NuclearTechMod.withDefaultNamespace("textures/gui/processing/gui_ore_acidizer.png");
 
-    private final MachineCrystallizerBlockEntity be;
+    private final MachineOreAcidizerBlockEntity be;
 
-    public MachineCrystallizerScreen(MachineCrystallizerMenu menu, Inventory inventory, Component title) {
+    public MachineOreAcidizerScreen(MachineOreAcidizerMenu menu, Inventory inventory, Component title) {
         super(menu, inventory, title);
         this.be = menu.be;
         this.imageWidth = 176;

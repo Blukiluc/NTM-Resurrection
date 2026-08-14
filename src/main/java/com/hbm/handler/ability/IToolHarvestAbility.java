@@ -171,7 +171,7 @@ public interface IToolHarvestAbility extends IBaseAbility {
 
         @Override
         public String getName() {
-            return "tool.ability.crystallizer";
+            return "tool.ability.ore_acidizer";
         }
 
         @Override

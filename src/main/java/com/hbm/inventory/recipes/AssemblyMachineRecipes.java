@@ -44,7 +44,7 @@ public class AssemblyMachineRecipes extends GenericRecipes<GenericRecipe> {
                 .outputItems(new ItemStack(NtmBlocks.NUKE_FAT_MAN.get(), 1))
                 .inputItems(new ComparableStack(NtmItems.PELLET_ANTIMATTER.get(), 1)));
 
-//        this.register(new GenericRecipe("ass.hephaestus").setup(200, 100).outputItems(new ItemStack(NtmBlocks.MACHINE_HEPHAESTUS.get(), 1))
+//        this.register(new GenericRecipe("ass.geothermal_heat_exchanger").setup(200, 100).outputItems(new ItemStack(NtmBlocks.MACHINE_GEOTHERMAL_HEAT_EXCHANGER.get(), 1))
 //                .inputItems(new OreDictStack(STEEL.pipe(), 12), new OreDictStack(STEEL.ingot(), 24), new OreDictStack(CU.plate(), 24), new OreDictStack(NB.ingot(), 4), new OreDictStack(RUBBER.ingot(), 12), new ComparableStack(ModBlocks.glass_quartz, 16))
 //                .inputItemsEx(new ComparableStack(ModItems.item_expensive, 8, EnumExpensiveType.HEAVY_FRAME), new OreDictStack(NB.ingot(), 16), new OreDictStack(RUBBER.ingot(), 16), new ComparableStack(ModBlocks.glass_quartz, 16)));
 
