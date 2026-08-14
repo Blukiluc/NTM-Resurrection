@@ -56,6 +56,12 @@ public class NtmBlockEntityTypes {
                             MachineBlastFurnaceBlockEntity::new,
                             NtmBlocks.MACHINE_BLAST_FURNACE.get())
                     .build(null));
+    public static final Supplier<BlockEntityType<MachineRotaryFurnaceBlockEntity>> MACHINE_ROTARY_FURNACE = REGISTER.register(
+            "machine_rotary_furnace",
+            () -> BlockEntityType.Builder.of(
+                            MachineRotaryFurnaceBlockEntity::new,
+                            NtmBlocks.MACHINE_ROTARY_FURNACE.get())
+                    .build(null));
 
     public static final Supplier<BlockEntityType<MachineHeatBoilerBlockEntity>> HEAT_BOILER = REGISTER.register(
             "heat_boiler",

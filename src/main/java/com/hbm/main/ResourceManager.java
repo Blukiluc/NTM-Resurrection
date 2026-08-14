@@ -81,6 +81,7 @@ public class ResourceManager {
     public static final ResourceLocation GEOTHERMAL_HEAT_EXCHANGER_CORE_TEX = NuclearTechMod.withDefaultNamespace("textures/models/machines/geothermal_heat_exchanger.png");
     public static final ResourceLocation COMBINATION_OVEN_TEX = NuclearTechMod.withDefaultNamespace("textures/models/machines/combination_oven.png");
     public static final ResourceLocation BLAST_FURNACE_TEX = NuclearTechMod.withDefaultNamespace("textures/models/machines/blast_furnace.png");
+    public static final ResourceLocation ROTARY_FURNACE_TEX = NuclearTechMod.withDefaultNamespace("textures/models/machines/rotary_furnace.png");
 
     public static final ResourceLocation CONNECTOR_TEX = NuclearTechMod.withDefaultNamespace("textures/models/network/connector.png");
     public static final ResourceLocation CONNECTOR_SUPER_TEX = NuclearTechMod.withDefaultNamespace("textures/models/network/connector_super.png");
@@ -281,6 +282,7 @@ public class ResourceManager {
     public static IModelCustom geothermal_heat_exchanger;
     public static IModelCustom combination_oven;
     public static IModelCustom blast_furnace;
+    public static IModelCustom rotary_furnace;
 
     public static IModelCustom connector;
     public static IModelCustom connector_super;
@@ -426,6 +428,7 @@ public class ResourceManager {
         geothermal_heat_exchanger = new HFRWavefrontObject("models/obj/machines/geothermal_heat_exchanger.obj").asVBO();
         combination_oven = new HFRWavefrontObject("models/obj/machines/combination_oven.obj").asVBO();
         blast_furnace = new HFRWavefrontObject("models/obj/machines/blast_furnace.obj").asVBO();
+        rotary_furnace = new HFRWavefrontObject("models/obj/machines/rotary_furnace.obj").asVBO();
 
         connector = new HFRWavefrontObject("models/obj/network/connector.obj").asVBO();
         connector_super = new HFRWavefrontObject("models/obj/network/connector_super.obj").asVBO();

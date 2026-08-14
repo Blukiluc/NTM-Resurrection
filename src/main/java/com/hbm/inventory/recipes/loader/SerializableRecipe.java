@@ -47,6 +47,7 @@ public abstract class SerializableRecipe {
         recipeHandlers.add(new MatDistribution());
 
         recipeHandlers.add(BlastFurnaceRecipes.INSTANCE);
+        recipeHandlers.add(RotaryFurnaceRecipes.INSTANCE);
         recipeHandlers.add(ChemicalPlantRecipes.INSTANCE);
         recipeHandlers.add(OreAcidizerRecipes.INSTANCE);
         recipeHandlers.add(CentrifugeRecipes.INSTANCE);

@@ -50,6 +50,8 @@ public class NtmMenuTypes {
 
     public static final DeferredHolder<MenuType<?>, MenuType<MachineBlastFurnaceMenu>> MACHINE_BLAST_FURNACE = reg("machine_blast_furnace", MachineBlastFurnaceMenu::new);
 
+    public static final DeferredHolder<MenuType<?>, MenuType<MachineRotaryFurnaceMenu>> MACHINE_ROTARY_FURNACE = reg("machine_rotary_furnace", MachineRotaryFurnaceMenu::new);
+
     public static final DeferredHolder<MenuType<?>, MenuType<MachineGasCentrifugeMenu>> GAS_CENTRIFUGE = reg("gas_centrifuge", MachineGasCentrifugeMenu::new);
 
     public static final DeferredHolder<MenuType<?>, MenuType<HeaterFireboxMenu>> HEATER_FIREBOX = reg("heater_firebox", HeaterFireboxMenu::new);

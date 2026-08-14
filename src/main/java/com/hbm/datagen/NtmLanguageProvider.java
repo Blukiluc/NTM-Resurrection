@@ -1204,6 +1204,7 @@ public class NtmLanguageProvider extends LanguageProvider {
         this.add(NtmBlocks.FURNACE_STEEL, "Steel Furnace");
         this.add(NtmBlocks.COMBINATION_OVEN, "Combination Oven");
         this.add(NtmBlocks.MACHINE_BLAST_FURNACE, "Blast Furnace");
+        this.add(NtmBlocks.MACHINE_ROTARY_FURNACE, "Rotary Furnace");
 
         this.add(NtmBlocks.MACHINE_FLUID_TANK, "Tank");
         this.add(NtmBlocks.MACHINE_BIG_ASS_TANK, "Big Ass Tank");
@@ -1526,6 +1527,7 @@ public class NtmLanguageProvider extends LanguageProvider {
         this.add(NtmBlocks.MACHINE_INDUSTRIAL_TURBINE, DESC, "Efficiency: 100%");
         this.add(NtmBlocks.MACHINE_CHUNGUS, DESC, "Efficiency: 85%");
         this.add("container.machine_blast_furnace", "Blast Furnace");
+        this.add("container.machine_rotary_furnace", "Rotary Furnace");
         this.add("chat.catalytic_cracking_tower.changed", "Changed type to ");
         this.add("chat.fraction_tower.bottom_only", "You can only change the type in the bottom segment!");
         this.add("chat.fraction_tower.changed", "Changed type to %s!");

@@ -764,6 +764,7 @@ public class NtmCreativeTabs {
                         output.accept(NtmBlocks.FURNACE_STEEL);
                         output.accept(NtmBlocks.COMBINATION_OVEN);
                         output.accept(NtmBlocks.MACHINE_BLAST_FURNACE);
+                        output.accept(NtmBlocks.MACHINE_ROTARY_FURNACE);
 
                         output.accept(NtmBlocks.HEATER_OVEN);
                         output.accept(NtmBlocks.HEATER_FIREBOX);

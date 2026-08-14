@@ -185,6 +185,7 @@ public class CommonEvents {
         event.register(NtmMenuTypes.FURNACE_STEEL.get(), MachineFurnaceSteelScreen::new);
         event.register(NtmMenuTypes.COMBINATION_OVEN.get(), MachineCombinationOvenScreen::new);
         event.register(NtmMenuTypes.MACHINE_BLAST_FURNACE.get(), MachineBlastFurnaceScreen::new);
+        event.register(NtmMenuTypes.MACHINE_ROTARY_FURNACE.get(), MachineRotaryFurnaceScreen::new);
         event.register(NtmMenuTypes.MACHINE_OIL.get(), MachineOilScreen::new);
         event.register(NtmMenuTypes.REFINERY.get(), MachineRefineryScreen::new);
         event.register(NtmMenuTypes.VACUUM_REFINERY.get(), MachineVacuumRefineryScreen::new);
