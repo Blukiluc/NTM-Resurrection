@@ -1,4 +1,4 @@
-// 1.21.1	2026-08-14T22:03:23.7108253	Loot Tables
+// 1.21.1	2026-08-15T00:27:17.58711	Loot Tables
 4dea21baadd671e0fc70004833537e05da50d388 data/hbm/loot_table/blocks/asphalt.json
 fb8bbca081abce158c2e2c99aad65884a8ac42bc data/hbm/loot_table/blocks/asphalt_light.json
 ac4aa7fb9a18c76eab92c1ad6d77a20da10a52ed data/hbm/loot_table/blocks/balefire.json
@@ -27,6 +27,8 @@ e9157c40c87c3d61363f15dd9d2ee9cebee21dc0 data/hbm/loot_table/blocks/brick_concre
 048eca6cd418cdd2770ff548a899305728344cde data/hbm/loot_table/blocks/brick_light.json
 432640dcf58187906f1846a1b52702ce7f9fd5a8 data/hbm/loot_table/blocks/brick_obsidian.json
 fc9c425e105561f4637abd260810893f8ff992b3 data/hbm/loot_table/blocks/c4.json
+b6d0e59bf1640db68330f9fc1262fc332e36c489 data/hbm/loot_table/blocks/chimney_brick.json
+c1aa86c895d6c585007fc5e96e3cafaf3d324cfc data/hbm/loot_table/blocks/chimney_industrial.json
 963167797f1b2f2f154b6796b1c1d7c02b1d13e4 data/hbm/loot_table/blocks/combination_oven.json
 0eeea0c1bfe4322d1eb46491a0861edcb3191bdb data/hbm/loot_table/blocks/crate_desh.json
 69ccbf3fc2131c7b4191e1c8d5141a4daf509c66 data/hbm/loot_table/blocks/crate_iron.json
@@ -58,6 +60,11 @@ d048465eacf8aa3c33d06efa7c6a4fa8fb1e9385 data/hbm/loot_table/blocks/fluid_duct_b
 a26dcf557e3e702259d9ece0895078fd0200cf2a data/hbm/loot_table/blocks/fluid_duct_box_iron_medium.json
 b6b3545f680284cbbec6e85c74b9a4c39cddef4f data/hbm/loot_table/blocks/fluid_duct_box_iron_small.json
 faad37d398ee5b597ddf8aa32f7610eec1a69ba8 data/hbm/loot_table/blocks/fluid_duct_box_iron_tiny.json
+a8109040af3ea2f13f7fd2cdbccbf913fa625a1f data/hbm/loot_table/blocks/fluid_duct_exhaust_huge.json
+43bdfc8e1a774d52a88059658409a55512f2721a data/hbm/loot_table/blocks/fluid_duct_exhaust_large.json
+b8484d39afa18dd3819392ac09dd84d63d4b9edc data/hbm/loot_table/blocks/fluid_duct_exhaust_medium.json
+0ce70f504a569ec2af1bd3a06f0124182d647677 data/hbm/loot_table/blocks/fluid_duct_exhaust_small.json
+87b027da9a7b72191c2b7ec337713bb1c9b508ac data/hbm/loot_table/blocks/fluid_duct_exhaust_tiny.json
 acea5bcb24e57e81fb9bedd5520bfb3ec42c7d2c data/hbm/loot_table/blocks/fluid_duct_neo.json
 8b4edadc932081a3a1b359d3fcd5dc3e10437c25 data/hbm/loot_table/blocks/fraction_spacer.json
 de56993a24fa8c6f6eb1e3e81b7704c3d961cb82 data/hbm/loot_table/blocks/frozen_dirt.json
@@ -100,6 +107,7 @@ f212856153e70149dd3c87904d568ebf9b730eb2 data/hbm/loot_table/blocks/machine_dies
 5a420114f5c847f79e1075f94ea02b9364055850 data/hbm/loot_table/blocks/machine_electric_furnace.json
 4a5e6609075b633ac6ea6e311ffe47410ebc8979 data/hbm/loot_table/blocks/machine_electric_press.json
 8c2f9d890b5964c3a4549accd10fff965bf992b8 data/hbm/loot_table/blocks/machine_fel.json
+97b83fdd64c240fc6fdb08cd6a90f1ba9911f7ea data/hbm/loot_table/blocks/machine_flare.json
 6b4aeb33c76085c8052563804d44c19d08176720 data/hbm/loot_table/blocks/machine_fluid_tank.json
 668a95619171cb8bbd680bd095a4814f0e64f63d data/hbm/loot_table/blocks/machine_fracking_tower.json
 dc121c4806dbba47b3feb0c9d17570c21ea3af51 data/hbm/loot_table/blocks/machine_fraction_tower.json

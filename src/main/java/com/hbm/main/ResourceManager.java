@@ -101,6 +101,9 @@ public class ResourceManager {
     public static final ResourceLocation VACUUM_REFINERY_TEX = NuclearTechMod.withDefaultNamespace("textures/models/machines/vacuum_refinery.png");
     public static final ResourceLocation COMPRESSOR_TEX = NuclearTechMod.withDefaultNamespace("textures/models/machines/compressor.png");
     public static final ResourceLocation COMPRESSOR_COMPACT_TEX = NuclearTechMod.withDefaultNamespace("textures/models/machines/compressor_compact.png");
+    public static final ResourceLocation GAS_FLARE_TEX = NuclearTechMod.withDefaultNamespace("textures/models/machines/flare_stack.png");
+    public static final ResourceLocation CHIMNEY_BRICK_TEX = NuclearTechMod.withDefaultNamespace("textures/models/machines/chimney_brick.png");
+    public static final ResourceLocation CHIMNEY_INDUSTRIAL_TEX = NuclearTechMod.withDefaultNamespace("textures/models/machines/chimney_industrial.png");
     public static final ResourceLocation FRACTION_TOWER_TEX = NuclearTechMod.withDefaultNamespace("textures/models/machines/fraction_tower.png");
     public static final ResourceLocation FRACTION_SPACER_TEX = NuclearTechMod.withDefaultNamespace("textures/models/machines/fraction_spacer.png");
     public static final ResourceLocation CATALYTIC_REFORMER_TEX = NuclearTechMod.withDefaultNamespace("textures/models/machines/catalytic_reformer.png");
@@ -305,6 +308,9 @@ public class ResourceManager {
     public static IModelCustom catalytic_cracking_tower;
     public static IModelCustom compressor;
     public static IModelCustom compressor_compact;
+    public static IModelCustom gas_flare;
+    public static IModelCustom chimney_brick;
+    public static IModelCustom chimney_industrial;
 
     public static IModelCustom heater_firebox;
     public static IModelCustom heater_oven;
@@ -448,6 +454,9 @@ public class ResourceManager {
         vacuum_refinery = new HFRWavefrontObject("models/obj/machines/vacuum_refinery.obj").asVBO();
         compressor = new HFRWavefrontObject("models/obj/machines/compressor.obj").asVBO();
         compressor_compact = new HFRWavefrontObject("models/obj/machines/compressor_compact.obj").asVBO();
+        gas_flare = new HFRWavefrontObject("models/obj/machines/flare_stack.obj").asVBO();
+        chimney_brick = new HFRWavefrontObject("models/obj/machines/chimney_brick.obj").asVBO();
+        chimney_industrial = new HFRWavefrontObject("models/obj/machines/chimney_industrial.obj").asVBO();
         fraction_tower = new HFRWavefrontObject("models/obj/machines/fraction_tower.obj").asVBO();
         fraction_spacer = new HFRWavefrontObject("models/obj/machines/fraction_spacer.obj").asVBO();
         catalytic_reformer = new HFRWavefrontObject("models/obj/machines/catalytic_reformer.obj").asVBO();

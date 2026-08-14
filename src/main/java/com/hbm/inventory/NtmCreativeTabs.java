@@ -705,6 +705,11 @@ public class NtmCreativeTabs {
                         output.accept(NtmBlocks.FLUID_DUCT_BOX_IRON_TINY);
                         output.accept(NtmBlocks.FLUID_DUCT_BOX_COPPER_TINY);
                         output.accept(NtmBlocks.FLUID_DUCT_BOX_ALUMINIUM_TINY);
+                        output.accept(NtmBlocks.FLUID_DUCT_EXHAUST_HUGE);
+                        output.accept(NtmBlocks.FLUID_DUCT_EXHAUST_LARGE);
+                        output.accept(NtmBlocks.FLUID_DUCT_EXHAUST_MEDIUM);
+                        output.accept(NtmBlocks.FLUID_DUCT_EXHAUST_SMALL);
+                        output.accept(NtmBlocks.FLUID_DUCT_EXHAUST_TINY);
                         output.accept(NtmBlocks.PIPE_ANCHOR);
 
                         output.accept(NtmBlocks.MACHINE_BATTERY_SOCKET);
@@ -760,6 +765,9 @@ public class NtmCreativeTabs {
                         output.accept(NtmBlocks.MACHINE_CATALYTIC_CRACKING_TOWER);
                         output.accept(NtmBlocks.MACHINE_COMPRESSOR);
                         output.accept(NtmBlocks.MACHINE_COMPRESSOR_COMPACT);
+                        output.accept(NtmBlocks.MACHINE_FLARE);
+                        output.accept(NtmBlocks.CHIMNEY_BRICK);
+                        output.accept(NtmBlocks.CHIMNEY_INDUSTRIAL);
 
                         output.accept(NtmBlocks.FURNACE_BRICK);
                         output.accept(NtmBlocks.MACHINE_ELECTRIC_FURNACE);

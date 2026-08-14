@@ -1164,6 +1164,11 @@ public class NtmLanguageProvider extends LanguageProvider {
         this.add(NtmBlocks.FLUID_DUCT_BOX_IRON_TINY, "Iron Fluid Boxduct (Tiny)");
         this.add(NtmBlocks.FLUID_DUCT_BOX_COPPER_TINY, "Copper Fluid Boxduct (Tiny)");
         this.add(NtmBlocks.FLUID_DUCT_BOX_ALUMINIUM_TINY, "Aluminium Fluid Boxduct (Tiny)");
+        this.add(NtmBlocks.FLUID_DUCT_EXHAUST_HUGE, "Exhaust Pipe (Huge)");
+        this.add(NtmBlocks.FLUID_DUCT_EXHAUST_LARGE, "Exhaust Pipe (Large)");
+        this.add(NtmBlocks.FLUID_DUCT_EXHAUST_MEDIUM, "Exhaust Pipe (Medium)");
+        this.add(NtmBlocks.FLUID_DUCT_EXHAUST_SMALL, "Exhaust Pipe (Small)");
+        this.add(NtmBlocks.FLUID_DUCT_EXHAUST_TINY, "Exhaust Pipe (Tiny)");
         this.add(NtmBlocks.PIPE_ANCHOR, "Pipe Anchor");
 
         this.add(NtmBlocks.MACHINE_BATTERY_SOCKET, "Battery Socket");
@@ -1224,6 +1229,9 @@ public class NtmLanguageProvider extends LanguageProvider {
         this.add(NtmBlocks.MACHINE_CATALYTIC_CRACKING_TOWER, "Catalytic Cracking Tower");
         this.add(NtmBlocks.MACHINE_COMPRESSOR, "Industrial Compressor");
         this.add(NtmBlocks.MACHINE_COMPRESSOR_COMPACT, "Compact Compressor");
+        this.add(NtmBlocks.MACHINE_FLARE, "Flare Stack");
+        this.add(NtmBlocks.CHIMNEY_BRICK, "Smokestack");
+        this.add(NtmBlocks.CHIMNEY_INDUSTRIAL, "Industrial Smokestack");
 
         this.add(NtmBlocks.MACHINE_SATLINKER, "SatLink Device");
 
@@ -1472,6 +1480,7 @@ public class NtmLanguageProvider extends LanguageProvider {
         this.add("container.machine_vacuum_refinery", "Vacuum Refinery");
         this.add("container.machine_catalytic_reformer", "Catalytic Reformer");
         this.add("container.machine_compressor", "Compressor");
+        this.add("container.machine_flare", "Flare Stack");
         this.add("container.heat_boiler", "Boiler");
         this.add("container.machine_industrial_boiler", "Industrial Boiler");
         this.add("container.furnace_brick", "Bricked Furnace");
@@ -1511,6 +1520,11 @@ public class NtmLanguageProvider extends LanguageProvider {
         this.add(NtmBlocks.PUMP_STEAM, DESC, "Uses steam to pump up groundwater$Generates up to 1,000mB/t$Needs to be placed below Y:70");
         this.add(NtmBlocks.PUMP_ELECTRIC, DESC, "Uses electricity to pump up groundwater$Generates up to 10,000mB/t$Needs to be placed below Y:70");
         this.add(NtmBlocks.MACHINE_STEAM_ENGINE, DESC, "Efficiency: 85%%");
+        this.add(NtmBlocks.MACHINE_FLARE, DESC, "Can burn fluids and vent gasses$Burns up to 10mB/t$Vents up to 50mB/t$$Fuel efficiency:$-Flammable Gasses: 20%%$-Flammable Liquids: 10%%");
+        this.add(NtmBlocks.CHIMNEY_BRICK, DESC, "Connect using exhaust pipes to polluting machines$Reduces pollution emission by 75%%");
+        this.add(NtmBlocks.CHIMNEY_INDUSTRIAL, DESC, "Connect using exhaust pipes to polluting machines$Reduces pollution emission by 90%%");
+        this.add("flare.ignition", "Ignition");
+        this.add("flare.valve", "Flow Valve");
         this.add(NtmBlocks.RED_CONNECTOR, DESC, "Single wire connection$Range: 10m");
         this.add(NtmBlocks.RED_CONNECTOR_SUPER, DESC, "Single wire connection$Range: 100m");
         this.add(NtmBlocks.PIPE_ANCHOR, DESC, "Single fluid connection$Range: 10m");

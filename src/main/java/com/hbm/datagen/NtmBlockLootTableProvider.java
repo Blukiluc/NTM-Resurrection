@@ -186,6 +186,11 @@ public class NtmBlockLootTableProvider extends BlockLootSubProvider {
         this.dropSelf(NtmBlocks.FLUID_DUCT_BOX_IRON_TINY.get());
         this.dropSelf(NtmBlocks.FLUID_DUCT_BOX_COPPER_TINY.get());
         this.dropSelf(NtmBlocks.FLUID_DUCT_BOX_ALUMINIUM_TINY.get());
+        this.dropSelf(NtmBlocks.FLUID_DUCT_EXHAUST_HUGE.get());
+        this.dropSelf(NtmBlocks.FLUID_DUCT_EXHAUST_LARGE.get());
+        this.dropSelf(NtmBlocks.FLUID_DUCT_EXHAUST_MEDIUM.get());
+        this.dropSelf(NtmBlocks.FLUID_DUCT_EXHAUST_SMALL.get());
+        this.dropSelf(NtmBlocks.FLUID_DUCT_EXHAUST_TINY.get());
         this.dropSelf(NtmBlocks.PIPE_ANCHOR.get());
 
         this.dropSelf(NtmBlocks.HEATER_FIREBOX.get());
@@ -251,6 +256,9 @@ public class NtmBlockLootTableProvider extends BlockLootSubProvider {
         this.dropSelf(NtmBlocks.MACHINE_CATALYTIC_CRACKING_TOWER.get());
         this.dropSelf(NtmBlocks.MACHINE_COMPRESSOR.get());
         this.dropSelf(NtmBlocks.MACHINE_COMPRESSOR_COMPACT.get());
+        this.dropSelf(NtmBlocks.MACHINE_FLARE.get());
+        this.dropSelf(NtmBlocks.CHIMNEY_BRICK.get());
+        this.dropSelf(NtmBlocks.CHIMNEY_INDUSTRIAL.get());
 
         this.dropSelf(NtmBlocks.MACHINE_SATLINKER.get());
 

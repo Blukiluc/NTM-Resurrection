@@ -482,6 +482,27 @@ public class NtmBlockEntityTypes {
                             NtmBlocks.MACHINE_COMPRESSOR_COMPACT.get())
                     .build(null));
 
+    public static final Supplier<BlockEntityType<MachineGasFlareBlockEntity>> GAS_FLARE = REGISTER.register(
+            "gas_flare",
+            () -> BlockEntityType.Builder.of(
+                            MachineGasFlareBlockEntity::new,
+                            NtmBlocks.MACHINE_FLARE.get())
+                    .build(null));
+
+    public static final Supplier<BlockEntityType<ChimneyBrickBlockEntity>> CHIMNEY_BRICK = REGISTER.register(
+            "chimney_brick",
+            () -> BlockEntityType.Builder.of(
+                            ChimneyBrickBlockEntity::new,
+                            NtmBlocks.CHIMNEY_BRICK.get())
+                    .build(null));
+
+    public static final Supplier<BlockEntityType<ChimneyIndustrialBlockEntity>> CHIMNEY_INDUSTRIAL = REGISTER.register(
+            "chimney_industrial",
+            () -> BlockEntityType.Builder.of(
+                            ChimneyIndustrialBlockEntity::new,
+                            NtmBlocks.CHIMNEY_INDUSTRIAL.get())
+                    .build(null));
+
     public static final Supplier<BlockEntityType<ProxyComboBlockEntity>> PROXY_COMBO = REGISTER.register("proxy_combo", () -> BlockEntityType.Builder.of(ProxyComboBlockEntity::new).build(null));
 
     public static final Supplier<BlockEntityType<BobbleBlockEntity>> BOBBLEHEAD = REGISTER.register("bobblehead", () -> BlockEntityType.Builder.of(BobbleBlockEntity::new, NtmBlocks.BOBBLEHEAD.get()).build(null));
@@ -539,6 +560,16 @@ public class NtmBlockEntityTypes {
                             NtmBlocks.FLUID_DUCT_BOX_IRON_TINY.get(),
                             NtmBlocks.FLUID_DUCT_BOX_COPPER_TINY.get(),
                             NtmBlocks.FLUID_DUCT_BOX_ALUMINIUM_TINY.get())
+                    .build(null));
+    public static final Supplier<BlockEntityType<ExhaustPipeBlockEntity>> EXHAUST_PIPE = REGISTER.register(
+            "exhaust_pipe",
+            () -> BlockEntityType.Builder.of(
+                            ExhaustPipeBlockEntity::new,
+                            NtmBlocks.FLUID_DUCT_EXHAUST_HUGE.get(),
+                            NtmBlocks.FLUID_DUCT_EXHAUST_LARGE.get(),
+                            NtmBlocks.FLUID_DUCT_EXHAUST_MEDIUM.get(),
+                            NtmBlocks.FLUID_DUCT_EXHAUST_SMALL.get(),
+                            NtmBlocks.FLUID_DUCT_EXHAUST_TINY.get())
                     .build(null));
     public static final Supplier<BlockEntityType<PipeAnchorBlockEntity>> PIPE_ANCHOR = REGISTER.register(
             "pipe_anchor",

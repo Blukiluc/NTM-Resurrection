@@ -73,6 +73,9 @@ public class NtmSoundDefinitionsProvider extends SoundDefinitionsProvider {
         this.add(NtmSoundEvents.FIRE_DISINTEGRATION, SoundDefinition.definition()
                 .with(sound(NuclearTechMod.MODID + ":weapon/fire/disintegration"))
         );
+        this.add(NtmSoundEvents.FLAMETHROWER_SHOOT, SoundDefinition.definition()
+                .with(sound(NuclearTechMod.MODID + ":weapon/flamethrower_shoot"))
+        );
         /// ENTITIES
         this.add(NtmSoundEvents.OLD_EXPLOSION, SoundDefinition.definition()
                 .with(sound(NuclearTechMod.MODID + ":entity/old_explosion"))

@@ -92,6 +92,13 @@ public class AssemblyMachineRecipes extends GenericRecipes<GenericRecipe> {
 //        this.register(new GenericRecipe("ass.combustiongen").setup(300, 100)
 //                .outputItems(new ItemStack(NtmBlocks.MACHINE_COMBUSTION_ENGINE.get(), 1))
 //                .inputItems(new OreDictStack(STEEL.plate(), 16), new OreDictStack(CU.ingot(), 12), new OreDictStack(GOLD.wireDense(), 8), new ComparableStack(NtmItems.CANISTER_EMPTY.get(), 4), new ComparableStack(NtmItems.CIRCUIT_BASIC.get(), 1)));
+//        this.register(new GenericRecipe("ass.flarestack").setup(100, 100)
+//                .outputItems(new ItemStack(NtmBlocks.MACHINE_FLARE.get(), 1))
+//                .inputItems(
+//                        new ComparableStack(NtmItems.PLATE_STEEL.get(), 12),
+//                        new ComparableStack(NtmItems.PLATE_COPPER.get(), 4),
+//                        new ComparableStack(NtmItems.SHELL_STEEL.get(), 4),
+//                        new ComparableStack(NtmItems.THERMO_ELEMENT.get(), 3)));
 //        this.register(new GenericRecipe("ass.pistonsetsteel").setup(200, 100)
 //                .outputItems(MetaHelper.newStack(NtmItems.PISTON_SET, 1, PistonSetItem.PistonType.STEEL.ordinal()))
 //                .inputItems(new OreDictStack(STEEL.plate(), 16), new OreDictStack(CU.plate(), 4), new OreDictStack(W.ingot(), 8), new OreDictStack(W.bolt(), 16)));

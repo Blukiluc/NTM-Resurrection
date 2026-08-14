@@ -293,6 +293,9 @@ public class NtmBlockStateProvider extends BlockStateProvider {
         this.particleOnlyBlock(NtmBlocks.MACHINE_CATALYTIC_CRACKING_TOWER, modLoc("block/block_steel"));
         this.particleOnlyBlock(NtmBlocks.MACHINE_COMPRESSOR, modLoc("block/block_steel"));
         this.particleOnlyBlock(NtmBlocks.MACHINE_COMPRESSOR_COMPACT, modLoc("block/block_steel"));
+        this.particleOnlyBlock(NtmBlocks.MACHINE_FLARE, modLoc("block/block_steel"));
+        this.particleOnlyBlock(NtmBlocks.CHIMNEY_BRICK, modLoc("block/brick_fire"));
+        this.particleOnlyBlock(NtmBlocks.CHIMNEY_INDUSTRIAL, modLoc("block/concrete"));
 
         this.cubeTop(NtmBlocks.MACHINE_SATLINKER);
 
@@ -493,6 +496,11 @@ public class NtmBlockStateProvider extends BlockStateProvider {
         this.registerFluidDuctBox(NtmBlocks.FLUID_DUCT_BOX_IRON_TINY.get(), "silver", 4, 4, 6);
         this.registerFluidDuctBox(NtmBlocks.FLUID_DUCT_BOX_COPPER_TINY.get(), "copper", 4, 4, 6);
         this.registerFluidDuctBox(NtmBlocks.FLUID_DUCT_BOX_ALUMINIUM_TINY.get(), "white", 4, 4, 6);
+        this.registerFluidDuctExhaust(NtmBlocks.FLUID_DUCT_EXHAUST_HUGE.get(), 0, 12, 14);
+        this.registerFluidDuctExhaust(NtmBlocks.FLUID_DUCT_EXHAUST_LARGE.get(), 1, 10, 12);
+        this.registerFluidDuctExhaust(NtmBlocks.FLUID_DUCT_EXHAUST_MEDIUM.get(), 2, 8, 10);
+        this.registerFluidDuctExhaust(NtmBlocks.FLUID_DUCT_EXHAUST_SMALL.get(), 3, 6, 8);
+        this.registerFluidDuctExhaust(NtmBlocks.FLUID_DUCT_EXHAUST_TINY.get(), 4, 4, 6);
     }
 
     private void registerCableBox(Block block, int sizeIndex, int diameter) {
@@ -501,6 +509,10 @@ public class NtmBlockStateProvider extends BlockStateProvider {
 
     private void registerFluidDuctBox(Block block, String material, int sizeIndex, int diameter, int junctionDiameter) {
         this.registerBoxDuctModel(block, "boxduct_" + material + "_straight", "boxduct_" + material + "_end", "boxduct_" + material + "_junction_" + sizeIndex, diameter, junctionDiameter);
+    }
+
+    private void registerFluidDuctExhaust(Block block, int sizeIndex, int diameter, int junctionDiameter) {
+        this.registerBoxDuctModel(block, "boxduct_exhaust_straight", "boxduct_exhaust_end", "boxduct_exhaust_junction_" + sizeIndex, diameter, junctionDiameter);
     }
 
     private void registerBoxDuctModel(Block block, String straightTexture, String endTexture, String junctionTexture, int diameter, int junctionDiameter) {

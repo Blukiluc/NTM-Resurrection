@@ -99,6 +99,28 @@ public class NtmRecipeProvider extends RecipeProvider {
                 .unlockedBy("has_brick", has(Items.BRICK))
                 .save(recipeOutput);
 
+//        for(int i = 0; i < 15; i += 3) {
+//            constructionRecipes.add(new AnvilConstructionRecipe(new AStack[] {new OreDictStack(IRON.plate(), 1), new ComparableStack(ModItems.plate_polymer)}, new AnvilOutput(new ItemStack(ModBlocks.fluid_duct_exhaust, 8, i))).setTier(2).setOverlay(OverlayType.CONSTRUCTION));
+//            constructionRecipes.add(new AnvilConstructionRecipe(new ComparableStack(ModBlocks.fluid_duct_exhaust, 8, i), new AnvilOutput[] {new AnvilOutput(new ItemStack(ModItems.plate_iron)), new AnvilOutput(new ItemStack(ModItems.plate_polymer))}).setTier(2));
+//        }
+
+//        constructionRecipes.add(new AnvilConstructionRecipe(
+//                new AStack[] {
+//                        new OreDictStack(STEEL.plate(), 4),
+//                        new ComparableStack(Blocks.brick_block, 16),
+//                        new ComparableStack(ModBlocks.steel_grate, 2)
+//                },
+//                new AnvilOutput(new ItemStack(ModBlocks.chimney_brick))).setTier(2));
+
+//        constructionRecipes.add(new AnvilConstructionRecipe(
+//                new AStack[] {
+//                        new OreDictStack(STEEL.plate(), 16),
+//                        new OreDictStack(ANY_CONCRETE.any(), 64),
+//                        new ComparableStack(ModBlocks.steel_grate, 4),
+//                        new ComparableStack(ModItems.filter_coal, 4)
+//                },
+//                new AnvilOutput(new ItemStack(ModBlocks.chimney_industrial))).setTier(3));
+
 //        ShapedRecipeBuilder.shaped(RecipeCategory.MISC, NtmBlocks.MACHINE_ELECTRIC_FURNACE.get())
 //                .pattern("BBB")
 //                .pattern("WFW")

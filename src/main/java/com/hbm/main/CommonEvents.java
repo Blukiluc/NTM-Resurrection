@@ -194,6 +194,7 @@ public class CommonEvents {
         event.register(NtmMenuTypes.VACUUM_REFINERY.get(), MachineVacuumRefineryScreen::new);
         event.register(NtmMenuTypes.COMPRESSOR.get(), MachineCompressorScreen::new);
         event.register(NtmMenuTypes.CATALYTIC_REFORMER.get(), MachineCatalyticReformerScreen::new);
+        event.register(NtmMenuTypes.GAS_FLARE.get(), MachineGasFlareScreen::new);
 
         event.register(NtmMenuTypes.CRATE.get(), CrateScreen::new);
 

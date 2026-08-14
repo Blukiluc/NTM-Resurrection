@@ -82,6 +82,7 @@ public class NtmMenuTypes {
     public static final DeferredHolder<MenuType<?>, MenuType<MachineSILEXMenu>> SILEX = reg("silex", MachineSILEXMenu::new);
     public static final DeferredHolder<MenuType<?>, MenuType<MachineCatalyticReformerMenu>> CATALYTIC_REFORMER = reg("catalytic_reformer", MachineCatalyticReformerMenu::new);
     public static final DeferredHolder<MenuType<?>, MenuType<MachineCompressorMenu>> COMPRESSOR = reg("compressor", MachineCompressorMenu::new);
+    public static final DeferredHolder<MenuType<?>, MenuType<MachineGasFlareMenu>> GAS_FLARE = reg("gas_flare", MachineGasFlareMenu::new);
 
     public static final DeferredHolder<MenuType<?>, MenuType<BatterySocketMenu>> BATTERY_SOCKET = reg("battery_socket", BatterySocketMenu::new);
     public static final DeferredHolder<MenuType<?>, MenuType<BatteryREDDMenu>> BATTERY_REDD = reg("battery_redd", BatteryREDDMenu::new);

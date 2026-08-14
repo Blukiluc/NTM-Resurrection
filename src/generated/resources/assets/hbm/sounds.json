@@ -300,6 +300,11 @@
       "hbm:weapon/fire/disintegration"
     ]
   },
+  "weapon.flamethrower_shoot": {
+    "sounds": [
+      "hbm:weapon/flamethrower_shoot"
+    ]
+  },
   "weapon.fstbmb_ping": {
     "sounds": [
       "hbm:weapon/fstbmb_ping"
