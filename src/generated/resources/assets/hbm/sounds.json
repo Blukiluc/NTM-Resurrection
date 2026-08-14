@@ -57,14 +57,29 @@
       "hbm:block/engine"
     ]
   },
+  "block.fel": {
+    "sounds": [
+      "hbm:block/fel"
+    ]
+  },
   "block.fensu_hum": {
     "sounds": [
       "hbm:block/fensu_hum"
     ]
   },
+  "block.hephaestus_running": {
+    "sounds": [
+      "hbm:block/hephaestus_running"
+    ]
+  },
   "block.hunduns_magnificent_howl": {
     "sounds": [
       "hbm:block/hunduns_magnificent_howl"
+    ]
+  },
+  "block.igenerator_operate": {
+    "sounds": [
+      "hbm:block/igenerator_operate"
     ]
   },
   "block.lock_open": {

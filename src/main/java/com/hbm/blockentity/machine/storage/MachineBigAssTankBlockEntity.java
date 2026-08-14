@@ -1,6 +1,5 @@
 package com.hbm.blockentity.machine.storage;
 
-import com.hbm.blockentity.LoadedBaseBlockEntity.TiltType;
 import com.hbm.blockentity.NtmBlockEntityTypes;
 import com.hbm.blocks.DummyableBlock;
 import com.hbm.inventory.fluid.FluidType;

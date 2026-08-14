@@ -312,6 +312,9 @@ public class NtmItems {
     public static final DeferredItem<Item> POWDER_ASBESTOS = ITEMS.register("powder_asbestos", () -> new Item(new Item.Properties()));
     public static final DeferredItem<Item> POWDER_MAGIC = ITEMS.register("powder_magic", () -> new Item(new Item.Properties()));
     public static final DeferredItem<Item> POWDER_SAWDUST = ITEMS.register("powder_sawdust", () -> new Item(new Item.Properties()));
+    public static final DeferredItem<Item> GEAR_LARGE = ITEMS.register("gear_large", () -> new Item(new Item.Properties().stacksTo(1)));
+    public static final DeferredItem<Item> GEAR_LARGE_STEEL = ITEMS.register("gear_large_steel", () -> new Item(new Item.Properties().stacksTo(1)));
+    public static final DeferredItem<Item> SAWBLADE = ITEMS.register("sawblade", () -> new Item(new Item.Properties().stacksTo(1)));
     public static final DeferredItem<Item> POWDER_FLUX = ITEMS.register("powder_flux", () -> new Item(new Item.Properties()));
     public static final DeferredItem<Item> POWDER_FERTILIZER = ITEMS.register("powder_fertilizer", () -> new Item(new Item.Properties()));
     public static final DeferredItem<Item> POWDER_BALEFIRE = ITEMS.register("powder_balefire", () -> new Item(new Item.Properties()));
@@ -448,7 +451,7 @@ public class NtmItems {
     public static final DeferredItem<Item> NUGGET_AUSTRALIUM = ITEMS.register("nugget_australium", () -> new Item(new Item.Properties()));
     public static final DeferredItem<Item> NUGGET_AUSTRALIUM_LESSER = ITEMS.register("nugget_australium_lesser", () -> new Item(new Item.Properties()));
     public static final DeferredItem<Item> NUGGET_AUSTRALIUM_GREATER = ITEMS.register("nugget_australium_greater", () -> new Item(new Item.Properties()));
-    public static final DeferredItem<Item> NUGGET_DESH = ITEMS.register("nugget_desh", () -> new Item(new Item.Properties()));;
+    public static final DeferredItem<Item> NUGGET_DESH = ITEMS.register("nugget_desh", () -> new Item(new Item.Properties()));
     public static final DeferredItem<Item> NUGGET_EUPHEMIUM = ITEMS.register("nugget_euphemium", () -> new Item(new Item.Properties()));
     public static final DeferredItem<Item> NUGGET_DINEUTRONIUM = ITEMS.register("nugget_dineutronium", () -> new Item(new Item.Properties()));
     public static final DeferredItem<Item> NUGGET_OSMIRIDIUM = ITEMS.register("nugget_osmiridium", () -> new Item(new Item.Properties()));
@@ -539,6 +542,12 @@ public class NtmItems {
     public static final DeferredItem<Item> BATTERY_SC = ITEMS.register("battery_sc", () -> new BatterySCItem(new Item.Properties()));
     public static final DeferredItem<Item> BATTERY_CREATIVE = ITEMS.register("battery_creative", () -> new BatteryCreativeItem(new Item.Properties().stacksTo(1)));
 
+    public static final DeferredItem<ItemFELCrystal> LASER_CRYSTAL_CO2 = ITEMS.register("laser_crystal_co2", () -> new ItemFELCrystal(new Item.Properties(), ItemFELCrystal.EnumWavelengths.IR));
+    public static final DeferredItem<ItemFELCrystal> LASER_CRYSTAL_BISMUTH = ITEMS.register("laser_crystal_bismuth", () -> new ItemFELCrystal(new Item.Properties(), ItemFELCrystal.EnumWavelengths.VISIBLE));
+    public static final DeferredItem<ItemFELCrystal> LASER_CRYSTAL_CMB = ITEMS.register("laser_crystal_cmb", () -> new ItemFELCrystal(new Item.Properties(), ItemFELCrystal.EnumWavelengths.UV));
+    public static final DeferredItem<ItemFELCrystal> LASER_CRYSTAL_DNT = ITEMS.register("laser_crystal_dnt", () -> new ItemFELCrystal(new Item.Properties(), ItemFELCrystal.EnumWavelengths.GAMMA));
+    public static final DeferredItem<ItemFELCrystal> LASER_CRYSTAL_DIGAMMA = ITEMS.register("laser_crystal_digamma", () -> new ItemFELCrystal(new Item.Properties(), ItemFELCrystal.EnumWavelengths.DRX));
+
     // Folders
     public static final DeferredItem<Item> BLUEPRINTS = ITEMS.register("blueprints", () -> new BlueprintsItem(new Item.Properties()));
 
@@ -549,10 +558,11 @@ public class NtmItems {
     // Machine Items
     //by using these in crafting table recipes, i'm running the risk of making my recipes too greg-ian (which i don't like)
     //in the event that i forget about the meaning of the word "sparingly", please throw a brick at my head
-    public static final DeferredItem<Item> SCREWDRIVER = ITEMS.register("screwdriver", () -> new Item(new Item.Properties().stacksTo(8)));
-    public static final DeferredItem<Item> SCREWDRIVER_DESH = ITEMS.register("screwdriver_desh", () -> new Item(new Item.Properties().stacksTo(8)));
+    public static final DeferredItem<Item> SCREWDRIVER = ITEMS.register("screwdriver", () -> new ToolingItem(ToolType.SCREWDRIVER, new Item.Properties().stacksTo(8)));
+    public static final DeferredItem<Item> SCREWDRIVER_DESH = ITEMS.register("screwdriver_desh", () -> new ToolingItem(ToolType.SCREWDRIVER, new Item.Properties().stacksTo(8)));
     public static final DeferredItem<Item> BLOWTORCH = ITEMS.register("blowtorch", () -> new BlowtorchItem(new Item.Properties().stacksTo(1)));
     public static final DeferredItem<Item> ACETYLENE_TORCH = ITEMS.register("acetylene_torch", () -> new BlowtorchItem(new Item.Properties().stacksTo(1)));
+    public static final DeferredItem<Item> PISTON_SET = ITEMS.register("piston_set", () -> new PistonSetItem(new Item.Properties()));
 
     // Press Stamps
     // TODO durability
@@ -666,6 +676,13 @@ public class NtmItems {
 
     // Tools
     public static final DeferredItem<Item> BALEFIRE_AND_STEEL = ITEMS.register("balefire_and_steel", () -> new BalefireAndSteelItem(new Item.Properties().stacksTo(1).durability(256)));
+    public static final DeferredItem<Item> WIRING_RED_COPPER = ITEMS.register("wiring_red_copper", () -> new CableDrumItem(new Item.Properties().stacksTo(1)));
+    public static final DeferredItem<Item> WRENCH = ITEMS.register("wrench", () -> new WrenchItem(
+            NtmTiers.STEEL,
+            new Item.Properties()
+                    .stacksTo(1)
+                    .attributes(SwordItem.createAttributes(NtmTiers.STEEL, 3, -2.4F))
+    ));
 
     // Energy Drinks
     public static final DeferredItem<Item> DRINK = ITEMS.register("drink", () -> new DrinkItem(new Item.Properties()));

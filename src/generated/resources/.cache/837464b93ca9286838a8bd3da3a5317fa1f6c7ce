@@ -1,4 +1,4 @@
-// 1.21.1	2026-08-09T11:51:00.2876152	Item Models: hbm
+// 1.21.1	2026-08-13T23:42:38.9230422	Item Models: hbm
 c4e09d2d0fd2bef45dc51c8da0c70bab4652e4b1 assets/hbm/models/item/acetylene_torch.json
 6c4e747554da913978325893b69ca977467a483c assets/hbm/models/item/ammo_secret.json
 99443ea6db20add27ff0bd97f72d22bbf1493cd1 assets/hbm/models/item/ammo_secret_0.json
@@ -373,6 +373,8 @@ d6497a0a5e43d20d64a2e55050eab89ad7153c8b assets/hbm/models/item/fragment_neodymi
 d918b0a9467f3cdff706842b056aab411fc9af78 assets/hbm/models/item/frozen_log.json
 5ad528a6dcd9019a093e5e92f114d8e15084c1a6 assets/hbm/models/item/gadget_core.json
 b980a960c44be9a12a42365a8c003a9a1bbdc366 assets/hbm/models/item/gadget_wireing.json
+e1e8a0cbeac607b8e2f000b7dbd2cdeb6cf07219 assets/hbm/models/item/gear_large.json
+a3a6a202f12fdbda0ae485aeaf84dfaf746ff9e0 assets/hbm/models/item/gear_large_steel.json
 82f65799b13016f6749a5764a551fc650429b92a assets/hbm/models/item/geiger_counter.json
 ba52c64533766c28e692dc718e798658959e7550 assets/hbm/models/item/gem_alexandrite.json
 9720f3f4fc139ffae642b0315f9e361a62d90b17 assets/hbm/models/item/gem_rad.json
@@ -494,6 +496,11 @@ ff73ba2567d49131c4dff135cd9dbce1f777ee80 assets/hbm/models/item/key.json
 39f7a98670aa71dae1125e83d569e818c51d3b4f assets/hbm/models/item/key_kit.json
 f99f9c543763b3643f6130711b7fc9a003fa9c76 assets/hbm/models/item/key_red.json
 78d947c5a888db68c134b8c17488a35279eb4b7e assets/hbm/models/item/key_red_cracked.json
+44b7d22d5c4f3b524d14396e13f4cd8e01dd09fd assets/hbm/models/item/laser_crystal_bismuth.json
+c695596a247f51b9a8733f87aa4091c37b76b49e assets/hbm/models/item/laser_crystal_cmb.json
+83f6f72778242985ada631b8930133cf0e10432b assets/hbm/models/item/laser_crystal_co2.json
+9927eb9a7166298534c947893be8f420bf0acc65 assets/hbm/models/item/laser_crystal_digamma.json
+c8b90621816707ce8a60d8966dce9a5f70e9e3fc assets/hbm/models/item/laser_crystal_dnt.json
 38c6352457119356786b45d7016134006d8afcf5 assets/hbm/models/item/leaves_layer.json
 1d28d25428e9c3e08db4f11fe812fe5372b55684 assets/hbm/models/item/lignite.json
 4774d9c22c9b79e2cf2beb72548651c15f76ad51 assets/hbm/models/item/little_boy_bullet.json
@@ -605,6 +612,11 @@ b0793e5e6c169f9cd91a5dc656227f19582a9f0d assets/hbm/models/item/pellet_rtg.json
 48f817d0f5adcc7493021e816ecbbb6b2cff439a assets/hbm/models/item/pipe_titanium.json
 48f817d0f5adcc7493021e816ecbbb6b2cff439a assets/hbm/models/item/pipe_tungsten.json
 48f817d0f5adcc7493021e816ecbbb6b2cff439a assets/hbm/models/item/pipe_tungtungsten.json
+401af6378a56454232a1793164ce3956a1524598 assets/hbm/models/item/piston_set.json
+8240e0132f2b7c5d9a1aa3636023b8ebcfb8c5ef assets/hbm/models/item/piston_set_0.json
+ec8baea375d26f0a304fd46df0bffd4e6bf90e9a assets/hbm/models/item/piston_set_1.json
+072589107b1ab99d432fad5f679e1d266670dc79 assets/hbm/models/item/piston_set_2.json
+12cece67d4f31c2728e95d90fe8996225fe3f5b2 assets/hbm/models/item/piston_set_3.json
 64ce181c88a6e50fcaf46979799b738d31361276 assets/hbm/models/item/plate_aluminium.json
 937bf59a454647510714fa5a381d0e6068955887 assets/hbm/models/item/plate_armor_ajr.json
 c4ec9d1583cc93614a2f031f73fbf6042b9821ba assets/hbm/models/item/plate_armor_dnt.json
@@ -828,6 +840,7 @@ d7271e4faecd37f2f4292aa2bd0502efc1b54635 assets/hbm/models/item/rod_quad_9.json
 1b794eb7489ce437435b7fc117a332010096e58c assets/hbm/models/item/satellite_interface.json
 2764632ea9b1361aa2615273659c7c18ea36d8ce assets/hbm/models/item/satellite_laser.json
 148ede98074ee0173e1e003f14bc76f6290af6c4 assets/hbm/models/item/satellite_radar.json
+e70be8bff8f99d7368e4c86524b7be3c968872eb assets/hbm/models/item/sawblade.json
 e3a1aaabafd9820e70c898f0a45568f17ac7cc93 assets/hbm/models/item/scrap.json
 6856235de6d3c910d1b38c42cd4afa8860abde2f assets/hbm/models/item/screwdriver.json
 6ce5acfda34e6c9b3c7153b20fdaf667615532b5 assets/hbm/models/item/screwdriver_desh.json
@@ -916,3 +929,4 @@ d9d920fb73ec2a70c78d23141da57148da121dea assets/hbm/models/item/wax_paraffin.jso
 41dba728ec0e8e23c618ba2722ce91a477dcadd7 assets/hbm/models/item/wire_titanium.json
 41dba728ec0e8e23c618ba2722ce91a477dcadd7 assets/hbm/models/item/wire_tungsten.json
 41dba728ec0e8e23c618ba2722ce91a477dcadd7 assets/hbm/models/item/wire_tungtungsten.json
+11d7ca6cdba38503c34e4a238bf1161c7ddc74d2 assets/hbm/models/item/wiring_red_copper.json

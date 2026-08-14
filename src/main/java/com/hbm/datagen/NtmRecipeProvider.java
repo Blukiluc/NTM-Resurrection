@@ -70,5 +70,32 @@ public class NtmRecipeProvider extends RecipeProvider {
         slab(recipeOutput, RecipeCategory.BUILDING_BLOCKS, NtmBlocks.BRICK_CONCRETE_MOSSY_SLAB.get(), NtmBlocks.BRICK_CONCRETE_MOSSY.get());
         slab(recipeOutput, RecipeCategory.BUILDING_BLOCKS, NtmBlocks.BRICK_CONCRETE_CRACKED_SLAB.get(), NtmBlocks.BRICK_CONCRETE_CRACKED.get());
         slab(recipeOutput, RecipeCategory.BUILDING_BLOCKS, NtmBlocks.BRICK_CONCRETE_BROKEN_SLAB.get(), NtmBlocks.BRICK_CONCRETE_BROKEN.get());
+
+        ShapelessRecipeBuilder.shapeless(RecipeCategory.REDSTONE, NtmBlocks.RED_CABLE_CLASSIC.get())
+                .requires(NtmBlocks.RED_CABLE.get())
+                .unlockedBy("has_red_cable", has(NtmBlocks.RED_CABLE.get()))
+                .save(recipeOutput);
+        ShapelessRecipeBuilder.shapeless(RecipeCategory.REDSTONE, NtmBlocks.RED_CABLE.get())
+                .requires(NtmBlocks.RED_CABLE_CLASSIC.get())
+                .unlockedBy("has_red_cable_classic", has(NtmBlocks.RED_CABLE_CLASSIC.get()))
+                .save(recipeOutput, "hbm:red_cable_from_classic");
+
+        ShapedRecipeBuilder.shaped(RecipeCategory.TOOLS, NtmItems.WRENCH.get())
+                .pattern(" S ")
+                .pattern(" IS")
+                .pattern("I  ")
+                .define('S', NtmItems.INGOT_STEEL.get())
+                .define('I', Items.IRON_INGOT)
+                .unlockedBy("has_steel_ingot", has(NtmItems.INGOT_STEEL.get()))
+                .save(recipeOutput);
+
+//        ShapedRecipeBuilder.shaped(RecipeCategory.REDSTONE, NtmBlocks.PIPE_ANCHOR.get(), 2)
+//                .pattern("P")
+//                .pattern("P")
+//                .pattern("S")
+//                .define('P', NtmItems.PIPE_STEEL.get())
+//                .define('S', NtmItems.INGOT_STEEL.get())
+//                .unlockedBy("has_steel_pipe", has(NtmItems.PIPE_STEEL.get()))
+//                .save(recipeOutput);
     }
 }

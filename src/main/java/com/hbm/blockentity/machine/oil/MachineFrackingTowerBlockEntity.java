@@ -7,17 +7,14 @@ import com.hbm.inventory.fluid.Fluids;
 import com.hbm.inventory.fluid.tank.FluidTank;
 import com.hbm.inventory.menus.MachineOilMenu;
 import com.hbm.items.machine.MachineUpgradeItem.UpgradeType;
-import com.hbm.util.BobMathUtil;
 import com.hbm.util.fauxpointtwelve.DirPos;
 import com.hbm.world.feature.OilSpot;
-import net.minecraft.ChatFormatting;
 import net.minecraft.core.BlockPos;
 import net.minecraft.core.Direction;
 import net.minecraft.network.chat.Component;
 import net.minecraft.world.entity.player.Inventory;
 import net.minecraft.world.entity.player.Player;
 import net.minecraft.world.inventory.AbstractContainerMenu;
-import net.minecraft.world.item.TooltipFlag;
 import net.minecraft.world.level.block.state.BlockState;
 
 import java.util.List;

@@ -162,6 +162,9 @@ public class NtmSoundDefinitionsProvider extends SoundDefinitionsProvider {
         this.add(NtmSoundEvents.ENGINE_LOOP, SoundDefinition.definition()
                 .with(sound(NuclearTechMod.MODID + ":block/engine"))
         );
+        this.add(NtmSoundEvents.COMBUSTION_ENGINE_LOOP, SoundDefinition.definition()
+                .with(sound(NuclearTechMod.MODID + ":block/igenerator_operate"))
+        );
         this.add(NtmSoundEvents.ASSEMBLER_STRIKE, SoundDefinition.definition()
                 .with(
                         sound(NuclearTechMod.MODID + ":block/assembler_strike1"),
@@ -186,6 +189,9 @@ public class NtmSoundDefinitionsProvider extends SoundDefinitionsProvider {
         this.add(NtmSoundEvents.CENTRIFUGE_LOOP, SoundDefinition.definition()
                 .with(sound(NuclearTechMod.MODID + ":block/centrifuge_loop"))
         );
+        this.add(NtmSoundEvents.FEL_LOOP, SoundDefinition.definition()
+                .with(sound(NuclearTechMod.MODID + ":block/fel"))
+        );
         this.add(NtmSoundEvents.METAL_IMPACT, SoundDefinition.definition()
                 .with(
                         sound(NuclearTechMod.MODID + ":block/metal_impact1"),
@@ -200,6 +206,9 @@ public class NtmSoundDefinitionsProvider extends SoundDefinitionsProvider {
         );
         this.add(NtmSoundEvents.TURBINE_LEVER, SoundDefinition.definition()
                 .with(sound(NuclearTechMod.MODID + ":block/turbine_lever"))
+        );
+        this.add(NtmSoundEvents.HEPHAESTUS_LOOP, SoundDefinition.definition()
+                .with(sound(NuclearTechMod.MODID + ":block/hephaestus_running"))
         );
         /// ITEMS
         this.add(NtmSoundEvents.TECH_BLEEP, SoundDefinition.definition()

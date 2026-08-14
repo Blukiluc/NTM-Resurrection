@@ -333,6 +333,9 @@ public class NtmLanguageProvider extends LanguageProvider {
         this.add(NtmItems.POWDER_ASBESTOS.get(), "Asbestos Powder");
         this.add(NtmItems.POWDER_MAGIC.get(), "Pulverized Enchantment");
         this.add(NtmItems.POWDER_SAWDUST.get(), "Sawdust");
+        this.add(NtmItems.GEAR_LARGE.get(), "Large Gear");
+        this.add(NtmItems.GEAR_LARGE_STEEL.get(), "Large Steel Gear");
+        this.add(NtmItems.SAWBLADE.get(), "Saw Blade");
         this.add(NtmItems.POWDER_FLUX.get(), "Flux");
         this.add(NtmItems.POWDER_FERTILIZER.get(), "Industrial Fertilizer");
         this.add(NtmItems.POWDER_BALEFIRE.get(), "Thermonuclear Ashes");
@@ -626,6 +629,16 @@ public class NtmLanguageProvider extends LanguageProvider {
         this.add(NtmItems.BATTERY_SC, this.getName(BatterySCType.AM241), "Americium-241 Self-Charging Battery");
         this.add(NtmItems.BATTERY_CREATIVE, "Infinite Battery");
 
+        this.add(NtmItems.LASER_CRYSTAL_CO2, "CO2-Desh Laser Crystal");
+        this.add(NtmItems.LASER_CRYSTAL_CO2, ".desc", "Carbon Dioxide encased in Crystalline Desh");
+        this.add(NtmItems.LASER_CRYSTAL_BISMUTH, "BiSmUTh Laser Crystal");
+        this.add(NtmItems.LASER_CRYSTAL_BISMUTH, ".desc", "Bismuth-Samarium-Uranium-Thorium crystal matrix");
+        this.add(NtmItems.LASER_CRYSTAL_CMB, "CMB-Schrabidate Antimatter Laser Crystal");
+        this.add(NtmItems.LASER_CRYSTAL_CMB, ".desc", "Antischrabidium Suspended in a CMB-Schrabidate Alloy Lattice");
+        this.add(NtmItems.LASER_CRYSTAL_DNT, "Spark Laser Crystal");
+        this.add(NtmItems.LASER_CRYSTAL_DNT, ".desc", "Dineutronium-Spark Fermion Supercrystal");
+        this.add(NtmItems.LASER_CRYSTAL_DIGAMMA, "Digamma Laser Crystal");
+
         this.add(NtmItems.BLUEPRINTS, "Blueprints");
 
         //this.add(NtmItems.FLUID_ICON, "");
@@ -635,6 +648,10 @@ public class NtmLanguageProvider extends LanguageProvider {
 
         this.add(NtmItems.SCREWDRIVER, "Screwdriver");
         this.add(NtmItems.SCREWDRIVER_DESH, "Desh Screwdriver");
+        this.add("item.hbm.piston_set.steel", "Steel Piston Set");
+        this.add("item.hbm.piston_set.dura", "High-Speed Steel Piston Set");
+        this.add("item.hbm.piston_set.desh", "Desh Piston Set");
+        this.add("item.hbm.piston_set.starmetal", "Starmetal Piston Set");
         this.add(NtmItems.BLOWTORCH, "Blowtorch");
         this.add(NtmItems.ACETYLENE_TORCH, "Acetylene Welding Torch");
 
@@ -780,6 +797,8 @@ public class NtmLanguageProvider extends LanguageProvider {
         this.add(NtmItems.SATELLITE_INTERFACE, "Satellite Control Interface");
 
         this.add(NtmItems.BALEFIRE_AND_STEEL, "Balefire and Steel");
+        this.add(NtmItems.WIRING_RED_COPPER, "Cable Drum");
+        this.add(NtmItems.WRENCH, "Pipe Wrench");
 
         this.add("item." + NuclearTechMod.MODID + ".obj_drink.requires_opener", "[Requires bottle opener]");
         this.add(NtmItems.DRINK, this.getName(DrinkType.CAN_EMPTY), "Empty Can");
@@ -1002,7 +1021,6 @@ public class NtmLanguageProvider extends LanguageProvider {
 
         this.add(NtmBlocks.GRAVEL_OBSIDIAN, "Crushed Obsidian");
         this.add(NtmBlocks.GRAVEL_DIAMOND, "Diamond Gravel");
-        this.add(NtmBlocks.GRAVEL_DIAMOND, DESC, "There is some kind of joke here,$but I can't quite tell what it is.$$Update, 2020-07-04:$We deny any implications of a joke on$the basis that it was so severely unfunny$that people started stabbing their eyes out.$$Update, 2020-17-04:$As it turns out, \"Diamond Gravel\" was$never really a thing, rendering what might$have been a joke as totally nonsensical.$We apologize for getting your hopes up with$this non-joke that hasn't been made.$$i added an item for a joke that isn't even here, what am i, stupid? can't even tell the difference between gravel and a gavel, how did i not forget how to breathe yet?");
 
         this.add("block." + NuclearTechMod.MODID + ".obj_blast_info.desc", "Blast Resistance: %s");
         this.add("block." + NuclearTechMod.MODID + ".obj_speedy.desc", "Increases speed by %s%%");
@@ -1071,7 +1089,6 @@ public class NtmLanguageProvider extends LanguageProvider {
         this.add(NtmBlocks.NUKE_IVY_MIKE, "Ivy Mike");
         this.add(NtmBlocks.NUKE_TSAR_BOMBA, "Tsar Bomba");
         this.add(NtmBlocks.NUKE_PROTOTYPE, "The Prototype");
-        this.add(NtmBlocks.NUKE_PROTOTYPE, DESC, "It didn't have to be like this.$ $You monster.");
         this.add(NtmBlocks.NUKE_FLEIJA, "F.L.E.I.J.A.");
         this.add(NtmBlocks.NUKE_N2, "N² Mine");
         this.add(NtmBlocks.NUKE_FSTBMB, "Balefire Bomb");
@@ -1112,35 +1129,80 @@ public class NtmLanguageProvider extends LanguageProvider {
 
 
         this.add(NtmBlocks.RED_CABLE, "Red Copper Cable");
+        this.add(NtmBlocks.RED_CABLE_CLASSIC, "Red Copper Cable (Classic)");
+        this.add(NtmBlocks.RED_CABLE_PAINTABLE, "Paintable Red Copper Cable");
+        this.add(NtmBlocks.RED_CABLE_BOX_HUGE, "Red Copper Boxcable (Huge)");
+        this.add(NtmBlocks.RED_CABLE_BOX_LARGE, "Red Copper Boxcable (Large)");
+        this.add(NtmBlocks.RED_CABLE_BOX_MEDIUM, "Red Copper Boxcable (Medium)");
+        this.add(NtmBlocks.RED_CABLE_BOX_SMALL, "Red Copper Boxcable (Small)");
+        this.add(NtmBlocks.RED_CABLE_BOX_TINY, "Red Copper Boxcable (Tiny)");
+        this.add(NtmBlocks.RED_WIRE_COATED, "Coated Red Copper Cable");
+        this.add(NtmBlocks.RED_CONNECTOR, "Electricity Connector");
+        this.add(NtmBlocks.RED_CONNECTOR_SUPER, "Heavy Duty Electricity Connector");
+        this.add(NtmBlocks.RED_PYLON, "Wooden Electricity Pylon");
+        this.add(NtmBlocks.RED_PYLON_MEDIUM_WOOD, "Medium Wooden Electricity Pylon");
+        this.add(NtmBlocks.RED_PYLON_MEDIUM_WOOD_TRANSFORMER, "Medium Wooden Electricity Pylon with Transformer");
+        this.add(NtmBlocks.RED_PYLON_MEDIUM_STEEL, "Medium Steel Electricity Pylon");
+        this.add(NtmBlocks.RED_PYLON_MEDIUM_STEEL_TRANSFORMER, "Medium Steel Electricity Pylon with Transformer");
+        this.add(NtmBlocks.RED_PYLON_LARGE, "Large Electricity Pylon");
+        this.add(NtmBlocks.RED_PYLON_STEEL, "Steel Electricity Pylon");
+        this.add(NtmBlocks.SUBSTATION, "Substation");
 
         this.add(NtmBlocks.FLUID_DUCT_NEO, "Universal Fluid Duct");
+        this.add(NtmBlocks.FLUID_DUCT_BOX_IRON_HUGE, "Iron Fluid Boxduct (Huge)");
+        this.add(NtmBlocks.FLUID_DUCT_BOX_COPPER_HUGE, "Copper Fluid Boxduct (Huge)");
+        this.add(NtmBlocks.FLUID_DUCT_BOX_ALUMINIUM_HUGE, "Aluminium Fluid Boxduct (Huge)");
+        this.add(NtmBlocks.FLUID_DUCT_BOX_IRON_LARGE, "Iron Fluid Boxduct (Large)");
+        this.add(NtmBlocks.FLUID_DUCT_BOX_COPPER_LARGE, "Copper Fluid Boxduct (Large)");
+        this.add(NtmBlocks.FLUID_DUCT_BOX_ALUMINIUM_LARGE, "Aluminium Fluid Boxduct (Large)");
+        this.add(NtmBlocks.FLUID_DUCT_BOX_IRON_MEDIUM, "Iron Fluid Boxduct (Medium)");
+        this.add(NtmBlocks.FLUID_DUCT_BOX_COPPER_MEDIUM, "Copper Fluid Boxduct (Medium)");
+        this.add(NtmBlocks.FLUID_DUCT_BOX_ALUMINIUM_MEDIUM, "Aluminium Fluid Boxduct (Medium)");
+        this.add(NtmBlocks.FLUID_DUCT_BOX_IRON_SMALL, "Iron Fluid Boxduct (Small)");
+        this.add(NtmBlocks.FLUID_DUCT_BOX_COPPER_SMALL, "Copper Fluid Boxduct (Small)");
+        this.add(NtmBlocks.FLUID_DUCT_BOX_ALUMINIUM_SMALL, "Aluminium Fluid Boxduct (Small)");
+        this.add(NtmBlocks.FLUID_DUCT_BOX_IRON_TINY, "Iron Fluid Boxduct (Tiny)");
+        this.add(NtmBlocks.FLUID_DUCT_BOX_COPPER_TINY, "Copper Fluid Boxduct (Tiny)");
+        this.add(NtmBlocks.FLUID_DUCT_BOX_ALUMINIUM_TINY, "Aluminium Fluid Boxduct (Tiny)");
+        this.add(NtmBlocks.PIPE_ANCHOR, "Pipe Anchor");
 
         this.add(NtmBlocks.MACHINE_BATTERY_SOCKET, "Battery Socket");
-        this.add(NtmBlocks.MACHINE_BATTERY_SOCKET, DESC,"Allows battery items to be connected$to the power grid directly.$Acts as a cable, all ports are connected$to the same network.");
         this.add(NtmBlocks.MACHINE_BATTERY_REDD, "FEnSU");
         this.add(NtmBlocks.MACHINE_ASSEMBLY_MACHINE, "Assembly Machine");
+        this.add(NtmBlocks.MACHINE_ASSEMBLY_FACTORY, "Assembly Factory");
+        this.add(NtmBlocks.MACHINE_PREC_ASS, "Precision Assembly Machine");
         this.add(NtmBlocks.MACHINE_CHEMICAL_PLANT, "Chemical Plant");
-        this.add(NtmBlocks.MACHINE_CRYSTALLIZER, "Ore Acidizer");
+        this.add(NtmBlocks.MACHINE_CHEMICAL_FACTORY, "Chemical Factory");
+        this.add(NtmBlocks.MACHINE_ORE_ACIDIZER, "Ore Acidizer");
         this.add(NtmBlocks.MACHINE_WOOD_BURNER, "Wood-Burning Generator");
-        this.add(NtmBlocks.MACHINE_WOOD_BURNER, DESC, "Generates 100HE/t when burning items$Collects ashes$Can burn fluids at 50%% efficiency at 40mB/s");
         this.add(NtmBlocks.MACHINE_DIESEL, "Diesel Generator");
+        this.add(NtmBlocks.MACHINE_COMBUSTION_ENGINE, "Industrial Combustion Engine");
+        this.add(NtmBlocks.MACHINE_STIRLING, "Stirling Engine");
+        this.add(NtmBlocks.MACHINE_STIRLING_STEEL, "Heavy Stirling Engine");
+        this.add(NtmBlocks.MACHINE_STIRLING_CREATIVE, "Creative Stirling Engine");
+        this.add(NtmBlocks.MACHINE_SAWMILL, "Stirling Sawmill");
+        this.add(NtmBlocks.PUMP_STEAM, "Steam-Powered Groundwater Pump");
+        this.add(NtmBlocks.PUMP_ELECTRIC, "Electric Groundwater Pump");
+        this.add(NtmBlocks.MACHINE_CONDENSER, "Steam Condenser");
+        this.add(NtmBlocks.MACHINE_CONDENSER_POWERED, "High-Power Steam Condenser");
+        this.add(NtmBlocks.MACHINE_STEAM_ENGINE, "Steam Engine");
         this.add(NtmBlocks.MACHINE_CENTRIFUGE, "Centrifuge");
         this.add(NtmBlocks.MACHINE_GAS_CENTRIFUGE, "Gas Centrifuge");
         this.add(NtmBlocks.MACHINE_SOLDERING_STATION, "Soldering Station");
         this.add(NtmBlocks.MACHINE_ARC_WELDER, "Arc Welder");
         this.add(NtmBlocks.MACHINE_MIXER, "Industrial Mixer");
+        this.add(NtmBlocks.MACHINE_FEL, "FEL");
+        this.add(NtmBlocks.MACHINE_SILEX, "Laser Isotope Separation Chamber (SILEX)");
         this.add(NtmBlocks.HEAT_BOILER, "Boiler");
         this.add(NtmBlocks.MACHINE_INDUSTRIAL_BOILER, "Industrial Boiler");
         this.add(NtmBlocks.MACHINE_INDUSTRIAL_TURBINE, "Industrial Steam Turbine");
         this.add(NtmBlocks.MACHINE_CHUNGUS, "Leviathan Steam Turbine");
         this.add(NtmBlocks.MACHINE_TOWER_SMALL, "Auxiliary Cooling Tower");
         this.add(NtmBlocks.MACHINE_TOWER_LARGE, "Cooling Tower");
+        this.add(NtmBlocks.MACHINE_GEOTHERMAL_HEAT_EXCHANGER, "Geothermal Heat Exchanger");
         this.add(NtmBlocks.FURNACE_IRON, "Iron Furnace");
-        this.add(NtmBlocks.FURNACE_IRON, DESC, "Larger and more efficient furnace,$does not waste fuel when idle.");
         this.add(NtmBlocks.FURNACE_STEEL, "Steel Furnace");
-        this.add(NtmBlocks.FURNACE_STEEL, DESC, "Very large furnace that can provide bonus items$when smelting ores. Requires external heat source.$Heat transfer rate: ΔT*0.05 TU/t$(Δ means difference and T means temperature)");
-        this.add(NtmBlocks.FURNACE_COMBINATION, "Combination Oven");
-        this.add(NtmBlocks.FURNACE_COMBINATION, DESC, "A large furnace that can produce charcoal and coal coke.$Produces fluid byproducts.$Heat transfer rate: ΔT*0.25 TU/t");
+        this.add(NtmBlocks.COMBINATION_OVEN, "Combination Oven");
         this.add(NtmBlocks.MACHINE_BLAST_FURNACE, "Blast Furnace");
 
         this.add(NtmBlocks.MACHINE_FLUID_TANK, "Tank");
@@ -1197,7 +1259,6 @@ public class NtmLanguageProvider extends LanguageProvider {
         this.add(NtmBlocks.GAS_EXPLOSIVE, "Explosive Gas");
 
         this.add(NtmBlocks.TAINT, "Taint");
-        this.add(NtmBlocks.TAINT, DESC,"DO NOT TOUCH, BREATHE OR STARE AT.");
 
         // FLUIDS //
         this.add("hbmfluid.none", "None");
@@ -1380,10 +1441,15 @@ public class NtmLanguageProvider extends LanguageProvider {
         this.add("container.battery_socket", "Battery Socket");
         this.add("container.battery_redd", "FEnSU");
         this.add("container.machine_assembly_machine", "Assembly Machine");
+        this.add("container.machine_assembly_factory", "Assembly Factory");
+        this.add("container.machine_precass", "Precision Assembly Machine");
         this.add("container.machine_chemical_plant", "Chemical Plant");
-        this.add("container.crystallizer", "Ore Acidizer");
+        this.add("container.machine_chemical_factory", "Chemical Factory");
+        this.add("container.ore_acidizer", "Ore Acidizer");
         this.add("container.machine_wood_burner", "Wood-Burner");
         this.add("container.machine_diesel", "Diesel Generator");
+        this.add("container.machine_combustion_engine", "Industrial Combustion Engine");
+        this.add("container.machine_sawmill", "Stirling Sawmill");
         this.add("container.machine_shredder", "Shredder");
         this.add("container.machine_press", "Burner Press");
         this.add("container.machine_electric_press", "Electric Press");
@@ -1391,6 +1457,9 @@ public class NtmLanguageProvider extends LanguageProvider {
         this.add("container.machine_gas_centrifuge", "Gas Centrifuge");
         this.add("container.machine_soldering_station", "Soldering Station");
         this.add("container.machine_arc_welder", "Arc Welder");
+        this.add("container.machine_mixer", "Industrial Mixer");
+        this.add("container.machineFEL", "FEL");
+        this.add("container.machineSILEX", "SILEX");
         this.add("container.machine_oil_derrick", "Oil Derrick");
         this.add("container.machine_pumpjack", "Pumpjack");
         this.add("container.machine_fracking_tower", "H. F. T.");
@@ -1398,12 +1467,11 @@ public class NtmLanguageProvider extends LanguageProvider {
         this.add("container.machine_vacuum_refinery", "Vacuum Refinery");
         this.add("container.machine_catalytic_reformer", "Catalytic Reformer");
         this.add("container.machine_compressor", "Compressor");
-        this.add("container.machine_mixer", "Industrial Mixer");
         this.add("container.heat_boiler", "Boiler");
         this.add("container.machine_industrial_boiler", "Industrial Boiler");
         this.add("container.furnace_iron", "Iron Furnace");
         this.add("container.furnace_steel", "Steel Furnace");
-        this.add("container.furnace_combination", "Combination Oven");
+        this.add("container.combination_oven", "Combination Oven");
         this.add("container.fluidtank", "Tank");
         this.add("container.bigAssTank", "Big Ass Tank");
         this.add("container.sat_linker", "SatLink Device");
@@ -1420,6 +1488,32 @@ public class NtmLanguageProvider extends LanguageProvider {
         this.add("container.recipe.output", "Output");
         this.add("container.recipe.at_pressure", "at");
         this.add("container.recipe.set_recipe", "Click to set recipe");
+        this.add(NtmBlocks.GRAVEL_DIAMOND, DESC, "There is some kind of joke here,$but I can't quite tell what it is.$$Update, 2020-07-04:$We deny any implications of a joke on$the basis that it was so severely unfunny$that people started stabbing their eyes out.$$Update, 2020-17-04:$As it turns out, \"Diamond Gravel\" was$never really a thing, rendering what might$have been a joke as totally nonsensical.$We apologize for getting your hopes up with$this non-joke that hasn't been made.$$i added an item for a joke that isn't even here, what am i, stupid? can't even tell the difference between gravel and a gavel, how did i not forget how to breathe yet?");
+        this.add(NtmBlocks.NUKE_PROTOTYPE, DESC, "It didn't have to be like this.$ $You monster.");
+        this.add(NtmBlocks.TAINT, DESC,"DO NOT TOUCH, BREATHE OR STARE AT.");
+        this.add(NtmBlocks.MACHINE_BATTERY_SOCKET, DESC,"Allows battery items to be connected$to the power grid directly.$Acts as a cable, all ports are connected$to the same network.");
+        this.add(NtmBlocks.MACHINE_WOOD_BURNER, DESC, "Generates 100HE/t when burning items$Collects ashes$Can burn fluids at 50%% efficiency at 40mB/s");
+        this.add(NtmBlocks.FURNACE_IRON, DESC, "Larger and more efficient furnace,$does not waste fuel when idle.");
+        this.add(NtmBlocks.FURNACE_STEEL, DESC, "Very large furnace that can provide bonus items$when smelting ores. Requires external heat source.$Heat transfer rate: ΔT*0.05 TU/t$(Δ means difference and T means temperature)");
+        this.add(NtmBlocks.COMBINATION_OVEN, DESC, "A large furnace that can produce charcoal and coal coke.$Produces fluid byproducts.$Heat transfer rate: ΔT*0.25 TU/t");
+        this.add(NtmBlocks.MACHINE_STIRLING, DESC, "Turns heat into energy. Requires external heat source.$Heat transfer rate: T*0.1 TU/t$Max intake: 300 TU/t$Efficiency: 50%%");
+        this.add(NtmBlocks.MACHINE_STIRLING_STEEL, DESC, "Turns heat into energy. Requires external heat source.$Uses a much heavier gear to support higher temperatures.$Heat transfer rate: T*0.1 TU/t$Max intake: 1500 TU/t$Efficiency: 50%%");
+        this.add(NtmBlocks.MACHINE_STIRLING_CREATIVE, DESC, "Turns heat into energy. Requires external heat source.$Heat transfer rate: T*0.1 TU/t$Infinite intake/t$Efficiency: 100%%");
+        this.add(NtmBlocks.MACHINE_SAWMILL, DESC, "Requires external heat source.$Heat transfer rate: T*0.1 TU/t$Min intake: 100 TU/t, Max intake: 300 TU/t");
+        this.add(NtmBlocks.PUMP_STEAM, DESC, "Uses steam to pump up groundwater$Generates up to 1,000mB/t$Needs to be placed below Y:70");
+        this.add(NtmBlocks.PUMP_ELECTRIC, DESC, "Uses electricity to pump up groundwater$Generates up to 10,000mB/t$Needs to be placed below Y:70");
+        this.add(NtmBlocks.MACHINE_STEAM_ENGINE, DESC, "Efficiency: 85%%");
+        this.add(NtmBlocks.RED_CONNECTOR, DESC, "Single wire connection$Range: 10m");
+        this.add(NtmBlocks.RED_CONNECTOR_SUPER, DESC, "Single wire connection$Range: 100m");
+        this.add(NtmBlocks.PIPE_ANCHOR, DESC, "Single fluid connection$Range: 10m");
+        this.add(NtmBlocks.RED_PYLON, DESC, "Single wire connection$Range: 25m");
+        this.add(NtmBlocks.RED_PYLON_STEEL, DESC, "Single wire connection$Range: 25m");
+        this.add(NtmBlocks.RED_PYLON_MEDIUM_WOOD, DESC, "Triple wire connection$Range: 45m");
+        this.add(NtmBlocks.RED_PYLON_MEDIUM_WOOD_TRANSFORMER, DESC, "Triple wire connection$Range: 45m");
+        this.add(NtmBlocks.RED_PYLON_MEDIUM_STEEL, DESC, "Triple wire connection$Range: 45m");
+        this.add(NtmBlocks.RED_PYLON_MEDIUM_STEEL_TRANSFORMER, DESC, "Triple wire connection$Range: 45m");
+        this.add(NtmBlocks.RED_PYLON_LARGE, DESC, "Quadruple wire connection$Range: 100m$Requires a substation to connect to the power grid");
+        this.add(NtmBlocks.SUBSTATION, DESC, "Quadruple wire connection$Range: 20m");
         this.add("block.hbm.heater_firebox.desc", "Burns solid fuel to produce heat.");
         this.add("tile.heater_firebox.desc", "Burns solid fuel to produce heat.");
         this.add("block.hbm.heater_oven.desc", "Burns solid fuel to produce heat.$Accepts heat from the bottom with 50%% efficiency.");
@@ -1428,6 +1522,7 @@ public class NtmLanguageProvider extends LanguageProvider {
         this.add("tile.heater_oilburner.desc", "Burns fluids to produce heat.$Can be configured with a screwdriver.$Can be configured with a hand drill.");
         this.add("block.hbm.heater_heatex.desc", "Produces heat from hot fluids.");
         this.add("tile.heater_heatex.desc", "Produces heat from hot fluids.");
+        this.add("block.hbm.red_cable_paintable.desc", "Right-click with a solid block to set a paint$Paint can be cleared with a screwdriver$Port texture can be disabled with a defuser$Paints can be copied with the copy tool");
         this.add(NtmBlocks.MACHINE_INDUSTRIAL_TURBINE, DESC, "Efficiency: 100%");
         this.add(NtmBlocks.MACHINE_CHUNGUS, DESC, "Efficiency: 85%");
         this.add("container.machine_blast_furnace", "Blast Furnace");
@@ -1455,6 +1550,25 @@ public class NtmLanguageProvider extends LanguageProvider {
         this.add("message." + NuclearTechMod.MODID + ".click_here", "[here]");
         this.add("message." + NuclearTechMod.MODID + ".to_download", " to download!");
         this.add("message." + NuclearTechMod.MODID + ".turbine.operational", "Cannot change compressor setting while operational!");
+        this.add("message.hbm.cable_drum.cleared", "Cable selection cleared");
+        this.add("message.hbm.cable_drum.start", "First connection selected at %s, %s, %s");
+        this.add("message.hbm.cable_drum.missing", "The first connection no longer exists");
+        this.add("message.hbm.cable_drum.connected", "Electricity pylons connected");
+        this.add("message.hbm.cable_drum.invalid", "These connection points are incompatible or too far apart");
+        this.add("tooltip.hbm.cable_drum", "Use on two compatible connection points; sneak-use to clear");
+        this.add("tooltip.hbm.cable_drum.selected", "Selected: %s, %s, %s");
+        this.add("tooltip.hbm.pylon.range", "Maximum wire range: %sm");
+        this.add("message.hbm.wrench.cleared", "Pipe selection cleared");
+        this.add("message.hbm.wrench.start", "Pipe start");
+        this.add("message.hbm.wrench.missing", "Pipe error");
+        this.add("message.hbm.wrench.connected", "Pipe end");
+        this.add("message.hbm.wrench.incompatible", "Pipe error - Pipes are not the same type");
+        this.add("message.hbm.wrench.same", "Pipe error - Cannot connect to the same pipe anchor");
+        this.add("message.hbm.wrench.too_far", "Pipe error - Pipe anchor is too far away");
+        this.add("message.hbm.wrench.fluid_mismatch", "Pipe error - Pipe anchor fluid types do not match");
+        this.add("message.hbm.wrench.already_connected", "Pipe error - Pipe anchors are already connected");
+        this.add("tooltip.hbm.wrench", "Right-click anchor to connect; sneak-use to clear");
+        this.add("tooltip.hbm.wrench.selected", "Pipe start: %s, %s, %s");
 
         this.add("itemGroup.parts", "NTM Resources and Parts");
         this.add("itemGroup.control", "NTM Machine Items and Fuel");
@@ -1465,6 +1579,20 @@ public class NtmLanguageProvider extends LanguageProvider {
         this.add("itemGroup.consumable", "NTM Consumables and Gear");
 
         this.add("fluid.pressurized", "Pressurized, use compressor!");
+
+        this.add("wavelengths.name.ir", "Infrared");
+        this.add("wavelengths.name.visible", "Visible Light");
+        this.add("wavelengths.name.uv", "Ultraviolet");
+        this.add("wavelengths.name.gamma", "Gamma");
+        this.add("wavelengths.name.drx", "Digamma");
+        this.add("wavelengths.waveRange.ir", "780nm-1mm");
+        this.add("wavelengths.waveRange.visible", "400nm-780nm");
+        this.add("wavelengths.waveRange.uv", "100nm-400nm");
+        this.add("wavelengths.waveRange.gamma", "<100pm");
+        this.add("wavelengths.waveRange.drx", "1916169 planck lengths");
+        this.add("gui.hbm.fel.error", "ERR.");
+        this.add("gui.hbm.fel.live", "LIVE");
+        this.add("gui.hbm.silex.void", "Void contents");
 
         this.add("he", "HE"); // hbm energy
         this.add("mb", "mB"); // milibuckets
