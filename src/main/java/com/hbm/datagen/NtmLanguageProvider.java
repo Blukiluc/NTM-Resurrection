@@ -1173,6 +1173,7 @@ public class NtmLanguageProvider extends LanguageProvider {
         this.add(NtmBlocks.MACHINE_PREC_ASS, "Precision Assembly Machine");
         this.add(NtmBlocks.MACHINE_CHEMICAL_PLANT, "Chemical Plant");
         this.add(NtmBlocks.MACHINE_CHEMICAL_FACTORY, "Chemical Factory");
+        this.add(NtmBlocks.MACHINE_PUREX, "PUREX");
         this.add(NtmBlocks.MACHINE_ORE_ACIDIZER, "Ore Acidizer");
         this.add(NtmBlocks.MACHINE_WOOD_BURNER, "Wood-Burning Generator");
         this.add(NtmBlocks.MACHINE_DIESEL, "Diesel Generator");
@@ -1448,6 +1449,7 @@ public class NtmLanguageProvider extends LanguageProvider {
         this.add("container.machine_precass", "Precision Assembly Machine");
         this.add("container.machine_chemical_plant", "Chemical Plant");
         this.add("container.machine_chemical_factory", "Chemical Factory");
+        this.add("container.machine_purex", "PUREX");
         this.add("container.ore_acidizer", "Ore Acidizer");
         this.add("container.machine_wood_burner", "Wood-Burner");
         this.add("container.machine_diesel", "Diesel Generator");
@@ -1497,6 +1499,7 @@ public class NtmLanguageProvider extends LanguageProvider {
         this.add(NtmBlocks.NUKE_PROTOTYPE, DESC, "It didn't have to be like this.$ $You monster.");
         this.add(NtmBlocks.TAINT, DESC,"DO NOT TOUCH, BREATHE OR STARE AT.");
         this.add(NtmBlocks.MACHINE_BATTERY_SOCKET, DESC,"Allows battery items to be connected$to the power grid directly.$Acts as a cable, all ports are connected$to the same network.");
+        this.add(NtmBlocks.MACHINE_PUREX, DESC, "Reprocessing machine for many nuclear fuels.$Most recipes require kerosene and nitric acid.");
         this.add(NtmBlocks.MACHINE_WOOD_BURNER, DESC, "Generates 100HE/t when burning items$Collects ashes$Can burn fluids at 50%% efficiency at 40mB/s");
         this.add(NtmBlocks.FURNACE_IRON, DESC, "Larger and more efficient furnace,$does not waste fuel when idle.");
         this.add(NtmBlocks.FURNACE_STEEL, DESC, "Very large furnace that can provide bonus items$when smelting ores. Requires external heat source.$Heat transfer rate: ΔT*0.05 TU/t$(Δ means difference and T means temperature)");
@@ -1611,6 +1614,14 @@ public class NtmLanguageProvider extends LanguageProvider {
         this.add("min", "min");
         this.add("max", "max");
 
+        this.add("purex.recycle", "Reprocessing of %s");
+        this.add("purex.schrab", "Schrabidium extraction from %s");
+        this.add("autoswitch.pile", "Reprocessing Chicago Pile Rods");
+        this.add("autoswitch.plate", "Reprocessing Plate Fuel");
+        this.add("autoswitch.pwr", "Reprocessing PWR Fuel");
+        this.add("autoswitch.schrab", "Schrabidium Extraction");
+        this.add("autoswitch.watz", "Reprocessing Watz Pellet");
+        this.add("autoswitch.zirnox", "Reprocessing ZIRNOX Fuel");
         this.add("autoswitch", "Part of auto switch group \"%s\"$Recipe changes based on first ingredient");
     }
 

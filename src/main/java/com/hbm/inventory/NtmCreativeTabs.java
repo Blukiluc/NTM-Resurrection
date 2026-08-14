@@ -714,6 +714,7 @@ public class NtmCreativeTabs {
                         output.accept(NtmBlocks.MACHINE_PREC_ASS);
                         output.accept(NtmBlocks.MACHINE_CHEMICAL_PLANT);
                         output.accept(NtmBlocks.MACHINE_CHEMICAL_FACTORY);
+                        output.accept(NtmBlocks.MACHINE_PUREX);
                         output.accept(NtmBlocks.MACHINE_ORE_ACIDIZER);
                         output.accept(NtmBlocks.MACHINE_WOOD_BURNER);
                         output.accept(NtmBlocks.MACHINE_DIESEL);

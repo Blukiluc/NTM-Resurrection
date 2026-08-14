@@ -274,6 +274,13 @@ public class NtmBlockEntityTypes {
                             NtmBlocks.MACHINE_CHEMICAL_FACTORY.get())
                     .build(null));
 
+    public static final Supplier<BlockEntityType<MachinePUREXBlockEntity>> PUREX = REGISTER.register(
+            "purex",
+            () -> BlockEntityType.Builder.of(
+                            MachinePUREXBlockEntity::new,
+                            NtmBlocks.MACHINE_PUREX.get())
+                    .build(null));
+
     public static final Supplier<BlockEntityType<MachineOreAcidizerBlockEntity>> ORE_ACIDIZER = REGISTER.register(
             "ore_acidizer",
             () -> BlockEntityType.Builder.of(

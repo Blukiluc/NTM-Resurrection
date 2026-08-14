@@ -1,4 +1,4 @@
-// 1.21.1	2026-08-14T20:44:18.9371839	Block States: hbm
+// 1.21.1	2026-08-14T22:03:23.703902	Block States: hbm
 771df07d065b33c7dcf62cfb69b5cd3a3cb4feed assets/hbm/blockstates/asphalt.json
 c0f05f08a475704e80a5d657d494bf5a829fab8f assets/hbm/blockstates/asphalt_light.json
 8c6c51f054fa20e59275bf5c7c77e28e7790b34c assets/hbm/blockstates/balefire.json
@@ -115,6 +115,7 @@ b724cfe84caebb78e44d5fed1489525857136c4a assets/hbm/blockstates/machine_geotherm
 2615227ff0165789cc856e5d080be62991b8f800 assets/hbm/blockstates/machine_precass.json
 c148fb71cec7481e3a8dd2d0e804114b41d67c09 assets/hbm/blockstates/machine_press.json
 d7510b455a3e5e2329ea085ff2f489bfa6c24111 assets/hbm/blockstates/machine_pumpjack.json
+318f7e9900b4ba9a39d87870833e5bc7746dd1be assets/hbm/blockstates/machine_purex.json
 6af6907df706281373b19ba367e7368c823a973c assets/hbm/blockstates/machine_refinery.json
 d7f0e7d02a9dd88192e01efbf7ad866819e67c05 assets/hbm/blockstates/machine_rotary_furnace.json
 a2f54f2baea7461de0316df1f90c6564dddfb340 assets/hbm/blockstates/machine_satlinker.json
@@ -350,6 +351,7 @@ f55d5c93f0423e66d4aae3b691b0bb51957b9d98 assets/hbm/models/block/machine_ore_aci
 f55d5c93f0423e66d4aae3b691b0bb51957b9d98 assets/hbm/models/block/machine_precass_particle.json
 f55d5c93f0423e66d4aae3b691b0bb51957b9d98 assets/hbm/models/block/machine_press_particle.json
 f55d5c93f0423e66d4aae3b691b0bb51957b9d98 assets/hbm/models/block/machine_pumpjack_particle.json
+f55d5c93f0423e66d4aae3b691b0bb51957b9d98 assets/hbm/models/block/machine_purex_particle.json
 f55d5c93f0423e66d4aae3b691b0bb51957b9d98 assets/hbm/models/block/machine_refinery_particle.json
 929bc1b62fd895672ac724237ce64beb0dd21c74 assets/hbm/models/block/machine_rotary_furnace_particle.json
 6e6252fb53d3d142cea8f9909afecb1faaf0f1e7 assets/hbm/models/block/machine_satlinker.json
@@ -580,6 +582,7 @@ eb3d422849139df00cde38d0038e637959254202 assets/hbm/models/item/machine_furnace_
 1ae5a980018cda4e68cafcf4ce293349827b23ab assets/hbm/models/item/machine_precass.json
 1ae5a980018cda4e68cafcf4ce293349827b23ab assets/hbm/models/item/machine_press.json
 1ae5a980018cda4e68cafcf4ce293349827b23ab assets/hbm/models/item/machine_pumpjack.json
+1ae5a980018cda4e68cafcf4ce293349827b23ab assets/hbm/models/item/machine_purex.json
 1ae5a980018cda4e68cafcf4ce293349827b23ab assets/hbm/models/item/machine_refinery.json
 1ae5a980018cda4e68cafcf4ce293349827b23ab assets/hbm/models/item/machine_rotary_furnace.json
 9d0c75fb6c764c283bec67ed6c176547f3ba9e42 assets/hbm/models/item/machine_satlinker.json

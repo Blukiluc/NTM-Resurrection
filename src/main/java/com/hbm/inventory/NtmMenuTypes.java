@@ -26,6 +26,8 @@ public class NtmMenuTypes {
 
     public static final DeferredHolder<MenuType<?>, MenuType<MachineChemicalFactoryMenu>> CHEMICAL_FACTORY = reg("chemical_factory", MachineChemicalFactoryMenu::new);
 
+    public static final DeferredHolder<MenuType<?>, MenuType<MachinePUREXMenu>> PUREX = reg("purex", MachinePUREXMenu::new);
+
     public static final DeferredHolder<MenuType<?>, MenuType<MachineOreAcidizerMenu>> ORE_ACIDIZER = reg("ore_acidizer", MachineOreAcidizerMenu::new);
 
     public static final DeferredHolder<MenuType<?>, MenuType<MachineWoodBurnerMenu>> WOOD_BURNER = reg("wood_burner", MachineWoodBurnerMenu::new);
