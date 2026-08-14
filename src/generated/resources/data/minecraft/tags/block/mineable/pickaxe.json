@@ -74,6 +74,7 @@
     "hbm:fluid_duct_box_iron_tiny",
     "hbm:fluid_duct_box_copper_tiny",
     "hbm:fluid_duct_box_aluminium_tiny",
+    "hbm:pipe_anchor",
     "hbm:machine_stirling",
     "hbm:machine_stirling_steel",
     "hbm:machine_stirling_creative",

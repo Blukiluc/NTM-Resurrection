@@ -651,6 +651,7 @@ public class NtmItemModelProvider extends ItemModelProvider {
 
         this.basicItem(NtmItems.BALEFIRE_AND_STEEL.get());
         this.basicItem(NtmItems.WIRING_RED_COPPER.get());
+        this.handheldItem(NtmItems.WRENCH.get());
 
         // DRINK uses ICustomItemModelRegister
         this.handheldItem(NtmItems.BOTTLE_OPENER.get());

@@ -165,6 +165,7 @@ public class NtmBlockTagProvider extends BlockTagsProvider {
                         NtmBlocks.FLUID_DUCT_BOX_IRON_TINY.get(),
                         NtmBlocks.FLUID_DUCT_BOX_COPPER_TINY.get(),
                         NtmBlocks.FLUID_DUCT_BOX_ALUMINIUM_TINY.get(),
+                        NtmBlocks.PIPE_ANCHOR.get(),
                         NtmBlocks.MACHINE_STIRLING.get(),
                         NtmBlocks.MACHINE_STIRLING_STEEL.get(),
                         NtmBlocks.MACHINE_STIRLING_CREATIVE.get(),

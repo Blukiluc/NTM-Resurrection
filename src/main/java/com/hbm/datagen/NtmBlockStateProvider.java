@@ -257,6 +257,7 @@ public class NtmBlockStateProvider extends BlockStateProvider {
         this.particleOnlyBlock(NtmBlocks.SUBSTATION, modLoc("block/block_steel"));
 
         this.registerFluidDucts();
+        this.particleOnlyBlock(NtmBlocks.PIPE_ANCHOR, modLoc("block/block_steel"));
         this.particleOnlyBlock(NtmBlocks.HEATER_FIREBOX, modLoc("block/block_steel"));
         this.particleOnlyBlock(NtmBlocks.HEATER_OVEN, modLoc("block/block_steel"));
         this.particleOnlyBlock(NtmBlocks.HEATER_FLUID_BURNER, modLoc("block/block_steel"));

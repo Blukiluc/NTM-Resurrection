@@ -816,6 +816,7 @@ public class NtmLanguageProvider extends LanguageProvider {
 
         this.add(NtmItems.BALEFIRE_AND_STEEL, "Balefire and Steel");
         this.add(NtmItems.WIRING_RED_COPPER, "Cable Drum");
+        this.add(NtmItems.WRENCH, "Pipe Wrench");
 
         this.add("item." + NuclearTechMod.MODID + ".obj_drink.requires_opener", "[Requires bottle opener]");
         this.add(NtmItems.DRINK, this.getName(DrinkType.CAN_EMPTY), "Empty Can");
@@ -1288,6 +1289,7 @@ public class NtmLanguageProvider extends LanguageProvider {
         this.add(NtmBlocks.FLUID_DUCT_BOX_IRON_TINY, "Iron Fluid Boxduct (Tiny)");
         this.add(NtmBlocks.FLUID_DUCT_BOX_COPPER_TINY, "Copper Fluid Boxduct (Tiny)");
         this.add(NtmBlocks.FLUID_DUCT_BOX_ALUMINIUM_TINY, "Aluminium Fluid Boxduct (Tiny)");
+        this.add(NtmBlocks.PIPE_ANCHOR, "Pipe Anchor");
 
         this.add(NtmBlocks.MACHINE_BATTERY_SOCKET, "Battery Socket");
         this.add(NtmBlocks.MACHINE_BATTERY_REDD, "FEnSU");
@@ -1628,6 +1630,7 @@ public class NtmLanguageProvider extends LanguageProvider {
         this.add(NtmBlocks.MACHINE_STEAM_ENGINE, DESC, "Efficiency: 85%%");
         this.add(NtmBlocks.RED_CONNECTOR, DESC, "Single wire connection$Range: 10m");
         this.add(NtmBlocks.RED_CONNECTOR_SUPER, DESC, "Single wire connection$Range: 100m");
+        this.add(NtmBlocks.PIPE_ANCHOR, DESC, "Single fluid connection$Range: 10m");
         this.add(NtmBlocks.RED_PYLON, DESC, "Single wire connection$Range: 25m");
         this.add(NtmBlocks.RED_PYLON_STEEL, DESC, "Single wire connection$Range: 25m");
         this.add(NtmBlocks.RED_PYLON_MEDIUM_WOOD, DESC, "Triple wire connection$Range: 45m");
@@ -1680,6 +1683,17 @@ public class NtmLanguageProvider extends LanguageProvider {
         this.add("tooltip.hbm.cable_drum", "Use on two compatible connection points; sneak-use to clear");
         this.add("tooltip.hbm.cable_drum.selected", "Selected: %s, %s, %s");
         this.add("tooltip.hbm.pylon.range", "Maximum wire range: %sm");
+        this.add("message.hbm.wrench.cleared", "Pipe selection cleared");
+        this.add("message.hbm.wrench.start", "Pipe start");
+        this.add("message.hbm.wrench.missing", "Pipe error");
+        this.add("message.hbm.wrench.connected", "Pipe end");
+        this.add("message.hbm.wrench.incompatible", "Pipe error - Pipes are not the same type");
+        this.add("message.hbm.wrench.same", "Pipe error - Cannot connect to the same pipe anchor");
+        this.add("message.hbm.wrench.too_far", "Pipe error - Pipe anchor is too far away");
+        this.add("message.hbm.wrench.fluid_mismatch", "Pipe error - Pipe anchor fluid types do not match");
+        this.add("message.hbm.wrench.already_connected", "Pipe error - Pipe anchors are already connected");
+        this.add("tooltip.hbm.wrench", "Right-click anchor to connect; sneak-use to clear");
+        this.add("tooltip.hbm.wrench.selected", "Pipe start: %s, %s, %s");
 
         this.add("itemGroup.parts", "NTM Resources and Parts");
         this.add("itemGroup.control", "NTM Machine Items and Fuel");

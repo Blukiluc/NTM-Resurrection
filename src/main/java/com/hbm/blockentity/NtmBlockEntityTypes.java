@@ -515,6 +515,12 @@ public class NtmBlockEntityTypes {
                             NtmBlocks.FLUID_DUCT_BOX_COPPER_TINY.get(),
                             NtmBlocks.FLUID_DUCT_BOX_ALUMINIUM_TINY.get())
                     .build(null));
+    public static final Supplier<BlockEntityType<PipeAnchorBlockEntity>> PIPE_ANCHOR = REGISTER.register(
+            "pipe_anchor",
+            () -> BlockEntityType.Builder.of(
+                            PipeAnchorBlockEntity::new,
+                            NtmBlocks.PIPE_ANCHOR.get())
+                    .build(null));
 
     public static final Supplier<BlockEntityType<DecontaminatorBlockEntity>> DECONTAMINATOR = REGISTER.register(
             "decontaminator",

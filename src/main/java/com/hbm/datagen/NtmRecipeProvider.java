@@ -79,5 +79,23 @@ public class NtmRecipeProvider extends RecipeProvider {
                 .requires(NtmBlocks.RED_CABLE_CLASSIC.get())
                 .unlockedBy("has_red_cable_classic", has(NtmBlocks.RED_CABLE_CLASSIC.get()))
                 .save(recipeOutput, "hbm:red_cable_from_classic");
+
+        ShapedRecipeBuilder.shaped(RecipeCategory.TOOLS, NtmItems.WRENCH.get())
+                .pattern(" S ")
+                .pattern(" IS")
+                .pattern("I  ")
+                .define('S', NtmItems.INGOT_STEEL.get())
+                .define('I', Items.IRON_INGOT)
+                .unlockedBy("has_steel_ingot", has(NtmItems.INGOT_STEEL.get()))
+                .save(recipeOutput);
+
+//        ShapedRecipeBuilder.shaped(RecipeCategory.REDSTONE, NtmBlocks.PIPE_ANCHOR.get(), 2)
+//                .pattern("P")
+//                .pattern("P")
+//                .pattern("S")
+//                .define('P', NtmItems.PIPE_STEEL.get())
+//                .define('S', NtmItems.INGOT_STEEL.get())
+//                .unlockedBy("has_steel_pipe", has(NtmItems.PIPE_STEEL.get()))
+//                .save(recipeOutput);
     }
 }
