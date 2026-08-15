@@ -1120,6 +1120,7 @@ public class NtmLanguageProvider extends LanguageProvider {
 
         this.add(NtmBlocks.MACHINE_PRESS, "Burner Press");
         this.add(NtmBlocks.MACHINE_ELECTRIC_PRESS, "Electric Press");
+        this.add(NtmBlocks.PRESS_PREHEATER, "Burner Press Preheater");
         this.add(NtmBlocks.MACHINE_SHREDDER, "Shredder");
         this.add(NtmBlocks.HEATER_FIREBOX, "Firebox");
         this.add(NtmBlocks.HEATER_OVEN, "Heating Oven");

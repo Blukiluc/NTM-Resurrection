@@ -2,11 +2,13 @@ package com.hbm.blockentity.machine;
 
 import com.hbm.blockentity.MachineBaseBlockEntity;
 import com.hbm.blockentity.NtmBlockEntityTypes;
+import com.hbm.blocks.NtmBlocks;
 import com.hbm.inventory.menus.MachinePressMenu;
 import com.hbm.inventory.recipes.PressRecipes;
 import com.hbm.items.machine.ItemStamp;
 import com.hbm.registry.NtmSoundEvents;
 import net.minecraft.core.BlockPos;
+import net.minecraft.core.Direction;
 import net.minecraft.network.RegistryFriendlyByteBuf;
 import net.minecraft.network.chat.Component;
 import net.minecraft.sounds.SoundSource;
@@ -58,10 +60,21 @@ public class MachinePressBlockEntity extends MachineBaseBlockEntity {
             return;
         }
 
+        boolean preheated = false;
+
+        for(Direction dir : Direction.values()) {
+            BlockPos neighbour = this.worldPosition.relative(dir);
+            if(level.getBlockState(neighbour).is(NtmBlocks.PRESS_PREHEATER)) {
+                preheated = true;
+                System.out.println(preheated);
+                break;
+            }
+        }
+
         boolean canProcess = this.canProcess();
 
         if(canProcess && this.burnTime >= 200) {
-            this.speed += 1;
+            this.speed += preheated ? 4 : 1;
             if(this.speed > maxSpeed) this.speed = maxSpeed;
         } else {
             this.speed -= 1;

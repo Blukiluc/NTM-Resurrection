@@ -213,6 +213,7 @@ public class NtmBlockStateProvider extends BlockStateProvider {
 
         this.particleOnlyBlock(NtmBlocks.MACHINE_PRESS, modLoc("block/block_steel"));
         this.particleOnlyBlock(NtmBlocks.MACHINE_ELECTRIC_PRESS, modLoc("block/block_steel"));
+        this.simpleCubeAllBlock(NtmBlocks.PRESS_PREHEATER);
         this.registerShredder();
 
         this.registerCables();

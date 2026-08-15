@@ -735,6 +735,7 @@ public class NtmCreativeTabs {
                         output.accept(NtmBlocks.MACHINE_STEAM_ENGINE);
                         output.accept(NtmBlocks.MACHINE_PRESS);
                         output.accept(NtmBlocks.MACHINE_ELECTRIC_PRESS);
+                        output.accept(NtmBlocks.PRESS_PREHEATER);
                         output.accept(NtmBlocks.MACHINE_CENTRIFUGE);
                         output.accept(NtmBlocks.MACHINE_GAS_CENTRIFUGE);
                         output.accept(NtmBlocks.MACHINE_MIXER);
