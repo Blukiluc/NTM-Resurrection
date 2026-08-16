@@ -1,4 +1,4 @@
-// 1.21.1	2026-08-14T14:44:03.909983767	Loot Tables
+// 1.21.1	2026-08-14T23:40:28.9970721	Loot Tables
 87d8c30c4e3b5b2dd2dc4c8ac5630aebe5d030a9 data/hbm/loot_table/blocks/aluminum_ore.json
 7020e7e9eb808242439b65d1a536f0120f46d3fc data/hbm/loot_table/blocks/aluminum_ore_deepslate.json
 5183f459db0fa142d9718b5a7fe26296a28a10a3 data/hbm/loot_table/blocks/asbestos_ore.json
@@ -87,12 +87,12 @@ b29fbb68916f8e9f0c8acf4a4adc37ba321c5943 data/hbm/loot_table/blocks/furnace_stee
 7bc4eedd5e7f9ce92b78ce6212cf5962b9fedcb6 data/hbm/loot_table/blocks/geiger.json
 d3a9cd0620e6a3596c3c11bf8f108cc3016dce32 data/hbm/loot_table/blocks/gravel_diamond.json
 f9fd90cf619aaa97be8aed12294b655b9cf5c822 data/hbm/loot_table/blocks/gravel_obsidian.json
-db63b25f9cb528ae71fd2b2dc82137f1c4a53d54 data/hbm/loot_table/blocks/heat_boiler.json
 1feb5865fe41d91daf56f62cb04db3b05f13d96f data/hbm/loot_table/blocks/heater_electric.json
 4e31fb416ed5306dc55f6d4eb2ed36de9ab8d93a data/hbm/loot_table/blocks/heater_firebox.json
 ad5418dc75b9848846a97462851371572fb78db0 data/hbm/loot_table/blocks/heater_fluid_burner.json
 fc3919c3fb49e5c690ad25d815da979820c9f42c data/hbm/loot_table/blocks/heater_heatex.json
 1b9c22c5cdf68f46d85d29308b124d7784105b54 data/hbm/loot_table/blocks/heater_oven.json
+db63b25f9cb528ae71fd2b2dc82137f1c4a53d54 data/hbm/loot_table/blocks/heat_boiler.json
 1bc9e24ce3c365bf1f1957ea6ba72fbe112746e2 data/hbm/loot_table/blocks/launch_pad.json
 5f11cdf86d85931ec467e1fef5069af334cf99a5 data/hbm/loot_table/blocks/lead_ore.json
 63696935e41c2ce2e114da5df0daa2288aa00f92 data/hbm/loot_table/blocks/lead_ore_deepslate.json
@@ -179,6 +179,7 @@ f0c3e6d9f5416915663ddc607615416f26fec217 data/hbm/loot_table/blocks/ore_oil_sand
 eb1c0d13ee71986148ee7dfec497f16b0d599eb1 data/hbm/loot_table/blocks/ore_tikite.json
 9925012f10990952a95da4a20b93bd501f6419be data/hbm/loot_table/blocks/ore_uranium.json
 ce6fd180ae254cc541309608fc6d59b93649937d data/hbm/loot_table/blocks/ore_uranium_scorched.json
+8cc688e4eb06a13968b31070023cde92c33019b7 data/hbm/loot_table/blocks/pipe_anchor.json
 7354e0c84f1537c4c0c35abb3f341e6982f1fc71 data/hbm/loot_table/blocks/pump_electric.json
 d57062a27c590c98a610d330e67cfb350c06c3ef data/hbm/loot_table/blocks/pump_steam.json
 49bfdb8ed0d92e73fe98a351d1ef1740b9ad12d6 data/hbm/loot_table/blocks/pwr_controller.json
