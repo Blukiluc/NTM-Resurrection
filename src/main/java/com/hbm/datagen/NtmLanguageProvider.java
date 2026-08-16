@@ -1200,6 +1200,7 @@ public class NtmLanguageProvider extends LanguageProvider {
         this.add(NtmBlocks.MACHINE_MIXER, "Industrial Mixer");
         this.add(NtmBlocks.MACHINE_FEL, "FEL");
         this.add(NtmBlocks.MACHINE_SILEX, "Laser Isotope Separation Chamber (SILEX)");
+        this.add(NtmBlocks.MACHINE_ELECTROLYSER, "Electrolysis Machine");
         this.add(NtmBlocks.HEAT_BOILER, "Boiler");
         this.add(NtmBlocks.MACHINE_INDUSTRIAL_BOILER, "Industrial Boiler");
         this.add(NtmBlocks.MACHINE_INDUSTRIAL_TURBINE, "Industrial Steam Turbine");
@@ -1472,8 +1473,9 @@ public class NtmLanguageProvider extends LanguageProvider {
         this.add("container.machine_soldering_station", "Soldering Station");
         this.add("container.machine_arc_welder", "Arc Welder");
         this.add("container.machine_mixer", "Industrial Mixer");
-        this.add("container.machineFEL", "FEL");
-        this.add("container.machineSILEX", "SILEX");
+        this.add("container.machine_fel", "FEL");
+        this.add("container.machine_silex", "SILEX");
+        this.add("container.machine_electrolyser", "Electrolysis Machine");
         this.add("container.machine_oil_derrick", "Oil Derrick");
         this.add("container.machine_pumpjack", "Pumpjack");
         this.add("container.machine_fracking_tower", "H. F. T.");

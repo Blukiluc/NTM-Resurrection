@@ -1,4 +1,4 @@
-// 1.21.1	2026-08-15T00:27:17.5797561	Block States: hbm
+// 1.21.1	2026-08-16T14:12:42.858871	Block States: hbm
 771df07d065b33c7dcf62cfb69b5cd3a3cb4feed assets/hbm/blockstates/asphalt.json
 c0f05f08a475704e80a5d657d494bf5a829fab8f assets/hbm/blockstates/asphalt_light.json
 8c6c51f054fa20e59275bf5c7c77e28e7790b34c assets/hbm/blockstates/balefire.json
@@ -107,6 +107,7 @@ fb757a40dcbc2b901368172b8b193418456903b6 assets/hbm/blockstates/machine_compress
 f88d7e0264fc4ed96c5a668e57ffa8358239fcc1 assets/hbm/blockstates/machine_drain.json
 04f607e44fdd29fb5ff9dc3c1edba4045bc11903 assets/hbm/blockstates/machine_electric_furnace.json
 fb2645b4329ab725059124af528fb28a5288501a assets/hbm/blockstates/machine_electric_press.json
+b4ccf50dba43c368576fc7613de6e100197b77e8 assets/hbm/blockstates/machine_electrolyser.json
 a7bb625719da81a9740bf28b969cf8a7f79faf19 assets/hbm/blockstates/machine_fel.json
 d7d0b059b353e93bffb4a579dd94ee3b1e1ece7e assets/hbm/blockstates/machine_flare.json
 3676d1d17f1f5f5de079aaa77745e1275db6f621 assets/hbm/blockstates/machine_fluid_tank.json
@@ -173,6 +174,7 @@ e997f547fc9334b1925ef6984c3c6e17f6314c32 assets/hbm/blockstates/ore_nether_schra
 4e0ad10df969e5411e425e004619c251a1e175c5 assets/hbm/blockstates/ore_uranium.json
 48267a7f308757027b266590301df698c845a391 assets/hbm/blockstates/ore_uranium_scorched.json
 b1f42259a3ff289fcb0d9911a40ac1b29da4a692 assets/hbm/blockstates/pipe_anchor.json
+2979bf3f8bc5da9a3d473cb80d05656c77e2c429 assets/hbm/blockstates/press_preheater.json
 a586f3b27b4f0933522e4a1a1dd70d551eecfdfb assets/hbm/blockstates/pump_electric.json
 4b61c4fcffe0a885d7cc4b70e4dbd58bfb414bbc assets/hbm/blockstates/pump_steam.json
 c958d239ebf726c71d906df240366031454f609c assets/hbm/blockstates/pwr_controller.json
@@ -350,6 +352,7 @@ f55d5c93f0423e66d4aae3b691b0bb51957b9d98 assets/hbm/models/block/machine_drain_p
 313a14edf213472ce44740985d930df13744562e assets/hbm/models/block/machine_electric_furnace_off.json
 a479ec0bd9dd547018964e5a0d1d6e02997b42b5 assets/hbm/models/block/machine_electric_furnace_on.json
 f55d5c93f0423e66d4aae3b691b0bb51957b9d98 assets/hbm/models/block/machine_electric_press_particle.json
+f55d5c93f0423e66d4aae3b691b0bb51957b9d98 assets/hbm/models/block/machine_electrolyser_particle.json
 f55d5c93f0423e66d4aae3b691b0bb51957b9d98 assets/hbm/models/block/machine_fel_particle.json
 f55d5c93f0423e66d4aae3b691b0bb51957b9d98 assets/hbm/models/block/machine_flare_particle.json
 f55d5c93f0423e66d4aae3b691b0bb51957b9d98 assets/hbm/models/block/machine_fluid_tank_particle.json
@@ -422,6 +425,7 @@ b8fd089cb445246d2f95f62c256fa8631d8f62ae assets/hbm/models/block/ore_tikite.json
 d1acfe7c4a47cd7d52d18c3c11163d0e6ce38085 assets/hbm/models/block/ore_uranium.json
 a0cb274fd320ff2b984a57fa9be4ac28a28b3470 assets/hbm/models/block/ore_uranium_scorched.json
 f55d5c93f0423e66d4aae3b691b0bb51957b9d98 assets/hbm/models/block/pipe_anchor_particle.json
+dd8f286d5d4ac03e601bedf4942791102cfa79da assets/hbm/models/block/press_preheater.json
 f55d5c93f0423e66d4aae3b691b0bb51957b9d98 assets/hbm/models/block/pump_electric_particle.json
 f55d5c93f0423e66d4aae3b691b0bb51957b9d98 assets/hbm/models/block/pump_steam_particle.json
 4c9f3255157d681b5b7a8cd803c16d9ca0c6c9ea assets/hbm/models/block/pwr_controller.json
@@ -590,6 +594,7 @@ b5cb531f9c015e4129f955f3e0b582e62505b659 assets/hbm/models/item/gravel_diamond.j
 1ae5a980018cda4e68cafcf4ce293349827b23ab assets/hbm/models/item/machine_drain.json
 234d33a9fb76a6887580d657d759c3fcd2ddc79a assets/hbm/models/item/machine_electric_furnace.json
 1ae5a980018cda4e68cafcf4ce293349827b23ab assets/hbm/models/item/machine_electric_press.json
+1ae5a980018cda4e68cafcf4ce293349827b23ab assets/hbm/models/item/machine_electrolyser.json
 1ae5a980018cda4e68cafcf4ce293349827b23ab assets/hbm/models/item/machine_fel.json
 1ae5a980018cda4e68cafcf4ce293349827b23ab assets/hbm/models/item/machine_flare.json
 1ae5a980018cda4e68cafcf4ce293349827b23ab assets/hbm/models/item/machine_fluid_tank.json
@@ -655,6 +660,7 @@ b59ad6b763ec1f81a8bb389810d30113040d3501 assets/hbm/models/item/ore_sellafield_e
 cecbb878de3d9606c87ec4292e73aabe10f72e57 assets/hbm/models/item/ore_uranium.json
 4cc39ec6c8d75794096ffff723de60e840a3a6d5 assets/hbm/models/item/ore_uranium_scorched.json
 1ae5a980018cda4e68cafcf4ce293349827b23ab assets/hbm/models/item/pipe_anchor.json
+c74251c580ab842c1a3d20103a4a3c2660252999 assets/hbm/models/item/press_preheater.json
 1ae5a980018cda4e68cafcf4ce293349827b23ab assets/hbm/models/item/pump_electric.json
 1ae5a980018cda4e68cafcf4ce293349827b23ab assets/hbm/models/item/pump_steam.json
 77851df26171a63269f387ceeb40bc5c1d5a63a7 assets/hbm/models/item/pwr_controller.json
