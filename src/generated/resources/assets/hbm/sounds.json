@@ -45,6 +45,11 @@
       "hbm:block/chemical_plant"
     ]
   },
+  "block.combustion_engine_operate": {
+    "sounds": [
+      "hbm:block/combustion_engine_operate"
+    ]
+  },
   "block.debris": {
     "sounds": [
       "hbm:block/debris1",
@@ -75,11 +80,6 @@
   "block.hunduns_magnificent_howl": {
     "sounds": [
       "hbm:block/hunduns_magnificent_howl"
-    ]
-  },
-  "block.igenerator_operate": {
-    "sounds": [
-      "hbm:block/igenerator_operate"
     ]
   },
   "block.lock_open": {
@@ -131,6 +131,11 @@
   "block.turbine_leviathan": {
     "sounds": [
       "hbm:block/turbine_leviathan"
+    ]
+  },
+  "block.turbofan_operate": {
+    "sounds": [
+      "hbm:block/turbofan_operate"
     ]
   },
   "crate_close": {
@@ -298,6 +303,11 @@
   "weapon.fire.disintegration": {
     "sounds": [
       "hbm:weapon/fire/disintegration"
+    ]
+  },
+  "weapon.flamethrower_shoot": {
+    "sounds": [
+      "hbm:weapon/flamethrower_shoot"
     ]
   },
   "weapon.fstbmb_ping": {

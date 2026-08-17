@@ -7,6 +7,8 @@ import com.hbm.blocks.NtmBlocks;
 import com.hbm.blocks.generic.BarbedWireBlock;
 import com.hbm.blocks.generic.LayeringBlock;
 import com.hbm.blocks.generic.SellafieldSlakedBlock;
+import com.hbm.blocks.machine.MachineElectricFurnaceBlock;
+import com.hbm.blocks.machine.MachineFurnaceBrickBlock;
 import com.hbm.blocks.network.FluidDuctConnectingBlock;
 import com.hbm.blocks.states.NtmBlockStateProperties;
 import com.hbm.main.NuclearTechMod;
@@ -17,6 +19,8 @@ import net.minecraft.core.registries.BuiltInRegistries;
 import net.minecraft.data.PackOutput;
 import net.minecraft.resources.ResourceLocation;
 import net.minecraft.world.level.block.Block;
+import net.minecraft.world.level.block.state.properties.BooleanProperty;
+import net.minecraft.world.level.block.state.properties.DirectionProperty;
 import net.neoforged.neoforge.client.model.generators.*;
 import net.neoforged.neoforge.common.data.ExistingFileHelper;
 import net.neoforged.neoforge.registries.DeferredBlock;
@@ -241,6 +245,7 @@ public class NtmBlockStateProvider extends BlockStateProvider {
 
         this.particleOnlyBlock(NtmBlocks.MACHINE_PRESS, modLoc("block/block_steel"));
         this.particleOnlyBlock(NtmBlocks.MACHINE_ELECTRIC_PRESS, modLoc("block/block_steel"));
+        this.simpleCubeAllBlock(NtmBlocks.PRESS_PREHEATER);
         this.registerShredder();
 
         this.registerCables();
@@ -270,10 +275,12 @@ public class NtmBlockStateProvider extends BlockStateProvider {
         this.particleOnlyBlock(NtmBlocks.MACHINE_PREC_ASS, modLoc("block/block_steel"));
         this.particleOnlyBlock(NtmBlocks.MACHINE_CHEMICAL_PLANT, modLoc("block/block_steel"));
         this.particleOnlyBlock(NtmBlocks.MACHINE_CHEMICAL_FACTORY, modLoc("block/block_steel"));
+        this.particleOnlyBlock(NtmBlocks.MACHINE_PUREX, modLoc("block/block_steel"));
         this.particleOnlyBlock(NtmBlocks.MACHINE_ORE_ACIDIZER, modLoc("block/block_steel"));
         this.particleOnlyBlock(NtmBlocks.MACHINE_WOOD_BURNER, modLoc("block/block_steel"));
         this.particleOnlyBlock(NtmBlocks.MACHINE_DIESEL, modLoc("block/block_steel"));
         this.particleOnlyBlock(NtmBlocks.MACHINE_COMBUSTION_ENGINE, modLoc("block/block_steel"));
+        this.particleOnlyBlock(NtmBlocks.MACHINE_TURBOFAN, modLoc("block/block_steel"));
         this.particleOnlyBlock(NtmBlocks.MACHINE_STIRLING, modLoc("block/block_steel"));
         this.particleOnlyBlock(NtmBlocks.MACHINE_STIRLING_STEEL, modLoc("block/block_steel"));
         this.particleOnlyBlock(NtmBlocks.MACHINE_STIRLING_CREATIVE, modLoc("block/block_steel"));
@@ -290,6 +297,8 @@ public class NtmBlockStateProvider extends BlockStateProvider {
         this.particleOnlyBlock(NtmBlocks.MACHINE_MIXER, modLoc("block/block_steel"));
         this.particleOnlyBlock(NtmBlocks.MACHINE_FEL, modLoc("block/block_steel"));
         this.particleOnlyBlock(NtmBlocks.MACHINE_SILEX, modLoc("block/block_steel"));
+        this.particleOnlyBlock(NtmBlocks.MACHINE_ELECTROLYSER, modLoc("block/block_steel"));
+        this.particleOnlyBlock(NtmBlocks.MACHINE_INTAKE, modLoc("block/block_steel"));
         this.particleOnlyBlock(NtmBlocks.HEAT_BOILER, modLoc("block/block_steel"));
         this.particleOnlyBlock(NtmBlocks.MACHINE_INDUSTRIAL_BOILER, modLoc("block/block_steel"));
         this.particleOnlyBlock(NtmBlocks.MACHINE_INDUSTRIAL_TURBINE, modLoc("block/block_steel"));
@@ -297,10 +306,13 @@ public class NtmBlockStateProvider extends BlockStateProvider {
         this.particleOnlyBlock(NtmBlocks.MACHINE_TOWER_SMALL, modLoc("block/brick_concrete"));
         this.particleOnlyBlock(NtmBlocks.MACHINE_TOWER_LARGE, modLoc("block/concrete"));
         this.particleOnlyBlock(NtmBlocks.MACHINE_GEOTHERMAL_HEAT_EXCHANGER, modLoc("block/block_steel"));
+        this.registerFurnace(NtmBlocks.FURNACE_BRICK.get(), MachineFurnaceBrickBlock.FACING, MachineFurnaceBrickBlock.LIT, "machine_furnace_brick");
+        this.registerFurnace(NtmBlocks.MACHINE_ELECTRIC_FURNACE.get(), MachineElectricFurnaceBlock.FACING, MachineElectricFurnaceBlock.LIT, "machine_electric_furnace");
         this.particleOnlyBlock(NtmBlocks.FURNACE_IRON, modLoc("block/block_aluminium"));
         this.particleOnlyBlock(NtmBlocks.FURNACE_STEEL, modLoc("block/block_steel"));
         this.particleOnlyBlock(NtmBlocks.COMBINATION_OVEN, modLoc("block/block_steel"));
         this.particleOnlyBlock(NtmBlocks.MACHINE_BLAST_FURNACE, modLoc("block/block_steel"));
+        this.particleOnlyBlock(NtmBlocks.MACHINE_ROTARY_FURNACE, modLoc("block/brick_fire"));
 
         this.particleOnlyBlock(NtmBlocks.MACHINE_FLUID_TANK, modLoc("block/block_steel"));
         this.particleOnlyBlock(NtmBlocks.MACHINE_BIG_ASS_TANK, modLoc("block/block_steel"));
@@ -317,6 +329,9 @@ public class NtmBlockStateProvider extends BlockStateProvider {
         this.particleOnlyBlock(NtmBlocks.MACHINE_CATALYTIC_CRACKING_TOWER, modLoc("block/block_steel"));
         this.particleOnlyBlock(NtmBlocks.MACHINE_COMPRESSOR, modLoc("block/block_steel"));
         this.particleOnlyBlock(NtmBlocks.MACHINE_COMPRESSOR_COMPACT, modLoc("block/block_steel"));
+        this.particleOnlyBlock(NtmBlocks.MACHINE_FLARE, modLoc("block/block_steel"));
+        this.particleOnlyBlock(NtmBlocks.CHIMNEY_BRICK, modLoc("block/brick_fire"));
+        this.particleOnlyBlock(NtmBlocks.CHIMNEY_INDUSTRIAL, modLoc("block/concrete"));
 
         this.cubeTop(NtmBlocks.MACHINE_SATLINKER);
 
@@ -397,6 +412,42 @@ public class NtmBlockStateProvider extends BlockStateProvider {
         });
 
         this.itemModels().getBuilder(this.key(block).getPath()).parent(model);
+    }
+
+    private void registerFurnace(Block block, DirectionProperty facing, BooleanProperty lit, String name) {
+        ModelFile off = this.models().cube(
+                name + "_off",
+                modLoc("block/" + name + "_bottom"),
+                modLoc("block/" + name + "_top"),
+                modLoc("block/" + name + "_front_off"),
+                modLoc("block/" + name + "_side"),
+                modLoc("block/" + name + "_side"),
+                modLoc("block/" + name + "_side")
+        ).texture("particle", modLoc("block/" + name + "_side"));
+
+        ModelFile on = this.models().cube(
+                name + "_on",
+                modLoc("block/" + name + "_bottom"),
+                modLoc("block/" + name + "_top"),
+                modLoc("block/" + name + "_front_on"),
+                modLoc("block/" + name + "_side"),
+                modLoc("block/" + name + "_side"),
+                modLoc("block/" + name + "_side")
+        ).texture("particle", modLoc("block/" + name + "_side"));
+
+        this.getVariantBuilder(block).forAllStates(state -> {
+            Direction direction = state.getValue(facing);
+            ModelFile model = state.getValue(lit) ? on : off;
+            int rotation = switch(direction) {
+                case EAST -> 90;
+                case SOUTH -> 180;
+                case WEST -> 270;
+                default -> 0;
+            };
+            return ConfiguredModel.builder().modelFile(model).rotationY(rotation).build();
+        });
+
+        this.itemModels().getBuilder(this.key(block).getPath()).parent(off);
     }
 
     private void registerCrate(DeferredBlock<? extends Block> block) {
@@ -481,6 +532,11 @@ public class NtmBlockStateProvider extends BlockStateProvider {
         this.registerFluidDuctBox(NtmBlocks.FLUID_DUCT_BOX_IRON_TINY.get(), "silver", 4, 4, 6);
         this.registerFluidDuctBox(NtmBlocks.FLUID_DUCT_BOX_COPPER_TINY.get(), "copper", 4, 4, 6);
         this.registerFluidDuctBox(NtmBlocks.FLUID_DUCT_BOX_ALUMINIUM_TINY.get(), "white", 4, 4, 6);
+        this.registerFluidDuctExhaust(NtmBlocks.FLUID_DUCT_EXHAUST_HUGE.get(), 0, 12, 14);
+        this.registerFluidDuctExhaust(NtmBlocks.FLUID_DUCT_EXHAUST_LARGE.get(), 1, 10, 12);
+        this.registerFluidDuctExhaust(NtmBlocks.FLUID_DUCT_EXHAUST_MEDIUM.get(), 2, 8, 10);
+        this.registerFluidDuctExhaust(NtmBlocks.FLUID_DUCT_EXHAUST_SMALL.get(), 3, 6, 8);
+        this.registerFluidDuctExhaust(NtmBlocks.FLUID_DUCT_EXHAUST_TINY.get(), 4, 4, 6);
     }
 
     private void registerCableBox(Block block, int sizeIndex, int diameter) {
@@ -489,6 +545,10 @@ public class NtmBlockStateProvider extends BlockStateProvider {
 
     private void registerFluidDuctBox(Block block, String material, int sizeIndex, int diameter, int junctionDiameter) {
         this.registerBoxDuctModel(block, "boxduct_" + material + "_straight", "boxduct_" + material + "_end", "boxduct_" + material + "_junction_" + sizeIndex, diameter, junctionDiameter);
+    }
+
+    private void registerFluidDuctExhaust(Block block, int sizeIndex, int diameter, int junctionDiameter) {
+        this.registerBoxDuctModel(block, "boxduct_exhaust_straight", "boxduct_exhaust_end", "boxduct_exhaust_junction_" + sizeIndex, diameter, junctionDiameter);
     }
 
     private void registerBoxDuctModel(Block block, String straightTexture, String endTexture, String junctionTexture, int diameter, int junctionDiameter) {

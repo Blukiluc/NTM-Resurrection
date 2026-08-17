@@ -1245,6 +1245,7 @@ public class NtmLanguageProvider extends LanguageProvider {
 
         this.add(NtmBlocks.MACHINE_PRESS, "Burner Press");
         this.add(NtmBlocks.MACHINE_ELECTRIC_PRESS, "Electric Press");
+        this.add(NtmBlocks.PRESS_PREHEATER, "Burner Press Preheater");
         this.add(NtmBlocks.MACHINE_SHREDDER, "Shredder");
         this.add(NtmBlocks.HEATER_FIREBOX, "Firebox");
         this.add(NtmBlocks.HEATER_OVEN, "Heating Oven");
@@ -1289,6 +1290,11 @@ public class NtmLanguageProvider extends LanguageProvider {
         this.add(NtmBlocks.FLUID_DUCT_BOX_IRON_TINY, "Iron Fluid Boxduct (Tiny)");
         this.add(NtmBlocks.FLUID_DUCT_BOX_COPPER_TINY, "Copper Fluid Boxduct (Tiny)");
         this.add(NtmBlocks.FLUID_DUCT_BOX_ALUMINIUM_TINY, "Aluminium Fluid Boxduct (Tiny)");
+        this.add(NtmBlocks.FLUID_DUCT_EXHAUST_HUGE, "Exhaust Pipe (Huge)");
+        this.add(NtmBlocks.FLUID_DUCT_EXHAUST_LARGE, "Exhaust Pipe (Large)");
+        this.add(NtmBlocks.FLUID_DUCT_EXHAUST_MEDIUM, "Exhaust Pipe (Medium)");
+        this.add(NtmBlocks.FLUID_DUCT_EXHAUST_SMALL, "Exhaust Pipe (Small)");
+        this.add(NtmBlocks.FLUID_DUCT_EXHAUST_TINY, "Exhaust Pipe (Tiny)");
         this.add(NtmBlocks.PIPE_ANCHOR, "Pipe Anchor");
 
         this.add(NtmBlocks.MACHINE_BATTERY_SOCKET, "Battery Socket");
@@ -1298,10 +1304,12 @@ public class NtmLanguageProvider extends LanguageProvider {
         this.add(NtmBlocks.MACHINE_PREC_ASS, "Precision Assembly Machine");
         this.add(NtmBlocks.MACHINE_CHEMICAL_PLANT, "Chemical Plant");
         this.add(NtmBlocks.MACHINE_CHEMICAL_FACTORY, "Chemical Factory");
+        this.add(NtmBlocks.MACHINE_PUREX, "PUREX");
         this.add(NtmBlocks.MACHINE_ORE_ACIDIZER, "Ore Acidizer");
         this.add(NtmBlocks.MACHINE_WOOD_BURNER, "Wood-Burning Generator");
         this.add(NtmBlocks.MACHINE_DIESEL, "Diesel Generator");
         this.add(NtmBlocks.MACHINE_COMBUSTION_ENGINE, "Industrial Combustion Engine");
+        this.add(NtmBlocks.MACHINE_TURBOFAN, "Turbofan");
         this.add(NtmBlocks.MACHINE_STIRLING, "Stirling Engine");
         this.add(NtmBlocks.MACHINE_STIRLING_STEEL, "Heavy Stirling Engine");
         this.add(NtmBlocks.MACHINE_STIRLING_CREATIVE, "Creative Stirling Engine");
@@ -1318,6 +1326,8 @@ public class NtmLanguageProvider extends LanguageProvider {
         this.add(NtmBlocks.MACHINE_MIXER, "Industrial Mixer");
         this.add(NtmBlocks.MACHINE_FEL, "FEL");
         this.add(NtmBlocks.MACHINE_SILEX, "Laser Isotope Separation Chamber (SILEX)");
+        this.add(NtmBlocks.MACHINE_INTAKE, "Air Intake");
+        this.add(NtmBlocks.MACHINE_ELECTROLYSER, "Electrolysis Machine");
         this.add(NtmBlocks.HEAT_BOILER, "Boiler");
         this.add(NtmBlocks.MACHINE_INDUSTRIAL_BOILER, "Industrial Boiler");
         this.add(NtmBlocks.MACHINE_INDUSTRIAL_TURBINE, "Industrial Steam Turbine");
@@ -1325,10 +1335,13 @@ public class NtmLanguageProvider extends LanguageProvider {
         this.add(NtmBlocks.MACHINE_TOWER_SMALL, "Auxiliary Cooling Tower");
         this.add(NtmBlocks.MACHINE_TOWER_LARGE, "Cooling Tower");
         this.add(NtmBlocks.MACHINE_GEOTHERMAL_HEAT_EXCHANGER, "Geothermal Heat Exchanger");
+        this.add(NtmBlocks.FURNACE_BRICK, "Bricked Furnace");
+        this.add(NtmBlocks.MACHINE_ELECTRIC_FURNACE, "Electric Furnace");
         this.add(NtmBlocks.FURNACE_IRON, "Iron Furnace");
         this.add(NtmBlocks.FURNACE_STEEL, "Steel Furnace");
         this.add(NtmBlocks.COMBINATION_OVEN, "Combination Oven");
         this.add(NtmBlocks.MACHINE_BLAST_FURNACE, "Blast Furnace");
+        this.add(NtmBlocks.MACHINE_ROTARY_FURNACE, "Rotary Furnace");
 
         this.add(NtmBlocks.MACHINE_FLUID_TANK, "Tank");
         this.add(NtmBlocks.MACHINE_BIG_ASS_TANK, "Big Ass Tank");
@@ -1345,6 +1358,9 @@ public class NtmLanguageProvider extends LanguageProvider {
         this.add(NtmBlocks.MACHINE_CATALYTIC_CRACKING_TOWER, "Catalytic Cracking Tower");
         this.add(NtmBlocks.MACHINE_COMPRESSOR, "Industrial Compressor");
         this.add(NtmBlocks.MACHINE_COMPRESSOR_COMPACT, "Compact Compressor");
+        this.add(NtmBlocks.MACHINE_FLARE, "Flare Stack");
+        this.add(NtmBlocks.CHIMNEY_BRICK, "Smokestack");
+        this.add(NtmBlocks.CHIMNEY_INDUSTRIAL, "Industrial Smokestack");
 
         this.add(NtmBlocks.MACHINE_SATLINKER, "SatLink Device");
 
@@ -1570,10 +1586,12 @@ public class NtmLanguageProvider extends LanguageProvider {
         this.add("container.machine_precass", "Precision Assembly Machine");
         this.add("container.machine_chemical_plant", "Chemical Plant");
         this.add("container.machine_chemical_factory", "Chemical Factory");
+        this.add("container.machine_purex", "PUREX");
         this.add("container.ore_acidizer", "Ore Acidizer");
         this.add("container.machine_wood_burner", "Wood-Burner");
         this.add("container.machine_diesel", "Diesel Generator");
         this.add("container.machine_combustion_engine", "Industrial Combustion Engine");
+        this.add("container.machine_turbofan", "Turbofan");
         this.add("container.machine_sawmill", "Stirling Sawmill");
         this.add("container.machine_shredder", "Shredder");
         this.add("container.machine_press", "Burner Press");
@@ -1583,8 +1601,9 @@ public class NtmLanguageProvider extends LanguageProvider {
         this.add("container.machine_soldering_station", "Soldering Station");
         this.add("container.machine_arc_welder", "Arc Welder");
         this.add("container.machine_mixer", "Industrial Mixer");
-        this.add("container.machineFEL", "FEL");
-        this.add("container.machineSILEX", "SILEX");
+        this.add("container.machine_fel", "FEL");
+        this.add("container.machine_silex", "SILEX");
+        this.add("container.machine_electrolyser", "Electrolysis Machine");
         this.add("container.machine_oil_derrick", "Oil Derrick");
         this.add("container.machine_pumpjack", "Pumpjack");
         this.add("container.machine_fracking_tower", "H. F. T.");
@@ -1592,8 +1611,11 @@ public class NtmLanguageProvider extends LanguageProvider {
         this.add("container.machine_vacuum_refinery", "Vacuum Refinery");
         this.add("container.machine_catalytic_reformer", "Catalytic Reformer");
         this.add("container.machine_compressor", "Compressor");
+        this.add("container.machine_flare", "Flare Stack");
         this.add("container.heat_boiler", "Boiler");
         this.add("container.machine_industrial_boiler", "Industrial Boiler");
+        this.add("container.furnace_brick", "Bricked Furnace");
+        this.add("container.machine_electric_furnace", "Electric Furnace");
         this.add("container.furnace_iron", "Iron Furnace");
         this.add("container.furnace_steel", "Steel Furnace");
         this.add("container.combination_oven", "Combination Oven");
@@ -1617,6 +1639,7 @@ public class NtmLanguageProvider extends LanguageProvider {
         this.add(NtmBlocks.NUKE_PROTOTYPE, DESC, "It didn't have to be like this.$ $You monster.");
         this.add(NtmBlocks.TAINT, DESC,"DO NOT TOUCH, BREATHE OR STARE AT.");
         this.add(NtmBlocks.MACHINE_BATTERY_SOCKET, DESC,"Allows battery items to be connected$to the power grid directly.$Acts as a cable, all ports are connected$to the same network.");
+        this.add(NtmBlocks.MACHINE_PUREX, DESC, "Reprocessing machine for many nuclear fuels.$Most recipes require kerosene and nitric acid.");
         this.add(NtmBlocks.MACHINE_WOOD_BURNER, DESC, "Generates 100HE/t when burning items$Collects ashes$Can burn fluids at 50%% efficiency at 40mB/s");
         this.add(NtmBlocks.FURNACE_IRON, DESC, "Larger and more efficient furnace,$does not waste fuel when idle.");
         this.add(NtmBlocks.FURNACE_STEEL, DESC, "Very large furnace that can provide bonus items$when smelting ores. Requires external heat source.$Heat transfer rate: ΔT*0.05 TU/t$(Δ means difference and T means temperature)");
@@ -1628,6 +1651,11 @@ public class NtmLanguageProvider extends LanguageProvider {
         this.add(NtmBlocks.PUMP_STEAM, DESC, "Uses steam to pump up groundwater$Generates up to 1,000mB/t$Needs to be placed below Y:70");
         this.add(NtmBlocks.PUMP_ELECTRIC, DESC, "Uses electricity to pump up groundwater$Generates up to 10,000mB/t$Needs to be placed below Y:70");
         this.add(NtmBlocks.MACHINE_STEAM_ENGINE, DESC, "Efficiency: 85%%");
+        this.add(NtmBlocks.MACHINE_FLARE, DESC, "Can burn fluids and vent gasses$Burns up to 10mB/t$Vents up to 50mB/t$$Fuel efficiency:$-Flammable Gasses: 20%%$-Flammable Liquids: 10%%");
+        this.add(NtmBlocks.CHIMNEY_BRICK, DESC, "Connect using exhaust pipes to polluting machines$Reduces pollution emission by 75%%");
+        this.add(NtmBlocks.CHIMNEY_INDUSTRIAL, DESC, "Connect using exhaust pipes to polluting machines$Reduces pollution emission by 90%%");
+        this.add("flare.ignition", "Ignition");
+        this.add("flare.valve", "Flow Valve");
         this.add(NtmBlocks.RED_CONNECTOR, DESC, "Single wire connection$Range: 10m");
         this.add(NtmBlocks.RED_CONNECTOR_SUPER, DESC, "Single wire connection$Range: 100m");
         this.add(NtmBlocks.PIPE_ANCHOR, DESC, "Single fluid connection$Range: 10m");
@@ -1651,6 +1679,7 @@ public class NtmLanguageProvider extends LanguageProvider {
         this.add(NtmBlocks.MACHINE_INDUSTRIAL_TURBINE, DESC, "Efficiency: 100%");
         this.add(NtmBlocks.MACHINE_CHUNGUS, DESC, "Efficiency: 85%");
         this.add("container.machine_blast_furnace", "Blast Furnace");
+        this.add("container.machine_rotary_furnace", "Rotary Furnace");
         this.add("chat.catalytic_cracking_tower.changed", "Changed type to ");
         this.add("chat.fraction_tower.bottom_only", "You can only change the type in the bottom segment!");
         this.add("chat.fraction_tower.changed", "Changed type to %s!");
@@ -1730,6 +1759,14 @@ public class NtmLanguageProvider extends LanguageProvider {
         this.add("min", "min");
         this.add("max", "max");
 
+        this.add("purex.recycle", "Reprocessing of %s");
+        this.add("purex.schrab", "Schrabidium extraction from %s");
+        this.add("autoswitch.pile", "Reprocessing Chicago Pile Rods");
+        this.add("autoswitch.plate", "Reprocessing Plate Fuel");
+        this.add("autoswitch.pwr", "Reprocessing PWR Fuel");
+        this.add("autoswitch.schrab", "Schrabidium Extraction");
+        this.add("autoswitch.watz", "Reprocessing Watz Pellet");
+        this.add("autoswitch.zirnox", "Reprocessing ZIRNOX Fuel");
         this.add("autoswitch", "Part of auto switch group \"%s\"$Recipe changes based on first ingredient");
     }
 

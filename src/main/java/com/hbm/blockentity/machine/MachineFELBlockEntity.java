@@ -64,7 +64,7 @@ public class MachineFELBlockEntity extends MachineBaseBlockEntity implements IEn
 
     @Override
     protected Component getDefaultName() {
-        return Component.translatable("container.machineFEL");
+        return Component.translatable("container.machine_fel");
     }
 
     @Override

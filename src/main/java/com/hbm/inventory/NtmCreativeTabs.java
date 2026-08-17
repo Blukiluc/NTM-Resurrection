@@ -737,6 +737,11 @@ public class NtmCreativeTabs {
                         output.accept(NtmBlocks.FLUID_DUCT_BOX_IRON_TINY);
                         output.accept(NtmBlocks.FLUID_DUCT_BOX_COPPER_TINY);
                         output.accept(NtmBlocks.FLUID_DUCT_BOX_ALUMINIUM_TINY);
+                        output.accept(NtmBlocks.FLUID_DUCT_EXHAUST_HUGE);
+                        output.accept(NtmBlocks.FLUID_DUCT_EXHAUST_LARGE);
+                        output.accept(NtmBlocks.FLUID_DUCT_EXHAUST_MEDIUM);
+                        output.accept(NtmBlocks.FLUID_DUCT_EXHAUST_SMALL);
+                        output.accept(NtmBlocks.FLUID_DUCT_EXHAUST_TINY);
                         output.accept(NtmBlocks.PIPE_ANCHOR);
 
                         output.accept(NtmBlocks.MACHINE_BATTERY_SOCKET);
@@ -746,10 +751,12 @@ public class NtmCreativeTabs {
                         output.accept(NtmBlocks.MACHINE_PREC_ASS);
                         output.accept(NtmBlocks.MACHINE_CHEMICAL_PLANT);
                         output.accept(NtmBlocks.MACHINE_CHEMICAL_FACTORY);
+                        output.accept(NtmBlocks.MACHINE_PUREX);
                         output.accept(NtmBlocks.MACHINE_ORE_ACIDIZER);
                         output.accept(NtmBlocks.MACHINE_WOOD_BURNER);
                         output.accept(NtmBlocks.MACHINE_DIESEL);
                         output.accept(NtmBlocks.MACHINE_COMBUSTION_ENGINE);
+                        output.accept(NtmBlocks.MACHINE_TURBOFAN);
                         output.accept(NtmBlocks.MACHINE_STIRLING);
                         output.accept(NtmBlocks.MACHINE_STIRLING_STEEL);
                         output.accept(NtmBlocks.MACHINE_STIRLING_CREATIVE);
@@ -761,11 +768,14 @@ public class NtmCreativeTabs {
                         output.accept(NtmBlocks.MACHINE_STEAM_ENGINE);
                         output.accept(NtmBlocks.MACHINE_PRESS);
                         output.accept(NtmBlocks.MACHINE_ELECTRIC_PRESS);
+                        output.accept(NtmBlocks.PRESS_PREHEATER);
                         output.accept(NtmBlocks.MACHINE_CENTRIFUGE);
                         output.accept(NtmBlocks.MACHINE_GAS_CENTRIFUGE);
                         output.accept(NtmBlocks.MACHINE_MIXER);
                         output.accept(NtmBlocks.MACHINE_FEL);
                         output.accept(NtmBlocks.MACHINE_SILEX);
+                        output.accept(NtmBlocks.MACHINE_ELECTROLYSER);
+                        output.accept(NtmBlocks.MACHINE_INTAKE);
                         output.accept(NtmBlocks.MACHINE_FLUID_TANK);
                         output.accept(NtmBlocks.MACHINE_BIG_ASS_TANK);
                         output.accept(NtmBlocks.MACHINE_DRAIN);
@@ -791,11 +801,17 @@ public class NtmCreativeTabs {
                         output.accept(NtmBlocks.MACHINE_CATALYTIC_CRACKING_TOWER);
                         output.accept(NtmBlocks.MACHINE_COMPRESSOR);
                         output.accept(NtmBlocks.MACHINE_COMPRESSOR_COMPACT);
+                        output.accept(NtmBlocks.MACHINE_FLARE);
+                        output.accept(NtmBlocks.CHIMNEY_BRICK);
+                        output.accept(NtmBlocks.CHIMNEY_INDUSTRIAL);
 
+                        output.accept(NtmBlocks.FURNACE_BRICK);
+                        output.accept(NtmBlocks.MACHINE_ELECTRIC_FURNACE);
                         output.accept(NtmBlocks.FURNACE_IRON);
                         output.accept(NtmBlocks.FURNACE_STEEL);
                         output.accept(NtmBlocks.COMBINATION_OVEN);
                         output.accept(NtmBlocks.MACHINE_BLAST_FURNACE);
+                        output.accept(NtmBlocks.MACHINE_ROTARY_FURNACE);
 
                         output.accept(NtmBlocks.HEATER_OVEN);
                         output.accept(NtmBlocks.HEATER_FIREBOX);

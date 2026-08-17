@@ -47,11 +47,15 @@ public abstract class SerializableRecipe {
         recipeHandlers.add(new MatDistribution());
 
         recipeHandlers.add(BlastFurnaceRecipes.INSTANCE);
+        recipeHandlers.add(RotaryFurnaceRecipes.INSTANCE);
         recipeHandlers.add(ChemicalPlantRecipes.INSTANCE);
+        recipeHandlers.add(PUREXRecipes.INSTANCE);
         recipeHandlers.add(OreAcidizerRecipes.INSTANCE);
         recipeHandlers.add(CentrifugeRecipes.INSTANCE);
         recipeHandlers.add(GasCentrifugeRecipes.INSTANCE);
         recipeHandlers.add(SILEXRecipes.INSTANCE);
+        recipeHandlers.add(ElectrolyserFluidRecipes.INSTANCE);
+        recipeHandlers.add(ElectrolyserMetalRecipes.INSTANCE);
         recipeHandlers.add(RefineryRecipes.INSTANCE);
         recipeHandlers.add(MixerRecipes.INSTANCE);
         recipeHandlers.add(CompressorRecipes.INSTANCE);

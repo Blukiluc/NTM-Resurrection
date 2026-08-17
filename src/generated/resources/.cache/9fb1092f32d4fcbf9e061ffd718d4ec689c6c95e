@@ -1,4 +1,4 @@
-// 1.21.1	2026-08-14T23:40:28.9994428	Recipes
+// 1.21.1	2026-08-14T20:44:18.9434086	Recipes
 1536fcea0365a5460aaf996f68cf35ff80f01395 data/hbm/advancement/recipes/building_blocks/brick_concrete_broken.json
 477971291afdac191fa097592d9dc49fb08dbf95 data/hbm/advancement/recipes/building_blocks/brick_concrete_broken_slab.json
 5708f760161b6762082ec84c47371320fcbe99e0 data/hbm/advancement/recipes/building_blocks/brick_concrete_broken_stairs.json
@@ -12,6 +12,7 @@ db7894bc4b68df2c3fb86c9df7eaa95f96c84835 data/hbm/advancement/recipes/building_b
 7cc4f56b00777539c66db2c311759fa4890783f5 data/hbm/advancement/recipes/building_blocks/brick_concrete_stairs.json
 1e9c1f6b5ced05c5883d8a269513eb3770cfd006 data/hbm/advancement/recipes/misc/egg_balefire.json
 200578db1311e2c241c8d591914584a0acdedb93 data/hbm/advancement/recipes/misc/egg_balefire_shard.json
+226a6fef5efc432afc44827340efffa3348aac39 data/hbm/advancement/recipes/misc/machine_furnace_brick.json
 d56b8b1d776141a431996d49c478956df1f3f5bb data/hbm/advancement/recipes/redstone/red_cable_classic.json
 e111239dc2c7515643ab8dd077b49309d7015325 data/hbm/advancement/recipes/redstone/red_cable_from_classic.json
 911d6d7e1157fe090935b1f81d734a44c9caca5b data/hbm/advancement/recipes/tools/wrench.json
@@ -28,6 +29,7 @@ c2ed801621e0cd4c3a6f9ac336b9df75004a4e20 data/hbm/recipe/brick_concrete_slab.jso
 d73e332bfb51342581d87444cf7c051910f261f2 data/hbm/recipe/brick_concrete_stairs.json
 ee79acd19d30e71c74f8df5ab6b749d4faff19f1 data/hbm/recipe/egg_balefire.json
 895b068b57461f4e6ab3e4b81144569176ee55c4 data/hbm/recipe/egg_balefire_shard.json
+93cfbad3f794bc3456ad37f7cf20608551fdb376 data/hbm/recipe/machine_furnace_brick.json
 3818e921609d7963df70064fa1daac5fccd9f06d data/hbm/recipe/red_cable_classic.json
 3a3640bd873cc96515d2162ba335e65d49710dff data/hbm/recipe/red_cable_from_classic.json
 f5f1c1efd8cb2c8803763a7c314330cecbd37df0 data/hbm/recipe/wrench.json

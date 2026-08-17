@@ -59,7 +59,7 @@ public class MachineSILEXBlockEntity extends MachineBaseBlockEntity implements I
 
     @Override
     protected Component getDefaultName() {
-        return Component.translatable("container.machineSILEX");
+        return Component.translatable("container.machine_silex");
     }
 
     @Override
