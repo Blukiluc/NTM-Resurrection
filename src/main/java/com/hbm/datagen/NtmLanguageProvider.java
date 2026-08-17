@@ -1200,6 +1200,7 @@ public class NtmLanguageProvider extends LanguageProvider {
         this.add(NtmBlocks.MACHINE_MIXER, "Industrial Mixer");
         this.add(NtmBlocks.MACHINE_FEL, "FEL");
         this.add(NtmBlocks.MACHINE_SILEX, "Laser Isotope Separation Chamber (SILEX)");
+        this.add(NtmBlocks.MACHINE_INTAKE, "Air Intake");
         this.add(NtmBlocks.MACHINE_ELECTROLYSER, "Electrolysis Machine");
         this.add(NtmBlocks.HEAT_BOILER, "Boiler");
         this.add(NtmBlocks.MACHINE_INDUSTRIAL_BOILER, "Industrial Boiler");

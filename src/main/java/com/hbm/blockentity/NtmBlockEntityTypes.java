@@ -410,6 +410,13 @@ public class NtmBlockEntityTypes {
                             NtmBlocks.MACHINE_ELECTROLYSER.get())
                     .build(null));
 
+    public static final Supplier<BlockEntityType<MachineIntakeBlockEntity>> INTAKE = REGISTER.register(
+            "intake",
+            () -> BlockEntityType.Builder.of(
+                            MachineIntakeBlockEntity::new,
+                            NtmBlocks.MACHINE_INTAKE.get())
+                    .build(null));
+
     // Oil
     public static final Supplier<BlockEntityType<MachineOilDerrickBlockEntity>> OIL_DERRICK = REGISTER.register(
             "oil_derrick",

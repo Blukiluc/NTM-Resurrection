@@ -1,4 +1,4 @@
-// 1.21.1	2026-08-16T14:12:42.858871	Block States: hbm
+// 1.21.1	2026-08-17T13:01:00.3375718	Block States: hbm
 771df07d065b33c7dcf62cfb69b5cd3a3cb4feed assets/hbm/blockstates/asphalt.json
 c0f05f08a475704e80a5d657d494bf5a829fab8f assets/hbm/blockstates/asphalt_light.json
 8c6c51f054fa20e59275bf5c7c77e28e7790b34c assets/hbm/blockstates/balefire.json
@@ -118,6 +118,7 @@ bf334ace24f60a9fa60fc3541387f6b9311274d4 assets/hbm/blockstates/machine_gas_cent
 b724cfe84caebb78e44d5fed1489525857136c4a assets/hbm/blockstates/machine_geothermal_heat_exchanger.json
 5d3af963e9e2fca010b6f4af0c210a714cd490d8 assets/hbm/blockstates/machine_industrial_boiler.json
 268e1518eea12867af243edbb69649e9957bb3c1 assets/hbm/blockstates/machine_industrial_turbine.json
+05a9e99db78f0bbca77cbc9dbb0d54d866c078cc assets/hbm/blockstates/machine_intake.json
 981805ed24657c39c6363157c7cc55f9239aaff9 assets/hbm/blockstates/machine_mixer.json
 9e26a82dbd9fbbb1f85007ee615f46a240b30a7f assets/hbm/blockstates/machine_oil_derrick.json
 927bf7c3f42821858be265eae51ce6649cf65126 assets/hbm/blockstates/machine_ore_acidizer.json
@@ -364,6 +365,7 @@ f55d5c93f0423e66d4aae3b691b0bb51957b9d98 assets/hbm/models/block/machine_gas_cen
 f55d5c93f0423e66d4aae3b691b0bb51957b9d98 assets/hbm/models/block/machine_geothermal_heat_exchanger_particle.json
 f55d5c93f0423e66d4aae3b691b0bb51957b9d98 assets/hbm/models/block/machine_industrial_boiler_particle.json
 f55d5c93f0423e66d4aae3b691b0bb51957b9d98 assets/hbm/models/block/machine_industrial_turbine_particle.json
+f55d5c93f0423e66d4aae3b691b0bb51957b9d98 assets/hbm/models/block/machine_intake_particle.json
 f55d5c93f0423e66d4aae3b691b0bb51957b9d98 assets/hbm/models/block/machine_mixer_particle.json
 f55d5c93f0423e66d4aae3b691b0bb51957b9d98 assets/hbm/models/block/machine_oil_derrick_particle.json
 f55d5c93f0423e66d4aae3b691b0bb51957b9d98 assets/hbm/models/block/machine_ore_acidizer_particle.json
@@ -605,6 +607,7 @@ eb3d422849139df00cde38d0038e637959254202 assets/hbm/models/item/machine_furnace_
 1ae5a980018cda4e68cafcf4ce293349827b23ab assets/hbm/models/item/machine_geothermal_heat_exchanger.json
 1ae5a980018cda4e68cafcf4ce293349827b23ab assets/hbm/models/item/machine_industrial_boiler.json
 1ae5a980018cda4e68cafcf4ce293349827b23ab assets/hbm/models/item/machine_industrial_turbine.json
+1ae5a980018cda4e68cafcf4ce293349827b23ab assets/hbm/models/item/machine_intake.json
 1ae5a980018cda4e68cafcf4ce293349827b23ab assets/hbm/models/item/machine_mixer.json
 1ae5a980018cda4e68cafcf4ce293349827b23ab assets/hbm/models/item/machine_oil_derrick.json
 1ae5a980018cda4e68cafcf4ce293349827b23ab assets/hbm/models/item/machine_ore_acidizer.json

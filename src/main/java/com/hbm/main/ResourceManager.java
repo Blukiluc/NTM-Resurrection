@@ -70,6 +70,7 @@ public class ResourceManager {
     public static final ResourceLocation MIXER_TEX = NuclearTechMod.withDefaultNamespace("textures/models/machines/mixer.png");
     public static final ResourceLocation FEL_TEX = NuclearTechMod.withDefaultNamespace("textures/models/machines/fel.png");
     public static final ResourceLocation SILEX_TEX = NuclearTechMod.withDefaultNamespace("textures/models/machines/silex.png");
+    public static final ResourceLocation INTAKE_TEX = NuclearTechMod.withDefaultNamespace("textures/models/machines/intake.png");
     public static final ResourceLocation ELECTROLYSER_TEX = NuclearTechMod.withDefaultNamespace("textures/models/machines/electrolyser.png");
     public static final ResourceLocation FURNACE_IRON_TEX = NuclearTechMod.withDefaultNamespace("textures/models/machines/furnace_iron.png");
     public static final ResourceLocation FURNACE_STEEL_TEX = NuclearTechMod.withDefaultNamespace("textures/models/machines/furnace_steel.png");
@@ -277,6 +278,7 @@ public class ResourceManager {
     public static IModelCustom fel;
     public static IModelCustom silex;
     public static IModelCustom electrolyser;
+    public static IModelCustom intake;
     public static IModelCustom furnace_iron;
     public static IModelCustom furnace_steel;
     public static IModelCustom boiler;
@@ -428,6 +430,7 @@ public class ResourceManager {
         fel = new HFRWavefrontObject("models/obj/machines/fel.obj").asVBO();
         silex = new HFRWavefrontObject("models/obj/machines/silex.obj").asVBO();
         electrolyser = new HFRWavefrontObject("models/obj/machines/electrolyser.obj").asVBO();
+        intake = new HFRWavefrontObject("models/obj/machines/intake.obj").asVBO();
         furnace_iron = new HFRWavefrontObject("models/obj/machines/furnace_iron.obj").asVBO();
         furnace_steel = new HFRWavefrontObject("models/obj/machines/furnace_steel.obj").asVBO();
         boiler = new HFRWavefrontObject("models/obj/machines/boiler.obj").asVBO();

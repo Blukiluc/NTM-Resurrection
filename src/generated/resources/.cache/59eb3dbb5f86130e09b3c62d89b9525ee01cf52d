@@ -1,4 +1,4 @@
-// 1.21.1	2026-08-16T14:12:42.8647836	Loot Tables
+// 1.21.1	2026-08-17T13:01:00.3437344	Loot Tables
 4dea21baadd671e0fc70004833537e05da50d388 data/hbm/loot_table/blocks/asphalt.json
 fb8bbca081abce158c2e2c99aad65884a8ac42bc data/hbm/loot_table/blocks/asphalt_light.json
 ac4aa7fb9a18c76eab92c1ad6d77a20da10a52ed data/hbm/loot_table/blocks/balefire.json
@@ -117,6 +117,7 @@ bde161ec40413595c40f2ee0857f10f966c78e49 data/hbm/loot_table/blocks/machine_furn
 c176524507fc4a24b33733d9dade74989ac58db2 data/hbm/loot_table/blocks/machine_geothermal_heat_exchanger.json
 bda8225ec56b92d7aa0a545535355592ead03ee6 data/hbm/loot_table/blocks/machine_industrial_boiler.json
 2b854843c255ecbb36229aa0663687062063edc0 data/hbm/loot_table/blocks/machine_industrial_turbine.json
+64277796631d39b2dd2d5526ea25683b097e38ec data/hbm/loot_table/blocks/machine_intake.json
 ffb9cf191ce9ddc0efd7d22622ff639f8ba47aef data/hbm/loot_table/blocks/machine_mixer.json
 e2d4d4f09e5a4ebe2b717aac70c01afacfde863c data/hbm/loot_table/blocks/machine_oil_derrick.json
 9a03681c5c79cb31e878a320ca6db386594feb10 data/hbm/loot_table/blocks/machine_ore_acidizer.json

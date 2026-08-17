@@ -742,6 +742,7 @@ public class NtmCreativeTabs {
                         output.accept(NtmBlocks.MACHINE_FEL);
                         output.accept(NtmBlocks.MACHINE_SILEX);
                         output.accept(NtmBlocks.MACHINE_ELECTROLYSER);
+                        output.accept(NtmBlocks.MACHINE_INTAKE);
                         output.accept(NtmBlocks.MACHINE_FLUID_TANK);
                         output.accept(NtmBlocks.MACHINE_BIG_ASS_TANK);
                         output.accept(NtmBlocks.MACHINE_DRAIN);

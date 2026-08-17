@@ -152,6 +152,7 @@
   "block.hbm.machine_industrial_boiler": "Industrial Boiler",
   "block.hbm.machine_industrial_turbine": "Industrial Steam Turbine",
   "block.hbm.machine_industrial_turbine.desc": "Efficiency: 100%",
+  "block.hbm.machine_intake": "Air Intake",
   "block.hbm.machine_mixer": "Industrial Mixer",
   "block.hbm.machine_oil_derrick": "Oil Derrick",
   "block.hbm.machine_ore_acidizer": "Ore Acidizer",
