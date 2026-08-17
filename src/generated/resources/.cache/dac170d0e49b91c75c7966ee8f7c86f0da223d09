@@ -1,3 +1,5 @@
-// 1.21.1	2026-06-30T16:57:29.3342222	Tags for minecraft:fluid mod id hbm
+// 1.21.1	2026-08-10T09:53:45.9951056	Tags for minecraft:fluid mod id hbm
 7ad15daf075971c40d34d57dfb6c1491dffc78f4 data/c/tags/fluid/lava.json
+ad6d9b8f9b2319bcffcd5b70866f60933d25b924 data/c/tags/fluid/water.json
 7ad15daf075971c40d34d57dfb6c1491dffc78f4 data/minecraft/tags/fluid/lava.json
+ad6d9b8f9b2319bcffcd5b70866f60933d25b924 data/minecraft/tags/fluid/water.json

@@ -1,0 +1,7 @@
+{
+  "variants": {
+    "": {
+      "model": "hbm:block/sequestrum_ore"
+    }
+  }
+}

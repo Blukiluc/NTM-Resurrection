@@ -23,6 +23,9 @@ run
 runs
 run-data
 
+# NeoForge datagen cache
+src/generated/resources/.cache/
+
 repo
 
 .continue

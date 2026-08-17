@@ -14,6 +14,7 @@ import com.hbm.items.food.EnergyItem;
 import com.hbm.items.machine.*;
 import com.hbm.items.special.*;
 import com.hbm.items.tools.*;
+import com.hbm.items.weapon.ItemCrucible;
 import com.hbm.items.weapon.MissileItem;
 import com.hbm.items.weapon.MissileItem.MissileFormFactor;
 import com.hbm.items.weapon.MissileItem.MissileFuel;
@@ -24,6 +25,7 @@ import net.minecraft.world.item.Item;
 import net.minecraft.world.item.Rarity;
 import net.minecraft.world.item.SwordItem;
 import net.neoforged.bus.api.IEventBus;
+import net.neoforged.neoforge.common.property.Properties;
 import net.neoforged.neoforge.registries.DeferredItem;
 import net.neoforged.neoforge.registries.DeferredRegister;
 
@@ -150,6 +152,7 @@ public class NtmItems {
     public static final DeferredItem<Item> INGOT_SODIUM = ITEMS.register("ingot_sodium", () -> new Item(new Item.Properties()));
     public static final DeferredItem<Item> INGOT_STRONTIUM = ITEMS.register("ingot_strontium", () -> new Item(new Item.Properties()));
     public static final DeferredItem<Item> INGOT_SLAG = ITEMS.register("ingot_slag", () -> new Item(new Item.Properties()));
+    public static final DeferredItem<Item> INGOT_ASBESTOS = ITEMS.register("ingot_asbestos", () -> new Item(new Item.Properties()));
 
     // Billets
     public static final DeferredItem<Item> BILLET_URANIUM = ITEMS.register("billet_uranium", () -> new Item(new Item.Properties()));
@@ -559,7 +562,7 @@ public class NtmItems {
     //by using these in crafting table recipes, i'm running the risk of making my recipes too greg-ian (which i don't like)
     //in the event that i forget about the meaning of the word "sparingly", please throw a brick at my head
     public static final DeferredItem<Item> SCREWDRIVER = ITEMS.register("screwdriver", () -> new ToolingItem(ToolType.SCREWDRIVER, new Item.Properties().stacksTo(8)));
-    public static final DeferredItem<Item> SCREWDRIVER_DESH = ITEMS.register("screwdriver_desh", () -> new ToolingItem(ToolType.SCREWDRIVER, new Item.Properties().stacksTo(8)));
+    public static final DeferredItem<Item> SCREWDRIVER_DESH = ITEMS.register("screwdriver_desh", () -> new ToolingItem(ToolType.SCREWDRIVER, new Item.Properties().stacksTo(1)));
     public static final DeferredItem<Item> BLOWTORCH = ITEMS.register("blowtorch", () -> new BlowtorchItem(new Item.Properties().stacksTo(1)));
     public static final DeferredItem<Item> ACETYLENE_TORCH = ITEMS.register("acetylene_torch", () -> new BlowtorchItem(new Item.Properties().stacksTo(1)));
     public static final DeferredItem<Item> PISTON_SET = ITEMS.register("piston_set", () -> new PistonSetItem(new Item.Properties()));
@@ -684,6 +687,7 @@ public class NtmItems {
                     .attributes(SwordItem.createAttributes(NtmTiers.STEEL, 3, -2.4F))
     ));
 
+
     // Energy Drinks
     public static final DeferredItem<Item> DRINK = ITEMS.register("drink", () -> new DrinkItem(new Item.Properties()));
     public static final DeferredItem<Item> BOTTLE_OPENER = ITEMS.register(
@@ -780,6 +784,10 @@ public class NtmItems {
     public static DeferredItem<Item> AMMO_DEBUG;
     public static DeferredItem<Item> AMMO_STANDARD;
     public static DeferredItem<Item> AMMO_SECRET;
+    // Weapons
+    public static DeferredItem<ItemCrucible> CRUCIBLE = ITEMS.register("crucible_sword",
+            ()-> new ItemCrucible(5000, 5, new Item.Properties().stacksTo(1)));
+
 
     public static void registerOther(DeferredRegister.Items itemRegistry) {
         MatsItemGen.init(itemRegistry);

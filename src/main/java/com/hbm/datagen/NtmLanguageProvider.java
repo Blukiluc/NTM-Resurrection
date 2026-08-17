@@ -727,6 +727,24 @@ public class NtmLanguageProvider extends LanguageProvider {
         this.add("digamma.playerHealth", "Digamma influence: %s");
         this.add("digamma.playerRes", "Digamma resistance: %s");
         this.add(NtmItems.DIGAMMA_DIAGNOSTIC, "Digamma Diagnostic");
+        // Some descriptions and messages
+        this.add("item.hbm.designator.desc.selectTarget", "No Position Set!");
+        this.add("item.hbm.designator.desc.targetPos", "Position set to:");
+        this.add("item.hbm.designator.posSet", "Position Set!");
+        this.add("item.hbm.used_in", "Used in:");
+        this.add("detonator.no_pos", "No Position Set!");
+        this.add("detonator.set_to", "Position set to: %d, / %d, / %d");
+        this.add("detonator.no_pos.multi", "No Positions Set!");
+        this.add("detonator.set_to.multi", "Positions set to:");
+        this.add("item.hbm.satellite_laser.desc", "Allows to summon lasers with a 15 second cooldown.");
+        this.add("item.hbm.satellite_radar.desc", "Shows a map of active entities.");
+
+
+
+
+
+
+
 
         this.add(NtmItems.PIN, "Bobby Pin");
         this.add(NtmItems.PIN, DESC, "Standard success rate of picking a regular lock is ~10%%.");
@@ -1015,6 +1033,81 @@ public class NtmLanguageProvider extends LanguageProvider {
         this.add("upgrade.delay", "Delay: %s");
         this.add("upgrade.consumption", "Consumption: %s");
         this.add("upgrade.efficiency", "Efficiency %s");
+        // death messages
+        this.add("death.attack.acid", "%1$s fell into acid.");
+        this.add("death.attack.acid_player", "%1$s was dissolved by %2$s.");
+        this.add("death.attack.ams", "%1$s was bathed in deadly particles that have yet to be named by human science.");
+        this.add("death.attack.ams_core", "%1$s was vaporized in the fire of a singularity.");
+        this.add("death.attack.asbestos", "%1$s is now entitled to financial compensation.");
+        this.add("death.attack.bang", "%1$s was blasted into bite-sized pieces.");
+        this.add("death.attack.black_hole", "%1$s was spaghettified.");
+        this.add("death.attack.blacklung", "%1$s died from black lung disease.");
+        this.add("death.attack.blender", "%1$s was chopped in small, bite-sized pieces.");
+        this.add("death.attack.boat", "%1$s was hit by a boat.");
+        this.add("death.attack.boil", "%1$s was boiled alive by %2$s.");
+        this.add("death.attack.boxcar", "%1$s was smushed by a falling boxcar. Oh well.");
+        this.add("death.attack.broadcast", "%1$s got their brain melted.");
+        this.add("death.attack.building", "%1$s was hit by a falling building.");
+        this.add("death.attack.cheater", "%1$s's intestines turned into oats. (???)");
+        this.add("death.attack.chopper_bullet", "%1$s was rekt by %2$s.");
+        this.add("death.attack.cloud", "%1$s melted like a popsicle in the sun.");
+        this.add("death.attack.cmb", "%1$s was fizzeled by %2$s.");
+        this.add("death.attack.digamma", "%1$s stepped into the abyss.");
+        this.add("death.attack.electricity", "%1$s was electrocuted.");
+        this.add("death.attack.electrified", "%1$s was electrified by %2$s.");
+        this.add("death.attack.euthanized", "%1$s was euthanized by %2$s.");
+        this.add("death.attack.euthanized_self2", "%1$s wins the Darwin Award.");
+        this.add("death.attack.euthanized_self", "%1$s euthanized himself, what a dork.");
+        this.add("death.attack.exhaust", "%1$s was turned into shish kebab by a starting rocket.");
+        this.add("death.attack.flamethrower", "%1$s was cremated by %2$s.");
+        this.add("death.attack.flamethrower.item", "%1$s was cremated by %2$s using %3$s.");
+        this.add("death.attack.ice", "%1$s was turned into a popsicle by %2$s.");
+        this.add("death.attack.laser", "%1$s was turned into ash by %2$s.");
+        this.add("death.attack.laser.item", "%1$s was turned into ash by %2$s using %3$s.");
+        this.add("death.attack.lead", "%1$s died from lead poisoning.");
+        this.add("death.attack.lunar", "%1$s forgot to charge their vital organs.");
+        this.add("death.attack.meteorite", "%1$s was hit by a falling rock from outer space.");
+        this.add("death.attack.microwave", "%1$s was exploded by microwave radiation.");
+        this.add("death.attack.mku", "%1$s died from unknown causes.");
+        this.add("death.attack.monoxide", "%1$s forgot to change the batteries in their carbon monoxide detector.");
+        this.add("death.attack.mud_poisoning", "%1$s died in poisonous mud.");
+        this.add("death.attack.nuclearBlast", "%1$s was blown away by a nuclear explosion.");
+        this.add("death.attack.overdose", "%1$s overdosed and asphyxiated.");
+        this.add("death.attack.pc", "%1$s was reduced to a puddle in the pink cloud.");
+        this.add("death.attack.plasma", "%1$s was immolated by %2$s.");
+        this.add("death.attack.radiation", "%1$s died from radiation poisoning.");
+        this.add("death.attack.revolver_bullet", "%1$s was shot in the head by %2$s.");
+        this.add("death.attack.revolver_bullet.item", "%1$s was shot in the head by %2$s using %3$s.");
+        this.add("death.attack.rubble", "%1$s was squashed by debris.");
+        this.add("death.attack.shrapnel", "%1$s was ragged by a shrapnel.");
+        this.add("death.attack.spikes", "%1$s got impaled.");
+        this.add("death.attack.sub_atomic1", "%1$s's atoms have been destroyed by %2$s.");
+        this.add("death.attack.sub_atomic2", "%1$s was QPU-misaligned because %2$s tampered with their de facto speed.");
+        this.add("death.attack.sub_atomic3", "%1$s's divergence dropped below 1 percent because of %2$s.");
+        this.add("death.attack.sub_atomic4", "%1$s was divided by zero by %2$s.");
+        this.add("death.attack.sub_atomic5", "%1$s was nullified by %2$s.");
+        this.add("death.attack.suicide", "%1$s blew their head off.");
+        this.add("death.attack.taint", "%1$s died from flux tumors.");
+        this.add("death.attack.tau", "%1$s was riddeled by %2$s using negatively charged tauons.");
+        this.add("death.attack.tau_blast", "%1$s charged the XVL1456 for too long and was blown into pieces.");
+        this.add("death.attack.teleporter", "%1$s was teleported into nothingness.");
+
+        this.add("death.sedna.electric", "%1$s was fried.");
+        this.add("death.sedna.electric.attacker", "%1$s was fried by %2$s.");
+        this.add("death.sedna.explosive", "%1$s was blown up.");
+        this.add("death.sedna.explosive.attacker", "%1$s was blown up by %2$s.");
+        this.add("death.sedna.fire", "%1$s was incinerated.");
+        this.add("death.sedna.fire.attacker", "%1$s was incinerated by %2$s.");
+        this.add("death.sedna.laser", "%1$s was pulverized.");
+        this.add("death.sedna.laser.attacker", "%1$s was pulverized by %2$s.");
+        this.add("death.sedna.microwave", "%1$s was microwaved.");
+        this.add("death.sedna.microwave.attacker", "%1$s was microwaved by %2$s.");
+        this.add("death.sedna.subatomic", "%1$s was atomized.");
+        this.add("death.sedna.subatomic.attacker", "%1$s was atomized by %2$s.");
+        this.add("death.sedna.other", "%1$s was killed.");
+        this.add("death.sedna.other.attacker", "%1$s was killed by %2$s.");
+        this.add("death.sedna.physical", "%1$s was shot.");
+        this.add("death.sedna.physical.attacker", "%1$s was shot by %2$s.");
 
         // BLOCKS //
         this.add(NtmBlocks.BOBBLEHEAD, "Bobblehead");
@@ -1064,6 +1157,38 @@ public class NtmLanguageProvider extends LanguageProvider {
         this.add(NtmBlocks.SAND_OILY, "Oily Sand");
         this.add(NtmBlocks.SAND_RED_OILY, "Oily Red Sand");
 
+        this.add(NtmBlocks.ORE_ALUMINUM, "Aluminum Ore");
+        this.add(NtmBlocks.ORE_ALUMINUM_DEEPSLATE, "Deepslate Aluminum Ore");
+        this.add(NtmBlocks.ORE_ASBESTOS, "Asbestos Ore");
+        this.add(NtmBlocks.ORE_DEEPSLATE_ASBESTOS, "Deepslate Asbestos Ore");
+        this.add(NtmBlocks.ORE_BERYLLIUM, "Beryllium Ore");
+        this.add(NtmBlocks.ORE_BERYLLIUM_DEEPSLATE, "Deepslate Beryllium Ore");
+        this.add(NtmBlocks.ORE_CINNABAR, "Cinnabar Ore");
+        this.add(NtmBlocks.ORE_CINNABAR_DEEPSLATE, "Deepslate Cinnabar Ore");
+        this.add(NtmBlocks.ORE_COBALT, "Cobalt Ore");
+        this.add(NtmBlocks.ORE_COBALT_DEEPSLATE, "Deepslate Cobalt Ore");
+        this.add(NtmBlocks.ORE_LIGNITE, "Lignite Ore");
+        this.add(NtmBlocks.ORE_DEEPSLATE_BROWNCOAL, "Deepslate Brown Coal Ore");
+        this.add(NtmBlocks.ORE_FLUORITE, "Fluorite Ore");
+        this.add(NtmBlocks.ORE_DEEPSLATE_FLUORITE, "Deepslate Fluorite Ore");
+        this.add(NtmBlocks.ORE_LEAD, "Lead Ore");
+        this.add(NtmBlocks.ORE_LEAD_DEEPSLATE, "Deepslate Lead Ore");
+        this.add(NtmBlocks.ORE_RAREGROUND, "Rareground Ore");
+        this.add(NtmBlocks.ORE_RAREGROUND_DEEPSLATE, "Deepslate Rareground Ore");
+        this.add(NtmBlocks.ORE_SULFUR, "Sulfur Ore");
+        this.add(NtmBlocks.ORE_DEEPSLATE_SULFUR, "Deepslate Sulfur Ore");
+        this.add(NtmBlocks.ORE_THORIUM, "Thorium Ore");
+        this.add(NtmBlocks.ORE_THORIUM_DEEPSLATE, "Deepslate Thorium Ore");
+        this.add(NtmBlocks.ORE_TITANIUM, "Titanium Ore");
+        this.add(NtmBlocks.ORE_TITANIUM_DEEPSLATE, "Deepslate Titanium Ore");
+        this.add(NtmBlocks.ORE_TUNGSTEN, "Tungsten Ore");
+        this.add(NtmBlocks.ORE_DEEPSLATE_TUNGSTEN, "Deepslate Tungsten Ore");
+        this.add(NtmBlocks.ORE_URANIUM_H, "Uranium Ore");
+        this.add(NtmBlocks.ORE_URANIUM_DEEPSLATE, "Deepslate Uranium Ore");
+        this.add(NtmBlocks.ORE_DEEPSLATE_ALEXANDRITE, "Deepslate Alexandrite Ore");
+        this.add(NtmBlocks.ORE_DEEPSLATE_COLTAN, "Deepslate Coltan Ore");
+        this.add(NtmBlocks.ORE_DEEPSLATE_NITER, "Deepslate Niter Ore");
+        this.add(NtmBlocks.ORE_SEQUESTRUM, "Sequestrum Ore");
         this.add(NtmBlocks.WASTE_EARTH, "Dead Grass");
         this.add(NtmBlocks.WASTE_MYCELIUM, "Glowing Mycelium");
         this.add(NtmBlocks.WASTE_TRINITITE, "Trinitite Ore");

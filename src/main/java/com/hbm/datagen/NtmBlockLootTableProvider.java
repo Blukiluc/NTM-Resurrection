@@ -84,6 +84,58 @@ public class NtmBlockLootTableProvider extends BlockLootSubProvider {
         this.dropSelf(NtmBlocks.SAND_OILY.get());
         this.dropSelf(NtmBlocks.SAND_RED_OILY.get());
 
+
+        //ores
+        // 1.Drop items :
+        this.add(NtmBlocks.ORE_CINNABAR.get(),
+                block -> createOreDrop(block, NtmItems.CINNABAR.get()));
+        this.add(NtmBlocks.ORE_CINNABAR_DEEPSLATE.get(),
+                block -> createOreDrop(block, NtmItems.CINNABAR.get()));
+
+        this.add(NtmBlocks.ORE_LIGNITE.get(),
+                block -> createOreDrop(block, NtmItems.LIGNITE.get()));
+        this.add(NtmBlocks.ORE_DEEPSLATE_BROWNCOAL.get(),
+                block -> createOreDrop(block, NtmItems.LIGNITE.get()));
+
+        this.add(NtmBlocks.ORE_ASBESTOS.get(),
+                block -> createOreDrop(block, NtmItems.INGOT_ASBESTOS.get()));
+        this.add(NtmBlocks.ORE_DEEPSLATE_ASBESTOS.get(),
+                block -> createOreDrop(block, NtmItems.INGOT_ASBESTOS.get()));
+
+        this.add(NtmBlocks.ORE_RAREGROUND.get(),
+                block -> createOreDrop(block, NtmItems.CHUNK_RARE.get()));
+        this.add(NtmBlocks.ORE_RAREGROUND_DEEPSLATE.get(),
+                block -> createOreDrop(block, NtmItems.CHUNK_RARE.get()));
+
+        this.add(NtmBlocks.ORE_DEEPSLATE_ALEXANDRITE.get(),
+                block -> createOreDrop(block, NtmItems.GEM_ALEXANDRITE.get()));
+
+
+// 2.Dropself
+        this.dropSelf(NtmBlocks.ORE_ALUMINUM.get());
+        this.dropSelf(NtmBlocks.ORE_ALUMINUM_DEEPSLATE.get());
+        this.dropSelf(NtmBlocks.ORE_BERYLLIUM.get());
+        this.dropSelf(NtmBlocks.ORE_BERYLLIUM_DEEPSLATE.get());
+        this.dropSelf(NtmBlocks.ORE_COBALT.get());
+        this.dropSelf(NtmBlocks.ORE_COBALT_DEEPSLATE.get());
+        this.dropSelf(NtmBlocks.ORE_FLUORITE.get());
+        this.dropSelf(NtmBlocks.ORE_DEEPSLATE_FLUORITE.get());
+        this.dropSelf(NtmBlocks.ORE_LEAD.get());
+        this.dropSelf(NtmBlocks.ORE_LEAD_DEEPSLATE.get());
+        this.dropSelf(NtmBlocks.ORE_SULFUR.get());
+        this.dropSelf(NtmBlocks.ORE_DEEPSLATE_SULFUR.get());
+        this.dropSelf(NtmBlocks.ORE_THORIUM.get());
+        this.dropSelf(NtmBlocks.ORE_THORIUM_DEEPSLATE.get());
+        this.dropSelf(NtmBlocks.ORE_TITANIUM.get());
+        this.dropSelf(NtmBlocks.ORE_TITANIUM_DEEPSLATE.get());
+        this.dropSelf(NtmBlocks.ORE_TUNGSTEN.get());
+        this.dropSelf(NtmBlocks.ORE_DEEPSLATE_TUNGSTEN.get());
+        this.dropSelf(NtmBlocks.ORE_URANIUM_H.get());
+        this.dropSelf(NtmBlocks.ORE_URANIUM_DEEPSLATE.get());
+        this.dropSelf(NtmBlocks.ORE_DEEPSLATE_COLTAN.get());
+        this.dropSelf(NtmBlocks.ORE_DEEPSLATE_NITER.get());
+        this.dropSelf(NtmBlocks.ORE_SEQUESTRUM.get());
+
         this.add(NtmBlocks.WASTE_EARTH.get(), block -> createSingleItemTable(Blocks.DIRT));
         this.dropSelf(NtmBlocks.WASTE_MYCELIUM.get());
         this.dropSelf(NtmBlocks.WASTE_TRINITITE.get());

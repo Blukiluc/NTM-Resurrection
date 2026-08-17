@@ -1,5 +1,6 @@
 package com.hbm.datagen;
 
+import com.hbm.blocks.NtmBlocks;
 import com.hbm.fluids.NtmFluids;
 import com.hbm.main.NuclearTechMod;
 import net.minecraft.core.HolderLookup;
@@ -34,6 +35,14 @@ public class NtmFluidTagsProvider extends FluidTagsProvider {
 
                 NtmFluids.RAD_LAVA.get(),
                 NtmFluids.RAD_LAVA_FLOWING.get()
+        );
+        this.tag(Tags.Fluids.WATER).add(
+                NtmFluids.SULFURIC_ACID.get(),
+                NtmFluids.SULFURIC_ACID_FLOWING.get()
+        );
+        this.tag(FluidTags.WATER).add(
+               NtmFluids.SULFURIC_ACID.get(),
+                NtmFluids.SULFURIC_ACID_FLOWING.get()
         );
     }
 }

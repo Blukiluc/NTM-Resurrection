@@ -27,5 +27,25 @@ public class NtmItemTagProvider extends ItemTagsProvider {
         this.tag(UNIVERSAL_TANK).add(NtmItems.FLUID_TANK_FULL.get());
         this.tag(HAZARD_TANK).add(NtmItems.FLUID_TANK_LEAD_FULL.get());
         this.tag(UNIVERSAL_BARREL).add(NtmItems.FLUID_BARREL_FULL.get());
+        // W COKES?
+        this.tag(COKE).add(NtmItems.COKE_COAL.get());
+        this.tag(COKE).add(NtmItems.COKE_PETROLEUM.get());
+        this.tag(COKE).add(NtmItems.COKE_LIGNITE.get());
+        // SOLID FUELS
+        this.tag(SOLID_FUEL).add(NtmItems.SOLID_FUEL.get());
+        this.tag(SOLID_FUEL).add(NtmItems.SOLID_FUEL_BF.get());
+        // PRESTO LOGS
+        this.tag(PRESTO_LOG).add(NtmItems.SOLID_FUEL_PRESTO.get());
+        this.tag(PRESTO_LOG).add(NtmItems.SOLID_FUEL_PRESTO_BF.get());
+        this.tag(PRESTO_LOG).add(NtmItems.SOLID_FUEL_PRESTO_TRIPLET.get());
+        this.tag(PRESTO_LOG).add(NtmItems.SOLID_FUEL_PRESTO_TRIPLET_BF.get());
+
+
+
+
+
+
+
+
     }
 }

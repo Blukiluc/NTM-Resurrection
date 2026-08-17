@@ -44,7 +44,10 @@ public class MaterialShapes {
     public static final MaterialShapes DENSEWIRE = new MaterialShapes(72, "dense_wires");
     public static final MaterialShapes PLATE = new MaterialShapes(72, "plates");
     public static final MaterialShapes GRIP = new MaterialShapes(144, "grips"); // gun
-    public static final MaterialShapes CASTPLATE = new MaterialShapes(216, "cast_plates");
+    public static final MaterialShapes GEAR = new MaterialShapes(216, "gears"); // gun
+
+
+    public static final MaterialShapes CASTPLATE = new MaterialShapes(288, "cast_plates");
     public static final MaterialShapes SHELL = new MaterialShapes(288, "shells");
     public static final MaterialShapes PIPE = new MaterialShapes(216, "pipes");
     public static final MaterialShapes STOCK = new MaterialShapes(288, "stocks"); // gun
