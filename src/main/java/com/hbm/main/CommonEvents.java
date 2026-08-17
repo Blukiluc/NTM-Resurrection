@@ -19,6 +19,7 @@ import com.hbm.hazard.HazardSystem;
 import com.hbm.inventory.FluidContainerRegistry;
 import com.hbm.inventory.NtmMenuTypes;
 import com.hbm.inventory.fluid.Fluids;
+import com.hbm.inventory.menus.MachineTurbofanMenu;
 import com.hbm.inventory.recipes.loader.SerializableRecipe;
 import com.hbm.inventory.screens.*;
 import com.hbm.network.toclient.InformPlayer;
@@ -172,6 +173,7 @@ public class CommonEvents {
         event.register(NtmMenuTypes.WOOD_BURNER.get(), MachineWoodBurnerScreen::new);
         event.register(NtmMenuTypes.DIESEL.get(), MachineDieselScreen::new);
         event.register(NtmMenuTypes.COMBUSTION_ENGINE.get(), MachineCombustionEngineScreen::new);
+        event.register(NtmMenuTypes.TURBOFAN.get(), MachineTurbofanScreen::new);
         event.register(NtmMenuTypes.SHREDDER.get(), MachineShredderScreen::new);
         event.register(NtmMenuTypes.PRESS.get(), MachinePressScreen::new);
         event.register(NtmMenuTypes.ELECTRIC_PRESS.get(), MachineElectricPressScreen::new);

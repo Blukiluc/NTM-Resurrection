@@ -1184,6 +1184,7 @@ public class NtmLanguageProvider extends LanguageProvider {
         this.add(NtmBlocks.MACHINE_WOOD_BURNER, "Wood-Burning Generator");
         this.add(NtmBlocks.MACHINE_DIESEL, "Diesel Generator");
         this.add(NtmBlocks.MACHINE_COMBUSTION_ENGINE, "Industrial Combustion Engine");
+        this.add(NtmBlocks.MACHINE_TURBOFAN, "Turbofan");
         this.add(NtmBlocks.MACHINE_STIRLING, "Stirling Engine");
         this.add(NtmBlocks.MACHINE_STIRLING_STEEL, "Heavy Stirling Engine");
         this.add(NtmBlocks.MACHINE_STIRLING_CREATIVE, "Creative Stirling Engine");
@@ -1465,6 +1466,7 @@ public class NtmLanguageProvider extends LanguageProvider {
         this.add("container.machine_wood_burner", "Wood-Burner");
         this.add("container.machine_diesel", "Diesel Generator");
         this.add("container.machine_combustion_engine", "Industrial Combustion Engine");
+        this.add("container.machine_turbofan", "Turbofan");
         this.add("container.machine_sawmill", "Stirling Sawmill");
         this.add("container.machine_shredder", "Shredder");
         this.add("container.machine_press", "Burner Press");

@@ -724,6 +724,7 @@ public class NtmCreativeTabs {
                         output.accept(NtmBlocks.MACHINE_WOOD_BURNER);
                         output.accept(NtmBlocks.MACHINE_DIESEL);
                         output.accept(NtmBlocks.MACHINE_COMBUSTION_ENGINE);
+                        output.accept(NtmBlocks.MACHINE_TURBOFAN);
                         output.accept(NtmBlocks.MACHINE_STIRLING);
                         output.accept(NtmBlocks.MACHINE_STIRLING_STEEL);
                         output.accept(NtmBlocks.MACHINE_STIRLING_CREATIVE);

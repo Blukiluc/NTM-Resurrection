@@ -53,6 +53,9 @@ public class ResourceManager {
     public static final ResourceLocation WOOD_BURNER_TEX = NuclearTechMod.withDefaultNamespace("textures/models/machines/wood_burner.png");
     public static final ResourceLocation DIESEL_GENERATOR_TEX = NuclearTechMod.withDefaultNamespace("textures/models/machines/dieselgen.png");
     public static final ResourceLocation COMBUSTION_ENGINE_TEX = NuclearTechMod.withDefaultNamespace("textures/models/machines/combustion_engine.png");
+    public static final ResourceLocation TURBOFAN_TEX = NuclearTechMod.withDefaultNamespace("textures/models/machines/turbofan.png");
+    public static final ResourceLocation TURBOFAN_BLADES_TEX = NuclearTechMod.withDefaultNamespace("textures/models/machines/turbofan_blades.png");
+    public static final ResourceLocation TURBOFAN_AFTERBURNER_TEX = NuclearTechMod.withDefaultNamespace("textures/models/machines/turbofan_afterburner.png");
     public static final ResourceLocation STIRLING_TEX = NuclearTechMod.withDefaultNamespace("textures/models/machines/stirling.png");
     public static final ResourceLocation STIRLING_STEEL_TEX = NuclearTechMod.withDefaultNamespace("textures/models/machines/stirling_steel.png");
     public static final ResourceLocation STIRLING_CREATIVE_TEX = NuclearTechMod.withDefaultNamespace("textures/models/machines/stirling_creative.png");
@@ -261,8 +264,9 @@ public class ResourceManager {
     public static IModelCustom purex;
     public static IModelCustom ore_acidizer;
     public static IModelCustom wood_burner;
-    public static IModelCustom dieselGenerator;
-    public static IModelCustom combustionEngine;
+    public static IModelCustom diesel_generator;
+    public static IModelCustom combustion_engine;
+    public static IModelCustom turbofan;
     public static IModelCustom stirling;
     public static IModelCustom sawmill;
     public static IModelCustom pump;
@@ -413,8 +417,9 @@ public class ResourceManager {
         purex = new HFRWavefrontObject("models/obj/machines/purex.obj").asVBO();
         ore_acidizer = new HFRWavefrontObject("models/obj/machines/acidizer.obj").asVBO();
         wood_burner = new HFRWavefrontObject("models/obj/machines/wood_burner.obj").asVBO();
-        dieselGenerator = new HFRWavefrontObject("models/obj/machines/dieselgen.obj").asVBO();
-        combustionEngine = new HFRWavefrontObject("models/obj/machines/combustion_engine.obj").asVBO();
+        diesel_generator = new HFRWavefrontObject("models/obj/machines/dieselgen.obj").asVBO();
+        combustion_engine = new HFRWavefrontObject("models/obj/machines/combustion_engine.obj").asVBO();
+        turbofan = new HFRWavefrontObject("models/obj/machines/turbofan.obj").asVBO();
         stirling = new HFRWavefrontObject("models/obj/machines/stirling.obj").asVBO();
         sawmill = new HFRWavefrontObject("models/obj/machines/sawmill.obj").asVBO();
         pump = new HFRWavefrontObject("models/obj/machines/pump.obj").asVBO();

@@ -166,7 +166,10 @@ public class NtmSoundDefinitionsProvider extends SoundDefinitionsProvider {
                 .with(sound(NuclearTechMod.MODID + ":block/engine"))
         );
         this.add(NtmSoundEvents.COMBUSTION_ENGINE_LOOP, SoundDefinition.definition()
-                .with(sound(NuclearTechMod.MODID + ":block/igenerator_operate"))
+                .with(sound(NuclearTechMod.MODID + ":block/combustion_engine_operate"))
+        );
+        this.add(NtmSoundEvents.TURBOFAN_LOOP, SoundDefinition.definition()
+                .with(sound(NuclearTechMod.MODID + ":block/turbofan_operate"))
         );
         this.add(NtmSoundEvents.ASSEMBLER_STRIKE, SoundDefinition.definition()
                 .with(

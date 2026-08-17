@@ -1,4 +1,4 @@
-// 1.21.1	2026-08-17T13:01:00.3437344	Loot Tables
+// 1.21.1	2026-08-17T16:02:29.8990442	Loot Tables
 4dea21baadd671e0fc70004833537e05da50d388 data/hbm/loot_table/blocks/asphalt.json
 fb8bbca081abce158c2e2c99aad65884a8ac42bc data/hbm/loot_table/blocks/asphalt_light.json
 ac4aa7fb9a18c76eab92c1ad6d77a20da10a52ed data/hbm/loot_table/blocks/balefire.json
@@ -138,6 +138,7 @@ edd69c8273cc03956f705bb8f1f405a74d791977 data/hbm/loot_table/blocks/machine_stir
 078a745b81cb1933f04dfb1273257c9cd4d4fddb data/hbm/loot_table/blocks/machine_stirling_steel.json
 5f482eb045996a48e5b55ae603807f86ec9a2114 data/hbm/loot_table/blocks/machine_tower_large.json
 83274b5464e4a6ed6bae7bb53eee98fb27a8af97 data/hbm/loot_table/blocks/machine_tower_small.json
+71ee92317aba47281c47a0c5870c5b15f6a21ff3 data/hbm/loot_table/blocks/machine_turbofan.json
 b71195f38b707be4822ef4fed5a7be5c18fa2f11 data/hbm/loot_table/blocks/machine_vacuum_refinery.json
 8b8ad59d499cff7792e1b0543d4ea0addda66255 data/hbm/loot_table/blocks/machine_wood_burner.json
 edf0df2a79d8b5994650a19cc93e4a3a789894db data/hbm/loot_table/blocks/mine_ap.json

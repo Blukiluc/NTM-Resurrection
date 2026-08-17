@@ -38,7 +38,7 @@ public class RenderCombustionEngine extends BlockEntityRendererNT<MachineCombust
         RenderContext.translate(-0.5F, 0F, 3F);
 
         bindTexture(ResourceManager.COMBUSTION_ENGINE_TEX);
-        ResourceManager.combustionEngine.renderPart("Engine");
+        ResourceManager.combustion_engine.renderPart("Engine");
 
         CD_Canister canister = be.tank.getTankType().getContainer(CD_Canister.class);
         if(canister != null) {
@@ -50,14 +50,14 @@ public class RenderCombustionEngine extends BlockEntityRendererNT<MachineCombust
                     1F
             );
         }
-        ResourceManager.combustionEngine.renderPart("Canister");
+        ResourceManager.combustion_engine.renderPart("Canister");
         RenderContext.setColor(1F, 1F, 1F, 1F);
 
         RenderContext.translate(1F, 0F, -2.6875F);
         float doorAngle = be.prevDoorAngle + (be.doorAngle - be.prevDoorAngle) * partialTicks;
         RenderContext.mulPose(Axis.YN.rotationDegrees(doorAngle));
         RenderContext.translate(-1F, 0F, 2.6875F);
-        ResourceManager.combustionEngine.renderPart("Hatch");
+        ResourceManager.combustion_engine.renderPart("Hatch");
     }
 
     @Override
@@ -89,7 +89,7 @@ public class RenderCombustionEngine extends BlockEntityRendererNT<MachineCombust
                 RenderContext.mulPose(Axis.YP.rotationDegrees(90F));
                 RenderContext.translate(0F, 0F, 2.75F);
                 bindTexture(ResourceManager.COMBUSTION_ENGINE_TEX);
-                ResourceManager.combustionEngine.renderAll();
+                ResourceManager.combustion_engine.renderAll();
             }
         };
     }

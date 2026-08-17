@@ -309,6 +309,13 @@ public class NtmBlockEntityTypes {
                             NtmBlocks.MACHINE_COMBUSTION_ENGINE.get())
                     .build(null));
 
+    public static final Supplier<BlockEntityType<MachineTurbofanBlockEntity>> TURBOFAN = REGISTER.register(
+            "turbofan",
+            () -> BlockEntityType.Builder.of(
+                            MachineTurbofanBlockEntity::new,
+                            NtmBlocks.MACHINE_TURBOFAN.get())
+                    .build(null));
+
     public static final Supplier<BlockEntityType<MachineStirlingBlockEntity>> STIRLING = REGISTER.register(
             "stirling",
             () -> BlockEntityType.Builder.of(

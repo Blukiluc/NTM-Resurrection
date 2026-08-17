@@ -1,4 +1,4 @@
-// 1.21.1	2026-08-17T13:01:00.3375718	Block States: hbm
+// 1.21.1	2026-08-17T16:02:29.8924277	Block States: hbm
 771df07d065b33c7dcf62cfb69b5cd3a3cb4feed assets/hbm/blockstates/asphalt.json
 c0f05f08a475704e80a5d657d494bf5a829fab8f assets/hbm/blockstates/asphalt_light.json
 8c6c51f054fa20e59275bf5c7c77e28e7790b34c assets/hbm/blockstates/balefire.json
@@ -139,6 +139,7 @@ fb48f984a1e86833ef30f332115eea2db65165bf assets/hbm/blockstates/machine_stirling
 cafabe2eef53fc73062393bbbaedde65a2c78f18 assets/hbm/blockstates/machine_stirling_steel.json
 ef86a92a35a5b6d762028ad6405e8c3139bec213 assets/hbm/blockstates/machine_tower_large.json
 15cbc7046e1487eee56772adee8f38c99d77349e assets/hbm/blockstates/machine_tower_small.json
+cde8471bf42dbecc3b28612cbef6a272985cc7d9 assets/hbm/blockstates/machine_turbofan.json
 e722d0031e80b29c6448fe2a8e0b6bf6bddcb070 assets/hbm/blockstates/machine_vacuum_refinery.json
 e0dd9747e4623b32ef39894d7ca8b4271fa2804b assets/hbm/blockstates/machine_wood_burner.json
 15146b37d960e0740f55ad4d3f4d9dd02c016808 assets/hbm/blockstates/mine_ap.json
@@ -386,6 +387,7 @@ f55d5c93f0423e66d4aae3b691b0bb51957b9d98 assets/hbm/models/block/machine_stirlin
 f55d5c93f0423e66d4aae3b691b0bb51957b9d98 assets/hbm/models/block/machine_stirling_steel_particle.json
 16e214fd0ece1e406bcb4aad5c19019424799e8f assets/hbm/models/block/machine_tower_large_particle.json
 30c0b1ae4559e71394d7449613af0ae92940b247 assets/hbm/models/block/machine_tower_small_particle.json
+f55d5c93f0423e66d4aae3b691b0bb51957b9d98 assets/hbm/models/block/machine_turbofan_particle.json
 f55d5c93f0423e66d4aae3b691b0bb51957b9d98 assets/hbm/models/block/machine_vacuum_refinery_particle.json
 f55d5c93f0423e66d4aae3b691b0bb51957b9d98 assets/hbm/models/block/machine_wood_burner_particle.json
 6b263493bf3a4aa2a211b2ca3b9818f45cca43b1 assets/hbm/models/block/mine_ap_particle.json
@@ -628,6 +630,7 @@ f391c6194f043986e52d6dcf0ba2df5e567a0055 assets/hbm/models/item/machine_shredder
 1ae5a980018cda4e68cafcf4ce293349827b23ab assets/hbm/models/item/machine_stirling_steel.json
 1ae5a980018cda4e68cafcf4ce293349827b23ab assets/hbm/models/item/machine_tower_large.json
 1ae5a980018cda4e68cafcf4ce293349827b23ab assets/hbm/models/item/machine_tower_small.json
+1ae5a980018cda4e68cafcf4ce293349827b23ab assets/hbm/models/item/machine_turbofan.json
 1ae5a980018cda4e68cafcf4ce293349827b23ab assets/hbm/models/item/machine_vacuum_refinery.json
 1ae5a980018cda4e68cafcf4ce293349827b23ab assets/hbm/models/item/machine_wood_burner.json
 1ae5a980018cda4e68cafcf4ce293349827b23ab assets/hbm/models/item/mine_ap.json
