@@ -1,4 +1,7 @@
-// 1.21.1	2026-08-17T16:02:29.8990442	Loot Tables
+// 1.21.1	2026-08-17T23:44:06.9170175	Loot Tables
+87d8c30c4e3b5b2dd2dc4c8ac5630aebe5d030a9 data/hbm/loot_table/blocks/aluminum_ore.json
+7020e7e9eb808242439b65d1a536f0120f46d3fc data/hbm/loot_table/blocks/aluminum_ore_deepslate.json
+5183f459db0fa142d9718b5a7fe26296a28a10a3 data/hbm/loot_table/blocks/asbestos_ore.json
 4dea21baadd671e0fc70004833537e05da50d388 data/hbm/loot_table/blocks/asphalt.json
 fb8bbca081abce158c2e2c99aad65884a8ac42bc data/hbm/loot_table/blocks/asphalt_light.json
 ac4aa7fb9a18c76eab92c1ad6d77a20da10a52ed data/hbm/loot_table/blocks/balefire.json
@@ -31,6 +34,10 @@ e9157c40c87c3d61363f15dd9d2ee9cebee21dc0 data/hbm/loot_table/blocks/brick_concre
 fc9c425e105561f4637abd260810893f8ff992b3 data/hbm/loot_table/blocks/c4.json
 b6d0e59bf1640db68330f9fc1262fc332e36c489 data/hbm/loot_table/blocks/chimney_brick.json
 c1aa86c895d6c585007fc5e96e3cafaf3d324cfc data/hbm/loot_table/blocks/chimney_industrial.json
+418a8652986872a6f0d7bf7d5d3299be84de6c96 data/hbm/loot_table/blocks/cinnabar_ore.json
+bcc0bf5b347dd6b9332242eaf01cf6c5e63d1fb8 data/hbm/loot_table/blocks/cinnabar_ore_deepslate.json
+8145bbacd934916fbf98208bfea43efe3cbf7297 data/hbm/loot_table/blocks/cobalt_ore.json
+21f7ff12ce7027ada1c13e74d4a51f90aad3f52c data/hbm/loot_table/blocks/cobalt_ore_deepslate.json
 963167797f1b2f2f154b6796b1c1d7c02b1d13e4 data/hbm/loot_table/blocks/combination_oven.json
 0eeea0c1bfe4322d1eb46491a0861edcb3191bdb data/hbm/loot_table/blocks/crate_desh.json
 69ccbf3fc2131c7b4191e1c8d5141a4daf509c66 data/hbm/loot_table/blocks/crate_iron.json

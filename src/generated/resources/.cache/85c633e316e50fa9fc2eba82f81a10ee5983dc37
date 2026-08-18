@@ -1,4 +1,7 @@
-// 1.21.1	2026-08-17T16:02:29.8924277	Block States: hbm
+// 1.21.1	2026-08-17T23:44:06.9094803	Block States: hbm
+7d3b3eedac85e1d6bf425cd672de4f47901f790f assets/hbm/blockstates/aluminum_ore.json
+faffc392a2a2a4cd31eec8b085b1907ed935e32d assets/hbm/blockstates/aluminum_ore_deepslate.json
+8a376e290a632d8873beaa0013f74d0897105ff4 assets/hbm/blockstates/asbestos_ore.json
 771df07d065b33c7dcf62cfb69b5cd3a3cb4feed assets/hbm/blockstates/asphalt.json
 c0f05f08a475704e80a5d657d494bf5a829fab8f assets/hbm/blockstates/asphalt_light.json
 8c6c51f054fa20e59275bf5c7c77e28e7790b34c assets/hbm/blockstates/balefire.json
@@ -31,6 +34,10 @@ c72b98f4e3d6d7befe02c3c80017852b157eaebe assets/hbm/blockstates/brick_obsidian.j
 781b2741f4e9572ea49fd6bb2845b135a13c5c4a assets/hbm/blockstates/c4.json
 3ed58a16bbb82788bdba78854c8b686dfd699723 assets/hbm/blockstates/chimney_brick.json
 a1ecb293f5156a14b1976bf4334dd313216a030d assets/hbm/blockstates/chimney_industrial.json
+4971bd57c7cca301788f82988f4c65ddac21cca9 assets/hbm/blockstates/cinnabar_ore.json
+6d9fd66f670f175252e833644ecb0a0ebcb818d5 assets/hbm/blockstates/cinnabar_ore_deepslate.json
+7b11679f055dc43fe86a590fce8ad80ce6ec9813 assets/hbm/blockstates/cobalt_ore.json
+832752565897053b878b8c79944a5efdbf63ed84 assets/hbm/blockstates/cobalt_ore_deepslate.json
 a9c6dcda54344024b3414eac2e1f11d310db98d9 assets/hbm/blockstates/combination_oven.json
 72dca19fc2d60aa85b4431eabfff87b8137a94b0 assets/hbm/blockstates/crashed_bomb.json
 a764400d8752b3679c8324592bde2252c34a6577 assets/hbm/blockstates/crate_desh.json
@@ -295,6 +302,10 @@ c4ce8cabf8c70a80ecb4eae8032f91120969cc89 assets/hbm/models/block/brick_obsidian.
 7149f0ff65795b7f3c9fc7aa3f158723bd3c3d97 assets/hbm/models/block/c4.json
 929bc1b62fd895672ac724237ce64beb0dd21c74 assets/hbm/models/block/chimney_brick_particle.json
 16e214fd0ece1e406bcb4aad5c19019424799e8f assets/hbm/models/block/chimney_industrial_particle.json
+bbb7c9265a945e2195eeef01f9f03df6a8aaa7da assets/hbm/models/block/cinnabar_ore.json
+1c4fbd0823e5cfa54324630a66e9fc8778746f73 assets/hbm/models/block/cinnabar_ore_deepslate.json
+eedf854a787c7683b55806ae459e95f87cfae8c4 assets/hbm/models/block/cobalt_ore.json
+b2209203ee60dda4d2a74337fc094bbd9595329b assets/hbm/models/block/cobalt_ore_deepslate.json
 f55d5c93f0423e66d4aae3b691b0bb51957b9d98 assets/hbm/models/block/combination_oven_particle.json
 a7373508f47fcc81285b94ae8570c7229e95b4af assets/hbm/models/block/crashed_bomb_particle.json
 6d7734ecea555ae7acab28c54e45354962ea48c4 assets/hbm/models/block/crate_desh.json
@@ -573,6 +584,10 @@ eca870434a3a813bf3e38e6b7b1a3927c104963d assets/hbm/models/item/brick_light.json
 425457f951d3cbfdc87420922caf126f1012154f assets/hbm/models/item/c4.json
 1ae5a980018cda4e68cafcf4ce293349827b23ab assets/hbm/models/item/chimney_brick.json
 1ae5a980018cda4e68cafcf4ce293349827b23ab assets/hbm/models/item/chimney_industrial.json
+3705ab580b779526bb147576d010ed84e2befc78 assets/hbm/models/item/cinnabar_ore.json
+fa743b485f5999f1b67df9d4f95060776002fa4f assets/hbm/models/item/cinnabar_ore_deepslate.json
+285bd786b1282422f2186fce5b5cd2e92dcc1362 assets/hbm/models/item/cobalt_ore.json
+e51a8ca78d58679a3a80eeb8cbae5b83f31706aa assets/hbm/models/item/cobalt_ore_deepslate.json
 1ae5a980018cda4e68cafcf4ce293349827b23ab assets/hbm/models/item/combination_oven.json
 2c8c32d785bfc59bf23083eff8838054ee580570 assets/hbm/models/item/crashed_bomb.json
 a772c62c0c45f523be75cdb51939ae3bbef0244b assets/hbm/models/item/crate_desh.json
