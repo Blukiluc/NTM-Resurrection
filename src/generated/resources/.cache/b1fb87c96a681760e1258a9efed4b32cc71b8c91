@@ -1,7 +1,0 @@
-// 1.21.1	2026-08-11T12:26:50.0551592	Tags for minecraft:item mod id hbm
-daed6b0c83d1e98fca5ee93afbb5128832351328 data/hbm/tags/item/is_coke.json
-5af66b94dd6bf494f3755b7981265c5d0eb33133 data/hbm/tags/item/is_presto.json
-d8377a6aa757376af666222cc9768cb2bfee2cb4 data/hbm/tags/item/is_solid_fuel.json
-280fa37d47ea6502b89e3d76e1a1ed09939b15b8 data/hbm/tags/item/ntm_hazard_tank.json
-9c206e5c9226b7ac361fb3a7ce39a3206682b70b data/hbm/tags/item/ntm_universal_barrel.json
-a48b115f369e8538d83bec061cdcf024c8561095 data/hbm/tags/item/ntm_universal_tank.json

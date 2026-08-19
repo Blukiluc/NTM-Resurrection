@@ -17,6 +17,7 @@ import com.hbm.lib.ModAttachments;
 import com.hbm.lib.ModEffect;
 import com.hbm.particle.ModParticles;
 import com.hbm.registry.NtmSoundEvents;
+import com.hbm.world.gen.feature.NtmFeatures;
 import net.minecraft.resources.ResourceLocation;
 import net.neoforged.bus.api.IEventBus;
 import net.neoforged.fml.ModContainer;
@@ -59,6 +60,7 @@ public class NuclearTechMod {
         Fluids.init();
         NtmItems.register(eventBus);
         NtmBlocks.register(eventBus);
+        NtmFeatures.FEATURES.register(eventBus);
         NtmFluidTypes.register(eventBus);
         NtmFluids.register(eventBus);
         NtmDataComponents.register(eventBus);

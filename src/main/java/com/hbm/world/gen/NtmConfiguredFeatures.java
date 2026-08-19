@@ -7,8 +7,8 @@ import com.hbm.world.gen.feature.NtmFeatures;
 import net.minecraft.core.registries.Registries;
 import net.minecraft.data.worldgen.BootstrapContext;
 import net.minecraft.data.worldgen.features.FeatureUtils;
-import net.minecraft.data.worldgen.features.OreFeatures;
 import net.minecraft.resources.ResourceKey;
+import net.minecraft.tags.BlockTags;
 import net.minecraft.util.valueproviders.BiasedToBottomInt;
 import net.minecraft.world.level.block.Blocks;
 import net.minecraft.world.level.block.state.BlockState;
@@ -20,6 +20,8 @@ import net.minecraft.world.level.levelgen.feature.configurations.OreConfiguratio
 import net.minecraft.world.level.levelgen.feature.configurations.SimpleBlockConfiguration;
 import net.minecraft.world.level.levelgen.feature.stateproviders.BlockStateProvider;
 import net.minecraft.world.level.levelgen.feature.stateproviders.RandomizedIntStateProvider;
+import net.minecraft.world.level.levelgen.structure.templatesystem.RuleTest;
+import net.minecraft.world.level.levelgen.structure.templatesystem.TagMatchTest;
 
 import java.util.List;
 
@@ -102,10 +104,15 @@ public class NtmConfiguredFeatures {
 
         // Placeholder blocks (vanilla ores) stand in for NtmBlocks.ORE_COLTAN / ORE_AUSTRALIUM,
         // which don't exist yet - this is only meant to validate the special zone-based placement.
-        // todo coltan australium
-//        register(context, COLTAN_DEPOSIT, NtmFeatures.COLTAN_DEPOSIT.get(), NoneFeatureConfiguration.NONE);
-//        register(context, AUSTRALIUM_DEPOSIT, NtmFeatures.AUSTRALIUM_DEPOSIT.get(), NoneFeatureConfiguration.NONE);
+        register(context, COLTAN_DEPOSIT, NtmFeatures.COLTAN_DEPOSIT.get(), NoneFeatureConfiguration.NONE);
+        register(context, AUSTRALIUM_DEPOSIT, NtmFeatures.AUSTRALIUM_DEPOSIT.get(), NoneFeatureConfiguration.NONE);
     }
+
+    // Same rule tests vanilla's own OreFeatures class builds internally (they aren't exposed as
+    // public constants there, only as local variables in its bootstrap() method), so we rebuild
+    // them here from the block tags directly.
+    private static final RuleTest STONE_ORE_REPLACEABLES = new TagMatchTest(BlockTags.STONE_ORE_REPLACEABLES);
+    private static final RuleTest DEEPSLATE_ORE_REPLACEABLES = new TagMatchTest(BlockTags.DEEPSLATE_ORE_REPLACEABLES);
 
     /**
      * Builds an OreConfiguration targeting both regular stone and deepslate,
@@ -114,8 +121,8 @@ public class NtmConfiguredFeatures {
     private static OreConfiguration oreConfig(BlockState ore, int veinSize) {
         return new OreConfiguration(
                 List.of(
-                        OreConfiguration.target(OreFeatures.STONE_ORE_REPLACEABLES, ore),
-                        OreConfiguration.target(OreFeatures.DEEPSLATE_ORE_REPLACEABLES, ore)
+                        OreConfiguration.target(STONE_ORE_REPLACEABLES, ore),
+                        OreConfiguration.target(DEEPSLATE_ORE_REPLACEABLES, ore)
                 ),
                 veinSize
         );

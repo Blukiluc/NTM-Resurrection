@@ -45,10 +45,30 @@ public class NtmPlacedFeatures {
     public static final ResourceKey<PlacedFeature> COLTAN_DEPOSIT_PLACED = registerKey("coltan_deposit_placed");
     public static final ResourceKey<PlacedFeature> AUSTRALIUM_DEPOSIT_PLACED = registerKey("australium_deposit_placed");
 
-    // TODO: these vein-per-chunk counts should come from WorldConfig (uraniumSpawn, thoriumSpawn, ...)
-    // once the config system is ported over (see open question about hardcoded vs. config-driven values).
-    // Using a placeholder of 20 veins/chunk for uranium for now so it can be tested in-game.
-    private static final int URANIUM_VEINS_PER_CHUNK = 20;
+    // These vein-per-chunk counts are hardcoded from the 1.7.10 WorldConfig.loadFromConfig() defaults.
+    // TODO: once WorldConfig is ported to the NeoForge config system (NtmConfig), these should read
+    // from it instead of being hardcoded, so server owners can adjust ore rarity like before.
+    private static final int URANIUM_VEINS_PER_CHUNK = 7;
+    private static final int THORIUM_VEINS_PER_CHUNK = 7;
+    private static final int TITANIUM_VEINS_PER_CHUNK = 8;
+    private static final int SULFUR_VEINS_PER_CHUNK = 5;
+    private static final int ALUMINIUM_VEINS_PER_CHUNK = 7;
+    private static final int COPPER_VEINS_PER_CHUNK = 12;
+    private static final int FLUORITE_VEINS_PER_CHUNK = 6;
+    private static final int NITER_VEINS_PER_CHUNK = 6;
+    private static final int TUNGSTEN_VEINS_PER_CHUNK = 10;
+    private static final int LEAD_VEINS_PER_CHUNK = 6;
+    private static final int BERYLLIUM_VEINS_PER_CHUNK = 6;
+    private static final int RARE_VEINS_PER_CHUNK = 6;
+    private static final int LIGNITE_VEINS_PER_CHUNK = 2;
+    private static final int ASBESTOS_VEINS_PER_CHUNK = 2;
+    private static final int CINNABAR_VEINS_PER_CHUNK = 1;
+    private static final int COBALT_VEINS_PER_CHUNK = 2;
+
+    private static final int IRON_CLUSTER_VEINS_PER_CHUNK = 4;
+    private static final int TITANIUM_CLUSTER_VEINS_PER_CHUNK = 2;
+    private static final int ALUMINIUM_CLUSTER_VEINS_PER_CHUNK = 3;
+    private static final int COPPER_CLUSTER_VEINS_PER_CHUNK = 4;
 
     public static void bootstrap(BootstrapContext<PlacedFeature> context) {
         HolderGetter<ConfiguredFeature<?, ?>> configuredFeatures = context.lookup(Registries.CONFIGURED_FEATURE);
@@ -60,44 +80,44 @@ public class NtmPlacedFeatures {
                 orePlacement(URANIUM_VEINS_PER_CHUNK, 5, 24));
 
 //        register(context, ORE_THORIUM_PLACED, configuredFeatures.getOrThrow(NtmConfiguredFeatures.ORE_THORIUM),
-//                orePlacement(WorldConfig.thoriumSpawn, 5, 29));
+//                orePlacement(THORIUM_VEINS_PER_CHUNK, 5, 29));
 //        register(context, ORE_TITANIUM_PLACED, configuredFeatures.getOrThrow(NtmConfiguredFeatures.ORE_TITANIUM),
-//                orePlacement(WorldConfig.titaniumSpawn, 5, 34));
+//                orePlacement(TITANIUM_VEINS_PER_CHUNK, 5, 34));
 //        register(context, ORE_SULFUR_PLACED, configuredFeatures.getOrThrow(NtmConfiguredFeatures.ORE_SULFUR),
-//                orePlacement(WorldConfig.sulfurSpawn, 5, 34));
+//                orePlacement(SULFUR_VEINS_PER_CHUNK, 5, 34));
 //        register(context, ORE_ALUMINIUM_PLACED, configuredFeatures.getOrThrow(NtmConfiguredFeatures.ORE_ALUMINIUM),
-//                orePlacement(WorldConfig.aluminiumSpawn, 5, 44));
+//                orePlacement(ALUMINIUM_VEINS_PER_CHUNK, 5, 44));
 //        register(context, ORE_COPPER_PLACED, configuredFeatures.getOrThrow(NtmConfiguredFeatures.ORE_COPPER),
-//                orePlacement(WorldConfig.copperSpawn, 5, 49));
+//                orePlacement(COPPER_VEINS_PER_CHUNK, 5, 49));
 //        register(context, ORE_FLUORITE_PLACED, configuredFeatures.getOrThrow(NtmConfiguredFeatures.ORE_FLUORITE),
-//                orePlacement(WorldConfig.fluoriteSpawn, 5, 49));
+//                orePlacement(FLUORITE_VEINS_PER_CHUNK, 5, 49));
 //        register(context, ORE_NITER_PLACED, configuredFeatures.getOrThrow(NtmConfiguredFeatures.ORE_NITER),
-//                orePlacement(WorldConfig.niterSpawn, 5, 34));
+//                orePlacement(NITER_VEINS_PER_CHUNK, 5, 34));
 //        register(context, ORE_TUNGSTEN_PLACED, configuredFeatures.getOrThrow(NtmConfiguredFeatures.ORE_TUNGSTEN),
-//                orePlacement(WorldConfig.tungstenSpawn, 5, 34));
+//                orePlacement(TUNGSTEN_VEINS_PER_CHUNK, 5, 34));
 //        register(context, ORE_LEAD_PLACED, configuredFeatures.getOrThrow(NtmConfiguredFeatures.ORE_LEAD),
-//                orePlacement(WorldConfig.leadSpawn, 5, 34));
+//                orePlacement(LEAD_VEINS_PER_CHUNK, 5, 34));
 //        register(context, ORE_BERYLLIUM_PLACED, configuredFeatures.getOrThrow(NtmConfiguredFeatures.ORE_BERYLLIUM),
-//                orePlacement(WorldConfig.berylliumSpawn, 5, 34));
+//                orePlacement(BERYLLIUM_VEINS_PER_CHUNK, 5, 34));
 //        register(context, ORE_RARE_PLACED, configuredFeatures.getOrThrow(NtmConfiguredFeatures.ORE_RARE),
-//                orePlacement(WorldConfig.rareSpawn, 5, 24));
+//                orePlacement(RARE_VEINS_PER_CHUNK, 5, 24));
 //        register(context, ORE_LIGNITE_PLACED, configuredFeatures.getOrThrow(NtmConfiguredFeatures.ORE_LIGNITE),
-//                orePlacement(WorldConfig.ligniteSpawn, 35, 59));
+//                orePlacement(LIGNITE_VEINS_PER_CHUNK, 35, 59));
 //        register(context, ORE_ASBESTOS_PLACED, configuredFeatures.getOrThrow(NtmConfiguredFeatures.ORE_ASBESTOS),
-//                orePlacement(WorldConfig.asbestosSpawn, 16, 31));
+//                orePlacement(ASBESTOS_VEINS_PER_CHUNK, 16, 31));
 //        register(context, ORE_CINNABAR_PLACED, configuredFeatures.getOrThrow(NtmConfiguredFeatures.ORE_CINNABAR),
-//                orePlacement(WorldConfig.cinnebarSpawn, 8, 23));
+//                orePlacement(CINNABAR_VEINS_PER_CHUNK, 8, 23));
 //        register(context, ORE_COBALT_PLACED, configuredFeatures.getOrThrow(NtmConfiguredFeatures.ORE_COBALT),
-//                orePlacement(WorldConfig.cobaltSpawn, 4, 11));
+//                orePlacement(COBALT_VEINS_PER_CHUNK, 4, 11));
 
 //        register(context, CLUSTER_IRON_PLACED, configuredFeatures.getOrThrow(NtmConfiguredFeatures.CLUSTER_IRON),
-//                orePlacement(WorldConfig.ironClusterSpawn, 15, 59));
+//                orePlacement(IRON_CLUSTER_VEINS_PER_CHUNK, 15, 59));
 //        register(context, CLUSTER_TITANIUM_PLACED, configuredFeatures.getOrThrow(NtmConfiguredFeatures.CLUSTER_TITANIUM),
-//                orePlacement(WorldConfig.titaniumClusterSpawn, 15, 44));
+//                orePlacement(TITANIUM_CLUSTER_VEINS_PER_CHUNK, 15, 44));
 //        register(context, CLUSTER_ALUMINIUM_PLACED, configuredFeatures.getOrThrow(NtmConfiguredFeatures.CLUSTER_ALUMINIUM),
-//                orePlacement(WorldConfig.aluminiumClusterSpawn, 15, 49));
+//                orePlacement(ALUMINIUM_CLUSTER_VEINS_PER_CHUNK, 15, 49));
 //        register(context, CLUSTER_COPPER_PLACED, configuredFeatures.getOrThrow(NtmConfiguredFeatures.CLUSTER_COPPER),
-//                orePlacement(WorldConfig.copperClusterSpawn, 15, 34));
+//                orePlacement(COPPER_CLUSTER_VEINS_PER_CHUNK, 15, 34));
 
         // These custom features handle their own internal looping/placement logic (fixed deposit zones),
         // so we only need to trigger them once per chunk - the height range here is not actually used.

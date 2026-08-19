@@ -6,8 +6,6 @@ import net.minecraft.world.level.levelgen.feature.Feature;
 import net.minecraft.world.level.levelgen.feature.configurations.NoneFeatureConfiguration;
 import net.neoforged.neoforge.registries.DeferredHolder;
 import net.neoforged.neoforge.registries.DeferredRegister;
-import com.hbm.world.gen.feature.ColtanDepositFeature;
-import com.hbm.world.gen.feature.AustraliumDepositFeature;
 
 /**
  * Registry for custom worldgen Features (as opposed to ConfiguredFeature/PlacedFeature, which are
@@ -16,12 +14,11 @@ import com.hbm.world.gen.feature.AustraliumDepositFeature;
  */
 public class NtmFeatures {
 
-    // todo its clear
     public static final DeferredRegister<Feature<?>> FEATURES = DeferredRegister.create(Registries.FEATURE, NuclearTechMod.MODID);
 
-//    public static final DeferredHolder<Feature<?>, ColtanDepositFeature> COLTAN_DEPOSIT =
-//            FEATURES.register("coltan_deposit", () -> new ColtanDepositFeature(NoneFeatureConfiguration.CODEC));
-//
-//    public static final DeferredHolder<Feature<?>, AustraliumDepositFeature> AUSTRALIUM_DEPOSIT =
-//            FEATURES.register("australium_deposit", () -> new AustraliumDepositFeature(NoneFeatureConfiguration.CODEC));
+    public static final DeferredHolder<Feature<?>, ColtanDepositFeature> COLTAN_DEPOSIT =
+            FEATURES.register("coltan_deposit", () -> new ColtanDepositFeature(NoneFeatureConfiguration.CODEC));
+
+    public static final DeferredHolder<Feature<?>, AustraliumDepositFeature> AUSTRALIUM_DEPOSIT =
+            FEATURES.register("australium_deposit", () -> new AustraliumDepositFeature(NoneFeatureConfiguration.CODEC));
 }
