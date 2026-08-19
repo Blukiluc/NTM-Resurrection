@@ -52,7 +52,7 @@ public class RenderFurnaceSteel extends BlockEntityRendererNT<MachineFurnaceStee
 
     @Override
     public Item getItemForRenderer() {
-        return NtmBlocks.FURNACE_STEEL.asItem();
+        return NtmBlocks.MACHINE_FURNACE_STEEL.asItem();
     }
 
     @Override

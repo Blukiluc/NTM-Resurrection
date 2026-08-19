@@ -782,7 +782,7 @@ public class NtmCreativeTabs {
                         output.accept(NtmBlocks.MACHINE_SHREDDER);
                         output.accept(NtmBlocks.MACHINE_SOLDERING_STATION);
                         output.accept(NtmBlocks.MACHINE_ARC_WELDER);
-                        output.accept(NtmBlocks.HEAT_BOILER);
+                        output.accept(NtmBlocks.MACHINE_HEAT_BOILER);
                         output.accept(NtmBlocks.MACHINE_INDUSTRIAL_BOILER);
                         output.accept(NtmBlocks.MACHINE_INDUSTRIAL_TURBINE);
                         output.accept(NtmBlocks.MACHINE_CHUNGUS);
@@ -805,11 +805,11 @@ public class NtmCreativeTabs {
                         output.accept(NtmBlocks.CHIMNEY_BRICK);
                         output.accept(NtmBlocks.CHIMNEY_INDUSTRIAL);
 
-                        output.accept(NtmBlocks.FURNACE_BRICK);
+                        output.accept(NtmBlocks.MACHINE_FURNACE_BRICK);
                         output.accept(NtmBlocks.MACHINE_ELECTRIC_FURNACE);
-                        output.accept(NtmBlocks.FURNACE_IRON);
-                        output.accept(NtmBlocks.FURNACE_STEEL);
-                        output.accept(NtmBlocks.COMBINATION_OVEN);
+                        output.accept(NtmBlocks.MACHINE_FURNACE_IRON);
+                        output.accept(NtmBlocks.MACHINE_FURNACE_STEEL);
+                        output.accept(NtmBlocks.MACHINE_COMBINATION_OVEN);
                         output.accept(NtmBlocks.MACHINE_BLAST_FURNACE);
                         output.accept(NtmBlocks.MACHINE_ROTARY_FURNACE);
 

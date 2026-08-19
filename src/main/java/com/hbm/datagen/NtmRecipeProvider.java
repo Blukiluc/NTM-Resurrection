@@ -90,7 +90,7 @@ public class NtmRecipeProvider extends RecipeProvider {
                 .unlockedBy("has_steel_ingot", has(NtmItems.INGOT_STEEL.get()))
                 .save(recipeOutput);
 
-        ShapedRecipeBuilder.shaped(RecipeCategory.MISC, NtmBlocks.FURNACE_BRICK.get())
+        ShapedRecipeBuilder.shaped(RecipeCategory.MISC, NtmBlocks.MACHINE_FURNACE_BRICK.get())
                 .pattern("III")
                 .pattern("I I")
                 .pattern("BBB")

@@ -36,8 +36,6 @@ import net.neoforged.neoforge.registries.DeferredRegister;
 
 import java.util.function.Supplier;
 
-import static com.hbm.fluids.NtmFluids.*;
-
 public class NtmBlocks {
 
     public static final DeferredRegister.Blocks BLOCKS = DeferredRegister.createBlocks(NuclearTechMod.MODID);
@@ -292,12 +290,12 @@ public class NtmBlocks {
     public static final DeferredBlock<Block> HEATER_ELECTRIC = register("heater_electric", () -> new HeaterElectricBlock(BlockBehaviour.Properties.of().noOcclusion().strength(0.6F, 10.0F).sound(SoundType.METAL).mapColor(MapColor.METAL).requiresCorrectToolForDrops()));
     public static final DeferredBlock<Block> HEATER_HEATEX = register("heater_heatex", () -> new HeaterHeatexBlock(BlockBehaviour.Properties.of().noOcclusion().strength(0.6F, 10.0F).sound(SoundType.METAL).mapColor(MapColor.METAL).requiresCorrectToolForDrops()));
 
-    public static final DeferredBlock<Block> FURNACE_BRICK = register("machine_furnace_brick", () -> new MachineFurnaceBrickBlock(BlockBehaviour.Properties.of().strength(5.0F, 10.0F).sound(SoundType.METAL).mapColor(MapColor.METAL).lightLevel(state -> state.getValue(MachineFurnaceBrickBlock.LIT) ? 15 : 0)));
+    public static final DeferredBlock<Block> MACHINE_FURNACE_BRICK = register("machine_furnace_brick", () -> new MachineFurnaceBrickBlock(BlockBehaviour.Properties.of().strength(5.0F, 10.0F).sound(SoundType.METAL).mapColor(MapColor.METAL).lightLevel(state -> state.getValue(MachineFurnaceBrickBlock.LIT) ? 15 : 0)));
     public static final DeferredBlock<Block> MACHINE_ELECTRIC_FURNACE = register("machine_electric_furnace", () -> new MachineElectricFurnaceBlock(BlockBehaviour.Properties.of().strength(5.0F, 10.0F).sound(SoundType.METAL).mapColor(MapColor.METAL).lightLevel(state -> state.getValue(MachineElectricFurnaceBlock.LIT) ? 15 : 0)));
-    public static final DeferredBlock<Block> FURNACE_IRON = register("furnace_iron", () -> new MachineFurnaceIronBlock(BlockBehaviour.Properties.of().noOcclusion().strength(5.0F, 10.0F).sound(SoundType.METAL).mapColor(MapColor.METAL)));
-    public static final DeferredBlock<Block> FURNACE_STEEL = register("furnace_steel", () -> new MachineFurnaceSteelBlock(BlockBehaviour.Properties.of().noOcclusion().strength(5.0F, 10.0F).sound(SoundType.METAL).mapColor(MapColor.METAL)));
-    public static final DeferredBlock<Block> COMBINATION_OVEN = register("combination_oven", () -> new MachineCombinationOvenBlock(BlockBehaviour.Properties.of().strength(0.6F, 100.0F).sound(SoundType.METAL).mapColor(MapColor.METAL).requiresCorrectToolForDrops().noOcclusion()));
-    public static final DeferredBlock<Block> HEAT_BOILER = register("heat_boiler", () -> new MachineHeatBoiler(BlockBehaviour.Properties.of().noOcclusion().strength(0.6F, 10.0F).sound(SoundType.METAL).mapColor(MapColor.METAL).requiresCorrectToolForDrops()));
+    public static final DeferredBlock<Block> MACHINE_FURNACE_IRON = register("machine_furnace_iron", () -> new MachineFurnaceIronBlock(BlockBehaviour.Properties.of().noOcclusion().strength(5.0F, 10.0F).sound(SoundType.METAL).mapColor(MapColor.METAL)));
+    public static final DeferredBlock<Block> MACHINE_FURNACE_STEEL = register("machine_furnace_steel", () -> new MachineFurnaceSteelBlock(BlockBehaviour.Properties.of().noOcclusion().strength(5.0F, 10.0F).sound(SoundType.METAL).mapColor(MapColor.METAL)));
+    public static final DeferredBlock<Block> MACHINE_COMBINATION_OVEN = register("machine_combination_oven", () -> new MachineCombinationOvenBlock(BlockBehaviour.Properties.of().strength(0.6F, 100.0F).sound(SoundType.METAL).mapColor(MapColor.METAL).requiresCorrectToolForDrops().noOcclusion()));
+    public static final DeferredBlock<Block> MACHINE_HEAT_BOILER = register("machine_heat_boiler", () -> new MachineHeatBoiler(BlockBehaviour.Properties.of().noOcclusion().strength(0.6F, 10.0F).sound(SoundType.METAL).mapColor(MapColor.METAL).requiresCorrectToolForDrops()));
     public static final DeferredBlock<Block> MACHINE_INDUSTRIAL_BOILER = register("machine_industrial_boiler", () -> new MachineIndustrialBoiler(BlockBehaviour.Properties.of().noOcclusion().strength(0.6F, 10.0F).sound(SoundType.METAL).mapColor(MapColor.METAL).requiresCorrectToolForDrops()));
     public static final DeferredBlock<Block> MACHINE_INDUSTRIAL_TURBINE = register("machine_industrial_turbine", () -> new MachineIndustrialTurbineBlock(BlockBehaviour.Properties.of().noOcclusion().strength(0.6F, 10.0F).sound(SoundType.METAL).mapColor(MapColor.METAL).requiresCorrectToolForDrops()));
     public static final DeferredBlock<Block> MACHINE_CHUNGUS = register("machine_chungus", () -> new MachineLeviathanTurbineBlock(BlockBehaviour.Properties.of().noOcclusion().strength(0.6F, 10.0F).sound(SoundType.METAL).mapColor(MapColor.METAL).requiresCorrectToolForDrops()));

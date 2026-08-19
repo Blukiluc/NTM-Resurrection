@@ -282,18 +282,18 @@ public class NtmBlockLootTableProvider extends BlockLootSubProvider {
         this.dropSelf(NtmBlocks.MACHINE_SILEX.get());
         this.dropSelf(NtmBlocks.MACHINE_INTAKE.get());
         this.dropSelf(NtmBlocks.MACHINE_ELECTROLYSER.get());
-        this.dropSelf(NtmBlocks.HEAT_BOILER.get());
+        this.dropSelf(NtmBlocks.MACHINE_HEAT_BOILER.get());
         this.dropSelf(NtmBlocks.MACHINE_INDUSTRIAL_BOILER.get());
         this.dropSelf(NtmBlocks.MACHINE_INDUSTRIAL_TURBINE.get());
         this.dropSelf(NtmBlocks.MACHINE_CHUNGUS.get());
         this.dropSelf(NtmBlocks.MACHINE_TOWER_SMALL.get());
         this.dropSelf(NtmBlocks.MACHINE_TOWER_LARGE.get());
         this.dropSelf(NtmBlocks.MACHINE_GEOTHERMAL_HEAT_EXCHANGER.get());
-        this.dropSelf(NtmBlocks.FURNACE_BRICK.get());
+        this.dropSelf(NtmBlocks.MACHINE_FURNACE_BRICK.get());
         this.dropSelf(NtmBlocks.MACHINE_ELECTRIC_FURNACE.get());
-        this.dropSelf(NtmBlocks.FURNACE_IRON.get());
-        this.dropSelf(NtmBlocks.FURNACE_STEEL.get());
-        this.dropSelf(NtmBlocks.COMBINATION_OVEN.get());
+        this.dropSelf(NtmBlocks.MACHINE_FURNACE_IRON.get());
+        this.dropSelf(NtmBlocks.MACHINE_FURNACE_STEEL.get());
+        this.dropSelf(NtmBlocks.MACHINE_COMBINATION_OVEN.get());
         this.dropSelf(NtmBlocks.MACHINE_BLAST_FURNACE.get());
         this.dropSelf(NtmBlocks.MACHINE_ROTARY_FURNACE.get());
 

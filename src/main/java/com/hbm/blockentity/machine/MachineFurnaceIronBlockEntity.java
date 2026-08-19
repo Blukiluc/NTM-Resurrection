@@ -222,7 +222,7 @@ public class MachineFurnaceIronBlockEntity extends MachineBaseBlockEntity implem
 
     @Override
     public void provideInfo(UpgradeType type, int level, List<String> info, boolean extendedInfo) {
-        info.add(IUpgradeInfoProvider.getStandardLabel(NtmBlocks.FURNACE_IRON.get()).getString());
+        info.add(IUpgradeInfoProvider.getStandardLabel(NtmBlocks.MACHINE_FURNACE_IRON.get()).getString());
         if(type == UpgradeType.SPEED) {
             info.add(Component.translatable(KEY_DELAY, "-" + level * 50 / 3 + "%").getString());
         }

@@ -53,7 +53,7 @@ public class RenderFurnaceIron extends BlockEntityRendererNT<MachineFurnaceIronB
 
     @Override
     public Item getItemForRenderer() {
-        return NtmBlocks.FURNACE_IRON.asItem();
+        return NtmBlocks.MACHINE_FURNACE_IRON.asItem();
     }
 
     @Override

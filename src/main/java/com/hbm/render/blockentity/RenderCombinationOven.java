@@ -37,7 +37,7 @@ public class RenderCombinationOven extends BlockEntityRendererNT<MachineCombinat
 
     @Override
     public Item getItemForRenderer() {
-        return NtmBlocks.COMBINATION_OVEN.asItem();
+        return NtmBlocks.MACHINE_COMBINATION_OVEN.asItem();
     }
 
     @Override

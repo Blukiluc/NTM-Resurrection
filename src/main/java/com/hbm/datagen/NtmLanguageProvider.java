@@ -1328,18 +1328,18 @@ public class NtmLanguageProvider extends LanguageProvider {
         this.add(NtmBlocks.MACHINE_SILEX, "Laser Isotope Separation Chamber (SILEX)");
         this.add(NtmBlocks.MACHINE_INTAKE, "Air Intake");
         this.add(NtmBlocks.MACHINE_ELECTROLYSER, "Electrolysis Machine");
-        this.add(NtmBlocks.HEAT_BOILER, "Boiler");
+        this.add(NtmBlocks.MACHINE_HEAT_BOILER, "Boiler");
         this.add(NtmBlocks.MACHINE_INDUSTRIAL_BOILER, "Industrial Boiler");
         this.add(NtmBlocks.MACHINE_INDUSTRIAL_TURBINE, "Industrial Steam Turbine");
         this.add(NtmBlocks.MACHINE_CHUNGUS, "Leviathan Steam Turbine");
         this.add(NtmBlocks.MACHINE_TOWER_SMALL, "Auxiliary Cooling Tower");
         this.add(NtmBlocks.MACHINE_TOWER_LARGE, "Cooling Tower");
         this.add(NtmBlocks.MACHINE_GEOTHERMAL_HEAT_EXCHANGER, "Geothermal Heat Exchanger");
-        this.add(NtmBlocks.FURNACE_BRICK, "Bricked Furnace");
+        this.add(NtmBlocks.MACHINE_FURNACE_BRICK, "Bricked Furnace");
         this.add(NtmBlocks.MACHINE_ELECTRIC_FURNACE, "Electric Furnace");
-        this.add(NtmBlocks.FURNACE_IRON, "Iron Furnace");
-        this.add(NtmBlocks.FURNACE_STEEL, "Steel Furnace");
-        this.add(NtmBlocks.COMBINATION_OVEN, "Combination Oven");
+        this.add(NtmBlocks.MACHINE_FURNACE_IRON, "Iron Furnace");
+        this.add(NtmBlocks.MACHINE_FURNACE_STEEL, "Steel Furnace");
+        this.add(NtmBlocks.MACHINE_COMBINATION_OVEN, "Combination Oven");
         this.add(NtmBlocks.MACHINE_BLAST_FURNACE, "Blast Furnace");
         this.add(NtmBlocks.MACHINE_ROTARY_FURNACE, "Rotary Furnace");
 
@@ -1641,9 +1641,9 @@ public class NtmLanguageProvider extends LanguageProvider {
         this.add(NtmBlocks.MACHINE_BATTERY_SOCKET, DESC,"Allows battery items to be connected$to the power grid directly.$Acts as a cable, all ports are connected$to the same network.");
         this.add(NtmBlocks.MACHINE_PUREX, DESC, "Reprocessing machine for many nuclear fuels.$Most recipes require kerosene and nitric acid.");
         this.add(NtmBlocks.MACHINE_WOOD_BURNER, DESC, "Generates 100HE/t when burning items$Collects ashes$Can burn fluids at 50%% efficiency at 40mB/s");
-        this.add(NtmBlocks.FURNACE_IRON, DESC, "Larger and more efficient furnace,$does not waste fuel when idle.");
-        this.add(NtmBlocks.FURNACE_STEEL, DESC, "Very large furnace that can provide bonus items$when smelting ores. Requires external heat source.$Heat transfer rate: ΔT*0.05 TU/t$(Δ means difference and T means temperature)");
-        this.add(NtmBlocks.COMBINATION_OVEN, DESC, "A large furnace that can produce charcoal and coal coke.$Produces fluid byproducts.$Heat transfer rate: ΔT*0.25 TU/t");
+        this.add(NtmBlocks.MACHINE_FURNACE_IRON, DESC, "Larger and more efficient furnace,$does not waste fuel when idle.");
+        this.add(NtmBlocks.MACHINE_FURNACE_STEEL, DESC, "Very large furnace that can provide bonus items$when smelting ores. Requires external heat source.$Heat transfer rate: ΔT*0.05 TU/t$(Δ means difference and T means temperature)");
+        this.add(NtmBlocks.MACHINE_COMBINATION_OVEN, DESC, "A large furnace that can produce charcoal and coal coke.$Produces fluid byproducts.$Heat transfer rate: ΔT*0.25 TU/t");
         this.add(NtmBlocks.MACHINE_STIRLING, DESC, "Turns heat into energy. Requires external heat source.$Heat transfer rate: T*0.1 TU/t$Max intake: 300 TU/t$Efficiency: 50%%");
         this.add(NtmBlocks.MACHINE_STIRLING_STEEL, DESC, "Turns heat into energy. Requires external heat source.$Uses a much heavier gear to support higher temperatures.$Heat transfer rate: T*0.1 TU/t$Max intake: 1500 TU/t$Efficiency: 50%%");
         this.add(NtmBlocks.MACHINE_STIRLING_CREATIVE, DESC, "Turns heat into energy. Requires external heat source.$Heat transfer rate: T*0.1 TU/t$Infinite intake/t$Efficiency: 100%%");

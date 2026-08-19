@@ -36,7 +36,7 @@ public class NtmBlockEntityTypes {
             "furnace_brick",
             () -> BlockEntityType.Builder.of(
                             MachineFurnaceBrickBlockEntity::new,
-                            NtmBlocks.FURNACE_BRICK.get())
+                            NtmBlocks.MACHINE_FURNACE_BRICK.get())
                     .build(null));
     public static final Supplier<BlockEntityType<MachineElectricFurnaceBlockEntity>> ELECTRIC_FURNACE = REGISTER.register(
             "electric_furnace",
@@ -48,19 +48,19 @@ public class NtmBlockEntityTypes {
             "furnace_iron",
             () -> BlockEntityType.Builder.of(
                             MachineFurnaceIronBlockEntity::new,
-                            NtmBlocks.FURNACE_IRON.get())
+                            NtmBlocks.MACHINE_FURNACE_IRON.get())
                     .build(null));
     public static final Supplier<BlockEntityType<MachineFurnaceSteelBlockEntity>> FURNACE_STEEL = REGISTER.register(
             "furnace_steel",
             () -> BlockEntityType.Builder.of(
                             MachineFurnaceSteelBlockEntity::new,
-                            NtmBlocks.FURNACE_STEEL.get())
+                            NtmBlocks.MACHINE_FURNACE_STEEL.get())
                     .build(null));
     public static final Supplier<BlockEntityType<MachineCombinationOvenBlockEntity>> COMBINATION_OVEN = REGISTER.register(
             "combination_oven",
             () -> BlockEntityType.Builder.of(
                             MachineCombinationOvenBlockEntity::new,
-                            NtmBlocks.COMBINATION_OVEN.get())
+                            NtmBlocks.MACHINE_COMBINATION_OVEN.get())
                     .build(null));
     public static final Supplier<BlockEntityType<MachineBlastFurnaceBlockEntity>> MACHINE_BLAST_FURNACE = REGISTER.register(
             "machine_blast_furnace",
@@ -79,7 +79,7 @@ public class NtmBlockEntityTypes {
             "heat_boiler",
             () -> BlockEntityType.Builder.of(
                             MachineHeatBoilerBlockEntity::new,
-                            NtmBlocks.HEAT_BOILER.get())
+                            NtmBlocks.MACHINE_HEAT_BOILER.get())
                     .build(null));
 
     public static final Supplier<BlockEntityType<MachineIndustrialBoilerBlockEntity>> MACHINE_INDUSTRIAL_BOILER = REGISTER.register(

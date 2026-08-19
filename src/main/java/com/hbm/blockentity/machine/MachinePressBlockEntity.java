@@ -66,7 +66,6 @@ public class MachinePressBlockEntity extends MachineBaseBlockEntity {
             BlockPos neighbour = this.worldPosition.relative(dir);
             if(level.getBlockState(neighbour).is(NtmBlocks.PRESS_PREHEATER)) {
                 preheated = true;
-                System.out.println(preheated);
                 break;
             }
         }
