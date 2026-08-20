@@ -1,6 +1,5 @@
 package com.hbm.inventory;
 
-import com.hbm.items.IMetaItem;
 import com.hbm.items.NtmItems;
 import net.minecraft.core.Holder;
 import net.minecraft.core.registries.BuiltInRegistries;
@@ -217,11 +216,7 @@ public class RecipesCommon {
             List<ItemStack> itemStacks = new ArrayList<>();
 
             for (Holder<Item> itemHolder : BuiltInRegistries.ITEM.getTagOrEmpty(this.tag)) {
-                Item item = itemHolder.value();
-
-                if(item instanceof IMetaItem) {
-                    itemStacks.add(new ItemStack(item, 1));
-                }
+                itemStacks.add(new ItemStack(itemHolder.value(), this.stacksize));
             }
 
             return itemStacks;

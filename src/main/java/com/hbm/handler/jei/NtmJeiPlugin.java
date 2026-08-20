@@ -5,7 +5,6 @@ import com.hbm.handler.jei.subtypes.BatterySubtypeInterpreter;
 import com.hbm.handler.jei.subtypes.MetaSubtypeInterpreter;
 import com.hbm.inventory.fluid.FluidType;
 import com.hbm.inventory.fluid.Fluids;
-import com.hbm.inventory.recipes.*;
 import com.hbm.items.NtmItems;
 import com.hbm.items.machine.FluidIconItem;
 import com.hbm.main.NuclearTechMod;
@@ -113,30 +112,30 @@ public class NtmJeiPlugin implements IModPlugin {
 
     @Override
     public void registerRecipes(IRecipeRegistration registration) {
-        registration.addRecipes(NtmJeiRecipeTypes.ARC_WELDER, ArcWelderRecipes.INSTANCE.recipeOrderedList);
-        registration.addRecipes(NtmJeiRecipeTypes.ASSEMBLY_MACHINE, AssemblyMachineRecipes.INSTANCE.recipeOrderedList);
-        registration.addRecipes(NtmJeiRecipeTypes.BLAST_FURNACE, BlastFurnaceRecipes.INSTANCE.recipeOrderedList);
-        registration.addRecipes(NtmJeiRecipeTypes.CATALYTIC_CRACKING_TOWER, CatalyticCrackingTowerRecipes.INSTANCE.recipeOrderedList);
-        registration.addRecipes(NtmJeiRecipeTypes.CATALYTIC_REFORMER, CatalyticReformerRecipes.INSTANCE.recipeOrderedList);
-        registration.addRecipes(NtmJeiRecipeTypes.CENTRIFUGE, CentrifugeRecipes.INSTANCE.recipeOrderedList);
-        registration.addRecipes(NtmJeiRecipeTypes.CHEMICAL_PLANT, ChemicalPlantRecipes.INSTANCE.recipeOrderedList);
-        registration.addRecipes(NtmJeiRecipeTypes.COMBINATION_OVEN, CombinationOvenRecipes.INSTANCE.recipeOrderedList);
-        registration.addRecipes(NtmJeiRecipeTypes.COMPRESSOR, CompressorRecipes.INSTANCE.recipeOrderedList);
-        registration.addRecipes(NtmJeiRecipeTypes.ELECTROLYSER_FLUID, ElectrolyserFluidRecipes.INSTANCE.recipeOrderedList);
-        registration.addRecipes(NtmJeiRecipeTypes.ELECTROLYSER_METAL, ElectrolyserMetalRecipes.INSTANCE.recipeOrderedList);
-        registration.addRecipes(NtmJeiRecipeTypes.FRACTIONING_TOWER, FractioningRecipes.INSTANCE.recipeOrderedList);
-        registration.addRecipes(NtmJeiRecipeTypes.GAS_CENTRIFUGE, GasCentrifugeRecipes.INSTANCE.recipeOrderedList);
-        registration.addRecipes(NtmJeiRecipeTypes.MIXER, MixerRecipes.INSTANCE.recipeOrderedList);
-        registration.addRecipes(NtmJeiRecipeTypes.ORE_ACIDIZER, OreAcidizerRecipes.INSTANCE.recipeOrderedList);
-        registration.addRecipes(NtmJeiRecipeTypes.PRECISION_ASSEMBLY_MACHINE, PrecAssRecipes.INSTANCE.recipeOrderedList);
-        registration.addRecipes(NtmJeiRecipeTypes.PRESS, PressRecipes.INSTANCE.recipeOrderedList);
-        registration.addRecipes(NtmJeiRecipeTypes.PUREX, PUREXRecipes.INSTANCE.recipeOrderedList);
-        registration.addRecipes(NtmJeiRecipeTypes.REFINERY, RefineryRecipes.INSTANCE.recipeOrderedList);
-        registration.addRecipes(NtmJeiRecipeTypes.ROTARY_FURNACE, RotaryFurnaceRecipes.INSTANCE.recipeOrderedList);
-        registration.addRecipes(NtmJeiRecipeTypes.SHREDDER, ShredderRecipes.INSTANCE.recipeOrderedList);
-        registration.addRecipes(NtmJeiRecipeTypes.SILEX, SILEXRecipes.INSTANCE.recipeOrderedList);
-        registration.addRecipes(NtmJeiRecipeTypes.SOLDERING_STATION, SolderingStationRecipes.INSTANCE.recipeOrderedList);
-        registration.addRecipes(NtmJeiRecipeTypes.VACUUM_REFINERY, VacuumRefineryRecipes.INSTANCE.recipeOrderedList);
+        registration.addRecipes(NtmJeiRecipeTypes.ARC_WELDER, NtmJeiRecipes.arcWelder());
+        registration.addRecipes(NtmJeiRecipeTypes.ASSEMBLY_MACHINE, NtmJeiRecipes.assemblyMachine());
+        registration.addRecipes(NtmJeiRecipeTypes.BLAST_FURNACE, NtmJeiRecipes.blastFurnace());
+        registration.addRecipes(NtmJeiRecipeTypes.CATALYTIC_CRACKING_TOWER, NtmJeiRecipes.catalyticCrackingTower());
+        registration.addRecipes(NtmJeiRecipeTypes.CATALYTIC_REFORMER, NtmJeiRecipes.catalyticReformer());
+        registration.addRecipes(NtmJeiRecipeTypes.CENTRIFUGE, NtmJeiRecipes.centrifuge());
+        registration.addRecipes(NtmJeiRecipeTypes.CHEMICAL_PLANT, NtmJeiRecipes.chemicalPlant());
+        registration.addRecipes(NtmJeiRecipeTypes.COMBINATION_OVEN, NtmJeiRecipes.combinationOven());
+        registration.addRecipes(NtmJeiRecipeTypes.COMPRESSOR, NtmJeiRecipes.compressor());
+        registration.addRecipes(NtmJeiRecipeTypes.ELECTROLYSER_FLUID, NtmJeiRecipes.electrolyserFluid());
+        registration.addRecipes(NtmJeiRecipeTypes.ELECTROLYSER_METAL, NtmJeiRecipes.electrolyserMetal());
+        registration.addRecipes(NtmJeiRecipeTypes.FRACTIONING_TOWER, NtmJeiRecipes.fractioningTower());
+        registration.addRecipes(NtmJeiRecipeTypes.GAS_CENTRIFUGE, NtmJeiRecipes.gasCentrifuge());
+        registration.addRecipes(NtmJeiRecipeTypes.MIXER, NtmJeiRecipes.mixer());
+        registration.addRecipes(NtmJeiRecipeTypes.ORE_ACIDIZER, NtmJeiRecipes.oreAcidizer());
+        registration.addRecipes(NtmJeiRecipeTypes.PRECISION_ASSEMBLY_MACHINE, NtmJeiRecipes.precisionAssemblyMachine());
+        registration.addRecipes(NtmJeiRecipeTypes.PRESS, NtmJeiRecipes.press());
+        registration.addRecipes(NtmJeiRecipeTypes.PUREX, NtmJeiRecipes.purex());
+        registration.addRecipes(NtmJeiRecipeTypes.REFINERY, NtmJeiRecipes.refinery());
+        registration.addRecipes(NtmJeiRecipeTypes.ROTARY_FURNACE, NtmJeiRecipes.rotaryFurnace());
+        registration.addRecipes(NtmJeiRecipeTypes.SHREDDER, NtmJeiRecipes.shredder());
+        registration.addRecipes(NtmJeiRecipeTypes.SILEX, NtmJeiRecipes.silex());
+        registration.addRecipes(NtmJeiRecipeTypes.SOLDERING_STATION, NtmJeiRecipes.solderingStation());
+        registration.addRecipes(NtmJeiRecipeTypes.VACUUM_REFINERY, NtmJeiRecipes.vacuumRefinery());
     }
 
     @Override

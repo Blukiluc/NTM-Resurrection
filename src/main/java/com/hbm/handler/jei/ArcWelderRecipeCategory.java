@@ -71,8 +71,9 @@ public class ArcWelderRecipeCategory implements IRecipeCategory<GenericRecipe> {
         if(recipe.inputFluid != null) {
             for(int i = 0; i < recipe.inputFluid.length; i++) {
                 FluidStack fluid = recipe.inputFluid[i];
-                int x = 5 + i * 18;
-                int y = 45;
+                int slot = (recipe.inputItem == null ? 0 : recipe.inputItem.length) + i;
+                int x = 5 + (slot % 6) * 18;
+                int y = 5 + (slot / 6) * 18;
 
                 builder.addSlot(RecipeIngredientRole.INPUT, x, y)
                         .addItemStack(FluidIconItem.make(fluid.type, fluid.fill));
@@ -83,8 +84,8 @@ public class ArcWelderRecipeCategory implements IRecipeCategory<GenericRecipe> {
         if(recipe.outputItem != null) {
             for(int i = 0; i < recipe.outputItem.length; i++) {
                 IOutput output = recipe.outputItem[i];
-                int x = 120;
-                int y = 5 + i * 18;
+                int x = 120 + (i % 3) * 18;
+                int y = 5 + (i / 3) * 18;
 
                 List<ItemStack> possibilities = new ArrayList<>(List.of(output.getAllPossibilities()));
 
@@ -97,8 +98,9 @@ public class ArcWelderRecipeCategory implements IRecipeCategory<GenericRecipe> {
         if(recipe.outputFluid != null) {
             for(int i = 0; i < recipe.outputFluid.length; i++) {
                 FluidStack fluid = recipe.outputFluid[i];
-                int x = 120;
-                int y = 45 + i * 18;
+                int slot = (recipe.outputItem == null ? 0 : recipe.outputItem.length) + i;
+                int x = 120 + (slot % 3) * 18;
+                int y = 5 + (slot / 3) * 18;
 
                 builder.addSlot(RecipeIngredientRole.OUTPUT, x, y)
                         .addItemStack(FluidIconItem.make(fluid.type, fluid.fill));

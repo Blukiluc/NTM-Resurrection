@@ -529,7 +529,7 @@ public class SolderingStationRecipes extends SerializableRecipe {
         int duration = obj.get("duration").getAsInt();
         long consumption = obj.get("consumption").getAsLong();
 
-        recipes.add(new SolderingRecipe(output, duration, consumption, fluid, toppings, pcb, solder));
+        new SolderingRecipe(output, duration, consumption, fluid, toppings, pcb, solder);
     }
 
     @Override

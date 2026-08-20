@@ -1,7 +1,5 @@
 package com.hbm.handler.jei;
 
-import com.hbm.inventory.recipes.BlastFurnaceRecipe;
-import com.hbm.inventory.recipes.RotaryFurnaceRecipe;
 import com.hbm.inventory.recipes.loader.GenericRecipe;
 import mezz.jei.api.recipe.RecipeType;
 
@@ -12,8 +10,8 @@ public class NtmJeiRecipeTypes {
     public static final RecipeType<GenericRecipe> ASSEMBLY_MACHINE = RecipeType.create(
             "ntm", "assembly_machine", GenericRecipe.class);
 
-    public static final RecipeType<BlastFurnaceRecipe> BLAST_FURNACE = RecipeType.create(
-            "ntm", "blast_furnace", BlastFurnaceRecipe.class);
+    public static final RecipeType<GenericRecipe> BLAST_FURNACE = RecipeType.create(
+            "ntm", "blast_furnace", GenericRecipe.class);
 
     public static final RecipeType<GenericRecipe> CATALYTIC_CRACKING_TOWER = RecipeType.create(
             "ntm", "catalytic_cracking_tower", GenericRecipe.class);
@@ -63,8 +61,8 @@ public class NtmJeiRecipeTypes {
     public static final RecipeType<GenericRecipe> REFINERY = RecipeType.create(
             "ntm", "refinery", GenericRecipe.class);
 
-    public static final RecipeType<RotaryFurnaceRecipe> ROTARY_FURNACE = RecipeType.create(
-            "ntm", "rotary_furnace", RotaryFurnaceRecipe.class);
+    public static final RecipeType<GenericRecipe> ROTARY_FURNACE = RecipeType.create(
+            "ntm", "rotary_furnace", GenericRecipe.class);
 
     public static final RecipeType<GenericRecipe> SHREDDER = RecipeType.create(
             "ntm", "shredder", GenericRecipe.class);

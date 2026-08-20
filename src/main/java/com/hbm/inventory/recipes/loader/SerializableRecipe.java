@@ -56,7 +56,10 @@ public abstract class SerializableRecipe {
         recipeHandlers.add(SILEXRecipes.INSTANCE);
         recipeHandlers.add(ElectrolyserFluidRecipes.INSTANCE);
         recipeHandlers.add(ElectrolyserMetalRecipes.INSTANCE);
+        recipeHandlers.add(CatalyticCrackingTowerRecipes.INSTANCE);
+        recipeHandlers.add(CatalyticReformerRecipes.INSTANCE);
         recipeHandlers.add(RefineryRecipes.INSTANCE);
+        recipeHandlers.add(VacuumRefineryRecipes.INSTANCE);
         recipeHandlers.add(MixerRecipes.INSTANCE);
         recipeHandlers.add(CompressorRecipes.INSTANCE);
         recipeHandlers.add(FractioningRecipes.INSTANCE);
