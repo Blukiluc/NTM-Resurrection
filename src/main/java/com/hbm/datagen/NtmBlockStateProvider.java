@@ -330,8 +330,8 @@ public class NtmBlockStateProvider extends BlockStateProvider {
         this.particleOnlyBlock(NtmBlocks.MACHINE_COMPRESSOR, modLoc("block/block_steel"));
         this.particleOnlyBlock(NtmBlocks.MACHINE_COMPRESSOR_COMPACT, modLoc("block/block_steel"));
         this.particleOnlyBlock(NtmBlocks.MACHINE_FLARE, modLoc("block/block_steel"));
-        this.particleOnlyBlock(NtmBlocks.CHIMNEY_BRICK, modLoc("block/brick_fire"));
-        this.particleOnlyBlock(NtmBlocks.CHIMNEY_INDUSTRIAL, modLoc("block/concrete"));
+        this.particleOnlyBlock(NtmBlocks.MACHINE_SMOKESTACK, modLoc("block/brick_fire"));
+        this.particleOnlyBlock(NtmBlocks.MACHINE_SMOKESTACK_INDUSTRIAL, modLoc("block/concrete"));
 
         this.cubeTop(NtmBlocks.MACHINE_SATLINKER);
 

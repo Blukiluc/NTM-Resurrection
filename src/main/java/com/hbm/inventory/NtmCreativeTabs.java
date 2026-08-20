@@ -802,8 +802,8 @@ public class NtmCreativeTabs {
                         output.accept(NtmBlocks.MACHINE_COMPRESSOR);
                         output.accept(NtmBlocks.MACHINE_COMPRESSOR_COMPACT);
                         output.accept(NtmBlocks.MACHINE_FLARE);
-                        output.accept(NtmBlocks.CHIMNEY_BRICK);
-                        output.accept(NtmBlocks.CHIMNEY_INDUSTRIAL);
+                        output.accept(NtmBlocks.MACHINE_SMOKESTACK);
+                        output.accept(NtmBlocks.MACHINE_SMOKESTACK_INDUSTRIAL);
 
                         output.accept(NtmBlocks.MACHINE_FURNACE_BRICK);
                         output.accept(NtmBlocks.MACHINE_ELECTRIC_FURNACE);

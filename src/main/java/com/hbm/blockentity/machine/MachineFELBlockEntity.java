@@ -6,7 +6,7 @@ import com.hbm.blockentity.MachineBaseBlockEntity;
 import com.hbm.blockentity.NtmBlockEntityTypes;
 import com.hbm.blocks.DummyableBlock;
 import com.hbm.blocks.NtmBlocks;
-import com.hbm.blocks.machine.MachineSILEXBlock;
+import com.hbm.blocks.machine.MachineSilexBlock;
 import com.hbm.interfaces.IControlReceiver;
 import com.hbm.inventory.menus.MachineFELMenu;
 import com.hbm.items.machine.ItemFELCrystal;
@@ -133,12 +133,12 @@ public class MachineFELBlockEntity extends MachineBaseBlockEntity implements IEn
             BlockState state = this.level.getBlockState(beamPos);
 
             if(state.is(NtmBlocks.MACHINE_SILEX.get())) {
-                MachineSILEXBlock block = (MachineSILEXBlock) state.getBlock();
+                MachineSilexBlock block = (MachineSilexBlock) state.getBlock();
                 BlockPos corePos = block.findCore(this.level, beamPos);
 
                 if(corePos != null && processedSilex.add(corePos)) {
                     BlockEntity blockEntity = this.level.getBlockEntity(corePos);
-                    if(blockEntity instanceof MachineSILEXBlockEntity silex) {
+                    if(blockEntity instanceof MachineSilexBlockEntity silex) {
                         Direction silexDirection = silex.getBlockState().getValue(DummyableBlock.FACING);
                         if(i >= 5 && !silexSpacing && this.rotationIsValid(silexDirection, direction)) {
                             silex.mode = this.mode;

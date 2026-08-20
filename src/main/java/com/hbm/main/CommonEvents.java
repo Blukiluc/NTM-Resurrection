@@ -19,7 +19,6 @@ import com.hbm.hazard.HazardSystem;
 import com.hbm.inventory.FluidContainerRegistry;
 import com.hbm.inventory.NtmMenuTypes;
 import com.hbm.inventory.fluid.Fluids;
-import com.hbm.inventory.menus.MachineTurbofanMenu;
 import com.hbm.inventory.recipes.loader.SerializableRecipe;
 import com.hbm.inventory.screens.*;
 import com.hbm.network.toclient.InformPlayer;
@@ -165,10 +164,10 @@ public class CommonEvents {
 
         event.register(NtmMenuTypes.ASSEMBLY_MACHINE.get(), MachineAssemblyMachineScreen::new);
         event.register(NtmMenuTypes.ASSEMBLY_FACTORY.get(), MachineAssemblyFactoryScreen::new);
-        event.register(NtmMenuTypes.PREC_ASS.get(), MachinePrecAssScreen::new);
+        event.register(NtmMenuTypes.PREC_ASS.get(), MachinePrecisionAssemblyMachineScreen::new);
         event.register(NtmMenuTypes.CHEMICAL_PLANT.get(), MachineChemicalPlantScreen::new);
         event.register(NtmMenuTypes.CHEMICAL_FACTORY.get(), MachineChemicalFactoryScreen::new);
-        event.register(NtmMenuTypes.PUREX.get(), MachinePUREXScreen::new);
+        event.register(NtmMenuTypes.PUREX.get(), MachinePurexScreen::new);
         event.register(NtmMenuTypes.ORE_ACIDIZER.get(), MachineOreAcidizerScreen::new);
         event.register(NtmMenuTypes.WOOD_BURNER.get(), MachineWoodBurnerScreen::new);
         event.register(NtmMenuTypes.DIESEL.get(), MachineDieselScreen::new);
@@ -183,7 +182,7 @@ public class CommonEvents {
         event.register(NtmMenuTypes.ARC_WELDER.get(), MachineArcWelderScreen::new);
         event.register(NtmMenuTypes.MIXER.get(), MachineMixerScreen::new);
         event.register(NtmMenuTypes.FEL.get(), MachineFELScreen::new);
-        event.register(NtmMenuTypes.SILEX.get(), MachineSILEXScreen::new);
+        event.register(NtmMenuTypes.SILEX.get(), MachineSilexScreen::new);
         event.register(NtmMenuTypes.ELECTROLYSER_FLUID.get(), MachineElectrolyserFluidScreen::new);
         event.register(NtmMenuTypes.ELECTROLYSER_METAL.get(), MachineElectrolyserMetalScreen::new);
         event.register(NtmMenuTypes.FURNACE_BRICK.get(), MachineFurnaceBrickScreen::new);

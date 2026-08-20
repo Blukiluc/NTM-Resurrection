@@ -2,7 +2,7 @@ package com.hbm.module.machine;
 
 import api.hbm.energymk2.IEnergyHandlerMK2;
 import com.hbm.inventory.fluid.tank.FluidTank;
-import com.hbm.inventory.recipes.PUREXRecipes;
+import com.hbm.inventory.recipes.PurexRecipes;
 import com.hbm.inventory.recipes.loader.GenericRecipe;
 import com.hbm.inventory.recipes.loader.GenericRecipes;
 import net.minecraft.core.NonNullList;
@@ -20,7 +20,7 @@ public class ModuleMachinePUREX extends ModuleMachineBase {
 
     @Override
     public GenericRecipes<GenericRecipe> getRecipeSet() {
-        return PUREXRecipes.INSTANCE;
+        return PurexRecipes.INSTANCE;
     }
 
     public ModuleMachinePUREX itemInput(int from) {

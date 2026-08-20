@@ -253,10 +253,10 @@ public class NtmBlockEntityTypes {
                             NtmBlocks.MACHINE_ASSEMBLY_FACTORY.get())
                     .build(null));
 
-    public static final Supplier<BlockEntityType<MachinePrecAssBlockEntity>> PREC_ASS = REGISTER.register(
+    public static final Supplier<BlockEntityType<MachinePrecisionAssemblyMachineBlockEntity>> PREC_ASS = REGISTER.register(
             "prec_ass",
             () -> BlockEntityType.Builder.of(
-                            MachinePrecAssBlockEntity::new,
+                            MachinePrecisionAssemblyMachineBlockEntity::new,
                             NtmBlocks.MACHINE_PREC_ASS.get())
                     .build(null));
 
@@ -274,10 +274,10 @@ public class NtmBlockEntityTypes {
                             NtmBlocks.MACHINE_CHEMICAL_FACTORY.get())
                     .build(null));
 
-    public static final Supplier<BlockEntityType<MachinePUREXBlockEntity>> PUREX = REGISTER.register(
+    public static final Supplier<BlockEntityType<MachinePurexBlockEntity>> PUREX = REGISTER.register(
             "purex",
             () -> BlockEntityType.Builder.of(
-                            MachinePUREXBlockEntity::new,
+                            MachinePurexBlockEntity::new,
                             NtmBlocks.MACHINE_PUREX.get())
                     .build(null));
 
@@ -403,10 +403,10 @@ public class NtmBlockEntityTypes {
                             NtmBlocks.MACHINE_FEL.get())
                     .build(null));
 
-    public static final Supplier<BlockEntityType<MachineSILEXBlockEntity>> SILEX = REGISTER.register(
+    public static final Supplier<BlockEntityType<MachineSilexBlockEntity>> SILEX = REGISTER.register(
             "silex",
             () -> BlockEntityType.Builder.of(
-                            MachineSILEXBlockEntity::new,
+                            MachineSilexBlockEntity::new,
                             NtmBlocks.MACHINE_SILEX.get())
                     .build(null));
 
@@ -510,18 +510,18 @@ public class NtmBlockEntityTypes {
                             NtmBlocks.MACHINE_FLARE.get())
                     .build(null));
 
-    public static final Supplier<BlockEntityType<ChimneyBrickBlockEntity>> CHIMNEY_BRICK = REGISTER.register(
+    public static final Supplier<BlockEntityType<MachineSmokestackBlockEntity>> CHIMNEY_BRICK = REGISTER.register(
             "chimney_brick",
             () -> BlockEntityType.Builder.of(
-                            ChimneyBrickBlockEntity::new,
-                            NtmBlocks.CHIMNEY_BRICK.get())
+                            MachineSmokestackBlockEntity::new,
+                            NtmBlocks.MACHINE_SMOKESTACK.get())
                     .build(null));
 
-    public static final Supplier<BlockEntityType<ChimneyIndustrialBlockEntity>> CHIMNEY_INDUSTRIAL = REGISTER.register(
+    public static final Supplier<BlockEntityType<MachineSmokestackIndustrialBlockEntity>> CHIMNEY_INDUSTRIAL = REGISTER.register(
             "chimney_industrial",
             () -> BlockEntityType.Builder.of(
-                            ChimneyIndustrialBlockEntity::new,
-                            NtmBlocks.CHIMNEY_INDUSTRIAL.get())
+                            MachineSmokestackIndustrialBlockEntity::new,
+                            NtmBlocks.MACHINE_SMOKESTACK_INDUSTRIAL.get())
                     .build(null));
 
     public static final Supplier<BlockEntityType<ProxyComboBlockEntity>> PROXY_COMBO = REGISTER.register("proxy_combo", () -> BlockEntityType.Builder.of(ProxyComboBlockEntity::new).build(null));

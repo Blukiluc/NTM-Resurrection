@@ -1359,8 +1359,8 @@ public class NtmLanguageProvider extends LanguageProvider {
         this.add(NtmBlocks.MACHINE_COMPRESSOR, "Industrial Compressor");
         this.add(NtmBlocks.MACHINE_COMPRESSOR_COMPACT, "Compact Compressor");
         this.add(NtmBlocks.MACHINE_FLARE, "Flare Stack");
-        this.add(NtmBlocks.CHIMNEY_BRICK, "Smokestack");
-        this.add(NtmBlocks.CHIMNEY_INDUSTRIAL, "Industrial Smokestack");
+        this.add(NtmBlocks.MACHINE_SMOKESTACK, "Smokestack");
+        this.add(NtmBlocks.MACHINE_SMOKESTACK_INDUSTRIAL, "Industrial Smokestack");
 
         this.add(NtmBlocks.MACHINE_SATLINKER, "SatLink Device");
 
@@ -1652,8 +1652,8 @@ public class NtmLanguageProvider extends LanguageProvider {
         this.add(NtmBlocks.PUMP_ELECTRIC, DESC, "Uses electricity to pump up groundwater$Generates up to 10,000mB/t$Needs to be placed below Y:70");
         this.add(NtmBlocks.MACHINE_STEAM_ENGINE, DESC, "Efficiency: 85%%");
         this.add(NtmBlocks.MACHINE_FLARE, DESC, "Can burn fluids and vent gasses$Burns up to 10mB/t$Vents up to 50mB/t$$Fuel efficiency:$-Flammable Gasses: 20%%$-Flammable Liquids: 10%%");
-        this.add(NtmBlocks.CHIMNEY_BRICK, DESC, "Connect using exhaust pipes to polluting machines$Reduces pollution emission by 75%%");
-        this.add(NtmBlocks.CHIMNEY_INDUSTRIAL, DESC, "Connect using exhaust pipes to polluting machines$Reduces pollution emission by 90%%");
+        this.add(NtmBlocks.MACHINE_SMOKESTACK, DESC, "Connect using exhaust pipes to polluting machines$Reduces pollution emission by 75%%");
+        this.add(NtmBlocks.MACHINE_SMOKESTACK_INDUSTRIAL, DESC, "Connect using exhaust pipes to polluting machines$Reduces pollution emission by 90%%");
         this.add("flare.ignition", "Ignition");
         this.add("flare.valve", "Flow Valve");
         this.add(NtmBlocks.RED_CONNECTOR, DESC, "Single wire connection$Range: 10m");

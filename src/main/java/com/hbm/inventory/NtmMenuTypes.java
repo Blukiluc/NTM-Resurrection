@@ -20,13 +20,13 @@ public class NtmMenuTypes {
 
     public static final DeferredHolder<MenuType<?>, MenuType<MachineAssemblyFactoryMenu>> ASSEMBLY_FACTORY = reg("assembly_factory", MachineAssemblyFactoryMenu::new);
 
-    public static final DeferredHolder<MenuType<?>, MenuType<MachinePrecAssMenu>> PREC_ASS = reg("prec_ass", MachinePrecAssMenu::new);
+    public static final DeferredHolder<MenuType<?>, MenuType<MachinePrecisionAssemblyMachineMenu>> PREC_ASS = reg("prec_ass", MachinePrecisionAssemblyMachineMenu::new);
 
     public static final DeferredHolder<MenuType<?>, MenuType<MachineChemicalPlantMenu>> CHEMICAL_PLANT = reg("chemical_plant", MachineChemicalPlantMenu::new);
 
     public static final DeferredHolder<MenuType<?>, MenuType<MachineChemicalFactoryMenu>> CHEMICAL_FACTORY = reg("chemical_factory", MachineChemicalFactoryMenu::new);
 
-    public static final DeferredHolder<MenuType<?>, MenuType<MachinePUREXMenu>> PUREX = reg("purex", MachinePUREXMenu::new);
+    public static final DeferredHolder<MenuType<?>, MenuType<MachinePurexMenu>> PUREX = reg("purex", MachinePurexMenu::new);
 
     public static final DeferredHolder<MenuType<?>, MenuType<MachineOreAcidizerMenu>> ORE_ACIDIZER = reg("ore_acidizer", MachineOreAcidizerMenu::new);
 
@@ -75,7 +75,7 @@ public class NtmMenuTypes {
     public static final DeferredHolder<MenuType<?>, MenuType<MachineArcWelderMenu>> ARC_WELDER = reg("arc_welder", MachineArcWelderMenu::new);
     public static final DeferredHolder<MenuType<?>, MenuType<MachineMixerMenu>> MIXER = reg("mixer", MachineMixerMenu::new);
     public static final DeferredHolder<MenuType<?>, MenuType<MachineFELMenu>> FEL = reg("fel", MachineFELMenu::new);
-    public static final DeferredHolder<MenuType<?>, MenuType<MachineSILEXMenu>> SILEX = reg("silex", MachineSILEXMenu::new);
+    public static final DeferredHolder<MenuType<?>, MenuType<MachineSilexMenu>> SILEX = reg("silex", MachineSilexMenu::new);
     public static final DeferredHolder<MenuType<?>, MenuType<MachineElectrolyserFluidMenu>> ELECTROLYSER_FLUID = reg("electrolyser_fluid", MachineElectrolyserFluidMenu::new);
     public static final DeferredHolder<MenuType<?>, MenuType<MachineElectrolyserMetalMenu>> ELECTROLYSER_METAL = reg("electrolyser_metal", MachineElectrolyserMetalMenu::new);
 
