@@ -1,23 +1,23 @@
 package com.hbm.world.gen.feature;
 
+import com.hbm.blocks.NtmBlocks;
 import com.mojang.serialization.Codec;
 import net.minecraft.core.BlockPos;
-import net.minecraft.tags.BlockTags;
 import net.minecraft.util.RandomSource;
 import net.minecraft.world.level.WorldGenLevel;
 import net.minecraft.world.level.block.Blocks;
-import net.minecraft.world.level.block.state.BlockState;
 import net.minecraft.world.level.levelgen.feature.Feature;
 import net.minecraft.world.level.levelgen.feature.FeaturePlaceContext;
 import net.minecraft.world.level.levelgen.feature.configurations.NoneFeatureConfiguration;
+import net.minecraft.world.level.levelgen.feature.configurations.OreConfiguration;
+import net.minecraft.world.level.levelgen.structure.templatesystem.BlockMatchTest;
+
+import java.util.Random;
 
 /**
  * Reproduces the 1.7.10 coltan generation from HbmWorldGen: a single deposit zone, centered on a
  * point that is deterministically derived from the world seed (always the same location for a
  * given seed), with veins becoming denser the closer they are to that center point.
- * <p>
- * NOTE: uses Blocks.DIAMOND_ORE as a placeholder for NtmBlocks.ORE_COLTAN, which isn't ported yet.
- * This is only meant to test whether the special placement logic behaves correctly in-game.
  */
 public class ColtanDepositFeature extends Feature<NoneFeatureConfiguration> {
 
@@ -38,7 +38,7 @@ public class ColtanDepositFeature extends Feature<NoneFeatureConfiguration> {
 
         // Same seed used in the original code (world seed + 5), first two nextGaussian() calls
         // always yield the same result, so this is one fixed point for the whole world - not per chunk.
-        RandomSource centerRandom = RandomSource.create(level.getSeed() + 5);
+        Random centerRandom = new Random(level.getSeed() + 5);
         int centerX = (int) (centerRandom.nextGaussian() * 1500);
         int centerZ = (int) (centerRandom.nextGaussian() * 1500);
 
@@ -59,27 +59,21 @@ public class ColtanDepositFeature extends Feature<NoneFeatureConfiguration> {
                         && posZ <= centerZ + range && posZ >= centerZ - range;
 
                 if (withinZone) {
-                    // TODO: swap for NtmBlocks.ORE_COLTAN.get().defaultBlockState() once ported
-                    placeVein(level, random, new BlockPos(posX, posY, posZ), Blocks.DIAMOND_ORE.defaultBlockState(), VEIN_SIZE);
-                    placedAny = true;
+                    placedAny |= Feature.ORE.place(
+                            new OreConfiguration(
+                                    new BlockMatchTest(Blocks.STONE),
+                                    NtmBlocks.ORE_DEEPSLATE_COLTAN.get().defaultBlockState(),
+                                    VEIN_SIZE
+                            ),
+                            level,
+                            context.chunkGenerator(),
+                            random,
+                            new BlockPos(posX, posY, posZ)
+                    );
                 }
             }
         }
 
         return placedAny;
-    }
-
-    /**
-     * Simple random-cluster vein placement (not a faithful reproduction of vanilla's ore blob shape,
-     * just enough to validate the special zone logic while the real block is missing).
-     */
-    private void placeVein(WorldGenLevel level, RandomSource random, BlockPos center, BlockState oreState, int size) {
-        for (int i = 0; i < size; i++) {
-            BlockPos pos = center.offset(random.nextInt(3) - 1, random.nextInt(3) - 1, random.nextInt(3) - 1);
-            BlockState current = level.getBlockState(pos);
-            if (current.is(BlockTags.STONE_ORE_REPLACEABLES) || current.is(BlockTags.DEEPSLATE_ORE_REPLACEABLES)) {
-                level.setBlock(pos, oreState, 2);
-            }
-        }
     }
 }

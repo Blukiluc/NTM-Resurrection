@@ -2,30 +2,32 @@ package com.hbm.world.gen.feature;
 
 import com.mojang.serialization.Codec;
 import net.minecraft.core.BlockPos;
-import net.minecraft.tags.BlockTags;
 import net.minecraft.util.RandomSource;
 import net.minecraft.world.level.WorldGenLevel;
+import net.minecraft.world.level.block.Block;
 import net.minecraft.world.level.block.Blocks;
-import net.minecraft.world.level.block.state.BlockState;
 import net.minecraft.world.level.levelgen.feature.Feature;
 import net.minecraft.world.level.levelgen.feature.FeaturePlaceContext;
 import net.minecraft.world.level.levelgen.feature.configurations.NoneFeatureConfiguration;
+import net.minecraft.world.level.levelgen.feature.configurations.OreConfiguration;
+import net.minecraft.world.level.levelgen.structure.templatesystem.BlockMatchTest;
+
+import java.util.function.Supplier;
 
 /**
  * Reproduces the 1.7.10 australium generation from HbmWorldGen: unlike coltan, this deposit sits
  * at a fixed set of world coordinates (X and Z both between -450 and -350), independent of seed.
- * <p>
- * NOTE: uses Blocks.EMERALD_ORE as a placeholder for NtmBlocks.ORE_AUSTRALIUM, which isn't ported
- * yet. This is only meant to test whether the special placement logic behaves correctly in-game.
  */
 public class AustraliumDepositFeature extends Feature<NoneFeatureConfiguration> {
 
     private static final int VEIN_SIZE = 50;
     private static final int MIN_COORD = -450;
     private static final int MAX_COORD = -350;
+    private final Supplier<? extends Block> ore;
 
-    public AustraliumDepositFeature(Codec<NoneFeatureConfiguration> codec) {
+    public AustraliumDepositFeature(Codec<NoneFeatureConfiguration> codec, Supplier<? extends Block> ore) {
         super(codec);
+        this.ore = ore;
     }
 
     @Override
@@ -39,31 +41,26 @@ public class AustraliumDepositFeature extends Feature<NoneFeatureConfiguration> 
 
         boolean placedAny = false;
 
-        // Original loop bound was "rand.nextInt(4)", i.e. 0 to 3 attempts
-        int attempts = random.nextInt(4);
-
-        for (int i = 0; i < attempts; i++) {
+        for (int i = 0; i < random.nextInt(4); i++) {
             int posX = chunkX + random.nextInt(16);
             int posY = random.nextInt(15) + 15;
             int posZ = chunkZ + random.nextInt(16);
 
             if (posX <= MAX_COORD && posX >= MIN_COORD && posZ <= MAX_COORD && posZ >= MIN_COORD) {
-                // TODO: swap for NtmBlocks.ORE_AUSTRALIUM.get().defaultBlockState() once ported
-                placeVein(level, random, new BlockPos(posX, posY, posZ), Blocks.EMERALD_ORE.defaultBlockState(), VEIN_SIZE);
-                placedAny = true;
+                placedAny |= Feature.ORE.place(
+                        new OreConfiguration(
+                                new BlockMatchTest(Blocks.STONE),
+                                ore.get().defaultBlockState(),
+                                VEIN_SIZE
+                        ),
+                        level,
+                        context.chunkGenerator(),
+                        random,
+                        new BlockPos(posX, posY, posZ)
+                );
             }
         }
 
         return placedAny;
-    }
-
-    private void placeVein(WorldGenLevel level, RandomSource random, BlockPos center, BlockState oreState, int size) {
-        for (int i = 0; i < size; i++) {
-            BlockPos pos = center.offset(random.nextInt(5) - 2, random.nextInt(5) - 2, random.nextInt(5) - 2);
-            BlockState current = level.getBlockState(pos);
-            if (current.is(BlockTags.STONE_ORE_REPLACEABLES) || current.is(BlockTags.DEEPSLATE_ORE_REPLACEABLES)) {
-                level.setBlock(pos, oreState, 2);
-            }
-        }
     }
 }

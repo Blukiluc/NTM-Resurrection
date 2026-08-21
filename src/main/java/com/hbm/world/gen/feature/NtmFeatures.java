@@ -8,9 +8,7 @@ import net.neoforged.neoforge.registries.DeferredHolder;
 import net.neoforged.neoforge.registries.DeferredRegister;
 
 /**
- * Registry for custom worldgen Features (as opposed to ConfiguredFeature/PlacedFeature, which are
- * datapack entries built from these Feature types). Needed for the coltan/australium special
- * zone-based deposits, since they can't be expressed with vanilla's declarative ore placement.
+ * Registry for custom worldgen features.
  */
 public class NtmFeatures {
 
@@ -19,6 +17,6 @@ public class NtmFeatures {
     public static final DeferredHolder<Feature<?>, ColtanDepositFeature> COLTAN_DEPOSIT =
             FEATURES.register("coltan_deposit", () -> new ColtanDepositFeature(NoneFeatureConfiguration.CODEC));
 
-    public static final DeferredHolder<Feature<?>, AustraliumDepositFeature> AUSTRALIUM_DEPOSIT =
-            FEATURES.register("australium_deposit", () -> new AustraliumDepositFeature(NoneFeatureConfiguration.CODEC));
+//    public static final DeferredHolder<Feature<?>, AustraliumDepositFeature> AUSTRALIUM_DEPOSIT =
+//            FEATURES.register("australium_deposit", () -> new AustraliumDepositFeature(NoneFeatureConfiguration.CODEC, NtmBlocks.ORE_AUSTRALIUM));
 }
