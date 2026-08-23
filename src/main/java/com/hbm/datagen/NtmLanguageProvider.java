@@ -817,6 +817,7 @@ public class NtmLanguageProvider extends LanguageProvider {
         this.add(NtmItems.BALEFIRE_AND_STEEL, "Balefire and Steel");
         this.add(NtmItems.WIRING_RED_COPPER, "Cable Drum");
         this.add(NtmItems.WRENCH, "Pipe Wrench");
+        this.add(NtmItems.MIRROR_TOOL, "Mirror Adjustment Tool");
 
         this.add("item." + NuclearTechMod.MODID + ".obj_drink.requires_opener", "[Requires bottle opener]");
         this.add(NtmItems.DRINK, this.getName(DrinkType.CAN_EMPTY), "Empty Can");
@@ -1329,6 +1330,8 @@ public class NtmLanguageProvider extends LanguageProvider {
         this.add(NtmBlocks.MACHINE_INTAKE, "Air Intake");
         this.add(NtmBlocks.MACHINE_ELECTROLYSER, "Electrolysis Machine");
         this.add(NtmBlocks.MACHINE_HEAT_BOILER, "Boiler");
+        this.add(NtmBlocks.MACHINE_SOLAR_BOILER, "Solar Tower Boiler");
+        this.add(NtmBlocks.SOLAR_MIRROR, "Heliostat Mirror");
         this.add(NtmBlocks.MACHINE_INDUSTRIAL_BOILER, "Industrial Boiler");
         this.add(NtmBlocks.MACHINE_INDUSTRIAL_TURBINE, "Industrial Steam Turbine");
         this.add(NtmBlocks.MACHINE_CHUNGUS, "Leviathan Steam Turbine");
@@ -1723,6 +1726,12 @@ public class NtmLanguageProvider extends LanguageProvider {
         this.add("message.hbm.wrench.already_connected", "Pipe error - Pipe anchors are already connected");
         this.add("tooltip.hbm.wrench", "Right-click anchor to connect; sneak-use to clear");
         this.add("tooltip.hbm.wrench.selected", "Pipe start: %s, %s, %s");
+        this.add("message.hbm.mirror_tool.linked", "Alignment position set!");
+        this.add("message.hbm.mirror_tool.reach", "Mirror out of range! (max 100m)");
+        this.add("message.hbm.mirror_tool.angle", "Boiler target must not be below the mirror!");
+        this.add("tooltip.hbm.mirror_tool.0", "Right-click boiler to memorize the position.");
+        this.add("tooltip.hbm.mirror_tool.1", "Click on mirrors to turn them towards the boiler.");
+        this.add("overlay.hbm.machine_solar_boiler.too_cold", "Too cold!");
 
         this.add("itemGroup.parts", "NTM Resources and Parts");
         this.add("itemGroup.control", "NTM Machine Items and Fuel");

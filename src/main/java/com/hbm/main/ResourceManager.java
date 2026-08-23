@@ -78,6 +78,8 @@ public class ResourceManager {
     public static final ResourceLocation FURNACE_IRON_TEX = NuclearTechMod.withDefaultNamespace("textures/models/machines/furnace_iron.png");
     public static final ResourceLocation FURNACE_STEEL_TEX = NuclearTechMod.withDefaultNamespace("textures/models/machines/furnace_steel.png");
     public static final ResourceLocation BOILER_TEX = NuclearTechMod.withDefaultNamespace("textures/models/machines/boiler.png");
+    public static final ResourceLocation SOLAR_BOILER_TEX = NuclearTechMod.withDefaultNamespace("textures/models/machines/solar_boiler.png");
+    public static final ResourceLocation SOLAR_MIRROR_TEX = NuclearTechMod.withDefaultNamespace("textures/models/machines/solar_mirror.png");
     public static final ResourceLocation INDUSTRIAL_BOILER_TEX = NuclearTechMod.withDefaultNamespace("textures/models/machines/industrial_boiler.png");
     public static final ResourceLocation INDUSTRIAL_TURBINE_TEX = NuclearTechMod.withDefaultNamespace("textures/models/machines/industrial_turbine.png");
     public static final ResourceLocation LEVIATHAN_TURBINE_TEX = NuclearTechMod.withDefaultNamespace("textures/models/machines/chungus.png");
@@ -287,6 +289,8 @@ public class ResourceManager {
     public static IModelCustom furnace_steel;
     public static IModelCustom boiler;
     public static IModelCustom boiler_burst;
+    public static IModelCustom solar_boiler;
+    public static IModelCustom solar_mirror;
     public static IModelCustom industrial_boiler;
     public static IModelCustom industrial_turbine;
     public static IModelCustom leviathan_turbine;
@@ -440,6 +444,8 @@ public class ResourceManager {
         furnace_steel = new HFRWavefrontObject("models/obj/machines/furnace_steel.obj").asVBO();
         boiler = new HFRWavefrontObject("models/obj/machines/boiler.obj").asVBO();
         boiler_burst = new HFRWavefrontObject("models/obj/machines/boiler_burst.obj").asVBO();
+        solar_boiler = new HFRWavefrontObject("models/obj/machines/solar_boiler.obj").asVBO();
+        solar_mirror = new HFRWavefrontObject("models/obj/machines/solar_mirror.obj").noSmooth().asVBO();
         industrial_boiler = new HFRWavefrontObject("models/obj/machines/industrial_boiler.obj").asVBO();
         industrial_turbine = new HFRWavefrontObject("models/obj/machines/industrial_turbine.obj").asVBO();
         leviathan_turbine = new HFRWavefrontObject("models/obj/machines/chungus.obj").asVBO();

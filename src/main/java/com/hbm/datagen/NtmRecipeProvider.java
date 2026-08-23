@@ -1,6 +1,8 @@
 package com.hbm.datagen;
 
 import com.hbm.blocks.NtmBlocks;
+import com.hbm.inventory.material.MaterialShapes;
+import com.hbm.inventory.material.Mats;
 import com.hbm.items.NtmItems;
 import net.minecraft.core.HolderLookup;
 import net.minecraft.data.PackOutput;
@@ -89,6 +91,35 @@ public class NtmRecipeProvider extends RecipeProvider {
                 .define('I', Items.IRON_INGOT)
                 .unlockedBy("has_steel_ingot", has(NtmItems.INGOT_STEEL.get()))
                 .save(recipeOutput);
+
+        ShapedRecipeBuilder.shaped(RecipeCategory.TOOLS, NtmItems.MIRROR_TOOL.get())
+                .pattern(" A ")
+                .pattern(" IA")
+                .pattern("I  ")
+                .define('A', NtmItems.INGOT_ALUMINIUM.get())
+                .define('I', Items.IRON_INGOT)
+                .unlockedBy("has_aluminium_ingot", has(NtmItems.INGOT_ALUMINIUM.get()))
+                .save(recipeOutput);
+
+        ShapedRecipeBuilder.shaped(RecipeCategory.MISC, NtmBlocks.MACHINE_SOLAR_BOILER.get())
+                .pattern("SHS")
+                .pattern("DHD")
+                .pattern("SHS")
+                .define('S', NtmItems.INGOT_STEEL.get())
+                .define('H', Mats.MAT_STEEL.generatedItems.get(MaterialShapes.SHELL).get())
+                .define('D', Items.BLACK_DYE)
+                .unlockedBy("has_steel_shell", has(Mats.MAT_STEEL.generatedItems.get(MaterialShapes.SHELL).get()))
+                .save(recipeOutput);
+
+//        ShapedRecipeBuilder.shaped(RecipeCategory.MISC, NtmBlocks.SOLAR_MIRROR.get(), 3)
+//                .pattern("AAA")
+//                .pattern(" B ")
+//                .pattern("SSS")
+//                .define('A', NtmItems.PLATE_ALUMINIUM.get())
+//                .define('B', NtmBlocks.STEEL_BEAM.get())
+//                .define('S', NtmItems.INGOT_STEEL.get())
+//                .unlockedBy("has_steel_beam", has(NtmBlocks.STEEL_BEAM.get()))
+//                .save(recipeOutput);
 
         ShapedRecipeBuilder.shaped(RecipeCategory.MISC, NtmBlocks.MACHINE_FURNACE_BRICK.get())
                 .pattern("III")

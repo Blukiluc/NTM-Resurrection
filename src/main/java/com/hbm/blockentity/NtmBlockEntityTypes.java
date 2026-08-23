@@ -81,6 +81,18 @@ public class NtmBlockEntityTypes {
                             MachineHeatBoilerBlockEntity::new,
                             NtmBlocks.MACHINE_HEAT_BOILER.get())
                     .build(null));
+    public static final Supplier<BlockEntityType<MachineSolarBoilerBlockEntity>> MACHINE_SOLAR_BOILER = REGISTER.register(
+            "machine_solar_boiler",
+            () -> BlockEntityType.Builder.of(
+                            MachineSolarBoilerBlockEntity::new,
+                            NtmBlocks.MACHINE_SOLAR_BOILER.get())
+                    .build(null));
+    public static final Supplier<BlockEntityType<SolarMirrorBlockEntity>> SOLAR_MIRROR = REGISTER.register(
+            "solar_mirror",
+            () -> BlockEntityType.Builder.of(
+                            SolarMirrorBlockEntity::new,
+                            NtmBlocks.SOLAR_MIRROR.get())
+                    .build(null));
 
     public static final Supplier<BlockEntityType<MachineIndustrialBoilerBlockEntity>> MACHINE_INDUSTRIAL_BOILER = REGISTER.register(
             "machine_industrial_boiler",

@@ -24,6 +24,7 @@ import com.hbm.main.NuclearTechMod;
 import net.minecraft.world.item.Item;
 import net.minecraft.world.item.Rarity;
 import net.minecraft.world.item.SwordItem;
+import net.minecraft.world.item.Tiers;
 import net.neoforged.bus.api.IEventBus;
 import net.neoforged.neoforge.common.property.Properties;
 import net.neoforged.neoforge.registries.DeferredItem;
@@ -685,6 +686,12 @@ public class NtmItems {
             new Item.Properties()
                     .stacksTo(1)
                     .attributes(SwordItem.createAttributes(NtmTiers.STEEL, 3, -2.4F))
+    ));
+    public static final DeferredItem<Item> MIRROR_TOOL = ITEMS.register("mirror_tool", () -> new MirrorAdjustmentToolItem(
+            Tiers.IRON,
+            new Item.Properties()
+                    .stacksTo(1)
+                    .attributes(SwordItem.createAttributes(Tiers.IRON, 0, -2.4F))
     ));
 
 

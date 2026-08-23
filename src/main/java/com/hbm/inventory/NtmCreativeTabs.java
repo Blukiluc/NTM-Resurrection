@@ -783,6 +783,8 @@ public class NtmCreativeTabs {
                         output.accept(NtmBlocks.MACHINE_SOLDERING_STATION);
                         output.accept(NtmBlocks.MACHINE_ARC_WELDER);
                         output.accept(NtmBlocks.MACHINE_HEAT_BOILER);
+                        output.accept(NtmBlocks.MACHINE_SOLAR_BOILER);
+                        output.accept(NtmBlocks.SOLAR_MIRROR);
                         output.accept(NtmBlocks.MACHINE_INDUSTRIAL_BOILER);
                         output.accept(NtmBlocks.MACHINE_INDUSTRIAL_TURBINE);
                         output.accept(NtmBlocks.MACHINE_CHUNGUS);
@@ -1037,6 +1039,7 @@ public class NtmCreativeTabs {
                         output.accept(NtmItems.BALEFIRE_AND_STEEL);
                         output.accept(NtmItems.WIRING_RED_COPPER);
                         output.accept(NtmItems.WRENCH);
+                        output.accept(NtmItems.MIRROR_TOOL);
 
                         addMetaItems(output, NtmItems.DRINK.get());
                         output.accept(NtmItems.BOTTLE_OPENER);
