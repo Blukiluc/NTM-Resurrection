@@ -45,6 +45,7 @@ public abstract class SerializableRecipe {
         recipeHandlers.add(new PressRecipes());
         recipeHandlers.add(new ShredderRecipes());
         recipeHandlers.add(new MatDistribution());
+        recipeHandlers.add(CrucibleRecipes.INSTANCE);
 
         recipeHandlers.add(BlastFurnaceRecipes.INSTANCE);
         recipeHandlers.add(RotaryFurnaceRecipes.INSTANCE);

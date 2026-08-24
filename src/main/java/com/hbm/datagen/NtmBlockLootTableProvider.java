@@ -325,6 +325,14 @@ public class NtmBlockLootTableProvider extends BlockLootSubProvider {
         this.dropSelf(NtmBlocks.CRATE_STEEL.get());
         this.dropSelf(NtmBlocks.CRATE_DESH.get());
 
+        this.dropSelf(NtmBlocks.MACHINE_CRUCIBLE.get());
+        this.dropSelf(NtmBlocks.FOUNDRY_MOLD.get());
+        this.dropSelf(NtmBlocks.FOUNDRY_BASIN.get());
+        this.dropSelf(NtmBlocks.FOUNDRY_CHANNEL.get());
+        this.dropSelf(NtmBlocks.FOUNDRY_TANK.get());
+        this.dropSelf(NtmBlocks.FOUNDRY_OUTLET.get());
+        this.dropSelf(NtmBlocks.FOUNDRY_SLAGTAP.get());
+
         this.dropSelf(NtmBlocks.DECONTAMINATOR.get());
 
         this.dropSelf(NtmBlocks.PWR_CONTROLLER.get());

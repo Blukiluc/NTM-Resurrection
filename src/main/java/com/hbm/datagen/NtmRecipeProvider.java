@@ -34,6 +34,39 @@ public class NtmRecipeProvider extends RecipeProvider {
                 .unlockedBy("has_balefire_egg", has(NtmItems.EGG_BALEFIRE.get()))
                 .save(recipeOutput);
 
+        ShapedRecipeBuilder.shaped(RecipeCategory.MISC, NtmBlocks.FOUNDRY_BASIN.get())
+                .pattern("B B").pattern("B B").pattern("BSB")
+                .define('B', NtmItems.INGOT_FIREBRICK.get()).define('S', Items.STONE_SLAB)
+                .unlockedBy("has_firebrick", has(NtmItems.INGOT_FIREBRICK.get())).save(recipeOutput);
+        ShapedRecipeBuilder.shaped(RecipeCategory.MISC, NtmBlocks.FOUNDRY_MOLD.get())
+                .pattern("B B").pattern("BSB")
+                .define('B', NtmItems.INGOT_FIREBRICK.get()).define('S', Items.STONE_SLAB)
+                .unlockedBy("has_firebrick", has(NtmItems.INGOT_FIREBRICK.get())).save(recipeOutput);
+        ShapedRecipeBuilder.shaped(RecipeCategory.MISC, NtmBlocks.FOUNDRY_CHANNEL.get(), 4)
+                .pattern("B B").pattern(" S ")
+                .define('B', NtmItems.INGOT_FIREBRICK.get()).define('S', Items.STONE_SLAB)
+                .unlockedBy("has_firebrick", has(NtmItems.INGOT_FIREBRICK.get())).save(recipeOutput);
+        ShapedRecipeBuilder.shaped(RecipeCategory.MISC, NtmBlocks.FOUNDRY_TANK.get())
+                .pattern("B B").pattern("I I").pattern("BSB")
+                .define('B', NtmItems.INGOT_FIREBRICK.get()).define('I', NtmItems.INGOT_STEEL.get()).define('S', Items.STONE_SLAB)
+                .unlockedBy("has_firebrick", has(NtmItems.INGOT_FIREBRICK.get())).save(recipeOutput);
+        ShapelessRecipeBuilder.shapeless(RecipeCategory.MISC, NtmBlocks.FOUNDRY_OUTLET.get())
+                .requires(NtmBlocks.FOUNDRY_CHANNEL.get()).requires(NtmItems.PLATE_STEEL.get())
+                .unlockedBy("has_foundry_channel", has(NtmBlocks.FOUNDRY_CHANNEL.get())).save(recipeOutput);
+        ShapelessRecipeBuilder.shapeless(RecipeCategory.MISC, NtmBlocks.FOUNDRY_SLAGTAP.get())
+                .requires(NtmBlocks.FOUNDRY_CHANNEL.get()).requires(Items.STONE_BRICKS)
+                .unlockedBy("has_foundry_channel", has(NtmBlocks.FOUNDRY_CHANNEL.get())).save(recipeOutput);
+        ShapedRecipeBuilder.shaped(RecipeCategory.MISC, NtmItems.MOLD_BLANK.get())
+                .pattern(" B ").pattern("BIB").pattern(" B ")
+                .define('B', NtmItems.INGOT_FIREBRICK.get()).define('I', Items.IRON_INGOT)
+                .unlockedBy("has_firebrick", has(NtmItems.INGOT_FIREBRICK.get())).save(recipeOutput);
+        ShapelessRecipeBuilder.shapeless(RecipeCategory.MISC, NtmItems.MOLD_INGOT.get())
+                .requires(NtmItems.MOLD_BLANK.get()).requires(Items.IRON_INGOT)
+                .unlockedBy("has_blank_mold", has(NtmItems.MOLD_BLANK.get())).save(recipeOutput);
+        ShapelessRecipeBuilder.shapeless(RecipeCategory.MISC, NtmItems.MOLD_BLOCK.get())
+                .requires(NtmItems.MOLD_BLANK.get()).requires(Items.IRON_BLOCK)
+                .unlockedBy("has_blank_mold", has(NtmItems.MOLD_BLANK.get())).save(recipeOutput);
+
         ShapedRecipeBuilder.shaped(RecipeCategory.BUILDING_BLOCKS, NtmBlocks.BRICK_CONCRETE_MOSSY.get(), 8)
                 .pattern("BBB")
                 .pattern("BVB")

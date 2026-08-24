@@ -14,6 +14,7 @@ import java.io.IOException;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Map.Entry;
+import java.util.function.Supplier;
 
 /**
  * Defines which items can be smelted in the crucible and what materials/quantities they yield.
@@ -28,10 +29,26 @@ public class MatDistribution extends SerializableRecipe {
 
     @Override
     public void registerDefaults() {
-        // TODO: populate once materials and their items are defined in Mats.java
-        // Example:
-        // registerEntry(Items.IRON_INGOT, Mats.MAT_IRON, MaterialShapes.INGOT.q(1));
-        // registerEntry(Items.GOLD_INGOT, Mats.MAT_GOLD, MaterialShapes.INGOT.q(1));
+        for (NTMMaterial material : Mats.orderedList) {
+            for (Entry<MaterialShapes, Supplier<? extends net.minecraft.world.item.Item>> entry : material.generatedItems.entrySet()) {
+                int amount = entry.getKey().q(material.convOut) / material.convIn;
+                registerEntry(entry.getValue().get(), material.smeltsInto, amount);
+            }
+        }
+    }
+
+    public static List<MaterialStack> getSmeltingMaterials(ItemStack stack) {
+        if (stack.isEmpty()) return List.of();
+
+        for (Entry<ComparableStack, List<MaterialStack>> entry : Mats.materialEntries.entrySet()) {
+            if (entry.getKey().matchesRecipe(stack, true)) {
+                List<MaterialStack> result = new ArrayList<>();
+                for (MaterialStack material : entry.getValue()) result.add(material.copy());
+                return result;
+            }
+        }
+
+        return List.of();
     }
 
     // ---------------------------------------------------------------

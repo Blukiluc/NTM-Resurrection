@@ -1,6 +1,7 @@
 package com.hbm.main;
 
 import com.hbm.blockentity.network.PipeBaseBlockEntity;
+import com.hbm.blockentity.machine.foundry.SlagBlockEntity;
 import com.hbm.blocks.ICustomBlockHighlight;
 import com.hbm.blocks.ILookOverlay;
 import com.hbm.blocks.NtmBlocks;
@@ -461,6 +462,17 @@ public class NuclearTechModClient {
                     return 0xFF000000 | type.getColor();
                 },
                 NtmBlocks.FLUID_DUCT_NEO.get()
+        );
+        event.register(
+                (state, level, pos, tintIndex) -> {
+                    if (level == null || pos == null) return 0xFFFFFFFF;
+                    BlockEntity blockEntity = level.getBlockEntity(pos);
+                    if (blockEntity instanceof SlagBlockEntity slag && slag.getMaterial() != null) {
+                        return 0xFF000000 | slag.getMaterial().moltenColor;
+                    }
+                    return 0xFFFFFFFF;
+                },
+                NtmBlocks.MOLTEN_SLAG.get()
         );
     }
 

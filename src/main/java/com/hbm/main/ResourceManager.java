@@ -50,6 +50,8 @@ public class ResourceManager {
     public static final ResourceLocation CHEMICAL_FACTORY_TEX = NuclearTechMod.withDefaultNamespace("textures/models/machines/chemical_factory.png");
     public static final ResourceLocation PUREX_TEX = NuclearTechMod.withDefaultNamespace("textures/models/machines/purex.png");
     public static final ResourceLocation ORE_ACIDIZER_TEX = NuclearTechMod.withDefaultNamespace("textures/models/machines/acidizer.png");
+    public static final ResourceLocation CRUCIBLE_TEX = NuclearTechMod.withDefaultNamespace("textures/models/machines/crucible_heat.png");
+    public static final ResourceLocation MOLTEN_METAL_TEX = NuclearTechMod.withDefaultNamespace("textures/models/machines/lava_gray.png");
     public static final ResourceLocation WOOD_BURNER_TEX = NuclearTechMod.withDefaultNamespace("textures/models/machines/wood_burner.png");
     public static final ResourceLocation DIESEL_GENERATOR_TEX = NuclearTechMod.withDefaultNamespace("textures/models/machines/dieselgen.png");
     public static final ResourceLocation COMBUSTION_ENGINE_TEX = NuclearTechMod.withDefaultNamespace("textures/models/machines/combustion_engine.png");
@@ -262,9 +264,6 @@ public class ResourceManager {
     public static IModelCustom assembly_machine;
     public static IModelCustom assembly_factory;
     public static IModelCustom chemical_plant;
-    public static IModelCustom chemical_factory;
-    public static IModelCustom purex;
-    public static IModelCustom ore_acidizer;
     public static IModelCustom wood_burner;
     public static IModelCustom diesel_generator;
     public static IModelCustom combustion_engine;
@@ -417,9 +416,6 @@ public class ResourceManager {
         assembly_machine = new HFRWavefrontObject("models/obj/machines/assembly_machine.obj").asVBO();
         assembly_factory = new HFRWavefrontObject("models/obj/machines/assembly_factory.obj").asVBO();
         chemical_plant = new HFRWavefrontObject("models/obj/machines/chemical_plant.obj").asVBO();
-        chemical_factory = new HFRWavefrontObject("models/obj/machines/chemical_factory.obj").asVBO();
-        purex = new HFRWavefrontObject("models/obj/machines/purex.obj").asVBO();
-        ore_acidizer = new HFRWavefrontObject("models/obj/machines/acidizer.obj").asVBO();
         wood_burner = new HFRWavefrontObject("models/obj/machines/wood_burner.obj").asVBO();
         diesel_generator = new HFRWavefrontObject("models/obj/machines/dieselgen.obj").asVBO();
         combustion_engine = new HFRWavefrontObject("models/obj/machines/combustion_engine.obj").asVBO();

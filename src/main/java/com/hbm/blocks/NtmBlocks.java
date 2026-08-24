@@ -6,6 +6,7 @@ import com.hbm.blocks.fluids.SulfuricLiquidBlock;
 import com.hbm.blocks.fluids.VolcanicLiquidBlock;
 import com.hbm.blocks.gas.*;
 import com.hbm.blocks.machine.heater.*;
+import com.hbm.blocks.machine.foundry.*;
 import com.hbm.blocks.generic.*;
 import com.hbm.blocks.machine.*;
 import com.hbm.blocks.network.*;
@@ -324,6 +325,15 @@ public class NtmBlocks {
     public static final DeferredBlock<Block> CRATE_TUNGSTEN = registerNew("crate_tungsten", () ->  new CrateBlock(BlockBehaviour.Properties.of().strength(0.6F, 6.0F).sound(SoundType.METAL).mapColor(MapColor.METAL).requiresCorrectToolForDrops(), CrateBlock.Type.TUNGSTEN));
     public static final DeferredBlock<Block> CRATE_STEEL = registerNew("crate_steel", () ->  new CrateBlock(BlockBehaviour.Properties.of().strength(0.6F, 6.0F).sound(SoundType.METAL).mapColor(MapColor.METAL).requiresCorrectToolForDrops(), CrateBlock.Type.STEEL));
     public static final DeferredBlock<Block> CRATE_DESH = registerNew("crate_desh", () ->  new CrateBlock(BlockBehaviour.Properties.of().strength(0.6F, 6.0F).sound(SoundType.METAL).mapColor(MapColor.METAL).requiresCorrectToolForDrops(), CrateBlock.Type.DESH));
+
+    public static final DeferredBlock<Block> MACHINE_CRUCIBLE = register("machine_crucible", () -> new MachineCrucibleBlock(BlockBehaviour.Properties.of().noOcclusion().strength(5.0F, 30.0F).sound(SoundType.STONE).mapColor(MapColor.STONE)));
+    public static final DeferredBlock<Block> FOUNDRY_MOLD = register("foundry_mold", () -> new FoundryMoldBlock(BlockBehaviour.Properties.of().noOcclusion().strength(5.0F, 10.0F).sound(SoundType.METAL).mapColor(MapColor.METAL)));
+    public static final DeferredBlock<Block> FOUNDRY_BASIN = register("foundry_basin", () -> new FoundryBasinBlock(BlockBehaviour.Properties.of().noOcclusion().strength(5.0F, 10.0F).sound(SoundType.METAL).mapColor(MapColor.METAL)));
+    public static final DeferredBlock<Block> FOUNDRY_CHANNEL = register("foundry_channel", () -> new FoundryChannelBlock(BlockBehaviour.Properties.of().noOcclusion().strength(5.0F, 10.0F).sound(SoundType.METAL).mapColor(MapColor.METAL)));
+    public static final DeferredBlock<Block> FOUNDRY_TANK = register("foundry_tank", () -> new FoundryTankBlock(BlockBehaviour.Properties.of().noOcclusion().strength(5.0F, 10.0F).sound(SoundType.METAL).mapColor(MapColor.METAL)));
+    public static final DeferredBlock<Block> FOUNDRY_OUTLET = register("foundry_outlet", () -> new FoundryOutletBlock(BlockBehaviour.Properties.of().noOcclusion().strength(5.0F, 10.0F).sound(SoundType.METAL).mapColor(MapColor.METAL)));
+    public static final DeferredBlock<Block> FOUNDRY_SLAGTAP = register("foundry_slagtap", () -> new FoundrySlagtapBlock(BlockBehaviour.Properties.of().noOcclusion().strength(5.0F, 10.0F).sound(SoundType.METAL).mapColor(MapColor.METAL)));
+    public static final DeferredBlock<Block> MOLTEN_SLAG = BLOCKS.register("molten_slag", () -> new DynamicSlagBlock(BlockBehaviour.Properties.of().noOcclusion().strength(2.0F, 6.0F).sound(SoundType.STONE).mapColor(MapColor.COLOR_ORANGE).noLootTable()));
 
     // Oil
     public static final DeferredBlock<Block> OIL_PIPE = register("oil_pipe", () -> new Block(BlockBehaviour.Properties.of().strength(1.5F).noLootTable().sound(SoundType.METAL).mapColor(MapColor.METAL)));

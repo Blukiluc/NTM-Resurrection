@@ -180,6 +180,7 @@ public class CommonEvents {
         event.register(NtmMenuTypes.GAS_CENTRIFUGE.get(), MachineGasCentrifugeScreen::new);
         event.register(NtmMenuTypes.SOLDERING_STATION.get(), MachineSolderingStationScreen::new);
         event.register(NtmMenuTypes.ARC_WELDER.get(), MachineArcWelderScreen::new);
+        event.register(NtmMenuTypes.CRUCIBLE.get(), MachineCrucibleScreen::new);
         event.register(NtmMenuTypes.MIXER.get(), MachineMixerScreen::new);
         event.register(NtmMenuTypes.FEL.get(), MachineFELScreen::new);
         event.register(NtmMenuTypes.SILEX.get(), MachineSilexScreen::new);

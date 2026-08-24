@@ -9,6 +9,7 @@ import com.hbm.blockentity.machine.heater.HeaterFireboxBlockEntity;
 import com.hbm.blockentity.machine.heater.HeaterHeatexBlockEntity;
 import com.hbm.blockentity.machine.heater.HeaterFluidBurnerBlockEntity;
 import com.hbm.blockentity.machine.heater.HeaterOvenBlockEntity;
+import com.hbm.blockentity.machine.foundry.*;
 import com.hbm.blockentity.machine.oil.*;
 import com.hbm.blockentity.machine.storage.*;
 import com.hbm.blockentity.machine.tower.*;
@@ -435,6 +436,38 @@ public class NtmBlockEntityTypes {
                             MachineIntakeBlockEntity::new,
                             NtmBlocks.MACHINE_INTAKE.get())
                     .build(null));
+
+    public static final Supplier<BlockEntityType<MachineCrucibleBlockEntity>> CRUCIBLE = REGISTER.register(
+            "crucible",
+            () -> BlockEntityType.Builder.of(MachineCrucibleBlockEntity::new, NtmBlocks.MACHINE_CRUCIBLE.get()).build(null));
+
+    public static final Supplier<BlockEntityType<FoundryMoldBlockEntity>> FOUNDRY_MOLD = REGISTER.register(
+            "foundry_mold",
+            () -> BlockEntityType.Builder.of(FoundryMoldBlockEntity::new, NtmBlocks.FOUNDRY_MOLD.get()).build(null));
+
+    public static final Supplier<BlockEntityType<FoundryBasinBlockEntity>> FOUNDRY_BASIN = REGISTER.register(
+            "foundry_basin",
+            () -> BlockEntityType.Builder.of(FoundryBasinBlockEntity::new, NtmBlocks.FOUNDRY_BASIN.get()).build(null));
+
+    public static final Supplier<BlockEntityType<FoundryChannelBlockEntity>> FOUNDRY_CHANNEL = REGISTER.register(
+            "foundry_channel",
+            () -> BlockEntityType.Builder.of(FoundryChannelBlockEntity::new, NtmBlocks.FOUNDRY_CHANNEL.get()).build(null));
+
+    public static final Supplier<BlockEntityType<FoundryTankBlockEntity>> FOUNDRY_TANK = REGISTER.register(
+            "foundry_tank",
+            () -> BlockEntityType.Builder.of(FoundryTankBlockEntity::new, NtmBlocks.FOUNDRY_TANK.get()).build(null));
+
+    public static final Supplier<BlockEntityType<FoundryOutletBlockEntity>> FOUNDRY_OUTLET = REGISTER.register(
+            "foundry_outlet",
+            () -> BlockEntityType.Builder.of(FoundryOutletBlockEntity::new, NtmBlocks.FOUNDRY_OUTLET.get()).build(null));
+
+    public static final Supplier<BlockEntityType<FoundrySlagtapBlockEntity>> FOUNDRY_SLAGTAP = REGISTER.register(
+            "foundry_slagtap",
+            () -> BlockEntityType.Builder.of(FoundrySlagtapBlockEntity::new, NtmBlocks.FOUNDRY_SLAGTAP.get()).build(null));
+
+    public static final Supplier<BlockEntityType<SlagBlockEntity>> MOLTEN_SLAG = REGISTER.register(
+            "molten_slag",
+            () -> BlockEntityType.Builder.of(SlagBlockEntity::new, NtmBlocks.MOLTEN_SLAG.get()).build(null));
 
     // Oil
     public static final Supplier<BlockEntityType<MachineOilDerrickBlockEntity>> OIL_DERRICK = REGISTER.register(

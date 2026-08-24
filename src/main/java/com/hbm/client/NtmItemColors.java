@@ -7,10 +7,10 @@ import com.hbm.main.NuclearTechMod;
 import net.minecraft.world.item.Item;
 import net.neoforged.bus.api.IEventBus;
 import net.neoforged.neoforge.client.event.RegisterColorHandlersEvent;
-import net.neoforged.neoforge.registries.DeferredItem;
 
 import java.util.Map;
 import java.util.concurrent.ConcurrentHashMap;
+import java.util.function.Supplier;
 
 /**
  * Registers the dynamic tint ("IItemColor") for every auto-generated material item
@@ -44,7 +44,7 @@ public class NtmItemColors {
     private static void onRegisterItemColors(RegisterColorHandlersEvent.Item event) {
         for (NTMMaterial mat : Mats.orderedList) {
             for (MaterialShapes shape : mat.autogen) {
-                DeferredItem<Item> generated = mat.generatedItems.get(shape);
+                Supplier<? extends Item> generated = mat.generatedItems.get(shape);
                 if (generated == null) continue;
 
                 String itemName = shape.itemNameFor(mat);
