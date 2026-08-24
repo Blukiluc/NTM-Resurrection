@@ -22,7 +22,7 @@ public class FoundryScrapItem extends Item {
     public static ItemStack create(Item item, MaterialStack material) {
         ItemStack stack = new ItemStack(item);
         CompoundTag tag = TagsUtil.getCustomData(stack);
-        tag.putInt("material", material.material.id);
+        tag.putString("materialName", material.material.getCanonicalName());
         tag.putInt("amount", material.amount);
         TagsUtil.putCustomData(stack, tag);
         return stack;
@@ -31,7 +31,9 @@ public class FoundryScrapItem extends Item {
     public static MaterialStack getMaterial(ItemStack stack) {
         if (!(stack.getItem() instanceof FoundryScrapItem)) return null;
         CompoundTag tag = TagsUtil.getCustomData(stack);
-        NTMMaterial material = Mats.matById.get(tag.getInt("material"));
+        NTMMaterial material = tag.contains("materialName")
+                ? Mats.matByName.get(tag.getString("materialName"))
+                : Mats.matById.get(tag.getInt("material"));
         int amount = tag.getInt("amount");
         return material == null || amount <= 0 ? null : new MaterialStack(material, amount);
     }

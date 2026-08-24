@@ -102,9 +102,11 @@ public class FoundryOutletBlockEntity extends LoadedBaseBlockEntity implements I
             BlockEntity target = this.level.getBlockEntity(targetPos);
             if (target instanceof ICrucibleAcceptor acceptor) {
                 Vec3 hit = Vec3.atCenterOf(targetPos).add(0, 0.5, 0);
-                return acceptor.pour(this.level, hit, Direction.UP, stack);
+                return acceptor.canAcceptPartialPour(this.level, hit, Direction.UP, stack)
+                        ? acceptor.pour(this.level, hit, Direction.UP, stack) : stack;
             }
-            if (!this.level.getBlockState(targetPos).isAir()) break;
+            BlockState state = this.level.getBlockState(targetPos);
+            if (!state.getFluidState().isEmpty() || !state.getCollisionShape(this.level, targetPos).isEmpty()) break;
         }
         return stack;
     }
@@ -122,7 +124,7 @@ public class FoundryOutletBlockEntity extends LoadedBaseBlockEntity implements I
     @Override
     public boolean canAcceptPartialFlow(Level level, Direction side, MaterialStack stack) {
         Direction facing = this.getBlockState().getValue(FoundryOutletBlock.FACING);
-        return side == facing && this.allows(stack);
+        return side == facing.getOpposite() && this.allows(stack);
     }
 
     @Override
@@ -133,7 +135,7 @@ public class FoundryOutletBlockEntity extends LoadedBaseBlockEntity implements I
     @Override
     protected void saveAdditional(CompoundTag tag, HolderLookup.Provider registries) {
         super.saveAdditional(tag, registries);
-        if (this.filter != null) tag.putInt("filter", this.filter.id);
+        if (this.filter != null) tag.putString("filterName", this.filter.getCanonicalName());
         tag.putBoolean("invertFilter", this.invertFilter);
         tag.putBoolean("invertRedstone", this.invertRedstone);
     }
@@ -141,7 +143,9 @@ public class FoundryOutletBlockEntity extends LoadedBaseBlockEntity implements I
     @Override
     protected void loadAdditional(CompoundTag tag, HolderLookup.Provider registries) {
         super.loadAdditional(tag, registries);
-        this.filter = tag.contains("filter") ? Mats.matById.get(tag.getInt("filter")) : null;
+        this.filter = tag.contains("filterName")
+                ? Mats.matByName.get(tag.getString("filterName"))
+                : tag.contains("filter") ? Mats.matById.get(tag.getInt("filter")) : null;
         this.invertFilter = tag.getBoolean("invertFilter");
         this.invertRedstone = tag.getBoolean("invertRedstone");
     }
@@ -149,7 +153,7 @@ public class FoundryOutletBlockEntity extends LoadedBaseBlockEntity implements I
     @Override
     public void serialize(RegistryFriendlyByteBuf buf) {
         super.serialize(buf);
-        buf.writeInt(this.filter == null ? -1 : this.filter.id);
+        buf.writeUtf(this.filter == null ? "" : this.filter.getCanonicalName());
         buf.writeBoolean(this.invertFilter);
         buf.writeBoolean(this.invertRedstone);
     }
@@ -157,7 +161,7 @@ public class FoundryOutletBlockEntity extends LoadedBaseBlockEntity implements I
     @Override
     public void deserialize(RegistryFriendlyByteBuf buf) {
         super.deserialize(buf);
-        this.filter = Mats.matById.get(buf.readInt());
+        this.filter = Mats.matByName.get(buf.readUtf());
         this.invertFilter = buf.readBoolean();
         this.invertRedstone = buf.readBoolean();
     }

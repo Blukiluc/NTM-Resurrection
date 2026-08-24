@@ -21,7 +21,7 @@ import net.minecraft.core.HolderLookup;
 import net.minecraft.nbt.CompoundTag;
 import net.minecraft.network.RegistryFriendlyByteBuf;
 import net.minecraft.network.chat.Component;
-import net.minecraft.world.entity.LivingEntity;
+import net.minecraft.world.entity.Entity;
 import net.minecraft.world.entity.item.ItemEntity;
 import net.minecraft.world.entity.player.Inventory;
 import net.minecraft.world.entity.player.Player;
@@ -34,7 +34,9 @@ import net.minecraft.world.phys.AABB;
 import net.minecraft.world.phys.Vec3;
 
 import java.util.ArrayList;
+import java.util.LinkedHashMap;
 import java.util.List;
+import java.util.Map;
 
 public class MachineCrucibleBlockEntity extends MachineBaseBlockEntity implements IControlReceiver, ICrucibleAcceptor {
 
@@ -64,14 +66,22 @@ public class MachineCrucibleBlockEntity extends MachineBaseBlockEntity implement
         if (this.level == null) return;
         if (this.level.isClientSide) return;
 
+        int previousHeat = this.heat;
+        int previousProgress = this.progress;
+        int previousRecipeAmount = this.getAmount(this.recipeStack, null);
+        int previousWasteAmount = this.getAmount(this.wasteStack, null);
+
         this.pullHeat();
         if (this.level.getGameTime() % 5 == 0) this.collectItems();
         if (!this.trySmelt()) this.progress = 0;
-        this.tryRecipe();
+        boolean processedRecipe = this.tryRecipe();
         this.pourStacks();
         this.damageEntities();
         this.recipeStack.removeIf(stack -> stack.amount <= 0);
         this.wasteStack.removeIf(stack -> stack.amount <= 0);
+        if (processedRecipe || previousHeat != this.heat || previousProgress != this.progress
+                || previousRecipeAmount != this.getAmount(this.recipeStack, null)
+                || previousWasteAmount != this.getAmount(this.wasteStack, null)) this.setChanged();
         this.networkPackNT(50);
     }
 
@@ -91,22 +101,19 @@ public class MachineCrucibleBlockEntity extends MachineBaseBlockEntity implement
     }
 
     private void collectItems() {
-        AABB collection = new AABB(this.worldPosition.getX() - 1, this.worldPosition.getY() + 0.5, this.worldPosition.getZ() - 1,
-                this.worldPosition.getX() + 2, this.worldPosition.getY() + 1.5, this.worldPosition.getZ() + 2);
+        AABB collection = new AABB(this.worldPosition.getX() - 0.5, this.worldPosition.getY() + 0.5, this.worldPosition.getZ() - 0.5,
+                this.worldPosition.getX() + 1.5, this.worldPosition.getY() + 1, this.worldPosition.getZ() + 1.5);
         for (ItemEntity entity : this.level.getEntitiesOfClass(ItemEntity.class, collection)) {
             ItemStack stack = entity.getItem();
-            if (!this.isItemSmeltable(stack)) continue;
-            for (int slot = 1; slot < 10; slot++) {
-                if (this.slots.get(slot).isEmpty()) {
-                    this.slots.set(slot, stack.copyWithCount(1));
-                    stack.shrink(1);
-                    if (stack.isEmpty()) entity.discard();
-                    else entity.setItem(stack);
-                    entity.setPickUpDelay(60);
-                    this.setChanged();
-                    break;
-                }
+            while (!stack.isEmpty() && this.isItemSmeltable(stack)) {
+                int slot = this.getFirstEmptySlot();
+                if (slot < 0) break;
+                this.slots.set(slot, stack.copyWithCount(1));
+                stack.shrink(1);
+                this.setChanged();
             }
+            if (stack.isEmpty()) entity.discard();
+            else entity.setItem(stack);
         }
     }
 
@@ -131,37 +138,39 @@ public class MachineCrucibleBlockEntity extends MachineBaseBlockEntity implement
         return true;
     }
 
-    private void tryRecipe() {
+    private boolean tryRecipe() {
         CrucibleRecipe loaded = this.getLoadedRecipe();
-        if (loaded == null || this.level.getGameTime() % loaded.frequency != 0) return;
+        if (loaded == null || this.level.getGameTime() % loaded.frequency != 0) return false;
         for (MaterialStack input : loaded.input) {
-            if (this.getAmount(this.recipeStack, input.material) < input.amount) return;
+            if (this.getAmount(this.recipeStack, input.material) < input.amount) return false;
         }
         for (MaterialStack input : loaded.input) this.removeFromStack(this.recipeStack, input.material, input.amount);
         for (MaterialStack output : loaded.output) this.addToStack(this.recipeStack, output);
+        return true;
     }
 
     private void pourStacks() {
         Direction direction = this.getBlockState().getValue(DummyableBlock.FACING);
+        Direction outputDirection = direction.getCounterClockWise(Direction.Axis.Y);
         List<MaterialStack> output = this.getRecipeOutput();
         if (!output.isEmpty()) {
             CrucibleUtil.pourFullStack(this.level,
-                    this.worldPosition.getX() + 0.5 + direction.getStepX() * 1.875,
+                    this.worldPosition.getX() + 0.5 + outputDirection.getStepX() * 1.875,
                     this.worldPosition.getY() + 0.25,
-                    this.worldPosition.getZ() + 0.5 + direction.getStepZ() * 1.875,
+                    this.worldPosition.getZ() + 0.5 + outputDirection.getStepZ() * 1.875,
                     6, output, MaterialShapes.NUGGET.q(3));
         }
-        Direction opposite = direction.getOpposite();
+        Direction wasteDirection = direction.getClockWise();
         if (!this.wasteStack.isEmpty()) {
             CrucibleUtil.pourFullStack(this.level,
-                    this.worldPosition.getX() + 0.5 + opposite.getStepX() * 1.875,
+                    this.worldPosition.getX() + 0.5 + wasteDirection.getStepX() * 1.875,
                     this.worldPosition.getY() + 0.25,
-                    this.worldPosition.getZ() + 0.5 + opposite.getStepZ() * 1.875,
+                    this.worldPosition.getZ() + 0.5 + wasteDirection.getStepZ() * 1.875,
                     6, this.wasteStack, MaterialShapes.NUGGET.q(3));
         }
     }
 
-    private List<MaterialStack> getRecipeOutput() {
+    public List<MaterialStack> getRecipeOutput() {
         CrucibleRecipe loaded = this.getLoadedRecipe();
         if (loaded == null) return this.recipeStack;
         List<MaterialStack> output = new ArrayList<>();
@@ -175,16 +184,21 @@ public class MachineCrucibleBlockEntity extends MachineBaseBlockEntity implement
         int total = this.getAmount(this.recipeStack, null) + this.getAmount(this.wasteStack, null);
         if (total <= 0) return;
         double height = (double) total / (RECIPE_CAPACITY + WASTE_CAPACITY) * 0.875D;
-        AABB molten = new AABB(this.worldPosition.getX() - 1, this.worldPosition.getY() + 0.5, this.worldPosition.getZ() - 1,
-                this.worldPosition.getX() + 2, this.worldPosition.getY() + 0.5 + height, this.worldPosition.getZ() + 2);
-        for (LivingEntity entity : this.level.getEntitiesOfClass(LivingEntity.class, molten)) {
+        AABB molten = new AABB(this.worldPosition.getX() - 0.5, this.worldPosition.getY() + 0.5, this.worldPosition.getZ() - 0.5,
+                this.worldPosition.getX() + 1.5, this.worldPosition.getY() + 0.5 + height, this.worldPosition.getZ() + 1.5);
+        for (Entity entity : this.level.getEntities((Entity) null, molten, Entity::isAlive)) {
             entity.hurt(this.level.damageSources().lava(), 5F);
-            entity.igniteForSeconds(5F);
+            entity.setRemainingFireTicks(Math.max(entity.getRemainingFireTicks(), 100));
         }
     }
 
     private int getFirstSmeltableSlot() {
         for (int slot = 1; slot < 10; slot++) if (this.isItemSmeltable(this.slots.get(slot))) return slot;
+        return -1;
+    }
+
+    private int getFirstEmptySlot() {
+        for (int slot = 1; slot < 10; slot++) if (this.slots.get(slot).isEmpty()) return slot;
         return -1;
     }
 
@@ -196,18 +210,22 @@ public class MachineCrucibleBlockEntity extends MachineBaseBlockEntity implement
         int recipeContent = loaded == null ? 0 : loaded.getInputAmount();
         int recipeAmount = this.getAmount(this.recipeStack, null);
         int wasteAmount = this.getAmount(this.wasteStack, null);
+        Map<NTMMaterial, Integer> additions = new LinkedHashMap<>();
 
         for (MaterialStack material : materials) {
             int inputRequired = loaded == null ? 0 : this.getAmount(loaded.input, material.material);
             if (loaded != null && this.getAmount(loaded.output, material.material) > 0) {
                 recipeAmount += material.amount;
+                additions.merge(material.material, material.amount, Integer::sum);
                 matchesRecipe = true;
             } else if (inputRequired == 0) {
                 wasteAmount += material.amount;
             } else {
                 int maximum = inputRequired * RECIPE_CAPACITY / recipeContent;
-                if (this.getAmount(this.recipeStack, material.material) + material.amount > maximum) return false;
+                int alreadyAdded = additions.getOrDefault(material.material, 0);
+                if (this.getAmount(this.recipeStack, material.material) + alreadyAdded + material.amount > maximum) return false;
                 recipeAmount += material.amount;
+                additions.merge(material.material, material.amount, Integer::sum);
                 matchesRecipe = true;
             }
         }
@@ -287,30 +305,39 @@ public class MachineCrucibleBlockEntity extends MachineBaseBlockEntity implement
         tag.putString("recipe", this.recipe);
         tag.putInt("progress", this.progress);
         tag.putInt("heat", this.heat);
-        tag.putIntArray("recipeStack", this.writeMaterials(this.recipeStack));
-        tag.putIntArray("wasteStack", this.writeMaterials(this.wasteStack));
+        tag.put("recipeMaterials", this.writeMaterials(this.recipeStack));
+        tag.put("wasteMaterials", this.writeMaterials(this.wasteStack));
     }
 
     @Override
     protected void loadAdditional(CompoundTag tag, HolderLookup.Provider registries) {
         super.loadAdditional(tag, registries);
-        this.recipe = tag.getString("recipe");
+        String loadedRecipe = tag.getString("recipe");
+        this.recipe = loadedRecipe.isEmpty() ? "null" : loadedRecipe;
         this.progress = tag.getInt("progress");
         this.heat = tag.getInt("heat");
-        this.readMaterials(tag.getIntArray("recipeStack"), this.recipeStack);
-        this.readMaterials(tag.getIntArray("wasteStack"), this.wasteStack);
+        if (tag.contains("recipeMaterials")) this.readMaterials(tag.getCompound("recipeMaterials"), this.recipeStack);
+        else this.readLegacyMaterials(tag.getIntArray("recipeStack"), this.recipeStack);
+        if (tag.contains("wasteMaterials")) this.readMaterials(tag.getCompound("wasteMaterials"), this.wasteStack);
+        else this.readLegacyMaterials(tag.getIntArray("wasteStack"), this.wasteStack);
     }
 
-    private int[] writeMaterials(List<MaterialStack> materials) {
-        int[] data = new int[materials.size() * 2];
-        for (int i = 0; i < materials.size(); i++) {
-            data[i * 2] = materials.get(i).material.id;
-            data[i * 2 + 1] = materials.get(i).amount;
-        }
+    private CompoundTag writeMaterials(List<MaterialStack> materials) {
+        CompoundTag data = new CompoundTag();
+        for (MaterialStack material : materials) data.putInt(material.material.getCanonicalName(), material.amount);
         return data;
     }
 
-    private void readMaterials(int[] data, List<MaterialStack> materials) {
+    private void readMaterials(CompoundTag data, List<MaterialStack> materials) {
+        materials.clear();
+        for (String name : data.getAllKeys()) {
+            NTMMaterial material = Mats.matByName.get(name);
+            int amount = data.getInt(name);
+            if (material != null && amount > 0) materials.add(new MaterialStack(material, amount));
+        }
+    }
+
+    private void readLegacyMaterials(int[] data, List<MaterialStack> materials) {
         materials.clear();
         for (int i = 0; i + 1 < data.length; i += 2) {
             NTMMaterial material = Mats.matById.get(data[i]);
@@ -331,7 +358,7 @@ public class MachineCrucibleBlockEntity extends MachineBaseBlockEntity implement
     private void writeMaterials(RegistryFriendlyByteBuf buf, List<MaterialStack> materials) {
         buf.writeVarInt(materials.size());
         for (MaterialStack material : materials) {
-            buf.writeInt(material.material.id);
+            buf.writeUtf(material.material.getCanonicalName());
             buf.writeVarInt(material.amount);
         }
     }
@@ -350,7 +377,7 @@ public class MachineCrucibleBlockEntity extends MachineBaseBlockEntity implement
         materials.clear();
         int size = buf.readVarInt();
         for (int i = 0; i < size; i++) {
-            NTMMaterial material = Mats.matById.get(buf.readInt());
+            NTMMaterial material = Mats.matByName.get(buf.readUtf());
             int amount = buf.readVarInt();
             if (material != null && amount > 0) materials.add(new MaterialStack(material, amount));
         }
@@ -370,21 +397,23 @@ public class MachineCrucibleBlockEntity extends MachineBaseBlockEntity implement
     public void receiveControl(CompoundTag tag) {
         if (tag.contains("index") && tag.contains("selection") && tag.getInt("index") == 0) {
             this.recipe = tag.getString("selection");
+            this.progress = 0;
             this.setChanged();
         }
     }
 
     @Override
     public boolean canAcceptPartialPour(Level level, Vec3 hit, Direction side, MaterialStack stack) {
-        return side == Direction.UP && stack != null && stack.material != null && stack.amount > 0
-                && this.getAmount(this.wasteStack, null) < WASTE_CAPACITY;
+        return side == Direction.UP && this.getMoltenAcceptance(stack) > 0;
     }
 
     @Override
     public MaterialStack pour(Level level, Vec3 hit, Direction side, MaterialStack stack) {
         if (!this.canAcceptPartialPour(level, hit, side, stack)) return stack;
-        int accepted = Math.min(stack.amount, WASTE_CAPACITY - this.getAmount(this.wasteStack, null));
-        this.addToStack(this.wasteStack, new MaterialStack(stack.material, accepted));
+        int accepted = this.getMoltenAcceptance(stack);
+        if (accepted <= 0) return stack;
+        List<MaterialStack> destination = this.getLoadedRecipe() == null ? this.wasteStack : this.recipeStack;
+        this.addToStack(destination, new MaterialStack(stack.material, accepted));
         stack.amount -= accepted;
         this.setChanged();
         return stack.amount > 0 ? stack : null;
@@ -398,5 +427,18 @@ public class MachineCrucibleBlockEntity extends MachineBaseBlockEntity implement
     @Override
     public MaterialStack flow(Level level, Direction side, MaterialStack stack) {
         return stack;
+    }
+
+    private int getMoltenAcceptance(MaterialStack stack) {
+        if (stack == null || stack.material == null || stack.amount <= 0) return 0;
+        CrucibleRecipe loaded = this.getLoadedRecipe();
+        if (loaded == null) return Math.min(stack.amount, WASTE_CAPACITY - this.getAmount(this.wasteStack, null));
+        int recipeContent = loaded.getInputAmount();
+        int required = this.getAmount(loaded.input, stack.material);
+        if (required <= 0 || recipeContent <= 0) return 0;
+        int maximum = required * RECIPE_CAPACITY / recipeContent;
+        int availableForMaterial = maximum - this.getAmount(this.recipeStack, stack.material);
+        int availableOverall = RECIPE_CAPACITY - this.getAmount(this.recipeStack, null);
+        return Math.max(0, Math.min(stack.amount, Math.min(availableForMaterial, availableOverall)));
     }
 }

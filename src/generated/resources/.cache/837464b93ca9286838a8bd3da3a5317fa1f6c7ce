@@ -1,4 +1,4 @@
-// 1.21.1	2026-08-08T18:35:42.3790422	Item Models: hbm
+// 1.21.1	2026-08-24T21:21:30.7324271	Item Models: hbm
 c4e09d2d0fd2bef45dc51c8da0c70bab4652e4b1 assets/hbm/models/item/acetylene_torch.json
 6c4e747554da913978325893b69ca977467a483c assets/hbm/models/item/ammo_secret.json
 99443ea6db20add27ff0bd97f72d22bbf1493cd1 assets/hbm/models/item/ammo_secret_0.json
@@ -242,6 +242,7 @@ c72e2b592d1f336079c7c084ecf2ef6e37f2af31 assets/hbm/models/item/casing_1.json
 5a3b8f06becdd3631dbe6bb4736e22f1972b834b assets/hbm/models/item/casing_4.json
 9411b6f9589f84303b71f07bcf2f02084502dabd assets/hbm/models/item/casing_5.json
 e434d813bbb5bf35bbce0fc3c4a818a21f004356 assets/hbm/models/item/casing_6.json
+6806dd4a2020cfed8f5972ab8483ef688fb00f32 assets/hbm/models/item/cast_plate_tungtungsten.json
 d1550be94d7d76803773c9a5b6090eacea937f8b assets/hbm/models/item/catalytic_converter.json
 02d08dc3e4536de95906a13ebe35b33ea220ef5d assets/hbm/models/item/cell_antimatter.json
 70dd598182aef47b11edf8a052e2ac28f111f7a7 assets/hbm/models/item/cell_anti_schrabidium.json
@@ -526,6 +527,16 @@ d493ca173821d274745a6e8b5def2310f4a7ef6e assets/hbm/models/item/mercury_nugget_t
 3537d0311570531f06cb6c389ad537dc7bb4ddd0 assets/hbm/models/item/mold_base.json
 5866e02d5cab64d41740523a012a20e0a52ace8e assets/hbm/models/item/mold_block.json
 eac784c69ecbae3cb1e472a7ea549b69499e9eaa assets/hbm/models/item/mold_ingot.json
+5d687f3f3e73bd75915a057b9230104cfbbb57a1 assets/hbm/models/item/mold_ingots.json
+afb031dabd8cbf475d6870520e50f29355a1036d assets/hbm/models/item/mold_pipe.json
+79109b5b4e0dd3d8bf8acee38fbdfc241ffdbd0b assets/hbm/models/item/mold_plate.json
+67be400647f0a7ea5bc173c632e8700bb004f844 assets/hbm/models/item/mold_plates.json
+70278adc32128fa617f2d24a330eef9bdb043547 assets/hbm/models/item/mold_plates_cast.json
+95042e5b9310c8a7113b5c5cd3b66660d493f910 assets/hbm/models/item/mold_plate_cast.json
+31c4f8e0c4ccc8bca4d60e3039e8ce62ab7c5373 assets/hbm/models/item/mold_shell.json
+5e47f13bbec137d0232653f238706aec9b7793ec assets/hbm/models/item/mold_wire.json
+aa57b1b380cefd544d1d29954f06257caf7d0ae8 assets/hbm/models/item/mold_wires_dense.json
+9bd07f24155b43dafac205659fc7f6bcf3cac5c8 assets/hbm/models/item/mold_wire_dense.json
 65b195ddd57f1cd47c92273390cb4511a8fd1d15 assets/hbm/models/item/moonstone.json
 432e889fec1472e13e590bb9d0976ed61cf1c210 assets/hbm/models/item/n2_charge.json
 74e7c57d6a2c73ee2cbb9aa1561f0bbeeaaebd76 assets/hbm/models/item/neutron_reflector.json

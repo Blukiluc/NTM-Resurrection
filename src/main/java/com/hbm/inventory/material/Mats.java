@@ -90,6 +90,7 @@ public class Mats {
                     MaterialShapes.DUST,
                     MaterialShapes.DENSEWIRE,
                     MaterialShapes.PLATE,
+                    MaterialShapes.CASTPLATE,
                     MaterialShapes.SHELL,
                     MaterialShapes.PIPE,
                     MaterialShapes.BLOCK)

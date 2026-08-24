@@ -693,6 +693,16 @@ public class NtmCreativeTabs {
                         output.accept(NtmItems.MOLD_BLANK);
                         output.accept(NtmItems.MOLD_INGOT);
                         output.accept(NtmItems.MOLD_BLOCK);
+                        output.accept(NtmItems.MOLD_PLATE);
+                        output.accept(NtmItems.MOLD_WIRE);
+                        output.accept(NtmItems.MOLD_PLATE_CAST);
+                        output.accept(NtmItems.MOLD_WIRE_DENSE);
+                        output.accept(NtmItems.MOLD_SHELL);
+                        output.accept(NtmItems.MOLD_PIPE);
+                        output.accept(NtmItems.MOLD_INGOTS);
+                        output.accept(NtmItems.MOLD_PLATES);
+                        output.accept(NtmItems.MOLD_PLATES_CAST);
+                        output.accept(NtmItems.MOLD_WIRES_DENSE);
 
                         output.accept(NtmBlocks.MACHINE_OIL_DERRICK);
                         output.accept(NtmBlocks.MACHINE_PUMPJACK);

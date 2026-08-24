@@ -13,6 +13,7 @@ import net.minecraft.tags.ItemTags;
 import net.minecraft.world.InteractionHand;
 import net.minecraft.world.InteractionResult;
 import net.minecraft.world.ItemInteractionResult;
+import net.minecraft.world.entity.LivingEntity;
 import net.minecraft.world.entity.player.Player;
 import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.level.Level;
@@ -41,7 +42,7 @@ public class MachineCrucibleBlock extends DummyableBlock {
     public BlockEntity newBlockEntity(BlockPos pos, BlockState state) {
         return switch (state.getValue(TYPE)) {
             case CORE -> new MachineCrucibleBlockEntity(pos, state);
-            case EXTRA -> new ProxyComboBlockEntity(pos, state).inventory();
+            case EXTRA -> new ProxyComboBlockEntity(pos, state).inventory().moltenMetal();
             default -> null;
         };
     }
@@ -64,7 +65,7 @@ public class MachineCrucibleBlock extends DummyableBlock {
                 ItemStack scrap = FoundryScrapItem.create(NtmItems.SCRAP.get(), material);
                 if (!player.addItem(scrap)) player.drop(scrap, false);
             }
-            stack.hurtAndBreak(1, player, net.minecraft.world.entity.EquipmentSlot.MAINHAND);
+            stack.hurtAndBreak(1, player, LivingEntity.getSlotForHand(hand));
         }
         return ItemInteractionResult.sidedSuccess(level.isClientSide);
     }
@@ -88,4 +89,17 @@ public class MachineCrucibleBlock extends DummyableBlock {
 
     @Override public int[] getDimensions() { return new int[] {1, 0, 1, 1, 1, 1}; }
     @Override public int getOffset() { return 1; }
+
+    @Override
+    protected void fillSpace(Level level, BlockPos pos, net.minecraft.core.Direction dir, int offset) {
+        super.fillSpace(level, pos, dir, offset);
+        BlockPos corePos = pos.relative(dir, offset);
+        for (int x = -1; x <= 1; x++) {
+            for (int y = 0; y <= 1; y++) {
+                for (int z = -1; z <= 1; z++) {
+                    this.makeExtra(level, corePos.offset(x, y, z));
+                }
+            }
+        }
+    }
 }

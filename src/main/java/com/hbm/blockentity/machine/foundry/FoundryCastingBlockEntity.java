@@ -19,6 +19,8 @@ import net.minecraft.world.phys.Vec3;
 
 public abstract class FoundryCastingBlockEntity extends FoundryBaseBlockEntity implements Container {
 
+    public static final int COOLOFF_TIME = 200;
+
     protected final NonNullList<ItemStack> items = NonNullList.withSize(2, ItemStack.EMPTY);
     protected int cooloff;
 
@@ -34,6 +36,10 @@ public abstract class FoundryCastingBlockEntity extends FoundryBaseBlockEntity i
 
     public ItemStack getResult() {
         return this.items.get(1);
+    }
+
+    public int getCooloff() {
+        return this.cooloff;
     }
 
     @Override
@@ -59,7 +65,7 @@ public abstract class FoundryCastingBlockEntity extends FoundryBaseBlockEntity i
         int capacity = this.getCapacity();
         if (capacity > 0 && this.amount >= capacity && this.material != null && this.getResult().isEmpty()) {
             this.cooloff++;
-            if (this.cooloff >= 200 && this.getMold().getItem() instanceof FoundryMoldItem mold) {
+            if (this.cooloff >= COOLOFF_TIME && this.getMold().getItem() instanceof FoundryMoldItem mold) {
                 ItemStack output = mold.getOutput(this.material);
                 if (!output.isEmpty()) {
                     this.items.set(1, output);

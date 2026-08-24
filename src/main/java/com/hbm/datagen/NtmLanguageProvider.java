@@ -508,6 +508,16 @@ public class NtmLanguageProvider extends LanguageProvider {
         this.add(NtmItems.MOLD_BLANK, "Blank Casting Mold");
         this.add(NtmItems.MOLD_INGOT, "Ingot Casting Mold");
         this.add(NtmItems.MOLD_BLOCK, "Block Casting Mold");
+        this.add(NtmItems.MOLD_PLATE, "Plate Casting Mold");
+        this.add(NtmItems.MOLD_WIRE, "Wire Casting Mold");
+        this.add(NtmItems.MOLD_PLATE_CAST, "Cast Plate Casting Mold");
+        this.add(NtmItems.MOLD_WIRE_DENSE, "Dense Wire Casting Mold");
+        this.add(NtmItems.MOLD_SHELL, "Shell Casting Mold");
+        this.add(NtmItems.MOLD_PIPE, "Pipe Casting Mold");
+        this.add(NtmItems.MOLD_INGOTS, "Nine Ingot Casting Mold");
+        this.add(NtmItems.MOLD_PLATES, "Nine Plate Casting Mold");
+        this.add(NtmItems.MOLD_PLATES_CAST, "Three Cast Plate Casting Mold");
+        this.add(NtmItems.MOLD_WIRES_DENSE, "Nine Dense Wire Casting Mold");
 
         this.add(NtmItems.PELLET_RTG, "Plutonium-238 RTG Pellet");
 

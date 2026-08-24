@@ -10,7 +10,7 @@ import net.minecraft.tags.ItemTags;
 import net.minecraft.world.Containers;
 import net.minecraft.world.InteractionHand;
 import net.minecraft.world.ItemInteractionResult;
-import net.minecraft.world.entity.EquipmentSlot;
+import net.minecraft.world.entity.LivingEntity;
 import net.minecraft.world.entity.player.Player;
 import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.level.BlockGetter;
@@ -63,7 +63,7 @@ public class DynamicSlagBlock extends BaseEntityBlock {
         if (!level.isClientSide) {
             ItemStack scrap = FoundryScrapItem.create(NtmItems.SCRAP.get(), slag.removeMaterial(slag.getAmount()));
             if (!player.addItem(scrap)) player.drop(scrap, false);
-            stack.hurtAndBreak(1, player, EquipmentSlot.MAINHAND);
+            stack.hurtAndBreak(1, player, LivingEntity.getSlotForHand(hand));
             level.removeBlock(pos, false);
         }
         return ItemInteractionResult.sidedSuccess(level.isClientSide);

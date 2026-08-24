@@ -1,6 +1,8 @@
 package com.hbm.blocks.machine.foundry;
 
 import com.hbm.blockentity.machine.foundry.FoundryChannelBlockEntity;
+import com.hbm.blocks.DummyableBlock;
+import com.hbm.blocks.machine.MachineCrucibleBlock;
 import com.mojang.serialization.MapCodec;
 import net.minecraft.core.BlockPos;
 import net.minecraft.core.Direction;
@@ -57,13 +59,17 @@ public class FoundryChannelBlock extends FoundryMaterialBlock {
             case WEST -> WEST;
             default -> null;
         };
-        return property == null ? state : state.setValue(property, this.connectsTo(neighborState, direction));
+        return property == null ? state : state.setValue(property,
+                this.connectsTo(level, pos, neighborPos, neighborState, direction));
     }
 
     @Nullable
     @Override
     public BlockState getStateForPlacement(BlockPlaceContext context) {
-        BlockState state = this.defaultBlockState();
+        return this.updateConnections(context.getLevel(), context.getClickedPos(), this.defaultBlockState());
+    }
+
+    public BlockState updateConnections(BlockGetter level, BlockPos channelPos, BlockState state) {
         for (Direction direction : Direction.Plane.HORIZONTAL) {
             BooleanProperty property = switch (direction) {
                 case NORTH -> NORTH;
@@ -72,14 +78,29 @@ public class FoundryChannelBlock extends FoundryMaterialBlock {
                 case WEST -> WEST;
                 default -> null;
             };
-            state = state.setValue(property, this.connectsTo(context.getLevel().getBlockState(context.getClickedPos().relative(direction)), direction));
+            BlockPos neighborPos = channelPos.relative(direction);
+            state = state.setValue(property, this.connectsTo(level, channelPos, neighborPos,
+                    level.getBlockState(neighborPos), direction));
         }
         return state;
     }
 
-    private boolean connectsTo(BlockState state, Direction direction) {
+    private boolean connectsTo(BlockGetter level, BlockPos channelPos, BlockPos neighborPos,
+                               BlockState state, Direction direction) {
         if (state.getBlock() instanceof FoundryChannelBlock || state.getBlock() instanceof FoundryMoldBlock) return true;
-        return state.getBlock() instanceof FoundryOutletBlock && state.getValue(FoundryOutletBlock.FACING) == direction.getOpposite();
+        if (state.getBlock() instanceof FoundryOutletBlock) {
+            return state.getValue(FoundryOutletBlock.FACING) == direction;
+        }
+        if (state.getBlock() instanceof MachineCrucibleBlock crucible) {
+            BlockPos corePos = crucible.findCore(level, neighborPos);
+            if (corePos == null) return false;
+            Direction facing = level.getBlockState(corePos).getValue(DummyableBlock.FACING);
+            Direction recipeOutput = facing.getCounterClockWise(Direction.Axis.Y);
+            Direction wasteOutput = facing.getClockWise();
+            return channelPos.equals(corePos.relative(recipeOutput, 2))
+                    || channelPos.equals(corePos.relative(wasteOutput, 2));
+        }
+        return false;
     }
 
     @Override

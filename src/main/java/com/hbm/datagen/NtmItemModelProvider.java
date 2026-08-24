@@ -364,6 +364,16 @@ public class NtmItemModelProvider extends ItemModelProvider {
         this.basicItem(NtmItems.MOLD_BLANK.get());
         this.basicItem(NtmItems.MOLD_INGOT.get());
         this.basicItem(NtmItems.MOLD_BLOCK.get());
+        this.basicItem(NtmItems.MOLD_PLATE.get());
+        this.basicItem(NtmItems.MOLD_WIRE.get());
+        this.basicItem(NtmItems.MOLD_PLATE_CAST.get());
+        this.basicItem(NtmItems.MOLD_WIRE_DENSE.get());
+        this.basicItem(NtmItems.MOLD_SHELL.get());
+        this.basicItem(NtmItems.MOLD_PIPE.get());
+        this.basicItem(NtmItems.MOLD_INGOTS.get());
+        this.basicItem(NtmItems.MOLD_PLATES.get());
+        this.basicItem(NtmItems.MOLD_PLATES_CAST.get());
+        this.basicItem(NtmItems.MOLD_WIRES_DENSE.get());
 
         this.basicItem(NtmItems.CRYSTAL_COAL.get());
         this.basicItem(NtmItems.CRYSTAL_IRON.get());

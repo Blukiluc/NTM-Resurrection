@@ -98,28 +98,30 @@ public abstract class FoundryBaseBlockEntity extends LoadedBaseBlockEntity imple
     @Override
     protected void saveAdditional(CompoundTag tag, HolderLookup.Provider registries) {
         super.saveAdditional(tag, registries);
-        if (this.material != null) tag.putInt("material", this.material.id);
+        if (this.material != null) tag.putString("materialName", this.material.getCanonicalName());
         tag.putInt("amount", this.amount);
     }
 
     @Override
     protected void loadAdditional(CompoundTag tag, HolderLookup.Provider registries) {
         super.loadAdditional(tag, registries);
-        this.material = Mats.matById.get(tag.getInt("material"));
+        this.material = tag.contains("materialName")
+                ? Mats.matByName.get(tag.getString("materialName"))
+                : Mats.matById.get(tag.getInt("material"));
         this.amount = this.material == null ? 0 : Math.max(0, tag.getInt("amount"));
     }
 
     @Override
     public void serialize(RegistryFriendlyByteBuf buf) {
         super.serialize(buf);
-        buf.writeInt(this.material == null ? -1 : this.material.id);
+        buf.writeUtf(this.material == null ? "" : this.material.getCanonicalName());
         buf.writeVarInt(this.amount);
     }
 
     @Override
     public void deserialize(RegistryFriendlyByteBuf buf) {
         super.deserialize(buf);
-        this.material = Mats.matById.get(buf.readInt());
+        this.material = Mats.matByName.get(buf.readUtf());
         int receivedAmount = buf.readVarInt();
         this.amount = this.material == null ? 0 : receivedAmount;
     }

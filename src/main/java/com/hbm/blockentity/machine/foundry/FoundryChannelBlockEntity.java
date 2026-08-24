@@ -1,10 +1,12 @@
 package com.hbm.blockentity.machine.foundry;
 
 import com.hbm.blockentity.NtmBlockEntityTypes;
+import com.hbm.blocks.machine.foundry.FoundryChannelBlock;
 import com.hbm.inventory.material.MaterialShapes;
 import com.hbm.inventory.material.Mats.MaterialStack;
 import net.minecraft.core.BlockPos;
 import net.minecraft.core.Direction;
+import net.minecraft.world.level.block.Block;
 import net.minecraft.world.level.block.entity.BlockEntity;
 import net.minecraft.world.level.block.state.BlockState;
 
@@ -47,6 +49,13 @@ public class FoundryChannelBlockEntity extends FoundryBaseBlockEntity {
 
     @Override
     public void updateEntity() {
+        if (this.level != null && !this.level.isClientSide && this.level.getGameTime() % 20 == 0
+                && this.getBlockState().getBlock() instanceof FoundryChannelBlock channel) {
+            BlockState refreshed = channel.updateConnections(this.level, this.worldPosition, this.getBlockState());
+            if (refreshed != this.getBlockState()) {
+                this.level.setBlock(this.worldPosition, refreshed, Block.UPDATE_CLIENTS);
+            }
+        }
         super.updateEntity();
         if (this.level == null || this.level.isClientSide || this.amount <= 0 || this.level.getGameTime() % 5 != 0) return;
 
@@ -65,7 +74,9 @@ public class FoundryChannelBlockEntity extends FoundryBaseBlockEntity {
         for (Direction direction : Direction.Plane.HORIZONTAL) {
             if (this.material == null || this.amount <= 0) return;
             BlockEntity target = this.level.getBlockEntity(this.worldPosition.relative(direction));
-            if (target instanceof FoundryChannelBlockEntity channel && channel.material == this.material && channel.amount + 1 < this.amount) {
+            if (target instanceof FoundryChannelBlockEntity channel
+                    && (channel.material == null || channel.material == this.material)
+                    && channel.amount + 1 < this.amount) {
                 int transfer = Math.min(MaterialShapes.NUGGET.q(1), (this.amount - channel.amount) / 2);
                 if (transfer > 0) {
                     MaterialStack left = channel.accept(new MaterialStack(this.material, transfer));
