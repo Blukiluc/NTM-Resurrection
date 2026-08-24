@@ -63,5 +63,7 @@ public class NtmDataGenerators {
         generator.addProvider(event.includeServer(), new NtmDamageTypeTagsProvider(output, lookup, helper));
         generator.addProvider(event.includeServer(), new NtmFluidTagsProvider(output, lookup, helper));
         generator.addProvider(event.includeServer(), new NtmRecipeProvider(output, lookup));
+        // Burn Time
+        generator.addProvider(event.includeServer(), new NtmBurnTimeProvider(output, lookup));
     }
 }

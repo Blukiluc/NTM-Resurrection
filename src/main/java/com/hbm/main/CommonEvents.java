@@ -163,9 +163,16 @@ public class CommonEvents {
         event.register(NtmMenuTypes.FLUID_TANK.get(), MachineFluidTankScreen::new);
 
         event.register(NtmMenuTypes.ASSEMBLY_MACHINE.get(), MachineAssemblyMachineScreen::new);
+        event.register(NtmMenuTypes.ASSEMBLY_FACTORY.get(), MachineAssemblyFactoryScreen::new);
+        event.register(NtmMenuTypes.PREC_ASS.get(), MachinePrecisionAssemblyMachineScreen::new);
         event.register(NtmMenuTypes.CHEMICAL_PLANT.get(), MachineChemicalPlantScreen::new);
+        event.register(NtmMenuTypes.CHEMICAL_FACTORY.get(), MachineChemicalFactoryScreen::new);
+        event.register(NtmMenuTypes.PUREX.get(), MachinePurexScreen::new);
+        event.register(NtmMenuTypes.ORE_ACIDIZER.get(), MachineOreAcidizerScreen::new);
         event.register(NtmMenuTypes.WOOD_BURNER.get(), MachineWoodBurnerScreen::new);
         event.register(NtmMenuTypes.DIESEL.get(), MachineDieselScreen::new);
+        event.register(NtmMenuTypes.COMBUSTION_ENGINE.get(), MachineCombustionEngineScreen::new);
+        event.register(NtmMenuTypes.TURBOFAN.get(), MachineTurbofanScreen::new);
         event.register(NtmMenuTypes.SHREDDER.get(), MachineShredderScreen::new);
         event.register(NtmMenuTypes.PRESS.get(), MachinePressScreen::new);
         event.register(NtmMenuTypes.ELECTRIC_PRESS.get(), MachineElectricPressScreen::new);
@@ -175,15 +182,23 @@ public class CommonEvents {
         event.register(NtmMenuTypes.ARC_WELDER.get(), MachineArcWelderScreen::new);
         event.register(NtmMenuTypes.CRUCIBLE.get(), MachineCrucibleScreen::new);
         event.register(NtmMenuTypes.MIXER.get(), MachineMixerScreen::new);
+        event.register(NtmMenuTypes.FEL.get(), MachineFELScreen::new);
+        event.register(NtmMenuTypes.SILEX.get(), MachineSilexScreen::new);
+        event.register(NtmMenuTypes.ELECTROLYSER_FLUID.get(), MachineElectrolyserFluidScreen::new);
+        event.register(NtmMenuTypes.ELECTROLYSER_METAL.get(), MachineElectrolyserMetalScreen::new);
+        event.register(NtmMenuTypes.FURNACE_BRICK.get(), MachineFurnaceBrickScreen::new);
+        event.register(NtmMenuTypes.ELECTRIC_FURNACE.get(), MachineElectricFurnaceScreen::new);
         event.register(NtmMenuTypes.FURNACE_IRON.get(), MachineFurnaceIronScreen::new);
         event.register(NtmMenuTypes.FURNACE_STEEL.get(), MachineFurnaceSteelScreen::new);
-        event.register(NtmMenuTypes.FURNACE_COMBINATION.get(), MachineFurnaceCombinationScreen::new);
+        event.register(NtmMenuTypes.COMBINATION_OVEN.get(), MachineCombinationOvenScreen::new);
         event.register(NtmMenuTypes.MACHINE_BLAST_FURNACE.get(), MachineBlastFurnaceScreen::new);
+        event.register(NtmMenuTypes.MACHINE_ROTARY_FURNACE.get(), MachineRotaryFurnaceScreen::new);
         event.register(NtmMenuTypes.MACHINE_OIL.get(), MachineOilScreen::new);
         event.register(NtmMenuTypes.REFINERY.get(), MachineRefineryScreen::new);
-        event.register(NtmMenuTypes.VACUUM_REFINERY.get(), MachineVacuumDistillScreen::new);
+        event.register(NtmMenuTypes.VACUUM_REFINERY.get(), MachineVacuumRefineryScreen::new);
         event.register(NtmMenuTypes.COMPRESSOR.get(), MachineCompressorScreen::new);
         event.register(NtmMenuTypes.CATALYTIC_REFORMER.get(), MachineCatalyticReformerScreen::new);
+        event.register(NtmMenuTypes.GAS_FLARE.get(), MachineGasFlareScreen::new);
 
         event.register(NtmMenuTypes.CRATE.get(), CrateScreen::new);
 

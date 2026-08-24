@@ -1,5 +1,6 @@
 package com.hbm.inventory.material;
 
+import net.minecraft.network.chat.Component;
 import net.minecraft.world.item.Item;
 import net.minecraft.world.item.ItemStack;
 
@@ -86,6 +87,10 @@ public class NTMMaterial {
         return this;
     }
 
+    public Component getName() {
+        return Component.translatable(this.getTranslationKey());
+    }
+
     public NTMMaterial setConversion(NTMMaterial into, int unitsIn, int unitsOut) {
         this.smeltsInto = into;
         this.convIn  = unitsIn;
@@ -138,7 +143,7 @@ public class NTMMaterial {
         return item != null ? item.get() : null;
     }
 
-    /** Creates an ItemStack of the auto-generated item for this shape, or ItemStack.EMPTY if none */
+    /** Creates an ItemStack of the auto-generated item for this shape, or ItemStack. EMPTY if none */
     public ItemStack makeStack(MaterialShapes shape, int count) {
         Item item = getItem(shape);
         return item != null ? new ItemStack(item, count) : ItemStack.EMPTY;

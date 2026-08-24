@@ -3,6 +3,7 @@ package com.hbm.inventory.fluid.trait;
 import com.google.gson.JsonObject;
 import com.google.gson.stream.JsonWriter;
 import com.hbm.inventory.fluid.FluidType;
+import com.hbm.inventory.fluid.Fluids;
 import net.minecraft.network.chat.Component;
 
 import java.io.IOException;
@@ -68,10 +69,28 @@ public class FT_Coolable extends FluidTrait {
         this.heatEnergy = obj.has("heatEnergy") ? obj.get("heatEnergy").getAsInt() : this.heatEnergy;
         this.amountReq = obj.has("amountReq") ? obj.get("amountReq").getAsInt() : this.amountReq;
         this.amountProduced = obj.has("amountProduced") ? obj.get("amountProduced").getAsInt() : this.amountProduced;
+        if(obj.has("coolsTo")) {
+            this.coolsTo = Fluids.fromName(obj.get("coolsTo").getAsString());
+        }
+
+        this.steps.clear();
+        if(this.coolsTo != null && this.amountReq > 0 && this.amountProduced > 0) {
+            this.steps.add(new CoolingStep(this.amountReq, this.heatEnergy, this.coolsTo, this.amountProduced));
+        }
+
+        if(obj.has("efficiency")) {
+            JsonObject efficiencies = obj.getAsJsonObject("efficiency");
+            for(CoolingType type : CoolingType.VALUES) {
+                if(efficiencies.has(type.name())) {
+                    this.efficiency.put(type, efficiencies.get(type.name()).getAsDouble());
+                }
+            }
+        }
     }
 
     public enum CoolingType {
-        HEATEXCHANGER;
+        HEATEXCHANGER,
+        TURBINE;
 
         public static final CoolingType[] VALUES = values();
     }

@@ -5,6 +5,7 @@ import com.hbm.blocks.IMultiBlock;
 import com.hbm.blocks.states.NtmBlockStateProperties;
 import com.hbm.inventory.MetaHelper;
 import com.hbm.inventory.fluid.FluidType;
+import com.hbm.inventory.fluid.Fluids;
 import com.hbm.lib.Library;
 import net.minecraft.core.BlockPos;
 import net.minecraft.core.Direction;
@@ -54,7 +55,17 @@ public class FluidDuctConnectingBlock extends FluidDuctBaseBlock implements IMul
 
     @Override
     public BlockState getStateForPlacement(BlockPlaceContext context) {
-        return this.defaultBlockState().setValue(META, MetaHelper.getMeta(context.getItemInHand()));
+        BlockPos pos = context.getClickedPos();
+        LevelAccessor level = context.getLevel();
+        FluidType type = Fluids.NONE;
+        return this.defaultBlockState()
+                .setValue(META, MetaHelper.getMeta(context.getItemInHand()))
+                .setValue(WEST, canConnectTo(level, pos, Direction.WEST, type))
+                .setValue(EAST, canConnectTo(level, pos, Direction.EAST, type))
+                .setValue(DOWN, canConnectTo(level, pos, Direction.DOWN, type))
+                .setValue(UP, canConnectTo(level, pos, Direction.UP, type))
+                .setValue(NORTH, canConnectTo(level, pos, Direction.NORTH, type))
+                .setValue(SOUTH, canConnectTo(level, pos, Direction.SOUTH, type));
     }
 
     @Override

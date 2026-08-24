@@ -2,6 +2,7 @@ package com.hbm.main;
 
 import com.hbm.blockentity.NtmBlockEntityTypes;
 import com.hbm.blocks.NtmBlocks;
+import com.hbm.client.NtmClientEventHandler;
 import com.hbm.client.NtmItemColors;
 import com.hbm.config.NtmConfig;
 import com.hbm.entity.NtmEntityTypes;
@@ -16,6 +17,7 @@ import com.hbm.lib.ModAttachments;
 import com.hbm.lib.ModEffect;
 import com.hbm.particle.ModParticles;
 import com.hbm.registry.NtmSoundEvents;
+import com.hbm.world.gen.feature.NtmFeatures;
 import net.minecraft.resources.ResourceLocation;
 import net.neoforged.bus.api.IEventBus;
 import net.neoforged.fml.ModContainer;
@@ -27,10 +29,16 @@ import org.slf4j.LoggerFactory;
 
 import java.io.File;
 
+import static net.neoforged.fml.loading.FMLEnvironment.dist;
+
 @Mod(NuclearTechMod.MODID)
 public class NuclearTechMod {
     public static final String MODID = "hbm";
-    public static ResourceLocation withDefaultNamespace(String path) { return ResourceLocation.fromNamespaceAndPath(MODID, path); }
+
+    public static ResourceLocation withDefaultNamespace(String path) {
+        return ResourceLocation.fromNamespaceAndPath(MODID, path);
+    }
+
     public static final String VERSION = "128A";
     public static final Logger LOGGER = LoggerFactory.getLogger(MODID);
 
@@ -45,13 +53,14 @@ public class NuclearTechMod {
         configDir = FMLPaths.CONFIGDIR.get().toFile();
         configHbmDir = new File(NuclearTechMod.configDir, "hbmConfig");
 
-        if(!NuclearTechMod.configHbmDir.exists()) NuclearTechMod.configHbmDir.mkdirs();
+        if (!NuclearTechMod.configHbmDir.exists()) NuclearTechMod.configHbmDir.mkdirs();
 
         NtmConfig.register(container);
 
         Fluids.init();
         NtmItems.register(eventBus);
         NtmBlocks.register(eventBus);
+        NtmFeatures.FEATURES.register(eventBus);
         NtmFluidTypes.register(eventBus);
         NtmFluids.register(eventBus);
         NtmDataComponents.register(eventBus);
@@ -68,6 +77,8 @@ public class NuclearTechMod {
         // guarded so the client-only RegisterColorHandlersEvent.Item is never touched on a dedicated server
         if (FMLLoader.getDist().isClient()) {
             NtmItemColors.register(eventBus);
+
         }
+
     }
 }

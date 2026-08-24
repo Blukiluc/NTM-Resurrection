@@ -36,7 +36,7 @@ public class RenderDieselGen extends BlockEntityRendererNT<MachineDieselBlockEnt
         }
 
         bindTexture(ResourceManager.DIESEL_GENERATOR_TEX);
-        ResourceManager.dieselGenerator.renderPart("Generator");
+        ResourceManager.diesel_generator.renderPart("Generator");
 
         RenderContext.pushPose();
         if(be.hasAcceptableFuel() && be.tank.getFill() > 0) {
@@ -44,7 +44,7 @@ public class RenderDieselGen extends BlockEntityRendererNT<MachineDieselBlockEnt
             double swingFront = Math.sin(System.currentTimeMillis() / 25D) * 0.005;
             RenderContext.translate((float) swingFront, 0F, (float) swingSide);
         }
-        ResourceManager.dieselGenerator.renderPart("Engine");
+        ResourceManager.diesel_generator.renderPart("Engine");
         RenderContext.popPose();
     }
 
@@ -76,7 +76,7 @@ public class RenderDieselGen extends BlockEntityRendererNT<MachineDieselBlockEnt
             public void renderCommon(ItemStack stack, MultiBufferSource buffer) {
                 RenderContext.scale(2F, 2F, 2F);
                 bindTexture(ResourceManager.DIESEL_GENERATOR_TEX);
-                ResourceManager.dieselGenerator.renderAll();
+                ResourceManager.diesel_generator.renderAll();
             }
         };
     }

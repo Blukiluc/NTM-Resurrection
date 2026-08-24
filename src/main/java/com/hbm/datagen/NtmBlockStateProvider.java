@@ -7,6 +7,8 @@ import com.hbm.blocks.NtmBlocks;
 import com.hbm.blocks.generic.BarbedWireBlock;
 import com.hbm.blocks.generic.LayeringBlock;
 import com.hbm.blocks.generic.SellafieldSlakedBlock;
+import com.hbm.blocks.machine.MachineElectricFurnaceBlock;
+import com.hbm.blocks.machine.MachineFurnaceBrickBlock;
 import com.hbm.blocks.network.FluidDuctConnectingBlock;
 import com.hbm.blocks.machine.foundry.DynamicSlagBlock;
 import com.hbm.blocks.machine.foundry.FoundryChannelBlock;
@@ -20,6 +22,8 @@ import net.minecraft.core.registries.BuiltInRegistries;
 import net.minecraft.data.PackOutput;
 import net.minecraft.resources.ResourceLocation;
 import net.minecraft.world.level.block.Block;
+import net.minecraft.world.level.block.state.properties.BooleanProperty;
+import net.minecraft.world.level.block.state.properties.DirectionProperty;
 import net.neoforged.neoforge.client.model.generators.*;
 import net.neoforged.neoforge.common.data.ExistingFileHelper;
 import net.neoforged.neoforge.registries.DeferredBlock;
@@ -62,6 +66,38 @@ public class NtmBlockStateProvider extends BlockStateProvider {
         this.simpleCubeAllBlock(NtmBlocks.ORE_GNEISS_URANIUM_SCORCHED);
         this.simpleCubeAllBlock(NtmBlocks.ORE_NETHER_PLUTONIUM);
         this.simpleCubeAllBlock(NtmBlocks.ORE_GNEISS_SCHRABIDIUM);
+        this.simpleCubeAllBlock(NtmBlocks.ORE_ALUMINUM);
+        this.simpleCubeAllBlock(NtmBlocks.ORE_ALUMINUM_DEEPSLATE);
+        this.simpleCubeAllBlock(NtmBlocks.ORE_ASBESTOS);
+        this.simpleCubeAllBlock(NtmBlocks.ORE_DEEPSLATE_ASBESTOS);
+        this.simpleCubeAllBlock(NtmBlocks.ORE_BERYLLIUM);
+        this.simpleCubeAllBlock(NtmBlocks.ORE_BERYLLIUM_DEEPSLATE);
+        this.simpleCubeAllBlock(NtmBlocks.ORE_CINNABAR);
+        this.simpleCubeAllBlock(NtmBlocks.ORE_CINNABAR_DEEPSLATE);
+        this.simpleCubeAllBlock(NtmBlocks.ORE_COBALT);
+        this.simpleCubeAllBlock(NtmBlocks.ORE_COBALT_DEEPSLATE);
+        this.simpleCubeAllBlock(NtmBlocks.ORE_LIGNITE);
+        this.simpleCubeAllBlock(NtmBlocks.ORE_DEEPSLATE_BROWNCOAL);
+        this.simpleCubeAllBlock(NtmBlocks.ORE_FLUORITE);
+        this.simpleCubeAllBlock(NtmBlocks.ORE_DEEPSLATE_FLUORITE);
+        this.simpleCubeAllBlock(NtmBlocks.ORE_LEAD);
+        this.simpleCubeAllBlock(NtmBlocks.ORE_LEAD_DEEPSLATE);
+        this.simpleCubeAllBlock(NtmBlocks.ORE_RAREGROUND);
+        this.simpleCubeAllBlock(NtmBlocks.ORE_RAREGROUND_DEEPSLATE);
+        this.simpleCubeAllBlock(NtmBlocks.ORE_SULFUR);
+        this.simpleCubeAllBlock(NtmBlocks.ORE_DEEPSLATE_SULFUR);
+        this.simpleCubeAllBlock(NtmBlocks.ORE_THORIUM);
+        this.simpleCubeAllBlock(NtmBlocks.ORE_THORIUM_DEEPSLATE);
+        this.simpleCubeAllBlock(NtmBlocks.ORE_TITANIUM);
+        this.simpleCubeAllBlock(NtmBlocks.ORE_TITANIUM_DEEPSLATE);
+        this.simpleCubeAllBlock(NtmBlocks.ORE_TUNGSTEN);
+        this.simpleCubeAllBlock(NtmBlocks.ORE_DEEPSLATE_TUNGSTEN);
+        this.simpleCubeAllBlock(NtmBlocks.ORE_URANIUM_H);
+        this.simpleCubeAllBlock(NtmBlocks.ORE_URANIUM_DEEPSLATE);
+        this.simpleCubeAllBlock(NtmBlocks.ORE_DEEPSLATE_ALEXANDRITE);
+        this.simpleCubeAllBlock(NtmBlocks.ORE_DEEPSLATE_COLTAN);
+        this.simpleCubeAllBlock(NtmBlocks.ORE_DEEPSLATE_NITER);
+        this.simpleCubeAllBlock(NtmBlocks.ORE_SEQUESTRUM);
 
         this.simpleCubeAllBlock(NtmBlocks.BLOCK_SCRAP);
 
@@ -212,11 +248,24 @@ public class NtmBlockStateProvider extends BlockStateProvider {
 
         this.particleOnlyBlock(NtmBlocks.MACHINE_PRESS, modLoc("block/block_steel"));
         this.particleOnlyBlock(NtmBlocks.MACHINE_ELECTRIC_PRESS, modLoc("block/block_steel"));
+        this.simpleCubeAllBlock(NtmBlocks.PRESS_PREHEATER);
         this.registerShredder();
 
-        this.registerCable();
+        this.registerCables();
 
-        this.registerFluidDuct();
+        this.particleOnlyBlock(NtmBlocks.RED_CONNECTOR, modLoc("block/block_steel"));
+        this.particleOnlyBlock(NtmBlocks.RED_CONNECTOR_SUPER, modLoc("block/block_steel"));
+        this.particleOnlyBlock(NtmBlocks.RED_PYLON, modLoc("block/block_steel"));
+        this.particleOnlyBlock(NtmBlocks.RED_PYLON_MEDIUM_WOOD, modLoc("block/block_steel"));
+        this.particleOnlyBlock(NtmBlocks.RED_PYLON_MEDIUM_WOOD_TRANSFORMER, modLoc("block/block_steel"));
+        this.particleOnlyBlock(NtmBlocks.RED_PYLON_MEDIUM_STEEL, modLoc("block/block_steel"));
+        this.particleOnlyBlock(NtmBlocks.RED_PYLON_MEDIUM_STEEL_TRANSFORMER, modLoc("block/block_steel"));
+        this.particleOnlyBlock(NtmBlocks.RED_PYLON_LARGE, modLoc("block/block_steel"));
+        this.particleOnlyBlock(NtmBlocks.RED_PYLON_STEEL, modLoc("block/block_steel"));
+        this.particleOnlyBlock(NtmBlocks.SUBSTATION, modLoc("block/block_steel"));
+
+        this.registerFluidDucts();
+        this.particleOnlyBlock(NtmBlocks.PIPE_ANCHOR, modLoc("block/block_steel"));
         this.particleOnlyBlock(NtmBlocks.HEATER_FIREBOX, modLoc("block/block_steel"));
         this.particleOnlyBlock(NtmBlocks.HEATER_OVEN, modLoc("block/block_steel"));
         this.particleOnlyBlock(NtmBlocks.HEATER_FLUID_BURNER, modLoc("block/block_steel"));
@@ -225,9 +274,25 @@ public class NtmBlockStateProvider extends BlockStateProvider {
         this.particleOnlyBlock(NtmBlocks.MACHINE_BATTERY_SOCKET, modLoc("block/block_steel"));
         this.particleOnlyBlock(NtmBlocks.MACHINE_BATTERY_REDD, modLoc("block/block_steel"));
         this.particleOnlyBlock(NtmBlocks.MACHINE_ASSEMBLY_MACHINE, modLoc("block/block_steel"));
+        this.particleOnlyBlock(NtmBlocks.MACHINE_ASSEMBLY_FACTORY, modLoc("block/block_steel"));
+        this.particleOnlyBlock(NtmBlocks.MACHINE_PREC_ASS, modLoc("block/block_steel"));
         this.particleOnlyBlock(NtmBlocks.MACHINE_CHEMICAL_PLANT, modLoc("block/block_steel"));
+        this.particleOnlyBlock(NtmBlocks.MACHINE_CHEMICAL_FACTORY, modLoc("block/block_steel"));
+        this.particleOnlyBlock(NtmBlocks.MACHINE_PUREX, modLoc("block/block_steel"));
+        this.particleOnlyBlock(NtmBlocks.MACHINE_ORE_ACIDIZER, modLoc("block/block_steel"));
         this.particleOnlyBlock(NtmBlocks.MACHINE_WOOD_BURNER, modLoc("block/block_steel"));
         this.particleOnlyBlock(NtmBlocks.MACHINE_DIESEL, modLoc("block/block_steel"));
+        this.particleOnlyBlock(NtmBlocks.MACHINE_COMBUSTION_ENGINE, modLoc("block/block_steel"));
+        this.particleOnlyBlock(NtmBlocks.MACHINE_TURBOFAN, modLoc("block/block_steel"));
+        this.particleOnlyBlock(NtmBlocks.MACHINE_STIRLING, modLoc("block/block_steel"));
+        this.particleOnlyBlock(NtmBlocks.MACHINE_STIRLING_STEEL, modLoc("block/block_steel"));
+        this.particleOnlyBlock(NtmBlocks.MACHINE_STIRLING_CREATIVE, modLoc("block/block_steel"));
+        this.particleOnlyBlock(NtmBlocks.MACHINE_SAWMILL, modLoc("block/block_steel"));
+        this.particleOnlyBlock(NtmBlocks.PUMP_STEAM, modLoc("block/block_steel"));
+        this.particleOnlyBlock(NtmBlocks.PUMP_ELECTRIC, modLoc("block/block_steel"));
+        this.simpleCubeAllBlock(NtmBlocks.MACHINE_CONDENSER);
+        this.particleOnlyBlock(NtmBlocks.MACHINE_CONDENSER_POWERED, modLoc("block/block_steel"));
+        this.particleOnlyBlock(NtmBlocks.MACHINE_STEAM_ENGINE, modLoc("block/block_steel"));
         this.particleOnlyBlock(NtmBlocks.MACHINE_CENTRIFUGE, modLoc("block/block_steel"));
         this.particleOnlyBlock(NtmBlocks.MACHINE_GAS_CENTRIFUGE, modLoc("block/block_steel"));
         this.particleOnlyBlock(NtmBlocks.MACHINE_SOLDERING_STATION, modLoc("block/block_steel"));
@@ -241,12 +306,26 @@ public class NtmBlockStateProvider extends BlockStateProvider {
         this.registerFoundryOutlet(NtmBlocks.FOUNDRY_SLAGTAP, "foundry_slagtap");
         this.registerMoltenSlag();
         this.particleOnlyBlock(NtmBlocks.MACHINE_MIXER, modLoc("block/block_steel"));
-        this.particleOnlyBlock(NtmBlocks.HEAT_BOILER, modLoc("block/block_steel"));
+        this.particleOnlyBlock(NtmBlocks.MACHINE_FEL, modLoc("block/block_steel"));
+        this.particleOnlyBlock(NtmBlocks.MACHINE_SILEX, modLoc("block/block_steel"));
+        this.particleOnlyBlock(NtmBlocks.MACHINE_ELECTROLYSER, modLoc("block/block_steel"));
+        this.particleOnlyBlock(NtmBlocks.MACHINE_INTAKE, modLoc("block/block_steel"));
+        this.particleOnlyBlock(NtmBlocks.MACHINE_HEAT_BOILER, modLoc("block/block_steel"));
+        this.particleOnlyBlock(NtmBlocks.MACHINE_SOLAR_BOILER, modLoc("block/machine_solar_boiler"));
+        this.particleOnlyBlock(NtmBlocks.SOLAR_MIRROR, modLoc("block/solar_mirror"));
         this.particleOnlyBlock(NtmBlocks.MACHINE_INDUSTRIAL_BOILER, modLoc("block/block_steel"));
-        this.particleOnlyBlock(NtmBlocks.FURNACE_IRON, modLoc("block/block_aluminium"));
-        this.particleOnlyBlock(NtmBlocks.FURNACE_STEEL, modLoc("block/block_steel"));
-        this.particleOnlyBlock(NtmBlocks.FURNACE_COMBINATION, modLoc("block/block_steel"));
+        this.particleOnlyBlock(NtmBlocks.MACHINE_INDUSTRIAL_TURBINE, modLoc("block/block_steel"));
+        this.particleOnlyBlock(NtmBlocks.MACHINE_CHUNGUS, modLoc("block/block_steel"));
+        this.particleOnlyBlock(NtmBlocks.MACHINE_TOWER_SMALL, modLoc("block/brick_concrete"));
+        this.particleOnlyBlock(NtmBlocks.MACHINE_TOWER_LARGE, modLoc("block/concrete"));
+        this.particleOnlyBlock(NtmBlocks.MACHINE_GEOTHERMAL_HEAT_EXCHANGER, modLoc("block/block_steel"));
+        this.registerFurnace(NtmBlocks.MACHINE_FURNACE_BRICK.get(), MachineFurnaceBrickBlock.FACING, MachineFurnaceBrickBlock.LIT, "machine_furnace_brick");
+        this.registerFurnace(NtmBlocks.MACHINE_ELECTRIC_FURNACE.get(), MachineElectricFurnaceBlock.FACING, MachineElectricFurnaceBlock.LIT, "machine_electric_furnace");
+        this.particleOnlyBlock(NtmBlocks.MACHINE_FURNACE_IRON, modLoc("block/block_aluminium"));
+        this.particleOnlyBlock(NtmBlocks.MACHINE_FURNACE_STEEL, modLoc("block/block_steel"));
+        this.particleOnlyBlock(NtmBlocks.MACHINE_COMBINATION_OVEN, modLoc("block/block_steel"));
         this.particleOnlyBlock(NtmBlocks.MACHINE_BLAST_FURNACE, modLoc("block/block_steel"));
+        this.particleOnlyBlock(NtmBlocks.MACHINE_ROTARY_FURNACE, modLoc("block/brick_fire"));
 
         this.particleOnlyBlock(NtmBlocks.MACHINE_FLUID_TANK, modLoc("block/block_steel"));
         this.particleOnlyBlock(NtmBlocks.MACHINE_BIG_ASS_TANK, modLoc("block/block_steel"));
@@ -263,6 +342,9 @@ public class NtmBlockStateProvider extends BlockStateProvider {
         this.particleOnlyBlock(NtmBlocks.MACHINE_CATALYTIC_CRACKING_TOWER, modLoc("block/block_steel"));
         this.particleOnlyBlock(NtmBlocks.MACHINE_COMPRESSOR, modLoc("block/block_steel"));
         this.particleOnlyBlock(NtmBlocks.MACHINE_COMPRESSOR_COMPACT, modLoc("block/block_steel"));
+        this.particleOnlyBlock(NtmBlocks.MACHINE_FLARE, modLoc("block/block_steel"));
+        this.particleOnlyBlock(NtmBlocks.MACHINE_SMOKESTACK, modLoc("block/brick_fire"));
+        this.particleOnlyBlock(NtmBlocks.MACHINE_SMOKESTACK_INDUSTRIAL, modLoc("block/concrete"));
 
         this.cubeTop(NtmBlocks.MACHINE_SATLINKER);
 
@@ -345,6 +427,42 @@ public class NtmBlockStateProvider extends BlockStateProvider {
         this.itemModels().getBuilder(this.key(block).getPath()).parent(model);
     }
 
+    private void registerFurnace(Block block, DirectionProperty facing, BooleanProperty lit, String name) {
+        ModelFile off = this.models().cube(
+                name + "_off",
+                modLoc("block/" + name + "_bottom"),
+                modLoc("block/" + name + "_top"),
+                modLoc("block/" + name + "_front_off"),
+                modLoc("block/" + name + "_side"),
+                modLoc("block/" + name + "_side"),
+                modLoc("block/" + name + "_side")
+        ).texture("particle", modLoc("block/" + name + "_side"));
+
+        ModelFile on = this.models().cube(
+                name + "_on",
+                modLoc("block/" + name + "_bottom"),
+                modLoc("block/" + name + "_top"),
+                modLoc("block/" + name + "_front_on"),
+                modLoc("block/" + name + "_side"),
+                modLoc("block/" + name + "_side"),
+                modLoc("block/" + name + "_side")
+        ).texture("particle", modLoc("block/" + name + "_side"));
+
+        this.getVariantBuilder(block).forAllStates(state -> {
+            Direction direction = state.getValue(facing);
+            ModelFile model = state.getValue(lit) ? on : off;
+            int rotation = switch(direction) {
+                case EAST -> 90;
+                case SOUTH -> 180;
+                case WEST -> 270;
+                default -> 0;
+            };
+            return ConfiguredModel.builder().modelFile(model).rotationY(rotation).build();
+        });
+
+        this.itemModels().getBuilder(this.key(block).getPath()).parent(off);
+    }
+
     private void registerCrate(DeferredBlock<? extends Block> block) {
         String blockName = name(block);
 
@@ -359,11 +477,30 @@ public class NtmBlockStateProvider extends BlockStateProvider {
         );
     }
 
-    private void registerCable() {
+    private void registerCables() {
         Block block = NtmBlocks.RED_CABLE.get();
 
         this.simpleBlock(block, this.models().getBuilder(this.key(block).getPath()).customLoader(CableBlockLoaderBuilder::new).texture("texture", modLoc("block/cable_neo")).end());
         this.entityBlockItem(block, false);
+
+        this.registerBoxDuctModel(NtmBlocks.RED_CABLE_CLASSIC.get(), "red_cable_classic", "red_cable_classic", "red_cable_classic", 5, 5);
+
+        Block paintable = NtmBlocks.RED_CABLE_PAINTABLE.get();
+        ModelFile paintableModel = this.models().withExistingParent(this.name(paintable), mcLoc("block/block"))
+                .customLoader(PaintableCableLoaderBuilder::new)
+                .texture("texture", modLoc("block/red_cable_base"))
+                .texture("overlay", modLoc("block/red_cable_overlay"))
+                .end();
+        this.simpleBlock(paintable, paintableModel);
+        this.simpleBlockItem(paintable, paintableModel);
+
+        this.registerCableBox(NtmBlocks.RED_CABLE_BOX_HUGE.get(), 0, 12);
+        this.registerCableBox(NtmBlocks.RED_CABLE_BOX_LARGE.get(), 1, 10);
+        this.registerCableBox(NtmBlocks.RED_CABLE_BOX_MEDIUM.get(), 2, 8);
+        this.registerCableBox(NtmBlocks.RED_CABLE_BOX_SMALL.get(), 3, 6);
+        this.registerCableBox(NtmBlocks.RED_CABLE_BOX_TINY.get(), 4, 4);
+
+        this.simpleCubeAllBlock(NtmBlocks.RED_WIRE_COATED);
     }
 
     private void registerDetCord() {
@@ -373,7 +510,7 @@ public class NtmBlockStateProvider extends BlockStateProvider {
         this.entityBlockItem(block, false);
     }
 
-    private void registerFluidDuct() {
+    private void registerFluidDucts() {
         Block block = NtmBlocks.FLUID_DUCT_NEO.get();
 
         this.getVariantBuilder(block).forAllStatesExcept(state -> {
@@ -392,6 +529,57 @@ public class NtmBlockStateProvider extends BlockStateProvider {
         }, FluidDuctConnectingBlock.NORTH, FluidDuctConnectingBlock.SOUTH, FluidDuctConnectingBlock.EAST, FluidDuctConnectingBlock.WEST, FluidDuctConnectingBlock.UP, FluidDuctConnectingBlock.DOWN);
 
         this.entityBlockItem(block, false);
+
+        this.registerFluidDuctBox(NtmBlocks.FLUID_DUCT_BOX_IRON_HUGE.get(), "silver", 0, 12, 14);
+        this.registerFluidDuctBox(NtmBlocks.FLUID_DUCT_BOX_COPPER_HUGE.get(), "copper", 0, 12, 14);
+        this.registerFluidDuctBox(NtmBlocks.FLUID_DUCT_BOX_ALUMINIUM_HUGE.get(), "white", 0, 12, 14);
+        this.registerFluidDuctBox(NtmBlocks.FLUID_DUCT_BOX_IRON_LARGE.get(), "silver", 1, 10, 12);
+        this.registerFluidDuctBox(NtmBlocks.FLUID_DUCT_BOX_COPPER_LARGE.get(), "copper", 1, 10, 12);
+        this.registerFluidDuctBox(NtmBlocks.FLUID_DUCT_BOX_ALUMINIUM_LARGE.get(), "white", 1, 10, 12);
+        this.registerFluidDuctBox(NtmBlocks.FLUID_DUCT_BOX_IRON_MEDIUM.get(), "silver", 2, 8, 10);
+        this.registerFluidDuctBox(NtmBlocks.FLUID_DUCT_BOX_COPPER_MEDIUM.get(), "copper", 2, 8, 10);
+        this.registerFluidDuctBox(NtmBlocks.FLUID_DUCT_BOX_ALUMINIUM_MEDIUM.get(), "white", 2, 8, 10);
+        this.registerFluidDuctBox(NtmBlocks.FLUID_DUCT_BOX_IRON_SMALL.get(), "silver", 3, 6, 8);
+        this.registerFluidDuctBox(NtmBlocks.FLUID_DUCT_BOX_COPPER_SMALL.get(), "copper", 3, 6, 8);
+        this.registerFluidDuctBox(NtmBlocks.FLUID_DUCT_BOX_ALUMINIUM_SMALL.get(), "white", 3, 6, 8);
+        this.registerFluidDuctBox(NtmBlocks.FLUID_DUCT_BOX_IRON_TINY.get(), "silver", 4, 4, 6);
+        this.registerFluidDuctBox(NtmBlocks.FLUID_DUCT_BOX_COPPER_TINY.get(), "copper", 4, 4, 6);
+        this.registerFluidDuctBox(NtmBlocks.FLUID_DUCT_BOX_ALUMINIUM_TINY.get(), "white", 4, 4, 6);
+        this.registerFluidDuctExhaust(NtmBlocks.FLUID_DUCT_EXHAUST_HUGE.get(), 0, 12, 14);
+        this.registerFluidDuctExhaust(NtmBlocks.FLUID_DUCT_EXHAUST_LARGE.get(), 1, 10, 12);
+        this.registerFluidDuctExhaust(NtmBlocks.FLUID_DUCT_EXHAUST_MEDIUM.get(), 2, 8, 10);
+        this.registerFluidDuctExhaust(NtmBlocks.FLUID_DUCT_EXHAUST_SMALL.get(), 3, 6, 8);
+        this.registerFluidDuctExhaust(NtmBlocks.FLUID_DUCT_EXHAUST_TINY.get(), 4, 4, 6);
+    }
+
+    private void registerCableBox(Block block, int sizeIndex, int diameter) {
+        this.registerBoxDuctModel(block, "boxduct_cable_straight", "boxduct_cable_end_" + sizeIndex, "boxduct_cable_junction", diameter, diameter);
+    }
+
+    private void registerFluidDuctBox(Block block, String material, int sizeIndex, int diameter, int junctionDiameter) {
+        this.registerBoxDuctModel(block, "boxduct_" + material + "_straight", "boxduct_" + material + "_end", "boxduct_" + material + "_junction_" + sizeIndex, diameter, junctionDiameter);
+    }
+
+    private void registerFluidDuctExhaust(Block block, int sizeIndex, int diameter, int junctionDiameter) {
+        this.registerBoxDuctModel(block, "boxduct_exhaust_straight", "boxduct_exhaust_end", "boxduct_exhaust_junction_" + sizeIndex, diameter, junctionDiameter);
+    }
+
+    private void registerBoxDuctModel(Block block, String straightTexture, String endTexture, String junctionTexture, int diameter, int junctionDiameter) {
+        String curvePrefix = straightTexture.substring(0, straightTexture.length() - "straight".length());
+        boolean singleTexture = straightTexture.equals(endTexture) && straightTexture.equals(junctionTexture);
+        BoxDuctBlockLoaderBuilder loader = this.models().withExistingParent(this.name(block), mcLoc("block/block"))
+                .customLoader(BoxDuctBlockLoaderBuilder::new)
+                .dimensions(diameter / 16.0F, junctionDiameter / 16.0F);
+        loader.texture("straight", modLoc("block/" + straightTexture));
+        loader.texture("end", modLoc("block/" + endTexture));
+        loader.texture("curve_tl", modLoc("block/" + (singleTexture ? straightTexture : curvePrefix + "curve_tl")));
+        loader.texture("curve_tr", modLoc("block/" + (singleTexture ? straightTexture : curvePrefix + "curve_tr")));
+        loader.texture("curve_bl", modLoc("block/" + (singleTexture ? straightTexture : curvePrefix + "curve_bl")));
+        loader.texture("curve_br", modLoc("block/" + (singleTexture ? straightTexture : curvePrefix + "curve_br")));
+        loader.texture("junction", modLoc("block/" + junctionTexture));
+        ModelFile model = loader.end();
+        this.simpleBlock(block, model);
+        this.simpleBlockItem(block, model);
     }
 
     private void registerBarbedWire() {
@@ -792,6 +980,36 @@ public class NtmBlockStateProvider extends BlockStateProvider {
             super(parent, helper);
         }
         @Override public BakedModelType getType() { return BakedModelType.CABLE; }
+    }
+    protected static class BoxDuctBlockLoaderBuilder extends BlockModelBuilderBase {
+        private float diameter;
+        private float junctionDiameter;
+
+        public BoxDuctBlockLoaderBuilder(BlockModelBuilder parent, ExistingFileHelper helper) {
+            super(parent, helper);
+        }
+
+        public BoxDuctBlockLoaderBuilder dimensions(float diameter, float junctionDiameter) {
+            this.diameter = diameter;
+            this.junctionDiameter = junctionDiameter;
+            return this;
+        }
+
+        @Override
+        public JsonObject toJson(JsonObject json) {
+            super.toJson(json);
+            json.addProperty("diameter", this.diameter);
+            json.addProperty("junction_diameter", this.junctionDiameter);
+            return json;
+        }
+
+        @Override public BakedModelType getType() { return BakedModelType.BOX_DUCT; }
+    }
+    protected static class PaintableCableLoaderBuilder extends BlockModelBuilderBase {
+        public PaintableCableLoaderBuilder(BlockModelBuilder parent, ExistingFileHelper helper) {
+            super(parent, helper);
+        }
+        @Override public BakedModelType getType() { return BakedModelType.PAINTABLE_CABLE; }
     }
     protected static class DetCordBlockLoaderBuilder extends BlockModelBuilderBase {
         public DetCordBlockLoaderBuilder(BlockModelBuilder parent, ExistingFileHelper helper) {

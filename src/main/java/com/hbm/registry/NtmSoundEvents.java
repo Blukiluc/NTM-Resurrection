@@ -26,6 +26,7 @@ public class NtmSoundEvents {
     public static final DeferredHolder<SoundEvent, SoundEvent> FSTBMB_PING = reg("weapon.fstbmb_ping"); // PLAYERS CATEGORY???
     /// FIRE WEAPONS
     public static final DeferredHolder<SoundEvent, SoundEvent> FIRE_DISINTEGRATION = reg("weapon.fire.disintegration"); // PLAYERS CATEGORY
+    public static final DeferredHolder<SoundEvent, SoundEvent> FLAMETHROWER_SHOOT = reg("weapon.flamethrower_shoot");
     /// ENTITIES
     public static final DeferredHolder<SoundEvent, SoundEvent> OLD_EXPLOSION = reg("entity.old_explosion"); // AMBIENT CATEGORY
     public static final DeferredHolder<SoundEvent, SoundEvent> BOMB_WHISTLE = reg("entity.bomb_whistle"); // PLAYER CATEGORY
@@ -52,16 +53,23 @@ public class NtmSoundEvents {
     public static final DeferredHolder<SoundEvent, SoundEvent> HUNDUNS_MAGNIFICENT_HOWL = reg("block.hunduns_magnificent_howl"); // BLOCKS CATEGORY
     public static final DeferredHolder<SoundEvent, SoundEvent> ELECTRIC_MOTOR_LOOP = reg("block.motor"); // BLOCKS CATEGORY
     public static final DeferredHolder<SoundEvent, SoundEvent> ENGINE_LOOP = reg("block.engine"); // diesel engine
+    public static final DeferredHolder<SoundEvent, SoundEvent> COMBUSTION_ENGINE_LOOP = reg("block.combustion_engine_operate");
+    public static final DeferredHolder<SoundEvent, SoundEvent> TURBOFAN_LOOP = reg("block.turbofan_operate");
     public static final DeferredHolder<SoundEvent, SoundEvent> ASSEMBLER_STRIKE = reg("block.assembler_strike"); // BLOCKS CATEGORY
     public static final DeferredHolder<SoundEvent, SoundEvent> ASSEMBLER_CUT = reg("block.assembler_cut"); // BLOCKS CATEGORY
     public static final DeferredHolder<SoundEvent, SoundEvent> ASSEMBLER_START = reg("block.assembler_start"); // BLOCKS CATEGORY
     public static final DeferredHolder<SoundEvent, SoundEvent> ASSEMBLER_STOP = reg("block.assembler_stop"); // BLOCKS CATEGORY
     public static final DeferredHolder<SoundEvent, SoundEvent> CHEMICAL_PLANT_LOOP = reg("block.chemical_plant"); // BLOCKS CATEGORY
+    public static final DeferredHolder<SoundEvent, SoundEvent> FEL_LOOP = reg("block.fel"); // BLOCKS CATEGORY
     public static final DeferredHolder<SoundEvent, SoundEvent> PRESS_OPERATE = reg("block.press"); // BLOCKS CATEGORY
     public static final DeferredHolder<SoundEvent, SoundEvent> CENTRIFUGE_LOOP = reg("block.centrifuge_loop"); // BLOCKS CATEGORY
     public static final DeferredHolder<SoundEvent, SoundEvent> METAL_IMPACT = reg("block.metal_impact"); // BLOCKS CATEGORY
     public static final DeferredHolder<SoundEvent, SoundEvent> BOILER = reg("block.boiler"); // BLOCKS CATEGORY
     public static final DeferredHolder<SoundEvent, SoundEvent> BOILER_GROAN = reg("block.boilergroan"); // BLOCKS CATEGORY
+    public static final DeferredHolder<SoundEvent, SoundEvent> TURBINE_INDUSTRIAL_LOOP = reg("block.turbine_industrial");
+    public static final DeferredHolder<SoundEvent, SoundEvent> TURBINE_LEVIATHAN_LOOP = reg("block.turbine_leviathan");
+    public static final DeferredHolder<SoundEvent, SoundEvent> TURBINE_LEVER = reg("block.turbine_lever");
+    public static final DeferredHolder<SoundEvent, SoundEvent> HEPHAESTUS_LOOP = reg("block.hephaestus_running");
     /// ITEMS
     public static final DeferredHolder<SoundEvent, SoundEvent> TECH_BLEEP = reg("item.tech_bleep"); // PLAYERS CATEGORY
     public static final DeferredHolder<SoundEvent, SoundEvent> TECH_BOOP = reg("item.tech_boop"); // PLAYERS CATEGORY

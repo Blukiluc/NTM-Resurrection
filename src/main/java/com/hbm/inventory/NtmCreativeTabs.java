@@ -311,6 +311,9 @@ public class NtmCreativeTabs {
                         output.accept(NtmItems.POWDER_ASBESTOS.get());
                         output.accept(NtmItems.POWDER_MAGIC.get());
                         output.accept(NtmItems.POWDER_SAWDUST.get());
+                        output.accept(NtmItems.GEAR_LARGE.get());
+                        output.accept(NtmItems.GEAR_LARGE_STEEL.get());
+                        output.accept(NtmItems.SAWBLADE.get());
                         output.accept(NtmItems.POWDER_FLUX.get());
                         output.accept(NtmItems.POWDER_FERTILIZER.get());
                         output.accept(NtmItems.POWDER_BALEFIRE.get());
@@ -557,8 +560,13 @@ public class NtmCreativeTabs {
 
                         addMetaItems(output, NtmItems.BATTERY_PACK.get());
                         addMetaItems(output, NtmItems.BATTERY_SC.get());
-
                         output.accept(NtmItems.BATTERY_CREATIVE);
+
+                        output.accept(NtmItems.LASER_CRYSTAL_CO2);
+                        output.accept(NtmItems.LASER_CRYSTAL_BISMUTH);
+                        output.accept(NtmItems.LASER_CRYSTAL_CMB);
+                        output.accept(NtmItems.LASER_CRYSTAL_DNT);
+                        output.accept(NtmItems.LASER_CRYSTAL_DIGAMMA);
 
                         output.accept(NtmItems.ROD_EMPTY);
                         addMetaItems(output, NtmItems.ROD.get());
@@ -639,6 +647,38 @@ public class NtmCreativeTabs {
                         output.accept(NtmBlocks.SELLAFIELD_BEDROCK);
                         output.accept(NtmBlocks.ORE_SELLAFIELD_DIAMOND);
                         output.accept(NtmBlocks.ORE_SELLAFIELD_EMERALD);
+                        output.accept(NtmBlocks.ORE_ALUMINUM);
+                        output.accept(NtmBlocks.ORE_ALUMINUM_DEEPSLATE);
+                        output.accept(NtmBlocks.ORE_ASBESTOS);
+                        output.accept(NtmBlocks.ORE_DEEPSLATE_ASBESTOS);
+                        output.accept(NtmBlocks.ORE_BERYLLIUM);
+                        output.accept(NtmBlocks.ORE_BERYLLIUM_DEEPSLATE);
+                        output.accept(NtmBlocks.ORE_CINNABAR);
+                        output.accept(NtmBlocks.ORE_CINNABAR_DEEPSLATE);
+                        output.accept(NtmBlocks.ORE_COBALT);
+                        output.accept(NtmBlocks.ORE_COBALT_DEEPSLATE);
+                        output.accept(NtmBlocks.ORE_LIGNITE);
+                        output.accept(NtmBlocks.ORE_DEEPSLATE_BROWNCOAL);
+                        output.accept(NtmBlocks.ORE_FLUORITE);
+                        output.accept(NtmBlocks.ORE_DEEPSLATE_FLUORITE);
+                        output.accept(NtmBlocks.ORE_LEAD);
+                        output.accept(NtmBlocks.ORE_LEAD_DEEPSLATE);
+                        output.accept(NtmBlocks.ORE_RAREGROUND);
+                        output.accept(NtmBlocks.ORE_RAREGROUND_DEEPSLATE);
+                        output.accept(NtmBlocks.ORE_SULFUR);
+                        output.accept(NtmBlocks.ORE_DEEPSLATE_SULFUR);
+                        output.accept(NtmBlocks.ORE_THORIUM);
+                        output.accept(NtmBlocks.ORE_THORIUM_DEEPSLATE);
+                        output.accept(NtmBlocks.ORE_TITANIUM);
+                        output.accept(NtmBlocks.ORE_TITANIUM_DEEPSLATE);
+                        output.accept(NtmBlocks.ORE_TUNGSTEN);
+                        output.accept(NtmBlocks.ORE_DEEPSLATE_TUNGSTEN);
+                        output.accept(NtmBlocks.ORE_URANIUM_H);
+                        output.accept(NtmBlocks.ORE_URANIUM_DEEPSLATE);
+                        output.accept(NtmBlocks.ORE_DEEPSLATE_ALEXANDRITE);
+                        output.accept(NtmBlocks.ORE_DEEPSLATE_COLTAN);
+                        output.accept(NtmBlocks.ORE_DEEPSLATE_NITER);
+                        output.accept(NtmBlocks.ORE_SEQUESTRUM);
                     }).build());
 
     // machines, structure parts
@@ -661,27 +701,95 @@ public class NtmCreativeTabs {
                         output.accept(NtmBlocks.GEIGER);
 
                         output.accept(NtmBlocks.RED_CABLE);
+                        output.accept(NtmBlocks.RED_CABLE_CLASSIC);
+                        output.accept(NtmBlocks.RED_CABLE_PAINTABLE);
+                        output.accept(NtmBlocks.RED_CABLE_BOX_HUGE);
+                        output.accept(NtmBlocks.RED_CABLE_BOX_LARGE);
+                        output.accept(NtmBlocks.RED_CABLE_BOX_MEDIUM);
+                        output.accept(NtmBlocks.RED_CABLE_BOX_SMALL);
+                        output.accept(NtmBlocks.RED_CABLE_BOX_TINY);
+                        output.accept(NtmBlocks.RED_WIRE_COATED);
+                        output.accept(NtmBlocks.RED_CONNECTOR);
+                        output.accept(NtmBlocks.RED_CONNECTOR_SUPER);
+                        output.accept(NtmBlocks.RED_PYLON);
+                        output.accept(NtmBlocks.RED_PYLON_MEDIUM_WOOD);
+                        output.accept(NtmBlocks.RED_PYLON_MEDIUM_WOOD_TRANSFORMER);
+                        output.accept(NtmBlocks.RED_PYLON_MEDIUM_STEEL);
+                        output.accept(NtmBlocks.RED_PYLON_MEDIUM_STEEL_TRANSFORMER);
+                        output.accept(NtmBlocks.RED_PYLON_LARGE);
+                        output.accept(NtmBlocks.RED_PYLON_STEEL);
+                        output.accept(NtmBlocks.SUBSTATION);
 
                         addMetaItems(output, NtmBlocks.FLUID_DUCT_NEO.asItem());
+                        output.accept(NtmBlocks.FLUID_DUCT_BOX_IRON_HUGE);
+                        output.accept(NtmBlocks.FLUID_DUCT_BOX_COPPER_HUGE);
+                        output.accept(NtmBlocks.FLUID_DUCT_BOX_ALUMINIUM_HUGE);
+                        output.accept(NtmBlocks.FLUID_DUCT_BOX_IRON_LARGE);
+                        output.accept(NtmBlocks.FLUID_DUCT_BOX_COPPER_LARGE);
+                        output.accept(NtmBlocks.FLUID_DUCT_BOX_ALUMINIUM_LARGE);
+                        output.accept(NtmBlocks.FLUID_DUCT_BOX_IRON_MEDIUM);
+                        output.accept(NtmBlocks.FLUID_DUCT_BOX_COPPER_MEDIUM);
+                        output.accept(NtmBlocks.FLUID_DUCT_BOX_ALUMINIUM_MEDIUM);
+                        output.accept(NtmBlocks.FLUID_DUCT_BOX_IRON_SMALL);
+                        output.accept(NtmBlocks.FLUID_DUCT_BOX_COPPER_SMALL);
+                        output.accept(NtmBlocks.FLUID_DUCT_BOX_ALUMINIUM_SMALL);
+                        output.accept(NtmBlocks.FLUID_DUCT_BOX_IRON_TINY);
+                        output.accept(NtmBlocks.FLUID_DUCT_BOX_COPPER_TINY);
+                        output.accept(NtmBlocks.FLUID_DUCT_BOX_ALUMINIUM_TINY);
+                        output.accept(NtmBlocks.FLUID_DUCT_EXHAUST_HUGE);
+                        output.accept(NtmBlocks.FLUID_DUCT_EXHAUST_LARGE);
+                        output.accept(NtmBlocks.FLUID_DUCT_EXHAUST_MEDIUM);
+                        output.accept(NtmBlocks.FLUID_DUCT_EXHAUST_SMALL);
+                        output.accept(NtmBlocks.FLUID_DUCT_EXHAUST_TINY);
+                        output.accept(NtmBlocks.PIPE_ANCHOR);
 
                         output.accept(NtmBlocks.MACHINE_BATTERY_SOCKET);
                         output.accept(NtmBlocks.MACHINE_BATTERY_REDD);
                         output.accept(NtmBlocks.MACHINE_ASSEMBLY_MACHINE);
+                        output.accept(NtmBlocks.MACHINE_ASSEMBLY_FACTORY);
+                        output.accept(NtmBlocks.MACHINE_PREC_ASS);
                         output.accept(NtmBlocks.MACHINE_CHEMICAL_PLANT);
+                        output.accept(NtmBlocks.MACHINE_CHEMICAL_FACTORY);
+                        output.accept(NtmBlocks.MACHINE_PUREX);
+                        output.accept(NtmBlocks.MACHINE_ORE_ACIDIZER);
                         output.accept(NtmBlocks.MACHINE_WOOD_BURNER);
                         output.accept(NtmBlocks.MACHINE_DIESEL);
+                        output.accept(NtmBlocks.MACHINE_COMBUSTION_ENGINE);
+                        output.accept(NtmBlocks.MACHINE_TURBOFAN);
+                        output.accept(NtmBlocks.MACHINE_STIRLING);
+                        output.accept(NtmBlocks.MACHINE_STIRLING_STEEL);
+                        output.accept(NtmBlocks.MACHINE_STIRLING_CREATIVE);
+                        output.accept(NtmBlocks.MACHINE_SAWMILL);
+                        output.accept(NtmBlocks.PUMP_STEAM);
+                        output.accept(NtmBlocks.PUMP_ELECTRIC);
+                        output.accept(NtmBlocks.MACHINE_CONDENSER);
+                        output.accept(NtmBlocks.MACHINE_CONDENSER_POWERED);
+                        output.accept(NtmBlocks.MACHINE_STEAM_ENGINE);
                         output.accept(NtmBlocks.MACHINE_PRESS);
                         output.accept(NtmBlocks.MACHINE_ELECTRIC_PRESS);
+                        output.accept(NtmBlocks.PRESS_PREHEATER);
                         output.accept(NtmBlocks.MACHINE_CENTRIFUGE);
                         output.accept(NtmBlocks.MACHINE_GAS_CENTRIFUGE);
+                        output.accept(NtmBlocks.MACHINE_MIXER);
+                        output.accept(NtmBlocks.MACHINE_FEL);
+                        output.accept(NtmBlocks.MACHINE_SILEX);
+                        output.accept(NtmBlocks.MACHINE_ELECTROLYSER);
+                        output.accept(NtmBlocks.MACHINE_INTAKE);
                         output.accept(NtmBlocks.MACHINE_FLUID_TANK);
                         output.accept(NtmBlocks.MACHINE_BIG_ASS_TANK);
                         output.accept(NtmBlocks.MACHINE_DRAIN);
                         output.accept(NtmBlocks.MACHINE_SHREDDER);
                         output.accept(NtmBlocks.MACHINE_SOLDERING_STATION);
                         output.accept(NtmBlocks.MACHINE_ARC_WELDER);
-                        output.accept(NtmBlocks.HEAT_BOILER);
+                        output.accept(NtmBlocks.MACHINE_HEAT_BOILER);
+                        output.accept(NtmBlocks.MACHINE_SOLAR_BOILER);
+                        output.accept(NtmBlocks.SOLAR_MIRROR);
                         output.accept(NtmBlocks.MACHINE_INDUSTRIAL_BOILER);
+                        output.accept(NtmBlocks.MACHINE_INDUSTRIAL_TURBINE);
+                        output.accept(NtmBlocks.MACHINE_CHUNGUS);
+                        output.accept(NtmBlocks.MACHINE_TOWER_SMALL);
+                        output.accept(NtmBlocks.MACHINE_TOWER_LARGE);
+                        output.accept(NtmBlocks.MACHINE_GEOTHERMAL_HEAT_EXCHANGER);
 
                         output.accept(NtmBlocks.MACHINE_CRUCIBLE);
                         output.accept(NtmBlocks.FOUNDRY_MOLD);
@@ -709,18 +817,23 @@ public class NtmCreativeTabs {
                         output.accept(NtmBlocks.MACHINE_FRACKING_TOWER);
                         output.accept(NtmBlocks.MACHINE_REFINERY);
                         output.accept(NtmBlocks.MACHINE_VACUUM_REFINERY);
-                        output.accept(NtmBlocks.MACHINE_MIXER);
                         output.accept(NtmBlocks.MACHINE_FRACTION_TOWER);
                         output.accept(NtmBlocks.FRACTION_SPACER);
                         output.accept(NtmBlocks.MACHINE_CATALYTIC_REFORMER);
                         output.accept(NtmBlocks.MACHINE_CATALYTIC_CRACKING_TOWER);
                         output.accept(NtmBlocks.MACHINE_COMPRESSOR);
                         output.accept(NtmBlocks.MACHINE_COMPRESSOR_COMPACT);
+                        output.accept(NtmBlocks.MACHINE_FLARE);
+                        output.accept(NtmBlocks.MACHINE_SMOKESTACK);
+                        output.accept(NtmBlocks.MACHINE_SMOKESTACK_INDUSTRIAL);
 
-                        output.accept(NtmBlocks.FURNACE_IRON);
-                        output.accept(NtmBlocks.FURNACE_STEEL);
-                        output.accept(NtmBlocks.FURNACE_COMBINATION);
+                        output.accept(NtmBlocks.MACHINE_FURNACE_BRICK);
+                        output.accept(NtmBlocks.MACHINE_ELECTRIC_FURNACE);
+                        output.accept(NtmBlocks.MACHINE_FURNACE_IRON);
+                        output.accept(NtmBlocks.MACHINE_FURNACE_STEEL);
+                        output.accept(NtmBlocks.MACHINE_COMBINATION_OVEN);
                         output.accept(NtmBlocks.MACHINE_BLAST_FURNACE);
+                        output.accept(NtmBlocks.MACHINE_ROTARY_FURNACE);
 
                         output.accept(NtmBlocks.HEATER_OVEN);
                         output.accept(NtmBlocks.HEATER_FIREBOX);
@@ -736,6 +849,7 @@ public class NtmCreativeTabs {
                         output.accept(NtmBlocks.CRATE_STEEL);
                         output.accept(NtmBlocks.CRATE_DESH);
 
+                        addMetaItems(output, NtmItems.PISTON_SET.get());
                         output.accept(NtmItems.BLADES_IRON);
                         output.accept(NtmItems.BLADES_STEEL);
                         output.accept(NtmItems.BLADES_DESH);
@@ -939,8 +1053,13 @@ public class NtmCreativeTabs {
                         output.accept(NtmItems.DOSIMETER);
                         output.accept(NtmItems.GEIGER_COUNTER);
                         output.accept(NtmItems.DIGAMMA_DIAGNOSTIC);
+                        output.accept(NtmItems.SCREWDRIVER_DESH);
+                        output.accept(NtmItems.CRUCIBLE);
 
                         output.accept(NtmItems.BALEFIRE_AND_STEEL);
+                        output.accept(NtmItems.WIRING_RED_COPPER);
+                        output.accept(NtmItems.WRENCH);
+                        output.accept(NtmItems.MIRROR_TOOL);
 
                         addMetaItems(output, NtmItems.DRINK.get());
                         output.accept(NtmItems.BOTTLE_OPENER);

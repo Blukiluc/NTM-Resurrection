@@ -361,7 +361,7 @@ public class CommonConfig {
                 .translation(NuclearTechMod.MODID + ".configuration.abilityCentrifuge")
                         .define("abilityCentrifuge", true);
         ABILITY_CRYSTALLIZER = builder
-                .comment("Allow auto-crystallizer ability")
+                .comment("Allow auto-ore_acidizer ability")
                 .translation(NuclearTechMod.MODID + ".configuration.abilityCrystallizer")
                         .define("abilityCrystallizer", true);
         ABILITY_MERCURY = builder

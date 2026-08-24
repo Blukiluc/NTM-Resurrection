@@ -106,9 +106,6 @@ public class VacuumRefineryRecipes extends SerializableRecipe {
         vacuum.clear();
     }
 
-    /**
-     * Holds the four fluid outputs of a single vacuum distillation recipe.
-     */
     public static class VacuumRefineryRecipe {
         public final FluidStack[] outputs;
 

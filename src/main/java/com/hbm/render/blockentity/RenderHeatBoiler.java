@@ -13,7 +13,6 @@ import com.mojang.math.Axis;
 import net.minecraft.client.renderer.BlockEntityWithoutLevelRenderer;
 import net.minecraft.client.renderer.MultiBufferSource;
 import net.minecraft.client.renderer.blockentity.BlockEntityRenderer;
-import net.minecraft.client.renderer.blockentity.BlockEntityRendererProvider.Context;
 import net.minecraft.core.Direction;
 import net.minecraft.nbt.CompoundTag;
 import net.minecraft.world.item.Item;
@@ -58,7 +57,7 @@ public class RenderHeatBoiler extends BlockEntityRendererNT<MachineHeatBoilerBlo
 
     @Override
     public Item getItemForRenderer() {
-        return NtmBlocks.HEAT_BOILER.asItem();
+        return NtmBlocks.MACHINE_HEAT_BOILER.asItem();
     }
 
     @Override

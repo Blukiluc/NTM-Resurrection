@@ -73,6 +73,9 @@ public class NtmSoundDefinitionsProvider extends SoundDefinitionsProvider {
         this.add(NtmSoundEvents.FIRE_DISINTEGRATION, SoundDefinition.definition()
                 .with(sound(NuclearTechMod.MODID + ":weapon/fire/disintegration"))
         );
+        this.add(NtmSoundEvents.FLAMETHROWER_SHOOT, SoundDefinition.definition()
+                .with(sound(NuclearTechMod.MODID + ":weapon/flamethrower_shoot"))
+        );
         /// ENTITIES
         this.add(NtmSoundEvents.OLD_EXPLOSION, SoundDefinition.definition()
                 .with(sound(NuclearTechMod.MODID + ":entity/old_explosion"))
@@ -162,6 +165,12 @@ public class NtmSoundDefinitionsProvider extends SoundDefinitionsProvider {
         this.add(NtmSoundEvents.ENGINE_LOOP, SoundDefinition.definition()
                 .with(sound(NuclearTechMod.MODID + ":block/engine"))
         );
+        this.add(NtmSoundEvents.COMBUSTION_ENGINE_LOOP, SoundDefinition.definition()
+                .with(sound(NuclearTechMod.MODID + ":block/combustion_engine_operate"))
+        );
+        this.add(NtmSoundEvents.TURBOFAN_LOOP, SoundDefinition.definition()
+                .with(sound(NuclearTechMod.MODID + ":block/turbofan_operate"))
+        );
         this.add(NtmSoundEvents.ASSEMBLER_STRIKE, SoundDefinition.definition()
                 .with(
                         sound(NuclearTechMod.MODID + ":block/assembler_strike1"),
@@ -186,11 +195,26 @@ public class NtmSoundDefinitionsProvider extends SoundDefinitionsProvider {
         this.add(NtmSoundEvents.CENTRIFUGE_LOOP, SoundDefinition.definition()
                 .with(sound(NuclearTechMod.MODID + ":block/centrifuge_loop"))
         );
+        this.add(NtmSoundEvents.FEL_LOOP, SoundDefinition.definition()
+                .with(sound(NuclearTechMod.MODID + ":block/fel"))
+        );
         this.add(NtmSoundEvents.METAL_IMPACT, SoundDefinition.definition()
                 .with(
                         sound(NuclearTechMod.MODID + ":block/metal_impact1"),
                         sound(NuclearTechMod.MODID + ":block/metal_impact2")
                 )
+        );
+        this.add(NtmSoundEvents.TURBINE_INDUSTRIAL_LOOP, SoundDefinition.definition()
+                .with(sound(NuclearTechMod.MODID + ":block/turbine_industrial"))
+        );
+        this.add(NtmSoundEvents.TURBINE_LEVIATHAN_LOOP, SoundDefinition.definition()
+                .with(sound(NuclearTechMod.MODID + ":block/turbine_leviathan"))
+        );
+        this.add(NtmSoundEvents.TURBINE_LEVER, SoundDefinition.definition()
+                .with(sound(NuclearTechMod.MODID + ":block/turbine_lever"))
+        );
+        this.add(NtmSoundEvents.HEPHAESTUS_LOOP, SoundDefinition.definition()
+                .with(sound(NuclearTechMod.MODID + ":block/hephaestus_running"))
         );
         /// ITEMS
         this.add(NtmSoundEvents.TECH_BLEEP, SoundDefinition.definition()

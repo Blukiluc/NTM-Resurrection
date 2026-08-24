@@ -48,10 +48,19 @@ public abstract class SerializableRecipe {
         recipeHandlers.add(CrucibleRecipes.INSTANCE);
 
         recipeHandlers.add(BlastFurnaceRecipes.INSTANCE);
+        recipeHandlers.add(RotaryFurnaceRecipes.INSTANCE);
         recipeHandlers.add(ChemicalPlantRecipes.INSTANCE);
+        recipeHandlers.add(PurexRecipes.INSTANCE);
+        recipeHandlers.add(OreAcidizerRecipes.INSTANCE);
         recipeHandlers.add(CentrifugeRecipes.INSTANCE);
         recipeHandlers.add(GasCentrifugeRecipes.INSTANCE);
+        recipeHandlers.add(SilexRecipes.INSTANCE);
+        recipeHandlers.add(ElectrolyserFluidRecipes.INSTANCE);
+        recipeHandlers.add(ElectrolyserMetalRecipes.INSTANCE);
+        recipeHandlers.add(CatalyticCrackingTowerRecipes.INSTANCE);
+        recipeHandlers.add(CatalyticReformerRecipes.INSTANCE);
         recipeHandlers.add(RefineryRecipes.INSTANCE);
+        recipeHandlers.add(VacuumRefineryRecipes.INSTANCE);
         recipeHandlers.add(MixerRecipes.INSTANCE);
         recipeHandlers.add(CompressorRecipes.INSTANCE);
         recipeHandlers.add(FractioningRecipes.INSTANCE);
@@ -60,6 +69,7 @@ public abstract class SerializableRecipe {
 
         //GENERIC
         recipeHandlers.add(AssemblyMachineRecipes.INSTANCE);
+//        recipeHandlers.add(PrecAssRecipes.INSTANCE);
     }
 
     public static void initialize() {

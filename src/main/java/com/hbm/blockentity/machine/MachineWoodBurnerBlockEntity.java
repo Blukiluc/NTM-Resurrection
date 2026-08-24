@@ -166,7 +166,7 @@ public class MachineWoodBurnerBlockEntity extends MachineBaseBlockEntity impleme
         };
     }
 
-    private static Item getAshFromFuel(ItemStack stack) {
+    public static Item getAshFromFuel(ItemStack stack) {
         List<String> names = ItemStackUtil.getTags(stack);
 
         for(String name : names) {

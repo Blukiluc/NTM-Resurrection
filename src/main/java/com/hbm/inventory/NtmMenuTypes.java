@@ -18,11 +18,25 @@ public class NtmMenuTypes {
 
     public static final DeferredHolder<MenuType<?>, MenuType<MachineAssemblyMachineMenu>> ASSEMBLY_MACHINE = reg("assembly_machine", MachineAssemblyMachineMenu::new);
 
+    public static final DeferredHolder<MenuType<?>, MenuType<MachineAssemblyFactoryMenu>> ASSEMBLY_FACTORY = reg("assembly_factory", MachineAssemblyFactoryMenu::new);
+
+    public static final DeferredHolder<MenuType<?>, MenuType<MachinePrecisionAssemblyMachineMenu>> PREC_ASS = reg("prec_ass", MachinePrecisionAssemblyMachineMenu::new);
+
     public static final DeferredHolder<MenuType<?>, MenuType<MachineChemicalPlantMenu>> CHEMICAL_PLANT = reg("chemical_plant", MachineChemicalPlantMenu::new);
+
+    public static final DeferredHolder<MenuType<?>, MenuType<MachineChemicalFactoryMenu>> CHEMICAL_FACTORY = reg("chemical_factory", MachineChemicalFactoryMenu::new);
+
+    public static final DeferredHolder<MenuType<?>, MenuType<MachinePurexMenu>> PUREX = reg("purex", MachinePurexMenu::new);
+
+    public static final DeferredHolder<MenuType<?>, MenuType<MachineOreAcidizerMenu>> ORE_ACIDIZER = reg("ore_acidizer", MachineOreAcidizerMenu::new);
 
     public static final DeferredHolder<MenuType<?>, MenuType<MachineWoodBurnerMenu>> WOOD_BURNER = reg("wood_burner", MachineWoodBurnerMenu::new);
 
     public static final DeferredHolder<MenuType<?>, MenuType<MachineDieselMenu>> DIESEL = reg("diesel", MachineDieselMenu::new);
+
+    public static final DeferredHolder<MenuType<?>, MenuType<MachineCombustionEngineMenu>> COMBUSTION_ENGINE = reg("combustion_engine", MachineCombustionEngineMenu::new);
+
+    public static final DeferredHolder<MenuType<?>, MenuType<MachineTurbofanMenu>> TURBOFAN = reg("turbofan", MachineTurbofanMenu::new);
 
     public static final DeferredHolder<MenuType<?>, MenuType<MachineShredderMenu>> SHREDDER = reg("shredder", MachineShredderMenu::new);
 
@@ -32,13 +46,19 @@ public class NtmMenuTypes {
 
     public static final DeferredHolder<MenuType<?>, MenuType<MachineCentrifugeMenu>> CENTRIFUGE = reg("centrifuge", MachineCentrifugeMenu::new);
 
+    public static final DeferredHolder<MenuType<?>, MenuType<MachineFurnaceBrickMenu>> FURNACE_BRICK = reg("furnace_brick", MachineFurnaceBrickMenu::new);
+
+    public static final DeferredHolder<MenuType<?>, MenuType<MachineElectricFurnaceMenu>> ELECTRIC_FURNACE = reg("electric_furnace", MachineElectricFurnaceMenu::new);
+
     public static final DeferredHolder<MenuType<?>, MenuType<MachineFurnaceIronMenu>> FURNACE_IRON = reg("furnace_iron", MachineFurnaceIronMenu::new);
 
     public static final DeferredHolder<MenuType<?>, MenuType<MachineFurnaceSteelMenu>> FURNACE_STEEL = reg("furnace_steel", MachineFurnaceSteelMenu::new);
 
-    public static final DeferredHolder<MenuType<?>, MenuType<MachineFurnaceCombinationMenu>> FURNACE_COMBINATION = reg("furnace_combination", MachineFurnaceCombinationMenu::new);
+    public static final DeferredHolder<MenuType<?>, MenuType<MachineCombinationOvenMenu>> COMBINATION_OVEN = reg("combination_oven", MachineCombinationOvenMenu::new);
 
     public static final DeferredHolder<MenuType<?>, MenuType<MachineBlastFurnaceMenu>> MACHINE_BLAST_FURNACE = reg("machine_blast_furnace", MachineBlastFurnaceMenu::new);
+
+    public static final DeferredHolder<MenuType<?>, MenuType<MachineRotaryFurnaceMenu>> MACHINE_ROTARY_FURNACE = reg("machine_rotary_furnace", MachineRotaryFurnaceMenu::new);
 
     public static final DeferredHolder<MenuType<?>, MenuType<MachineGasCentrifugeMenu>> GAS_CENTRIFUGE = reg("gas_centrifuge", MachineGasCentrifugeMenu::new);
 
@@ -53,6 +73,11 @@ public class NtmMenuTypes {
     public static final DeferredHolder<MenuType<?>, MenuType<MachineSolderingStationMenu>> SOLDERING_STATION = reg("soldering_station", MachineSolderingStationMenu::new);
 
     public static final DeferredHolder<MenuType<?>, MenuType<MachineArcWelderMenu>> ARC_WELDER = reg("arc_welder", MachineArcWelderMenu::new);
+    public static final DeferredHolder<MenuType<?>, MenuType<MachineMixerMenu>> MIXER = reg("mixer", MachineMixerMenu::new);
+    public static final DeferredHolder<MenuType<?>, MenuType<MachineFELMenu>> FEL = reg("fel", MachineFELMenu::new);
+    public static final DeferredHolder<MenuType<?>, MenuType<MachineSilexMenu>> SILEX = reg("silex", MachineSilexMenu::new);
+    public static final DeferredHolder<MenuType<?>, MenuType<MachineElectrolyserFluidMenu>> ELECTROLYSER_FLUID = reg("electrolyser_fluid", MachineElectrolyserFluidMenu::new);
+    public static final DeferredHolder<MenuType<?>, MenuType<MachineElectrolyserMetalMenu>> ELECTROLYSER_METAL = reg("electrolyser_metal", MachineElectrolyserMetalMenu::new);
 
     public static final DeferredHolder<MenuType<?>, MenuType<MachineFluidTankMenu>> FLUID_TANK = reg("fluid_tank", MachineFluidTankMenu::new);
 
@@ -60,10 +85,10 @@ public class NtmMenuTypes {
 
     public static final DeferredHolder<MenuType<?>, MenuType<MachineOilMenu>> MACHINE_OIL = reg("machine_oil", MachineOilMenu::new);
     public static final DeferredHolder<MenuType<?>, MenuType<MachineRefineryMenu>> REFINERY = reg("refinery", MachineRefineryMenu::new);
-    public static final DeferredHolder<MenuType<?>, MenuType<MachineVacuumDistillMenu>> VACUUM_REFINERY = reg("vacuum_refinery", MachineVacuumDistillMenu::new);
-    public static final DeferredHolder<MenuType<?>, MenuType<MachineMixerMenu>> MIXER = reg("mixer", MachineMixerMenu::new);
+    public static final DeferredHolder<MenuType<?>, MenuType<MachineVacuumRefineryMenu>> VACUUM_REFINERY = reg("vacuum_refinery", MachineVacuumRefineryMenu::new);
     public static final DeferredHolder<MenuType<?>, MenuType<MachineCatalyticReformerMenu>> CATALYTIC_REFORMER = reg("catalytic_reformer", MachineCatalyticReformerMenu::new);
     public static final DeferredHolder<MenuType<?>, MenuType<MachineCompressorMenu>> COMPRESSOR = reg("compressor", MachineCompressorMenu::new);
+    public static final DeferredHolder<MenuType<?>, MenuType<MachineGasFlareMenu>> GAS_FLARE = reg("gas_flare", MachineGasFlareMenu::new);
 
     public static final DeferredHolder<MenuType<?>, MenuType<BatterySocketMenu>> BATTERY_SOCKET = reg("battery_socket", BatterySocketMenu::new);
     public static final DeferredHolder<MenuType<?>, MenuType<BatteryREDDMenu>> BATTERY_REDD = reg("battery_redd", BatteryREDDMenu::new);

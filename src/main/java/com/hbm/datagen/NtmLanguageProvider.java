@@ -333,6 +333,9 @@ public class NtmLanguageProvider extends LanguageProvider {
         this.add(NtmItems.POWDER_ASBESTOS.get(), "Asbestos Powder");
         this.add(NtmItems.POWDER_MAGIC.get(), "Pulverized Enchantment");
         this.add(NtmItems.POWDER_SAWDUST.get(), "Sawdust");
+        this.add(NtmItems.GEAR_LARGE.get(), "Large Gear");
+        this.add(NtmItems.GEAR_LARGE_STEEL.get(), "Large Steel Gear");
+        this.add(NtmItems.SAWBLADE.get(), "Saw Blade");
         this.add(NtmItems.POWDER_FLUX.get(), "Flux");
         this.add(NtmItems.POWDER_FERTILIZER.get(), "Industrial Fertilizer");
         this.add(NtmItems.POWDER_BALEFIRE.get(), "Thermonuclear Ashes");
@@ -609,11 +612,11 @@ public class NtmLanguageProvider extends LanguageProvider {
         this.add(NtmItems.BATTERY_SPARK, "Spark Battery");
         this.add(NtmItems.BATTERY_TRIXITE, "Off-Brand Spark Battery");
 
-        this.add("item." + NuclearTechMod.MODID + " .obj_battery_pack.desc0", "Energy stored: %s");
-        this.add("item." + NuclearTechMod.MODID + " .obj_battery_pack.desc1", "Charge rate: %s");
-        this.add("item." + NuclearTechMod.MODID + " .obj_battery_pack.desc2", "Discharge rate: %s");
-        this.add("item." + NuclearTechMod.MODID + " .obj_battery_pack.desc3", "Time for full charge: %s");
-        this.add("item." + NuclearTechMod.MODID + " .obj_battery_pack.desc4", "Charge lasts for: %s");
+        this.add("item." + NuclearTechMod.MODID + ".obj_battery_pack.desc0", "Energy stored: %s");
+        this.add("item." + NuclearTechMod.MODID + ".obj_battery_pack.desc1", "Charge rate: %s");
+        this.add("item." + NuclearTechMod.MODID + ".obj_battery_pack.desc2", "Discharge rate: %s");
+        this.add("item." + NuclearTechMod.MODID + ".obj_battery_pack.desc3", "Time for full charge: %s");
+        this.add("item." + NuclearTechMod.MODID + ".obj_battery_pack.desc4", "Charge lasts for: %s");
         this.add(NtmItems.BATTERY_PACK, this.getName(BatteryPackType.BATTERY_REDSTONE), "Redstone Battery");
         this.add(NtmItems.BATTERY_PACK, this.getName(BatteryPackType.BATTERY_LEAD), "Lead-Acid Battery");
         this.add(NtmItems.BATTERY_PACK, this.getName(BatteryPackType.BATTERY_LITHIUM), "Lithium-Ion Battery");
@@ -626,7 +629,7 @@ public class NtmLanguageProvider extends LanguageProvider {
         this.add(NtmItems.BATTERY_PACK, this.getName(BatteryPackType.CAPACITOR_TANTALUM), "Tantalum Capacitor");
         this.add(NtmItems.BATTERY_PACK, this.getName(BatteryPackType.CAPACITOR_BISMUTH), "Bismuth Capacitor");
         this.add(NtmItems.BATTERY_PACK, this.getName(BatteryPackType.CAPACITOR_SPARK), "Spark Capacitor");
-        this.add("item." + NuclearTechMod.MODID + " .obj_battery_sc.desc", "Discharge rate: %s");
+        this.add("item." + NuclearTechMod.MODID + ".obj_battery_sc.desc", "Discharge rate: %s");
         this.add(NtmItems.BATTERY_SC, this.getName(BatterySCType.EMPTY), "Empty Self-Charging Battery");
         this.add(NtmItems.BATTERY_SC, this.getName(BatterySCType.WASTE), "Spent Fuel Self-Charging Battery");
         this.add(NtmItems.BATTERY_SC, this.getName(BatterySCType.RA226), "Radium-226 Self-Charging Battery");
@@ -639,15 +642,29 @@ public class NtmLanguageProvider extends LanguageProvider {
         this.add(NtmItems.BATTERY_SC, this.getName(BatterySCType.AM241), "Americium-241 Self-Charging Battery");
         this.add(NtmItems.BATTERY_CREATIVE, "Infinite Battery");
 
+        this.add(NtmItems.LASER_CRYSTAL_CO2, "CO2-Desh Laser Crystal");
+        this.add(NtmItems.LASER_CRYSTAL_CO2, ".desc", "Carbon Dioxide encased in Crystalline Desh");
+        this.add(NtmItems.LASER_CRYSTAL_BISMUTH, "BiSmUTh Laser Crystal");
+        this.add(NtmItems.LASER_CRYSTAL_BISMUTH, ".desc", "Bismuth-Samarium-Uranium-Thorium crystal matrix");
+        this.add(NtmItems.LASER_CRYSTAL_CMB, "CMB-Schrabidate Antimatter Laser Crystal");
+        this.add(NtmItems.LASER_CRYSTAL_CMB, ".desc", "Antischrabidium Suspended in a CMB-Schrabidate Alloy Lattice");
+        this.add(NtmItems.LASER_CRYSTAL_DNT, "Spark Laser Crystal");
+        this.add(NtmItems.LASER_CRYSTAL_DNT, ".desc", "Dineutronium-Spark Fermion Supercrystal");
+        this.add(NtmItems.LASER_CRYSTAL_DIGAMMA, "Digamma Laser Crystal");
+
         this.add(NtmItems.BLUEPRINTS, "Blueprints");
 
         //this.add(NtmItems.FLUID_ICON, "");
-        this.add("item." + NuclearTechMod.MODID + " .obj_fluid_id_multi.desc0", "Universal fluid identifier for:");
-        this.add("item." + NuclearTechMod.MODID + " .obj_fluid_id_multi.desc1", "Secondary type:");
+        this.add("item." + NuclearTechMod.MODID + ".obj_fluid_id_multi.desc0", "Universal fluid identifier for:");
+        this.add("item." + NuclearTechMod.MODID + ".obj_fluid_id_multi.desc1", "Secondary type:");
         this.add(NtmItems.FLUID_IDENTIFIER_MULTI, "Multi Fluid Identifier");
 
         this.add(NtmItems.SCREWDRIVER, "Screwdriver");
         this.add(NtmItems.SCREWDRIVER_DESH, "Desh Screwdriver");
+        this.add("item.hbm.piston_set.steel", "Steel Piston Set");
+        this.add("item.hbm.piston_set.dura", "High-Speed Steel Piston Set");
+        this.add("item.hbm.piston_set.desh", "Desh Piston Set");
+        this.add("item.hbm.piston_set.starmetal", "Starmetal Piston Set");
         this.add(NtmItems.BLOWTORCH, "Blowtorch");
         this.add(NtmItems.ACETYLENE_TORCH, "Acetylene Welding Torch");
 
@@ -723,6 +740,24 @@ public class NtmLanguageProvider extends LanguageProvider {
         this.add("digamma.playerHealth", "Digamma influence: %s");
         this.add("digamma.playerRes", "Digamma resistance: %s");
         this.add(NtmItems.DIGAMMA_DIAGNOSTIC, "Digamma Diagnostic");
+        // Some descriptions and messages
+        this.add("item.hbm.designator.desc.selectTarget", "No Position Set!");
+        this.add("item.hbm.designator.desc.targetPos", "Position set to:");
+        this.add("item.hbm.designator.posSet", "Position Set!");
+        this.add("item.hbm.used_in", "Used in:");
+        this.add("detonator.no_pos", "No Position Set!");
+        this.add("detonator.set_to", "Position set to: %d, / %d, / %d");
+        this.add("detonator.no_pos.multi", "No Positions Set!");
+        this.add("detonator.set_to.multi", "Positions set to:");
+        this.add("item.hbm.satellite_laser.desc", "Allows to summon lasers with a 15 second cooldown.");
+        this.add("item.hbm.satellite_radar.desc", "Shows a map of active entities.");
+
+
+
+
+
+
+
 
         this.add(NtmItems.PIN, "Bobby Pin");
         this.add(NtmItems.PIN, DESC, "Standard success rate of picking a regular lock is ~10%%.");
@@ -736,20 +771,20 @@ public class NtmLanguageProvider extends LanguageProvider {
         this.add(NtmItems.KEY_KIT, "Key Imitation Kit");
         this.add(NtmItems.KEY_FAKE, "Counterfeit Key");
 
-        this.add("item." + NuclearTechMod.MODID + " .obj_missile.tier0", "Tier 0");
-        this.add("item." + NuclearTechMod.MODID + " .obj_missile.tier1", "Tier 1");
-        this.add("item." + NuclearTechMod.MODID + " .obj_missile.tier2", "Tier 2");
-        this.add("item." + NuclearTechMod.MODID + " .obj_missile.tier3", "Tier 3");
-        this.add("item." + NuclearTechMod.MODID + " .obj_missile.tier4", "Tier 4");
-        this.add("item." + NuclearTechMod.MODID + " .obj_missile.not_launchable", "Not launchable!");
-        this.add("item." + NuclearTechMod.MODID + " .obj_missile.desc.fuel", "Fuel");
-        this.add("item." + NuclearTechMod.MODID + " .obj_missile.desc.fuel_cap", "Fuel capacity");
-        this.add("item." + NuclearTechMod.MODID + " .obj_missile.fuel.solid", "Solid Fuel");
-        this.add("item." + NuclearTechMod.MODID + " .obj_missile.fuel.solid.prefueled", "Solid Fuel (pre-fueled)");
-        this.add("item." + NuclearTechMod.MODID + " .obj_missile.fuel.ethanol_peroxide", "Ethanol / Hydrogen Peroxide");
-        this.add("item." + NuclearTechMod.MODID + " .obj_missile.fuel.kerosene_peroxide", "Kerosene / Hydrogen Peroxide");
-        this.add("item." + NuclearTechMod.MODID + " .obj_missile.fuel.kerosene_loxy", "Kerosene / Liquid Oxygen");
-        this.add("item." + NuclearTechMod.MODID + " .obj_missile.fuel.jetfuel_loxy", "Jet Fuel / Liquid Oxygen");
+        this.add("item." + NuclearTechMod.MODID + ".obj_missile.tier0", "Tier 0");
+        this.add("item." + NuclearTechMod.MODID + ".obj_missile.tier1", "Tier 1");
+        this.add("item." + NuclearTechMod.MODID + ".obj_missile.tier2", "Tier 2");
+        this.add("item." + NuclearTechMod.MODID + ".obj_missile.tier3", "Tier 3");
+        this.add("item." + NuclearTechMod.MODID + ".obj_missile.tier4", "Tier 4");
+        this.add("item." + NuclearTechMod.MODID + ".obj_missile.not_launchable", "Not launchable!");
+        this.add("item." + NuclearTechMod.MODID + ".obj_missile.desc.fuel", "Fuel");
+        this.add("item." + NuclearTechMod.MODID + ".obj_missile.desc.fuel_cap", "Fuel capacity");
+        this.add("item." + NuclearTechMod.MODID + ".obj_missile.fuel.solid", "Solid Fuel");
+        this.add("item." + NuclearTechMod.MODID + ".obj_missile.fuel.solid.prefueled", "Solid Fuel (pre-fueled)");
+        this.add("item." + NuclearTechMod.MODID + ".obj_missile.fuel.ethanol_peroxide", "Ethanol / Hydrogen Peroxide");
+        this.add("item." + NuclearTechMod.MODID + ".obj_missile.fuel.kerosene_peroxide", "Kerosene / Hydrogen Peroxide");
+        this.add("item." + NuclearTechMod.MODID + ".obj_missile.fuel.kerosene_loxy", "Kerosene / Liquid Oxygen");
+        this.add("item." + NuclearTechMod.MODID + ".obj_missile.fuel.jetfuel_loxy", "Jet Fuel / Liquid Oxygen");
         this.add(NtmItems.MISSILE_TAINT, "Taint-Tipped Missile");
         this.add(NtmItems.MISSILE_MICRO, "Micro-Nuclear Missile");
         this.add(NtmItems.MISSILE_BHOLE, "Black Hole Missile");
@@ -782,10 +817,10 @@ public class NtmLanguageProvider extends LanguageProvider {
         this.add(NtmItems.MISSILE_DOOMSDAY, "Doomsday Missile");
         this.add(NtmItems.MISSILE_DOOMSDAY_RUSTED, "Damaged Doomsday Missile");
 
-        this.add("item." + NuclearTechMod.MODID + " .obj_soyuz.skin", "Skin:");
-        this.add("item." + NuclearTechMod.MODID + " .obj_soyuz.skin.original", "Original");
-        this.add("item." + NuclearTechMod.MODID + " .obj_soyuz.skin.luna", "Luna Space Center");
-        this.add("item." + NuclearTechMod.MODID + " .obj_soyuz.skin.post", "Post War");
+        this.add("item." + NuclearTechMod.MODID + ".obj_soyuz.skin", "Skin:");
+        this.add("item." + NuclearTechMod.MODID + ".obj_soyuz.skin.original", "Original");
+        this.add("item." + NuclearTechMod.MODID + ".obj_soyuz.skin.luna", "Luna Space Center");
+        this.add("item." + NuclearTechMod.MODID + ".obj_soyuz.skin.post", "Post War");
         this.add(NtmItems.MISSILE_SOYUZ, "Soyuz-FG");
 
         this.add(NtmItems.SATELLITE_RADAR, "Radar Survey Satellite");
@@ -793,8 +828,11 @@ public class NtmLanguageProvider extends LanguageProvider {
         this.add(NtmItems.SATELLITE_INTERFACE, "Satellite Control Interface");
 
         this.add(NtmItems.BALEFIRE_AND_STEEL, "Balefire and Steel");
+        this.add(NtmItems.WIRING_RED_COPPER, "Cable Drum");
+        this.add(NtmItems.WRENCH, "Pipe Wrench");
+        this.add(NtmItems.MIRROR_TOOL, "Mirror Adjustment Tool");
 
-        this.add("item." + NuclearTechMod.MODID + " .obj_drink.requires_opener", "[Requires bottle opener]");
+        this.add("item." + NuclearTechMod.MODID + ".obj_drink.requires_opener", "[Requires bottle opener]");
         this.add(NtmItems.DRINK, this.getName(DrinkType.CAN_EMPTY), "Empty Can");
         this.add(NtmItems.DRINK, this.getName(DrinkType.SMART), "'Smart' Energy Drink");
         this.add(NtmItems.DRINK, this.getName(DrinkType.SMART) + DESC, "Cheap and full of bubbles");
@@ -836,60 +874,60 @@ public class NtmLanguageProvider extends LanguageProvider {
         this.add(NtmItems.BOTTLE_OPENER, "Hbm's Own Self-Made Bottle Opener");
         this.add(NtmItems.BOTTLE_OPENER, DESC, "My very own bottle opener.$Use with caution!");
 
-        this.add("item." + NuclearTechMod.MODID + " .canned_" + ConserveType.BEEF.name().toLowerCase(Locale.US), "Canned Beef");
-        this.add("item." + NuclearTechMod.MODID + " .canned_" + ConserveType.BEEF.name().toLowerCase(Locale.US) + DESC, "A few centuries ago, a cow died for this.");
-        this.add("item." + NuclearTechMod.MODID + " .canned_" + ConserveType.TUNA.name().toLowerCase(Locale.US), "Canned Tuna");
-        this.add("item." + NuclearTechMod.MODID + " .canned_" + ConserveType.TUNA.name().toLowerCase(Locale.US) + DESC, "I can't tell if that's actually tuna or dried cement.");
-        this.add("item." + NuclearTechMod.MODID + " .canned_" + ConserveType.MYSTERY.name().toLowerCase(Locale.US), "Canned Mystery Meat");
-        this.add("item." + NuclearTechMod.MODID + " .canned_" + ConserveType.MYSTERY.name().toLowerCase(Locale.US) + DESC, "What's inside? Only one way to find out!");
-        this.add("item." + NuclearTechMod.MODID + " .canned_" + ConserveType.PASHTET.name().toLowerCase(Locale.US), "Паштет");
-        this.add("item." + NuclearTechMod.MODID + " .canned_" + ConserveType.PASHTET.name().toLowerCase(Locale.US) + DESC, "услуги перевода недоступны!");
-        this.add("item." + NuclearTechMod.MODID + " .canned_" + ConserveType.CHEESE.name().toLowerCase(Locale.US), "Canned Melted Cheese");
-        this.add("item." + NuclearTechMod.MODID + " .canned_" + ConserveType.CHEESE.name().toLowerCase(Locale.US) + DESC, "Is it cheese? Is it rubber cement? Who knows, who cares.");
-        this.add("item." + NuclearTechMod.MODID + " .canned_" + ConserveType.SLIME.name().toLowerCase(Locale.US), "Condensed Horse Slime");
-        this.add("item." + NuclearTechMod.MODID + " .canned_" + ConserveType.SLIME.name().toLowerCase(Locale.US) + DESC, "Now with extra bone marrow.");
-        this.add("item." + NuclearTechMod.MODID + " .canned_" + ConserveType.MILK.name().toLowerCase(Locale.US), "Canned Evaporated Milk");
-        this.add("item." + NuclearTechMod.MODID + " .canned_" + ConserveType.MILK.name().toLowerCase(Locale.US) + DESC, "Milk 2: More solid than ever before!");
-        this.add("item." + NuclearTechMod.MODID + " .canned_" + ConserveType.ASS.name().toLowerCase(Locale.US), "Canned Ass");
-        this.add("item." + NuclearTechMod.MODID + " .canned_" + ConserveType.ASS.name().toLowerCase(Locale.US) + DESC, "100%% quality donkey meat!*");
-        this.add("item." + NuclearTechMod.MODID + " .canned_" + ConserveType.PIZZA.name().toLowerCase(Locale.US), "Canned Pepperoni Pizza");
-        this.add("item." + NuclearTechMod.MODID + " .canned_" + ConserveType.PIZZA.name().toLowerCase(Locale.US) + DESC, "A crime against humanity.");
-        this.add("item." + NuclearTechMod.MODID + " .canned_" + ConserveType.TUBE.name().toLowerCase(Locale.US), "Astronaut Food Tube");
-        this.add("item." + NuclearTechMod.MODID + " .canned_" + ConserveType.TUBE.name().toLowerCase(Locale.US) + DESC, "Tasty mush.");
-        this.add("item." + NuclearTechMod.MODID + " .canned_" + ConserveType.TOMATO.name().toLowerCase(Locale.US), "Canned Tomato Soup");
-        this.add("item." + NuclearTechMod.MODID + " .canned_" + ConserveType.TOMATO.name().toLowerCase(Locale.US) + DESC, "Who wants some thick red paste?");
-        this.add("item." + NuclearTechMod.MODID + " .canned_" + ConserveType.ASBESTOS.name().toLowerCase(Locale.US), "Canned Asbestos");
-        this.add("item." + NuclearTechMod.MODID + " .canned_" + ConserveType.ASBESTOS.name().toLowerCase(Locale.US) + DESC, "TASTE the asbestosis!");
-        this.add("item." + NuclearTechMod.MODID + " .canned_" + ConserveType.BHOLE.name().toLowerCase(Locale.US), "Canned Black Hole");
-        this.add("item." + NuclearTechMod.MODID + " .canned_" + ConserveType.BHOLE.name().toLowerCase(Locale.US) + DESC, "Made from actual singularities. No, really.");
-        this.add("item." + NuclearTechMod.MODID + " .canned_" + ConserveType.HOTDOGS.name().toLowerCase(Locale.US), "Canned Hotdogs");
-        this.add("item." + NuclearTechMod.MODID + " .canned_" + ConserveType.HOTDOGS.name().toLowerCase(Locale.US) + DESC, "Not to be confused with cool cats.");
-        this.add("item." + NuclearTechMod.MODID + " .canned_" + ConserveType.LEFTOVERS.name().toLowerCase(Locale.US), "Leftover Conserve");
-        this.add("item." + NuclearTechMod.MODID + " .canned_" + ConserveType.LEFTOVERS.name().toLowerCase(Locale.US) + DESC, "ur 2 slow");
-        this.add("item." + NuclearTechMod.MODID + " .canned_" + ConserveType.YOGURT.name().toLowerCase(Locale.US), "Canned Yogurt");
-        this.add("item." + NuclearTechMod.MODID + " .canned_" + ConserveType.YOGURT.name().toLowerCase(Locale.US) + DESC, "Probably spoiled, but whatever.");
-        this.add("item." + NuclearTechMod.MODID + " .canned_" + ConserveType.STEW.name().toLowerCase(Locale.US), "Canned \"Mushroom Stew\"");
-        this.add("item." + NuclearTechMod.MODID + " .canned_" + ConserveType.STEW.name().toLowerCase(Locale.US) + DESC, "...");
-        this.add("item." + NuclearTechMod.MODID + " .canned_" + ConserveType.CHINESE.name().toLowerCase(Locale.US), "Canned Chinese Food");
-        this.add("item." + NuclearTechMod.MODID + " .canned_" + ConserveType.CHINESE.name().toLowerCase(Locale.US) + DESC, "In China, Chinese food is just called food.");
-        this.add("item." + NuclearTechMod.MODID + " .canned_" + ConserveType.OIL.name().toLowerCase(Locale.US), "Canned Engine Oil");
-        this.add("item." + NuclearTechMod.MODID + " .canned_" + ConserveType.OIL.name().toLowerCase(Locale.US) + DESC, "It makes motors go, so why not humans?");
-        this.add("item." + NuclearTechMod.MODID + " .canned_" + ConserveType.FIST.name().toLowerCase(Locale.US), "Canned Fist");
-        this.add("item." + NuclearTechMod.MODID + " .canned_" + ConserveType.FIST.name().toLowerCase(Locale.US) + DESC, "ow");
-        this.add("item." + NuclearTechMod.MODID + " .canned_" + ConserveType.SPAM.name().toLowerCase(Locale.US), "Canned Spam");
-        this.add("item." + NuclearTechMod.MODID + " .canned_" + ConserveType.SPAM.name().toLowerCase(Locale.US) + DESC, "The three-and-a-half-minute sketch is set in the fictional Green Midget Cafe in Bromley.$An argument develops between the waitress, who recites a menu in which nearly$every dish contains Spam, and Mrs. Bun, who does not like Spam. She asks for a$dish without Spam, much to the amazement of her Spam-loving husband. The waitress$responds to this request with disgust. Mr. Bun offers to take her Spam instead,$and asks for a dish containing a lot of Spam and baked beans. The waitress says$no since they are out of baked beans; when Mr. Bun asks for a substitution of Spam,$the waitress again responds with disgust. At several points, a group of Vikings in$the restaurant interrupts conversation by loudly singing about Spam.$The irate waitress orders them to shut up, but they resume singing more loudly.$A Hungarian tourist comes to the counter, trying to order by using a wholly$inaccurate Hungarian/English phrasebook (a reference to a previous sketch).$He is rapidly escorted away by a police constable. The sketch abruptly cuts to a$historian in a television studio talking about the origin of the Vikings in the café.$As he goes on, he begins to increasingly insert the word \"Spam\" into every$sentence, and the backdrop is raised to reveal the restaurant set behind.$The historian joins the Vikings in their song, and Mr. and Mrs. Bun are lifted by$wires out of the scene while the singing continues. In the original televised performance,$the closing credits begin to scroll with the singing still audible in the background.");
-        this.add("item." + NuclearTechMod.MODID + " .canned_" + ConserveType.FRIED.name().toLowerCase(Locale.US), "Canned Fried Chicken");
-        this.add("item." + NuclearTechMod.MODID + " .canned_" + ConserveType.FRIED.name().toLowerCase(Locale.US) + DESC, "Even the can is deep fried!");
-        this.add("item." + NuclearTechMod.MODID + " .canned_" + ConserveType.NAPALM.name().toLowerCase(Locale.US), "Canned Napalm");
-        this.add("item." + NuclearTechMod.MODID + " .canned_" + ConserveType.NAPALM.name().toLowerCase(Locale.US) + DESC, "I love the smell of old memes in the morning!");
-        this.add("item." + NuclearTechMod.MODID + " .canned_" + ConserveType.DIESEL.name().toLowerCase(Locale.US), "Canned Diesel");
-        this.add("item." + NuclearTechMod.MODID + " .canned_" + ConserveType.DIESEL.name().toLowerCase(Locale.US) + DESC, "I'm slowly running out of jokes for these.");
-        this.add("item." + NuclearTechMod.MODID + " .canned_" + ConserveType.KEROSENE.name().toLowerCase(Locale.US), "Canned Kerosene");
-        this.add("item." + NuclearTechMod.MODID + " .canned_" + ConserveType.KEROSENE.name().toLowerCase(Locale.US) + DESC, "Just imagine a witty line here.");
-        this.add("item." + NuclearTechMod.MODID + " .canned_" + ConserveType.RECURSION.name().toLowerCase(Locale.US), "Canned Recursion");
-        this.add("item." + NuclearTechMod.MODID + " .canned_" + ConserveType.RECURSION.name().toLowerCase(Locale.US) + DESC, "Canned Recursion");
-        this.add("item." + NuclearTechMod.MODID + " .canned_" + ConserveType.BARK.name().toLowerCase(Locale.US), "Canned Pine Bark Jerky");
-        this.add("item." + NuclearTechMod.MODID + " .canned_" + ConserveType.BARK.name().toLowerCase(Locale.US) + DESC, "Extra cronchy!");
+        this.add("item." + NuclearTechMod.MODID + ".canned_" + ConserveType.BEEF.name().toLowerCase(Locale.US), "Canned Beef");
+        this.add("item." + NuclearTechMod.MODID + ".canned_" + ConserveType.BEEF.name().toLowerCase(Locale.US) + DESC, "A few centuries ago, a cow died for this.");
+        this.add("item." + NuclearTechMod.MODID + ".canned_" + ConserveType.TUNA.name().toLowerCase(Locale.US), "Canned Tuna");
+        this.add("item." + NuclearTechMod.MODID + ".canned_" + ConserveType.TUNA.name().toLowerCase(Locale.US) + DESC, "I can't tell if that's actually tuna or dried cement.");
+        this.add("item." + NuclearTechMod.MODID + ".canned_" + ConserveType.MYSTERY.name().toLowerCase(Locale.US), "Canned Mystery Meat");
+        this.add("item." + NuclearTechMod.MODID + ".canned_" + ConserveType.MYSTERY.name().toLowerCase(Locale.US) + DESC, "What's inside? Only one way to find out!");
+        this.add("item." + NuclearTechMod.MODID + ".canned_" + ConserveType.PASHTET.name().toLowerCase(Locale.US), "Паштет");
+        this.add("item." + NuclearTechMod.MODID + ".canned_" + ConserveType.PASHTET.name().toLowerCase(Locale.US) + DESC, "услуги перевода недоступны!");
+        this.add("item." + NuclearTechMod.MODID + ".canned_" + ConserveType.CHEESE.name().toLowerCase(Locale.US), "Canned Melted Cheese");
+        this.add("item." + NuclearTechMod.MODID + ".canned_" + ConserveType.CHEESE.name().toLowerCase(Locale.US) + DESC, "Is it cheese? Is it rubber cement? Who knows, who cares.");
+        this.add("item." + NuclearTechMod.MODID + ".canned_" + ConserveType.SLIME.name().toLowerCase(Locale.US), "Condensed Horse Slime");
+        this.add("item." + NuclearTechMod.MODID + ".canned_" + ConserveType.SLIME.name().toLowerCase(Locale.US) + DESC, "Now with extra bone marrow.");
+        this.add("item." + NuclearTechMod.MODID + ".canned_" + ConserveType.MILK.name().toLowerCase(Locale.US), "Canned Evaporated Milk");
+        this.add("item." + NuclearTechMod.MODID + ".canned_" + ConserveType.MILK.name().toLowerCase(Locale.US) + DESC, "Milk 2: More solid than ever before!");
+        this.add("item." + NuclearTechMod.MODID + ".canned_" + ConserveType.ASS.name().toLowerCase(Locale.US), "Canned Ass");
+        this.add("item." + NuclearTechMod.MODID + ".canned_" + ConserveType.ASS.name().toLowerCase(Locale.US) + DESC, "100%% quality donkey meat!*");
+        this.add("item." + NuclearTechMod.MODID + ".canned_" + ConserveType.PIZZA.name().toLowerCase(Locale.US), "Canned Pepperoni Pizza");
+        this.add("item." + NuclearTechMod.MODID + ".canned_" + ConserveType.PIZZA.name().toLowerCase(Locale.US) + DESC, "A crime against humanity.");
+        this.add("item." + NuclearTechMod.MODID + ".canned_" + ConserveType.TUBE.name().toLowerCase(Locale.US), "Astronaut Food Tube");
+        this.add("item." + NuclearTechMod.MODID + ".canned_" + ConserveType.TUBE.name().toLowerCase(Locale.US) + DESC, "Tasty mush.");
+        this.add("item." + NuclearTechMod.MODID + ".canned_" + ConserveType.TOMATO.name().toLowerCase(Locale.US), "Canned Tomato Soup");
+        this.add("item." + NuclearTechMod.MODID + ".canned_" + ConserveType.TOMATO.name().toLowerCase(Locale.US) + DESC, "Who wants some thick red paste?");
+        this.add("item." + NuclearTechMod.MODID + ".canned_" + ConserveType.ASBESTOS.name().toLowerCase(Locale.US), "Canned Asbestos");
+        this.add("item." + NuclearTechMod.MODID + ".canned_" + ConserveType.ASBESTOS.name().toLowerCase(Locale.US) + DESC, "TASTE the asbestosis!");
+        this.add("item." + NuclearTechMod.MODID + ".canned_" + ConserveType.BHOLE.name().toLowerCase(Locale.US), "Canned Black Hole");
+        this.add("item." + NuclearTechMod.MODID + ".canned_" + ConserveType.BHOLE.name().toLowerCase(Locale.US) + DESC, "Made from actual singularities. No, really.");
+        this.add("item." + NuclearTechMod.MODID + ".canned_" + ConserveType.HOTDOGS.name().toLowerCase(Locale.US), "Canned Hotdogs");
+        this.add("item." + NuclearTechMod.MODID + ".canned_" + ConserveType.HOTDOGS.name().toLowerCase(Locale.US) + DESC, "Not to be confused with cool cats.");
+        this.add("item." + NuclearTechMod.MODID + ".canned_" + ConserveType.LEFTOVERS.name().toLowerCase(Locale.US), "Leftover Conserve");
+        this.add("item." + NuclearTechMod.MODID + ".canned_" + ConserveType.LEFTOVERS.name().toLowerCase(Locale.US) + DESC, "ur 2 slow");
+        this.add("item." + NuclearTechMod.MODID + ".canned_" + ConserveType.YOGURT.name().toLowerCase(Locale.US), "Canned Yogurt");
+        this.add("item." + NuclearTechMod.MODID + ".canned_" + ConserveType.YOGURT.name().toLowerCase(Locale.US) + DESC, "Probably spoiled, but whatever.");
+        this.add("item." + NuclearTechMod.MODID + ".canned_" + ConserveType.STEW.name().toLowerCase(Locale.US), "Canned \"Mushroom Stew\"");
+        this.add("item." + NuclearTechMod.MODID + ".canned_" + ConserveType.STEW.name().toLowerCase(Locale.US) + DESC, "...");
+        this.add("item." + NuclearTechMod.MODID + ".canned_" + ConserveType.CHINESE.name().toLowerCase(Locale.US), "Canned Chinese Food");
+        this.add("item." + NuclearTechMod.MODID + ".canned_" + ConserveType.CHINESE.name().toLowerCase(Locale.US) + DESC, "In China, Chinese food is just called food.");
+        this.add("item." + NuclearTechMod.MODID + ".canned_" + ConserveType.OIL.name().toLowerCase(Locale.US), "Canned Engine Oil");
+        this.add("item." + NuclearTechMod.MODID + ".canned_" + ConserveType.OIL.name().toLowerCase(Locale.US) + DESC, "It makes motors go, so why not humans?");
+        this.add("item." + NuclearTechMod.MODID + ".canned_" + ConserveType.FIST.name().toLowerCase(Locale.US), "Canned Fist");
+        this.add("item." + NuclearTechMod.MODID + ".canned_" + ConserveType.FIST.name().toLowerCase(Locale.US) + DESC, "ow");
+        this.add("item." + NuclearTechMod.MODID + ".canned_" + ConserveType.SPAM.name().toLowerCase(Locale.US), "Canned Spam");
+        this.add("item." + NuclearTechMod.MODID + ".canned_" + ConserveType.SPAM.name().toLowerCase(Locale.US) + DESC, "The three-and-a-half-minute sketch is set in the fictional Green Midget Cafe in Bromley.$An argument develops between the waitress, who recites a menu in which nearly$every dish contains Spam, and Mrs. Bun, who does not like Spam. She asks for a$dish without Spam, much to the amazement of her Spam-loving husband. The waitress$responds to this request with disgust. Mr. Bun offers to take her Spam instead,$and asks for a dish containing a lot of Spam and baked beans. The waitress says$no since they are out of baked beans; when Mr. Bun asks for a substitution of Spam,$the waitress again responds with disgust. At several points, a group of Vikings in$the restaurant interrupts conversation by loudly singing about Spam.$The irate waitress orders them to shut up, but they resume singing more loudly.$A Hungarian tourist comes to the counter, trying to order by using a wholly$inaccurate Hungarian/English phrasebook (a reference to a previous sketch).$He is rapidly escorted away by a police constable. The sketch abruptly cuts to a$historian in a television studio talking about the origin of the Vikings in the café.$As he goes on, he begins to increasingly insert the word \"Spam\" into every$sentence, and the backdrop is raised to reveal the restaurant set behind.$The historian joins the Vikings in their song, and Mr. and Mrs. Bun are lifted by$wires out of the scene while the singing continues. In the original televised performance,$the closing credits begin to scroll with the singing still audible in the background.");
+        this.add("item." + NuclearTechMod.MODID + ".canned_" + ConserveType.FRIED.name().toLowerCase(Locale.US), "Canned Fried Chicken");
+        this.add("item." + NuclearTechMod.MODID + ".canned_" + ConserveType.FRIED.name().toLowerCase(Locale.US) + DESC, "Even the can is deep fried!");
+        this.add("item." + NuclearTechMod.MODID + ".canned_" + ConserveType.NAPALM.name().toLowerCase(Locale.US), "Canned Napalm");
+        this.add("item." + NuclearTechMod.MODID + ".canned_" + ConserveType.NAPALM.name().toLowerCase(Locale.US) + DESC, "I love the smell of old memes in the morning!");
+        this.add("item." + NuclearTechMod.MODID + ".canned_" + ConserveType.DIESEL.name().toLowerCase(Locale.US), "Canned Diesel");
+        this.add("item." + NuclearTechMod.MODID + ".canned_" + ConserveType.DIESEL.name().toLowerCase(Locale.US) + DESC, "I'm slowly running out of jokes for these.");
+        this.add("item." + NuclearTechMod.MODID + ".canned_" + ConserveType.KEROSENE.name().toLowerCase(Locale.US), "Canned Kerosene");
+        this.add("item." + NuclearTechMod.MODID + ".canned_" + ConserveType.KEROSENE.name().toLowerCase(Locale.US) + DESC, "Just imagine a witty line here.");
+        this.add("item." + NuclearTechMod.MODID + ".canned_" + ConserveType.RECURSION.name().toLowerCase(Locale.US), "Canned Recursion");
+        this.add("item." + NuclearTechMod.MODID + ".canned_" + ConserveType.RECURSION.name().toLowerCase(Locale.US) + DESC, "Canned Recursion");
+        this.add("item." + NuclearTechMod.MODID + ".canned_" + ConserveType.BARK.name().toLowerCase(Locale.US), "Canned Pine Bark Jerky");
+        this.add("item." + NuclearTechMod.MODID + ".canned_" + ConserveType.BARK.name().toLowerCase(Locale.US) + DESC, "Extra cronchy!");
 
         this.add(NtmItems.CAP, this.getName(CapType.NUKA), "Nuka Cola Bottle Cap");
         this.add(NtmItems.CAP, this.getName(CapType.QUANTUM), "Nuka Cola Quantum Bottle Cap");
@@ -902,9 +940,9 @@ public class NtmLanguageProvider extends LanguageProvider {
 
         this.add(NtmItems.CHOCOLATE_MILK, "Chocolate Milk");
         this.add(NtmItems.CHOCOLATE_MILK, DESC, "Regular chocolate milk. Safe to drink.$Totally not made from nitroglycerine.");
-        this.add("item." + NuclearTechMod.MODID + " .obj_cigarette.desc0", "✓ Asbestos filter$✓ High in tar$✓ Tobacco contains 100%% Polonium-210$✓ Yum");
-        this.add("item." + NuclearTechMod.MODID + " .obj_cigarette.desc1", "This can't be good for me, but I feel ");
-        this.add("item." + NuclearTechMod.MODID + " .obj_cigarette.desc2", "GREAT");
+        this.add("item." + NuclearTechMod.MODID + ".obj_cigarette.desc0", "✓ Asbestos filter$✓ High in tar$✓ Tobacco contains 100%% Polonium-210$✓ Yum");
+        this.add("item." + NuclearTechMod.MODID + ".obj_cigarette.desc1", "This can't be good for me, but I feel ");
+        this.add("item." + NuclearTechMod.MODID + ".obj_cigarette.desc2", "GREAT");
         this.add(NtmItems.CIGARETTE, "FFI-Brand Cigarette");
         this.add(NtmItems.CRACKPIPE, "Health Pipe");
 
@@ -956,39 +994,39 @@ public class NtmLanguageProvider extends LanguageProvider {
         this.add(NtmItems.DETONATOR_DEADMAN, DESC, "Shift right-click to set position,$drop to detonate!");
         this.add(NtmItems.DETONATOR_DE, "Dead Man's Explosive");
         this.add(NtmItems.DETONATOR_DE, DESC, "Explodes when dropped!");
-        this.add("item." + NuclearTechMod.MODID + " .obj_bomb_caller.desc0", "Type: Carpet bombing");
-        this.add("item." + NuclearTechMod.MODID + " .obj_bomb_caller.desc1", "Type: Napalm");
-        this.add("item." + NuclearTechMod.MODID + " .obj_bomb_caller.desc2", "Type: Atomic bomb");
-        this.add("item." + NuclearTechMod.MODID + " .obj_bomb_caller.call", "Called in airstrike!");
+        this.add("item." + NuclearTechMod.MODID + ".obj_bomb_caller.desc0", "Type: Carpet bombing");
+        this.add("item." + NuclearTechMod.MODID + ".obj_bomb_caller.desc1", "Type: Napalm");
+        this.add("item." + NuclearTechMod.MODID + ".obj_bomb_caller.desc2", "Type: Atomic bomb");
+        this.add("item." + NuclearTechMod.MODID + ".obj_bomb_caller.call", "Called in airstrike!");
         this.add(NtmItems.BOMB_CALLER, "Airstrike Designator");
         this.add(NtmItems.BOMB_CALLER, DESC, "Aim & click to call an airstrike!");
         this.add(NtmItems.DEFUSER, "High-Tech Bomb Defusing Device");
         this.add(NtmItems.REACHER, "Tungsten Reacher");
 
-        this.add("item." + NuclearTechMod.MODID + " .obj_polaroid.desc", "Fate chosen");
-        this.add("item." + NuclearTechMod.MODID + " .obj_polaroid.fate1", "...");
-        this.add("item." + NuclearTechMod.MODID + " .obj_polaroid.fate2", "Clear as glass.");
-        this.add("item." + NuclearTechMod.MODID + " .obj_polaroid.fate3", "'M");
-        this.add("item." + NuclearTechMod.MODID + " .obj_polaroid.fate4", "It's about time.");
-        this.add("item." + NuclearTechMod.MODID + " .obj_polaroid.fate5", "If you stare long into the abyss, the abyss stares back.");
-        this.add("item." + NuclearTechMod.MODID + " .obj_polaroid.fate6", "public Party celebration = new Party();");
-        this.add("item." + NuclearTechMod.MODID + " .obj_polaroid.fate7", "V urnerq lbh yvxr EBG13!");
-        this.add("item." + NuclearTechMod.MODID + " .obj_polaroid.fate8", "11011100");
-        this.add("item." + NuclearTechMod.MODID + " .obj_polaroid.fate9", "Vg'f nobhg gvzr.");
-        this.add("item." + NuclearTechMod.MODID + " .obj_polaroid.fate10", "Schrabidium dislikes the breeding reactor.");
-        this.add("item." + NuclearTechMod.MODID + " .obj_polaroid.fate11", "yss stares back.6public Party cel");
-        this.add("item." + NuclearTechMod.MODID + " .obj_polaroid.fate12", "Red streaks.");
-        this.add("item." + NuclearTechMod.MODID + " .obj_polaroid.fate13", "Q1");
-        this.add("item." + NuclearTechMod.MODID + " .obj_polaroid.fate14", "Q4");
-        this.add("item." + NuclearTechMod.MODID + " .obj_polaroid.fate15", "Q3");
-        this.add("item." + NuclearTechMod.MODID + " .obj_polaroid.fate16", "Q2");
-        this.add("item." + NuclearTechMod.MODID + " .obj_polaroid.fate17", "Two friends before christmas.");
-        this.add("item." + NuclearTechMod.MODID + " .obj_polaroid.fate18", "Duchess of the boxcars.$$\"P.S.: Thirty-one.\"$\"Huh, what does thirty-one mean?\"");
+        this.add("item." + NuclearTechMod.MODID + ".obj_polaroid.desc", "Fate chosen");
+        this.add("item." + NuclearTechMod.MODID + ".obj_polaroid.fate1", "...");
+        this.add("item." + NuclearTechMod.MODID + ".obj_polaroid.fate2", "Clear as glass.");
+        this.add("item." + NuclearTechMod.MODID + ".obj_polaroid.fate3", "'M");
+        this.add("item." + NuclearTechMod.MODID + ".obj_polaroid.fate4", "It's about time.");
+        this.add("item." + NuclearTechMod.MODID + ".obj_polaroid.fate5", "If you stare long into the abyss, the abyss stares back.");
+        this.add("item." + NuclearTechMod.MODID + ".obj_polaroid.fate6", "public Party celebration = new Party();");
+        this.add("item." + NuclearTechMod.MODID + ".obj_polaroid.fate7", "V urnerq lbh yvxr EBG13!");
+        this.add("item." + NuclearTechMod.MODID + ".obj_polaroid.fate8", "11011100");
+        this.add("item." + NuclearTechMod.MODID + ".obj_polaroid.fate9", "Vg'f nobhg gvzr.");
+        this.add("item." + NuclearTechMod.MODID + ".obj_polaroid.fate10", "Schrabidium dislikes the breeding reactor.");
+        this.add("item." + NuclearTechMod.MODID + ".obj_polaroid.fate11", "yss stares back.6public Party cel");
+        this.add("item." + NuclearTechMod.MODID + ".obj_polaroid.fate12", "Red streaks.");
+        this.add("item." + NuclearTechMod.MODID + ".obj_polaroid.fate13", "Q1");
+        this.add("item." + NuclearTechMod.MODID + ".obj_polaroid.fate14", "Q4");
+        this.add("item." + NuclearTechMod.MODID + ".obj_polaroid.fate15", "Q3");
+        this.add("item." + NuclearTechMod.MODID + ".obj_polaroid.fate16", "Q2");
+        this.add("item." + NuclearTechMod.MODID + ".obj_polaroid.fate17", "Two friends before christmas.");
+        this.add("item." + NuclearTechMod.MODID + ".obj_polaroid.fate18", "Duchess of the boxcars.$$\"P.S.: Thirty-one.\"$\"Huh, what does thirty-one mean?\"");
         this.add(NtmItems.POLAROID, "The Polaroid");
         this.add(NtmItems.BURNT_BARK, "Burnt Bark");
         this.add(NtmItems.BURNT_BARK, DESC, "A piece of bark from an exploded golden oak tree.");
 
-        this.add("item." + NuclearTechMod.MODID + " .obj_starter_kit.empty_inventory", "Please empty inventory before opening!");
+        this.add("item." + NuclearTechMod.MODID + ".obj_starter_kit.empty_inventory", "Please empty inventory before opening!");
         this.add(NtmItems.STARTER_KIT, this.getName(KitType.GADGET), "The Gadget Kit");
         this.add(NtmItems.STARTER_KIT, this.getName(KitType.LITTLE_BOY), "Little Boy Kit");
         this.add(NtmItems.STARTER_KIT, this.getName(KitType.FAT_MAN), "Fat Man Kit");
@@ -1003,24 +1041,100 @@ public class NtmLanguageProvider extends LanguageProvider {
         // upgrades
         this.add("desc.gui.upgrade", "Upgrade slots");
         this.add("desc.gui.upgrade.speed", "Speed upgrades");
+        this.add("desc.gui.upgrade.effectiveness", "Effectiveness upgrades");
         this.add("desc.gui.upgrade.power", "Power upgrades");
         this.add("desc.gui.upgrade.overdrive", "Overdrive upgrades");
         this.add("upgrade.delay", "Delay: %s");
         this.add("upgrade.consumption", "Consumption: %s");
+        this.add("upgrade.efficiency", "Efficiency %s");
+        // death messages
+        this.add("death.attack.acid", "%1$s fell into acid.");
+        this.add("death.attack.acid_player", "%1$s was dissolved by %2$s.");
+        this.add("death.attack.ams", "%1$s was bathed in deadly particles that have yet to be named by human science.");
+        this.add("death.attack.ams_core", "%1$s was vaporized in the fire of a singularity.");
+        this.add("death.attack.asbestos", "%1$s is now entitled to financial compensation.");
+        this.add("death.attack.bang", "%1$s was blasted into bite-sized pieces.");
+        this.add("death.attack.black_hole", "%1$s was spaghettified.");
+        this.add("death.attack.blacklung", "%1$s died from black lung disease.");
+        this.add("death.attack.blender", "%1$s was chopped in small, bite-sized pieces.");
+        this.add("death.attack.boat", "%1$s was hit by a boat.");
+        this.add("death.attack.boil", "%1$s was boiled alive by %2$s.");
+        this.add("death.attack.boxcar", "%1$s was smushed by a falling boxcar. Oh well.");
+        this.add("death.attack.broadcast", "%1$s got their brain melted.");
+        this.add("death.attack.building", "%1$s was hit by a falling building.");
+        this.add("death.attack.cheater", "%1$s's intestines turned into oats. (???)");
+        this.add("death.attack.chopper_bullet", "%1$s was rekt by %2$s.");
+        this.add("death.attack.cloud", "%1$s melted like a popsicle in the sun.");
+        this.add("death.attack.cmb", "%1$s was fizzeled by %2$s.");
+        this.add("death.attack.digamma", "%1$s stepped into the abyss.");
+        this.add("death.attack.electricity", "%1$s was electrocuted.");
+        this.add("death.attack.electrified", "%1$s was electrified by %2$s.");
+        this.add("death.attack.euthanized", "%1$s was euthanized by %2$s.");
+        this.add("death.attack.euthanized_self2", "%1$s wins the Darwin Award.");
+        this.add("death.attack.euthanized_self", "%1$s euthanized himself, what a dork.");
+        this.add("death.attack.exhaust", "%1$s was turned into shish kebab by a starting rocket.");
+        this.add("death.attack.flamethrower", "%1$s was cremated by %2$s.");
+        this.add("death.attack.flamethrower.item", "%1$s was cremated by %2$s using %3$s.");
+        this.add("death.attack.ice", "%1$s was turned into a popsicle by %2$s.");
+        this.add("death.attack.laser", "%1$s was turned into ash by %2$s.");
+        this.add("death.attack.laser.item", "%1$s was turned into ash by %2$s using %3$s.");
+        this.add("death.attack.lead", "%1$s died from lead poisoning.");
+        this.add("death.attack.lunar", "%1$s forgot to charge their vital organs.");
+        this.add("death.attack.meteorite", "%1$s was hit by a falling rock from outer space.");
+        this.add("death.attack.microwave", "%1$s was exploded by microwave radiation.");
+        this.add("death.attack.mku", "%1$s died from unknown causes.");
+        this.add("death.attack.monoxide", "%1$s forgot to change the batteries in their carbon monoxide detector.");
+        this.add("death.attack.mud_poisoning", "%1$s died in poisonous mud.");
+        this.add("death.attack.nuclearBlast", "%1$s was blown away by a nuclear explosion.");
+        this.add("death.attack.overdose", "%1$s overdosed and asphyxiated.");
+        this.add("death.attack.pc", "%1$s was reduced to a puddle in the pink cloud.");
+        this.add("death.attack.plasma", "%1$s was immolated by %2$s.");
+        this.add("death.attack.radiation", "%1$s died from radiation poisoning.");
+        this.add("death.attack.revolver_bullet", "%1$s was shot in the head by %2$s.");
+        this.add("death.attack.revolver_bullet.item", "%1$s was shot in the head by %2$s using %3$s.");
+        this.add("death.attack.rubble", "%1$s was squashed by debris.");
+        this.add("death.attack.shrapnel", "%1$s was ragged by a shrapnel.");
+        this.add("death.attack.spikes", "%1$s got impaled.");
+        this.add("death.attack.sub_atomic1", "%1$s's atoms have been destroyed by %2$s.");
+        this.add("death.attack.sub_atomic2", "%1$s was QPU-misaligned because %2$s tampered with their de facto speed.");
+        this.add("death.attack.sub_atomic3", "%1$s's divergence dropped below 1 percent because of %2$s.");
+        this.add("death.attack.sub_atomic4", "%1$s was divided by zero by %2$s.");
+        this.add("death.attack.sub_atomic5", "%1$s was nullified by %2$s.");
+        this.add("death.attack.suicide", "%1$s blew their head off.");
+        this.add("death.attack.taint", "%1$s died from flux tumors.");
+        this.add("death.attack.tau", "%1$s was riddeled by %2$s using negatively charged tauons.");
+        this.add("death.attack.tau_blast", "%1$s charged the XVL1456 for too long and was blown into pieces.");
+        this.add("death.attack.teleporter", "%1$s was teleported into nothingness.");
+
+        this.add("death.sedna.electric", "%1$s was fried.");
+        this.add("death.sedna.electric.attacker", "%1$s was fried by %2$s.");
+        this.add("death.sedna.explosive", "%1$s was blown up.");
+        this.add("death.sedna.explosive.attacker", "%1$s was blown up by %2$s.");
+        this.add("death.sedna.fire", "%1$s was incinerated.");
+        this.add("death.sedna.fire.attacker", "%1$s was incinerated by %2$s.");
+        this.add("death.sedna.laser", "%1$s was pulverized.");
+        this.add("death.sedna.laser.attacker", "%1$s was pulverized by %2$s.");
+        this.add("death.sedna.microwave", "%1$s was microwaved.");
+        this.add("death.sedna.microwave.attacker", "%1$s was microwaved by %2$s.");
+        this.add("death.sedna.subatomic", "%1$s was atomized.");
+        this.add("death.sedna.subatomic.attacker", "%1$s was atomized by %2$s.");
+        this.add("death.sedna.other", "%1$s was killed.");
+        this.add("death.sedna.other.attacker", "%1$s was killed by %2$s.");
+        this.add("death.sedna.physical", "%1$s was shot.");
+        this.add("death.sedna.physical.attacker", "%1$s was shot by %2$s.");
 
         // BLOCKS //
         this.add(NtmBlocks.BOBBLEHEAD, "Bobblehead");
 
         this.add(NtmBlocks.GRAVEL_OBSIDIAN, "Crushed Obsidian");
         this.add(NtmBlocks.GRAVEL_DIAMOND, "Diamond Gravel");
-        this.add(NtmBlocks.GRAVEL_DIAMOND, DESC, "There is some kind of joke here,$but I can't quite tell what it is.$$Update, 2020-07-04:$We deny any implications of a joke on$the basis that it was so severely unfunny$that people started stabbing their eyes out.$$Update, 2020-17-04:$As it turns out, \"Diamond Gravel\" was$never really a thing, rendering what might$have been a joke as totally nonsensical.$We apologize for getting your hopes up with$this non-joke that hasn't been made.$$i added an item for a joke that isn't even here, what am i, stupid? can't even tell the difference between gravel and a gavel, how did i not forget how to breathe yet?");
 
-        this.add("block." + NuclearTechMod.MODID + " .obj_blast_info.desc", "Blast Resistance: %s");
-        this.add("block." + NuclearTechMod.MODID + " .obj_speedy.desc", "Increases speed by %s%%");
+        this.add("block." + NuclearTechMod.MODID + ".obj_blast_info.desc", "Blast Resistance: %s");
+        this.add("block." + NuclearTechMod.MODID + ".obj_speedy.desc", "Increases speed by %s%%");
         this.add(NtmBlocks.ASPHALT, "Asphalt");
         this.add(NtmBlocks.ASPHALT_LIGHT, "Glowing Asphalt");
 
-        this.add("block." + NuclearTechMod.MODID + " .obj_no_spawn.desc", "Mobs cannot spawn on this block!");
+        this.add("block." + NuclearTechMod.MODID + ".obj_no_spawn.desc", "Mobs cannot spawn on this block!");
         this.add(NtmBlocks.BRICK_CONCRETE, "Concrete Bricks");
         this.add(NtmBlocks.BRICK_CONCRETE_MOSSY, "Mossy Concrete Bricks");
         this.add(NtmBlocks.BRICK_CONCRETE_CRACKED, "Cracked Concrete Bricks");
@@ -1057,6 +1171,38 @@ public class NtmLanguageProvider extends LanguageProvider {
         this.add(NtmBlocks.SAND_OILY, "Oily Sand");
         this.add(NtmBlocks.SAND_RED_OILY, "Oily Red Sand");
 
+        this.add(NtmBlocks.ORE_ALUMINUM, "Aluminum Ore");
+        this.add(NtmBlocks.ORE_ALUMINUM_DEEPSLATE, "Deepslate Aluminum Ore");
+        this.add(NtmBlocks.ORE_ASBESTOS, "Asbestos Ore");
+        this.add(NtmBlocks.ORE_DEEPSLATE_ASBESTOS, "Deepslate Asbestos Ore");
+        this.add(NtmBlocks.ORE_BERYLLIUM, "Beryllium Ore");
+        this.add(NtmBlocks.ORE_BERYLLIUM_DEEPSLATE, "Deepslate Beryllium Ore");
+        this.add(NtmBlocks.ORE_CINNABAR, "Cinnabar Ore");
+        this.add(NtmBlocks.ORE_CINNABAR_DEEPSLATE, "Deepslate Cinnabar Ore");
+        this.add(NtmBlocks.ORE_COBALT, "Cobalt Ore");
+        this.add(NtmBlocks.ORE_COBALT_DEEPSLATE, "Deepslate Cobalt Ore");
+        this.add(NtmBlocks.ORE_LIGNITE, "Lignite Ore");
+        this.add(NtmBlocks.ORE_DEEPSLATE_BROWNCOAL, "Deepslate Brown Coal Ore");
+        this.add(NtmBlocks.ORE_FLUORITE, "Fluorite Ore");
+        this.add(NtmBlocks.ORE_DEEPSLATE_FLUORITE, "Deepslate Fluorite Ore");
+        this.add(NtmBlocks.ORE_LEAD, "Lead Ore");
+        this.add(NtmBlocks.ORE_LEAD_DEEPSLATE, "Deepslate Lead Ore");
+        this.add(NtmBlocks.ORE_RAREGROUND, "Rareground Ore");
+        this.add(NtmBlocks.ORE_RAREGROUND_DEEPSLATE, "Deepslate Rareground Ore");
+        this.add(NtmBlocks.ORE_SULFUR, "Sulfur Ore");
+        this.add(NtmBlocks.ORE_DEEPSLATE_SULFUR, "Deepslate Sulfur Ore");
+        this.add(NtmBlocks.ORE_THORIUM, "Thorium Ore");
+        this.add(NtmBlocks.ORE_THORIUM_DEEPSLATE, "Deepslate Thorium Ore");
+        this.add(NtmBlocks.ORE_TITANIUM, "Titanium Ore");
+        this.add(NtmBlocks.ORE_TITANIUM_DEEPSLATE, "Deepslate Titanium Ore");
+        this.add(NtmBlocks.ORE_TUNGSTEN, "Tungsten Ore");
+        this.add(NtmBlocks.ORE_DEEPSLATE_TUNGSTEN, "Deepslate Tungsten Ore");
+        this.add(NtmBlocks.ORE_URANIUM_H, "Uranium Ore");
+        this.add(NtmBlocks.ORE_URANIUM_DEEPSLATE, "Deepslate Uranium Ore");
+        this.add(NtmBlocks.ORE_DEEPSLATE_ALEXANDRITE, "Deepslate Alexandrite Ore");
+        this.add(NtmBlocks.ORE_DEEPSLATE_COLTAN, "Deepslate Coltan Ore");
+        this.add(NtmBlocks.ORE_DEEPSLATE_NITER, "Deepslate Niter Ore");
+        this.add(NtmBlocks.ORE_SEQUESTRUM, "Sequestrum Ore");
         this.add(NtmBlocks.WASTE_EARTH, "Dead Grass");
         this.add(NtmBlocks.WASTE_MYCELIUM, "Glowing Mycelium");
         this.add(NtmBlocks.WASTE_TRINITITE, "Trinitite Ore");
@@ -1082,7 +1228,6 @@ public class NtmLanguageProvider extends LanguageProvider {
         this.add(NtmBlocks.NUKE_IVY_MIKE, "Ivy Mike");
         this.add(NtmBlocks.NUKE_TSAR_BOMBA, "Tsar Bomba");
         this.add(NtmBlocks.NUKE_PROTOTYPE, "The Prototype");
-        this.add(NtmBlocks.NUKE_PROTOTYPE, DESC, "It didn't have to be like this.$ $You monster.");
         this.add(NtmBlocks.NUKE_FLEIJA, "F.L.E.I.J.A.");
         this.add(NtmBlocks.NUKE_N2, "N² Mine");
         this.add(NtmBlocks.NUKE_FSTBMB, "Balefire Bomb");
@@ -1104,7 +1249,7 @@ public class NtmLanguageProvider extends LanguageProvider {
         this.add(NtmBlocks.DET_CORD, "Det Cord");
         this.add(NtmBlocks.DET_NUKE, "Nuclear Charge");
         this.add(NtmBlocks.DET_MINER, "Mining Charge");
-        this.add("block." + NuclearTechMod.MODID + " .obj_red_barrel.desc", "Static Fluid Barrel");
+        this.add("block." + NuclearTechMod.MODID + ".obj_red_barrel.desc", "Static Fluid Barrel");
         this.add(NtmBlocks.BARREL_RED, "Explosive Barrel");
         this.add(NtmBlocks.BARREL_PINK, "Kerosene Barrel");
         this.add(NtmBlocks.BARREL_LOX, "LOX Barrel");
@@ -1114,6 +1259,7 @@ public class NtmLanguageProvider extends LanguageProvider {
 
         this.add(NtmBlocks.MACHINE_PRESS, "Burner Press");
         this.add(NtmBlocks.MACHINE_ELECTRIC_PRESS, "Electric Press");
+        this.add(NtmBlocks.PRESS_PREHEATER, "Burner Press Preheater");
         this.add(NtmBlocks.MACHINE_SHREDDER, "Shredder");
         this.add(NtmBlocks.HEATER_FIREBOX, "Firebox");
         this.add(NtmBlocks.HEATER_OVEN, "Heating Oven");
@@ -1123,31 +1269,95 @@ public class NtmLanguageProvider extends LanguageProvider {
 
 
         this.add(NtmBlocks.RED_CABLE, "Red Copper Cable");
+        this.add(NtmBlocks.RED_CABLE_CLASSIC, "Red Copper Cable (Classic)");
+        this.add(NtmBlocks.RED_CABLE_PAINTABLE, "Paintable Red Copper Cable");
+        this.add(NtmBlocks.RED_CABLE_BOX_HUGE, "Red Copper Boxcable (Huge)");
+        this.add(NtmBlocks.RED_CABLE_BOX_LARGE, "Red Copper Boxcable (Large)");
+        this.add(NtmBlocks.RED_CABLE_BOX_MEDIUM, "Red Copper Boxcable (Medium)");
+        this.add(NtmBlocks.RED_CABLE_BOX_SMALL, "Red Copper Boxcable (Small)");
+        this.add(NtmBlocks.RED_CABLE_BOX_TINY, "Red Copper Boxcable (Tiny)");
+        this.add(NtmBlocks.RED_WIRE_COATED, "Coated Red Copper Cable");
+        this.add(NtmBlocks.RED_CONNECTOR, "Electricity Connector");
+        this.add(NtmBlocks.RED_CONNECTOR_SUPER, "Heavy Duty Electricity Connector");
+        this.add(NtmBlocks.RED_PYLON, "Wooden Electricity Pylon");
+        this.add(NtmBlocks.RED_PYLON_MEDIUM_WOOD, "Medium Wooden Electricity Pylon");
+        this.add(NtmBlocks.RED_PYLON_MEDIUM_WOOD_TRANSFORMER, "Medium Wooden Electricity Pylon with Transformer");
+        this.add(NtmBlocks.RED_PYLON_MEDIUM_STEEL, "Medium Steel Electricity Pylon");
+        this.add(NtmBlocks.RED_PYLON_MEDIUM_STEEL_TRANSFORMER, "Medium Steel Electricity Pylon with Transformer");
+        this.add(NtmBlocks.RED_PYLON_LARGE, "Large Electricity Pylon");
+        this.add(NtmBlocks.RED_PYLON_STEEL, "Steel Electricity Pylon");
+        this.add(NtmBlocks.SUBSTATION, "Substation");
 
         this.add(NtmBlocks.FLUID_DUCT_NEO, "Universal Fluid Duct");
+        this.add(NtmBlocks.FLUID_DUCT_BOX_IRON_HUGE, "Iron Fluid Boxduct (Huge)");
+        this.add(NtmBlocks.FLUID_DUCT_BOX_COPPER_HUGE, "Copper Fluid Boxduct (Huge)");
+        this.add(NtmBlocks.FLUID_DUCT_BOX_ALUMINIUM_HUGE, "Aluminium Fluid Boxduct (Huge)");
+        this.add(NtmBlocks.FLUID_DUCT_BOX_IRON_LARGE, "Iron Fluid Boxduct (Large)");
+        this.add(NtmBlocks.FLUID_DUCT_BOX_COPPER_LARGE, "Copper Fluid Boxduct (Large)");
+        this.add(NtmBlocks.FLUID_DUCT_BOX_ALUMINIUM_LARGE, "Aluminium Fluid Boxduct (Large)");
+        this.add(NtmBlocks.FLUID_DUCT_BOX_IRON_MEDIUM, "Iron Fluid Boxduct (Medium)");
+        this.add(NtmBlocks.FLUID_DUCT_BOX_COPPER_MEDIUM, "Copper Fluid Boxduct (Medium)");
+        this.add(NtmBlocks.FLUID_DUCT_BOX_ALUMINIUM_MEDIUM, "Aluminium Fluid Boxduct (Medium)");
+        this.add(NtmBlocks.FLUID_DUCT_BOX_IRON_SMALL, "Iron Fluid Boxduct (Small)");
+        this.add(NtmBlocks.FLUID_DUCT_BOX_COPPER_SMALL, "Copper Fluid Boxduct (Small)");
+        this.add(NtmBlocks.FLUID_DUCT_BOX_ALUMINIUM_SMALL, "Aluminium Fluid Boxduct (Small)");
+        this.add(NtmBlocks.FLUID_DUCT_BOX_IRON_TINY, "Iron Fluid Boxduct (Tiny)");
+        this.add(NtmBlocks.FLUID_DUCT_BOX_COPPER_TINY, "Copper Fluid Boxduct (Tiny)");
+        this.add(NtmBlocks.FLUID_DUCT_BOX_ALUMINIUM_TINY, "Aluminium Fluid Boxduct (Tiny)");
+        this.add(NtmBlocks.FLUID_DUCT_EXHAUST_HUGE, "Exhaust Pipe (Huge)");
+        this.add(NtmBlocks.FLUID_DUCT_EXHAUST_LARGE, "Exhaust Pipe (Large)");
+        this.add(NtmBlocks.FLUID_DUCT_EXHAUST_MEDIUM, "Exhaust Pipe (Medium)");
+        this.add(NtmBlocks.FLUID_DUCT_EXHAUST_SMALL, "Exhaust Pipe (Small)");
+        this.add(NtmBlocks.FLUID_DUCT_EXHAUST_TINY, "Exhaust Pipe (Tiny)");
+        this.add(NtmBlocks.PIPE_ANCHOR, "Pipe Anchor");
 
         this.add(NtmBlocks.MACHINE_BATTERY_SOCKET, "Battery Socket");
-        this.add(NtmBlocks.MACHINE_BATTERY_SOCKET, DESC,"Allows battery items to be connected$to the power grid directly.$Acts as a cable, all ports are connected$to the same network.");
         this.add(NtmBlocks.MACHINE_BATTERY_REDD, "FEnSU");
         this.add(NtmBlocks.MACHINE_ASSEMBLY_MACHINE, "Assembly Machine");
+        this.add(NtmBlocks.MACHINE_ASSEMBLY_FACTORY, "Assembly Factory");
+        this.add(NtmBlocks.MACHINE_PREC_ASS, "Precision Assembly Machine");
         this.add(NtmBlocks.MACHINE_CHEMICAL_PLANT, "Chemical Plant");
+        this.add(NtmBlocks.MACHINE_CHEMICAL_FACTORY, "Chemical Factory");
+        this.add(NtmBlocks.MACHINE_PUREX, "PUREX");
+        this.add(NtmBlocks.MACHINE_ORE_ACIDIZER, "Ore Acidizer");
         this.add(NtmBlocks.MACHINE_WOOD_BURNER, "Wood-Burning Generator");
-        this.add(NtmBlocks.MACHINE_WOOD_BURNER, DESC, "Generates 100HE/t when burning items$Collects ashes$Can burn fluids at 50%% efficiency at 40mB/s");
         this.add(NtmBlocks.MACHINE_DIESEL, "Diesel Generator");
+        this.add(NtmBlocks.MACHINE_COMBUSTION_ENGINE, "Industrial Combustion Engine");
+        this.add(NtmBlocks.MACHINE_TURBOFAN, "Turbofan");
+        this.add(NtmBlocks.MACHINE_STIRLING, "Stirling Engine");
+        this.add(NtmBlocks.MACHINE_STIRLING_STEEL, "Heavy Stirling Engine");
+        this.add(NtmBlocks.MACHINE_STIRLING_CREATIVE, "Creative Stirling Engine");
+        this.add(NtmBlocks.MACHINE_SAWMILL, "Stirling Sawmill");
+        this.add(NtmBlocks.PUMP_STEAM, "Steam-Powered Groundwater Pump");
+        this.add(NtmBlocks.PUMP_ELECTRIC, "Electric Groundwater Pump");
+        this.add(NtmBlocks.MACHINE_CONDENSER, "Steam Condenser");
+        this.add(NtmBlocks.MACHINE_CONDENSER_POWERED, "High-Power Steam Condenser");
+        this.add(NtmBlocks.MACHINE_STEAM_ENGINE, "Steam Engine");
         this.add(NtmBlocks.MACHINE_CENTRIFUGE, "Centrifuge");
         this.add(NtmBlocks.MACHINE_GAS_CENTRIFUGE, "Gas Centrifuge");
         this.add(NtmBlocks.MACHINE_SOLDERING_STATION, "Soldering Station");
         this.add(NtmBlocks.MACHINE_ARC_WELDER, "Arc Welder");
         this.add(NtmBlocks.MACHINE_MIXER, "Industrial Mixer");
-        this.add(NtmBlocks.HEAT_BOILER, "Boiler");
+        this.add(NtmBlocks.MACHINE_FEL, "FEL");
+        this.add(NtmBlocks.MACHINE_SILEX, "Laser Isotope Separation Chamber (SILEX)");
+        this.add(NtmBlocks.MACHINE_INTAKE, "Air Intake");
+        this.add(NtmBlocks.MACHINE_ELECTROLYSER, "Electrolysis Machine");
+        this.add(NtmBlocks.MACHINE_HEAT_BOILER, "Boiler");
+        this.add(NtmBlocks.MACHINE_SOLAR_BOILER, "Solar Tower Boiler");
+        this.add(NtmBlocks.SOLAR_MIRROR, "Heliostat Mirror");
         this.add(NtmBlocks.MACHINE_INDUSTRIAL_BOILER, "Industrial Boiler");
-        this.add(NtmBlocks.FURNACE_IRON, "Iron Furnace");
-        this.add(NtmBlocks.FURNACE_IRON, DESC, "Larger and more efficient furnace,$does not waste fuel when idle.");
-        this.add(NtmBlocks.FURNACE_STEEL, "Steel Furnace");
-        this.add(NtmBlocks.FURNACE_STEEL, DESC, "Very large furnace that can provide bonus items$when smelting ores. Requires external heat source.$Heat transfer rate: ΔT*0.05 TU/t$(Δ means difference and T means temperature)");
-        this.add(NtmBlocks.FURNACE_COMBINATION, "Combination Oven");
-        this.add(NtmBlocks.FURNACE_COMBINATION, DESC, "A large furnace that can produce charcoal and coal coke.$Produces fluid byproducts.$Heat transfer rate: ΔT*0.25 TU/t");
+        this.add(NtmBlocks.MACHINE_INDUSTRIAL_TURBINE, "Industrial Steam Turbine");
+        this.add(NtmBlocks.MACHINE_CHUNGUS, "Leviathan Steam Turbine");
+        this.add(NtmBlocks.MACHINE_TOWER_SMALL, "Auxiliary Cooling Tower");
+        this.add(NtmBlocks.MACHINE_TOWER_LARGE, "Cooling Tower");
+        this.add(NtmBlocks.MACHINE_GEOTHERMAL_HEAT_EXCHANGER, "Geothermal Heat Exchanger");
+        this.add(NtmBlocks.MACHINE_FURNACE_BRICK, "Bricked Furnace");
+        this.add(NtmBlocks.MACHINE_ELECTRIC_FURNACE, "Electric Furnace");
+        this.add(NtmBlocks.MACHINE_FURNACE_IRON, "Iron Furnace");
+        this.add(NtmBlocks.MACHINE_FURNACE_STEEL, "Steel Furnace");
+        this.add(NtmBlocks.MACHINE_COMBINATION_OVEN, "Combination Oven");
         this.add(NtmBlocks.MACHINE_BLAST_FURNACE, "Blast Furnace");
+        this.add(NtmBlocks.MACHINE_ROTARY_FURNACE, "Rotary Furnace");
 
         this.add(NtmBlocks.MACHINE_FLUID_TANK, "Tank");
         this.add(NtmBlocks.MACHINE_BIG_ASS_TANK, "Big Ass Tank");
@@ -1164,6 +1374,9 @@ public class NtmLanguageProvider extends LanguageProvider {
         this.add(NtmBlocks.MACHINE_CATALYTIC_CRACKING_TOWER, "Catalytic Cracking Tower");
         this.add(NtmBlocks.MACHINE_COMPRESSOR, "Industrial Compressor");
         this.add(NtmBlocks.MACHINE_COMPRESSOR_COMPACT, "Compact Compressor");
+        this.add(NtmBlocks.MACHINE_FLARE, "Flare Stack");
+        this.add(NtmBlocks.MACHINE_SMOKESTACK, "Smokestack");
+        this.add(NtmBlocks.MACHINE_SMOKESTACK_INDUSTRIAL, "Industrial Smokestack");
 
         this.add(NtmBlocks.MACHINE_SATLINKER, "SatLink Device");
 
@@ -1186,11 +1399,11 @@ public class NtmLanguageProvider extends LanguageProvider {
 
         this.add(NtmBlocks.BALEFIRE, "Balefire");
         this.add(NtmBlocks.FIRE_DIGAMMA, "Lingering Digamma");
-        this.add("block." + NuclearTechMod.MODID + " .obj_volcano.desc0", "SHIELD VOLCANO");
-        this.add("block." + NuclearTechMod.MODID + " .obj_volcano.desc1", "DOES GROW");
-        this.add("block." + NuclearTechMod.MODID + " .obj_volcano.desc2", "DOES NOT GROW");
-        this.add("block." + NuclearTechMod.MODID + " .obj_volcano.desc3", "DOES EXTINGUISH");
-        this.add("block." + NuclearTechMod.MODID + " .obj_volcano.desc4", "DOES NOT EXTINGUISH");
+        this.add("block." + NuclearTechMod.MODID + ".obj_volcano.desc0", "SHIELD VOLCANO");
+        this.add("block." + NuclearTechMod.MODID + ".obj_volcano.desc1", "DOES GROW");
+        this.add("block." + NuclearTechMod.MODID + ".obj_volcano.desc2", "DOES NOT GROW");
+        this.add("block." + NuclearTechMod.MODID + ".obj_volcano.desc3", "DOES EXTINGUISH");
+        this.add("block." + NuclearTechMod.MODID + ".obj_volcano.desc4", "DOES NOT EXTINGUISH");
         this.add(NtmBlocks.VOLCANO_CORE, "Volcano Core");
         this.add(NtmBlocks.VOLCANO_RAD_CORE, "Rad Volcano Core");
 
@@ -1211,7 +1424,6 @@ public class NtmLanguageProvider extends LanguageProvider {
         this.add(NtmBlocks.GAS_EXPLOSIVE, "Explosive Gas");
 
         this.add(NtmBlocks.TAINT, "Taint");
-        this.add(NtmBlocks.TAINT, DESC,"DO NOT TOUCH, BREATHE OR STARE AT.");
 
         // FLUIDS //
         this.add("hbmfluid.none", "None");
@@ -1394,9 +1606,17 @@ public class NtmLanguageProvider extends LanguageProvider {
         this.add("container.battery_socket", "Battery Socket");
         this.add("container.battery_redd", "FEnSU");
         this.add("container.machine_assembly_machine", "Assembly Machine");
+        this.add("container.machine_assembly_factory", "Assembly Factory");
+        this.add("container.machine_precass", "Precision Assembly Machine");
         this.add("container.machine_chemical_plant", "Chemical Plant");
+        this.add("container.machine_chemical_factory", "Chemical Factory");
+        this.add("container.machine_purex", "PUREX");
+        this.add("container.ore_acidizer", "Ore Acidizer");
         this.add("container.machine_wood_burner", "Wood-Burner");
         this.add("container.machine_diesel", "Diesel Generator");
+        this.add("container.machine_combustion_engine", "Industrial Combustion Engine");
+        this.add("container.machine_turbofan", "Turbofan");
+        this.add("container.machine_sawmill", "Stirling Sawmill");
         this.add("container.machine_shredder", "Shredder");
         this.add("container.machine_press", "Burner Press");
         this.add("container.machine_electric_press", "Electric Press");
@@ -1406,6 +1626,10 @@ public class NtmLanguageProvider extends LanguageProvider {
         this.add("container.machine_arc_welder", "Arc Welder");
         this.add("container.machine_crucible", "Crucible");
         this.add("container.machine_crucible.empty", "Empty");
+        this.add("container.machine_mixer", "Industrial Mixer");
+        this.add("container.machine_fel", "FEL");
+        this.add("container.machine_silex", "SILEX");
+        this.add("container.machine_electrolyser", "Electrolysis Machine");
         this.add("container.machine_oil_derrick", "Oil Derrick");
         this.add("container.machine_pumpjack", "Pumpjack");
         this.add("container.machine_fracking_tower", "H. F. T.");
@@ -1413,12 +1637,14 @@ public class NtmLanguageProvider extends LanguageProvider {
         this.add("container.machine_vacuum_refinery", "Vacuum Refinery");
         this.add("container.machine_catalytic_reformer", "Catalytic Reformer");
         this.add("container.machine_compressor", "Compressor");
-        this.add("container.machine_mixer", "Industrial Mixer");
+        this.add("container.machine_flare", "Flare Stack");
         this.add("container.heat_boiler", "Boiler");
         this.add("container.machine_industrial_boiler", "Industrial Boiler");
+        this.add("container.furnace_brick", "Bricked Furnace");
+        this.add("container.machine_electric_furnace", "Electric Furnace");
         this.add("container.furnace_iron", "Iron Furnace");
         this.add("container.furnace_steel", "Steel Furnace");
-        this.add("container.furnace_combination", "Combination Oven");
+        this.add("container.combination_oven", "Combination Oven");
         this.add("container.fluidtank", "Tank");
         this.add("container.bigAssTank", "Big Ass Tank");
         this.add("container.sat_linker", "SatLink Device");
@@ -1435,6 +1661,38 @@ public class NtmLanguageProvider extends LanguageProvider {
         this.add("container.recipe.output", "Output");
         this.add("container.recipe.at_pressure", "at");
         this.add("container.recipe.set_recipe", "Click to set recipe");
+        this.add(NtmBlocks.GRAVEL_DIAMOND, DESC, "There is some kind of joke here,$but I can't quite tell what it is.$$Update, 2020-07-04:$We deny any implications of a joke on$the basis that it was so severely unfunny$that people started stabbing their eyes out.$$Update, 2020-17-04:$As it turns out, \"Diamond Gravel\" was$never really a thing, rendering what might$have been a joke as totally nonsensical.$We apologize for getting your hopes up with$this non-joke that hasn't been made.$$i added an item for a joke that isn't even here, what am i, stupid? can't even tell the difference between gravel and a gavel, how did i not forget how to breathe yet?");
+        this.add(NtmBlocks.NUKE_PROTOTYPE, DESC, "It didn't have to be like this.$ $You monster.");
+        this.add(NtmBlocks.TAINT, DESC,"DO NOT TOUCH, BREATHE OR STARE AT.");
+        this.add(NtmBlocks.MACHINE_BATTERY_SOCKET, DESC,"Allows battery items to be connected$to the power grid directly.$Acts as a cable, all ports are connected$to the same network.");
+        this.add(NtmBlocks.MACHINE_PUREX, DESC, "Reprocessing machine for many nuclear fuels.$Most recipes require kerosene and nitric acid.");
+        this.add(NtmBlocks.MACHINE_WOOD_BURNER, DESC, "Generates 100HE/t when burning items$Collects ashes$Can burn fluids at 50%% efficiency at 40mB/s");
+        this.add(NtmBlocks.MACHINE_FURNACE_IRON, DESC, "Larger and more efficient furnace,$does not waste fuel when idle.");
+        this.add(NtmBlocks.MACHINE_FURNACE_STEEL, DESC, "Very large furnace that can provide bonus items$when smelting ores. Requires external heat source.$Heat transfer rate: ΔT*0.05 TU/t$(Δ means difference and T means temperature)");
+        this.add(NtmBlocks.MACHINE_COMBINATION_OVEN, DESC, "A large furnace that can produce charcoal and coal coke.$Produces fluid byproducts.$Heat transfer rate: ΔT*0.25 TU/t");
+        this.add(NtmBlocks.MACHINE_STIRLING, DESC, "Turns heat into energy. Requires external heat source.$Heat transfer rate: T*0.1 TU/t$Max intake: 300 TU/t$Efficiency: 50%%");
+        this.add(NtmBlocks.MACHINE_STIRLING_STEEL, DESC, "Turns heat into energy. Requires external heat source.$Uses a much heavier gear to support higher temperatures.$Heat transfer rate: T*0.1 TU/t$Max intake: 1500 TU/t$Efficiency: 50%%");
+        this.add(NtmBlocks.MACHINE_STIRLING_CREATIVE, DESC, "Turns heat into energy. Requires external heat source.$Heat transfer rate: T*0.1 TU/t$Infinite intake/t$Efficiency: 100%%");
+        this.add(NtmBlocks.MACHINE_SAWMILL, DESC, "Requires external heat source.$Heat transfer rate: T*0.1 TU/t$Min intake: 100 TU/t, Max intake: 300 TU/t");
+        this.add(NtmBlocks.PUMP_STEAM, DESC, "Uses steam to pump up groundwater$Generates up to 1,000mB/t$Needs to be placed below Y:70");
+        this.add(NtmBlocks.PUMP_ELECTRIC, DESC, "Uses electricity to pump up groundwater$Generates up to 10,000mB/t$Needs to be placed below Y:70");
+        this.add(NtmBlocks.MACHINE_STEAM_ENGINE, DESC, "Efficiency: 85%%");
+        this.add(NtmBlocks.MACHINE_FLARE, DESC, "Can burn fluids and vent gasses$Burns up to 10mB/t$Vents up to 50mB/t$$Fuel efficiency:$-Flammable Gasses: 20%%$-Flammable Liquids: 10%%");
+        this.add(NtmBlocks.MACHINE_SMOKESTACK, DESC, "Connect using exhaust pipes to polluting machines$Reduces pollution emission by 75%%");
+        this.add(NtmBlocks.MACHINE_SMOKESTACK_INDUSTRIAL, DESC, "Connect using exhaust pipes to polluting machines$Reduces pollution emission by 90%%");
+        this.add("flare.ignition", "Ignition");
+        this.add("flare.valve", "Flow Valve");
+        this.add(NtmBlocks.RED_CONNECTOR, DESC, "Single wire connection$Range: 10m");
+        this.add(NtmBlocks.RED_CONNECTOR_SUPER, DESC, "Single wire connection$Range: 100m");
+        this.add(NtmBlocks.PIPE_ANCHOR, DESC, "Single fluid connection$Range: 10m");
+        this.add(NtmBlocks.RED_PYLON, DESC, "Single wire connection$Range: 25m");
+        this.add(NtmBlocks.RED_PYLON_STEEL, DESC, "Single wire connection$Range: 25m");
+        this.add(NtmBlocks.RED_PYLON_MEDIUM_WOOD, DESC, "Triple wire connection$Range: 45m");
+        this.add(NtmBlocks.RED_PYLON_MEDIUM_WOOD_TRANSFORMER, DESC, "Triple wire connection$Range: 45m");
+        this.add(NtmBlocks.RED_PYLON_MEDIUM_STEEL, DESC, "Triple wire connection$Range: 45m");
+        this.add(NtmBlocks.RED_PYLON_MEDIUM_STEEL_TRANSFORMER, DESC, "Triple wire connection$Range: 45m");
+        this.add(NtmBlocks.RED_PYLON_LARGE, DESC, "Quadruple wire connection$Range: 100m$Requires a substation to connect to the power grid");
+        this.add(NtmBlocks.SUBSTATION, DESC, "Quadruple wire connection$Range: 20m");
         this.add("block.hbm.heater_firebox.desc", "Burns solid fuel to produce heat.");
         this.add("tile.heater_firebox.desc", "Burns solid fuel to produce heat.");
         this.add("block.hbm.heater_oven.desc", "Burns solid fuel to produce heat.$Accepts heat from the bottom with 50%% efficiency.");
@@ -1443,7 +1701,11 @@ public class NtmLanguageProvider extends LanguageProvider {
         this.add("tile.heater_oilburner.desc", "Burns fluids to produce heat.$Can be configured with a screwdriver.$Can be configured with a hand drill.");
         this.add("block.hbm.heater_heatex.desc", "Produces heat from hot fluids.");
         this.add("tile.heater_heatex.desc", "Produces heat from hot fluids.");
+        this.add("block.hbm.red_cable_paintable.desc", "Right-click with a solid block to set a paint$Paint can be cleared with a screwdriver$Port texture can be disabled with a defuser$Paints can be copied with the copy tool");
+        this.add(NtmBlocks.MACHINE_INDUSTRIAL_TURBINE, DESC, "Efficiency: 100%");
+        this.add(NtmBlocks.MACHINE_CHUNGUS, DESC, "Efficiency: 85%");
         this.add("container.machine_blast_furnace", "Blast Furnace");
+        this.add("container.machine_rotary_furnace", "Rotary Furnace");
         this.add("chat.catalytic_cracking_tower.changed", "Changed type to ");
         this.add("chat.fraction_tower.bottom_only", "You can only change the type in the bottom segment!");
         this.add("chat.fraction_tower.changed", "Changed type to %s!");
@@ -1472,6 +1734,32 @@ public class NtmLanguageProvider extends LanguageProvider {
         this.add("message." + NuclearTechMod.MODID + ".new_version", "New version %s is available! Click ");
         this.add("message." + NuclearTechMod.MODID + ".click_here", "[here]");
         this.add("message." + NuclearTechMod.MODID + ".to_download", " to download!");
+        this.add("message." + NuclearTechMod.MODID + ".turbine.operational", "Cannot change compressor setting while operational!");
+        this.add("message.hbm.cable_drum.cleared", "Cable selection cleared");
+        this.add("message.hbm.cable_drum.start", "First connection selected at %s, %s, %s");
+        this.add("message.hbm.cable_drum.missing", "The first connection no longer exists");
+        this.add("message.hbm.cable_drum.connected", "Electricity pylons connected");
+        this.add("message.hbm.cable_drum.invalid", "These connection points are incompatible or too far apart");
+        this.add("tooltip.hbm.cable_drum", "Use on two compatible connection points; sneak-use to clear");
+        this.add("tooltip.hbm.cable_drum.selected", "Selected: %s, %s, %s");
+        this.add("tooltip.hbm.pylon.range", "Maximum wire range: %sm");
+        this.add("message.hbm.wrench.cleared", "Pipe selection cleared");
+        this.add("message.hbm.wrench.start", "Pipe start");
+        this.add("message.hbm.wrench.missing", "Pipe error");
+        this.add("message.hbm.wrench.connected", "Pipe end");
+        this.add("message.hbm.wrench.incompatible", "Pipe error - Pipes are not the same type");
+        this.add("message.hbm.wrench.same", "Pipe error - Cannot connect to the same pipe anchor");
+        this.add("message.hbm.wrench.too_far", "Pipe error - Pipe anchor is too far away");
+        this.add("message.hbm.wrench.fluid_mismatch", "Pipe error - Pipe anchor fluid types do not match");
+        this.add("message.hbm.wrench.already_connected", "Pipe error - Pipe anchors are already connected");
+        this.add("tooltip.hbm.wrench", "Right-click anchor to connect; sneak-use to clear");
+        this.add("tooltip.hbm.wrench.selected", "Pipe start: %s, %s, %s");
+        this.add("message.hbm.mirror_tool.linked", "Alignment position set!");
+        this.add("message.hbm.mirror_tool.reach", "Mirror out of range! (max 100m)");
+        this.add("message.hbm.mirror_tool.angle", "Boiler target must not be below the mirror!");
+        this.add("tooltip.hbm.mirror_tool.0", "Right-click boiler to memorize the position.");
+        this.add("tooltip.hbm.mirror_tool.1", "Click on mirrors to turn them towards the boiler.");
+        this.add("overlay.hbm.machine_solar_boiler.too_cold", "Too cold!");
 
         this.add("itemGroup.parts", "NTM Resources and Parts");
         this.add("itemGroup.control", "NTM Machine Items and Fuel");
@@ -1482,6 +1770,20 @@ public class NtmLanguageProvider extends LanguageProvider {
         this.add("itemGroup.consumable", "NTM Consumables and Gear");
 
         this.add("fluid.pressurized", "Pressurized, use compressor!");
+
+        this.add("wavelengths.name.ir", "Infrared");
+        this.add("wavelengths.name.visible", "Visible Light");
+        this.add("wavelengths.name.uv", "Ultraviolet");
+        this.add("wavelengths.name.gamma", "Gamma");
+        this.add("wavelengths.name.drx", "Digamma");
+        this.add("wavelengths.waveRange.ir", "780nm-1mm");
+        this.add("wavelengths.waveRange.visible", "400nm-780nm");
+        this.add("wavelengths.waveRange.uv", "100nm-400nm");
+        this.add("wavelengths.waveRange.gamma", "<100pm");
+        this.add("wavelengths.waveRange.drx", "1916169 planck lengths");
+        this.add("gui.hbm.fel.error", "ERR.");
+        this.add("gui.hbm.fel.live", "LIVE");
+        this.add("gui.hbm.silex.void", "Void contents");
 
         this.add("he", "HE"); // hbm energy
         this.add("mb", "mB"); // milibuckets
@@ -1494,6 +1796,14 @@ public class NtmLanguageProvider extends LanguageProvider {
         this.add("min", "min");
         this.add("max", "max");
 
+        this.add("purex.recycle", "Reprocessing of %s");
+        this.add("purex.schrab", "Schrabidium extraction from %s");
+        this.add("autoswitch.pile", "Reprocessing Chicago Pile Rods");
+        this.add("autoswitch.plate", "Reprocessing Plate Fuel");
+        this.add("autoswitch.pwr", "Reprocessing PWR Fuel");
+        this.add("autoswitch.schrab", "Schrabidium Extraction");
+        this.add("autoswitch.watz", "Reprocessing Watz Pellet");
+        this.add("autoswitch.zirnox", "Reprocessing ZIRNOX Fuel");
         this.add("autoswitch", "Part of auto switch group \"%s\"$Recipe changes based on first ingredient");
     }
 

@@ -31,6 +31,7 @@ import net.minecraft.client.renderer.entity.EntityRenderers;
 import net.minecraft.client.renderer.entity.ThrownItemRenderer;
 import net.minecraft.client.resources.sounds.SimpleSoundInstance;
 import net.minecraft.core.BlockPos;
+import net.minecraft.network.chat.Component;
 import net.minecraft.sounds.SoundEvent;
 import net.minecraft.sounds.SoundSource;
 import net.minecraft.util.RandomSource;
@@ -165,9 +166,21 @@ public class ClientProxy extends ServerProxy {
         BlockEntityRenderers.register(NtmBlockEntityTypes.HEATER_ELECTRIC.get(), new RenderHeaterElectric());
         BlockEntityRenderers.register(NtmBlockEntityTypes.HEATER_HEATEX.get(), new RenderHeaterHeatex());
         BlockEntityRenderers.register(NtmBlockEntityTypes.ASSEMBLY_MACHINE.get(), new RenderAssemblyMachine());
+        BlockEntityRenderers.register(NtmBlockEntityTypes.ASSEMBLY_FACTORY.get(), new RenderAssemblyFactory());
+        BlockEntityRenderers.register(NtmBlockEntityTypes.PREC_ASS.get(), new RenderPrecisionAssemblyMachine());
         BlockEntityRenderers.register(NtmBlockEntityTypes.CHEMICAL_PLANT.get(), new RenderChemicalPlant());
+        BlockEntityRenderers.register(NtmBlockEntityTypes.CHEMICAL_FACTORY.get(), new RenderChemicalFactory());
+        BlockEntityRenderers.register(NtmBlockEntityTypes.PUREX.get(), new RenderPurex());
+        BlockEntityRenderers.register(NtmBlockEntityTypes.ORE_ACIDIZER.get(), new RenderOreAcidizer());
         BlockEntityRenderers.register(NtmBlockEntityTypes.WOOD_BURNER.get(), new RenderWoodBurner());
         BlockEntityRenderers.register(NtmBlockEntityTypes.DIESEL.get(), new RenderDieselGen());
+        BlockEntityRenderers.register(NtmBlockEntityTypes.COMBUSTION_ENGINE.get(), new RenderCombustionEngine());
+        BlockEntityRenderers.register(NtmBlockEntityTypes.TURBOFAN.get(), new RenderTurbofan());
+        BlockEntityRenderers.register(NtmBlockEntityTypes.STIRLING.get(), new RenderStirling());
+        BlockEntityRenderers.register(NtmBlockEntityTypes.SAWMILL.get(), new RenderSawmill());
+        BlockEntityRenderers.register(NtmBlockEntityTypes.GROUNDWATER_PUMP.get(), new RenderGroundwaterPump());
+        BlockEntityRenderers.register(NtmBlockEntityTypes.CONDENSER_POWERED.get(), new RenderPoweredCondenser());
+        BlockEntityRenderers.register(NtmBlockEntityTypes.STEAM_ENGINE.get(), new RenderSteamEngine());
         BlockEntityRenderers.register(NtmBlockEntityTypes.PRESS.get(), new RenderPress());
         BlockEntityRenderers.register(NtmBlockEntityTypes.ELECTRIC_PRESS.get(), new RenderElectricPress());
         BlockEntityRenderers.register(NtmBlockEntityTypes.CENTRIFUGE.get(), new RenderCentrifuge());
@@ -182,12 +195,24 @@ public class ClientProxy extends ServerProxy {
         BlockEntityRenderers.register(NtmBlockEntityTypes.FOUNDRY_OUTLET.get(), new RenderFoundryOutlet<>());
         BlockEntityRenderers.register(NtmBlockEntityTypes.FOUNDRY_SLAGTAP.get(), new RenderFoundryOutlet<>());
         BlockEntityRenderers.register(NtmBlockEntityTypes.MIXER.get(), new RenderMixer());
+        BlockEntityRenderers.register(NtmBlockEntityTypes.FEL.get(), new RenderFEL());
+        BlockEntityRenderers.register(NtmBlockEntityTypes.SILEX.get(), new RenderSilex());
+        BlockEntityRenderers.register(NtmBlockEntityTypes.ELECTROLYSER.get(), new RenderElectrolyser());
+        BlockEntityRenderers.register(NtmBlockEntityTypes.INTAKE.get(), new RenderIntake());
         BlockEntityRenderers.register(NtmBlockEntityTypes.FURNACE_IRON.get(), new RenderFurnaceIron());
         BlockEntityRenderers.register(NtmBlockEntityTypes.FURNACE_STEEL.get(), new RenderFurnaceSteel());
         BlockEntityRenderers.register(NtmBlockEntityTypes.HEAT_BOILER.get(), new RenderHeatBoiler());
+        BlockEntityRenderers.register(NtmBlockEntityTypes.MACHINE_SOLAR_BOILER.get(), new RenderSolarBoiler());
+        BlockEntityRenderers.register(NtmBlockEntityTypes.SOLAR_MIRROR.get(), new RenderSolarMirror());
         BlockEntityRenderers.register(NtmBlockEntityTypes.MACHINE_INDUSTRIAL_BOILER.get(), new RenderIndustrialBoiler());
-        BlockEntityRenderers.register(NtmBlockEntityTypes.FURNACE_COMBINATION.get(), new RenderFurnaceCombination());
+        BlockEntityRenderers.register(NtmBlockEntityTypes.MACHINE_INDUSTRIAL_TURBINE.get(), new RenderIndustrialTurbine());
+        BlockEntityRenderers.register(NtmBlockEntityTypes.MACHINE_CHUNGUS.get(), new RenderLeviathanTurbine());
+        BlockEntityRenderers.register(NtmBlockEntityTypes.MACHINE_TOWER_SMALL.get(), new RenderCoolingTower<>(false));
+        BlockEntityRenderers.register(NtmBlockEntityTypes.MACHINE_TOWER_LARGE.get(), new RenderCoolingTower<>(true));
+        BlockEntityRenderers.register(NtmBlockEntityTypes.MACHINE_GEOTHERMAL_HEAT_EXCHANGER.get(), new RenderGeothermalHeatExchanger());
+        BlockEntityRenderers.register(NtmBlockEntityTypes.COMBINATION_OVEN.get(), new RenderCombinationOven());
         BlockEntityRenderers.register(NtmBlockEntityTypes.MACHINE_BLAST_FURNACE.get(), new RenderBlastFurnace());
+        BlockEntityRenderers.register(NtmBlockEntityTypes.MACHINE_ROTARY_FURNACE.get(), new RenderRotaryFurnace());
         BlockEntityRenderers.register(NtmBlockEntityTypes.FLUID_TANK.get(), new RenderFluidTank());
         BlockEntityRenderers.register(NtmBlockEntityTypes.BIG_ASS_TANK.get(), new RenderBigAssTank());
         BlockEntityRenderers.register(NtmBlockEntityTypes.MACHINE_DRAIN.get(), new RenderDrain());
@@ -195,16 +220,22 @@ public class ClientProxy extends ServerProxy {
         BlockEntityRenderers.register(NtmBlockEntityTypes.PUMPJACK.get(), new RenderPumpjack());
         BlockEntityRenderers.register(NtmBlockEntityTypes.FRACKING_TOWER.get(), new RenderFrackingTower());
         BlockEntityRenderers.register(NtmBlockEntityTypes.REFINERY.get(), new RenderRefinery());
-        BlockEntityRenderers.register(NtmBlockEntityTypes.VACUUM_REFINERY.get(), new RenderVacuumDistill());
+        BlockEntityRenderers.register(NtmBlockEntityTypes.VACUUM_REFINERY.get(), new RenderVacuumRefinery());
         BlockEntityRenderers.register(NtmBlockEntityTypes.FRACTION_TOWER.get(), new RenderFractioningTower());
         BlockEntityRenderers.register(NtmBlockEntityTypes.FRACTION_SPACER.get(), new RenderFractioningSpacer());
         BlockEntityRenderers.register(NtmBlockEntityTypes.CATALYTIC_REFORMER.get(), new RenderCatalyticReformer());
         BlockEntityRenderers.register(NtmBlockEntityTypes.CATALYTIC_CRACKING_TOWER.get(), new RenderCatalyticCrackingTower());
         BlockEntityRenderers.register(NtmBlockEntityTypes.COMPRESSOR.get(), new RenderCompressor());
         BlockEntityRenderers.register(NtmBlockEntityTypes.COMPRESSOR_COMPACT.get(), new RenderCompressorCompact());
+        BlockEntityRenderers.register(NtmBlockEntityTypes.GAS_FLARE.get(), new RenderGasFlare());
+        BlockEntityRenderers.register(NtmBlockEntityTypes.CHIMNEY_BRICK.get(), new RenderSmokestack());
+        BlockEntityRenderers.register(NtmBlockEntityTypes.CHIMNEY_INDUSTRIAL.get(), new RenderSmokestackIndustrial());
         BlockEntityRenderers.register(NtmBlockEntityTypes.GEIGER_COUNTER.get(), new RenderGeigerBlock());
         BlockEntityRenderers.register(NtmBlockEntityTypes.BATTERY_SOCKET.get(), new RenderBatterySocket());
         BlockEntityRenderers.register(NtmBlockEntityTypes.BATTERY_REDD.get(), new RenderBatteryREDD());
+        BlockEntityRenderers.register(NtmBlockEntityTypes.PYLON_CONNECTOR.get(), new RenderElectricityConnector());
+        BlockEntityRenderers.register(NtmBlockEntityTypes.PYLON.get(), new RenderElectricityPylon());
+        BlockEntityRenderers.register(NtmBlockEntityTypes.PIPE_ANCHOR.get(), new RenderPipeAnchor());
         //missile blocks
         BlockEntityRenderers.register(NtmBlockEntityTypes.LAUNCH_PAD.get(), new RenderLaunchPad());
         BlockEntityRenderers.register(NtmBlockEntityTypes.SOYUZ_LAUNCHER.get(), new RenderSoyuzLauncher());
@@ -281,6 +312,11 @@ public class ClientProxy extends ServerProxy {
         } else {
             minecraft.getSoundManager().play(instance);
         }
+    }
+
+    @Override
+    public void displayTooltip(Component component, int time, int id) {
+        NuclearTechModClient.displayTooltip(component, time, id);
     }
 
     @Override

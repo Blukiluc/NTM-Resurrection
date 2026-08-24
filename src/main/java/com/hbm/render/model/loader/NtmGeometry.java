@@ -21,13 +21,23 @@ public class NtmGeometry implements IUnbakedGeometry<NtmGeometry> {
         BARREL,
         CABLE,
         DET_CORD,
-        PIPE
+        PIPE,
+        BOX_DUCT,
+        PAINTABLE_CABLE
     }
 
     private final BakedModelType type;
+    private final float diameter;
+    private final float junctionDiameter;
 
     public NtmGeometry(BakedModelType type) {
+        this(type, 1.0F, 1.0F);
+    }
+
+    public NtmGeometry(BakedModelType type, float diameter, float junctionDiameter) {
         this.type = type;
+        this.diameter = diameter;
+        this.junctionDiameter = junctionDiameter;
     }
 
     @Override
@@ -46,6 +56,23 @@ public class NtmGeometry implements IUnbakedGeometry<NtmGeometry> {
             case CABLE -> new CableBakedModel(new HFRWavefrontObject("models/obj/block/cable_neo.obj"), textureSprite);
             case DET_CORD -> new DetCordBakedModel(new HFRWavefrontObject("models/obj/block/cable_neo.obj"), textureSprite);
             case PIPE -> new PipeNeoBakedModel(new HFRWavefrontObject("models/obj/block/pipe_neo.obj"), textureSprite, overlaySprite);
+            case BOX_DUCT -> this.bakeBoxDuct(context, spriteGetter);
+            case PAINTABLE_CABLE -> new PaintableCableBakedModel(context.getTransforms(), textureSprite, overlaySprite);
         };
+    }
+
+    private BakedModel bakeBoxDuct(IGeometryBakingContext context, Function<Material, TextureAtlasSprite> spriteGetter) {
+        return new BoxDuctBakedModel(
+                    context.getTransforms(),
+                    spriteGetter.apply(context.getMaterial("straight")),
+                    spriteGetter.apply(context.getMaterial("end")),
+                    spriteGetter.apply(context.getMaterial("curve_tl")),
+                    spriteGetter.apply(context.getMaterial("curve_tr")),
+                    spriteGetter.apply(context.getMaterial("curve_bl")),
+                    spriteGetter.apply(context.getMaterial("curve_br")),
+                    spriteGetter.apply(context.getMaterial("junction")),
+                    this.diameter,
+                    this.junctionDiameter
+            );
     }
 }

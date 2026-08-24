@@ -17,7 +17,7 @@ public class ToolingItem extends Item {
     protected ToolType type;
 
     public ToolingItem(ToolType type, Properties properties) {
-        super(properties.stacksTo(1));
+        super(properties);
 
         this.type = type;
 

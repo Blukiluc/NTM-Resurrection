@@ -2,9 +2,7 @@ package com.hbm.inventory.recipes;
 
 import com.hbm.blocks.NtmBlocks;
 import com.hbm.inventory.FluidStack;
-import com.hbm.inventory.MetaHelper;
 import com.hbm.inventory.RecipesCommon.ComparableStack;
-import com.hbm.inventory.fluid.FluidType;
 import com.hbm.inventory.fluid.Fluids;
 import com.hbm.inventory.recipes.loader.GenericRecipe;
 import com.hbm.inventory.recipes.loader.GenericRecipes;
@@ -18,10 +16,10 @@ public class ChemicalPlantRecipes extends GenericRecipes<GenericRecipe> {
 
     public static final ChemicalPlantRecipes INSTANCE = new ChemicalPlantRecipes();
 
-    @Override public int inputItemLimit() { return 12; }
-    @Override public int inputFluidLimit() { return 1; }
-    @Override public int outputItemLimit() { return 1; }
-    @Override public int outputFluidLimit() { return 1; }
+    @Override public int inputItemLimit() { return 3; }
+    @Override public int inputFluidLimit() { return 3; }
+    @Override public int outputItemLimit() { return 3; }
+    @Override public int outputFluidLimit() { return 3; }
 
     @Override public String getFileName() { return "hbmChemicalPlant.json"; }
     @Override public GenericRecipe instantiateRecipe(String name) { return new GenericRecipe(name); }
@@ -59,5 +57,23 @@ public class ChemicalPlantRecipes extends GenericRecipes<GenericRecipe> {
                 .setIcon(FluidIconItem.make(Fluids.LAVA, 10))
                 .outputItems(new ItemStack(NtmBlocks.BRICK_CONCRETE.get(), 1))
                 .inputItems(new ComparableStack(Items.WATER_BUCKET, 1)));
+
+        this.register(new GenericRecipe("chem.peroxide").setup(50, 100)
+                .setIcon(FluidIconItem.make(Fluids.PEROXIDE, 10))
+                .inputFluids(new FluidStack(Fluids.WATER, 1_000))
+                .outputFluids(new FluidStack(Fluids.PEROXIDE, 1_000)));
+
+        this.register(new GenericRecipe("chem.sulfuricacid").setup(50, 100)
+                .setIcon(FluidIconItem.make(Fluids.SULFURIC_ACID, 10))
+                .inputFluids(new FluidStack(Fluids.WATER, 1_000))
+                .inputFluids(new FluidStack(Fluids.PEROXIDE, 1_000))
+                .inputItems(new ComparableStack(NtmItems.SULFUR.get()))
+                .outputFluids(new FluidStack(Fluids.SULFURIC_ACID, 2_000)));
+
+        this.register(new GenericRecipe("chem.nitricacid").setup(50, 100)
+                .setIcon(FluidIconItem.make(Fluids.NITRIC_ACID, 10))
+                .inputFluids(new FluidStack(Fluids.SULFURIC_ACID, 500))
+                .inputItems(new ComparableStack(NtmItems.NITER.get()))
+                .outputFluids(new FluidStack(Fluids.NITRIC_ACID, 1_000)));
     }
 }

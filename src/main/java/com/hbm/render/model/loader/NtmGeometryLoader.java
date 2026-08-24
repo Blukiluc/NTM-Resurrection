@@ -18,6 +18,8 @@ public class NtmGeometryLoader implements IGeometryLoader<NtmGeometry> {
     @Override
     public NtmGeometry read(JsonObject object, JsonDeserializationContext context) throws JsonParseException {
         BakedModelType type = BakedModelType.valueOf(object.get("type").getAsString().toUpperCase());
-        return new NtmGeometry(type);
+        float diameter = object.has("diameter") ? object.get("diameter").getAsFloat() : 1.0F;
+        float junctionDiameter = object.has("junction_diameter") ? object.get("junction_diameter").getAsFloat() : diameter;
+        return new NtmGeometry(type, diameter, junctionDiameter);
     }
 }
