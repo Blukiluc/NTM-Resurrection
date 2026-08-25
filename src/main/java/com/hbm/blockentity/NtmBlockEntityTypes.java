@@ -522,14 +522,14 @@ public class NtmBlockEntityTypes {
                             NtmBlocks.MACHINE_FLARE.get())
                     .build(null));
 
-    public static final Supplier<BlockEntityType<MachineSmokestackBlockEntity>> CHIMNEY_BRICK = REGISTER.register(
+    public static final Supplier<BlockEntityType<MachineSmokestackBlockEntity>> SMOKESTACK = REGISTER.register(
             "chimney_brick",
             () -> BlockEntityType.Builder.of(
                             MachineSmokestackBlockEntity::new,
                             NtmBlocks.MACHINE_SMOKESTACK.get())
                     .build(null));
 
-    public static final Supplier<BlockEntityType<MachineSmokestackIndustrialBlockEntity>> CHIMNEY_INDUSTRIAL = REGISTER.register(
+    public static final Supplier<BlockEntityType<MachineSmokestackIndustrialBlockEntity>> SMOKESTACK_INDUSTRIAL = REGISTER.register(
             "chimney_industrial",
             () -> BlockEntityType.Builder.of(
                             MachineSmokestackIndustrialBlockEntity::new,
