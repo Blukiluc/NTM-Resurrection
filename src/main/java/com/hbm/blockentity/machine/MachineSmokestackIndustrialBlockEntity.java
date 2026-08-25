@@ -7,7 +7,7 @@ import net.minecraft.world.level.block.state.BlockState;
 public class MachineSmokestackIndustrialBlockEntity extends MachineSmokestackBaseBlockEntity {
 
     public MachineSmokestackIndustrialBlockEntity(BlockPos pos, BlockState state) {
-        super(NtmBlockEntityTypes.CHIMNEY_INDUSTRIAL.get(), pos, state);
+        super(NtmBlockEntityTypes.SMOKESTACK_INDUSTRIAL.get(), pos, state);
     }
 
     @Override
