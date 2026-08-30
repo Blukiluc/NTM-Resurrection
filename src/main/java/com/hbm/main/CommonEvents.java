@@ -173,6 +173,7 @@ public class CommonEvents {
         event.register(NtmMenuTypes.DIESEL.get(), MachineDieselScreen::new);
         event.register(NtmMenuTypes.COMBUSTION_ENGINE.get(), MachineCombustionEngineScreen::new);
         event.register(NtmMenuTypes.TURBOFAN.get(), MachineTurbofanScreen::new);
+        event.register(NtmMenuTypes.RTG.get(), MachineRTGScreen::new);
         event.register(NtmMenuTypes.SHREDDER.get(), MachineShredderScreen::new);
         event.register(NtmMenuTypes.PRESS.get(), MachinePressScreen::new);
         event.register(NtmMenuTypes.ELECTRIC_PRESS.get(), MachineElectricPressScreen::new);

@@ -523,6 +523,7 @@ public class NtmLanguageProvider extends LanguageProvider {
         this.add(NtmItems.MOLD_WIRES_DENSE, "Nine Dense Wire Casting Mold");
 
         this.add(NtmItems.PELLET_RTG, "Plutonium-238 RTG Pellet");
+        this.add(NtmItems.PELLET_RTG, DESC, "RTG fuel pellet for infinite energy! (almost)");
 
         this.add(NtmItems.CELL_EMPTY, "Empty Cell");
         this.add(NtmItems.CELL_UF6, "Uranium Hexafluoride Cell");
@@ -1333,6 +1334,7 @@ public class NtmLanguageProvider extends LanguageProvider {
         this.add(NtmBlocks.MACHINE_CONDENSER, "Steam Condenser");
         this.add(NtmBlocks.MACHINE_CONDENSER_POWERED, "High-Power Steam Condenser");
         this.add(NtmBlocks.MACHINE_STEAM_ENGINE, "Steam Engine");
+        this.add(NtmBlocks.MACHINE_RTG, "RT Generator");
         this.add(NtmBlocks.MACHINE_CENTRIFUGE, "Centrifuge");
         this.add(NtmBlocks.MACHINE_GAS_CENTRIFUGE, "Gas Centrifuge");
         this.add(NtmBlocks.MACHINE_SOLDERING_STATION, "Soldering Station");
@@ -1616,6 +1618,11 @@ public class NtmLanguageProvider extends LanguageProvider {
         this.add("container.machine_diesel", "Diesel Generator");
         this.add("container.machine_combustion_engine", "Industrial Combustion Engine");
         this.add("container.machine_turbofan", "Turbofan");
+        this.add("container.machine_rtg", "RT Generator");
+        this.add("desc.gui.rtg.heat", "Current heat level: %s");
+        this.add("desc.gui.rtg.pellets", "Accepted Pellets:");
+        this.add("desc.gui.rtg.pelletPower", "%s (%s HE/tick)");
+        this.add("desc.item.rtgHeat", "Power Level: %s");
         this.add("container.machine_sawmill", "Stirling Sawmill");
         this.add("container.machine_shredder", "Shredder");
         this.add("container.machine_press", "Burner Press");
@@ -1677,6 +1684,7 @@ public class NtmLanguageProvider extends LanguageProvider {
         this.add(NtmBlocks.PUMP_STEAM, DESC, "Uses steam to pump up groundwater$Generates up to 1,000mB/t$Needs to be placed below Y:70");
         this.add(NtmBlocks.PUMP_ELECTRIC, DESC, "Uses electricity to pump up groundwater$Generates up to 10,000mB/t$Needs to be placed below Y:70");
         this.add(NtmBlocks.MACHINE_STEAM_ENGINE, DESC, "Efficiency: 85%%");
+        this.add(NtmBlocks.MACHINE_RTG, DESC, "Generates 50HE/t per Pu-238 pellet$Accepts up to 15 RTG pellets$Internal buffer: 100,000HE");
         this.add(NtmBlocks.MACHINE_FLARE, DESC, "Can burn fluids and vent gasses$Burns up to 10mB/t$Vents up to 50mB/t$$Fuel efficiency:$-Flammable Gasses: 20%%$-Flammable Liquids: 10%%");
         this.add(NtmBlocks.MACHINE_SMOKESTACK, DESC, "Connect using exhaust pipes to polluting machines$Reduces pollution emission by 75%%");
         this.add(NtmBlocks.MACHINE_SMOKESTACK_INDUSTRIAL, DESC, "Connect using exhaust pipes to polluting machines$Reduces pollution emission by 90%%");

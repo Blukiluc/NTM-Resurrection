@@ -183,6 +183,7 @@ public class NtmBlockTagProvider extends BlockTagsProvider {
                         NtmBlocks.MACHINE_CONDENSER.get(),
                         NtmBlocks.MACHINE_CONDENSER_POWERED.get(),
                         NtmBlocks.MACHINE_STEAM_ENGINE.get(),
+                        NtmBlocks.MACHINE_RTG.get(),
                         NtmBlocks.LAUNCH_PAD.get(),
                         NtmBlocks.SOYUZ_LAUNCHER.get(),
                         NtmBlocks.MACHINE_SATLINKER.get(),

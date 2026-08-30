@@ -92,6 +92,7 @@
     "hbm:machine_condenser",
     "hbm:machine_condenser_powered",
     "hbm:machine_steam_engine",
+    "hbm:machine_rtg",
     "hbm:launch_pad",
     "hbm:soyuz_launcher",
     "hbm:machine_satlinker",

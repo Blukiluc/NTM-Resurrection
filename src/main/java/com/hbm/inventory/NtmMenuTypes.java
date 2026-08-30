@@ -38,6 +38,8 @@ public class NtmMenuTypes {
 
     public static final DeferredHolder<MenuType<?>, MenuType<MachineTurbofanMenu>> TURBOFAN = reg("turbofan", MachineTurbofanMenu::new);
 
+    public static final DeferredHolder<MenuType<?>, MenuType<MachineRTGMenu>> RTG = reg("rtg", MachineRTGMenu::new);
+
     public static final DeferredHolder<MenuType<?>, MenuType<MachineShredderMenu>> SHREDDER = reg("shredder", MachineShredderMenu::new);
 
     public static final DeferredHolder<MenuType<?>, MenuType<MachinePressMenu>> PRESS = reg("press", MachinePressMenu::new);

@@ -66,6 +66,7 @@ public class ResourceManager {
     public static final ResourceLocation PUMP_ELECTRIC_TEX = NuclearTechMod.withDefaultNamespace("textures/models/machines/pump_electric.png");
     public static final ResourceLocation CONDENSER_TEX = NuclearTechMod.withDefaultNamespace("textures/models/machines/condenser.png");
     public static final ResourceLocation STEAM_ENGINE_TEX = NuclearTechMod.withDefaultNamespace("textures/models/machines/steam_engine.png");
+    public static final ResourceLocation RTG_TEX = NuclearTechMod.withDefaultNamespace("textures/models/machines/rtg.png");
     public static final ResourceLocation PRESS_TEX = NuclearTechMod.withDefaultNamespace("textures/models/machines/press.png");
     public static final ResourceLocation ELECTRIC_PRESS_TEX = NuclearTechMod.withDefaultNamespace("textures/models/machines/electric_press.png");
     public static final ResourceLocation CENTRIFUGE_TEX = NuclearTechMod.withDefaultNamespace("textures/models/machines/centrifuge.png");
@@ -277,6 +278,7 @@ public class ResourceManager {
     public static IModelCustom pump;
     public static IModelCustom condenser;
     public static IModelCustom steam_engine;
+    public static IModelCustom rtg;
     public static IModelCustom press;
     public static IModelCustom electric_press;
     public static IModelCustom centrifuge;
@@ -433,6 +435,7 @@ public class ResourceManager {
         pump = new HFRWavefrontObject("models/obj/machines/pump.obj").asVBO();
         condenser = new HFRWavefrontObject("models/obj/machines/condenser.obj").asVBO();
         steam_engine = new HFRWavefrontObject("models/obj/machines/steam_engine.obj").asVBO();
+        rtg = new HFRWavefrontObject("models/obj/machines/rtg.obj").noSmooth().asVBO();
         press = new HFRWavefrontObject("models/obj/machines/press.obj").asVBO();
         electric_press = new HFRWavefrontObject("models/obj/machines/electric_press.obj").asVBO();
         centrifuge = new HFRWavefrontObject("models/obj/machines/centrifuge.obj").asVBO();

@@ -374,6 +374,13 @@ public class NtmBlockEntityTypes {
                             NtmBlocks.MACHINE_STEAM_ENGINE.get())
                     .build(null));
 
+    public static final Supplier<BlockEntityType<MachineRTGBlockEntity>> RTG = REGISTER.register(
+            "rtg",
+            () -> BlockEntityType.Builder.of(
+                            MachineRTGBlockEntity::new,
+                            NtmBlocks.MACHINE_RTG.get())
+                    .build(null));
+
     public static final Supplier<BlockEntityType<MachineCentrifugeBlockEntity>> CENTRIFUGE = REGISTER.register(
             "centrifuge",
             () -> BlockEntityType.Builder.of(

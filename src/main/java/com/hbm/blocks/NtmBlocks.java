@@ -284,6 +284,7 @@ public class NtmBlocks {
     public static final DeferredBlock<Block> MACHINE_CONDENSER = register("machine_condenser", () -> new MachineCondenserBlock(BlockBehaviour.Properties.of().strength(5.0F, 10.0F).sound(SoundType.METAL).mapColor(MapColor.METAL)));
     public static final DeferredBlock<Block> MACHINE_CONDENSER_POWERED = register("machine_condenser_powered", () -> new MachineCondenserPoweredBlock(BlockBehaviour.Properties.of().noOcclusion().strength(5.0F, 10.0F).sound(SoundType.METAL).mapColor(MapColor.METAL)));
     public static final DeferredBlock<Block> MACHINE_STEAM_ENGINE = register("machine_steam_engine", () -> new MachineSteamEngineBlock(BlockBehaviour.Properties.of().noOcclusion().strength(5.0F, 10.0F).sound(SoundType.METAL).mapColor(MapColor.METAL)));
+    public static final DeferredBlock<Block> MACHINE_RTG = register("machine_rtg", () -> new MachineRTGBlock(BlockBehaviour.Properties.of().noOcclusion().strength(5.0F, 10.0F).sound(SoundType.METAL).mapColor(MapColor.METAL)));
 
     public static final DeferredBlock<Block> HEATER_FIREBOX = register("heater_firebox", () -> new HeaterFireboxBlock(BlockBehaviour.Properties.of().noOcclusion().strength(0.6F, 10.0F).sound(SoundType.METAL).mapColor(MapColor.METAL).requiresCorrectToolForDrops()));
     public static final DeferredBlock<Block> HEATER_OVEN = register("heater_oven", () -> new HeaterOvenBlock(BlockBehaviour.Properties.of().noOcclusion().strength(0.6F, 10.0F).sound(SoundType.METAL).mapColor(MapColor.METAL).requiresCorrectToolForDrops()));

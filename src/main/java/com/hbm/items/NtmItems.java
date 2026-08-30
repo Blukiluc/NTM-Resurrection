@@ -533,7 +533,7 @@ public class NtmItems {
     // public static final DeferredItem<Item> MOLD_STEEL_BASE = ITEMS.register("mold_steel_base", () -> new Item(new Item.Properties().stacksTo(1)));
 
     // Pellets
-    public static final DeferredItem<Item> PELLET_RTG = ITEMS.register("pellet_rtg", () -> new Item(new Item.Properties()));
+    public static final DeferredItem<Item> PELLET_RTG = ITEMS.register("pellet_rtg", () -> new RTGPelletItem(new Item.Properties(), 10));
 
     // Cells
     public static final DeferredItem<Item> CELL_EMPTY = ITEMS.register("cell_empty", () -> new Item(new Item.Properties()));
