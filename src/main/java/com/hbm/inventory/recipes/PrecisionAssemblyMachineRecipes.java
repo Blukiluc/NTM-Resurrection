@@ -17,137 +17,203 @@ public class PrecisionAssemblyMachineRecipes extends GenericRecipes<GenericRecip
 
     @Override
     public void registerDefaults() {
-//        this.register(new GenericRecipe("precass.chip").setup(100, 200L)
-//                .inputItems(
-//                        new ComparableStack(NtmItems.CIRCUIT_SILICON.get(), 1),
-//                        new ComparableStack(NtmItems.PLATE_POLYMER.get(), 3),
-//                        new OreDictStack(GOLD.wireFine(), 4))
-//                .outputItems(new ChanceOutputMulti(
-//                        new ChanceOutput(new ItemStack(NtmItems.CIRCUIT_CHIP.get(), 1), 90),
-//                        new ChanceOutput(BrokenItem.make(NtmItems.CIRCUIT_CHIP.get()), 10))));
-//        this.register(new GenericRecipe("precass.chip_bismoid").setup(200, 1_000L)
-//                .inputItems(
-//                        new ComparableStack(NtmItems.CIRCUIT_SILICON.get(), 4),
-//                        new ComparableStack(NtmItems.PLATE_POLYMER.get(), 8),
-//                        new OreDictStack(ANY_BISMOID.nugget(), 2),
-//                        new OreDictStack(GOLD.wireFine(), 4))
-//                .inputFluids(new FluidStack(Fluids.PERFLUOROMETHYL, 500))
-//                .outputItems(new ChanceOutputMulti(
-//                        new ChanceOutput(new ItemStack(NtmItems.CIRCUIT_CHIP_BISMOID.get(), 1), 75),
-//                        new ChanceOutput(BrokenItem.make(NtmItems.CIRCUIT_CHIP_BISMOID.get()), 25))));
-//        this.register(new GenericRecipe("precass.chip_quantum").setup(300, 20_000L)
-//                .inputItems(
-//                        new ComparableStack(NtmItems.CIRCUIT_SILICON.get(), 8),
-//                        new OreDictStack(BSCCO.wireDense(), 2),
-//                        new OreDictStack(ANY_HARDPLASTIC.ingot(), 4),
-//                        new ComparableStack(NtmItems.PELLET_CHARGED.get(), 4),
-//                        new OreDictStack(GOLD.wireFine(), 8))
-//                .inputFluids(new FluidStack(Fluids.HELIUM4, 250))
-//                .outputItems(new ChanceOutputMulti(
-//                        new ChanceOutput(new ItemStack(NtmItems.CIRCUIT_CHIP_QUANTUM.get(), 1), 90),
-//                        new ChanceOutput(BrokenItem.make(NtmItems.CIRCUIT_CHIP_QUANTUM.get()), 10))));
-//        this.register(new GenericRecipe("precass.atomic_clock").setup(200, 2_000L)
-//                .inputItems(
-//                        new ComparableStack(NtmItems.CIRCUIT_CHIP.get(), 8),
-//                        new OreDictStack(ANY_PLASTIC.ingot(), 4),
-//                        new OreDictStack(ZR.wireFine(), 8),
-//                        new OreDictStack(SR.dust(), 1))
-//                .outputItems(new ChanceOutputMulti(
-//                        new ChanceOutput(new ItemStack(NtmItems.CIRCUIT_ATOMIC_CLOCK.get(), 1), 50),
-//                        new ChanceOutput(BrokenItem.make(NtmItems.CIRCUIT_ATOMIC_CLOCK.get()), 50))));
-//        this.register(new GenericRecipe("precass.controller").setup(400, 15_000L)
-//                .inputItems(
-//                        new ComparableStack(NtmItems.CIRCUIT_CHIP.get(), 32),
-//                        new ComparableStack(NtmItems.CIRCUIT_CAPACITOR.get(), 32),
-//                        new ComparableStack(NtmItems.CIRCUIT_CAPACITOR_TANTALIUM.get(), 16),
-//                        new ComparableStack(NtmItems.CIRCUIT_CONTROLLER_CHASSIS.get(), 1),
-//                        new ComparableStack(NtmItems.UPGRADE_SPEED_1.get(), 1),
-//                        new OreDictStack(PB.wireFine(), 16))
-//                .inputFluids(new FluidStack(Fluids.PERFLUOROMETHYL, 1_000))
-//                .outputItems(new ChanceOutputMulti(
-//                        new ChanceOutput(new ItemStack(NtmItems.CIRCUIT_CONTROLLER.get(), 1), 75),
-//                        new ChanceOutput(BrokenItem.make(NtmItems.CIRCUIT_CONTROLLER.get()), 25))));
-//        this.register(new GenericRecipe("precass.controller_advanced").setup(600, 25_000L)
-//                .inputItems(
-//                        new ComparableStack(NtmItems.CIRCUIT_CHIP_BISMOID.get(), 16),
-//                        new ComparableStack(NtmItems.CIRCUIT_CAPACITOR_TANTALIUM.get(), 48),
-//                        new ComparableStack(NtmItems.CIRCUIT_ATOMIC_CLOCK.get(), 1),
-//                        new ComparableStack(NtmItems.CIRCUIT_CONTROLLER_CHASSIS.get(), 1),
-//                        new ComparableStack(NtmItems.UPGRADE_SPEED_3.get(), 1),
-//                        new OreDictStack(PB.wireFine(), 24))
-//                .inputFluids(new FluidStack(Fluids.PERFLUOROMETHYL, 4_000))
-//                .outputItems(new ChanceOutputMulti(
-//                        new ChanceOutput(new ItemStack(NtmItems.CIRCUIT_CONTROLLER_ADVANCED.get(), 1), 50),
-//                        new ChanceOutput(BrokenItem.make(NtmItems.CIRCUIT_CONTROLLER_ADVANCED.get()), 50))));
-//        this.register(new GenericRecipe("precass.controller_quantum").setup(600, 250_000L)
-//                .inputItems(
-//                        new ComparableStack(NtmItems.CIRCUIT_CHIP_QUANTUM.get(), 16),
-//                        new ComparableStack(NtmItems.CIRCUIT_CHIP_BISMOID.get(), 48),
-//                        new ComparableStack(NtmItems.CIRCUIT_ATOMIC_CLOCK.get(), 8),
-//                        new ComparableStack(NtmItems.CIRCUIT_CONTROLLER_ADVANCED.get(), 2),
-//                        new ComparableStack(NtmItems.UPGRADE_OVERDRIVE_1.get(), 1),
-//                        new OreDictStack(PB.wireFine(), 32))
-//                .inputFluids(new FluidStack(Fluids.PERFLUOROMETHYL_COLD, 6_000))
-//                .outputItems(new ChanceOutputMulti(
-//                        new ChanceOutput(new ItemStack(NtmItems.CIRCUIT_CONTROLLER_QUANTUM.get(), 1), 75),
-//                        new ChanceOutput(BrokenItem.make(NtmItems.CIRCUIT_CONTROLLER_QUANTUM.get()), 25))));
-//        addFirstUpgrade(NtmItems.UPGRADE_SPEED_1.get(), NtmItems.UPGRADE_SPEED_2.get(), "precass.upgrade_speed_ii");
-//        addSecondUpgrade(NtmItems.UPGRADE_SPEED_2.get(), NtmItems.UPGRADE_SPEED_3.get(), "precass.upgrade_speed_iii");
-//        addFirstUpgrade(NtmItems.UPGRADE_EFFECT_1.get(), NtmItems.UPGRADE_EFFECT_2.get(), "precass.upgrade_effect_ii");
-//        addSecondUpgrade(NtmItems.UPGRADE_EFFECT_2.get(), NtmItems.UPGRADE_EFFECT_3.get(), "precass.upgrade_effect_iii");
-//        addFirstUpgrade(NtmItems.UPGRADE_POWER_1.get(), NtmItems.UPGRADE_POWER_2.get(), "precass.upgrade_power_ii");
-//        addSecondUpgrade(NtmItems.UPGRADE_POWER_2.get(), NtmItems.UPGRADE_POWER_3.get(), "precass.upgrade_power_iii");
-//        addFirstUpgrade(NtmItems.UPGRADE_FORTUNE_1.get(), NtmItems.UPGRADE_FORTUNE_2.get(), "precass.upgrade_fortune_ii");
-//        addSecondUpgrade(NtmItems.UPGRADE_FORTUNE_2.get(), NtmItems.UPGRADE_FORTUNE_3.get(), "precass.upgrade_fortune_iii");
-//        addFirstUpgrade(NtmItems.UPGRADE_AFTERBURN_1.get(), NtmItems.UPGRADE_AFTERBURN_2.get(), "precass.upgrade_ab_ii");
-//        addSecondUpgrade(NtmItems.UPGRADE_AFTERBURN_2.get(), NtmItems.UPGRADE_AFTERBURN_3.get(), "precass.upgrade_ab_iii");
-//        this.register(new GenericRecipe("precass.upgrade_overdive_i").setup(200, 1_000L)
-//                .inputItems(
-//                        new ComparableStack(NtmItems.UPGRADE_SPEED_3.get(), 1),
-//                        new ComparableStack(NtmItems.UPGRADE_EFFECT_3.get(), 1),
-//                        new OreDictStack(BIGMT.ingot(), 16),
-//                        new OreDictStack(ANY_HARDPLASTIC.ingot(), 16),
-//                        new ComparableStack(NtmItems.CIRCUIT_ADVANCED.get(), 16))
-//                .outputItems(new ChanceOutputMulti(
-//                        new ChanceOutput(new ItemStack(NtmItems.UPGRADE_OVERDRIVE_1.get(), 1), 50),
-//                        new ChanceOutput(BrokenItem.make(NtmItems.UPGRADE_OVERDRIVE_1.get()), 50))));
-//        this.register(new GenericRecipe("precass.upgrade_overdive_ii").setup(600, 5_000L)
-//                .inputItems(
-//                        new ComparableStack(NtmItems.UPGRADE_OVERDRIVE_1.get(), 1),
-//                        new ComparableStack(NtmItems.UPGRADE_SPEED_3.get(), 1),
-//                        new ComparableStack(NtmItems.UPGRADE_EFFECT_3.get(), 1),
-//                        new OreDictStack(BIGMT.ingot(), 16),
-//                        new ComparableStack(NtmItems.INGOT_CFT.get(), 8),
-//                        new ComparableStack(NtmItems.CIRCUIT_CAPACITOR_BOARD.get(), 16))
-//                .outputItems(new ChanceOutputMulti(
-//                        new ChanceOutput(new ItemStack(NtmItems.UPGRADE_OVERDRIVE_2.get(), 1), 50),
-//                        new ChanceOutput(BrokenItem.make(NtmItems.UPGRADE_OVERDRIVE_2.get()), 50))));
-//        this.register(new GenericRecipe("precass.upgrade_overdive_iii").setup(1_200, 100_000L)
-//                .inputItems(
-//                        new ComparableStack(NtmItems.UPGRADE_OVERDRIVE_2.get(), 1),
-//                        new ComparableStack(NtmItems.UPGRADE_SPEED_3.get(), 1),
-//                        new ComparableStack(NtmItems.UPGRADE_EFFECT_3.get(), 1),
-//                        new OreDictStack(ANY_BISMOIDBRONZE.ingot(), 16),
-//                        new ComparableStack(NtmItems.INGOT_CFT.get(), 16),
-//                        new ComparableStack(NtmItems.CIRCUIT_BISMOID.get(), 16))
-//                .outputItems(new ChanceOutputMulti(
-//                        new ChanceOutput(new ItemStack(NtmItems.UPGRADE_OVERDRIVE_3.get(), 1), 25),
-//                        new ChanceOutput(BrokenItem.make(NtmItems.UPGRADE_OVERDRIVE_3.get()), 75))));
-//        this.register(new GenericRecipe("precass.blueprints").setup(6_000, 20_000L)
-//                .inputItems(
-//                        new ComparableStack(Items.PAPER, 16),
-//                        new OreDictStack(KEY_BLUE, 16),
-//                        new ComparableStack(Items.PUFFERFISH, 4))
-//                .outputItems(new ChanceOutputMulti(
-//                        new ChanceOutput(new ItemStack(NtmItems.BLUEPRINT_FOLDER.get(), 1), 10),
-//                        new ChanceOutput(new ItemStack(Items.PAPER, 16), 90))));
-//        this.register(new GenericRecipe("precass.beigeprints").setup(6_000, 50_000L)
-//                .inputItems(
-//                        new ComparableStack(Items.PAPER, 24),
-//                        new OreDictStack(CINNABAR.gem(), 24),
-//                        new ComparableStack(Items.PUFFERFISH, 8))
-//                .outputItems(new ChanceOutputMulti(
-//                        new ChanceOutput(new ItemStack(NtmItems.BLUEPRINT_FOLDER_DISCOVER.get(), 1), 5),
-//                        new ChanceOutput(new ItemStack(Items.PAPER, 24), 95))));
+        // Aucune recette d'origine n'est activable pour le moment :
+        // leurs objets de sortie ne sont pas encore enregistrés dans le port.
     }
+
+    // Catalogue original complet. Les 26 recettes restent commentées tant que
+    // leurs objets, fluides ou systèmes associés ne sont pas disponibles.
+    // public void registerDefaults() {
+    //
+    // 		if(GeneralConfig.enable528) {
+    // 			registerPair(new GenericRecipe("precass.chip").setup(100, 200L)
+    // 					.inputItems(new ComparableStack(ModItems.circuit, 1, EnumCircuitType.SILICON),
+    // 							new ComparableStack(ModItems.plate_polymer, 3),
+    // 							new OreDictStack(GOLD.wireFine(), 4)).setPools(POOL_PREFIX_528 + "chip"),
+    // 					DictFrame.fromOne(ModItems.circuit, EnumCircuitType.CHIP), 90, GeneralConfig.enableExpensiveMode ? 50 : 90);
+    //
+    // 			registerPair(new GenericRecipe("precass.chip_bismoid").setup(200, 1_000L)
+    // 					.inputItems(new ComparableStack(ModItems.circuit, 4, EnumCircuitType.SILICON),
+    // 							new ComparableStack(ModItems.plate_polymer, 8),
+    // 							new OreDictStack(ANY_BISMOID.nugget(), 2),
+    // 							new OreDictStack(GOLD.wireFine(), 4))
+    // 					.inputFluids(new FluidStack(Fluids.PERFLUOROMETHYL, 500)).setPools(POOL_PREFIX_528 + "chip_bismoid"),
+    // 					DictFrame.fromOne(ModItems.circuit, EnumCircuitType.CHIP_BISMOID), 75, GeneralConfig.enableExpensiveMode ? 50 : 75);
+    //
+    // 			registerPair(new GenericRecipe("precass.chip_quantum").setup(300, 20_000L)
+    // 					.inputItems(new ComparableStack(ModItems.circuit, 8, EnumCircuitType.SILICON),
+    // 							new OreDictStack(BSCCO.wireDense(), 2),
+    // 							new OreDictStack(ANY_HARDPLASTIC.ingot(), 4),
+    // 							new ComparableStack(ModItems.pellet_charged, 4),
+    // 							new OreDictStack(GOLD.wireFine(), 8))
+    // 					.inputFluids(new FluidStack(Fluids.HELIUM4, 250)).setPools(POOL_PREFIX_528 + "chip_quantum"),
+    // 					DictFrame.fromOne(ModItems.circuit, EnumCircuitType.CHIP_QUANTUM), 90, GeneralConfig.enableExpensiveMode ? 50 : 75);
+    //
+    // 			registerPair(new GenericRecipe("precass.atomic_clock").setup(200, 2_000L)
+    // 					.inputItems(new ComparableStack(ModItems.circuit, 8, EnumCircuitType.CHIP),
+    // 							new OreDictStack(ANY_PLASTIC.ingot(), 4),
+    // 							new OreDictStack(ZR.wireFine(), 8),
+    // 							new OreDictStack(SR.dust(), 1)).setPools(POOL_PREFIX_528 + "strontium"),
+    // 					DictFrame.fromOne(ModItems.circuit, EnumCircuitType.ATOMIC_CLOCK), 50, GeneralConfig.enableExpensiveMode ? 50 : 75);
+    //
+    // 			registerPair(new GenericRecipe("precass.controller").setup(400, 15_000L)
+    // 					.inputItems(new ComparableStack(ModItems.circuit, 32, EnumCircuitType.CHIP),
+    // 							new ComparableStack(ModItems.circuit, 32, EnumCircuitType.CAPACITOR),
+    // 							new ComparableStack(ModItems.circuit, 16, EnumCircuitType.CAPACITOR_TANTALIUM),
+    // 							new ComparableStack(ModItems.circuit, 1, EnumCircuitType.CONTROLLER_CHASSIS),
+    // 							new ComparableStack(ModItems.upgrade_speed_1),
+    // 							new OreDictStack(PB.wireFine(), 16))
+    // 					.inputFluids(new FluidStack(Fluids.PERFLUOROMETHYL, 1_000)),
+    // 					DictFrame.fromOne(ModItems.circuit, EnumCircuitType.CONTROLLER), 75, GeneralConfig.enableExpensiveMode ? 50 : 90);
+    //
+    // 			registerPair(new GenericRecipe("precass.controller_advanced").setup(600, 25_000)
+    // 					.inputItems(new ComparableStack(ModItems.circuit, 16, EnumCircuitType.CHIP_BISMOID),
+    // 							new ComparableStack(ModItems.circuit, 48, EnumCircuitType.CAPACITOR_TANTALIUM),
+    // 							new ComparableStack(ModItems.circuit, 1, EnumCircuitType.ATOMIC_CLOCK),
+    // 							new ComparableStack(ModItems.circuit, 1, EnumCircuitType.CONTROLLER_CHASSIS),
+    // 							new ComparableStack(ModItems.upgrade_speed_3),
+    // 							new OreDictStack(PB.wireFine(), 24))
+    // 					.inputFluids(new FluidStack(Fluids.PERFLUOROMETHYL, 4_000)),
+    // 					DictFrame.fromOne(ModItems.circuit, EnumCircuitType.CONTROLLER_ADVANCED), 50, GeneralConfig.enableExpensiveMode ? 50 : 75);
+    //
+    // 			registerPair(new GenericRecipe("precass.controller_quantum").setup(600, 250_000)
+    // 					.inputItems(new ComparableStack(ModItems.circuit, 16, EnumCircuitType.CHIP_QUANTUM),
+    // 							new ComparableStack(ModItems.circuit, 48, EnumCircuitType.CHIP_BISMOID),
+    // 							new ComparableStack(ModItems.circuit, 8, EnumCircuitType.ATOMIC_CLOCK),
+    // 							new ComparableStack(ModItems.circuit, 2, EnumCircuitType.CONTROLLER_ADVANCED),
+    // 							new ComparableStack(ModItems.upgrade_overdrive_1),
+    // 							new OreDictStack(PB.wireFine(), 32))
+    // 					.inputFluids(new FluidStack(Fluids.PERFLUOROMETHYL_COLD, 6_000)),
+    // 					DictFrame.fromOne(ModItems.circuit, EnumCircuitType.CONTROLLER_QUANTUM), 75, GeneralConfig.enableExpensiveMode ? 50 : 75);
+    //
+    // 			addFirstUpgrade(ModItems.upgrade_speed_1, ModItems.upgrade_speed_2, "precass.upgrade_speed_ii");
+    // 			addSecondUpgrade(ModItems.upgrade_speed_2, ModItems.upgrade_speed_3, "precass.upgrade_speed_iii");
+    // 			addFirstUpgrade(ModItems.upgrade_effect_1, ModItems.upgrade_effect_2, "precass.upgrade_effect_ii");
+    // 			addSecondUpgrade(ModItems.upgrade_effect_2, ModItems.upgrade_effect_3, "precass.upgrade_effect_iii");
+    // 			addFirstUpgrade(ModItems.upgrade_power_1, ModItems.upgrade_power_2, "precass.upgrade_power_ii");
+    // 			addSecondUpgrade(ModItems.upgrade_power_2, ModItems.upgrade_power_3, "precass.upgrade_power_iii");
+    // 			addFirstUpgrade(ModItems.upgrade_fortune_1, ModItems.upgrade_fortune_2, "precass.upgrade_fortune_ii");
+    // 			addSecondUpgrade(ModItems.upgrade_fortune_2, ModItems.upgrade_fortune_3, "precass.upgrade_fortune_iii");
+    // 			addFirstUpgrade(ModItems.upgrade_afterburn_1, ModItems.upgrade_afterburn_2, "precass.upgrade_ab_ii");
+    // 			addSecondUpgrade(ModItems.upgrade_afterburn_2, ModItems.upgrade_afterburn_3, "precass.upgrade_ab_iii");
+    //
+    // 			registerPair(new GenericRecipe("precass.upgrade_overdive_i").setup(200, 1_000)
+    // 					.inputItems(new ComparableStack(ModItems.upgrade_speed_3, 1),
+    // 							new ComparableStack(ModItems.upgrade_effect_3, 1),
+    // 							new OreDictStack(BIGMT.ingot(), 16),
+    // 							new OreDictStack(ANY_HARDPLASTIC.ingot(), 16),
+    // 							new ComparableStack(ModItems.circuit, 16, EnumCircuitType.ADVANCED)),
+    // 					new ItemStack(ModItems.upgrade_overdrive_1), 50, GeneralConfig.enableExpensiveMode ? 50 : 75);
+    // 			registerPair(new GenericRecipe("precass.upgrade_overdive_ii").setup(600, 5_000)
+    // 					.inputItems(new ComparableStack(ModItems.upgrade_overdrive_1, 1),
+    // 							new ComparableStack(ModItems.upgrade_speed_3, 1),
+    // 							new ComparableStack(ModItems.upgrade_effect_3, 1),
+    // 							new OreDictStack(BIGMT.ingot(), 16),
+    // 							new ComparableStack(ModItems.ingot_cft, 8),
+    // 							new ComparableStack(ModItems.circuit, 16, EnumCircuitType.CAPACITOR_BOARD)),
+    // 					new ItemStack(ModItems.upgrade_overdrive_2), 50, GeneralConfig.enableExpensiveMode ? 50 : 75);
+    // 			registerPair(new GenericRecipe("precass.upgrade_overdive_iii").setup(1_200, 100_000)
+    // 					.inputItems(new ComparableStack(ModItems.upgrade_overdrive_2, 1),
+    // 							new ComparableStack(ModItems.upgrade_speed_3, 1),
+    // 							new ComparableStack(ModItems.upgrade_effect_3, 1),
+    // 							new OreDictStack(ANY_BISMOIDBRONZE.ingot(), 16),
+    // 							new ComparableStack(ModItems.ingot_cft, 16),
+    // 							new ComparableStack(ModItems.circuit, 16, EnumCircuitType.BISMOID)),
+    // 					new ItemStack(ModItems.upgrade_overdrive_3), 25, GeneralConfig.enableExpensiveMode ? 50 : 75);
+    // 		}
+    //
+    // 		int min = 1_200;
+    //
+    // 		// all hail the pufferfish, driver of all innovation
+    // 		this.register(new GenericRecipe("precass.blueprints").setup(5 * min, 20_000L)
+    // 				.inputItems(new ComparableStack(Items.paper, 16),
+    // 						new OreDictStack(KEY_BLUE, 16),
+    // 						new ComparableStack(Items.fish, 4, FishType.PUFFERFISH))
+    // 				.outputItems(new ChanceOutputMulti(
+    // 					new ChanceOutput(new ItemStack(ModItems.blueprint_folder, 1, 0), 10),
+    // 					new ChanceOutput(new ItemStack(Items.paper, 16, 0), 90))
+    // 				));
+    // 		this.register(new GenericRecipe("precass.beigeprints").setup(5 * min, 50_000L)
+    // 				.inputItems(new ComparableStack(Items.paper, 24),
+    // 						new OreDictStack(CINNABAR.gem(), 24),
+    // 						new ComparableStack(Items.fish, 8, FishType.PUFFERFISH))
+    // 				.outputItems(new ChanceOutputMulti(
+    // 					new ChanceOutput(new ItemStack(ModItems.blueprint_folder, 1, 1), 5),
+    // 					new ChanceOutput(new ItemStack(Items.paper, 24, 0), 95))
+    // 				));
+    //
+    // 		this.register(new GenericRecipe("precass.rpahelmet").setup(3 * min, 25_000L)
+    // 				.inputItems(new ComparableStack(ModItems.plate_armor_ajr, 12),
+    // 						new OreDictStack(BIGMT.plateCast(), 4),
+    // 						new ComparableStack(ModItems.circuit, 4, EnumCircuitType.ADVANCED),
+    // 						new ComparableStack(ModItems.plate_kevlar, 8))
+    // 				.outputItems(new ItemStack(ModItems.rpa_helmet)).setPools(this.POOL_PREFIX_DISCOVER + ".rpa"));
+    // 		this.register(new GenericRecipe("precass.rpaplate").setup(3 * min, 25_000L)
+    // 				.inputItems(new ComparableStack(ModItems.plate_armor_ajr, 24),
+    // 						new OreDictStack(BIGMT.plateCast(), 8),
+    // 						new OreDictStack(BIGMT.mechanism(), 8),
+    // 						new ComparableStack(ModItems.motor_desh, 8),
+    // 						new ComparableStack(ModItems.plate_kevlar, 16),
+    // 						new ComparableStack(ModItems.parts_legendary, 1, EnumLegendaryType.TIER2))
+    // 				.outputItems(new ItemStack(ModItems.rpa_plate)).setPools(this.POOL_PREFIX_DISCOVER + ".rpa"));
+    // 		this.register(new GenericRecipe("precass.rpalegs").setup(3 * min, 25_000L)
+    // 				.inputItems(new ComparableStack(ModItems.plate_armor_ajr, 24),
+    // 						new OreDictStack(BIGMT.plateCast(), 8),
+    // 						new ComparableStack(ModItems.motor_desh, 8),
+    // 						new ComparableStack(ModItems.plate_kevlar, 16))
+    // 				.outputItems(new ItemStack(ModItems.rpa_legs)).setPools(this.POOL_PREFIX_DISCOVER + ".rpa"));
+    // 		this.register(new GenericRecipe("precass.rpaboots").setup(3 * min, 25_000L)
+    // 				.inputItems(new ComparableStack(ModItems.plate_armor_ajr, 12),
+    // 						new OreDictStack(BIGMT.plateCast(), 4),
+    // 						new ComparableStack(ModItems.plate_kevlar, 8))
+    // 				.outputItems(new ItemStack(ModItems.rpa_boots)).setPools(this.POOL_PREFIX_DISCOVER + ".rpa"));
+    // 	}
+    //
+    // 	public void addFirstUpgrade(Item lower, Item higher, String name) {
+    //
+    // 		registerPair(new GenericRecipe(name).setup(300, 10_000)
+    // 				.inputItems(new ComparableStack(ModItems.circuit, 8, EnumCircuitType.CHIP),
+    // 						new ComparableStack(ModItems.circuit, 4, EnumCircuitType.CAPACITOR_TANTALIUM),
+    // 						new ComparableStack(lower), new OreDictStack(ANY_PLASTIC.ingot(), 4)),
+    // 				new ItemStack(higher), 50, 75); // upgrades are now actually valuable
+    // 	}
+    //
+    // 	public void addSecondUpgrade(Item lower, Item higher, String name) {
+    //
+    // 		registerPair(new GenericRecipe(name).setup(400, 25_000)
+    // 				.inputItems(new ComparableStack(ModItems.circuit, 16, EnumCircuitType.CHIP),
+    // 						new ComparableStack(ModItems.circuit, 16, EnumCircuitType.CAPACITOR_TANTALIUM),
+    // 						new ComparableStack(lower), new OreDictStack(RUBBER.ingot(), 4))
+    // 				.inputFluids(new FluidStack(Fluids.SOLVENT, 500)),
+    // 				new ItemStack(higher), 25, 75);
+    // 	}
+    //
+    // 	/** Registers a generic pair of faulty product and recycling of broken items. */
+    // 	public void registerPair(GenericRecipe recipe, ItemStack output, int chance, int reclaim) {
+    // 		recipe.outputItems(new ChanceOutputMulti(
+    // 				new ChanceOutput(output, chance),
+    // 				new ChanceOutput(BrokenItem.make(output), 100 - chance)
+    // 				));
+    //
+    // 		this.register(recipe);
+    //
+    // 		float fReclaim = reclaim / 100F;
+    //
+    // 		IOutput[] recycle = new IOutput[recipe.inputItem.length];
+    // 		for(int i = 0; i < recycle.length; i++) {
+    // 			ItemStack stack = recipe.inputItem[i].extractForNEI().get(0).copy();
+    // 			recycle[i] = new ChanceOutput(stack, fReclaim);
+    // 		}
+    //
+    // 		FluidStack[] fluid = recipe.inputFluid != null ? new FluidStack[1] : null;
+    // 		if(fluid != null) {
+    // 			fluid[0] = new FluidStack(recipe.inputFluid[0].type, (int) Math.round(recipe.inputFluid[0].fill * fReclaim));
+    // 		}
+    //
+    // 		this.register(new GenericRecipe(recipe.getInternalName() + ".recycle").setup(recipe.duration, recipe.power).setNameWrapper("precass.recycle")
+    // 				.setIcon(BrokenItem.make(output))
+    // 				.inputItems(new NBTStack(BrokenItem.make(output)))
+    // 				.outputItems(recycle)
+    // 				.outputFluids(fluid));
+    // 	}
 }
